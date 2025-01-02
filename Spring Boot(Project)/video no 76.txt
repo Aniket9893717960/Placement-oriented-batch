@@ -1,0 +1,97 @@
+Why do we need an Interface?
+Answer) let's take an example here if you join a company as an software 
+engineer of course you u think to build a code but if you join a 
+trend whenever you join the company.Most of the company will give you a laptop
+to work on.
+But instead of feature 'a laptop' will becomes a Developer 'Demand'.
+Let's implement the whole condition into the program.
+
+
+here we have two class 1st is 'Laptop'and 2nd is 'Developer'. 1st class have method name
+'code' then one's i pass the 'code' object as parameter in 2nd class method name 'devApp'.
+At those methode we call the method name 'code' if the paramter was 'accepted'.
+
+class laptop
+{
+public void code()
+ { 
+ System.out.println("code, compile, run");
+ }
+}
+
+class Developer
+{
+ public void devApp(Laptop lap){
+ lap.code();
+ }
+}
+
+public class Demo
+{
+ public static void main(String a[])
+ {
+ Laptop lap = new laptop();
+ 
+ Developer navin = new Developer();
+ navin.devApp(lap);
+ }
+}
+
+
+
+
+But did you realy nead a laptop because in some companies he will give you a desktop.
+so, why as a 'devApp' you only asking for a laptop? there is a chance that company wanted to give you a Desktop? you never reply that i only work on laptop?usually you have to work on any computer.
+let's say u also got an option of 'Desktop'
+
+Interface Computer       // abstract public class Computer
+{
+ void code();            // public abstract void code
+}
+
+class laptop implements Computer   //class laptop extends Computer
+{
+public void code()
+ { 
+ System.out.println("code, compile, run");
+ }
+}
+
+class Desktop implements Computer   //class Desktop extends Computer
+{
+public void code()
+ { 
+ System.out.println("code, compile, run: faster");
+ }
+}
+
+
+class Developer
+{
+ public void devApp(Computer lap){
+ lap.code();
+ }
+}
+
+public class Demo
+{
+ public static void main(String a[])
+ {
+ Computer lap = new laptop();
+ Computer desk = new Desktop(); 
+
+ Developer navin = new Developer();
+ navin.devApp(desk);   // if 'navin' wants computer in any posability not matter it's laptop or Desktop.For this we build a class 'computer'.
+//But we don't want to code because computer doesn't exist it's just a concept that's why it's inner 'code' method doesn't do anything.
+// But all other classes like Desktop and laptop will extend computer because it is the part of computer.
+//So, building the seperate concept of this 2.we don't wanna write it's parent 'reference'
+'computer' which get it's objects.
+
+
+ }
+}
+
+
+
+
+HERE WE COMPLETE VIDEO NO 76 BUT PLEASE WATCH IT AGAIN BECAUSE IT"S VERY IMPORTANT CONCEPT

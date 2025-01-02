@@ -1,0 +1,55 @@
+So,at this point we are able to play the quiz so. may be you were hard putting questions there. the main thing is we have the questions. To play the question so basically we try to print the question one  by one options and user just entiring 'Selection' or the 'answer'
+
+
+
+Now we have to check that it's right or Calculating the score So, in the 'main' method  we just want to call the method  from 'QuestionService' class like this code:  "public class Main {
+public static void main(String args[]){
+    QuestionService service = new QuestionService();
+    service.playQuiz();
+    service.printScore();
+  }
+}"
+
+
+
+'printScore' will basically calculate the score for us. how will we do that first: if user will give the right answer so, we keep that in the variable name 'score' have datatype 'int' and it's initial value should be '0'(Zero)
+
+
+
+'second' if we are checking all the questions so here loop works better so, first we need a 'Question' class so we will creating an object of this.
+
+
+
+Now we can get answer in 'answer' vairable  and call the 'getAnswer' method from 'Question' so, if you check 'QuestionService' method at the right-last side of 'question' array allocation we have given an answer. So, we need to compare this with what user intered so, how will u compare this.
+
+
+
+so, off course this will called after the user played the quiz. for this we declare the variable name 'userAnswer' have datatype 'String' which will get  'selection' u now it's an array which will store the user answer
+
+
+
+Now we want to call a by default method of string name 'equals' which will compare the 'actualAnswer' and 'userAnswer'. so once this loop is over you will print "Your score is"+score
+
+
+
+after all this code will be 👇
+
+
+
+"public void printScore(){
+       int score =0;
+
+       for(int i=0;i<questions.length;i++){
+         Question que = questions[i];
+         String actualAnswer = que.getAnswer();
+
+         String userAnswer = selection[i];
+         if(actualAnswer.equals(userAnswer)){
+         score++;
+         }
+       }
+       System.out.println("Your score is:"+score);
+    }" but problem in here is difference of letter(upper-lower) case will be metter.
+
+
+

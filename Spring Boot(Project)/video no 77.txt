@@ -1,0 +1,72 @@
+At this Vedio we talk about enums?so, enums are named constants which we create.so, 
+basically if you try to have some constant example let we talk about 'error codes'
+and u have worked with any networking concept.
+let say u send the request to the server.in return server will response current status.
+if it accepted the request and detected the request or resource not found will print
+the error '404 not found'.
+So, u know there are different no. for different error's data u get from server
+and u have a name for it.
+Instead of creating the object by yourself the better option is you will create
+a enum.
+let's explain with the help of program.
+
+enum Status {
+Running, Failed, Panding, Success;
+}
+
+public class Demo
+{
+ public static void main(String args[])
+ {
+  int i=5;
+  Status s = Status.Running;
+  System.out.println(s.ordinal());
+ }
+}
+
+
+let's say we create the enum of 'Status' in this you have some different constant.
+just like u will create a class which have multiple objects. 'Status' u have the
+running state,failed state,success state,panding state and all different things.
+
+Just to keep it simple you use 'enum' we define all the names constant.It seems pre-
+build let's say you will talk about 'status' this have different part like Running,
+failed, panding, success of course u change the sequence doesn't matter.
+
+All this are working as an object of 'Status' and we call this as
+'Status s = Status.Running;' and here we print the object value 
+print 'Running'.
+Basically we use any status here. Instead of writing 'Running' as class
+here we talk it as 'Named Constant' it build your work easy.
+
+But if you have the scenario where you want to use constant we can use
+'enum' concept.
+
+Instead of using 'Running' use 'Failed','Pending' and 'Success'.But 
+if you use and method which not available in 'Status'. Then, it
+gives an error 'Cannot be resolved or is not a field'.
+
+A 'Named Consant' will also have it's alloted no. so that u pick the status
+based on Numbers.In java it start with zero,1,2,3 to confirm that 
+we use the method name 'orfinal' by using the command.
+  "System.out.println(s.ordinal());"
+But if going out one by one we print all the 'Named Consant' status simultaniouly
+we use method name 'values' becuase it gives u an array and based on it's
+'allotment no.' we decide it's position on array.
+
+implementation is given below.
+
+enum Status {
+  Running, Failed, Pending, Success;
+}
+
+public class Demo
+{
+ public static void main(String args[]){
+ int i=5;
+ Status[] ss = Status.values();
+
+ for(Status s : ss)
+ System.out.println(s+ " : "+s.ordinal());
+ }
+}

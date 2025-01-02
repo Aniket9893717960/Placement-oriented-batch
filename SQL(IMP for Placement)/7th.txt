@@ -1,0 +1,57 @@
+NOw WE have to Jump throw Video no. 7
+
+
+
+You have to also study this in w3 schools  by searching the topic SQL JOINTS.
+
+
+
+just we imagine that we have total 12 records with 5 entities names are st roll,st name,st city,st contact,st branch  where we have to Particular focus on st contact and st branch because if 'st branch' has branch name 'CS' than it's contact no. in 'st contact' start from '987' this are total 4 records which falls on this category  as same as if 'st branch' has branch name 'IT' than it's contact no. in 'st contact' start from '887' this are total 4 records which falls on this category Again if 'st branch' has branch name 'EC' than it's contact no. in 'st contact' start from '787' this are total 4 records which falls on this category. but now the is 1 student from 'Chemical' where it's name is 'John'
+
+
+
+For dealing this condition first we have two know about 'Foreign KEY' concept.   for Building Foreign key we can take another table name 'department' so, here we go so first we have given entities names are  'st branch','st hod name','st hod city',' st hod contact'. Where this have 5 recode data of 5 branches are 'CS','IT','EC','Civil','mechanical' it you notice that 'Civil','mechanical'  are the two records in 'st branch' which will not maintioned in 1st table name 'students' which have 12 records. AND also 'John' branch is 'Chemical' which is not maintioned in this table 'department'.
+
+
+
+Now we try to print that first table 'Student' is visible nearly same along with ,'st hod name','st hod city',' st hod contact' which will belong to second table 'Department'?
+
+
+
+For solving this we build a query is this:                                                                                                                                                         SELECT * FROM student INNER JOIN                                                                                                                                                    here if we write 'Join' in query by replacing 'INNER JOIN' so, this is also Techniqually same but we have to Recormended to write inner join because by this we doesn't break Syntax
+
+
+
+This Query is incomplete we have to complete this because this is incomplete query sended by mistake                                               SELECT * FROM student INNER JOIN department  ON  student.st_branch = department.st_branch;                                                                                                                                   here department is the table that we have to apply INNER JOIN                                                        Now 'ON' is the keyword at which it established 'kon s column k hisab s kam karana h'                                                                                                                            if this Query runs that u see all have as he want except 'John' because it's branch is 'Chemical' but in 'Department' this branch doesn't name doesn't exit means 'Chemical' branch does not have it's HOD.
+
+
+
+"LEFT JOIN means ki left s saara hi data pick karana h Pr right/2nd tables s sirf vahi data pick karana h jo mail khata ho" in english "In LEFT JOIN we take all the data from the left but in Right we can take those data which is matched with Foreign key."
+
+
+
+If we take same Query with minor change that 'LEFT JOIN' will be Replaced by 'RIGHT JOIN'                                                 SELECT * FROM student RIGHT JOIN department  ON  student.st_branch = department.st_branch;                                                Then if u notice that 'st branch' Civil and Mechanical branch have not match with any student. Because                                                                                                                                     .                                                                                                                                                                                                      "RIGHT JOIN means ki right k saara hi data pick karana h Pr left/1nd tables s sirf vahi data pick karana h jo mail khata ho" in english "In RIGHT JOIN we take all the data from the right but in left we can take those data which is matched with Foreign key."
+
+
+
+But also we Doesn't view John in output because Because we pick all the data from the 2nd table not first
+
+
+
+If we Again  take same Query with minor change that 'RIGHT JOIN' will be Replaced by 'FULL OUTER JOIN'                                                 SELECT * FROM student FULL OUTER JOIN department  ON  student.st_branch = department.st_branch;                                                                                                Than this will give a syntax error Because it doesn't support a word 'OUTER' and if we replace 'FULL OUTER JOIN' to 'OUTER JOIN' and if we replace 'FULL OUTER JOIN' to 'FULL JOIN' the output is same
+
+
+
+For Cross join if 1st table have 3 records and same 2nd table have 3 records So, in CROSS JOIN this will give output tatal is 3 multiply 3 which is 9 record.
+
+
+
+Now we have to Study about SELF JOIN so to Define this we have to take a condition.                                                                                  let say the first table name is 'Student' which will have Entities like 'S.no','name','city','contact'. this will contain3 records. AND for the Second table name is 'Courses' which will have Entities like 'C.no','c_name','Trainee','Price'. this will contain 3 records. AND Again we take 3rd Table name 'study' which contain Entities like 'S.no','c_no','Year'.Now we try to find No, of Peoples who take more than one course.
+
+
+
+For Building the query we can use to build or write.                                                                                                                                   SELECT ____  FROM 'study' as x, 'study' as y WHERE x.S_id = y.S_id and x.C_id = y.C_id;                                                           Then it start doing Cross Product like this. Now at 'WHERE' we try to put the condition that 'St_id' should be same but 'C_id' does not mean to be same If this condition follows than this type of data should be print. In '___' this what u want to write that depends.
+
+
+
+x                     y                      S1C1          S1C1              S1C1        S1C2           like this is the logic u find

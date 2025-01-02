@@ -1,0 +1,324 @@
+Private 'Constructors' Due to some Security issues .But here we didn't have any 'Private Destructor' Because there is not any kind of requirment in this And it is not possible to build as well.
+
+
+
+Explain this rule we have an Example: " class  Test{
+public:
+Test(){
+cout<<" Hello from constructor"<<endl;
+} 
+~Test(){
+cout<<" Hello from Destructor"<<endl;
+} 
+} ;
+int main(){                           OUTOUT
+Test t1;                         hello from Constructor 
+ Test t2;                        hello from Constructor
+ Test t3;                        hello from Constructor
+ return 0;                      hello from Destructor
+} " of Destructor              hello from Destructor
+
+
+
+hello from Destructor
+
+
+
+Now we learn a new concept "Dynamic Memory Allocation" at which In 'C' we have 'malloc' function but in 'C++' we have 'new' keyword. Just like it in 'C' we have 'free' keyword  but in 'C++' we now have 'delete' keyword.
+
+
+
+if you have remember a line in 'C' is 'p = (int *)malloc(sizeof(int)*n);' this line will allocate the heap memory of 'N' size and first address will be given to the pointer 'P' But in 'C++' this can be replaced by 'p = new int[n];' because in 'malloc' there is required to typecast with datatype but in 'C++' it doesn't required
+
+
+
+this whole frustration will be done for just build "array of n size"
+
+
+
+for doing 'free memory' we have to done in 'C' is 'free(p)' and in 'C++' it's 'delete(p)' but in 'C' this two commands will work simultaniously in you allocate the memory with 'malloc' command but memory allocation is done by 'new' than only 'delete(p)' will work for release
+
+
+
+"Class Test {
+Public:                  int n,i,*p; 
+Test(int size){
+n = size
+p = new int[n];
+}
+void getData(){
+cout<<"Enter"<<n<<"Values: "<<endl;
+ for(i=0;i<n;i++){
+ cout<<"Enter"<<(i+1)<<"Values: "<<endl;
+ cin>>p[i];
+ }
+}
+void showData(){
+cout<<"Array Contains :"<<endl;
+for(int i=0;i<n;i++)
+ cout<<p[i]<<" ";
+ }
+~Test(){
+  delete(p);
+  }
+};
+int main(){
+int n;
+ cout<<"Enter size of first Array: ";
+ cin>>n;
+ Test t1(n);
+  t1.getData();
+  t1.showData();
+ cout<<"Enter size of Second Array: ";
+ cin>>n;
+ Test t2(n);
+  t2.getData();
+  t2.showData();
+ 
+ return 0;
+ }    // this is one of the important example of 'Destructors' and it's use.
+
+
+
+'Destructor' is in java also but it will not build by overselfs it's inbuild method name "Finalize" it will destruy the memory constructed by the constructor.
+
+
+
+This Question is generally asked in interviews that "Java have distructor or not"? A) This is an inbuild functionality we doesn't try to build this. Now he asked "What is the name of inbuild Destructor?" A) finalize
+
+
+
+In Interview Always asked Question is "What is the Difference Between Final,Finally,Finalize"
+
+
+
+Now the topic is "Inheritance" the one of the most favourite topic of Interviewer
+
+
+
+only "Single level inheritance topic" Interviewer ask exactly 25 Questions on this
+
+
+
+Inheritance real life example is "Data Updation" just like In 2018 Whatsapp show his Profile Photo/DP of the particular Person in Square Shape but due to updation now this in circular shape.
+
+
+
+Defination of Inheritance "It is a property at which a class can Aquire Properties of another class" like child class have an authority to request to use the data of parent class.
+
+
+For Multi-level give the Example of "Hotstar" as class 'A' , "Hotstar VIP" as class 'B', "Hotstar Prime" as class 'C'.
+
+
+
+For Hybrid Inheritance which has a unique name "Diamond Problem" it's  a Situation
+which can be solved by a topic "Virtual Base Class".
+
+
+class A
+{
+public:
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A // This ia a technique to inherit a class in 'C++'
+{                    // But in Java this technique is "class B extends A"
+ public:             // In python "class B(A)" 
+ void display()
+ {
+  cout<<"Hello From Class B"<<endl;
+ }
+};
+
+int main()
+{
+A a1;
+B b1;
+
+a1.show();
+a1.display(); // this Not work because it doesn't know who inherited it.
+
+b1.show();    //this will run because it give 1st priority to 'B' if didn't found than go to 'A'
+b1.display();
+return 0;
+}
+
+
+
+This is the Program of "Single Level Inheritance"
+
+
+
+here "Single level Inheritance" have a small property to learn this we have a short knowlege of "Constructor"
+
+
+
+"Behaviour of Constructor During Inheritance"
+Whenever the object of a child class will be created, it will forward a request of memory allocation to the default constructor of Parent class first. To prove this we have an Example
+ "class A
+{
+public:
+ A()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:             
+ B()
+ {
+  cout<<"Hello From Class B"<<endl;
+ }
+};
+
+int main()
+{
+A a1;
+B b1;
+
+a1.show();
+a1.display(); 
+
+b1.show();    
+b1.display();
+return 0;
+} "
+// Now we know the rule of Constructors that Constructor couldn't Inherit.
+So, for this rule this program child class will give it's own output not it's parent class output but here we wrong.
+// Inheritance have a werid property "when the child object will build it will call it's parent constructor then it's own and give output"
+
+
+
+In inbuild at the line "B()" will be replaced by "B() : A()" this will be done by compiler not by own
+
+
+
+This same work in 'Java' done by 'super' keyword and In 'Python' this will done by 'Super' function
+
+
+
+"Parameterized constructor in inheritance" "class A
+{
+public:
+int x;
+A(int x,int y){
+cout<<"Hello from Class A "<<x<<" "<<y<<endl;
+ }
+};
+
+class B : public A
+{
+ public:
+ int y;
+ B(int p,int q,int r) : A(p,q)
+ {
+ cout<<"Hello From Class B"<<p<<" "<<q<<" "<<r<<endl;
+ }
+};
+
+int main()
+{
+ A a1(10,20);
+ B b1(100,200,300);
+ 
+ return 0;
+} "
+"the Real life example to explain this code is 'G-mail' login we have to use only Id and Password but if g-mail try o ad captche throw this maintality and Techique he can done it."
+
+
+
+Now we come to "Multi-Level Inheritance" Example "class A
+{
+public:
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:             
+ void display()
+ {
+  cout<<"Hello From Class B"<<endl;
+ }
+};
+
+class C: public B 
+{                    
+ public:             
+ void add()
+ {
+  cout<<"Hello From Class C"<<endl;
+ }
+};
+
+int main()
+{
+A a1;
+B b1;
+C c1;
+
+a1.show();
+
+b1.show();    
+b1.display();
+
+c1.show();
+c1.display();
+c1.add();
+
+return 0;
+}"
+
+
+
+Now come to " Hierarchical Inheritance "  Please make sure u read this because this is important Example "class A
+{
+public:
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:             
+ void display()
+ {
+  cout<<"Hello From Class B"<<endl;
+ }
+};
+
+class C: public A 
+{                    
+ public:             
+ void add()
+ {
+  cout<<"Hello From Class C"<<endl;
+ }
+};
+
+int main()
+{
+A a1;
+B b1;
+C c1;
+
+a1.show();
+
+b1.show();    
+b1.display();
+
+c1.show();
+c1.add();
+
+return 0;
+}"

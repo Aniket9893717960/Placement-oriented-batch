@@ -1,0 +1,109 @@
+And 'Second' Java Doesn't have the concept of 'Function' Everything should be inside the class only
+
+
+
+But print is not the Method There 'print' is a function
+
+
+
+'Friend Function' have some application like it will be a solution at which we have multiple class which have it's own multiple private variables. Now we want to done that at class '1' we will try to build the copy of class '2' instance variable and vice-versa. In this case you will try to make connection between this two with the help of 'Friend Function'
+
+
+
+For this we come TO AN END OF MY LIMITATION SO PACK UP AT TIME 11:30 15th or last video
+
+
+
+-------------NOTE____            *search a topic name "Friend" class.
+
+
+
+Now  we jump on the topic name "File Handling" it's that to "Read or write, append a file" if we are talking about Header file in C++. Then, "ioStream" should be your Hot Topic. So, here "iostream" will have two types.  
+1) Input Stream( istream )
+2) Output Stream( ostream )
+'istream' is the category In which it have a class name 'ifstream'(Input file Stream) it's simple means 'Read the file' but if you want to manipulate the file then this will be possible with the help of 'Ofstream'(Output File Stream) means 'Write/Append' will come on this category.
+
+
+
+Q) write a single file handling program in C++ to writing data on a file.
+
+Example "There is a School Student we have it's name ,Roll no and Yearly Fees.
+We have the program at which we have to get 3 information's And store it in a file.
+Here the file name is 'student.txt'"
+
+#include<iostream>
+#include<fstream> //This is for 'file Handline only' in Online Editior.
+
+using namespace std;
+
+int main()
+{
+ int rno,fee;
+ char name[50];
+
+ cout<<"Enter the Roll Number:";
+ cin>>rno;
+
+ cout<<"Enter the Name:";
+ cin>>name;
+
+ cout<<"Enter the Fee:";
+ cin>>fee;
+
+ ofstream fout("student.txt");       
+     // here we create an object of 'ofstream' name 'fout' which have 
+the Parameter because the constructor will be demanding it to build the 
+file with same name and Exting shun so we pass the file name is 'student.txt'
+
+ fout<<rno<<"\t"<<name<<"\t"<<fee;        // 'fout'(file output) which can be
+  //write data to the file "student"        Considerd to set the value in file. 
+
+ fout.close();
+ 
+ return 0;
+}
+
+
+
+For the First time it work correctly but Again u run this giving same value or not 
+it will replace those file with the same name file Because this by default will only be write Mode.
+There are two technique to write the "Write" mode.
+1) 'ofstream fout' means we created a file but we didn't access it
+Now 'fout' will also have the method name 'open'. It will have 2-3 versions
+like:
+    a) fout.open("sample.txt",ios::out);  //'ios' is 'input-output stream'
+                                         and here we using name space so 
+                                         we directly write it's 'Mode'
+But we also write this in short as: "fout.open("sample.txt",out)" in 'turbo C++'
+Not For 'Online Editior'
+    b) fout.append("sample.txt",ios::app);  //For Append and  
+                            if you write a same file name at which 
+already data will have so, it does not replace it and write over 
+data next to those data.
+
+
+
+Q) write a single file handling program in C++ to read data on a file.
+
+#include<iostream>
+#include<fstream> //This is for 'file Handline only' in Online Editior.
+
+using namespace std;
+
+int main()
+{
+ int rno,fee;
+ char name[50];
+
+ ifstream fin;
+              // There is only technique to read the file is this.
+             // but if u want to maintion the file name so, there will 
+            // be not any change in output.But u done extra work.
+ fin>> rno>> name>> fee;
+ fin.close();
+ 
+ return 0;
+}
+
+
+And last is "Exception Handling" u have to study

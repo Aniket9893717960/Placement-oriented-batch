@@ -1,0 +1,127 @@
+In previous videos we all seen 'enum' is allmost work like a class.
+But it's that mean that we extend another class So, answer is no
+that's a thing not suitable here.
+You can't extend 'enum' within the class?Apart from that we all see
+we define methods,define constructor and u also create your own 
+variables inside the 'enum'.
+So, that's what we do here in the Program.
+
+enum Status {
+Running, Failed, Panding, Success;
+}
+
+public class Demo
+{
+ public static void main(String a[]){
+ Status s = Status.Panding;
+ System.out.println(s.getClass().getSuperclass());     // class java.lang.Enum
+
+ }
+}
+
+
+we created the object of 'Status' below this if we write 's.'
+so, by default every class in java extends object and that's 
+why you will get the 'hashcode','toString' methods.
+But what about this method 'ordinall','name','compareTo'
+from where we are getting all this methods.
+
+* 'enum' in java extends by default the 'enum' class('Demo' in this case) in java.
+let me just prove that to you with 
+           "System.out.println(s.getClass().getSuperclass())" command.
+What i am doing in this is we are getting the class 'name' and the 'superClass' of
+it.
+In this we get the output "java.lang.Enum".so that you see it's 'enum' and
+here 'enum' in java this class and all the extra methods you get from 'Enum'
+class.
+
+
+
+
+
+Let's Read over own class as 'Enum'.So, instead of using 'Status' we try to use
+'Laptop' for using the constructor and stuff which make much more sense with the
+laptop. we have some 'laptop' models as 'Named constants' are 'Mackbook',
+'XPS','Surface','ThinkPad'.
+
+Now for every laptop we define it's prize as well here is the first Question.
+how we do that?Answer) after the 'constant' declaration on the right corner
+in '()' brackets define it's prize as well one by one.
+            
+             "Macbook(2000), XPS(2200), Surface(1500), ThinkPad(1800);"               
+ 
+At the first attempt it gives an error but at some time we solve this. 
+But here you know that at the left corner of specific constants in this 
+program inner '()' bracket you were talking about prize but how machine 
+will understand this that's the problem.
+
+In this case we create a variable 'price'.so, that you have an instance variable.
+then, you observe on 'constants' you don't think it's a constructor because you bit
+little confuse by seeing this why he gives error "The constructor Laptop(int) is undefined".
+we just simply created an object by passing it's value here 'constants' will
+act like a 'object' which have the parameter prize and Demanding for the constructor.
+
+So, that means i simply ask my Editor to create the constructor which takes the price.
+And Now you all the errors are removed whatever you are passing will be assigned
+to this prize the butty is 'laptop' is act like 'class' and
+all 'Named COnstants' are act like an object or every object will have it's different 
+values.
+
+we all this doning in below program.
+
+enum Laptop {
+ Mackbook(2000), XPS(2200), Surface, ThinkPad(1800);
+
+ private int price;
+
+ private Laptop(){
+ price = 500;
+ } 
+
+ private Laptop(int price){
+ this.price = price;
+ }
+
+ public int getPrice(){
+ return price;
+ }
+
+ public void setPrice(int price){
+ this.price = price;
+ }
+}
+
+public class Demo {
+ public static void main(String args[]){
+/* Laptop lap = Laptop.Macbook;
+ System.out.println(lap +" : "+lap.getPrice());        // only 1 constant value at a time like 'Macbook'  */
+
+for(Laptop lap : Laptop.values())   // 'values' method will give u an array.
+{ System.out.println(lap +" : "+lap.getPrice()); // so that you one by one fatch the value
+     }
+ }
+}
+
+But i also want to print the prize of it but it's tricky because 'prize' is
+'private' and we have seen right make sure instance variable are private.
+How do we access instance private variable?
+Answer) 1) with the help of 'Getter' and 'Setters'.
+ 2) Another is we create over own method. Currently we are using this trick.
+For this we do right click 'Generate Getters and Setters' basically you will 
+change the value as well.
+So, basically i want to print the price then i call "lap.getPrice()"
+
+what if i don't specify the parameter of any one constrant.so, instantly 
+you will got an error reason is in the 'enum' u aleady  defined a 
+Parameterized COnstructor that's why system doesn't create a Default constructor.
+For solution you need to Create the Default constructor by your Self.
+And it's your call you want to specify something just like in this i initialized 
+price value is '500'.
+
+*And the bueaty is if you create a 'Named Constrant' act like 'object' will call
+the constructor 4 times. we just also prove this point.
+In 'parameterized' Constructor we add "System.out.println("in Laptop"+this.name());" command.
+
+* mind you in enum we use constructor's and instance variable as 'Private' access
+Specifier because we are creating the object of same class itself or that's
+how the private constructor works

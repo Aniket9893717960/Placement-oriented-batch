@@ -1,0 +1,135 @@
+Now we have to change the name of the method from "displayQuestion" to "playQuiz"
+
+
+
+Now we just not want  to display the question also we want that what was his Answer
+
+
+
+We also want to do more things with it so let's go
+
+
+
+I want to choose printing one by one question instead of asking over all question.
+
+
+
+So firstly we want to print 'id' like this:
+ System.out.println(q.getId());
+But instead of printing just this I also want to print
+System.out.println("Question no: "+q.getId());
+
+
+
+On the next line I want to print the question like this:
+System.out.println(q.getQuestion());
+
+
+
+// Assuming q is an object with getter methods for options
+        String[] options = { q.getOpt1(), q.getOpt2(), q.getOpt3(), q.getOpt4() };
+
+        // Using a loop to print the options
+        for (int i = 0; i < options.length; i++) {
+           System.out.println(options[i]);
+       }
+
+
+
+And now on the next 4 lines I want to print the options.
+By this commands:
+
+
+
+"// Assuming q is an object with getter methods for options
+        String[] options = { q.getOpt1(), q.getOpt2(), q.getOpt3(), q.getOpt4() };
+
+        // Using a loop to print the options
+        for (int i = 0; i < options.length; i++) {
+           System.out.println(options[i]);
+       } "
+
+
+
+After including this line I want to get the input from user to get "Answer of the Question"
+
+
+
+for this 
+"out" for output
+"in" for the input
+"Scanner" help to get the value
+And to use this u have to import it from "util" package
+
+
+
+After this line we write "sc.nextLine()" so with the help of "nextLine" whatever user written on the console screen it will take this as input and it store that some where now.
+So,here we try to store it in a variable.
+The code is given 👇
+
+
+
+public void playQuiz(){
+        for(Question q : questions)
+        System.out.println("Question no. : "+q.getId());
+        System.out.println(q.getQuestion());
+        // Assuming q is an object with getter methods for options
+        String[] options = { q.getOpt1(), q.getOpt2(), q.getOpt3(), q.getOpt4() };
+
+        // Using a loop to print the options
+        for (int i = 0; i < options.length; i++) {
+           System.out.println(options[i]);
+        }  
+       
+        Scanner sc = new Scanner(System.in);
+    }
+
+
+
+But there is a problem the loop will run 5 times and at every single time the value of "selction = sc.nextLine();" should be change
+
+
+
+
+will be keep changing the value with it's value inserted
+
+
+
+So, instead of inserting one Variable it should be an array it self
+
+
+
+now we created a String array of selcetion which have the space of 5 values. Now instead of storing it in an array name "selection" we also give the index of it. So, how we know the index? because we are using "for(Question q : questions)" it's an enchanced for-each loop.
+
+
+
+
+solution of this is we can take a variable name 'i=0' have datatype "int" and at "selction = sc.nextLine();" will be replaced by "selection[i++] = sc.nextLine();" command
+
+
+
+
+after done all of this 👇
+
+
+
+
+public void playQuiz(){
+        int i;
+        for(Question q : questions){
+        System.out.println("Question no. : "+q.getId());
+        System.out.println(q.getQuestion());
+        // Assuming q is an object with getter methods for options
+        String[] options = { q.getOpt1(), q.getOpt2(), q.getOpt3(), q.getOpt4() };
+
+        // Using a loop to print the options
+        for (i = 0; i < options.length; i++) {
+           System.out.println(options[i]);
+        }  
+        i=0;
+        Scanner sc = new Scanner(System.in);
+        selection[i++] = sc.nextLine();
+        }
+    }
+
+

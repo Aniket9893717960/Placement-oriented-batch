@@ -1,0 +1,100 @@
+So, now we have to show the '5' Questions in a raw format to  play the game. For this we build a methord name "display" in "QuestionService" class.
+
+
+
+If you only build an object like " System.out.println(questions); " and expect that it will print the data so, you are wrong.
+
+
+
+It only print the hashcode of an array.
+
+
+
+if you want to print first question so, you will get by this command.                         "System.out.println(questions[0]);" but it will print "Null" because we doesn't have any question.
+
+
+
+it we will try to fatch the Question with the help of "getQuestion()" method which we build in the file "Question.java" with the help of command.
+
+
+
+"System.out.println(questions[0].getQuestion());"
+
+
+
+Now we get the "NullPointerException"
+
+
+
+why we got here because we got here "Reference" of the object Not the actual "Object"
+
+
+
+so, for creating the object we write this command.
+
+
+
+"questions[0] = new Question();" and then we use this command.   "System.out.println(questions[0].getQuestion());"
+
+
+
+This is the array of references not the actual object so, now we run this.                   and We got "Null" because we get "getQuestion()" object but "getQuestion()" is still null.
+
+
+
+
+--------------NOTE------------
+
+
+so, if you creating the Questions so make sure u build the object of it
+
+
+------------------------------
+
+
+
+"public class QuestionService {
+  
+    Question[] questions = new Question[5];
+
+    public void displayQuestion(){
+        questions[0] = new Question();
+        System.out.println(questions[0].getQuestion());
+    }
+}" if we build the object of getter and Setter's one by one it will build the code complex.
+
+
+
+For make things Easier we build the constructor.
+
+
+
+on "Question.java"
+
+
+
+so, we will build a constructor which will accept all the values.
+
+
+
+now going to "QuestionService.java"  and now we build the constructor of this in which we build the object of first questions value where it's parameters are.
+
+
+
+
+"public void displayQuestion(){
+        for(Question q : questions)
+        System.out.println(q);     //if you write this line and think that it print all the Entities present in an object 
+                                    // so you are Definately wrong. 
+                                     // it will print all the hashcode of the object.
+    }" So, to overcome this problem we can build a "toString()" method Because 'q' here is an String object if we run this command it will automatically call "toString()" method in "Question.java" which by default returning hashcode so, we have to change it's value.
+
+
+
+
+Now compiler will print all the values. "
+Question [id=1, question=What, opt1=Java, opt2=Cpp, opt3=Python, opt4=Csharp, answer=Java]
+Question [id=2, question=What is Java?, opt1=A programming language, opt2=A framework, opt3=A database, opt4=A web server, answer=A programming language]
+Question [id=3, question=Which language is used for iOS development?, opt1=Swift, opt2=Java, opt3=Kotlin, opt4=C#, answer=Swift]
+Question [id=4, question=What does HTML stand for?, opt1=Hyper Text Markup Language, opt2=High-Level Text Machine Language, opt3=Hyper Tool Multi Language, opt4=None of the above, answer=Hyper Text Markup Language]
+Question [id=5, question=Which of these is a backend technology?, opt1=Node.js, opt2=React, opt3=Angular, opt4=Bootstrap, answer=Node.js]" on the console Screen.

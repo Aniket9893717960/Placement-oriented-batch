@@ -1,0 +1,14 @@
+we will come to the 5th video 12 min 20 sec
+
+
+
+for Permanantly deleting the VIEW you can write the query.                                                                                  DROP VIEW view_name
+
+
+
+IMP ---------------------------------------------------------------------------------------------------------------------------------------In interviews the interviewer mainly ask a question that What is the Difference Between DELETE And TRUNCATE?                         ANswer)  in TRUNCATE: This will parmanently delete all the data in over table Except Outer Structure. But Here DELETE is also done the same.                                                                               Than here interviwer ask i was talking about difference not similarities?                                                                                  Answer)        In DELETE we have access to Use WHERE clouse.But in TRUNCATE we doesn't.                                       Just like here i was writing a Query for DELETE a row have S.no is 103
+
+
+
+DELETE FROM emp WHERE empid 103;
+

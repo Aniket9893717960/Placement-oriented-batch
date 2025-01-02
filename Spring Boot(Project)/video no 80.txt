@@ -1,0 +1,135 @@
+What is Annotation?
+I don't think it simply means a supliment of the compiler or to the runtime.
+we also talk it as 'Meta Data'.
+Basically what happens you write the code.some time you want to interact with 
+compiler because compiler will not change the way it work it's just that 
+you want to supply some extra information to the compiler or to runtime.
+
+how will you do that?Answer) With the help of program.
+
+class A
+{
+ public void show()
+ {
+  System.out.println("In A show");
+ }
+}
+
+class B
+{
+ public void show()
+ {
+  System.out.println("In B show");
+ }
+}
+
+public class Demo
+{
+ public static void main(String args[]){
+ B obj = new B();
+ obj.show();
+ }
+}
+
+Basically we are trying to go for 'Method Overriding' of course
+we have to extend the class.Here, we are overriding the 
+'show' method of 'A' with the show method of 'B'.
+That we have seen this before
+we got the output "In B show" and this all becomes Examnple of 'Method Overriding'.
+
+
+
+
+Now we try to come through the certain changes in class 'A' 'show' method.
+1) change the name of class name 'A' 'show' method 
+'showTheDataWhichBelongsToThisClass'.
+2) for not changing the program objective same changes done
+in class name 'B' 'show' method.
+
+class A
+{
+ public void showTheDataWhichBelongsToThisClass()
+ {
+  System.out.println("In A show");
+ }
+}
+
+class B
+{
+ @Override
+ public void showTheDataWhichBelongsToThisClass()
+ {
+  System.out.println("In B show");
+ }
+}
+
+public class Demo
+{
+ public static void main(String args[]){
+ B obj = new B();
+ obj.showTheDataWhichBelongsToThisClass();
+ }
+}
+
+
+
+
+if you are expecting that the output is 'In B show' than, there is a 
+Shoking movement because output is "In A show" now this type of Problems
+in programming is called 'Bugs'.'Bugs' are something you are 
+expecting something but  you got something else like '2+2' and the
+output is '4' but you got '5' it's not the compile time issue, 
+it's not the run time essue but it's illogical(logic you are written is wrong).
+
+The most difficult problems you have to solve this logical problem. we say that
+we spend less time in coding and more time in Debugging.That's what the problem 
+we got here but here it's only two class if there is allot of classes than it's 
+problematic to solve.
+
+Check how to debug this problem "we trying to got the value from 'B' class but we got 
+form 'A' class"?
+Firstly check the method name are correct or not just like in over case 
+in forgot to write an 's' after 'Belong'. Some times we can miss it 
+at the part of calling we call class 'A'.
+this problem will arise if you writing the code. you can show your intension
+to the compiler and the conmpiler will help you here.
+By the help of 'Annotation' you can show you 'intension' to
+the compiler.
+Allot of inbuild 'Annotation' will have in java.Just like
+in this case we use '@Override' as an 'Annotation' between 
+class 'B' and under the class 'B's' method.
+
+
+
+
+
+Now it show the error at the class 'B's' method as name
+"The method 'name' of type 'B' must override or implement the supertype method"
+this is all about.
+
+Now apart from '@Override' there are several annotation which we use but in terms
+of 'core java' we doesn't use most type of annotation of course you create our
+own annotaions but in general we don't use much.
+
+but just you start working with framwork example you talk about "Hybernate",
+"Spring" framework at that point it's mostly driven by annotations.
+
+There are some annotations which works on methods,variables and class level
+(just like "@Deprecated" this is one of the annotation on class level we have).
+
+"Deprecated" is simply means you use it but don't use it so, it is moved 
+from the java language and there are some better alternative for this.
+so, mark your class as 'Deprecated' that if some one try to use your 
+class he get to know that this class is 'deprecated'. 
+
+For Method level Annotations:
+1) "SafeVarargs","SuppressWarnings" if you hide the warning,
+If you start working with 'Hybernate' we also se 'Transient',
+'FunctionInterface' we are going to see in 'Interface' concept,
+whenever you create your own annotations you also set 'Retention'
+means 'Scalability' you only set it from 'compiler level' means 
+once the code is compiled annotation will not make any sense after that.
+
+If i remove the class 'B' inner data at right click go to 'Source Action'
+then i go to override than select the method you want to override
+By default compiler give '@Override' annotation.

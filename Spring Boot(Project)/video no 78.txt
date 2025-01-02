@@ -1,0 +1,73 @@
+Now Expand the Example of 'Enum' with the help of If Else
+
+enum Status {
+Running, Failed, Panding, Success;
+}
+
+public class Demo
+{
+ public static void main(String a[]){
+ Status s = Status.Panding;
+
+ if(s == Status.Running)
+ System.out.println("All good");
+ else if(s == Status.Failed)
+  System.out.println("Try Again");
+ else if(s == Status.Pending)
+  System.out.println("Please Wait");
+ else
+  System.out.println("Done");
+ }
+}
+
+
+But In "Status s = Status.Panding;" status/value of enum will be come from any where whether you call the method which return this value/status.That you want to check it's status and
+based on that you want to run it's value.
+And for different status you want to print different values rether than it's 'Named COnstant'
+we use here 'IF/ELSE'.
+
+Just like for 'Running' we print on console is 'All good'
+
+
+
+
+But what if we try to implement same thing with the help of 'Switch' case.
+Because in 'switch' there are the certain limitation that just like 
+'switch' support int,character,String like that is support 'enum'?
+
+Answer) is yes, but in different way because in if-else you
+have an option to use 'Status' full name as well but in 'case'
+you don't have to do that reason here is 's' he was getting 
+is already an 'enum' type he already knows whatever
+you are passing is a part of 'Status'.
+
+So, here we use constant(like 'Running') directly itself.
+
+enum Status {
+Running, Failed, Panding, Success;
+}
+
+public class Demo
+{
+ public static void main(String a[]){
+ Status s = Status.Panding;
+
+ switch(s){
+  case Running: 
+   System.out.println("All Good");
+   break;
+  
+  case Failed:
+  System.out.println("Try Again");
+  break;
+
+  case Pending:
+  System.out.println("PLease Wait");
+  break;
+
+  default:
+    System.out.println("Done");
+    break;
+  }
+ }
+}

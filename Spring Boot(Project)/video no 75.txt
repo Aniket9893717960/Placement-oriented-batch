@@ -1,0 +1,61 @@
+At video no 75 we try to lean a class can implement multiple interface with the help of program
+
+
+
+
+For this we cretae a new interface name 'X' in the previous program and whatever the methods we define in this will impact to over class 'B' becuase now it will come to show an error  because u have to define also it's defination in class 'B'.
+
+
+
+
+There is one more thing let say we include one more interface name 'Y. let  we talk about class so, we have a right to done class and interface. Is interface and interface is possible?answer) it's possible with the help of this command "interface Y extends X" u also come to know interface 'Y' doesn't have any method. And A's object doesn't directly access run so for accessing run we build the object of 'X' interface. The whole program given below 👇
+
+
+
+
+interface A
+{
+ int age=44;
+ String area = "Mumbai";
+ void config();
+ void show();
+}
+
+interface X {
+ void run();
+}
+
+interface Y extends X {
+
+}
+
+class B implements A,Y
+{
+ public void show(){
+ System.out.println("In show");
+ }
+ public void config(){
+ System.out.println("In config");
+ }
+ public void run(){
+ System.out.println("running...");
+ }
+}
+
+public class Ts
+{
+ public static void main(String args[]){
+ A a;
+ a = new B();
+ a.show();
+ System.out.println(A.area); 
+ a.config();
+
+ X obj1 = new B();
+ onj1.run();
+ }
+}
+
+
+
+

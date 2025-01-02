@@ -1,0 +1,250 @@
+The Person name to build its first database on Oracle is 
+Scott and his Dog name is Tiger
+Because of 1st version of Oracle has lonched so it's username is Scott and It's password is tiger
+
+
+For this it becomes the Biggest database Company but Scott is Sed he thought he doesn't get its respect because it's no more Database company rather than its a Marketing company 
+So after Oracle version 11 and 12 he left the job
+And he another start its own company name is "Postgrece"
+
+
+MySQL also become Oracle.mysql.com
+
+
+And Oracle totally becomes a marketing company as I personally thought
+
+
+U have to see an Observation in SQL that if we create a Database than it will return 0(zero) rows affected But if we drop a database and Create a table than it will return 1(one) rows affected
+
+But in the near future in Java it will be tricky to predict that the Query is executed or not So to solve this Problem Java will prepare some methods there Some methods have a return type integer which will solve the problem of Create table and Drop 
+
+And for Create Database Java build Some methods have a return type Boolean(true or false)
+
+
+Here in previous all the queries are correct
+
+
+There are some rules and regulations 
+1) variable names will not allowed spaces but if it has imp to give space than inclosed variable in single commas.
+2) if I try to create Table name emp in database db32 but before this write 'Use db32' So as I write 'create table emp...' in internally this written as 'create table db32.emp'
+
+
+3) if you have to initalize a primary key in Create Table query so u will initalize as 'variable_name datatype Primary Key, ......' 
+Also we have 2nd method is to write at the end of the query.
+But we generally prefer second because it's easy to identify which variable is primary key.
+
+
+And We have come to SQL 2nd Video 24th minutes
+
+
+For Insert value on Entity 
+1) you have to maintain an order at which you have to insert values if U don't than it give the mismatch error 
+2) it is compalsary to give a collans '' with Varchar Entity's
+
+
+Because some times it gives Varchar contains Values which have spaces
+
+
+3) datatype integer will have not compulsory to contain Collans
+
+
+4) it gives the output 1 rows affected
+
+
+We Know that S.no (Student id) will be a primary key so it's strictly compolsion to write the Unique values in it Otherwise it will not run the query
+
+
+If we have two write two records same or if some case it will stored so it has big tricky task to change and Delete those rows
+
+
+Because system will doesn't differentiate the values
+
+
+We have also add more than one values with the help of this query
+INSERT INTO table_name VALUES (101,'RAM',10000,'Indore'),(102,'Shayam',15000, 'BHOPAL');
+
+
+It will give output 2 rows affected
+
+
+If we try to insert value of John with the query.
+1)
+INSERT INTO table_name VALUES (103,'John','Rau');
+So, it will give output
+
+
+Column count doesn't match value count at row 1
+
+
+To solve this Problem we have two Tricks
+1) Insert Null in Salary column just like :
+INSERT INTO table_name VALUES (103,'John',NULL,'Rau');
+
+
+2) in the place of table name we have to maintain the Entity you want to insert Just like this command
+INSERT INTO table_name(empid,empname, empcity) VALUES (103,'John',NULL,'Rau');
+
+
+If you want to stay empty a bit Value so, There is a Major rule called 'Nothing Can Be Empty' for this he will Discover a value NULL if you doesn't Use NULL to describe empty IT gives a compilation error
+
+
+If you try to change Printing order to show data of the tables Just like we have to switch place of empcity and empsalary so, just u mantion entities name as u like at different order select will show it in different order
+Just like this Command.
+SELECT empid,empname, empcity, empsalary FROM emp
+
+
+It will give output 4 rows affected because in the table we have 4 columns
+
+
+WHERE = ginki
+
+
+SELECT * From emp Where empsalary<10000;
+This is the query for employees which have salary smaller than 10000 but NULL doesn't participate in comparison so this Query give the output
+
+
+Empty Set
+
+
+SELECT * From emp Where empsalary<>10000;
+This is either less than or greater than this =  Not equal to
+
+
+3 video of SQL Begins
+
+
+DESC table_name
+This will describe all the information of selected tables
+JUST LIKE ITS field's name, datatype ,size, default value, belongs to which Key, and some extra details
+
+
+In this you will see in datatype column which have int(11) where 11 is maximum letters(-2147483647) this will supports 11 digit it not support it support 11 letters this two have different meaning.
+
+
+SELECT * From emp Where empsalary=NULL;
+
+
+This will also not display John details because NULL doesn't participate in Comparison this output is Empty set
+
+
+Because = is a predefined keyword or it is use to compare values
+
+
+For this Solution we can use 'is' operatior 
+SELECT * From emp Where empsalary is NULL;
+Now it will gives John's data and output 1 rows affected
+
+
+SELECT * From emp Where empsalary is not NULL;
+This will use to ignore null Values now all print except John output is 3 rows affected
+
+
+If u comparing two numerical values and in the same Column/entities so, this will have two methods to done this 
+1) traditional methods using and
+2) SELECT * FORM emp WHERE empsalary between 1000 AND 1500;
+
+
+Column index will start from 1 u have to remained and rows is same '0'
+
+
+SELECT (2+2) as Total;
+This will temporary print the colomn name as Total and this feature which we have done this called Aliyazing
+
+
+Example SELECT empid, empname as name, empsalary, empcity from emp; 
+This will print empname as name
+
+
+Example SELECT empid, empname as 'name of emp', empsalary, empcity from emp; 
+If we have to write it with space
+This will print empname as 'name of emp'.
+
+
+If we have to Count bonus of all the employees in the month let say Bonus is 500 add to each So after and before salary is we have to see at a time so to done this we have to made a query.
+
+SELECT empid,empname, empsalary, empsalary+500,empcity FROM emp;
+
+But this will be show 5 column but if admin try to not reveal how much bonus he gets so change the column name of empsalary temporary as 'Salary with Bonus' by Query
+
+SELECT empid,empname, empsalary, empsalary+500 as 'Salary with Bonus' ,empcity FROM emp;
+
+If try to give bonus of Empsalary with its 10% so this is the query
+
+SELECT empid,empname, empsalary, empsalary+(empsalary*.1) as 'Salary with Bonus' ,empcity FROM emp;
+
+
+Aggregation have five kind of Keywords 
+1) is SUM is use to calculate total no. Of Rupees salary Company will given two employee in a month/year will gone for this.
+
+SELECT SUM(empsalary) FROM emp;
+
+2) is MIN this will helpful to find which employ will get the Minimum salary 
+
+SELECT MIN(empsalary) FROM emp;
+
+But it doesn't talk the name of employee who got this salary for this here comes the Concept of Nested Query.
+
+SELECT * FROM WHERE empsalary= ( SELECT MIN(empsalary) FROM emp);
+
+Here brackets is compalsary because here if we remove Brackets we have obtain an error ' empsalary = SELECT ' because here compiler will give conclusion that after SELECT all u have written is wastage so, it's important to give Brackets in this type of condition
+
+
+If we write a query
+
+SELECT MIN(empname) FROM emp;
+
+so this will give output JOHN because this will work as an Alphabetical order
+
+
+We got an 'error 1140 (42000): mixing of group colomn' in the Query
+
+SELECT empname ,MIN(empsalary) from emp;
+
+SELECT empsalary ,MIN(empname) from emp;
+
+because of empsalary have try to produce 1 output but on the other hand empname will produce 4 output.
+As same as second also but switch the entity's condition.
+
+
+3) is MAX is similar to MIN
+
+
+4) is AVG to find the AVG of empsalary.
+
+SELECT AVG( empsalary) FROM emp;
+
+This output is 12333.3333 because this have will not follow the principal of Programming Language is " Integers upon integer Always be an Integer"
+
+
+This will not for this EVEN for this Query also
+
+SELECT (10/2);
+It's answer is 5.0000 because it maintain 4 digit accuracy.
+
+
+5) is COUNT will help to clarify the total no. Of employees.
+
+SELECT COUNT(empname) FROM emp; 
+
+This will give the output 4.
+But if we write empsalary 
+
+SELECT COUNT(empsalary) FROM emp; 
+
+Than its 3 because NULL is not a value.
+
+
+IMP _--------------------
+In a lots of interview he usually give a question that what is the difference between Count Column name and Count * 
+Answer)
+Count * will count no. Of rows of he have NULL or not doesn't matter But in Count Column name it matters.
+
+In primary key it's not possible because we know that primary key will not Permit NULL values so in this case this two Outputs Should be same 
+
+Otherwise it should be different and Same as well we doesn't sure in this case.
+
+
+If an interviewer asked to calculate the average of 1 given Entity without Using Method AVG in MySQL?
+Answer)  1st step)
+SELECT SUM(empsalary)/COUNT(empsalary) FROM emp;
+This will give the output 12.3333.

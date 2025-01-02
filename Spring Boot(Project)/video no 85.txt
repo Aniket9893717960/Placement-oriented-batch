@@ -1,0 +1,41 @@
+In this video we are talking about Exceptions.
+Before you Understand this we have to first Understand types of Error then we have 
+Different types for it.
+ 1) Compile time Error
+ 2) Run time Error
+ 3) Logical Error
+How do we Describe this let's say i want to print something.But 
+we make a mistake in Printing command like i write 'P' in '.println'
+of course your IDE will give you an error here But if you ignore
+that and compile it give error "cannot find symbol"
+This will called Syntactical/Compile Time Error.
+                 ------------------------------
+
+2) Logical Error: it means every thing is working there is not
+   --------------              compile time issue.
+               System.out.println(2+2);
+But as not doing the simple calculation where output is not '4'
+it's '5' and it's working there is no compiler time issue,
+not run time but output you are getting is wrong.
+Now this type of error are logical error.
+Actually  some times this problem are diffuclt to solve
+you need to do allot of testing.
+
+Example:
+-------
+When you heard about this whenever you working in an 
+application in that case you were do testing,you
+check for the input and output and everything that you 
+were not able to solve this problem.
+
+But the think is from the Developers side. he will check 
+compile time issues.You do proper testing for logical 
+issues.If you shift this to client than, client is
+happy.
+There is no compile time issue,run time issue or logical issue
+
+3) Run time Error: it means every thing is working there is not
+   --------------              compile time issue. 
+Your code is working as well but suddenly because of some reason
+the code will stop working. You got errors so basically if you
+get run time your exeution normally stops and that's an issue.

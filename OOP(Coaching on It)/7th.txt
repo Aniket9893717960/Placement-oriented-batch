@@ -1,0 +1,90 @@
+if the class will have the "Pure Virtual" function than the class which it Declared is called "Pure Virtual" Function
+
+
+
+And we doesn't build the object of a class which have "Pure Virtual" Function.
+
+
+
+"Runtime Polymorphism:
+Dynamic Method Dispatch:
+Virtual Function:"
+Defination:
+if we have reference of parent class and object
+of a child class and we want to access the method 
+of child using the reference of parent class
+than it can be possible by following 3 rules:
+
+1) reference should be of parent class
+ and object should be of child class.
+
+2) case should be of method Overriding.
+3) the method of parent class should be
+ declared as Virtual.
+
+ "Jiska Object banaga uski method call hogi"
+
+
+
+Pure Virtual Function:
+Abstract Class:
+
+A pure Virtual function is a virtual function with
+zero body definition, we can declare it as:
+
+      virtual void show()=0;
+
+A class that contains a Pure virtual function is
+called an Abstract Class. If a non Abstract class
+is going to inherit an Abstract class then it will
+be a compulsion for the child class that it has to
+implement(Override) all the Pure Virtual Functions
+of Parent class.
+
+we are not allowed to create any Object of an Abstract
+class but we can create a Reference for the same.
+
+
+
+14 th video 30 min
+
+
+
+"Generic class" have the property that not matters that which datatype Parameter U passed it will perform operation on those data.
+
+"#include <iostream>
+using namespace std;
+
+template<class DT1,class DT2>
+
+class Test {
+public:
+ DT1 a;
+ DT2 b;
+ 
+ Test(DT1 x,DT2 y){
+ a=x;
+ b=y;
+ }
+ void show()
+ {
+  cout<<a<<" "<<b<<endl;
+ }
+}
+
+
+int main(){
+ Test<int,int>  t1(10,20);
+ Test<int,char> t2(10,'A');
+ Test<int,float> t3('P','W');
+ Test<int,float> t4(123,456.78);
+ Test<char,double> t5('X',456.78);
+
+ t1.show();
+ t2.show();
+ t3.show();
+ t4.show();
+ t5.show();
+
+ return 0;
+}"

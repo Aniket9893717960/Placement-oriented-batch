@@ -1,0 +1,61 @@
+object Orientation have the Synonium which is "Security".
+
+
+
+What is the Need of Object Oriantation?
+
+
+
+"Access Specifiers","Access Modifier" and etc we not done this on C programming
+
+
+
+Is Access Modifier and Access Specifier is the same thing?
+
+
+
+"Access Specifier" means 'jo access ko specify kara' Example 'Static: For all the class data will accessed  by Creating an OBJECT. but here it talk class data also Accessed by Class name'           'Final: For all the variable value will be change able but here Final  Talk it will not.'             ''we also know 'Cons' keyword'            'Abstract: we just declaring a methord but its implementation will be written in child class' because this is the compultion or Protocol'    We study 'Abstract' Keyword With the name of pure Vertual Function.                                                                                            "Access Modifier" means 'Jo access ko modify karada' Example Public,Private,Protected.
+
+
+
+Let's take an Example that ''We want declare two variables A and B  where we Define 6 functions F1,F2,F3,F4,F5,F6 we try to differentiate this that Variable 'A' visible only F1,F2,F3 And Variable 'B' Visible only F4,F5,F6 So, in C There is a only choice to Make 2 Different file 1st for 'A' and second for 'B'.
+
+
+
+But in OOP we build a two different specific class for A and B  let say 1st class for 'A'  which capture function 'F1,F2,F3' and 2nd for 'B'  which capture function 'F4,F5,F6' And those Variables which are inner the class but outside the methords are called Instance Variable.This is once of the Secure variable in OOP because this are inner the class so, it doesn't accessed by outsiders.
+
+
+
+Now lets jump to the first Property of Object Orientation is 'CLASS' it's that component that we have to place some Variables and Methords on it
+
+
+
+it's like a container to store Variable and Methords.
+
+
+
+It is also called User Defined datatype. because user can customized this by it's own choice.There are how many variable in this there are how many methords in this are user defined.
+
+
+
+Defination "Class is the user defined data type or its a collection of variables and methords"
+
+
+
+Next Property of Object Oriantation is 'Object' means it's a class components which have an authority to access it's class data/any contect of a class. It is a Run time/real time Entity.                          What is Entity? Anything that Exist is called Entity.                         This is also Known as instance of a class
+
+
+
+Now the 3rd Property of OOP is Abstracraction means 'Hide iT' and Encapsulation where 'capsul' denot's we try to compress data in a single capsul talking to this Process is called Encapsulation.
+
+
+
+Abstarction Real Life Example Technical And Non-Technical? In Tech 'Calculator' because we doesn't know how calculator will calculate the data Interiorally.                  Noin-tech is Movie Trailers
+
+
+
+Defination of Abstraction is "Showing only Essential features without showing beckground Details called Abstraction"
+
+
+
+Defination of Inheritance "It is a property by which a class can acquire Properties of another class." it's real like Example is Amazon , Amazon prime where prime is for the susbription user and Amazon free version is used for all. and In 2021 he launched AMazon mini Tv and it give the specific button to the main web site of Amazon SO, he give Amazon mini tv in the form of update for all it's consumer to update  Not Build from the Start.

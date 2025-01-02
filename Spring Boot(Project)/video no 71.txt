@@ -1,0 +1,127 @@
+Now we going to Video no 71 Because in this we are talking about 'Inner class'. It means a Nested Class. Imagine a scenario where u building a project at which a class will be used only for that purpose. Let say you have a class 'A' and it needs variable
+
+
+
+
+and a class is totally Dependent on class 'A' there is a restriction that u not build any other class So, at that case u have to build a class inside a class 'A'
+
+
+
+
+class A
+{
+ int age;
+
+ public void show(){             // if u say 'show' is just a method so, no 
+  System.out.println("in show");  //'show' is a non - static method.
+ }
+
+ class B
+ {
+  public void config(){
+  System.out.println("In config");
+  }
+ }
+}
+public class Ts
+{
+ public static void main(String args[])
+ {
+  A a = new A();
+  a.show();
+ 
+  B b = new B();   //Here it will give an Error because class B will doesn't openly
+ }                Available like class 'A' so, simply build the object to call the 
+}                 mathod is not the solution.
+But if you wanna check after compiling this program that compiler will build three
+class name 'A' for Accessing class 'A'. 'Ts' for accessing the main class 'Ts' and
+here 3rd class is Strange here it's name shown 'A$B' because here '$' represent 
+'belongs to' here 'B'belongs to 'A' class that's why it's 'A$B'.
+
+But if you simply create an object of 'B' like this "A.B b = new B();" so, it again
+not work because here compiler start analyzing text from right to left and it's
+Not the proper Syntax.
+
+"If you want to Access class 'B' than firstly you build the object of class 'A'
+and refer it to build the object like this"
+             " A.B b = a.new B(); "
+it's correct technique and updated code will be given 👇
+
+
+
+
+class A
+{
+ int age;
+
+ public void show(){             // if u say 'show' is just a method so, no 
+  System.out.println("in show");  //'show' is a non - static method.
+ }
+
+ class B
+ {
+  public void config(){
+  System.out.println("In config");
+  }
+ }
+}
+public class Ts
+{
+ public static void main(String args[])
+ {
+  A a = new A();
+  a.show();
+ 
+  A.B b = a.new B(); 
+  b.config();
+ }                
+}
+
+
+
+
+but previous program we talk about 'non static class' so now we talk about 'static' class. For doing this we make class 'B' as static here u don't need to represent 'A's' object to build 'B's' object with the help of class 'A'  we direcly build the object of 'B' class without 'A' class .so, here is the program.
+
+
+
+
+But it's important the class would be static without this we doesn't done this.
+
+
+
+
+class A
+{
+ int age;
+
+ public void show(){             // if u say 'show' is just a method so, no 
+  System.out.println("in show");  //'show' is a non - static method.
+ }
+
+ static class B
+ {
+  public void config(){
+  System.out.println("In config");
+  }
+ }
+}
+public class Ts
+{
+ public static void main(String args[])
+ {
+  A a = new A();
+  a.show();
+ 
+  A.B b = new A.B(); 
+  b.config();
+ }                
+}
+
+
+
+
+---------NOTES-------- *static class only be declared at inner class Because at outer class it gives error name "Illegal modifier for class 'A' only public abstract final are permanent."
+
+
+
+

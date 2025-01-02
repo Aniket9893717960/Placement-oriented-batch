@@ -1,0 +1,105 @@
+stop video 2 at 22 min
+
+
+
+in class 'Test t1' if we remove 'public' access specifier in this than compiler will give error on all those places where we try to access Instance variable.
+
+
+
+if we done some changes than "class Test 
+{
+public:
+int a,b,c;
+void show(){ count<< a <<" "<<b<<" "<<endl; }
+;  "
+
+
+
+This program will be use to assign the same data in more than one Class objects.
+
+
+
+Now we build another program at which "class Test {
+public:
+int a,b,c;
+void show() {  cout<<a<<" "<<b<<" "<<c<<endl; }
+ void setData(int x,int y,int z){
+ a=x;   b=y;   c=z;
+ }
+};"
+
+
+
+Now u have just one job to assign the value of the created object 'Test t1;'  and call the methord 't1.setData(10,20,30);' than call 't1.show();'
+
+
+
+this will called as 'Object Oriented' methord because it will call it's object to call the  methord with it's own parameter.
+
+
+
+Now we make such changes on this program "class Test {
+public:
+int a,b,c;
+void show() {  cout<<a<<" "<<b<<" "<<c<<endl; }
+ void setData(int a,int b,int c){
+ a=a;   b=b;   c=c;
+ }
+};"  Then this will be problematic because it will only call the local variable because the is nearest accessable think he canjust like we machine is also leazy. To counter this problem we have "this" keyword for this.
+
+
+
+Because of this changes "a=a; b=b; c=c;" becomes Non-functional Assignment. It will run or not doesn't matter
+
+
+
+Defination of "this" so, 'this' is a pre-defined pointer vairable it does not have it's own data it will learn those object data which will call the methord with his object. Because of this doesn't direct access the data because pointer variable should be point out the other variable so, '->' sign will be use.
+
+
+
+In this program we deep drive into 'function' and how it works?                                                                                                                "class Test {
+public:
+int a,b,c;
+void add(int a,int b){  
+ int c;
+ c= a+b;
+ cout<<c<<endl;
+} 
+int main {
+Test t1;
+ t1.add(10,20);  
+ t1.add(100,200);
+ return 0;
+}     There is not Problem in this program but there are some principle of "function" is                                                                  1) function will not have the work to print something. If possible to avoid printing than avoid it.
+
+
+
+at this  program we try to remove Printing from the class methord.  "class Test {
+public:
+int add(int a,int b){  
+int c;
+c= a+b;
+return c;
+} 
+int main {
+Test t1;
+ int sum = t1.add(10,20);                       cout<<sum<<endl;  
+ cout<<t1.add(100,200);
+ return 0;
+}                              we does some changes in previous and this like we use New concept here is "Return by value" on the function "add" and with this we change the datatype of the function from 'void' to 'int'.
+
+
+
+After "Return by value" we will go throw "Method Overloading"/"Compile Time Polymorphism"
+
+
+
+Defination of "Method Overloading"/"Compile Time Polymorphism" is "For methord Overloading in a class, it is a compulsion that there should exist more than one methord with same name different signature.                                                                           It means that either their no. of parameter or their datatype of parameter should be different"
+
+
+
+NOTE--------------------------------------------------------------------------------------------      1) "Method Overriding" should not be the reason of run-time polymorphism               2) return type  of the method cannot be responsible for method overloading Process.     -------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+NOTE--------------------------------------------------------------------------------------------     1) 'printf' datatype is integer.                       2) 'scanf' datatype is integer.                  3) 'getch' will doesn't only throw the output on the console Screen. and Also get the Character on the console Screen to terminate. but it's datatype is Integer because it will work on Ascii code.                                  4) clrscr() datatype is Void. -------------------------------------------------------------------------------------------------------------------------------------

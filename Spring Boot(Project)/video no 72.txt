@@ -1,0 +1,25 @@
+SO, as we know about 'inner class'. let's talk about 'Anonymous Inner Class'  so, here 'Anonymous' is something that doesn't have a need. For this we have to write defination of a class in the main class 'Ts' method. The program will be build as follows:
+[11:10 pm, 12/12/2024] Aniket Rathore: class A
+{
+ public void show(){
+  System.out.println("In old show");
+ }
+}
+
+public class Ts
+{
+ public static void main(String args[])
+ {
+  A a = new A()
+  {                                 //But here if u notice why we are using a class keyword.
+   public void show()            //because here we doesn't given a name to it.
+   {                  //That's why this is the inner class because this will inside the Demo 
+    System.out.println("In new show"); //class but if you go to '.class' file than u see
+   }    // 'Ts$1'.class file where compiler given him a inner class name '1' 
+  };  //of course if you create multiple class it will have different no. '2','3','4' and goes on and since we don't have name it's called 'Anonymous class'
+  a.show();
+ }
+}
+
+We use this concept in different topics like 'interfaces','functional Interface',
+'Lambda Function'

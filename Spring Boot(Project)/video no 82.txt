@@ -1,0 +1,81 @@
+Now we talk about 'Functional Interface' and we know at this we
+have only one method so, let's create one.
+
+interface A
+{
+ void show();
+}
+
+class B implements A
+{
+ public void show()
+ {
+  System.out.println("In show");
+ }
+}
+
+public class Demo
+{
+ public static void main(String a[])
+ {
+ A obj = new A();
+ obj.show();
+ }
+}
+
+we create an interface here and call it's name as 'A'.In this we declare
+only one method which is "void show()" and then i can implement this
+interface  we know we get the class we create the object of it.
+
+
+
+
+ow this interface will call as 'SAM(single abstract method Interface)'
+or we call this interface as functional interface and to specify that
+it's a functional interface.
+For this we use an Anotations("@FunctionalInterface") By doing that we 
+making sure we have only one method in the interface.If you try to add 
+another method you get an error name
+
+  "Invalid '@FunctionalInterface' annotations; A is not a functional interface"
+
+But there is a Question that why we are getting so much importance to
+'@FunctionalInterface'? we find out it's answer at some time.
+
+we create another class that is class 'B' WHICH implements 'A'
+and here we define the method 'show' at which only we print "in show"
+@FunctionalInterface
+interface A
+{
+ void show();
+}
+
+public class Demo 
+{
+ public static void main(String a[])
+ {
+ A obj = new A(){
+  public void show(){
+  System.out.println("In show");
+  }
+ }
+ obj.show();
+ }
+}
+
+
+
+
+// here i want to instaciate 'A' by Defining it's own implementation here
+we know what we are doing instead of creating a seperate class we are using 
+annormous class at main method.
+
+As we are using here is 'functional' Interface. we talking about version 'JAVA 8'
+because till 'Java 7' everything was good but In 'Java 8' he done something OSSUME
+.They make sure that Java is not so 'Verbose' what is 'Verbose' means is
+specifing everything making a Detail Code. It's good most of the time to read 
+the code. But some time you need to shorten the code.Whether here are some 'Bugs'.
+
+In Java 8 we got Lambda Expression and we can use 'Lambda Expression' only
+with 'Functional Interface'. your Main Question is what the hell Is Lambda
+Expression? we see in Detail in next Video.

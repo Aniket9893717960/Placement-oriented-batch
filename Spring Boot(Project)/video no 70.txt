@@ -1,0 +1,150 @@
+So, before this  video we are talking about "Abstract Keyword" so, we know some important concepts of java line class, object, inheritance and how do we override the method "Overriding" let's those knowledge we talk about 'abstract' keyword. for explaining this we make a demo code
+
+
+
+
+"class Car
+{
+ public void drive(){
+ }
+
+ public void playMusic(){
+ System.out.println("playMusic");
+ }
+}
+
+class Ts {
+ public static void main(String args[]){
+ 
+ }
+}" in 'playMusic' i have the statement but in 'drive' i wanna try to build my own car but i am not sure how to drive a car.               Here I know  how to implement music but i don't know how to setup the engine and wheels but car should drive that's what i know and that's all we called a car.
+
+
+
+
+so, firstly we create an object of 'car' and i call both the methods 'obj.drive()' or 'obj.playmusic()'. so if u notice we doesn't do anything with because i don't know what can i do with 'drive'?  but if we run the program it will give the output and print 'playmusic' statement "Play Music"
+
+
+
+
+But if u defining anything('drive' in this case) and it will not do anything becomes 'Negligible Commands'. I know it's technically correct as we check 'Java' protocol. but if we thing it as a feature than it's disaponting.
+
+
+
+
+so, this condition occurs that you don't know  what can we done with 'drive'. As a profectional instead of Defining it we have to declare it like this command. "public void drive();" it means that 'drive' method u were declaring but not working so no one will try to create the object of this.
+
+
+
+
+Now for Declaration we will create a New class name 'WagonR' which extends 'Car' Why we done this? because we want to buy a real car and it's compalsory for 'Real Car' that he have the 'drive' feature.
+
+
+
+
+After u doing this the error will be visible on the top where we declare 'drive' method. if we want to implement all of this to run the  program. we make a change in those from  "public void drive()" to "public abstract void drive()"
+
+
+
+here we use 'Abstract' keyword here abstract means i should give you an idea that a car should have a drive feature.but don't know how to implement it. when you use your parent 'Car' feature and you call it's at your's which you have 'Car' feature. so, manufacturing a real car it should have a drive feature. So that's why u declare 'Drive' as 'Abstract'
+
+
+
+But still it gives an error at the same point and it says "An Abstract method drive in type Car can only be defined as Abstract Class." it means that here 'drive' is an abstract method and an abstract method will be belong to an abstract class.
+
+
+
+That means u have to define the 'Car' as 'Abstract' class as well
+
+
+
+And if u inherit an abstract class so, u have to define an abstract method(Override It) Compulsory.
+
+
+
+But now it gives an Error on the object of a 'Car' because it's a property of an 'abstract' class that if u have an 'abstract' class  than didn't build it's object.
+
+
+
+here Error says 'Cannot Instantiate the type car'
+
+
+
+Here u will create a reference of an abstract class. So, Now we will create a reference of an Abstract class 'Car' and initialize it by building it's child class  object 'WagonR' like this            "Car t1 = new WagonR();" and here we also talk about  "Dynamic Method Dispatch"
+
+
+
+
+here U also Know that  abstract method have cumpolsory to have an abstract class but not abstract class have compulsory to contain abstract method. Abstract method also contrain normal method.
+
+
+
+
+we also declare multiple methods in a same class like we declare another Abstract method name "fly". and it will run purfectly without any problem. But if u try to experiment that u were not defining 'fly' in Class 'WagonR' then compiler will give error at this class. Error says "The type wagonR must implement the inherited abstract method Car.fly()"
+
+
+
+
+if u have come on this condition at which doesn't  have to apply all the 'Abstract' method in 'WagonR' class. than we want to build the child  class  'WagonR' as 'Abstract' class.
+
+
+
+
+But the Problem is here "Car t1 = new WagonR();" because now 'WagonR' also becomes an 'abstract' class. So, now we build a new class name 'UpdateWagonR' which extends 'WagonR' because here 'WagonR' contains the features of his Parent class 'Car'
+
+
+
+
+So, Now we create an Object of 'UpdatedWagonR' and set this into the Refence of the root parent abstract class name 'Car' like this "Car t1 = new UpdateWagonR();"
+
+
+
+
+ 'UpdatedWagonR' will become concrete Class.
+
+
+
+So, we have to create an object of concrete class not Abstract class
+
+
+
+So, this is that's all about 'Abstract Keyword'
+
+
+
+Bro but i forgot to Send the code and it's also the part of VIDEO NO 70. so the code will given 👇
+
+
+
+
+abstract class Car
+{
+ public abstract void drive();
+ public abstract void fly();
+
+ public void playMusic(){
+ System.out.println("playMusic");
+ }
+}
+
+abstract class WagonR extends Car {
+
+ public void drive(){
+  System.out.println("Driving...");
+ }
+}
+
+class UpdateWagonR extends WagonR {
+  public void fly(){
+  System.out.println("flying...");
+ }
+}
+
+class Ts {
+ public static void main(String args[]){
+ Car t1 = new UpdateWagonR();
+ t1.drive();
+ t1.playMusic(); 
+ t1.fly();
+ }
+}

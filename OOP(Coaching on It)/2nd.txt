@@ -1,0 +1,106 @@
+Video no. 2 this is a video no 2
+
+
+
+We will work on online c++ compiler. if you have to work on it. please make attention on following points.
+
+
+
+1) you have to write 'int main' not 'void main'
+
+
+
+1) if you write 'cout' at any time so you have to add 'std ::' But if you don't want to add 'std ::' than after headerfile declaration  your first command should be 'using namespace std;'.   'using namespace std;' it means that 'cout' will always come out from 'iostream'. and also all component you have maintoined in this will always come automatically.
+
+
+
+'cout' has the full form is 'Console output' '<<' this left shift operator will known as 'insertion operator'. There are some peoples who can talk that it's an 'exeration operator' so, 'exeration' will be always used for represent output but
+
+
+
+here 'cout' will get a word 'Hello world' to print at console screen.
+
+
+
+why 'endl' end of line is the better option than '\n'? because 'endl' does the faster excution than '\n' there is a pecific reason that mostly "\n" written in " " than internally compiler will check that it's the part of a string or not.
+
+
+Now we will going throw Program of addition in c++:
+
+
+
+
+'cin' is console input and '>>' operator will called as 'exceration operator' it will help to get specific values. you also get mor than one value by this command "cin>>a>>b" where 'a' and 'b' is the variable.
+
+
+
+if you have to declare any new variable in the mid of the code it's not a compulsion that you should declare it on the start of the code you will declare variable at any time any where
+
+
+
+Q) Program to Specify the topic  'Calling of function' in the new concept where we call 'show' 3 times? let we have to always know that 'C++' always work at Bottom-up approach. So, we have to give 'Defination' than 'Declaration' in main function.
+
+
+
+but in intial we face to a high complexity that jumping time of this is more and more to make this overcome at the part of defination of function 'void show()' will replaced by 'inline void show()'
+
+
+
+SO, what is inline function? Just like 'Macro' in 'C' Programming the main work of  this  at compile time if you have call the function name 'show' in main function 'main' than it will replace 'main' function calling command for 'show' with original defination of 'show'
+
+
+
+Bro this whole thing done before compiling
+
+
+
+'Inline' keyword have some rules to use it.
+
+
+
+1) always a small code can be written on 'inline' function
+
+
+
+2) is we all Know that 'Neil Armstrong' is the first person who will make his first teach on moon So, definately there will  be used  a lots of conmputer to done So, just imagine how much 'RAM' those computer have it's '4 KB' so, just imaging the Jumping time importace at that time.
+
+
+
+3) inline function must avoid loops
+
+
+
+4) avoid return statement
+
+
+
+5) an inline function cannot be recursive
+Basic Knowledge are all completed Now.
+
+
+
+If you build a class in 'C'.
+
+
+
+If you build a class in 'C++' but you don't declare any access modifier for data than 'C++' by default all the variables are getting Private
+
+
+
+in 'C++' we have to terminate the class so we use semi-colon at the last
+
+
+
+In class if you have to declare variables than it's a compulsion that u don't initialize it in the class
+
+
+
+we have to call this variables as Instance variable
+
+
+
+this will allocate the memory at that time when the object of a class is created
+
+
+
+In java "Test t1" will be called as Referance But in 'C++' this will called Object

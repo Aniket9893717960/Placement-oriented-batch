@@ -1,0 +1,151 @@
+Q) What is an Editior?
+
+
+An editor, on the other hand, is a tool used to write and edit code. Examples of editors include:
+
+Text Editors: Notepad, Sublime Text, Visual Studio Code (VS Code)
+Code Editors with Java Support: IntelliJ IDEA, Eclipse, NetBeans (these are also considered IDEs)
+You can write Java code in any text editor, but you need tools like the Java Development Kit (JDK) to compile and run it.
+
+
+Q) what is an IDE?
+
+
+An IDE (Integrated Development Environment) is a software application that provides tools for software development, such as writing, editing, debugging, and running code. Examples of Java IDEs include:
+
+Eclipse
+IntelliJ IDEA
+NetBeans
+These IDEs support Java programming and provide features like syntax highlighting, code completion, and debugging tools to make development easier.
+
+
+-----------NOTE------------ *for bigenners using Editors will make sense. But for Development IDE's will be Support this as compare to Editiors -------------------
+
+
+VS code is a Light weight editior or IDE
+
+
+we know that in Every 6 month we get some new Version but Not all the Version are LTS(Long Term Support)
+
+
+*For checking that in the system java Environment variable path set of not will be checked by this command.                         "javac --version"
+
+
+
+
+if u want to build the multiple choice on to the same Entities.
+
+
+i) Select the datatype of variable and copy past at that no. of time the user want to print the data.
+
+
+ii) instead of choosing that we work on the new concept which is array
+
+
+but the problem is why do we build all the things separately.
+
+
+
+
+In the concept of OOPs we have something known about Objects 
+Where you can have a class and In the class you have multiple variables.
+And you create one object of multiple variables so those object becomes One entity
+So, instead of array.
+Int id[];
+String question[];
+String opt1[];
+We build a one question class which will hold all the values then create an array of Questions.
+
+
+
+public class QuestionService {
+    int id;
+    String question;
+    String opt1;
+    String opt2;
+    String opt3;
+    String opt4;
+    String answer;
+}
+
+
+
+Make sure all the variables are private in the concept of encapsulation we seen it
+But the main Question is how we can access it.
+
+
+
+To Access this Variables we get help to Getter and Setters
+
+
+
+Here 'Getter' are those who get the data. So, getter's  for this code are as follows.
+
+
+
+public int getId() {
+        return id;
+    }
+    public String getQuestion() {
+        return question;
+    }
+    public String getOpt1() {
+        return opt1;
+    }
+    public String getOpt2() {
+        return opt2;
+    }
+    public String getOpt3() {
+        return opt3;
+    }
+    public String getOpt4() {
+        return opt4;
+    }
+    public String getAnswer() {
+        return answer;
+    }
+
+
+
+Go to 'Setter' then this are those who set the data. So, setter's for this code are as follows:
+
+
+
+public void setId(int id) {
+        this.id = id;
+    }
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+    public void setOpt1(String opt1) {
+        this.opt1 = opt1;
+    }
+    public void setOpt2(String opt2) {
+        this.opt2 = opt2;
+    }
+    public void setOpt3(String opt3) {
+        this.opt3 = opt3;
+    }
+    public void setOpt4(String opt4) {
+        this.opt4 = opt4;
+    }
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+
+
+
+Now we create a new java file "QuestionService.java" in which we create a "Question" array in this i have specify how much questions i need let's say '5' Question at this point.
+
+
+
+like this. "public class QuestionService {
+  
+    Question[] questions = new Question[5];
+
+}
+"
+
+
+

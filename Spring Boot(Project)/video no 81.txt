@@ -1,0 +1,61 @@
+In This video we talk about Different Type of Interfaces.
+let's check what are the options we have 3 parts at which
+1) Normal
+2) Functional/SAM
+3) Marker
+
+First talk about interface
+
+*we already know that in interface we commonly declare methods but
+after 'Java 8' we also got an option of Define the method in interface 
+but we talk about this later.
+
+
+
+
+At this point we know that only have authority to declare a method.
+All the methods in interface are 'Public+Abstract'.
+
+Whenever you create an Normal interface. which have multiple 
+methods called Normal Interface.
+Example: If you create an interface here and it's name is 'Abc'.
+   If this interface have two methods onboard that is normal interface. 
+
+Before 'Functional Interface' let's talk about SAM(single abstract method)
+that simply means if you have an interface 'Abc' again which have only
+one method so, that's called Single Abstract Method Interface.
+And you also called it as functional interface.
+
+
+
+
+Next is 'Marker Interface' this is an interface which have no methods that's
+right A blank interface.
+First we have a Question why some one will create a blank interface?
+Answer) is to update some thing to the compiler. when you talk about
+compiler "Please Allow This?".
+In java we have the concept of 'Serialization' where we get the object
+and store tha values of the object into your hard drive.
+Example: 
+you got the object which have variables 'a,b,c'.This have
+some values (like 10,20). if we want to save the hard drive.
+if you want to show this data we use the concept of serialization
+then you Destroy this object. why we are saying this just because
+if you want to re-create the object latter
+
+
+
+
+whenever you are playing the 
+game and you want to save the game and your game is take around 
+4GB-5GB RAM but if you save the game it doesn't consume that much data. 
+It consume around in KBs. Because "if you re-start the game after closing
+it you get the default values but if you want the old values.then, you simply 
+load the current stacks" this will called De-serialization.
+
+Now by default every object is not allowed to do that you get the premission
+so how do you get the premission.
+You can simply create the class and give the premission with the help of
+markup interface.
+
+SO we have a lot of 'Markup' interface in java because it's important.

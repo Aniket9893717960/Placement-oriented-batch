@@ -1,0 +1,183 @@
+come to  10 th 3rd video 10:00 stamp
+
+
+
+"Class Test {
+Public:
+void add(){
+count<<"Hello"<<endl;
+}
+void add(int p, int q){
+count<<(p+q)<<endl;
+}
+void add(int x, int y,int z){
+count<<(x+y+z)<<endl;
+}
+void add(int a, int b,int c,int d){
+count<<(a+b+c+d)<<endl;
+}
+};
+Int main(){
+Test t1;
+t1.add();
+t1.add(10,20);
+t1.add(100,200,300);
+t1.adf(1,2,3,4);
+return 0;
+}. " If a methods will same name recorganize the method so, this is called method Overloading.
+
+
+
+Tech example of this will be in Java we use 'System.out.println()" for printing any variable will contain any value of different datatype.
+
+
+
+if we make changes in this program at line "void add(int x, int y,int z){
+count<<(x+y+z)<<endl;
+}
+void add(int a, int b,int c,int d){
+count<<(a+b+c+d)<<endl;
+}" then this Program desn't work in 'C++' because there is not the specific difference between this two functions. but in Python this program work because it will told that "functions will have not such indentical difference between tham So, the last mthord you declare will run remaining same Function is 'Non functional assisment'"
+
+
+
+"Class Test {
+Public:
+void add(){
+count<<"Hello"<<endl;
+}
+void add(int p, int q){
+count<<(p+q)<<endl;
+}
+void add(int x, int y,int z){
+count<<(x+y+z)<<endl;
+}
+void add(int a, int b,int c,double d){
+count<<(a+b+c+d)<<endl;
+}
+};
+Int main(){
+Test t1;
+t1.add();
+t1.add(10,20);
+t1.add(100,200,300);
+t1.adf(1,2,3,4);
+return 0;
+}. " Here 'c++'  also give output in this here for '4' this will do internal type casting convert int to double.
+
+
+
+After "Methord Overloading" we will going throw "Default Argument Value" it is not in Java but in 'Python' and 'C++' it has For Explaining this we build a program.
+
+
+
+"Class Test {
+Public:
+void add(){
+count<<"Hello"<<endl;
+}
+void add(int a, int b=0,int c=0,int d=0){
+count<<(a+b+c+d)<<endl;
+}
+};
+Int main(){
+Test t1;
+t1.add();
+t1.add(10,20);
+t1.add(100,200,300);
+t1.adf(1,2,3,4);
+return 0;
+}; "   this will give same output as "Methord Overloading output" But There is Question if we have this than what is the requirment of "methord overloading"? so requirement is that where we have two preform different operation.
+
+
+
+Tech Example is "println();" this will be different for "int","float","double" and other datatype.                                                                    Or   If you you make change in ''void add(int a=0, int b=0,int c=0,int d=0" that you initialize 'a' with '0'Zero Than, User will Expect that now it will also Act like 'No argument function' but 'No argument function' is Different category.
+
+
+
+After "Default Argument Value" we come to "Constructor" rules are
+
+1) it's name and class name should be same
+
+2) it's a specil mamber method of a class
+
+3) it doesn't have any return type
+means we don't do return anything from constructor
+
+
+
+4) this will be have 3 types.               i) default constructor                   ii) prarmeterized constructor        iii) copy constructor
+
+
+
+if we have talking about constructor in c++. that "we don't have to build specific/manually calling for the constructor. If you build an object than it call the constructor internally"
+
+
+
+But here "Java/python" is different ha talk "To create an object there is required to call the constructor." but "Python"has little different take in this that "Name of the constructor is Not same as class. there is a specific name for constructor is 'init' "
+
+
+
+little 3 rules more for "Constructor" 1) Mostly here constructor should be public. it's not that we don't initialize this as private but there is not any certain use of it.
+
+
+
+2) we does't inherit constructor. but this have some behaviour but it is a seperate topic
+
+
+
+NOTE-------------------------------  1) it does have colon just like java has "super" keyword. ----------------------------------------
+
+
+
+constructor will be a  instance variable  reason of instance variable
+
+
+
+This whole property are of C,C++
+
+
+
+U will remember this all time that "There is no need to call a constructor explicity it will call implecitly whenever object of a class will be created." but in java "To create an object there is required to call a constructor first and The 'new' operator is required to call a constructor."
+
+
+
+This is the program for all.  "Class Test {
+Public:
+Test(){
+count<<"Hello"<<endl;
+ }
+};
+Int main(){
+Test t1;
+Test t2;
+return 0;
+}; "
+
+
+
+NOTE------------------------------- Initialization is not allowed in a class.------------------------------------
+
+
+
+Now we perform all the same operations on "Constructors" which we already perform throw "Methord". like "No argument".
+
+
+
+NOTE-----------------------------------------------* In 'Parameterized Construcrtor' if u already build a parameterized constructor so Now 'compiler' will not build a default constructor because he know that developer have the knowledge about building a constructor.                                                                                                    *Constructor will be default build if user does't build a constructor.                      -------------------------------------------------------
+
+
+
+for copy constructor we just use only command in previous program "Test t3(t1);"  and this command will do cloning of t1 and initialize in t3.
+
+
+
+In Java this process will be done by "cloning" method and in python this should be represent ".copy" method.
+
+
+
+ALTERNATE version to do the same in 'c++' is  "test t3 = t2;"
+
+
+
+"Reference" is The pointer Variable of class Type. we can declare a reference is: Two ways:                                        1) Test *t;          //accessability operator '->'                                                                             2) Test &t;        //accessability operator '.'                                                   Here test is the class Name.                                                                             Here, A reference is capable to hold the object class . or it is also allowed to access or change the values of another object as well.

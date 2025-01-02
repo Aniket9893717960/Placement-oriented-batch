@@ -1,0 +1,128 @@
+Now we gonna come to 15th video
+
+
+
+Friend Function: it's a person which  is not the member of over family but act like a house member.
+
+
+
+For Explaining this we build a class name 'Test' . we initialize 3 variable a,b and c of datatype 'int' by access modifier as 'public'. Now we build a 'setData' method which have 3 Parameters x,y and z of datatype 'int' in 'Test'. at which we have to exchange the values from local parameter(x,y,z) to global variables(a,b,c).                                              Now it's time to create 'main' method at which we build two objects 't1' and 't2'. we call setData with the help of 't1' object and pass values 10,20,30. Again call 'setData' with the help of 't2' object and pass values 100,200,300.
+
+
+
+class Test {
+public:
+int a,b,c;
+
+void setData(int x,int y,int z){
+a=x;
+b=y;
+c=z;
+ }
+};
+
+int main(){
+Test t1;
+Test t2;
+
+t1.setData(10,20,30);
+t1.setData(100,200,300);
+
+return 0;
+}
+
+
+
+Now i will initialize instance vaiable a,b,c which is already initialize as Datatype 'int' in 'Test' class change access modifier as 'Private' other than this are 'public'. like this. "class Test {
+private:
+int a,b,c;
+public:
+.......
+........
+"
+
+
+here "void setData(int a,int b,int c)" will access over  'private' data variables because this two belongs to the same class. so, it will share it's data throw out the class members.But it does not mean that private variables will be accessable by 'main' method 'Test' class doesn't allow this.
+
+
+
+but we want to access the private data? so, how we do that? we build a method name 'show' initialized it inner 'Test'  class. at what conditions we can access the private data of the class  1) with the help of 'setData' method                          2) with the help of 'show' method.
+
+
+
+But Now we want to access the 'private' data out of the class? for this we build a method name 'show' initialized it between 'Test' class and 'Main' method.
+
+
+
+the main work of 'show' method at which we initialize a ' reference of Test class name 't' ' is to print the values of the object 't'. To  explain my idea is this: "class Test {
+private:
+int a,b,c;
+
+public:
+void setData(int x,int y,int z){
+a=x;
+b=y;
+c=z;
+ }
+};
+
+void show(Test &t){
+cout<<t.a<<" "<<t.b<<" "<<t.c<<endl;
+}
+
+int main(){
+Test t1;
+Test t2;
+
+t1.setData(10,20,30);
+t2.setData(100,200,300);
+
+show(t1);
+show(t2);
+
+return 0;
+}" But still we getting error "'Int Test::a' is the private within this context".
+
+
+
+At this point you have two choices first 1) change the place of void 'show' and build him a part of class 'Test'.                                               2) Is Take a help of 'Friend' function.
+
+
+
+we choose the 'second' option the syntex of 'friend function' is take the last line of the class 'Test' and write "friend void show(Test &t);". Now the program will start working and print the output.
+
+
+
+"class Test {
+private:
+int a,b,c;
+
+public:
+void setData(int x,int y,int z){
+a=x;
+b=y;
+c=z;
+ }
+ friend void show(Test &t);
+};
+
+void show(Test &t){
+cout<<t.a<<" "<<t.b<<" "<<t.c<<endl;
+}
+
+int main(){
+Test t1;
+Test t2;
+
+t1.setData(10,20,30);
+t2.setData(100,200,300);
+
+show(t1);
+show(t2);
+
+return 0;
+}" by this program we know that "if any method will becomes "Friend function"(Just like 'show') then, the method has the authority to access the private vairables Not matter where you write it's defination in a certain file.
+
+
+
+If you Stop at this Point The INterviewer will make your laugh at the name of 'security' that why 'Java' doesn't introduce the concept of friend function.

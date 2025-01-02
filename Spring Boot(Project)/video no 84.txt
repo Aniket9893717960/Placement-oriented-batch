@@ -1,0 +1,95 @@
+AND IT"S AGANDA IS "LAMBDA EXPRESSION WITH RETURN"
+
+
+
+
+For this replace the method 'show' with
+'add' which has a parameter of int type 'i' and 'j'
+method will return 'int'.
+Before going to 'lambda' we building a normal object first.
+
+we also going to create different class.we go for Anonymous class and we define 
+'public int add' which accept two values of int type 'i' and 'j'.
+Now we want to 'return i+j;'.
+
+After closeing the inner class A. we going to initialize 'int' variable 'result'
+to store the return value of class 'A'.
+At last print it's result.
+
+
+@Functional Interface
+interface A
+{
+ int add(int i,int j);
+}
+
+public class Demo
+{
+ public static void main(String a[])
+ {
+  A obj = new A(){
+   public int add(int i,int j)
+   {
+    return i+j;
+   }
+  };
+  int result = obj.add(5,4);
+  System.out.println(result);
+ }
+}
+
+is here i can use 'Lambda Expression'.
+
+
+
+
+since we remove entire part because it's not needed including this 
+currelly '{' to '};' breckets as well we have
+just to put an arrow here the final command is:
+       A obj = (int i,int j) -> { return (i+j); };
+
+This will still working but if you try to remove this 
+currelly breaces "{}" it will give an error because
+whenerver you writting just one statement in anormyous
+class and it's statement name is 'return'.so, it will
+not work so, we have to remove just 'return'  and check
+every thing was perfect.
+ A obj = (int i,int j) -> i+j;
+
+Because any thing we use after '->'(anonymous Symbol)
+actually becomes a 'return' type.
+So, if you have one statement which have 'return'
+and you can see 'i+j' is an expression.
+It becomes the return type or return value.
+
+Here if you remove parameter type 'int' as well
+you see that how statement will becomes shorter.
+         A obj = (i,j) -> i+j;
+And that's the bueaty of 'Lambda Expression'.
+
+we can see this all with program.
+
+
+
+@Functional Interface
+interface A
+{
+ int add(int i,int j);
+}
+
+public class Demo
+{
+ public static void main(String a[])
+ {
+   A obj = (i,j) -> i+j;
+
+  int result = obj.add(5,4);
+  System.out.println(result);
+ }
+}
+
+Here are some point you have to remeber
+*for implementing 'Lambda Function' we have to define
+'functionalInterface' first at any cost because by 
+Defining this annotation u give the reponsibility to compiler
+that you have to do remaning work.

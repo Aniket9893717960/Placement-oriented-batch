@@ -1,0 +1,144 @@
+Video no 4
+
+
+
+"Class Test {
+Public:                  int a,b,c; 
+Test(){
+a=0;     b=0;      c=0;
+}
+Test(int x, int y,int z){
+a=x;
+b=y;
+c=z;     }
+void show(){
+cout<<a<<" "<<b<<" "<<c<<endl;
+}
+};
+Int main(){
+Test t1(10,20,30);
+Test t2(100,200,300);
+Test t3;
+t1.show();
+t2.show();
+t3.show();
+return 0;
+}; " so this is Program of Prarmeterized constructor.  but if we do some changes like "Test t2(100,200,300);" will replced by "Test t2(t1);" "Test t3;" will replced by "Test t3(t2);" alternate replaced by "Test t3=t2;"  so there is not any object who catch object as a parameter. but after "Turbo 4.1" compiler will provide new facility is there is an inbuild "Copy constructor". so this program will dafinatly work.
+
+
+
+in backend there will be a code this can be  "Test(Test &t){
+a=t.a;
+b=t.b;
+c=t.c;     }" this can be "Test &t" is a reference which has an ability to catch an object.  If i can change one more that "Test &t2=t1" than t2 will be a reference variable it only have t1 address and it doesn't call constructor.
+[12:21 am, 22/11/2024] Aniket Rathore: In the next command t3 will be an object of a class "Test" make a copy of t1's object data not t2 because t2 is a reference which contain t1 's object
+[12:31 am, 22/11/2024] Aniket Rathore: Now jumping to "Operator Overloading" There are two type of Operator overloading                                   i) unary opeartor overloading
+[12:41 am, 22/11/2024] Aniket Rathore: "Class Test {
+Public:                  int a,b,c; 
+Test(){
+a=0;     b=0;      c=0;
+}
+Test(int x, int y,int z){
+a=x;
+b=y;
+c=z;     }
+void show(){
+cout<<a<<" "<<b<<" "<<c<<endl;
+}
+};
+Int main(){
+Test t1(10,20,30);
+Test t2(100,200,300);
+-t1;              // compiler will not read this statement as this.It will read as "t1.operator-()"
+-t2;              // t2.operator-()
+t1.show();
+t2.show();
+return 0;
+}; " at this point it will give an error because "There is no match for 'operator-' "
+
+
+
+"Class Test {
+Public:                  int a,b,c; 
+Test(){
+a=0;     b=0;      c=0;
+}
+Test(int x, int y,int z){
+a=x;
+b=y;
+c=z;     }
+void show(){
+cout<<a<<" "<<b<<" "<<c<<endl;
+} 
+void operator-(){
+a=-a; //here 'a' is a variable           b=-b;                c=-c;
+ }
+void show(){
+cout<<a<<" "<<b<<" "<<c<<endl;
+}
+};
+Int main(){
+Test t1(10,20,30);
+Test t2(100,200,300);
+-t1;              // compiler will not read this statement as this.It will read as "t1.operator-()"
+-t2;              // t2.operator-()
+t1.show();                     // output is  -10  -20  -30 
+t2.show();                      //                -100  -200  -300
+return 0;
+}; "     this is the perfect example for "unary operator Overloading".
+
+
+
+we come to the time stamp 22:00 of 11th video
+
+
+
+In the same program we make some change at this line. "Test t3 = t1+t2;           //t1.operator+(t2)" after "Test t2(100,200,300);" so, it will give error "the 'operator-()' doesn't match to the predefined function." now to over come this we build a program.
+
+
+
+"Class Test {
+Public:                  int a,b,c; 
+Test(){
+}
+Test(int x, int y,int z){
+a=x;
+b=y;
+c=z;     }
+void show(){
+cout<<a<<" "<<b<<" "<<c<<endl;
+} 
+Test operator+(Test &t){
+Test temp;
+temp.a = a + t.a;
+temp.b = b + t.b;
+temp.c = c + t.c; 
+ return temp;
+}
+}; this is the program of binary operator overloading.
+void show(){
+cout<<a<<" "<<b<<" "<<c<<endl;
+}
+};
+Int main(){
+Test t1(10,20,30);
+Test t2(100,200,300);
+-t1;              // compiler will not read this statement as this.It will read as "t1.operator-()"
+-t2;              // t2.operator-()
+t1.show();                     // output is  -10  -20  -30 
+t2.show();                      //                -100  -200  -300
+return 0;
+}; "
+
+
+
+What is the Tech Example of Operator Overloading?  in Excel Sheet, there have so many columns in it. this have some options like convert all the values from -ve to +ve and +ve to -ve another is we have a column in A and B we done the submition of this into 'C'. so, we wrote a formula that all the sumbition of column 'A' and 'B' will initialize in 'C'
+
+
+
+"Destructor" this will also represented as constructor but with the "~" sign.This will also have 8 properties.                          i) Destructor name is also same as the class name just like Constructor.                                                                                  ii) This( "Des" and "Con") two not have it's return type.                                                                                                          iii) Destructor will have only one type. which is "No argument".if i will not build any kind of "destructor" it means that compiler will build it with itself.                                                                                                                                               iv) we doesn't call it manually. Just like in the case of "Constructor" we build an object than it automatically call. like this in "Destructor" if the object have complete it's work and before going out of scope it will call a 'Destructor'.
+
+
+
+it means constructor will construct the memory And destructor will destroy the memory
+In future we will study about

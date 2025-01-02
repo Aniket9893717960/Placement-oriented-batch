@@ -1,0 +1,236 @@
+Now begin to 4th video
+
+
+We have to build a query at which we have to select a words which will start from the 'R' in the column empname.
+
+For doing this we have to use 'like' keyword with symbol '%' known as regix(regular expression) 
+Write a query with this is
+
+SELECT * FROM emp WHERE empname like 'R%'; 
+
+ Here 'R%' this represent the first will be a character to find empname which starts from R
+And % represent is 0 or more than 0 characters
+
+
+This will print 2 rows in set  is Ram,Raj
+
+
+If we try to select a words which will ends from the 'M' in the column empname.
+
+We use in last of the Query is " like '%m'; "  
+
+It will give output Ram,Shayam' 
+
+If we try to select a words which will randomly have 'a' in the column empname.
+
+We use in last of the Query is " like '%a%'; "  
+
+It will give three output Ram,Raj,Shyam
+
+If we try to select second word which will have second  word from the start is  'a' in the column empname.
+
+We use in last of the Query is " like '_a%'; "  
+
+Here again we get output Ram,Ra
+
+
+If we try to select name which will have 'a' in the second last at the column empname.
+We use in the last of the query is " like '%a_' " 
+
+Here we get output Shyam,Raj,Ram
+
+
+
+If we try to select name which will have 'a','b','c','d' in the random position at the column empname.
+
+We use in the last of the query is " like '[a-d]%' ";
+
+Here we get output Shyam,Raj,Ram
+
+
+But it will not work in MySQL it will work on other database like Oracle, Postgrece and etc.
+
+
+
+Now give a Mercy to John by changing its salary from NULL to 5000 
+
+UPDATE emp SET empsalary=5000 WHERE empid=103;
+
+The output is 1 row affected
+Row match:1 changed:1 
+
+But if u write an non existing no in empsalary and empid so,this will not give any kind of error and query perfectly execute
+
+The output is 0 row affected
+Row match:0 changed:0
+
+
+
+I have to check that which have the second minimum salary so now for this we are taking help from Nested Query. Here it is
+
+SELECT * From emp WHERE empsalary = ( SELECT MIN(empsalary) FROM emp WHERE empsalary> ( SELECT MIN( empsalary) From emp));
+
+
+
+It gives output 1 rows affected but Its very hectic process.
+
+
+
+For the Solution of this we have the knowledge of some keyword 
+
+1) Order by: here this is a predefined keyword which help to arrange order with there own choice. Write a query of this is
+
+SELECT * FROM emp ORDER BY empsalary;
+
+It will arrange all the data in the ascending order. But in this he have something hidden.
+
+SELECT * FROM emp ORDER BY empsalary ASC;
+Where ASC = Ascending 
+
+SELECT * FROM emp ORDER BY empsalary DESC;
+Where DESC = Desending it if we previously check that this have another meaning called Describe. So, DESC is the overloaded operator.
+
+
+
+2) limit : here this is a predefined keyword which will give the Range for Printing.just like Query is
+
+SELECT * FROM emp limit 0,2; 
+
+The meaning of this query is start printing from row no. 0 to 1 because Here 2 is Count
+
+
+
+If I can write here is 
+SELECT * FROM emp limit 1,2;
+
+The meaning of this query is start with 1 but here count is 2 so ends with 2
+
+
+
+SELECT * FROM emp limit 0,200; 
+
+So, U know that indexOutOfBoundException so, don't this this will wanna happened BUT this will print record exactly u have stored in his database and his table
+
+
+
+We have authority to mies starting index and for this u can write only count like this
+
+SELECT * FROM emp limit 2 
+
+This will print 2 data.
+
+
+
+3) Distinct: this will remove all the data from the entities.
+
+SELECT distinct(empcity) FROM emp; 
+
+The output will be 3 rows affected because Indore is Duplicate 1 time .
+
+
+
+Now we will get it's solution(OF Problem given at 
+Line no 75) with the help of this Query
+
+SELECT * FROM emp ORDER BY empsalary ASC limit 1,1; 
+
+This will give the second minimum value 1 row  in set
+
+For 3 Rd Minimum we have to just change in the last is 
+" Limit 2,1 ;"
+
+
+
+For highest we have to just change ASC to DESC.
+
+
+
+But it's not Technically correct because there is a chances that there is more than one have the Same record so it's difficult to pick 1 for those position.
+
+
+
+This query will work for unique salary but not for duplicate salary because the chances to failed this query will be hig
+
+
+
+So make a safe bate for this because it will not show name who get lowest or highest salary but it only throw which have the lowest or higher salary with the help of this query 
+
+This query will give the output of Second highest in the table. Not matter that table have unique or duplicate data.
+
+SELECT distinct(empsalary) FROM emp ORDER BY empsalary DESC LIMIT 1,1;
+
+This is the output at which 1 row in set
+
+
+
+But this problem will have the solution that is Nested Query that's we show how can be show with the help of query that we all all the entity's data
+
+SELECT * FROM emp WHERE empsalary = ( SELECT distinct( empsalary) FROM emp ORDER BY empsalary DESC LIMIT 1,1);
+
+The output is 3 rows in set because the second highest salary have 3 duplicate same salary with same person.
+
+Now for changing the highest value that this is query as
+"............ DESC LIMIT 3,1);" this is the 3rd highest value will he give that can build with name's
+
+
+
+To count no. Of people comes for different cities for Employment will be authenticated by this query.
+
+SELECT distinct(empcity) , COUNT(empcity) FROM emp GROUP by empcity;
+
+This will print the entity empcity and Count(empcity) at which it will give the count from the particular Citi that he/she belongs.
+
+The output is 4 rows in set
+
+
+
+
+we try to give access to some one for some data to manipulate , configure and print those data so, there is a certain techniques to perform operations on this are a follows:                                                                           1st) Technique is CREATE TABLE table_name as (SELECT empid,empname,empcity FROM emp);                                                                                               this Query give the copy of the previous table selected elements.                                                  The output is Query is OK 10 rows affected        Records = 10. ans etc
+
+
+
+but it build a seperate copy
+
+
+
+2nd technique is to make a View by replacing  'TABLE table_name' with 'VIEW table_view' in previous commands and it gives output Zero rows affect and Here we does't build copy we give access to the Other preson to mainpulate with his inner access critaria the data u will keep hidden is still hidden
+
+
+
+it is like a table but it's not a table
+
+
+
+Delete will be recoverable but truncate will not recoverable
+
+
+
+I was talking about a Query 'ALTER' so ALTER means alteration Let say a table have 5 column so we try to increase 1 and decrease 1 for this the changes will happen in the outer Structure To alter this we have ALTER keyword.                                                      FOr this we have to done some things like in the Existing table we can change the column count,we can detele the column from an Existing table,we can change the datatype of the particular column.
+
+
+
+Just like in this Query we can add a column from the existing table.                                                                                                                  ALTER TABLE emp ADD COLUMN mailid varchar(32);
+
+
+
+So, it just add this column in last position
+
+
+
+If you want to specify that at which position u want to place the column 'mailid' at this we want to add some commands in this Query.
+
+
+
+we use the Keyword 'AFTER' in this 'ALTER' command. SO,                                                                                                                  ALTER TABLE emp ADD COLUMN mailid varchar(32) AFTER empname;
+
+
+
+SO, this Query placed the mailid id column after empname
+
+
+
+Now there is another keyword for wroking with ALTER is 'CHANGE' and if you using ORACLE this will be known as MODIFY This is use to change the Datatype of the Praticular column you created previously in a Table.
+
+
+
+ALTER TABLE emp CHANGE contact empcontact varchar(13)

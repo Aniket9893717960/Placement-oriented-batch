@@ -1,0 +1,417 @@
+we come to video 13 at time stamp "22:28"
+
+
+
+"Multiple Inheritance" Example: "class A
+{
+public:
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:             
+ void display()
+ {
+  cout<<"Hello From Class B"<<endl;
+ }
+};
+
+class C: public A, public B
+{                    
+ public:             
+ void add()
+ {
+  cout<<"Hello From Class C"<<endl;
+ }
+};
+
+int main()
+{
+C c1;
+
+c1.display();
+c1.show();
+c1.add();
+
+return 0;
+}"
+
+
+
+"Problem with Multiple Inheritance" Example: "class A
+{
+public:
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:             
+ void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class C: public A, public B
+{                    
+ public:             
+ void add()
+ {
+  cout<<"Hello From Class C"<<endl;
+ }
+};
+
+int main()
+{
+C c1;
+
+c1.display();
+c1.show();
+c1.add();
+
+return 0;
+}" this will how we use to run the progam. this will give error "Request for member show is ambiguos"
+
+
+
+"Problem with Multiple Inheritance"
+Ambiguity Error:
+In case of Multiple Inheritance, if more than one Parent classes contains a method with same name and same signature, then object of child class will get confused of the method. This problem is known as Ambiguity Error.
+
+
+
+So there is a scenario that how we can solve this error.
+
+
+
+then, this error will be solved by two methods.
+
+
+
+1) we can build an Extra show method. To make this method work.
+
+
+
+class A
+{
+public:
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:             
+ void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class C: public A, public B
+{                    
+ public:             
+ void add()
+ {
+  cout<<"Hello From Class C"<<endl;
+ }
+ void show()
+ {
+  cout<<"Hello From Class C1"<<endl;
+ }
+};
+
+int main()
+{
+C c1;
+                               OUTPUT
+c1.display();                   Hello From Class C1
+c1.show();                  Hello From Class C1
+c1.add();                   Hello From Class C
+
+return 0;
+}
+
+
+
+2) SCOPE Resolution operator
+
+
+
+class A
+{
+public:
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:             
+ void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class C: public A, public B
+{                    
+ public:             
+ void add()
+ {
+  cout<<"Hello From Class C"<<endl;
+ }
+};
+
+int main()
+{
+C c1;
+
+c1.A::show();
+c1.B::show();
+c1.add();
+
+return 0;
+}
+
+
+
+But it's not a direct solutions of hybrid Inheritance. Because class 'A' is a single Entity we doesn't differentiate it with child classes. So, the solution of this type of technique is "Virtual function".
+
+
+
+"class A
+{
+public:
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: virtual public A 
+{                    
+ public:             
+ void display()
+ {
+cout<<"Hello From Class B"<<endl;
+ }
+};
+
+class C: virtual public A
+{                    
+ public:             
+ void add()
+ {
+  cout<<"Hello From Class C"<<endl;
+ }
+};
+
+class D : public B, public C
+{
+ public:
+ void sum()
+ {
+ cout<<"Hello form Class D"<<endl;
+ }
+};
+
+int main()
+{
+D d1;
+
+d1.show();
+d1.display();
+d1.add();
+d1.sum();
+
+return 0;
+}" This is the program at which "Virtual function" is defined for class 'A' which is the base class.
+
+
+
+by this we can call the Parent function on the class 'C' and 'B' and 'D'
+
+
+
+Methord overriding
+
+
+
+------------Note------- * Reference of parent class can hold the object of child class.    ----------------------------------
+
+
+
+Method overriding Example "class A
+{
+public:
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:             
+ void show()
+ {
+cout<<"Hello From Class B"<<endl;
+ }
+};
+
+int main()
+{
+A a1;
+B b1;
+
+a1.show();
+b1.show();
+
+return 0;
+}"
+
+
+
+Output is "Hello From Class A"\n"Hello From Class B"
+
+
+
+Why Method Overiding will be called as "Runtime Polymorphism"?
+
+
+
+Program to Explain the memory allocation during "Inheritance" is "class A
+{
+public:
+// int x,y,z;
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:     
+ // int p,q,r;        
+ void display()
+ {
+cout<<"Hello From Class B"<<endl;
+ }
+};
+
+int main()
+{
+A a1;            //this will allocate the memory of class "A" 
+B b1;    // But this will allocate the memory of class "A" and "B"
+
+a1.show();
+b1.show();
+
+return 0;
+}"
+
+
+
+"In this be try to call class 'A' without building an object of class 'A' with the help of class 'B' s object"
+
+"class A
+{
+public:
+ int x,y,z;
+void show()
+ {
+cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B: public A 
+{                    
+ public:     
+  int p,q,r;        
+ void show()
+ {
+cout<<"Hello From Class B"<<endl;
+ }
+};
+
+int main()
+{
+B b1;    
+A &a1 = b1;   //here we build a reference to catch a faith full data from the object.
+
+a1.show();
+b1.show();
+
+return 0;
+}"
+
+
+
+this logic will be work in real life late say "Company name 'Amazon' have it's allocte of Data in DataCenters(like products,it's reviews and etc) And we all know it's sub-child for Premium users is 'Amazon Prime' if here 'Amazon Prime' has it's own than it's also be 'Amazon's' Datacenter so, techniqually there are two data Center's for 'Amazon'+1 for 'Amazon Prime' to optimize this  logic of this program will help you allot"
+
+
+
+it does not mean that peoples have 'Prime' access and throw this not any member will be have data of 'Amazon' so, here we make reference. Because here 'Amazon' will access only those data which he have it's capicity just like this command('A &a1 = b1;')
+
+
+
+"class A
+{
+public:
+virtual void show(){                // it's a virtual function
+ cout<<"Hello From Class A"<<endl;
+ }
+};
+
+class B : class A
+{
+ public:
+ void show(){
+ cout<<"Hello From class B"<<endl;
+ }
+};
+
+class C : public A
+{
+ public:
+ void show(){
+ cout<<"Hello from Class C"<<endl;
+ }
+};
+
+int main()
+{
+ B b1;
+ A &a1 = b1;
+ 
+ C c1;
+ A &a2 = c1; 
+
+ a1.show();
+ b1.show();
+
+ a2.show();
+ c1.show();
+
+ return 0;
+}" here class 'A' runs like a hosting tool who host web sites on web servers but it's not give the compulsion to overide me and build my reference. but if we build a "Pure virtual function" than it come the compulsion.
+
+
+
+build a "Pure virtual" Function with the help of this command. "virtual void show() =0;"
+
+

@@ -1,0 +1,105 @@
+this is the hierarchi or a system and why do we need it but at this point we create a hierarchi and if you talking about class which 
+only have an abstract method the other alternaticve for that is to create an interface.
+*Interface have a property that every methord declaration in an interface is by default 'public+abstract'
+*Interface is nothing but a blueprint of a class that contains static constants and abstract methods.
+It is used to achieve abstraction and multiple inheritance in Java 
+
+But how will i use this, how will i instatiate this.The same problem was there with abstract class right we cannot 
+instatiate this so, we build a program to see how we instantiate this?
+
+* If you try to create an object of Interface than it gives an error like 
+"Cannot instantiate the type A".
+For making the solution Firstly "What is the objective to create Interface?"
+Answer)we can Create interface so that we design something.Let's say it u ask
+me how to we create a table or How to reach someWhere?
+Answer) here we give him the Direction/path/Design you make a walk i don't walk
+for you
+
+Here, Interface say i will tell you what are the methods you need but i will not 
+implement them it's your  responsibility and job to implement.
+
+*To implement we create another class which will implement Interface name 'A'.
+But if you use 'implements' keyword it's compolsory to Define both the methods.
+If you failed to define Both the method by default your class 'B' also becomes
+an abstract class.
+
+*But if u want to create a concrete class and we want to create object of 'B'.
+so, it's your job to define both the methods.
+To show case all the things we implemented the program  👇
+
+
+
+
+interface A
+{
+ void config();
+ void show();
+}
+
+class B implements A
+{
+ public void show(){
+ System.out.println("In show");
+ }
+ public void config(){
+ System.out.println("In config");
+ }
+}
+
+public class Demo
+{
+ public static void main(String args[]){
+ A a;
+ a = new B();
+ a.show();
+ a.config();
+ }
+}
+
+
+
+
+SO, just like we create a methods in interface 'A' that's how we don't define
+the variables.
+we Does but if you initially just define the variable we get an error because
+this are by default Defined 'static + final'.So, that means first initialize
+the variable.
+Because of this we directly print the value in the main method with the 
+help of this command.
+     " System.out.println(A.area); "
+But if you try to change the value so we  got an error name
+"The fianl field A.area cannot be assigned"
+
+We all write this in program 👇
+
+
+
+
+interface A
+{
+ int age=44;
+ String area = "Mumbai";
+ void config();
+ void show();
+}
+
+class B implements A
+{
+ public void show(){
+ System.out.println("In show");
+ }
+ public void config(){
+ System.out.println("In config");
+ }
+}
+
+public class Ts
+{
+ public static void main(String args[]){
+ A a;
+ a = new B();
+ a.show();
+ System.out.println(A.area); 
+ a.config();
+ }
+}

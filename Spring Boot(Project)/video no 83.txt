@@ -1,0 +1,131 @@
+Now we have to understand what is lambda Expression
+how do we use in this program.
+
+@FunctionalInterface
+interface A
+{
+ void show();
+}
+
+public class Demo 
+{
+ public static void main(String a[])
+ {
+/* A obj = new A(){  //we trying to create a class which implement interface
+  public void show(){ 
+  System.out.println("In show"); 
+ };*/
+ 
+ A obj = () -> System.out.println("In show"); 
+ obj.show();
+ }
+}
+
+/* 'A obj' will be going to reference variable which contain the
+object of interface 'A'.
+this have 'show' method it return nothing it's a void type and
+it also public by default.so, from here to here  we know it.
+
+ A obj =" new A()         If you know this written the compiler
+ { public void show"()    should also know this so why you as a
+                          Program need to write this code whatif
+Java done this by itself You just write.
+           A obj = () -> 
+'->' this arrow here calls the lambda Expression.
+And Behind the seen the whole code is written by compiler.
+Syntactically the whole code is reduce
+
+
+
+
+
+As we have do something new in this so,
+what if 'show' method will actually accept the value 
+let's say int 'i'.
+from here you have to pass the value
+but problem is how do you accept the value in.
+  "A obj = ()"
+let we go to previous syntax that i actually show what can i try 
+to do so, 
+  A obj = new A(){       // this is the previous syntax. 
+   public void show()   //but if you done all changes then
+Also we done changes in Defination 'public void show() '.
+         public void show(int i);
+and this also affect it's printing that just not print
+'in show' it print("in show"+i); like
+     System.out.println("in show"+i);
+After all changes we check how program look like:
+
+@FunctionalInterface
+interface A
+{
+ void show(int i);
+}
+
+public class Demo 
+{
+ public static void main(String a[])
+ {
+ A obj = new A()
+ {
+  public void show(int i)
+  {
+   System.out.println("In show "+i);
+  }
+ };
+ obj.show(5);
+ }
+}
+
+Is i can use 'lambda Expression' here?Yes.
+replace with this
+
+A obj = (int i) -> System.out.println("In show "+i);
+obj.show(5);
+
+And that's what we have done and with variables we also 
+done that not just one variable infact multiple variable
+you will work on this.
+
+But there is one more thing that you not need to maintion
+the type of prarmeter we get in Lambda Expression But why 
+so because we already mantioned it in Declaration.
+
+ A obj = (i) -> System.out.println("In show"+i);
+
+when you know the Variable type is 'int' then why you 
+maintioned it.And one more thing if you have only
+one variable you don't even need to maintioned round 
+brackets '()'.
+
+ A obj = i -> System.out.println("In show"+i);
+
+let's see how program sees:
+
+@FunctionalInterface
+interface A
+{
+ void show(int i);
+}
+
+public class Demo 
+{
+ public static void main(String a[])
+ {
+ A obj = i -> System.out.println("In show"+i);
+ obj.show(5);
+ }
+}
+
+Is you running this code it will create two classes 
+'A' .class and 'Demo' .class yes behind the seen there is
+seperate 'Anonymous' class.
+But 'i -> System.out.println("In show"+i);' will not 
+create an extra file for you of course 'Demo.java' file
+become heavy now comapre the file size and after using
+lambda expression 'Demo' size will increase but it not create 
+a new file.
+SO that's how we use 'lambda Expression' here
+
+let's say you have the method which return something?
+this answer will see in next video.

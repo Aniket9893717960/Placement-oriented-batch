@@ -1,0 +1,82 @@
+Now lst's try to handle an Exception. You know what is exception let's try to handle them
+So, you know what what i will do here is let's firstly we create an exception.
+Because u know for this we learn the how to solve it.
+
+
+Even before we talk about 'Handling an Exception' what type of statements u need to handle
+so, what even we do is firstly we talk about 'Statements'.
+
+So, this can be of two types 
+firstly a 'Normal' statement.
+second a 'Critical' statement.
+
+
+In the real life situactions we have to think it in a normal way or a critical/Serious issues.
+let's example i you are walking with a kid on the street and of course you will grab a hand 
+of the kid what is the kid just runs.
+So, it's a critical issue
+
+
+In Programming 'int i=9;' is an 'Normal' situation
+But 'int j = 8/i;' will be 'Critical' situation
+because u don't know about  the 'i's' value previously. 
+
+
+Here if i run this program it will give an output.There
+is don't any kind of issue.
+
+
+But what if 'i' value is initialized as '0'(Zero) and try
+to run this as output it will give an exception name
+'Exception in thread "main" java.lang.ArithmeticException: / by zero'
+
+
+if i extending 'int j = 8/i;' case and i want to print a message on
+the console screen let's say 'Bye' so in the output compiler doesn't 
+print it because 
+Processing of program will stop at 'int j = 8/i;' command.
+
+public class Demo {
+ public static void main(String args[]){
+  int i=0;
+  int j=0;
+  j= 18/i;              // because here processing of program stops
+  System.out.println(j);
+  System.out.println("Bye");   // Not execute 
+ }
+}
+
+For this reason handling of 'int j = 8/i;' command is important.
+so, how we can done this let's understand the following steps.
+
+1) put 'int j = 8/i;' command in a seperate block. and what i am 
+trying to say this 'hey siri try to write this code?if got exception
+then excecute the other part' At which
+ i) 'Hay java try to Execute the statement?' for this i can write 'try' command 
+    before the currly braces '{}' of critical statement
+    ( 'int j = 8/i;' command in this case).
+ii) if we got an Exception in 'try' block java will 'throw' an 'Exception' 
+     as an  'object' and you as a 'Developer' catch it for this we have 'catch' command 
+    to handle it with 'Exception' object as an 'Parameter'.In this 'catch' Block i write 
+    or simply try to print 'Something went wrong..'
+
+
+If in this case 'i' will be initialized as '4' then it will give output '4 Bye'
+
+again in this case 'i' will be initialized as '0' So, 'int j = 8/i;' command
+throw an Exception and 'catch' block will catch it and print 'Something went wrong'.
+
+public class Demo {
+ public static void main(String args[]){
+  int i=0;
+  int j=0;
+  try {
+   j= 18/i;         // please try to write 'Critical' statment in this block.     
+  }
+  catch(Exception e){
+  System.out.println("Something went wrong.");
+  }
+  System.out.println(j);
+  System.out.println("Bye");   
+ }
+}

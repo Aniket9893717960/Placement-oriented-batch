@@ -39,3 +39,15 @@ There is no compile time issue,run time issue or logical issue
 Your code is working as well but suddenly because of some reason
 the code will stop working. You got errors so basically if you
 get run time your exeution normally stops and that's an issue.
+
+Let say we have an example like u made an application where your
+application opens a file til that point application was working
+because file was there where we have want let say you delete a file.
+after that u were try to find an application but because of file does
+not there it will give you a run time error.
+Here restart an application is the only option we have.
+
+
+but it's a risky to do restart an application so, we have to search 
+an option at which to handle run time errors/exceptions
+how will you do that we check it in the next video.

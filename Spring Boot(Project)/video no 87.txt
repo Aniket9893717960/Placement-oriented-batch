@@ -1,0 +1,93 @@
+sow i wanna do if i wan't to print the exception as well
+actually print an exception with the help of command.
+    'System.out.println("Something Went Wrong. "+e);'
+Now for exceuting this output will print 
+   "Something went Wrong. java.lang.ArithmeticException: / by zero"
+
+Now we try to create some more Exception given below.
+
+public class Demo {
+ public static void main(String args[]){
+  int i=0;
+  int j=0;
+  int nums[] = new int[5];     // here we create an array
+
+  try {
+   j= 18/i;      
+   System.out.println(nums[1]);
+   System.out.println(nums[5]);
+  }
+  catch(Exception e){
+  System.out.println("Something went wrong."+e);
+  }
+  System.out.println(j);
+  System.out.println("Bye");   
+ }
+}
+
+If you are notices that at 'nums' array at which it's size is 5
+but indexing of an array will start's form 0 (and in this case end's
+with 4) But we are trying to access index no. '5' in 'nums' array.
+
+But if directly u run program it will give only one exception
+name 'ArithmeticException: / by zero' because in processing
+machine will skip 'nums' index in values printing lines. 
+
+
+So, we make a change that instide of 'i' variable will initialize as '0'
+it will initialize as '2' so, that we remove 'ArithmeticException'.
+If we done this we go to the output and we got an Exception name
+"Something went wrong. java.lang.ArrayIndexOutOfBoundsException:
+Index 5 out of bounds for length 5"
+
+
+
+But we can got to some logical problems that for more than one 'Critical' statements
+there should be one catch block for all it's an issue.So, what can i do. 
+
+1) rether than maintion just 'Exception' at the parameter of Catch block.
+we replace it with 'ArithmeticException' and at inner braces '{}' of catch
+rether tha print 'Something went wrong' we print 'Cannot divide by zero'.
+
+2) we got the problem with 'ArrayIndexOutOfBound' because we forgot to 
+handle this. TO handle this we take the another catch block name
+and at parameter of catch we maintion 'ArrayIndexOutOfBoundException'
+ and at inner braces '{}' of catch we print 'Stay in Your Limit'.
+
+3) but at last there should be a catch block with parameter 'Exception'
+because there is a possability that u got an exception for any reasons 
+that u don't know for solving this kind of scenario 'Exception' will be a 
+better option.
+
+
+public class Demo {
+ public static void main(String args[]){
+  int i=0;
+  int j=0;
+  int nums[] = new int[5];     // here we create an array
+
+  try {
+   j= 18/i;      
+   System.out.println(nums[1]);
+   System.out.println(nums[5]);
+  }
+  catch(ArithmeticException e){
+  System.out.println("Cannot divide by zero");
+  }
+  catch(ArrayIndexOutOfBoundException e){
+  System.out.println("Stay in your limit.");
+  }
+  catch(Exception e){
+  System.out.println("Something went wrong.");
+  }
+  System.out.println(j);
+  System.out.println("Bye");   
+ }
+}
+
+But if u have a variable 'String' and initialize u it as 'null' and 
+in a try block u were add a code.
+      System.out.println(str.length());
+So, here we got new type of Exception that we don't know and if u 
+exceute the code.
+Output will be "Something want wrong"

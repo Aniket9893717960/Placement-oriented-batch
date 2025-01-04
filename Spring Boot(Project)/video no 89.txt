@@ -33,4 +33,52 @@ But what it you want to create and generate an 'Exception'.
 Means that i doesn't want to show an error name just i want to
 print it different for that just like 
 For 'ArithmeticException' i want to print exactly the divident
-and say "Thats the default value/output"
+and say "Thats the default value/output".
+
+  catch(ArithmeticException e){
+  j = 18/1;
+  System.out.println("Thats the default value/output");
+  }
+
+
+if ' j= 18/i;' let's say '18' is divided '18' no. lt's say '20'.
+it will print output is zero (0).But instide of this output
+i want to print "Thats the default value/output".
+Simply means at this condition catch block will not
+called but i want to call the catch block.
+
+
+But here the difficulty is catch block doesn't a simple method like
+we write in this condition
+
+  try {
+   j = 18/1;
+   if(j==0)
+     catch()
+   }
+
+at this situation we want to use a keyword called 'throw' and 
+you have to create an object of 'ArithmeticException' at the above 
+part.
+
+
+So, what we basically do is we are trying to create an error and
+throw the error or since you are throwing 'Catch' will catch it.
+And out put will be there what we want.
+
+
+We litrally call the catch block with the help of Throw keyword.
+There is also one more thing that what if we try to print the actual 
+message.
+For this u can actually write your message in the "" of the 
+constructor.
+
+try {
+   j = 18/1;
+   if(j==0)
+     throw new ArithmeticException("I don't want to print zero.");
+   }
+so, whatever your message will have you have to type those constructor.
+and that's how we can use a throw keyword and catch block will be 
+catching it.
+

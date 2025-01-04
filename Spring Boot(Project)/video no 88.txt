@@ -1,0 +1,56 @@
+As we have seen that 'Exception' is a super class right and that we have a lot of sub classes
+let's we try to understand the Entire Hierarchy not talk about all the class just we
+want to give you the general idea.
+
+with the help of this we generalize that which class belongs to where and
+which exception are cumpulsory to handle and which are not this are the 
+important point you have to remeber
+
+1)  firsty there is a root class name 'Object' Because
+Every class in java Extends 'object' if you don't maintion it's there.
+Let's give respect to object class.
+                          OBJECT
+
+2)  secondly there is a child class which extends 'OBJECT' name 'THROABLE'
+let's remeber while searching for the class 'RuntimeException' which
+extends 'THROABLE'.
+                          OBJECT
+                            |
+                          THROWABLE
+
+3) In Next we have two classes which Extends 'Throwable' in which
+    i) is 'Exceptions' 
+    ii) is 'Error'
+Here we are not talking about 'Error' only talk about 'Exception' because
+we talk about 'run - time exception' that it's something we have to handle
+So, 'Exceptions' are something which you can and you should to handle but
+'Errors' you can't.
+                          OBJECT
+                            |
+                          THROWABLE
+                            |
+        --------------------------------------
+        |                                     |
+      Error                                Exception
+
+'Errors' we have Just like 'ThreadDeath','IoError' and 'Virtual Machine Error' 
+which have some inner method errors like 'OutOfMemory' error. 
+                          OBJECT
+                            |
+                          THROWABLE
+                            |
+        --------------------------------------
+        |                                     |
+      Error                                Exception
+                                                |
+                                      --------------------------------------
+                                      |               |                     |
+                              Runtime Exception    SQL Exception        IO Exception
+                               |-> Arithmetic E       |                      |
+                               |-> ArrayIndexOutOfBound ---------------------
+                               |-> NullPointerException               |
+                   This All know as Unchecked Exception    This other called Checked Exception
+
+Here 'Unchecked' Exception's will warned you to handle the Exception or caught at run time But 'Checked'
+will force you to handle it and caught at compile time.
+Here we not talk about 'throws' yet but we will talk about it

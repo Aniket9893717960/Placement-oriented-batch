@@ -1,6 +1,7 @@
 so, basically you are able to throw an 'Arithmetic Exception' 
 if you can throw an exception what if you want your own exception.
-
+just like :
+    throw new MyException("I don't want to print zero.");
 can we do that at the given program below.
 
 public class Demo {
@@ -16,6 +17,123 @@ public class Demo {
 
   catch(ArithmeticException e){
   System.out.println("Cannot divide by zero");
+  }
+  catch(Exception e){
+  System.out.println("Something went wrong.");
+  }
+  System.out.println(j);
+  System.out.println("Bye");   
+ }
+}
+
+Firstly if you replacs "throw new MyException("I don't want to print zero.");"
+with original program throw command.
+it will gives an Error "MyException cannot be resolved to a type"
+
+Instead of my exception i can say 'AniketException' because it's 
+a new term.
+TO done this we have to preform certain changes in the program are as
+follows.
+
+
+1) you have to create a seperate new 'class' name 'AniketException'.
+
+2) at those class we have to define a constructor of 'AniketException'
+with Access spacifier 'public' and parameter of 'String' type  object 'str'.
+
+3) I think that there is not any requirment of this step but still we getting
+error at 'throw Exception' line name 'No Exception of type AniketException can be 
+thrown; an exception type must be a subclass of Throwable'.
+
+But the class is there 'AniketException' but what's the problem i was 
+created my own exception but it doesn't excepting it.
+so, the thing is u can't simply create a class and think/call it's
+an exception.
+
+
+Because 'Exception' will have some different features.All thow if you
+want something will you have two choice 
+i) you can build Something.
+ii) get it to your parents.
+   a) is we can just extends 'Exception' class.
+
+If you implement this you see than error at 'throw Exception' is gone.
+and if you compile and run it they say "Something Went wrong..NavinException"
+
+Here is the program given below with all upwords implementations.
+
+class AniketException extends Exception
+{
+ public AniketException(String string){
+ }
+}
+
+public class Demo {
+ public static void main(String args[]){
+  int i=2;
+  int j=0;
+
+  try {
+   j = 18/1;
+   if(j==0)
+     throw new AniketException("I don't want to print zero.");
+   }
+
+  catch(ArithmeticException e){
+  System.out.println("Cannot divide by zero");
+  }
+  catch(Exception e){
+  System.out.println("Something went wrong.");
+  }
+  System.out.println(j);
+  System.out.println("Bye");   
+ }
+}
+
+But it's not over goal we don't want "something want wrong"
+Why this happend because u were throwing 'AniketException'
+but u doesn't catch it.
+i want to print "thats the default Exception" so you make 
+the changes/replace 'ArithmeticException' with 'AniketException'
+in the parameter of catch block.
+
+But if you print the output than it will print 
+"thats the default output AniketException"
+But my Question is "I don't wnat to print zero." where it goes?
+
+
+The thing is the message(in our case "I don't wnat to print zero.")
+will you try to print exception in the catch block will actually
+hundled by the 'Exception' class. 
+So, 'Exception' class will know that the message(in our case "I don't wnat to print zero.")
+in the 'Exception's constructor' which have the parameter of 'String object' with 'public'
+access Spacifier at this we have super keyword which contains "I don't wnat to print zero." message as 'String'.
+
+
+We know how to call the super class constructor.
+So we say "super(string)". 
+
+Here downwards it's the program.
+
+class AniketException extends Exception
+{
+ public AniketException(String string){
+ super(string);
+ }
+}
+public class Demo {
+ public static void main(String args[]){
+  int i=2;
+  int j=0;
+
+  try {
+   j = 18/1;
+   if(j==0)
+     throw new AniketException("I don't want to print zero.");
+   }
+
+  catch(AniketException e){
+  System.out.println("thats the default output"+e);
   }
   catch(Exception e){
   System.out.println("Something went wrong.");

@@ -1,0 +1,36 @@
+let's try to understand a keyword called 'Throw'.
+So, basically we have two keywods here first is 'throw'
+and second one is 'throws' we can check this two one by one.
+
+
+public class Demo {
+ public static void main(String args[]){
+  int i=2;
+  int j=0;
+
+  try {
+   j= 18/i;    
+  }
+  catch(ArithmeticException e){
+  System.out.println("Cannot divide by zero");
+  }
+  catch(Exception e){
+  System.out.println("Something went wrong.");
+  }
+  System.out.println(j);
+  System.out.println("Bye");   
+ }
+}
+
+if ' j= 18/i;' let's say '18' is divided '18' no. lt's say '2' 
+it normally work every thing is fine.
+
+Again i was purform the same operation but divisor is '20' not '2' then
+so, here answer would be zero.And there is no Exception.
+But what it you want to create and generate an 'Exception'.
+
+
+Means that i doesn't want to show an error name just i want to
+print it different for that just like 
+For 'ArithmeticException' i want to print exactly the divident
+and say "Thats the default value/output"

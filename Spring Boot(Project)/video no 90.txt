@@ -1,1 +1,26 @@
+so, basically you are able to throw an 'Arithmetic Exception' 
+if you can throw an exception what if you want your own exception.
 
+can we do that at the given program below.
+
+public class Demo {
+ public static void main(String args[]){
+  int i=2;
+  int j=0;
+
+  try {
+   j = 18/1;
+   if(j==0)
+     throw new ArithmeticException("I don't want to print zero.");
+   }
+
+  catch(ArithmeticException e){
+  System.out.println("Cannot divide by zero");
+  }
+  catch(Exception e){
+  System.out.println("Something went wrong.");
+  }
+  System.out.println(j);
+  System.out.println("Bye");   
+ }
+}

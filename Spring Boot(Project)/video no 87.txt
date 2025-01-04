@@ -91,3 +91,5 @@ in a try block u were add a code.
 So, here we got new type of Exception that we don't know and if u 
 exceute the code.
 Output will be "Something want wrong"
+but if we print 'Exception' object as well it will print
+"java.lang.NullPointerException".

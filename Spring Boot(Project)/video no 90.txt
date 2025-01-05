@@ -56,7 +56,7 @@ want something will you have two choice
 i) you can build Something.
 ii) get it to your parents.
    a) is we can just extends 'Exception' class.
-
+   b) we Extend 'RuntimeException' class.
 If you implement this you see than error at 'throw Exception' is gone.
 and if you compile and run it they say "Something Went wrong..NavinException"
 
@@ -115,10 +115,10 @@ So we say "super(string)".
 
 Here downwards it's the program.
 
-class AniketException extends Exception
+class AniketException extends Exception / RuntimeException
 {
  public AniketException(String string){
- super(string);
+ super(string);   // here u pass the message to the parent class.
  }
 }
 public class Demo {
@@ -142,3 +142,7 @@ public class Demo {
   System.out.println("Bye");   
  }
 }
+
+Here this program output will be 
+'thats the default output AniketException: I dont want to print zero'
+And That what we want.

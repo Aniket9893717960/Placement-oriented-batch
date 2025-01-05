@@ -1,1 +1,41 @@
+so, in this video we talk about 'Throws' keyword.
+At previous lecture we talk about 'throw' keyword .Now it's time for 'throws'.
+
+'Throws' is just not that means that if you wanna throw multiple Exception
+then it's throws because allot of people have the same confusion.
+
+'Throws' have it's different working before you understand throws whatever
+we do is let's talk about the scenario just like you were writing a method.
+
+--------------------------------------------------------------------------------
+Example :- Studying Case
+          ---------------
+if we have three method in which
+i) 'd()' will have some Statement inside it at which any one Statement is 'Critical'
+for this we have the only option to Handle this statment is with 'Try-catch'.
+
+ii) Exactly same Situation will done at 2nd method whoch is 'e()'.
+
+iii) at this we have third method name 'c()' which are calling above 
+two methods let's say in 'c()' we have some more Statements.
+Now if you try to observe the situation.
+we are trying to handle 'try-catch' at the answer at 'd()' and 'e()'
+what if you can say u know what 'd()'and 'e()' what if have a same 
+exception because both have a 'critical' statement they will
+raise the same Exception.
+          Answer of the Problem
+         -----------------------
+So, instead of handling those exception inside 'try-catch' at each of
+the method let we try to handle it with 'c()' itself.
+Here we can put 'calling of methods statements of d() and e()'
+inside the 'try' block because Entire method becomes a critical
+method.
+
+But this will create here a problem because Program will be stop Exceution
+To solve this we initialize the 'Throws' Keyword in the Problem method
+( 'd()' and 'e()' in our case)
+
+It simply means that whatever the problem arrises in 'd()' and 'e()'
+they will not handle it they will just. they will just send the 
+'Exception' to the method who calling it.
 

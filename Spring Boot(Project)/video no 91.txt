@@ -39,3 +39,34 @@ It simply means that whatever the problem arrises in 'd()' and 'e()'
 they will not handle it they will just. they will just send the 
 'Exception' to the method who calling it.
 
+Summary: hey whatever the problem arrises in 'd()' and 'e()' they will not handle it
+they will just send the exception to the method who will calling it
+Sometimes it just call as kill the exception.
+Because we not handling it just like 'd()' and 'e()' says
+it's not my responsibility So, the method who will calling this
+two method('c()' in this case) will handling those exception.
+
+---------NOTE----------
+In this kind of general scenarios 'try-catch' will be used on that methods
+where the calling start(Just like 'c()' in this case which calling 'd()'
+and 'e()') as a command.
+    ----X----
+-----------------------------------------------------------------------------------
+
+This whole scenario explain that what is taking a method? and
+how this can be done with the help of throws keyword?
+this will be helpfull only in 'Checked Exception' Example
+like IOException And Remember u will work with 'Class.forName();'
+at which u will maintion the class name('Demo' for this)
+
+u will sow an Exception name 'ClassNotFoundException' and this
+kind of Exception are compulsory to handle this Exception.
+
+
+---------NOTE----------
+'printStackTrace' it generally belongs to 'Exception' Basically it
+prints the Entire Stack and give information that which method will calling which method
+and u can acually drag the Entire method calls so that u know which method 
+will have the problem may arrise.
+This is helpfull to debug the application but it also good if  u want to print a message.
+------------X--------

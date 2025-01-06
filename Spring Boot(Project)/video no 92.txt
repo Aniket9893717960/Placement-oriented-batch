@@ -1,1 +1,28 @@
+Now it's a good time to talk about how to take input from user
+i know u are the preple waiting for the long time because
+we have talk about different concepts
 
+May be u have this question in your mind ok 
+Everything looks good we talk about 'objects classes
+,inheritance and polymorphism'.
+
+But how we take it from the user because in between 
+i maintoined that what if the value will come from the 
+user and at the same point you were thinking how?
+
+So ok we talk about this in 'video no 92'.
+
+So, basically if you want to print something on the console
+we just say
+        System.out.println();
+ok u just understand this first that 'println' is a method
+if i asked u somthing that about it that 'println' method
+belongs to which class or it's the method of which class.
+
+it's an interview question where allot of prople say that
+'println' is the method of 'System' class but that's not
+the case.
+
+See if i press my button on 'Windows' or 'shift' then
+and i will click on 'println' is a method which belongs to
+'Printstream'

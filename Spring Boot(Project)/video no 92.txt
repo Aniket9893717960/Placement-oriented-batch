@@ -131,3 +131,31 @@ and Explicit maintiond about this package.
 
 we have to create an object of 'BufferedReader' class like this:
      BufferedReader bf = new BufferedReader();
+But what's next the thing is if you want to read we have to actually
+pass an object of the Reader
+
+There is one more class which we have to work with it's leanthy that's
+how Java implemented it but there is a better way as well.
+So, we have to create an object of 'InputStreamReader' like:
+
+    InputStreamReader in = new InputStreamReader();
+And what ever your object is created here(Just like 'in') at this case.
+            BufferedReader bf = new BufferedReader(________);
+u will insert in 'BufferedReader' at this case.  here  ^
+
+The Job is done but there is a problem here because 'InputStreamReader'
+also need an object of 'InputStream'
+U know that 'InputStream' have an object 'in' at the class 'System.class'
+So, what can u do in 'InputStream' object is :
+
+    InputStreamReader in = new InputStreamReader(System.in);
+we know that's it lettle bit complex so, in the letter version he will 
+introduce a solution which is bit Easier.
+
+U can use this option as well that people were using it in very long time.
+
+Now all this happen then create a 'integer' variable name 'num' and initialize
+it with 'BufferedReader' object method to read the line on the console screen
+with the help of method 'readLine()'.
+
+But the only problem is'readLine()' will give u 'String' Datatype as output.

@@ -43,7 +43,9 @@ object is created as the 'static' variable inside the
 So, since 'PrintStream' is 'static' we can use 'out' with the
 help of 'System.out' and 1's u got access to the 'out' object
 u can call 'println' and that's what we have here.
+
 ----------------------------------------------------------------------------------------------
+
 what if we try to take input from the user. Just like
     System.out.println("Enter the no.");
 just we write to 'Enter the no.' so, at this case we say
@@ -102,3 +104,30 @@ Exapmle :
 
 So, basically it doesn't given the Exact value he will give the ASCII 
 representation of the value OK that's tricky actually.
+
+We will manage it but it's not the ideal way to taking an input but 
+that's what java provides you they will ever give you to read the 
+ASCII value of given no.
+
+But what if i want to give a bigger no. Just like i Entered '55'
+so, it only give answer 54 because it only get the first character 
+u Entered at a time.
+If you try to Enter multiple character you can use loop but i request
+u to dont do that.
+
+----------------------------------------------------------------------------------------------
+
+'Java' Says don't worry i will give/provide u a specialized class for this
+So, instead u use 'read()' method u have the specail options because there 
+is a concept called 'BufferedReader'.
+
+'BufferedReader' is basically a class which works with 'IO' and it
+belongs to a package 'java.io' so, if u want to use 'BufferedReader'.
+
+Uhave to Import 'java.io' to use 'BufferedReader' so, 'IO' the most
+of the methods or pre -defined keyword are belongs to 'java.lang' which
+was pre-imported. if you were using any class which is not there u can use
+and Explicit maintiond about this package.
+
+we have to create an object of 'BufferedReader' class like this:
+     BufferedReader bf = new BufferedReader();

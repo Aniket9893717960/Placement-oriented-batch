@@ -25,4 +25,21 @@ the case.
 
 See if i press my button on 'Windows' or 'shift' then
 and i will click on 'println' is a method which belongs to
-'Printstream'
+'Printstream'. 
+
+Here 'PrintStream' is a class and 'println' is the method of 
+this class. That means if you want to call 'println' u have 
+to first create an object of the 'PrintStream'.
+
+But don't worry about this u don't want to create an object 
+the bueaty is the object is already created u already have an
+'out' object. 
+
+And we are using this object from a long time.
+'out' is the object of 'PrintStream' but this 
+object is created as the 'static' variable inside the
+'System.class' 
+
+So, since 'PrintStream' is 'static' we can use 'out' with the
+help of 'System.out' and 1's u got access to the 'out' object
+u can call 'println' and that's what we have here

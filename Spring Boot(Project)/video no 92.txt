@@ -42,4 +42,63 @@ object is created as the 'static' variable inside the
 
 So, since 'PrintStream' is 'static' we can use 'out' with the
 help of 'System.out' and 1's u got access to the 'out' object
-u can call 'println' and that's what we have here
+u can call 'println' and that's what we have here.
+----------------------------------------------------------------------------------------------
+what if we try to take input from the user. Just like
+    System.out.println("Enter the no.");
+just we write to 'Enter the no.' so, at this case we say
+'Enter a no.' how can i accept it.
+
+That's tricky right so, what should be the solution here
+if you come to different programming languages like C,C++
+we use 'printf,Scanf' in 'C' at 'C++' we use 'cout,cin'.
+It's straight forward because this are straight forward 
+methods.
+
+If i go to 'System.class' then there should be two objects.
+'out' which we sow previous and we see about 'in' so,
+it's also an 'Static' method and this object 'in' is of type
+'InputStream'.
+O we do have it if i go back to the program and try to use
+'System.in' for input there should be read so we have 'read()'
+method.
+         'System.in.read();'
+it returns a 'read()' value but the only thing is it might 
+throw an Exception called 'IOException' u know what is 
+'IOException' now. 
+U have  a choice to handle an Exception and it's a 'checked'
+Exception it's your job to handle it 'compiler' will force you
+to do that. you have two options
+
+i) Either use try catch here
+ii) u say 'throws IOException' at main method
+
+Not a good idea but works for this code Because we are learning
+so we can do that But if you are making an 'Application' don't do that
+
+Next we done the thing that the output 'integer' values will gone for 
+'num' which contain 'read' output.If you done this you can Either
+Perform any operation and print the value of 'num'.
+
+
+Import java.io.IOException;
+public class Demo {
+ public static void main(String args[]) throws IOException{
+  System.out.println("Enter a number");
+  int num = System.in.read();
+  System.out.println(num);
+  }
+}
+
+
+But i u typing any no. and you Enter in the output it will give you
+two digit different value This ANONYMOUS thing happen because 'read()'
+method  will return the ASCII code of your Entered Element.
+
+Exapmle :
+        If i Enter 'A' your output will be '65'
+        for small 'a' it's '97'
+        for '0' it will '48'
+
+So, basically it doesn't given the Exact value he will give the ASCII 
+representation of the value OK that's tricky actually.

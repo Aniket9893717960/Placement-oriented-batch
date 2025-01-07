@@ -39,3 +39,60 @@ And the bueaty is if you want to skip 'catch' block than u
 also done that and only run 'try-catch'.
 
 Finally make sense whenever you want to close the resource.
+The only thing is we are creating an object inside the try block.
+so, i can decalse the reference of 'BufferedReader' outside the 
+'try-catch' block.
+And i can initialize 'BufferedReader' as 'null'.
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Demo {
+ public static void main(String args[]) throws NumberFormatException 
+ {
+ int num =0;
+ BufferedReader  br = null;
+ try
+ {
+  br = new BufferedReader(new InputStreamReader(System.in));
+  num = Integer.parseInt(br.readLine());
+  System.out.println(num);
+  }
+  finally {
+   br.close();
+  }
+ }
+
+But u know we can optimize this more in the later version of java
+they have introduce a new concept which is 'try with resources'
+where u don't even have to maintoin 'finally' block.
+
+That's good right But how u do that so, in 'try' we have round bracket
+"()" and u create you declaration what ever object u have creating 
+create them inside the 'try' block bracket "()".
+
+And you have to Declare them as well so, u don't need to maintoin at uper 
+body.
+so, whenever you have the class or interface which is 'AutoClosable' u don't 
+need to maintoined that to close it with the help of 'try'.
+So, this is 'try' with resources
+
+public class Demo {
+ public static void main(String args[]) throws NumberFormatException 
+ {
+ int num =0;
+ try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in));)
+ {
+  num = Integer.parseInt(br.readLine());
+  System.out.println(num);
+  }
+ }
+
+
+---------------------X-----------------------
+wherenver you want to close the connection or Resource always
+close the 'finally' block. because this block will made for closing the 
+resources.
+It can be for files, for the input,for the connections (like network,Database Connection)
+'finally' block used for closing this connection.
+--------------------X-----------------------

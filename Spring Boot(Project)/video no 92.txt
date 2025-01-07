@@ -159,3 +159,74 @@ it with 'BufferedReader' object method to read the line on the console screen
 with the help of method 'readLine()'.
 
 But the only problem is'readLine()' will give u 'String' Datatype as output.
+But we don't want 'String' we want 'Integer' to do that we use the
+specail class called 'Integer.parseInt' which we have seen already.
+
+Now if i try to print the no. it should work. Otherwise we have wasted so 
+much time on this.
+We check to build the Program below.
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Demo {
+ public static void main(String a[]) throws IOException {
+
+  System.out.println("Enter a number");
+
+  InputStreamReader in = new InputStreamReader(System.in);
+  BufferedReader bf = new BufferedReader(in);
+
+  int num = Integer.parseInt(bf.readLine());
+  System.out.println(num);
+ }
+}
+
+SO, basically this is how u take input from the user. There is again 
+one more let me show you after some time. But the important thing is
+whenever we use 'BufferReader' it always trying to access 
+'InputStreamReader'.
+
+but the important point is 'BufferedReader' can take an input from anywhere 
+not just from 'System' Keyboard But it also take input from the file,
+network and whatever u were trying to take an input from file. Then
+u can maintoined all the stuff.
+
+'BufferedReader' whenever u were using it it's actually a resource.
+Now why it's a resource let's say whenever u were trying to ride on a file
+of course file is a resource whenever u were open the file.
+It's your responsibility to close it.
+
+whenever u open the network it's your responsibility to close it.
+whenever u open the database connection it's your responsibility to
+close it so, how will u close it.
+U can close 'BufferedReader' with this command.
+
+             'bf.close()'
+In the End of the program.so, it's always a good idea to close the resources
+Obviously it will not give an error but it's always a good practices 
+Otherwise u were leacking the file,u were licking the data
+u are keeping the resource busy the thing is if u are using the
+resource so, the evil person will also check it.
+----------------------------------------------------------------------------------------------
+Insted of using 'BufferedReader' u will use 'Scanner'
+
+if u can see to 'Scanner.class' so, it was introduce at '1.5'
+So, people before '1.5' using 'BufferedReader' i know Bad Days but
+Yes
+
+we use 'Scanner' class here or build it's object name 'sc'
+U can build object with the help of 'new' keyword.
+But u have to also pass the 'InputStream' as the parameter
+on to the 'Scanner'.
+
+With the help of 'System.in' we got the input from the console
+u can get the input from the file
+
+for this object of 'Scanner' we have to call 'nextInt' method 
+and it's returned value will be initialized at 'Integer'
+variable.
+
+
+In the next video we will view about more alternatives to manage
+about how to close resouces.

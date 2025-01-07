@@ -1,1 +1,41 @@
+Now in this video we try to implement 'try' with 'finally' or
+'try with resources' basically firstly i remove Every thing 
+and we try to use 'bufferedReader' because we love it.
 
+here we are not running code as of now than we have to remove 
+'throws IOException' as well and here what ever we do is
+we have to understand 'try' now if we talk about try
+
+of course in this 'try' what u will do whatever u want
+Normally we put critical statements in this right and if 
+this will be a critical statements what u will execute is the
+catch block.
+
+we know how to add the catch block it's compulsory to have 
+a 'try' with 'catch' so, there is no compulsion if you can
+see i don't maintoin catch it gives an error.
+
+So, the thing is if you have a try and if you don't want to 
+maintion the 'catch' u can basically write 'finally' here.
+
+so, yes try can be use either 'finally' and 'catch'. but 
+there is a Question that
+what is the use of try if u don't handling it? why this question 
+apper because
+
+if 'try' have the critical statement than 'try' will 'throw'
+an exception and 'catch' block will catch it
+But there is something u want to print at every condition
+not matter if your code will perfectly Exceuted or not.
+
+Because there are some set of statements which u want to
+exceute irrespective if you got Exception or Not.
+
+Instead of doing those things at 'try' and 'catch' block
+we got an ammessing thing which is 'finally'. 
+You can write your statements inside 'finally' block.
+
+And the bueaty is if you want to skip 'catch' block than u 
+also done that and only run 'try-catch'.
+
+Finally make sense whenever you want to close the resource.

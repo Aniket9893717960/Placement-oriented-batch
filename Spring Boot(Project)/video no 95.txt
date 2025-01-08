@@ -1,1 +1,67 @@
+So, we know aboutwhy we need 'threads' so, here we create multiple threads
+'Multiple threads' is just not that we have a concept of 'threads'
+and we are going to use in every application.
 
+What if i say that most of the time u don't even create threads by yourself.
+See if you build application so, u can use a certain framworks right
+Now behind the seen this framworks will create Threads for you.
+
+So, if you work on the big project there is a high chance that
+u will not even write 'threads' by yourself.
+
+But we are also worry that to make the hand-on in the underlying 
+concepts right.
+
+we will going to some imaginary concept here.
+Let's say we have the class name 'Hi' it's main task to
+print 'hi'.
+
+So, what we do is inside the class 'hi' we create a method 'show'
+with access modifier 'Public'and it doesn't return anything. So, 
+in method 'show' we print "hi".
+
+But i wan't to print "hi" multiple times on the console Screen that's 
+why we use 'for loop' and we are putting this inside the loop.
+
+we build a class name "hii" with a same concept and the same code which 
+will corruspond with 'hi' class But the only difference is 'hii' will print
+'hii' n'times and 'hi' class will print 'hi' n'times.
+
+That's the only difference if we ignore the 'Class' name difference.
+
+Now i will moved on to the 'main' class name 'Demo' where we create an
+object of class 'hi' as 'obj1' as same as 'hii' object name is 'obj2'.
+
+And Now i want to call those methods with the help of hi's objects.
+     Obj1.show();
+     Obj2.show();
+Perform this operations in the program like this
+
+class hi extends Thread
+{
+ public void show()
+ {
+  for(int i=1;i<=10;i++)
+   System.out.println("hi");
+ }
+}
+
+class hii extends Thread
+{
+ public void show()
+ {
+  for(int i=1;i<=10;i++)
+   System.out.println("hii");
+ }
+}
+
+If you want to Execute two things at the same time and behave at the same
+time since methods are behaviour so, we can use something called
+'Threads'.
+So, we can say there are two objects but this are not two normal objects
+u can't execute normal objects in multiple threads or u can't execute 
+normal objects simultaniously.
+
+How do you make the normal objects as threads that's tricky right
+If you want to make this classes or objects as 'threads' just extend 
+those classes with 'Thread'

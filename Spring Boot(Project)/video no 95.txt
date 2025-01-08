@@ -55,13 +55,125 @@ class hii extends Thread
  }
 }
 
+class Demo {
+ public static void main(String args[]){
+ hi obj1 = new hi();
+ hii obj2 = new hii();
+
+ obj1.show();
+ obj2.show();
+ }
+}
+
 If you want to Execute two things at the same time and behave at the same
 time since methods are behaviour so, we can use something called
 'Threads'.
+
 So, we can say there are two objects but this are not two normal objects
 u can't execute normal objects in multiple threads or u can't execute 
 normal objects simultaniously.
 
 How do you make the normal objects as threads that's tricky right
 If you want to make this classes or objects as 'threads' just extend 
-those classes with 'Thread'
+those classes with 'Thread'.
+
+But if we compile and run this thing so, Again the output will be come
+at the sequence it's that means to make the apearence of the normal class
+into 'Thread' class is not that simple.
+Because i want to print this two methods parallel.
+If you also print 'hello' and 'hi' side by side.
+
+What i want let's understand with the help of Diagram.
+and we make the diagram with the following steps.
+
+i) i want running the program will be start's from 'main'.that's 
+why we make 'main' as the root element.
+
+ii) here we want that compiler will split it's processing within
+class 'hi' and 'hii' to Excute this two's 'show' method within the
+compiler's scheduled time frame.
+
+iii) if 'main' will call 'show' methods so, i want 'show' methods have it's
+uniques personal thread.
+Now just by maintoining the class is 'Thread' it will not create a New thread
+for you.Basically we want two threads(for this case).
+
+                          Main
+                           |
+    ---------------------------------------------
+    |                                            |
+A's 'show' method                          B's 'show' method
+
+We can done that is by Not calling 'show' what we can do is we
+call the method called 'start'.
+when you are thinking that at this point i want to start a new 
+'thread' at two different class in this case.
+
+We can do that with the help of the 'start' method.
+u have to call this method.
+So, if u go to class and check the 'start' method then u 
+know that it's belong to 'Thread.class' . of-course will you
+do work here if u call 'start' it will create a new thread for
+you.
+
+But it will call Not the 'show' method even if you call it. It
+will call 'run' method.
+U Need to know in the unique 'thread' u have to build 'run' method.
+And Now it works.
+
+
+But Still it doesn't work What the Hell is happning here the thing is 
+what if i say they are actually running Paralell But the only thing is 
+when we are saying to run the 'hi' class at that moment it will complete 
+the Execution.
+
+If the 'n' no. of values will be bigger just like '100' then u can check the 
+differece.
+
+The final Program will be Given Below.
+
+
+class hi extends Thread
+{
+ public void run()
+ {
+  for(int i=1;i<=100;i++)
+   System.out.println("hi");
+ }
+}
+
+class hii extends Thread
+{
+ public void run()
+ {
+  for(int i=1;i<=100;i++)
+   System.out.println("hii");
+ }
+}
+
+class Demo {
+ public static void main(String args[]){
+ hi obj1 = new hi();
+ hii obj2 = new hii();
+
+ obj1.start();
+ obj2.start();
+ }
+}
+
+If u running this program U got few 'hii's and few 'hi' then few 'hii' and going on
+throw the end of the Exceution.
+Actually this two methods are running at the same time. here
+what happens is behing the seen there is a concept called 'Scheduler'.
+
+This is something that if u want to Excute something u will first come to me 
+Now doesn't matter how many 'threads' u have in your system of course in my machine
+Threads are different your computer have system.
+
+Example:
+ If you have 8 threads running in your computer and at your computer you
+have two cores So, 'Schedules' will allow 'thread' that at which 'core' you
+were going to Excute and at what time will thread start Exeution.
+
+
+In the Next video we try to optimize this code.

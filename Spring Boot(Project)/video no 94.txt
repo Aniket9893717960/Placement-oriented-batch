@@ -1,1 +1,43 @@
+In this video we will talk about 'Threads'.
+Now what are 'Threads' thing about it
+when u run the application of course to the 
+software which we have return on the OS.
 
+And OS have the layer which is called 'Hardware'.
+So, if you want to represent this what we normally
+has 
+
+if the Software
+       ________ 
+runs on    |
+      Operating System
+down  -----------------
+there we have       |
+physical set      Hardware(like CPU,RAM)
+                  ----------------------
+This are the things we have to use Running the Application
+
+If we talk about 'RAM' so, 'RAM' will Act like a temproray memory.
+where will your Processing.
+
+CPU is something where u Exceute things OK so, let's say in your
+software.
+
+It will work on one or two software but if you think that u have 
+work upon multiple software. So, i was saying that OS should support 
+multiple software at the same time.
+Condition : we running multiple task at the same time. Most of the
+morder OS support that the thing is they are not Exceuting the task
+Simultaniously.
+
+Just like we have the software 1,2,3 will trying to run at the same 
+time SO, in concept 'Time Sharing' at which thay will shedules the
+time slots at which software 1,2,3 one by obe simultaniously Excutes.
+
+That's one thing or with this we have to achieve multiple tasks.
+
+It's not just about Multi- Tasking. It just about dividing your task into
+multiple small things the smallest unit so, how can we do that
+SO, that's where we have the concept called 'Threads'.
+
+'Threads' are simply a smallest unit which u have to work with.

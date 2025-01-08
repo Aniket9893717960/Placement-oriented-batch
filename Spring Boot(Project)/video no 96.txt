@@ -1,0 +1,14 @@
+Now try to Execute 'Multiple Threads' simultaniously
+of course in the previous program it will running the same 
+thing but i want 'hi' and 'hii' one after the other
+because In the previous program there are so, many 'hi'
+than we are going throw 'hii' and same goes to whole 
+program output.
+
+How do we do that the thing is u doesn't control your 
+'Scheduler' u can suggest the 'scheduler' to give the 
+priority so, yes we have the concept of 'Thread Priority'.
+
+And under this we have the concept of 'Top Thread Priority'
+I just want to understand what is the current Priority of the
+Thread.

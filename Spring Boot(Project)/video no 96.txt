@@ -12,3 +12,117 @@ priority so, yes we have the concept of 'Thread Priority'.
 And under this we have the concept of 'Top Thread Priority'
 I just want to understand what is the current Priority of the
 Thread.
+
+There is a method called 'getPriority' which will give u the 
+current priority of the thread.
+
+          System.out.println(obj1.getPriority());
+
+so here we got the priority of thread is '5' so, what is this 
+priority.
+
+So, the range of the priority goes to 1 to 10 where
+1 : Lowest Priority
+10 : highest Priority
+5 : Default Priority 
+
+Every thread will have the normal priority. so,
+what u can do is u can change the Priority of the 'Thread'.
+
+May be if u want the second thread will have the higher priority.
+so, we use the object of 'hii' class and use method 'setPriority'
+with the paramter at which we set it's priority("1") in this case
+
+          obj2.setPriority(1);        
+
+But u can also use some constants. But for using this we have to 
+maintoined 'Thread' class. With the method 'MAX_PRIORITY'(10),
+ 'MIN_PRIORITY'(1), 'NORM_PRIORITY'(5).
+Example : If you want to Set Priority is '9'. 
+           obj2.setPriority(Thread.MAX_PRIORITY-1);
+
+It not that thing that we got all the 'hii' first.
+But it's not that thing what we want at 
+     'obj2.setPriority(Thread.MAX_PRIORITY-1);' IN this command u just
+suggesting to your 'scheduler' that 'hii'  shold got the highest Priority.
+It Doesn't give that priority Because 'Scheduler' have different algorithms
+to work with and now if it filles Ok.
+
+We have the multiple threads and they were reaching at the point of the 
+same time. Now i will say the priority the scheduler will also see who will
+tack the lowest time. If there is a thread that will take less time then
+u might go for that one.
+
+As i maintioned the different 'scheduler' will have different Algorithms to
+work with 'setPriority' just suggest what should be done? Ok that's
+one.
+
+SO, we know how to make the 'setPriority' the priority and get the priority.
+If i still want to make our goal Acchieve So, After Printing 'hi'.
+
+Is there any posability that we have to schedule the time - frame  for the
+'Threads' we have to Execute(just like in set at 1ns to print 1 'hi' at a time.
+we can done this with 'sleep' method after initializing the 'Thread' class
+in 'sleep' we also initialize the paramter as 'time (in milli Seconds)'
+
+          Thread.sleep(10);
+
+when u say 'sleep' u were asking your 'Thread' to wait. Wait for
+'10' mili-seconds and then u will continue so, what we will basically
+trying to do is we print 'hii' at this perticular stage we will 
+go to 'wait' stage.
+
+But here the 'sleep' method throws the 'InterruptedException' we have
+to put 'try-catch' or 'throws' but let's put 'try-catch' 
+And our job is done.
+
+class hi extends Thread
+ {
+ public void run()
+  {
+   for(int i=1;i<=100;i++){
+    System.out.println("hi");
+     try {
+        Thread.sleep(10);
+        }
+      catch(InterruptedException e){
+          e.printStackTrace();
+      }
+   }
+  }
+
+class hii extends Thread
+ {
+ public void run()
+  {
+   for(int i=1;i<=100;i++){
+    System.out.println("hii");
+     try {
+        Thread.sleep(10);
+        }
+      catch(InterruptedException e){
+          e.printStackTrace();
+      }
+   }
+  }
+
+class Demo {
+ public static void main(String args[]){
+
+ hi obj1 = new hi();
+ hii obj2 = new hii();
+
+ obj1.start();
+ obj2.start();
+ }
+}
+
+Let's we see the output and u see Our goal of this lecture
+will Achived Because we got 'hi' and 'hii' in Sequence simultaniously.
+But at some point you sow that Sequence will be mis-matched 
+But we can't do anything at this time as a 'Developer'
+because our job is done.
+
+As a Programmer u can optimize it more Ok But u Doesn't control
+it. There is not garanty that here u will get the correct output
+because we try to achive Perfaction we no boddy is Perfect.

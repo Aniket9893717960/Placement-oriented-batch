@@ -1,1 +1,174 @@
+There are multiple ways to create a thread  One thing which
+we have seen og thread actually we have a class by 'Thread'
+But we have more options.
 
+But why do we need more options we think about that
+let's say this class 'A' want to extends some other class.
+
+where the class name is 'Z' and i want to be a 'Parent' Class in 'A'
+I want 'Z' to be a 'Parant' class and 'A' will be a 'Child' class. 
+
+So, i want to basically make this 'A' as 'Thread'.
+I want to make this as a sub class of 'Z'.
+And we all know right in multiple Inheritance.
+is not Possible in 'Java'.
+
+How to be solve this Problem The Idea of Extending Thread is
+Not good Idea.
+If u click on this Thread if u observe that 'Thread' will implements 
+'Runnable' interface. And if you go to 'Runnable' interface it will 
+have the 'run' method.
+
+What i will do now is 'instead' of Extending with a 'Thread'.
+We implement It with the interface Called 'Runnable'.
+So, both the side i have the choice of Extending the class as
+well.
+
+If you have some other class Because we can have a class which 
+can Extending Another class Or implementing an Interface at the
+same Time.
+
+But the point is u can make the 'Thread' like this as well U are 
+making this 'A' class as 'Runnable' SO, the main Question is
+How can u work with this.
+
+At the moment go Down u have does
+
+class A implements Runnable
+{
+ public void run()
+ {
+  for(int i=1;i<=5;i++)
+  {
+  System.out.println("hi");
+  try {
+   Thread.sleep(10);
+   }
+   catch( InterruptedException e){ e.printStack }
+  }
+}
+
+class B implements Runnable
+{
+ public void run()
+ {
+  for(int i=1;i<=5;i++)
+  {
+  System.out.println("hello");
+  try {
+   Thread.sleep(10);
+   }
+   catch( InterruptedException e){ e.printStack }
+  }
+}
+
+public class Demo {
+ public static void main(String args[]){
+  A obj1 = new A();
+  B obj2 = new B();
+
+  obj1.start();
+  obj2.start();
+ }
+}
+
+Here start will not work why the 'start' will not work Because in
+the 'Runnable' interface we don't have the 'start' method.
+
+Ok so that's weared we can't do this right. so the idea is If
+you have the runnable class Just like 'A' will have the 'Runnable'
+class.
+
+A class which implementing in 'Runnable' so, in that case if you want
+to work with 'start' In that case if you can work on the two different
+thread 't1' which is your first 'thread'.
+
+thread 't2' which is your Second 'thread' So, right we got two threads 
+here Which we will build by this command.
+
+  Thread t1 = new Thread();
+  Thread t2 = new Thread();
+
+Or instead of saying 'obj1.start' we want to write 't1.start' because 
+we know the start method will be belongs to a 'thread' and problem solved
+right And problem is solved 'Right'. U know see that u are able to call
+'start' right Now see if this works.
+
+Let's we have to compile and run You can see that the output is weared
+Because we not got any output.
+
+Yes we got two threads.
+Yes we are saying 'start' It was actually creating the two threads behind 
+the seen but it's not doing anything because this two threads have no idea
+about 'obj1' and 'obj2'.
+
+They have no idea about this two classes. So, in that case what we do is
+I u go to 'Thread.class' where it create a 'Thread' constructor u can see
+threads have multiple constructor.
+One of the Constructor will takes a 'Runnable' object. that means 'A's'
+object will becomes the runnable object.
+
+So, Instead of 'A' can i use 'Runnable' we will create the 'reference' of the 
+interface and Object of the class. Even in object 'B' we can create a reference 
+of the Interface and Object of a class.
+Command's we are running like this.
+
+  Runnable obj1 = new A();
+  Runnable obj2 = new B();
+
+In 't1' and 't2' which are the Particular Constructor of the Thread we Pass
+the 'Runnable' object 'obj1' and 'obj2'.
+
+Generally we are passing the runnable object in the 'Thread' class or the 
+'Thread' constructor.
+
+Now there Is the Link if we can say 'start' it will not that which thread we 
+have to pass So, this class we say 'run' of this two classes.
+
+Let's say if this works And It's worked It will print 
+'hi','hello','hi','hello'____ .
+
+For creating a 'thread' we have two choices.
+i) you have two Extend Thread class.
+ii) you have two implement 'Runnable' Interface.
+
+The only thing is Runnable interface will not have the run method
+At this u need to create a seperate thread object And then u use 
+'t1.start' and other features similar of this.
+
+U know In the Previous Lectures we have also Learn about 
+'Lambda Expression' let's reduce this code by implementing
+Let's do this step by step.
+
+i) If i ask you one thing the entire class 'A' why we are getting this class
+we are getting this class because we want to implement 'Runnable' 
+Ok that make sense how about if i remove this class.
+
+of course this 'Runnable' will not work If i commit the 
+Entire class 'A' u see that at
+       "Runnable obj1 = new A()" in which 'A()' u got error.
+
+U can create a 'Runnable' class 'obj1' but we can't create 'A' because we don't 
+have 'A' If here we can say 
+             "Runnable obj1 = new Runnable(){
+              };"
+Of course we can do because we seen how to work about 'Anunymous' class to
+create the object SO, imagine if this will be an 'Anonymous' class Now
+In this 'Anonymous' class we have to implement the method which is 'Runnable'.
+
+Now which method is there the same method which we have 'run' in class 'A'.
+So, we will copy the 'run' method of class 'A' and i can say copy and past.
+Like this program.
+
+Runnable obj1 = new Runnable(){
+ public void run()
+ {
+  for(int i=1;i<=5;i++)
+  {
+  System.out.println("hi");
+  try {
+   Thread.sleep(10);
+   }
+   catch( InterruptedException e){ e.printStack }
+  }
+};

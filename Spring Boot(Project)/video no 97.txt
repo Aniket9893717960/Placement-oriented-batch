@@ -180,3 +180,59 @@ the same Program.
 But before going that we have to cunvert this into a lambda
 Expression and we have seen that at lambda Expression works 
 when we have the functional interface.
+And Runnable will actually the 'fuctional Interface' which means
+i can use lambda at 'Runnable' method Because 'Runnable' method
+is optional Here.
+So I can remove
+                 "new Runnable(){
+                  public void run"() 
+line
+and u can put an arrow "->" here. Make visible this changes in
+Program.
+
+Runnable obj1 = () ->
+ {
+  for(int i=1;i<=5;i++)
+  {
+  System.out.println("hi");
+  try {    Thread.sleep(10);   }
+   catch( InterruptedException e){ e.printStack }
+  }
+};
+
+U can make this for the second object name 'obj2' for the
+second part but the only make u a change is write "hello".
+And i don't Even Need the two class 'A' and 'B'.
+
+Now the actual Program will be looking like this.
+
+public class Demo {
+ public static void main(String args[]){
+
+Runnable obj1 = () ->
+ {
+  for(int i=1;i<=5;i++)
+  {
+  System.out.println("hi");
+  try {    Thread.sleep(10);   }
+   catch( InterruptedException e){ e.printStack }
+  }
+};
+
+Runnable obj2 = () ->
+ {
+  for(int i=1;i<=5;i++)
+  {
+  System.out.println("hello");
+  try {    Thread.sleep(10);   }
+   catch( InterruptedException e){ e.printStack }
+  }
+};
+
+Thread t1 = new Thread(obj1);
+  Thread t2 = new Thread();
+
+t1.start();
+t2.start();
+ }
+}

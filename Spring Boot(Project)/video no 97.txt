@@ -172,3 +172,11 @@ Runnable obj1 = new Runnable(){
    catch( InterruptedException e){ e.printStack }
   }
 };
+
+It works so we say we got the wanted output But there will be
+a question that we will go for the Second method as well with 
+the same Program.
+
+But before going that we have to cunvert this into a lambda
+Expression and we have seen that at lambda Expression works 
+when we have the functional interface.

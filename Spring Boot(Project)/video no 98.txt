@@ -1,0 +1,2 @@
+In this video we will talk about 
+"Race Condition" .

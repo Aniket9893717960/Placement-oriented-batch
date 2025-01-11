@@ -1,2 +1,135 @@
 In this video we will talk about 
-"Race Condition" .
+"Race Condition" .Recently we will talk about
+"Threads" and till this point Every thing looks 
+Good Because Now we Know that Threads are Important
+If u want to Exceute Multiple Threads at the same 
+Time "Threads" will be use full.
+
+Now sometime we will create two threads and
+some time we will go for multiple Threads May be
+8 Threads 10 Threads It depends upon your Application
+As i maintioned before there are certain times that u
+actually write threads by your self.
+
+Because most of the time Your Frameworks will be done 
+for you Let's say u create your own threads and then we
+know that Threads are good.
+But on the other hand we have one more concept Right
+Which is called                    'MUTATION"
+
+         If i say Mutation Here So, what do you mean by "Mutation".
+Mutation is Simply means that u can change Something Here 
+"Something" means we are talking about Variables.
+Example :
+   int i=5;
+      i++;
+Now value of i will be 6
+
+But if u remember when we talk about Strings we have maintoined that
+Strings are immutable right so there are some concepts which makes them
+immutable so, which is good Mutation/Immutability.
+
+If at this point if u can change something then Mutation looks good Right
+So, let's try to discuss something more what about threads Is threads are
+good Then, of course if you want to make things faster than "Threads" are
+Good.
+
+But what if u mix both "Threads" and "Mutations" OR
+If u are doing "Mutations With Multiple Threads" will
+this work. The main thing is what if we have two threads
+let's say we have Thread 't1' and 't2' And both are trying
+two work with 1 variable at this here is 'i'.
+
+Now it will create Instability in your own.
+Example : 
+If u have 1 Bank Account but u got 2 Debit cards
+Of course u as a single Person can not use card at
+the same time.
+
+What if u have other card with the same bank account.
+For the one bank account we have two cards.
+what if you will give one card to your friend And
+u went to go for two different ATM machine
+And Now you will try to widrow the money.
+
+-------------NOTE---------------
+If you work with 'Threads' make sure u will have immutable Data.
+If you think that does a methord which does the mutation It make 
+Tread Safe.
+-----------X-----------------
+
+Thread safe Is the thing where One thread will working at one 
+point Just like we have 'Show()' method at which two threads
+or multiple threads will be on waiting line to work with
+But Exactly one 'Tread' will be access it at a time.
+
+But how let's show in the code here
+What are the changes we have done in previous Program are:
+
+i) In the 'Anonymous Runnable method' at object 'obj1' and 'obj2' we have to increase
+the frequency of loop from 5 to 100.
+
+ii) Delete the data in the loops of 
+'Anonymous Runnable method' at object 'obj1' and 'obj2'.
+
+iii) create a class name 'Counter' at which we created a
+method name 'increment' with return type 'void' and 
+created a instace variable of 'Counter' name 'count' with
+datatype 'int'.
+
+iv) Inside the 'increment' method we are just saying
+'count++' And now we created an object of 'Counter'
+class to call this.
+
+v) Inside the for loop of 
+'Anonymous Runnable method' at object 'obj1' and 'obj2'
+we are calling 'increment' method of 'Counter' class.
+
+Here is the implementation of all previous Steps.
+
+
+class Counter
+{
+ int count;
+ public void increment(){
+ count++;
+ }
+}
+
+public class Demo {
+ public static void main(String args[]){
+
+Runnable obj1 = () ->
+ {
+  for(int i=1;i<=1000;i++)
+  {
+  }
+};
+
+Runnable obj2 = () ->
+ {
+  for(int i=1;i<=1000;i++)
+  {
+  }
+};
+
+Thread t1 = new Thread(obj1);
+  Thread t2 = new Thread(obj2);
+
+t1.start();
+t2.start();
+
+System.out.println(c.count);
+ }
+}
+
+Our Expected Out will be '2000' but we got Different value at Different
+time of Exceution because 'main' doesn't waiting for Thread 'obj1' and
+'obj2' to return back.
+So, we are trying to Accomplish that 'main' should wait for 't1' and 't2'
+with the help of 'join' command of Thread.
+
+'join' is a Special Method which allows your 'main' thread for the wait of
+the other threads to come back and join.
+If at this point if you want to wait two threads u can use 'join' here.
+

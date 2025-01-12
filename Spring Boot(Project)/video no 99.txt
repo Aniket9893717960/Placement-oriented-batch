@@ -1,1 +1,61 @@
+Now in this video we will talk about different 
+states of a 'Thread'. Now If you Remember we were
+Starting at creating a 'Thread' then we will talk about
+thread is running Then we will talk about sleep 
+method.
 
+Then we will talk about 'join' method At this 
+we were basically playing the thread state like
+Right where states are running at which we are ready 
+to wait come - back right.
+
+So, what are the different states we have available right
+
+i) New State
+  -----------
+where every time we create a new thread which goes into a
+new state.Apart from this New state we have something called
+Runnable state.
+
+ii) Runnable State
+   ----------------
+Now after that we have called Running State
+
+iii) Running State
+    ---------------
+Then we have a waiting State
+
+iv) Waiting State
+   ---------------
+Which will also called as Block State.
+And the last state we have Is Dead.
+
+v) Dead State
+
+This is all about all the states available in a thread.
+If u are running with a new States let's say if you remember
+when we sayed 't1' is equal to 'new' thread.
+
+                  Summary
+                  -------
+At that point it will becomes the new state. Now at the movement 
+will u say 'start' when he say start it will goes to the 'Runnable'
+state.
+              'start' is the method where you start Excution
+
+Now there will be a Difference between 'Runnable' state and 'Running'
+the difference is when your thread is actually running on the CPU then
+it's 'Running' state.
+                      'run' is a method where thread becomes 'runnable' to 'Running'
+
+But when your thread is Exceuting then another 'thread' is waiting for the 
+Scheduler then it becomes 'Runnable' state.
+If your 'thread' is Exceuting and you want to done it on hold then that 
+'thread' goes into waiting state.
+                      'sleep' method will used when changing the state from 'Running'
+                      to waiting.
+           Now Apart from that we have the method called 'wait' which can make it go
+           into the waiting state.
+
+But the main Question is how will you come back form the 'Waiting' state?
+      So, you will come back with the help of the method called 'notify'.

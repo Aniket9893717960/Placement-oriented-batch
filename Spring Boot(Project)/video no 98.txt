@@ -124,8 +124,9 @@ System.out.println(c.count);
 }
 
 Our Expected Out will be '2000' but we got Different value at Different
-time of Exceution because 'main' doesn't waiting for Thread 'obj1' and
-'obj2' to return back.
+time(like 900,1000,1200 And between and less than this) of Exceution 
+because 'main' doesn't waiting for Thread 'obj1' and'obj2' to return back.
+
 So, we are trying to Accomplish that 'main' should wait for 't1' and 't2'
 with the help of 'join' command of Thread.
 
@@ -133,3 +134,35 @@ with the help of 'join' command of Thread.
 the other threads to come back and join.
 If at this point if you want to wait two threads u can use 'join' here.
 
+If u want to wait 't1' and 't2' threads so, u have to compulsory to 
+work with join by this command.
+
+                    t1.join();
+                    t2.join();
+
+But here we sow that it will give an Exception name 'InterruptedException'
+so, to throw that Exception we have to declare it at 'main' class.
+
+      public static void main(String args[]) throws InterruptedException
+
+But It Also not give the Different value at Different time
+(like 1600 to 2000 and between or less than) of Exception.
+
+Because Some time it's unpredictable because we doesn't control
+it directly So, what is happening here?
+Due to lack of corrdination between two threads 't1' and 't2' 
+SO, some times 't1' and 't2' got the same value of 'count'
+if they are making increments at the same value the 
+originally 'increment' done only one time but at machine
+prospective 'increment' done two times in a program at it's beginning
+the particular 'iteration'.
+
+
+For this Problem we have the solution name 'synchronized' keyword
+because this will make n sure that method will be called by one
+thread at a time.
+If one thread will be working on method the another thread has to
+wait at that time If the work of that thread will not done.
+
+Now the answer of this '2000' will be come not matter how many times
+u will run the Program the Answer should be '2000'.

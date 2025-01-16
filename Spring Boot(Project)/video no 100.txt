@@ -1,0 +1,35 @@
+Now let's talk about 'collection'. The funny thing is 
+in this topic we have three Different Type of collection.
+
+The first we have 'collection APT'
+                  ----------------
+The second one is collection
+                  -----------
+The last one is collections
+                -----------
+
+This is the most confusing thing in this.
+When we are talking about 'collection API'
+then we talk about 'concept'.
+So, let's say 'Hey we talk about someting
+at collection API'.It's something which belongs
+to this concept.
+
+If we start with collection then we talk about
+'Interface'.If i say collection i was talking 
+about the 'Interfaces and some classes who
+implement this'.
+
+At last In 'Collections' we talk about 'class'.
+And then, we talk about collections which is a
+class or that have multiple methods to work with.
+
+Ok so why we will talk about collection here then
+whenever u want to grove the elements. let's
+say if you have one value then u can store it in one 
+variable Just like 
+         'int num =5;' but what if you have multiple 
+values and that's the problem creates How will u 
+store multiple values and i know u know the answer.
+
+The answer is 'ARRAY' and u want to work with

@@ -32,4 +32,57 @@ variable Just like
 values and that's the problem creates How will u 
 store multiple values and i know u know the answer.
 
-The answer is 'ARRAY' and u want to work with
+The answer is 'ARRAY' and u want to work with it 
+we simply create the 'nums' here which is an array
+and we build the object of this.Like It
+        'int nums[] = new int[5];'
+
+Now this is your array like it perfectly works then
+Now why we will talking about this topic.
+So, the thing is now we are talking about working with 'Data'
+and working with algorithms so, there is a concept called 
+'Data Structures'.
+
+Right and i know u hered about that in multiple places. Yes
+Data structures is very important the way u fatch data, the 
+way u stored data is very important.
+
+That some time u stored the data in the storage and some 
+times u fatch data and some time try to store last element 
+so, whatever elements as when u inserted last so, may be u want 
+to fetch data.
+
+Or may be u have another type of data when u want to insert 
+data in this values and the value u want to fetch is the 
+first value. At Previous we are talking about 'Last In First Out'
+(stack) And this we were talking about 'First in first out'(Queue).
+
+Now apart form that there are different 'Data Structures' that u want
+to work with and also we will implement all the data structures with
+the help of an 'array' name 'nums'.
+
+So, as the programmer u need to do it So, it's good it's fun for a project
+u don't been the actually work with it when u create the structure by 
+yourself.
+
+When we though that let just create an API and the bueaty is we talk about
+the letter version of java and 'Data Structures' by using the inbuild 
+classes SO, it make your work much much Easier.
+
+Also when you want to fatch data and Expandable array that's right
+the array which we have worked with it's fixed size.
+let's example if we create an array of size '5' it will be '5'.
+U can't extend it.
+
+If there is a scenario where u want to expand an array and u 
+want an array of '7' size now.
+So, of course in the existing array u can't do that and that's
+the problem.
+
+We can find the solution of this as well. u can create an array
+let's say 'nums2' and create object of it and maintioned it's 
+size 7 here And copy all the elements in 'nums' array.
+
+If u will create an array which is dynamic so, it's exciting 
+to work with data and u can use different algorithms to work 
+with it.

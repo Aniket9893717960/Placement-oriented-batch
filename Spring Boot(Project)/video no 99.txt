@@ -59,3 +59,28 @@ If your 'thread' is Exceuting and you want to done it on hold then that
 
 But the main Question is how will you come back form the 'Waiting' state?
       So, you will come back with the help of the method called 'notify'.
+
+When your 'Thread' is in running state u say 'wait' Now 'wait' will take
+u to the waiting state Now, how will u come back So, will you come back
+with the help of 'notify'.
+
+The only thing is If you say 'notify' u will not come back to the running state
+this will come into 'runnable' state Whenever the schedular is assigning the task 
+and the compiler says it's your turn so, At that point it will going to
+running state.
+
+In fact if your thread is 'running' and u wanna make it 'dead' than u say 
+stop because there is also stop method available But actually we doesn't
+stop 'threads' because it will create instability in your software But
+one's the work is over it automatically going to 'stop' states.
+
+U can also send the thread from the 'runnable'  to 'dead' with the help of
+'stop' So, this are the options here so, whenever u create a 'thread'
+then it goes to the new state and then if you say 'start' then it will go to
+'runnable' depending upon the availability of your CPU.
+
+Taht goes into running state and Now it will start Exceuting the things and
+AT That point if you say wait then u can done with the help of 'sleep' and 
+'wait'.
+
+The only thing if you say 'wait' u can use a 'Notify' method to come back.

@@ -15,6 +15,10 @@ Because it's changable.
 
 3) Try to create book marks on the website with the help of
 Anchor tags?
+
+4) Talk about difference b/w Tag vs Elements?
+Elements: It's like a bundle which include Opening and
+          closing tags.
    --------------------------
 Answer) the 'main' difference b/w this two in 'Semintics'
 In 'ordered list' if you are making the staps it will followed
@@ -168,4 +172,11 @@ Example : 2^5
 Example : H2O
 
 v) <br> : 'break line' tag.
-Now we come at Video no. 1:09:20
+But if you don't want to use '<br>' tag than we have an 
+another option it's name :
+         '<pre>' it will give exactly same formatting/structure as  
+written in our Code Editior.
+
+----------------------------------------------------------------------------------------------
+Now At last with Structure Tags
+                 ---------------

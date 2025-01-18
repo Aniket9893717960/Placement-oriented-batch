@@ -1,3 +1,14 @@
+          -------X-----
+U have to use 'HTML formatter' tool 
+to format an ugly code,making it readable
+and pretty, with the proper indentation.
+
+For Resources and documentation 
+'MDN web Docs' is recormended.
+       And 
+second is 'w3 schools'
+          -------X-----
+
 'Code your First Program in html'
 this is our main goal u have to achive
 at this file.
@@ -41,4 +52,41 @@ of your web page.
 ---------------------------------X--------------------------------------------------------
    Ist Project - hello dunia
   -------------  -----------
+in VS code by using the '!'(Exclamation mark) and enter u
+sow the 'Basic Boiler plate code'.
 
+For going 'live Server' we have three options.
+i) At bottom-right we have the option 'Go live'.
+ii) right click on the code and click 'open with live server' option.
+iii) click on file and open with live server.
+----------------------------------------------------------------------------------------
+# Structure of HTML
+  -----------------
+"<!DOCTYPE html>" it means that the whole code u have written it's type is 
+                  HTML5 language.
+
+"<html>" if we try to written the document of html so, it's important that the
+         code should be inclosed in 'html' tag.
+         Here 'html' is kind of a root element.
+
+"<head>" Every mata/SEO/title data of your website.U have to maintoin it
+         At '<head>' tag to use 'mata/SEO/title' king of data.
+
+"Meta Data": if u google search the certain web site and u observe there
+             is something description is given on him's website before 
+             opening the actual website it's an example of 'meta' data.
+
+"<body> tag": If you try to maintoin content in the web page with 
+              with the help of labels('tags') those all content
+              comes under 'body' tag.
+              This will help to display the actual content on an html
+              web page.
+          -------X-----
+tags: every tag will provide the utility of something.
+
+Element : If we combine the whole thing from opening to
+          closing that it all come under one Entity called
+          Elements.
+          Example:  <html> ------------ </html>
+                            html element
+          -------X-----

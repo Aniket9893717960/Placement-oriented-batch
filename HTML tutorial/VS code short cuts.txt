@@ -14,3 +14,9 @@ iii) click on file and open with live server.
   -------------------
 first u have to select the particular part u want to commit than 
 Use 'Ctrl + /' and it done.
+
+# TO define the multiple cursor on VS code what is the short cut key u have to use?
+  ---------------------------------------------------------------------------------
+we have two command for this:-
+'Ctrl + Alt + Down Arrow': Add a cursor below the current cursor.
+'Ctrl + Alt + Up Arrow': Add a cursor above the current cursor.

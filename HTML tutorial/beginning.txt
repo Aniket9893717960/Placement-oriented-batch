@@ -1,1 +1,44 @@
+'Code your First Program in html'
+this is our main goal u have to achive
+at this file.
+
+First we have to start with the Question that
+ 'what is html?'
+if i am a collage professior then i spake 
+'It is Hyper text Markup Language'
+
+But the 'main' thing is what is exactly 'HTML'
+is 'It's full form is not enough for me.'
+
+Here is the Answer of given Question
+Is "Html is a language which use to 
+define structure of the Data."
+
+In the journey of mern stack we study about
+'html','css','Javascript' make him with the ruff 
+defination.
+
+If i talk about html then HTML means 'what?'
+          HTML -> what?
+if we are sowing the website the 'what?'
+portion in this will define by 'html' tag.
+"  'HTML' main work is to label the things"
+
+'CSS' means to make the styling/appearence
+'Javascript' is our brain.
+
+---------------------------------X--------------------------------------------------------
+Now the Actual start of an HTML.
+
+HTML -> language which define structure
+Example : If we have a web-page and in this
+         we define allot of content(image, text, video)
+To label the content one by one to define 'who is what?'
+This  job is done by 
+                  'HTML' which provide structure and description
+of your web page.
+
+---------------------------------X--------------------------------------------------------
+   Ist Project - hello dunia
+  -------------  -----------
 

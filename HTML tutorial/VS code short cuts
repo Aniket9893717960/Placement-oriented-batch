@@ -1,1 +1,16 @@
+#Basic Structure
+ ---------------
+in VS code by using the '!'(Exclamation mark) and enter u
+sow the 'Basic Boiler plate code'.
 
+# Live Server Use
+ -----------------
+For going 'live Server' we have three options.
+i) At bottom-right we have the option 'Go live'.
+ii) right click on the code and click 'open with live server' option.
+iii) click on file and open with live server.
+
+# Commit some command
+  -------------------
+first u have to select the particular part u want to commit than 
+Use 'Ctrl + /' and it done.

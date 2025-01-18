@@ -20,3 +20,24 @@ Use 'Ctrl + /' and it done.
 we have two command for this:-
 'Ctrl + Alt + Down Arrow': Add a cursor below the current cursor.
 'Ctrl + Alt + Up Arrow': Add a cursor above the current cursor.
+
+#For creating a short cut key for ordered unordered list
+ -------------------------------------------------------
+i) ordered List
+   ------------
+    "<ol>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>"
+  for this in VS code we have short cut is
+             ol>li*3
+
+ii) unordered list
+    --------------
+    " <ul>
+          <li></li>
+          <li></li>
+     </ul>"
+for this in VS code we have short cut is
+    ul>li*2

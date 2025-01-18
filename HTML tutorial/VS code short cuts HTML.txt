@@ -58,3 +58,10 @@ create this table.
            'table>(tr>td*3)'
 If you want multiple or 'n no. of rows as well' in table.
            'table>(tr>td*3)*n'
+
+# For by default and wastege text we have the short cut for this 
+  --------------------------------------------------------------
+  Yes, we have if you use command name 'Lorem'n'' n is the no. of
+words u want to print.
+
+

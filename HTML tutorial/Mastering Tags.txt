@@ -1,0 +1,118 @@
+ ----------NOTE -------------
+<br> is a self closing tag that means we doesn't
+required closing tag. This will be reperented with
+two types of representation.
+i)  <br>
+ii) <br/>
+
+H.W Question: Is we use multiple h1 tags or if don't then give 
+              reason?
+2) What is the difference between Ordered and Unordered List?
+   -----------ALERT----------
+this is not the difference that 'unordered list' will denoted by 
+symbols and 'Ordered list' will denoted by no.
+Because it's changable.
+   --------------------------
+Answer) the 'main' difference b/w this two in 'Semintics'
+In 'ordered list' if you are making the staps it will followed
+like a sequence while in 'Unordered list' they are in raindom 
+order.
+So, the main difference in it's 'semantic' that's why it's called
+semantic tag.
+----------X------------------
+Now we were come to 2nd video of the 
+Strict and this time we gonna learn about 
+"Mastering HTML tags for Development"
+
+The fist thing we learn about
+            'what is tags?'
+The tag is a 'Markup Entity' or it's
+a special word that provide the structure
+, meaning, format our content.
+
+tag is a thing which povide meaning to 
+an image,a video,an audio,a paragraph,an article
+and other things.
+
+In tags we use three important words are:-
+i) 'semantics' means meaning.
+    ---------
+ii) 'Structure' means organise.
+    -----------
+iii) 'Formatting' means arrange.
+     ------------
+
+Throw this words we provide categories of tags which
+belong to this three components.
+
+i) Semantics: <h1> : heading tag
+   ---------  <p> : Paragraph tag
+              <ul> and <ol> : unordered Ordered list
+              <a> : anchor tag.
+              <table>
+              <tr> and <td>
+              <img>
+              <form>
+              <input>
+ii) Structure: <html>
+    ---------  <head> <body>
+              <header>
+              <main>
+              <aside>
+              <footer>
+              <article>
+              <section>
+              <nav> : navigation tag
+iii) formationg: <b> : bold
+     ----------  <i> : italic
+              <u> : underline
+              <strong> : strong
+              <em> : emphasize
+              <sup> : super script
+              <sub> : sub script
+              <pre> : presentation
+              <code>
+
+------------------------------------------------------------------------------------------
+First we start with Semantic Tags
+                    -------------
+i) <h1> : means 'Heading' so let's say if u try to create an
+          heading on your web page so, this will done with the
+          help of heading tag.
+          This will have different levels based on importance we labeled it:
+          <h1> > <h2> > <h3> > <h4> > <h5>.
+If u try to use wrong tags like '<h7>' and '<h8>' so,
+it will works like a (paragraph tag)'<p>'.It will not
+give Error.
+
+ii) <a> : it's 'Anchor' tag. If u try to hyperlinks or try to
+attach a pre deployed links to your web site, Just like
+if you want to switch from one to another website or 
+try to send email so, this whole thing is possible by 
+'Anchor' tag.
+     Use : a) switching from one to another
+    ------    webpage.
+            b) trying to send mail.
+            c) trying to call.
+
+iii) <ul> : 'Unordred list' tag. This is used for
+            creating an 'Unordred list'.
+But if u try to add some element in this 'Unordred list'
+u have to use another tag simultaniously name
+'li' tag.
+
+$ <li> tag : 'List Items' tag. mainly use to add list 
+             Items.
+This two will used simultaniously as:
+     "<ul>
+          <li></li>
+          <li></li>
+     </ul>"
+
+iv) <table> : This will use to create tables
+              But if u try to add some element in this 'Table'
+u have to use another tag simultaniously name
+'<tr>'(Table Row) and '<td>'(table column)
+
+If you initially create 'table' with 'tr' and 'td' u
+see that it's border are not visible.

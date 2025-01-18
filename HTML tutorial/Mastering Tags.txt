@@ -12,6 +12,9 @@ H.W Question: Is we use multiple h1 tags or if don't then give
 this is not the difference that 'unordered list' will denoted by 
 symbols and 'Ordered list' will denoted by no.
 Because it's changable.
+
+3) Try to create book marks on the website with the help of
+Anchor tags?
    --------------------------
 Answer) the 'main' difference b/w this two in 'Semintics'
 In 'ordered list' if you are making the staps it will followed
@@ -94,6 +97,9 @@ try to send email so, this whole thing is possible by
     ------    webpage.
             b) trying to send mail.
             c) trying to call.
+At 'Anchor' tag we use 1 attribute name 'href'.for
+if the person will click on this link then it will
+redirect through those link.
 
 iii) <ul> : 'Unordred list' tag. This is used for
             creating an 'Unordred list'.
@@ -116,3 +122,10 @@ u have to use another tag simultaniously name
 
 If you initially create 'table' with 'tr' and 'td' u
 see that it's border are not visible.
+
+v) <img> : 'Image' tag. In this we are using two
+attributes are.
+i) src : source location of the image.
+ii) alt: 'alternative' it used when our 'src'
+doesn't work.
+

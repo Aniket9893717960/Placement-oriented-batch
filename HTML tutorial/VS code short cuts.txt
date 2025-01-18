@@ -41,3 +41,20 @@ ii) unordered list
      </ul>"
 for this in VS code we have short cut is
     ul>li*2
+
+
+#For creating a short cut key for Table with it's rows and columns
+ -----------------------------------------------------------------
+i) if we try to create a table at which we have '1' row and multiple 
+or ('3' columns in this case) are as follows.
+ "<table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>" like this we have the short cut to 
+create this table. 
+           'table>(tr>td*3)'
+If you want multiple or 'n no. of rows as well' in table.
+           'table>(tr>td*3)*n'

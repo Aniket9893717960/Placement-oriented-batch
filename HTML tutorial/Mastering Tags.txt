@@ -129,3 +129,42 @@ i) src : source location of the image.
 ii) alt: 'alternative' it used when our 'src'
 doesn't work.
 
+vi) <p> : 'paragraph' tag. is used to write
+          a group of text called Paragraph.
+------------------------------------------------------------------------------------------
+Now we start with Formatting Tags
+                  ---------------
+i) <b> : if you try to print some words and characters in the 
+         Bold formating.
+But there is a Question come in your mind that Why we are doing this 
+With HTML why we doesn't done same thing with CSS?
+        Yes, U are right this was used vary rearly because all the
+Styling part will done in CSS.So, instead of that we use '<strong>'
+Why?
+Because it will done the same thing as '<b>' Promissing.But we got
+Extra advantege that 'If our content will go from text to speech
+so, Those word('ipsum' in our case) will be more important in the whole 
+paragraph.'
+
+ii) <i> : if you try to print some words and characters in the 
+         Italic formating.
+But there is a Question come in your mind that Why we are doing this 
+With HTML why we doesn't done same thing with CSS?
+        Yes, U are right this was used vary rearly because all the
+Styling part will done in CSS.So, instead of that we use '<em>'(emphasize)
+Why?
+Because it will done the same thing as '<i>' Promissing.But we got
+Extra advantege that 'If our content will go from text to speech
+so, Those word('ipsum' in our case) will be more important in the whole 
+paragraph.'
+
+iii) <s> : 'Strike' tag.Use '<s>' tag to mark up text 
+that is no longer correct.
+
+iv) <sup> and <sub> : '<sup>' is super tag where 
+                     It will try to show power up.
+Example : 2^5
+'sub' will try to show this at denominator.
+Example : H2O
+
+v) <br> : 'break line' tag.

@@ -19,6 +19,7 @@ Anchor tags?
 4) Talk about difference b/w Tag vs Elements?
 Elements: It's like a bundle which include Opening and
           closing tags.
+Example : <html> ________</html>
    --------------------------
 Answer) the 'main' difference b/w this two in 'Semintics'
 In 'ordered list' if you are making the staps it will followed
@@ -180,3 +181,32 @@ written in our Code Editior.
 ----------------------------------------------------------------------------------------------
 Now At last with Structure Tags
                  ---------------
+Structuring the data which have it's meaning.
+
+i) header Tag : In this we will talk about 
+   ----------   Header Data.
+
+ii) '<nav>' Tag : The majority of websites that 
+    ------------  have 'Nagivation' links like
+'RazorPay' website.
+It's doesn't mean that without '<nav>' tag we
+doesn't build 'Navigation' link. For 'Semantic'
+and 'Structure' Data.
+
+iii) '<main>' Tag : If we talk about some data
+     ------------   Except Header,Footer we 
+wrapped it with 'main' tag.
+
+iv) '<article>' Tag : If we have any independent
+    ----------------  Article that it can be wrapped 
+with the 'article' tag.
+
+v) '<section>' Tag : If the multiple Data will be dependent 
+   ----------------  with each other use 'Section' tag.
+
+vi) 'Footer' Tag : Use this if we talk about 
+    -------------  Footer Data.
+
+vii) 'aside' tag : If we have some data try to show those
+     ------------  at 'side' it.
+Use 'aside' tag.

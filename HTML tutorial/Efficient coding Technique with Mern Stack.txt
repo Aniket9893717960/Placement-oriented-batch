@@ -1,0 +1,31 @@
+In this lecture we talk about 
+'Html in speed'
+
+First thing which help to achive our goal:
+
+'Emmet' this are the software plugin by 
+default install in 'VS Code Editor'.
+But if you use any other Editior like
+'Sublime Text','Notpad' Then u need to 
+install this.
+
+'Emmet' main work is to provide auto generate 
+Short cuts to build Full code in short time.
+
+Mainly we use two attributes very 
+commonly name "class" and 'Id'
+we see this two in short.
+
+Id: It's the attribute which is used to define 
+uniquly Indentification element. 
+Example :- It we have 40 different things
+           and data in web page to identfy it 
+one by one. This will be our answer to done 
+that.
+
+Class : It's like a parent level Entity.
+        In class the multiple elements will be 
+Exist at the same time.
+It will basically use for the grouping of elements
+To make the changes in the cult/group.
+

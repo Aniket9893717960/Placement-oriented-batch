@@ -1,3 +1,6 @@
+      ----------NOTE----------------
+1) Difference Between block ELement and Inline Element?
+         -----------X------------
 In this lecture we talk about 
 'Html in speed'
 
@@ -28,4 +31,31 @@ Class : It's like a parent level Entity.
 Exist at the same time.
 It will basically use for the grouping of elements
 To make the changes in the cult/group.
+
+div : it's kind of non semantic tag in which
+At this we cannot provide any meaning in this.
+It's just to create a 'division'.
+
+So, basically why we use this tag.
+i. it's a generic container tag.
+ii. It's generally used for wrapping of data.
+It will be used as a container.
+
+At this we were Exist of two kind of elements
+i. Block Element : This are the element which comes
+ ------- -------- under 'next line'.
+It will get all the space from left - Right.
+Example :  If u attach 'background-color' in 'div'
+          tag and it's covers all the elements
+throw the line.If the next element is also block 
+elements than in output it comes at next line.
+
+ii. Inline Element : This are the element which not comes
+    ------ ------- under 'next line'.
+It will get all the spaces on the specified content.
+Example :  If u attach 'background-color' in 'span'
+          tag and it's covers only part of content
+will come.If the next element is also lnline
+elements than in output it comes at same line.
+
 

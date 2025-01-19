@@ -60,8 +60,42 @@ If you want multiple or 'n no. of rows as well' in table.
            'table>(tr>td*3)*n'
 
 # For by default and wastege text we have the short cut for this 
-  --------------------------------------------------------------
+ --------------------------------------------------------------
   Yes, we have if you use command name 'Lorem'n'' n is the no. of
 words u want to print.
 
 
+#For creating a short cut key for Paragraph and image in inner tag
+ -----------------------------------------------------------------
+like this 
+"    <p>
+        <img src="" alt="">
+    </p>"
+Use the short cut key.
+          'p>img'
+
+            #For creating a short cut key for Nested Paragraph
+             -------------------------------------------------
+
+Just like we try to create 4 Nested - Paragraph
+---------------------------------------------
+"    <p>
+        <p>
+            <p>
+                <p></p>
+            </p>
+        </p>
+    </p>"
+Use the short cut key.
+        'p>p>p>p'
+
+#For creating a short cut key for One 'article' and one 'section' tag simultaniously
+ -----------------------------------------------------------------------------------
+Like This
+         "<article></article>
+         <section></section>"
+Use the short cut key.
+             article+section
+
+#Short Cut For Inserting a content in the Paragraph
+ --------------------------------------------------

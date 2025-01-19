@@ -1,5 +1,23 @@
       ----------NOTE----------------
 1) Difference Between block ELement and Inline Element?
+
+2) In this below program we try to build navigation bar
+   at the header so as we run this then our expected 
+   output should be visible at Horizontal line Orderly.
+   But it should be visible at vertical line not horizontal
+   So, how we achive this? That's our Question?
+
+   "<nav>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </nav>"
+   And we also try to remove 'doutes' in this?
+
+3) how we build a 'Bookmark' using anchor tag?
          -----------X------------
 In this lecture we talk about 
 'Html in speed'

@@ -89,7 +89,7 @@ Just like we try to create 4 Nested - Paragraph
 Use the short cut key.
         'p>p>p>p'
 
-#For creating a short cut key for One 'article' and one 'section' tag simultaniously
+#For creating a short cut key for One 'article' and one 'section' tag simultaniously(Alag Alag)
  -----------------------------------------------------------------------------------
 Like This
          "<article></article>
@@ -99,3 +99,20 @@ Use the short cut key.
 
 #Short Cut For Inserting a content in the Paragraph
  --------------------------------------------------
+   <p> This is Paragraph </p>
+Use the short cut key.
+             p{This is Paragraph}
+
+If same thing i done With Heading 
+---------------------------------
+like this :-
+-------------
+      <h3>this is my first Heading</h3>
+Use the short cut key.
+             h3{this is my first Heading}
+
+In Case of article
+------------------
+       <article>this is my first article</article>
+Use the short cut key.
+             article{this is my first Article}

@@ -1,4 +1,7 @@
  ----------NOTE -------------
+* In this lecture we doesn't study about 'code' tag 
+To study it we search on chrome 'mdn html code tag'.
+
 <br> is a self closing tag that means we doesn't
 required closing tag. This will be reperented with
 two types of representation.
@@ -27,6 +30,8 @@ like a sequence while in 'Unordered list' they are in raindom
 order.
 So, the main difference in it's 'semantic' that's why it's called
 semantic tag.
+
+5) What is the difference B/w article and section?
 ----------X------------------
 Now we were come to 2nd video of the 
 Strict and this time we gonna learn about 
@@ -210,3 +215,4 @@ vi) 'Footer' Tag : Use this if we talk about
 vii) 'aside' tag : If we have some data try to show those
      ------------  at 'side' it.
 Use 'aside' tag.
+

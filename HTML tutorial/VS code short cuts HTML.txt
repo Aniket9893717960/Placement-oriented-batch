@@ -116,3 +116,31 @@ In Case of article
        <article>this is my first article</article>
 Use the short cut key.
              article{this is my first Article}
+
+#Short cut to create the paragraph with "id" name 'para'
+ ----------------------------------------------------
+                  <p id="para"></p>
+Use the short cut key.
+                  p#para
+For Article
+-----------
+            <article id="article1"></article>
+Use the short cut key.
+                  article#article1
+
+#Short cut to create the paragraph with "class" name 'para'
+ ----------------------------------------------------
+                  <p class="para"></p>
+Use the short cut key.
+                  p.para
+For Article
+-----------
+            <article class="dog"></article>
+Use the short cut key.
+                  article.dog
+
+For Inititalize Multiple classes in same attribute.
+--------------------------------------------------
+            <section class="dog lion cat billi"></section>
+Use the short cut key.
+                  section.dog.lion.cat.billi

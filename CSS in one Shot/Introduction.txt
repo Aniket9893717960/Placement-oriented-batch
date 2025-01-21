@@ -1,1 +1,100 @@
+Css stands for cascading Style Sheet. Used to
+Control the style of a web document in a sinmple 
+and easy way.
+Css  to control the style and layout of
+multiple web pages all at once.
 
+Q) who created and maintained CSS?
+------------------------------------
+Css is created and maintained through 
+a group of people within the W3C
+(world wide web Community)
+called the CSS working Group. 
+
+# Three ways of inserting a style sheet.
+-----------------------------------------
+This are the three ways which we were implementing css
+in our web page.
+                    i. External style sheet :
+                       ----------------------
+(.css) document we include than this practice 
+called as External style sheet.
+
+To include (.css) document in our 
+(.html) document we use tag name 
+
+*'link' : where rel="Stylesheet"
+ ------   type="text/css"
+Or hypenReference(href): At this we incloused a
+                         link of Style.css .
+                                 ---------
+In style.css
+   ---------
+      h2 { color: red; }
+color : It will change the text color into red.
+
+                    ii. Internal S S
+                        ------------
+If u try to done 'css' at this type then,
+Use 'style' tag inner the head tag.
+     ------               -----
+And we write the same code as previous but this
+time i wanna give it's color 'blue'.
+
+      <style>
+      h2 { color: red; }
+      </style>
+
+                    iii. Inline Style
+                         -------------
+For doing 'inline' we prefer the tag in which
+we try to add CSS in this.
+Just like in this case we try to implement css
+in heading.
+
+And we write the same code as previous but this
+time i wanna give it's color 'Green'.
+
+<h2 style="color: green;">Welcome to my Channel :)</h2>
+
+----------------------------------------------------------------------------------------------
+                    # CSS Id and Class
+                      ---------------
+The ID selector is used to specify a style for a single,
+unique Element.
+But mean while The CLASS selector is used to specify a style
+for a group of elements.
+
+          -------NOTE--------
+ID and CLASS, tho ye ek jariya hai, jinki madad se hum HTML
+ELements ko access kar sakte hai Style karne ke liye.
+          ----------X---------
+
+i) ID Attribute : In an (.html) file name 'index.html'
+   ------------   in which we have basic structure as it
+is with 'Heading '>Welcome to my Channel :)''
+
+In heading i will specified our 'id' name 'myfirstid'.
+like this:
+        <h2 id = "myfirstid">Welcome to my Channel :)</h2>
+
+         Now i was switched to 'style.css' where To target the 
+heading on (.html) file name 'index.html'.
+We have to use '#'(Hash Tag) like this :-
+
+                #myfirstid{}
+
+At this currly braces('{}') i wanna use 'color'
+(Help to change text color) Into pink.
+
+ii) CLASS Attribute :  
+    --------------- In heading i will specified our 'Class' name 'myfirstid'.
+                    like this:
+        <h2 class = "myfirstid">Welcome to my Channel :)</h2>
+
+Now i was switched to 'style.css' where To target the 
+heading on (.html) file name 'index.html'.
+We have to use '.'(Full stop) like this :-
+
+                .myfirstid{}
+----------------------------------------------------------------------------------------------

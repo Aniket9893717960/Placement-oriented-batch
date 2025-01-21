@@ -104,3 +104,24 @@ This are the some commands.
                         background-image: revert;
                         background-image: revert-layer;
                         background-image: unset;
+
+ix. Background-repeat: It's a property is used to control the repetition 
+    -----------------  of an image in the background.
+This will heve an some values are:
+
+a. repeat: This is a by default value.It allows system to repeat the 
+           Image.
+
+b. no - repeat : If you don't want to repeat the image.
+
+c. repeat-x : Repeat the image at Horizontal line.
+              Just like a straight line at x-axis.
+
+d. repeat-y : Repeat the image at Vertical line
+              Just like a straight line at y-axis.
+
+
+x. Background -size: It's a 'CSS 3' Property.
+   ----------------  sets the size of the element's background image.
+The image can be left to its natural size, stretched, or constrained 
+to fit the available space.

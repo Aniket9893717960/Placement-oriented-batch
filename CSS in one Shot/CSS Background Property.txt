@@ -125,3 +125,8 @@ x. Background -size: It's a 'CSS 3' Property.
    ----------------  sets the size of the element's background image.
 The image can be left to its natural size, stretched, or constrained 
 to fit the available space.
+
+xi. background-attachment: Property is used to control the scrolling of an image
+    ---------------------- in the background.
+This will have some values are :
+a. fixed : It will used to build a Paralex website.

@@ -1,1 +1,23 @@
 
+                          Links CSS
+                          ---------
+
+The link signifies unvisited hyperlinks.(As it is color)
+    -----
+Syntex :     a:link { color : red;  }
+                      
+The visited Signifies visited hyperlinks.
+    -------      (After click revisit the same site)
+Syntex :     a:visited { color: green; }
+
+The hover Signifies an element that currently has the user's 
+    -----      mouse pointer hovering over it.(If we are tagating it)
+Syntex:      a:hover { color: yellow; }
+
+The active Signifies an element on which the user is currently 
+    ------ Clicking.  (At a time of clicked)
+Syntex:       a: active { color: blue; }
+
+-------------------------------------------------------------------------------------------------------
+                          Borders CSS
+                          -----------

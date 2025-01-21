@@ -1,1 +1,106 @@
+Now we come at the mark on 15 min in one shot.
 
+              CSS Background Property
+              -----------------------
+With Css, a color is most often specified by:
+
+a valid color name - like "red"
+
+a HEX value - like "#ffG000"
+
+an RGB value - like "rgb(255,0,0)"
+
+i. Width : The width CSS property sets an element's width.
+   ------- By default, it sets the width of the content area
+The specified value of width applies to the content area so long
+as its value remains within the values defined by min-width and max-width.
+
+a. If the value for width is less than the value for min-width, 
+then min-width overrides width.
+
+b. If the value for width is greater than the value for max-width, 
+then max-width overrides width.
+
+ii. Height : The height CSS property specifies the height of an element. 
+    ------   By default, the property defines the height of the content area.
+
+                      # Key Differences Between Height and Weight
+                      -------------------------------------------
+
+Dimension: width controls the horizontal dimension, 
+---------- while height controls the vertical dimension of an element.
+
+Behavior with Content: If the content inside an element exceeds the 
+----------------------specified width or height, it may overflow, 
+depending on the overflow property settings.
+
+Responsiveness: Both properties can be set in relative units (like %),
+--------------- making them adaptable to different screen sizes and resolutions.
+
+
+iii. Background-color : This property is used to set 
+     ----------------   the beckground color of an element.
+
+iv. Background Image : Property is used to set the
+    -----------------  background image of an element.
+
+v. universal Selector :The universal selector is a special type selector
+   ------------------  and can therefore be namespaced when using @namespace.
+This is useful when dealing with documents containing multiple namespaces 
+such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
+
+vi. margin : The margin CSS shorthand property sets the margin
+    --------  area on all four sides of an element.
+
+The margin property may be specified using one, two, three, or four values.
+Each value is a <length>, a <percentage>, or the keyword auto.
+Negative values draw the element closer to its neighbors than 
+it would be by default.
+
+a) When one value is specified, it applies the same margin to all four sides.
+
+b) When two values are specified, the first margin applies to the top and bottom,
+the second to the left and right.
+
+c) When three values are specified, the first margin applies to the top,
+the second to the right and left, the third to the bottom.
+
+d) When four values are specified, the margins apply to the top, right,
+bottom, and left in that order (clockwise).
+
+vii. Padding : The padding CSS shorthand property sets the padding 
+     --------- area on all four sides of an element at once.
+
+The padding property may be specified using one, two, three, or four values. 
+Each value is a <length> or a <percentage>. Negative values are invalid.
+
+a) When one value is specified, it applies the same padding to all four sides.
+
+b) When two values are specified, the first padding applies to 
+the top and bottom, the second to the left and right.
+
+c) When three values are specified, the first padding applies
+to the top, the second to the right and left, the third to the bottom.
+
+d) When four values are specified, the paddings apply to the 
+top, right, bottom, and left in that order (clockwise).
+
+viii. Background-image : This property is used to set one or more background   
+      ----------------   image of an element.
+This are the some commands.
+                        
+
+                        /* single image */
+                        background-image: linear-gradient(black, white);
+                        background-image: url("cat-front.png");
+
+                        /* multiple images */
+                        background-image: radial-gradient(circle, #0000 45%, #000f 48%),
+                          radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%);
+
+                        /* Global values */
+                        background-image: inherit;
+                        background-image: initial;
+                        background-image: revert;
+                        background-image: revert-layer;
+                        background-image: unset;

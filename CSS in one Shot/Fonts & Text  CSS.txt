@@ -1,0 +1,99 @@
+            ----NOTE--------
+* please implement the time stamp 20 to 25 min. To understand it better.
+
+* If u forgot to close the currly braces '}' in CSS AND it's
+a last property of the entire CSS sheet. Than, CSS should 
+work on the webpage. 
+            ----------------
+
+                                   Fonts CSS :
+Font is like a sentence.
+This will come up with the five Properties name
+are as follows.
+
+i. font - family : Property is used to
+   -------------   change the face of a
+font.
+Example 
+   font- family : 'Not Serif kR',sans-serif;
+                  --------       ---------
+This will be over  <-|              |-> If 'notable' desn't work then
+first priority                          This will run.
+
+ii. font - style : Property is used to 
+    ------------  make a font italic or
+oblique.
+This will have some values like Italic,Bold,
+Transparnt and many more.
+
+iii. font variant : Property is used to create a 
+     ------------   small - caps effect.
+It's doen't not much importance but it have some  values.
+
+a. small-caps: This property will show Small letters to  
+               Capital letters But it's size will be smaller
+Than the actual Capital letter content.
+
+iv. font-size : Property sets the size of the text.
+    ----------- OR Property Is used to increase or 
+decrease the size of a font,
+We give it's value in some unites like 
+em,rem,px and etc. But in example we use 'em'.
+             
+          1 em = 16 px;
+
+v. font - weight : Property specifies the weight
+   --------------  of a font.
+                  OR
+Property is used to increase or decrease how 
+bold or light a font appears.
+
+In this five the most important things are
+font family, font size, font weight.
+------------------------------------------------------------------------------------------------
+
+                           Text Css :
+Text is like a word.
+The color property is used to set the color of a text.
+
+The direction property is used to set the text direction.
+Possible values are ltr or rtl.
+
+The letter - spacing property is used to add or subtract space
+between the letters that make up a word.
+
+The word - spacing property is used to add or subtract
+space between the word of a sentence.
+
+The text indent property is used to indent the text of a paragraph.
+
+Text - align property is used to aligh the text of a document.
+
+This will have some Properties are as follows:
+
+i. color :- This will use to change the color.
+
+ii. letter-spacing :- Property is used to add or
+                     Aubtract space between the letters that make 
+                     Up a word.(it's unit is px)
+
+iii. word-spacing :- Property is used to add or
+                     Subtract space between the words
+                     of a sentence.(it's unit is px)
+
+iv. direction :- is used to set the text direction.
+                 Possible values are ltr or rtl.(it's unit is px)
+                 ltr : left to right
+                 rtl : right to left
+
+v. Text - Indent :- Property is used to indent(by default space in the first line)
+                    the text of a paragraph(it's unit is px).
+
+vi. Text- align :- Property is used to align the text of a 
+                   Document.(it's unit is px)
+
+vii. Text - transform :- Property is used to capitalize text
+                         or convert text into Uppercase or
+                        Lower case Letters.
+
+---------------------------------------------------------------------------------------------------

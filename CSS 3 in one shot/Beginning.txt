@@ -1,0 +1,24 @@
+CSS 3 is the latest evolution of Cascading Style Sheets
+language and aims at extending CSS2.1.
+
+It brings a lot of long-awaites novelties, like
+rounded corners, shadows, text effects, transitions
+or animations as well as new layouts like multi
+- columns, flexible box etc.
+
+Difference Between CSS2.1 Vs CSS3?
+
+CSS 2.1 : CSS ID and Class, CSS Background Property
+          Fonts CSS, Text CSS,Borders CSS, Box Model
+          CSS, Scrollbars, Positioning CSS, Z-Index
+List CSS, CSS Float, CSS Display, Cursors.
+
+CSS 3: Text Effects in CSS3 - text shadow,
+       Font in CSS 3 - Font Family,
+       Animation in CSS3, Transition in CSS3,
+Multiple Column Layout in CSS 3, 
+Backgrounds in CSS3 - border-radius,
+User Interface in CSS 3 - box - sizing,
+resize 2D/3D Transformations in CSS 3,
+Flexbox in CSS 3.
+

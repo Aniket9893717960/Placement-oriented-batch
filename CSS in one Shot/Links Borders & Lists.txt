@@ -21,3 +21,90 @@ Syntex:       a: active { color: blue; }
 -------------------------------------------------------------------------------------------------------
                           Borders CSS
                           -----------
+The border properties allow you to specify hoe the border of the box
+representing an element should look.
+
+            -----NOTE------
+Example : we just make a 'division' where 'class' name
+         'borderCSS' in 'index.html'
+Now in 'style.css' we initialize 'borderCss' at which
+width: 500px; height:300px; background-color: red;
+// At this time we doesn't don any thing related to border. 
+           -------X--------
+
+ii. The border- color specifies the color of a border.
+        -------------
+Example: By Extending the 'NOTE Example' and 'border-width'
+         We initialize 'border-color: black;'
+
+iii. the border-style specifies the whether a border sholud be
+       ------------
+solid , dashed line , double line or one of the other 
+possible values.
+Some values of 'Border-style' are :-
+
+a. solid
+Displays a single, straight, solid line.
+
+b. double
+Displays two straight lines that add up to the pixel size defined by border-width.
+
+c. groove
+Displays a border with a carved appearance. It is the opposite of ridge.
+
+d. ridge
+Displays a border with an extruded appearance. It is the opposite of groove.
+
+Example: By Extending the 'NOTE Example' and 'border-color'
+         We initialize 'border-style: solid;'
+
+i. the border width specifies the width of a border.
+    ------------
+
+Example : By Extending the 'NOTE Example' we add border 
+          - width : 5px;
+
+iv. Border - radius is bonus . It comes CSS 3.
+    ---------------
+ ALl performing operations will be written in one time.
+  .borderCss {
+    width: 500px;
+    height:300px; 
+    background-color: red;
+    border-width : 5px
+    border-color : black;
+    border-style : dashed;
+   }
+
+If i say that "    border-width : 5px
+    border-color : black;
+    border-style : dashed;" lines will be written only one line?
+Answer)
+This will be done with the help of
+'Border-bottom-color' changes the color of bottom border.
+'Border-top-color' changes the color of top border.
+'Border-left-color' changes the color of left border.
+'border-right-color' changes the color of right border.
+
+We will implement it like this:
+                 border: 5px dashed black;
+----------------------------------------------------------------------------------------------------
+                          List CSS
+                          --------
+i) it's used on both Ordered - Unordered List.
+The list-style-type allows you to control the shape of
+    ---------------
+appearece of the marker.
+( y bulites ki design change karana k kam aata h)
+Some values of it are:-
+
+a. square : square bullites
+   ------
+b. lower-alpha : small letters alphabets.
+   ------------
+c. upper-alpha : capital letters alphabets.
+   -----------
+d. upper-roman : Roman numbers in big size/capital letters. 
+   ------------
+c. lower-roman : Roman numbers in small size/small letters. 
+   -------------

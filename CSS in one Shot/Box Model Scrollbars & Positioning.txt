@@ -1,0 +1,117 @@
+This is simple but important past of CSS.
+Name is "Box Model CSS".
+        --------------
+This will have 4 Components are:
+
+i. Content : the content of the box, where
+             text and images appear.
+
+ii. Padding : Clears an area around the content.
+              The padding is transparent.
+(content or border k bich ki space ko agar ap ko 
+increase decrease karana h to 'Padding' ki help
+s kiya j sakta h)
+This will have four Properties are as follows.
+           Padding Property
+           ----------------
+Allows you to specify how much space should appear
+between the content of an element and its 
+border.
+
+|-> a. padding-left: property sets the left padding  
+|      ------------- (space) of an element(unit is px).
+|
+|-> b. padding-top: property sets the top padding 
+|      ------------  (space) of an element.
+|
+|-> c. padding-right
+|-> d. padding-bottom
+------|
+Now we talk about it's short Properties are:
+we just simply write padding and intitalize it
+only one value then:-
+a. 'padding: 5px' where '5px' is common for all
+   -------------- four direction.
+
+b.'padding: 5px 5px 5px 5px' 
+   -------   |   |   |   |
+          _____ ___ ___ ________
+           |     |   |        |
+          Top  Right Bottom  Left
+
+
+
+iii. border : A border that goes around the 
+              Padding and content.
+
+iv. Margin : clears an area outside the border.
+             The margin is transparent.
+(Agar ap ko boder k outside ki space ko increase or decrease
+ And make difference in distance between 2 content
+ karana h to 'Margin' ki help s kiya j sakta h)
+           Margin Property
+           ---------------
+This property defines the space around an html element.
+It is possible to use negative value of overlap content.
+
+|-> a. margin-top : property sets the top margin of an element.
+|      -----------
+|-> b. margin-left : property sets the left margin of an element.
+|      -----------
+|-> c. margin-right
+|-> d. margin-bottom
+--------------|
+Now we talk about it's short Properties are:
+we just simply write 'margin' and intitalize it
+only one value then:-
+ a. 'margin: 5px' where '5px' is common for all
+    -------------- four direction.
+------------------------------------------------------------------------------------------------
+                                  # Scrollbars
+                                  ------------
+*visible - Allows the content to overflow the borders
+           of its containing element.
+
+*Hidden -  The content of the nested element is simply 
+           cut off at the border of the containing element
+           and no scrollbars is visible.
+    TO understand Hidden u need to understand about 'overflow'.
+  
+Overflow : property specifies whether to clip the content or to add
+            scrollbars when the content of an element
+is too big to fit in the specified area.
+
+The overflow property has the following values:
+
+visible - Default. The overflow is not clipped. 
+           The content renders outside the element's box.
+          (Doesn't don anything)
+
+hidden - The overflow is clipped, and the 
+           rest of the content will be invisible
+         (It doesn't give any scroll bar to see the unvisible part)
+
+scroll - The overflow is clipped, and a scrollbar
+           is added to see the rest of the content
+         (It gives both Horizontal and vertical Scroll bar)
+
+auto - Similar to scroll, but it adds
+           scrollbars only when necessary
+       (It gives the by default scroll bar But Gives only
+        Vertical scroll bar)
+
+Example :  
+      div {
+        background-color: coral;
+        width: 200px;
+        height: 65px;
+        border: 1px solid;
+        overflow: visible;
+      }
+
+*Scroll - The size of the containing element does not change,
+          but the scrollbars are added to allow the user 
+          to scroll to see the content.
+
+*Auto - The purpose is the same as scroll, but the scrollbar
+        will be shown only if the content does overflow.

@@ -1,0 +1,20 @@
+There are many kind of position we have but 
+Important positioning are 'Absolute' and 'Relative'
+
+Relative: A relative positioned element is
+--------- positioned relative to its normal
+          position.
+
+Absolute: An absolute position element is
+--------  positioned relative to the first
+          parent element that has a position
+          other than static.
+          
+          -------------NOTE------------
+*You can use LEFT RIGHT TOP BOTTOM only if you are using
+ Positions with Absolute.
+ Example:
+           position:absolute
+           Left: 0; 
+
+           -----------X-----------

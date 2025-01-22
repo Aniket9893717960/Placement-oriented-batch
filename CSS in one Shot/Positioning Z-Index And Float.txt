@@ -37,3 +37,24 @@ of an element with a lower stack order.
 *Note: z-index only works on positioned elements
 (position:absolute,  position:relative or position:fixed)
 
+*Property Values
+ ----------------
+Value                        Description
+auto  :	  Sets the stack order equal to its parents. This is default	
+number :	Sets the stack order of the element. Negative numbers are allowed	
+initial :	Sets this property to its default value. Read about initial	
+inherit	: Inherits this property from its parent element. Read about inherit
+
+--------------------------------------------------------------------------------------------------
+                              CSS Float
+                              ---------
+The float property is used for positioning and formatting content 
+e.g. let an image float left to the text in a container.
+
+The float property can have one of the following values:
+
+left - The element floats to the left of its container
+right - The element floats to the right of its container
+none - The element does not float (will be displayed just
+       where it occurs in the text). This is default
+inherit - The element inherits the float value of its parent

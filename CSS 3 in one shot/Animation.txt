@@ -1,0 +1,266 @@
+                       Animation in CSS 3
+                       ------------------
+An animation is such a property of CSS 3, which is used to
+animate the object, without using flash or any other
+animation application.
+
+When the animation is created in the '@keyframe', bind it
+to a selector, otherwise the animation will have no effect.
+
+Animation : Required. Defines the name and duration of the 
+-----------  animation.
+
+Keyframes - selector: Required. Percentage of the 
+--------    --------  animation duration.
+
+            Animation will have different Keywords
+            --------------------------------------
+i. animation-delay :
+   ---------------
+                     The animation-delay CSS property specifies
+the amount of time to wait from applying the animation to an 
+element before beginning to perform the animation. 
+The animation can start later, immediately from its beginning, 
+or immediately and partway through the animation.
+
+   Syntax :
+   ------
+   /* Single animation */
+animation-delay: 3s;
+animation-delay: 0s;
+animation-delay: -1500ms;
+
+/* Multiple animations */
+animation-delay: 2.1s, 480ms;
+
+/* Global values */
+animation-delay: inherit;
+animation-delay: initial;
+animation-delay: revert;
+animation-delay: revert-layer;
+animation-delay: unset;
+
+ii. animation-direction :
+    -------------------
+                        CSS property sets whether an animation should
+play forward, backward, or alternate back and forth between playing 
+the sequence forward and backward.
+
+   Syntax :
+   ------
+   /* Single animation */
+animation-direction: normal;
+animation-direction: reverse;
+animation-direction: alternate;
+animation-direction: alternate-reverse;
+
+/* Multiple animations */
+animation-direction: normal, reverse;
+animation-direction: alternate, reverse, normal;
+
+/* Global values */
+animation-direction: inherit;
+animation-direction: initial;
+animation-direction: revert;
+animation-direction: revert-layer;
+animation-direction: unset;
+
+iii. animation-duration
+     -------------------
+                       CSS property sets the length of time that an
+                       animation takes to complete one cycle.
+
+   Syntax :
+   ------
+   /* Single animation */
+animation-duration: auto; /* Default */
+animation-duration: 6s;
+animation-duration: 120ms;
+
+/* Multiple animations */
+animation-duration: 1.64s, 15.22s;
+animation-duration: 10s, 35s, 230ms;
+
+/* Global values */
+animation-duration: inherit;
+animation-duration: initial;
+animation-duration: revert;
+animation-duration: revert-layer;
+animation-duration: unset;
+
+iv. animation-fill-mode
+    -------------------
+                       CSS property sets how a CSS animation applies
+                       styles to its target before and after its execution.
+
+   Syntax :
+   ------
+   /* Single animation */
+animation-fill-mode: none;
+animation-fill-mode: forwards;
+animation-fill-mode: backwards;
+animation-fill-mode: both;
+
+/* Multiple animations */
+animation-fill-mode: none, backwards;
+animation-fill-mode: both, forwards, none;
+
+/* Global values */
+animation-fill-mode: inherit;
+animation-fill-mode: initial;
+animation-fill-mode: revert;
+animation-fill-mode: revert-layer;
+animation-fill-mode: unset;
+
+v. animation-iteration-count
+   -------------------------
+                            CSS property sets the number of times an animation 
+                            sequence should be played before stopping.
+
+   Syntax :
+   ------
+   /* Keyword value */
+animation-iteration-count: infinite;
+
+/* <number> values */
+animation-iteration-count: 3;
+animation-iteration-count: 2.4;
+
+/* Multiple values */
+animation-iteration-count: 2, 0, infinite;
+
+/* Global values */
+animation-iteration-count: inherit;
+animation-iteration-count: initial;
+animation-iteration-count: revert;
+animation-iteration-count: revert-layer;
+animation-iteration-count: unset;
+
+vi. animation-name
+    --------------
+                  CSS property specifies the names of one or more @keyframes
+at-rules that describe the animation to apply to an element. 
+Multiple @keyframe at-rules are specified as a comma-separated list of names.
+If the specified name does not match any @keyframe at-rule, 
+no properties are animated.
+
+   Syntax :
+   --------
+   /* Single animation */
+animation-name: none;
+animation-name: test_05;
+animation-name: -specific;
+animation-name: sliding-vertically;
+
+/* Multiple animations */
+animation-name: test1, animation4;
+animation-name:
+  none,
+  -moz-specific,
+  sliding;
+
+/* Global values */
+animation-name: inherit;
+animation-name: initial;
+animation-name: revert;
+animation-name: revert-layer;
+animation-name: unset;
+
+vii. animation-play-state
+     --------------------
+                         CSS property sets whether an animation is 
+                         running or paused.
+
+    Syntax :
+    --------
+    /* Single animation */
+animation-play-state: running;
+animation-play-state: paused;
+
+/* Multiple animations */
+animation-play-state: paused, running, running;
+
+/* Global values */
+animation-play-state: inherit;
+animation-play-state: initial;
+animation-play-state: revert;
+animation-play-state: revert-layer;
+animation-play-state: unset;
+
+viii. animation-timeline
+      ------------------
+                        CSS property specifies the timeline that is used to control
+                        the progress of a CSS animation.
+
+    Syntax :
+    --------
+    /* Keyword */
+animation-timeline: none;
+animation-timeline: auto;
+
+/* Single animation named timeline */
+animation-timeline: --timeline_name;
+
+/* Single animation anonymous scroll progress timeline */
+animation-timeline: scroll();
+animation-timeline: scroll(scroller axis);
+
+/* Single animation anonymous view progress timeline */
+animation-timeline: view();
+animation-timeline: view(axis inset);
+
+/* Multiple animations */
+animation-timeline: --progressBarTimeline, --carouselTimeline;
+animation-timeline: none, --slidingTimeline;
+
+/* Global values */
+animation-timeline: inherit;
+animation-timeline: initial;
+animation-timeline: revert;
+animation-timeline: revert-layer;
+animation-timeline: unset;
+
+ix. animation-timing-function
+    -------------------------
+                             CSS property sets how an animation progresses
+                             through the duration of each cycle.
+                             
+    Syntax :
+    --------
+    /* Keyword values */
+animation-timing-function: ease;
+animation-timing-function: ease-in;
+animation-timing-function: ease-out;
+animation-timing-function: ease-in-out;
+animation-timing-function: linear;
+animation-timing-function: step-start;
+animation-timing-function: step-end;
+
+/* cubic-bezier() function values */
+animation-timing-function: cubic-bezier(0.42, 0, 1, 1); /* ease-in */
+animation-timing-function: cubic-bezier(0, 0, 0.58, 1); /* ease-out */
+animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); /* ease-in-out */
+
+/* linear() function values */
+animation-timing-function: linear(0, 0.25, 1);
+animation-timing-function: linear(0 0%, 0.25 50%, 1 100%);
+animation-timing-function: linear(0, 0.25 50% 75%, 1);
+animation-timing-function: linear(0, 0.25 50%, 0.25 75%, 1);
+
+/* steps() function values */
+animation-timing-function: steps(4, jump-start);
+animation-timing-function: steps(10, jump-end);
+animation-timing-function: steps(20, jump-none);
+animation-timing-function: steps(5, jump-both);
+animation-timing-function: steps(6, start);
+animation-timing-function: steps(8, end);
+
+/* Multiple animations */
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+
+/* Global values */
+animation-timing-function: inherit;
+animation-timing-function: initial;
+animation-timing-function: revert;
+animation-timing-function: revert-layer;
+animation-timing-function: unset;

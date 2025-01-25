@@ -1,0 +1,61 @@
+                        Multiple Columns in CSS 3
+                       ---------------------------
+Is such a advance feature of CSS 3 which is used for 
+creating the newspaper layout.
+You can create your article to Multiple Columns,
+even if it is in one paragraph.
+
+1.column - count
+  --------------
+                 CSS property breaks an element's content
+                 into the specified number of columns.
+
+   Syntax
+   ------ 
+         /* Keyword value */
+column-count: auto;
+
+/* <integer> value */
+column-count: 3;
+
+/* Global values */
+column-count: inherit;
+column-count: initial;
+column-count: revert;
+column-count: revert-layer;
+column-count: unset;
+
+2. column - rule
+   -------------
+                 Rule is just like a ruler(border/line)
+which is used between gaps
+3. column - gap
+   ------------
+                column k bich k gap
+
+                   Backgrounds in CSS 3
+                   --------------------
+A CSS 3 backgrounds is an affords, which is used to resizing 
+of the background properties.
+
+background - size is such a property which is used to fix 
+the size of a background.                             ----
+-------------------------
+
+i.background-origin : border-box
+ii. background-origin : content-box
+
+
+                   Borders in CSS 3
+                   -----------------
+A CSS 3 Border is such an affords of style sheet which reduces 
+the human efforts of photoshop and other graphical 
+applications.
+
+border-radius is such a property of css by which we can 
+--------------
+create the rounded corners.
+
+box- shadows is such a property of css 3 by which we can
+------------
+create the shadow of the border.

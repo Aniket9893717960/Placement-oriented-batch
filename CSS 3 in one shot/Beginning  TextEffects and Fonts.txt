@@ -1,0 +1,103 @@
+CSS 3 is the latest evolution of Cascading Style Sheets
+language and aims at extending CSS2.1.
+
+It brings a lot of long-awaites novelties, like
+rounded corners, shadows, text effects, transitions
+or animations as well as new layouts like multi
+- columns, flexible box etc.
+------------------------------------------------------------------------------------
+
+Difference Between CSS2.1 Vs CSS3?
+
+CSS 2.1 : CSS ID and Class, CSS Background Property
+          Fonts CSS, Text CSS,Borders CSS, Box Model
+          CSS, Scrollbars, Positioning CSS, Z-Index
+List CSS, CSS Float, CSS Display, Cursors.
+
+CSS 3: Text Effects in CSS3 - text shadow,
+       Font in CSS 3 - Font Family,
+       Animation in CSS3, Transition in CSS3,
+Multiple Column Layout in CSS 3, 
+Backgrounds in CSS3 - border-radius,
+User Interface in CSS 3 - box - sizing,
+resize 2D/3D Transformations in CSS 3,
+Flexbox in CSS 3.
+------------------------------------------------------------------------------------
+
+Three ways of inserting a style sheet.
+        .External style sheet
+        .Internal style sheet
+            .inline style
+
+Selectors in CSS : ID and Class
+--------------------------------------------------------------------------------------
+
+                                 # Text Effects in CSS3
+                                 ----------------------
+A CSS 3 Text Effect is a such term which is used to implement some extra
+features on normal text.
+
+Their are mainly two properties of CSS3 Text Effects, which have been 
+describe as follows:
+
+1: text-shadow: It's used to create the shadow around the  
+   -----------  text, we can change the shadow color.
+(we see it's size is in pixel)
+
+code :
+      /* offset-x | offset-y | blur-radius | color */
+      text-shadow: 1px 1px 2px black;
+
+      /* color | offset-x | offset-y | blur-radius */
+      text-shadow: #fc0 1px 0 10px;
+
+      /* offset-x | offset-y | color */
+      text-shadow: 5px 5px #558abb;
+
+      /* color | offset-x | offset-y */
+      text-shadow: white 2px 5px;
+
+      /* offset-x | offset-y
+      /* Use defaults for color and blur-radius */
+      text-shadow: 5px 10px;
+
+      /* Global values */
+      text-shadow: inherit;
+      text-shadow: initial;
+      text-shadow: revert;
+      text-shadow: revert-layer;
+      text-shadow: unset;
+
+2: word-wrap: Is used to break the continued text in another 
+   ---------   line.
+   word-wrap: normal | break-word | initial | inherit;
+
+normal	Break words only at allowed break points. This is default	
+break-word	Allows unbreakable words to be broken	
+initial	Sets this property to its default value.
+inherit	Inherits this property from its parent element. 
+
+--------------------------------------------------------------------------------------
+
+                                # Fonts in CSS3
+                                 ---------------
+with the help of CSS 3 fonts features we can create different types of font 
+style.
+
+The font file found in ttf(True type font) format or otf(Open type font)
+format.
+
+For Using the Font CSS 3 So, at that particular point.
+first we have to write :
+        @font-face {
+
+         }
+in this we write 2 properties
+i. font-family: we write any thing from it 
+   -----------   behave like 'initialize variable('kuchbhi' in this case). 
+
+ii.src : in this we insert 'url' for
+  -----  the initialization of 'kuchbhi'.
+
+For this two properties we target specific classes/Ids
+name('.font_about' in this case) we have to access it.

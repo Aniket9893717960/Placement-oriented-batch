@@ -2,8 +2,16 @@
 what is ECMA Script,ES6,ES13?
 How javascript run into a machine or where it runs?
 ------------------------------------
-
+                    Javascript
+                   ------------
 Javascript was Developed by  Branden Eich.
+AT the starting time the first name before
+javascript is Mocha(coffee name).
+              ------------------
+But second name after 'Mocha' If you predict
+'Javascipt' than u are wrong 2nd name is
+'LiveScript'
+ ----------
 
 Javascript is generally scripting language the idea
 of building 'Javascript' is running Behaviour
@@ -18,11 +26,33 @@ Providing anonymous Behaviour
 or Brain behind all this thing in a
 web page All possible because of
 Javascript.
+
+                      How javascript works
+                      --------------------
+if we write the 'C++' program then what was our actual requirment
+i. Translator: Compiler because to covert our C++ program into 
+               machine understand able format.
+                     While In javaScript
+To run our javascript program to 'Browser' in between u have 
+required a layer name 'JS Engine'(like Chorme has 'V8')
+which parse our javascript code into machine readable 
+format.
 ----------------------------------------------------------------------------
+       Node Js
+      ---------
 If Javascript will be merged with C++ program 
 than used this as Backend/Server-side than it becomes 
 Node Js.
 ----------------------------------------------------------------------------
+           ECMAScript
+           -----------
 During the building for javaScript Developers will try to ensure that
 Features we are Developing make the standards and consistency
-so, that to build 
+so, that if the Javascript runs in Different operating systems
+all the functionalities remind same.
+
+WE requiered a set of rules, blue print, protocols that we have to 
+follow it to add features/functionality in standard way.
+This requirment is full filled with the help of
+ECMAScript.
+----------

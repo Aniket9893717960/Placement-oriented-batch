@@ -1,0 +1,28 @@
+-------------------NOTE------------
+what is ECMA Script,ES6,ES13?
+How javascript run into a machine or where it runs?
+------------------------------------
+
+Javascript was Developed by  Branden Eich.
+
+Javascript is generally scripting language the idea
+of building 'Javascript' is running Behaviour
+like how to manipulate the content visibility,structure on
+'Clint side' and Browser.
+
+Javascript is a light weight programming language
+throw which we try to create games or 
+build CLI tools
+If we talk about Adding Functionalities or
+Providing anonymous Behaviour 
+or Brain behind all this thing in a
+web page All possible because of
+Javascript.
+----------------------------------------------------------------------------
+If Javascript will be merged with C++ program 
+than used this as Backend/Server-side than it becomes 
+Node Js.
+----------------------------------------------------------------------------
+During the building for javaScript Developers will try to ensure that
+Features we are Developing make the standards and consistency
+so, that to build 

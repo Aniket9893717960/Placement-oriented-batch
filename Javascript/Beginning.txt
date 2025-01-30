@@ -37,22 +37,81 @@ To run our javascript program to 'Browser' in between u have
 required a layer name 'JS Engine'(like Chorme has 'V8')
 which parse our javascript code into machine readable 
 format.
-----------------------------------------------------------------------------
-       Node Js
-      ---------
-If Javascript will be merged with C++ program 
-than used this as Backend/Server-side than it becomes 
-Node Js.
-----------------------------------------------------------------------------
-           ECMAScript
-           -----------
-During the building for javaScript Developers will try to ensure that
-Features we are Developing make the standards and consistency
-so, that if the Javascript runs in Different operating systems
-all the functionalities remind same.
+We have more than one Js Engine like :
+1 V8       2. SpiderMonkey(Developed by Modezila FireFox)
+3. JavaScriptCore                4. Chakra
 
-WE requiered a set of rules, blue print, protocols that we have to 
-follow it to add features/functionality in standard way.
-This requirment is full filled with the help of
-ECMAScript.
-----------
+            Methods to run Javascript are :
+            -------------------------------
+1. Run on the browser             ---------------------------------------------------
+2. run on code Editior like Vs code.                                                |
+----------------------------------------------------------------------------        |
+       Node Js                                                                      |
+      ---------                                                                     |
+If Javascript will be merged with C++ program                                       |
+than used this as Backend/Server-side than it becomes                               |
+Node Js.                                                                            |
+----------------------------------------------------------------------------        |
+           ECMAScript                                                               |
+           -----------                                                              |
+During the building for javaScript Developers will try to ensure that               |
+Features we are Developing make the standards and consistency                       |
+so, that if the Javascript runs in Different operating systems                      |
+all the functionalities remind same.                                                |
+
+WE requiered a set of rules, blue print, protocols that we have to                  |
+follow it to add features/functionality in standard way.                            |
+This requirment is full filled with the help of                                     |
+ECMAScript.                                                                         |
+----------                                                                          |
+-----------------------------------------------------------------------------       |
+                Now let's start programming               <---------------------------
+               -----------------------------
+if you have created a web page then 
+click the 'Right' button from the mouse 
+and click 'inspect'
+then in frunt of you poped up various options
+at which click on 'console' window.
+
+                        Concole window
+                        ---------------
+with the help of console window we interact with the 
+browser just like print something, log something and
+etc.
+                    Now come to our topic
+                    ---------------------
+For print anything we use 'console.log()' command.
+it's means is 'on console we have to log something'.
+Example :
+       'console.log("My name is Babbar")'
+this will print the same thing on console Screen.
+Another Example :
+        'console.log(2+3);'
+print '5' as an answer.
+
+                  2. run Javascript code Editior like Vs code.
+                  --------------------------------------------
+We use Internal Javascript to integreate the javascript code 
+in (.html file) with the help of '<script>' tag which we can use
+inner the '<body>' tag.
+
+It's not necessary You will use '<script>' tag anywhere in 
+'<html>' tag but for the best Practise we use '<script>' tag 
+will be use at the End of '<body>' tag Because to make
+sure that before 'javascript' code all the code should
+render perfectly to make the code performace better.
+
+                But just like at a time of learning CSS 
+we make sure that we doesn't use 'Inline CSS' rather than
+we build a seperate (.css file) import it throw our own
+(.html) file to make Moduler/seperated code to avoid 
+Code Complexity.
+                   Seperate JS file
+                  ------------------
+For more Increasing Modulerity, Readability, Maintainability
+We make a Seperate '.js' file to write the 'javascript'
+code.
+
+Now we try to link java-script code into the .html file.
+in '<script>' tag 
+-----------------------------------------------------------------------------------

@@ -1,0 +1,28 @@
+If we talk about any programming language like
+C++, Java, Javascript in this all languages
+it's compulsory to work on the data.
+
+We have so many Data stucture which store data.
+The different data structure will have different 
+methods/techniques or return to fatch data 
+techniques is different.
+
+If we talk about Data handling and Storage
+so, Variables are something which is very 
+    ---------
+important thing.
+
+A simplest entity to store the data are variables
+without confusing 'Variable' term we make it's
+meaning in simplest form then
+Variables are Named memory Locations.
+              ----------------------
+              if we store different data's in variables
+              It will take Different space some data take
+              space of 4 byte,some are 8 bytes and many more
+
+In the memory if you have to identify some data uniqely
+It only possible when u have to identify with the 
+help of address.
+In short if you try to store any value or access any
+value it only done with the help of address.

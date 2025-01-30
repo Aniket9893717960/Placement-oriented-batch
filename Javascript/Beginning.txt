@@ -1,4 +1,5 @@
 -------------------NOTE------------
+We completed 23 minutes of our 'Javascript' course
 what is ECMA Script,ES6,ES13?
 How javascript run into a machine or where it runs?
 ------------------------------------
@@ -114,5 +115,17 @@ code.
 
 Now we try to link java-script code into the .html file.
 in '<script>' tag in '<body>' tag we use attribute
-name 'src' where we write location of (.js) file
+name 'src' where we write location of (.js) file.
+
+                  Check Output of Javascript On Terminal
+                  --------------------------------------
+First to check the current Trajictory we use command 'pwd'
+If you are at target 'javascript' folder than it's good
+if not with the help of 'cmd' taliport to your targeted 
+location.
+
+To run the 'javascript' command on terminal we use 
+             'node <Name of Javascipt file>'
+This command will compile and run our code
+(Just like we print 'Namasta Duniya' in this case).
 -----------------------------------------------------------------------------------

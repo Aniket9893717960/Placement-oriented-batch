@@ -113,5 +113,6 @@ We make a Seperate '.js' file to write the 'javascript'
 code.
 
 Now we try to link java-script code into the .html file.
-in '<script>' tag 
+in '<script>' tag in '<body>' tag we use attribute
+name 'src' where we write location of (.js) file
 -----------------------------------------------------------------------------------

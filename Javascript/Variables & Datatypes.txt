@@ -70,3 +70,18 @@ if 'var' will be Not in the specific function than it becomes
 to explain JavaScript code, and to make it more readable.
        -----------------------------
 
+Now we make a program in which we make a 'function' name 'solve'
+which have 2 commands in which 1st command is 
+             'var age = 25;'
+at which we have to initailize the a constant('25' in this case) in
+variable name 'var'.
+
+2nd command is to print variable 'age' on the console screen with the
+help of this command.
+             'console.log(age)'
+This is the full program :
+             function solve() {
+             var age = 25;
+             console.log(age)
+              }
+But if we run this program it doesn't run because 

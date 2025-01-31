@@ -60,3 +60,13 @@ scoped or globally - scoped but not block - scoped.
 
 Means variables declared with 'var' are hoisted to the
 top of their function or global scope.
+The hoisting behaviour can sometimes lead to 
+unexpected results and make debugging challenging.
+
+         ---------------NOTE--------
+if 'var' will be Not in the specific function than it becomes 
+'Global' and we access it throw out the file.
+             Commit : JavaScript comments can be used 
+to explain JavaScript code, and to make it more readable.
+       -----------------------------
+

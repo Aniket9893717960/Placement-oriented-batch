@@ -26,3 +26,37 @@ It only possible when u have to identify with the
 help of address.
 In short if you try to store any value or access any
 value it only done with the help of address.
+
+To make the easy technique of storing or access with the
+help of Address. With the help of 'Variables' u will give
+name to the location('age' name given in this case).
+
+This will have some variable names are :
+i. var      ii.let         iii.const
+and any more.
+
+Let say we use a command.
+              'let age = 25;'
+where 'let' is dynamically type datatype
+       'age' is a name of the variable.
+    ' 25 ' is a constant
+
+But as u know we have 3 datatypes which are used 
+Exactly similar.
+Example :
+         -------------
+          var a = 50;    ---> why It's totally Stoped to use?
+          let a = 60;
+          const a = 70;
+          --------------
+The main Question is what is the Difference between
+this 3 data type.
+
+                   Var Keyword
+                   ------------
+This are the traditional way of declaring variables in 
+'Javascript'. Variables declared with 'var' are function 
+scoped or globally - scoped but not block - scoped.
+
+Means variables declared with 'var' are hoisted to the
+top of their function or global scope.

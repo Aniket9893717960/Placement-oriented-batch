@@ -85,3 +85,6 @@ This is the full program :
              console.log(age)
               }
 But if we run this program it doesn't run because 
+we desn't call the function so we call it with 
+the help of this command.
+           'solve' outside the function

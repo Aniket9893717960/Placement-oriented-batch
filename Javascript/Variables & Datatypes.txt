@@ -160,3 +160,12 @@ It's a solution of
 'Re-assignment & Re-Declaration'problem because 
 if u will initalize it's value for the first time
 then it's value becomes fixed.
+if you don't  leason to compile and run program
+then compiler gives error name
+  'TypeError: Assignment to constant not possible'
+Example :
+---------
+         const a = 28;
+         console.log(a);
+         a = 20;
+         console.log(a);

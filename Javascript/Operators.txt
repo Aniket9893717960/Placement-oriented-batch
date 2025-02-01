@@ -1,0 +1,18 @@
+First we have to understand
+                           What is operators?
+This is something related to Operations.
+There are specific symbols which used to perform
+Specific Operations.
+Just like            '+' used to perform Addition
+                     '-' used to perform Subtration
+                     '*' used to perform Multiplication
+                     '/' used to perform Division
+
+                            TYpes of OPerators
+                           --------------------
+         i. Arithmetic Operator
+         ----------------------
+In this we have two type of operator 
+    a. unary operator         
+                     It's a single Operand.
+    b. binary operator

@@ -1,3 +1,5 @@
+        H.W
+ Symbol Datatype You have to studies.
 --------------------NOTE------------
 When adding a number and a string,
 JavaScript will treat the number as a string.
@@ -17,7 +19,8 @@ i. Non Premitive Datatype(Talk about it in some Other lecture)
                         --------------------
 It's the first type of an Datatype which we are talking about
 throw out the lecture.
-JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
+JavaScript has dynamic types. This means that the same variable
+can be used to hold different data types:
 i. String
    ------  (or a text string) is a series of characters like "John Doe".
         Strings are written with quotes. You can use single or double quotes:
@@ -29,6 +32,9 @@ ii. Numbers
     -------  All JavaScript numbers are stored 
             as decimal numbers (floating point).
 Numbers can be written with, or without decimals.
+
+The Range of Numbers will be between
+      -(2^53-1) -> (2^53+1)
 Example :
 // With decimals:           // Without decimals:
 let x1 = 34.00;               let x2 = 34;
@@ -39,3 +45,42 @@ has the value undefined. The type is also undefined.
 Example :
          let car;    // Value is undefined, type is undefined
          console.log(car);
+
+iv typeOf
+   ------  You can use the JavaScript typeof operator 
+to find the type of a JavaScript variable.
+The typeof operator returns the type of a variable or an expression:
+Example :
+          typeof 0              // Returns "number"
+          typeof 314            // Returns "number"
+          typeof 3.14           // Returns "number"
+          typeof (3)            // Returns "number"
+          typeof (3 + 4)        // Returns "number"
+
+v. Boolean
+   -------- Booleans can only have two values: true or false.
+Example :
+         let x = 5;
+         let y = 5;
+         let z = 6;
+         (x == y)       // Returns true
+         (x == z)       // Returns false
+
+vi. BigInt
+    ------  All JavaScript numbers are stored in a 64-bit floating-point format.
+JavaScript BigInt is a new datatype (ES2020) that can be used to store 
+integer values that are too big to be represented by a normal JavaScript Number.
+Example :
+       let x = BigInt("123456789012345678901234567890");
+
+vii. Null
+     ---- `null` indicates the deliberate absence of any object value. It’s a 
+primitive value that denotes the absence of a value or serves as a placeholder for
+an object that isn’t present.
+Example :
+        let number = null;
+        console.log("Type of number is:" ,typeof number);
+
+viii. Symbol
+      -------
+     U have to study it by your self.

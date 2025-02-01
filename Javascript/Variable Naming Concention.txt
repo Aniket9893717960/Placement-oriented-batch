@@ -1,0 +1,29 @@
+-----------NOTE------------
+We done a mistake in this throw out the Previous
+lecture which is in the part of variable declaration.
+         Example :
+                  'let a = 10;'
+it's not the right way to declare the variable.
+Right way will seen in this Throw out Lecture.
+----------------------------
+                 Variable Naming Convention
+                 --------------------------
+There are the certain roles in this which are as follows:
+
+i. If you have to start variable name with 
+   a number, Under Score(-), Dollar Sign($)
+So, 'Javascript' will allow this without 
+any Problem.
+
+ii. We does't use space in variable's name.
+
+iii. Your variable should follow 'Camel Case'
+     Ordering.
+     Example If you want to write variable name
+          try TO write :'Age of Students'
+           Authority to write : 'ageOfStudent'
+
+iv. U have not Authority to Use Reserved 
+    Keywords of 'Javascript'.
+
+-------------------------------------------------------------------------------------

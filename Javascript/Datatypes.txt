@@ -32,3 +32,10 @@ Numbers can be written with, or without decimals.
 Example :
 // With decimals:           // Without decimals:
 let x1 = 34.00;               let x2 = 34;
+
+iii. Undefined
+     --------- In JavaScript, a variable without a value,
+has the value undefined. The type is also undefined.
+Example :
+         let car;    // Value is undefined, type is undefined
+         console.log(car);

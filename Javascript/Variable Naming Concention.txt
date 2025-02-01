@@ -27,3 +27,4 @@ iv. U have not Authority to Use Reserved
     Keywords of 'Javascript'.
 
 -------------------------------------------------------------------------------------
+In the Next video We will talk about 'Datatypes'.

@@ -66,6 +66,8 @@ unexpected results and make debugging challenging.
          ---------------NOTE--------
 if 'var' will be Not in the specific function than it becomes 
 'Global' and we access it throw out the file.
+'var' keyword is Bracket scoped.
+                 ---------------
              Commit : JavaScript comments can be used 
 to explain JavaScript code, and to make it more readable.
        -----------------------------
@@ -88,3 +90,73 @@ But if we run this program it doesn't run because
 we desn't call the function so we call it with 
 the help of this command.
            'solve' outside the function
+
+              There are 2 issues in 'var' keyword 
+                  are as follows
+                   ---------------------
+i. As u know 'var' keyword are Globally available
+    so, it will create problem in throw out debugging.
+  That why developers try to avoid 'var' keyword.
+
+ii. we build duplicate 'variable' for same name in
+    same file But it's confusive for you in debugging 
+    the program.
+
+            ------------------NOTE-----------
+'var' has some quirks and drawbacks, especially related
+to variables hoisting and it's lack of block scope.
+Due to these issues, 
+
+'let' and 'const' were intoducad in ES6 (ECMAScript 2015)
+to provide better variable scoping mechanisms.
+
+It's generally recommanded to use 'let' and 'const'
+instead of 'var' in modern Javascript code,
+unless there's a specific reason to use 'var'.
+           -----------------X------------
+
+                       'let' keyword
+                       --------------
+With the help of 'let' i will create a variable like
+                'let age = 10;'
+but Every variable which was created by 'let'
+those variables become Block scoped.
+                       -----------
+
+'Block Scoped' means AT which two brackets(open-closed) you want 
+the variable it will only accesed within brackets.
+Example :
+If you created a program
+           console.log(a);
+           {
+           let a = 10;
+           }
+This program gives error name 'ReferenceError: a is not Defined'
+because 'console.log' because it doesn't in braces'{}' Not matter
+             'who is the owner of this berces'.
+            ------------------NOTE-----------
+Throw this we solved the first problem of 'var' keyword.
+ii. Redefination Issue :
+    ------------------  'let' doesn't allow to Re - define
+the same variable name in same file.
+ -------------------------------------------------------
+Feature :
+---------       Dynamically Typed Language
+Example:       let x=10;
+              x = "Mayank";
+              x = true;
+              x = null;
+             console.log(x);
+What happend in this program is we redefined the 
+Variable value from 'integer' to 'String'
+'Boolean' and 'Null variable'
+We print it's value on console screen.
+It's just simply run because of it's 
+Dynamic nature.
+
+                  'const' keyword
+                  ----------------
+It's a solution of 
+'Re-assignment & Re-Declaration'problem because 
+if u will initalize it's value for the first time
+then it's value becomes fixed.

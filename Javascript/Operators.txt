@@ -12,7 +12,23 @@ Just like            '+' used to perform Addition
                            --------------------
          i. Arithmetic Operator
          ----------------------
+In Arithmetic Operator we have the following kind of 
+Operators available are as follows :
++ - * / %  **
+            |-> Power Sign
+++  --
 In this we have two type of operator 
     a. unary operator         
                      It's a single Operand.
+        ++  --
+             This two operators are used as Pre & post.
+       Example:
+               ++a;
     b. binary operator
+    + - * / %  **
+            |  |-> Power Sign
+            |-> It provides Remainder always
+               Example of Power Symbol
+                          -----
+                              2**4 ->  2^4
+                                    |-> Means in Mathomatics

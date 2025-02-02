@@ -20,7 +20,11 @@ Operators available are as follows :
 In this we have two type of operator 
     a. unary operator         
                      It's a single Operand.
-        ++  --
+               ++  --
+Pre Increment<-|
+--- ---------    First increment than use
+PostIncrement<-|
+-------------    Use than increment
              This two operators are used as Pre & post.
        Example:
                ++a;
@@ -32,3 +36,12 @@ In this we have two type of operator
                           -----
                               2**4 ->  2^4
                                     |-> Means in Mathomatics
+
+      ii. Assignment Operator
+          ----------  -------
+i was talk a simple thing that
+            let  a = 5;
+             |     |  |-> It represent 'termination'.
+             |-> let is used to create a variable.
+                   |-> Assignment operator.
+It will have 

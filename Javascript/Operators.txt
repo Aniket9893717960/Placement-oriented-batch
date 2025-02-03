@@ -44,4 +44,50 @@ i was talk a simple thing that
              |     |  |-> It represent 'termination'.
              |-> let is used to create a variable.
                    |-> Assignment operator.
-It will have 
+It will have more arithmetic assignment operators like :
+        +=  -=  *=  /= **= %=
+  +=  Is the Addition Assignment Operator adds a value to a variable
+ ----
+  -=  Is the Subtraction Assignment Operator subtracts a value from a variable
+ ----
+  *=  Is the Multiplication Assignment Operator multiplies a variable.
+ ----
+  /=  Is the Division Assignment Operator divides a variable
+ ----
+
+       iii. Comparison Operator
+            ---------- --------
+Comparison operators are used in logical statements 
+to determine equality or difference between variables or values.
+
+It's always being any one of this two options are 'True/False'.
+Example :
+              'console.log(10>5);'
+
+                  Javascript Provide 3 Different Equality Operator
+                 --------------------------------------------------
+    a. Strict Equality
+      -------- --------
+compares two values for equality. Neither value is implicitly 
+converted to some other value before being compared. 
+If the values have different types, the values are considered unequal.
+Example :
+---------
+    const num = 0;
+    const obj = new String("0");
+    const str = "0";
+    console.log(num === num); // true
+    console.log(obj === obj); // true
+    console.log(str === str); // true
+    console.log(num === obj); // false
+    console.log(num === str); // false
+    console.log(obj === str); // false
+    console.log(null === undefined); // false
+    console.log(obj === null); // false
+    console.log(obj === undefined); // false
+   
+   b. Loose Equalty
+      ----- --------
+Is symmetric: A == B always has identical semantics to
+B == A for any values of A and B (except for the order 
+of applied conversions)

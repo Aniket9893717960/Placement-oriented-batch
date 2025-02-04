@@ -101,3 +101,24 @@ Operator	Description	Example
 &&	        and	     (x < 10 && y > 1) is true	
 ||	        or	     (x == 5 || y == 5) is false	
 !	          not	      !(x == y) is true
+
+     Here It comes a Concept called Falsey and Truthey
+    --------------------------------------------------
+If your work with the the logicates like 
+    '&&'   '||'   '!'
+It's Essentially work on two type of values.
+a.  Falsey
+    ------ It covers up many data types like
+           Undefined, null, 0(Zero), false,
+           NaN, String.
+b.  Truthy
+    ------ any thing which is not falsey.
+
+This concept is very useful in the upcoming concept called
+                   Short - Circuiting
+                   -------------------
+Example :In logical OR If any value will
+-------   return 'true' then at point 
+the value is terminated.
+It doesn't check more condition at that 
+single line.

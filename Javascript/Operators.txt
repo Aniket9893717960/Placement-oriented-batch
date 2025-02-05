@@ -137,3 +137,6 @@ If logical AND finds First Falsey value
 then at point the cammand will stoped 
 Processing return answer.
 It returns the last value.
+
+                PRIORITY OF LOgical OPERATOR
+                -----------------------------

@@ -130,10 +130,10 @@ This concept is very useful in the upcoming concept called
 Example :In logical OR If any value will
 -------   return 'true'(Finds 'First Truthy Value') 
 then at point the value is terminated.
-It doesn't check more condition at that 
-single line.
+It Retuns the last value.
            SAME AS
            -------
 If logical AND finds First Falsey value 
 then at point the cammand will stoped 
 Processing return answer.
+It returns the last value.

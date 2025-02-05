@@ -23,6 +23,16 @@ In this we have two type of operator
                ++  --
 Pre Increment<-|
 --- ---------    First increment than use
+                ------------note------------
+        Issue : if var b = true;
+                  b++;     // It doesn't possible in arthmetic operator it only possible in 'Conditional operation'
+        Issue : If var a = 11;
+                  ++(--a)   // unary operator k nesting nahi kar sakta.
+        Issue : if var a = 11;
+                    11++     // It doesn't possible because it works with 'character values'.
+        U have to remind that 
+                  var a = 'A';
+                  A++;       // It works because 'Unary operator' works with 'Ascii value'.
 PostIncrement<-|
 -------------    Use than increment
              This two operators are used as Pre & post.

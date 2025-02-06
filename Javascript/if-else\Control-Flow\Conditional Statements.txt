@@ -1,7 +1,41 @@
+           ----NOTE---
+we also use 'else-if' without else because 'else'
+here is 'optional' at this case.
+           -----X-----
 We are talking about two things.
                       |--> If - Else Statement
                       |--> Switch Statement
 First we are talking about If-Else With Example :
  consition 1 : If my age is Greater than 18 So,
                I have a right to vote.
- C
+ Condition 2 : If '1' is 'false' then come to this 
+               case where 'I Doesn't capable to vote.'
+
+Now we build a program on this match this 2 conditions.
+    let age = 3;
+    if(age >= 18)
+        console.log('can vote');
+    else
+        console.log('cannot vote');
+
+                      SWITCH Case
+                      ------------
+Use the switch statement to select one of many code blocks to be executed.
+
+Syntax
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+This is how it works:
+
+The switch expression is evaluated once.
+The value of the expression is compared with the values of each case.
+If there is a match, the associated block of code is executed.
+If there is no match, the default code block is executed.

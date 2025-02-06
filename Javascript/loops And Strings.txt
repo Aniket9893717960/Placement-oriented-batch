@@ -4,5 +4,8 @@ Study about Laterals in Javascript?
           -----X-----
                 ---------------------------
 First we have to think 
+                ProBlem Before Loop
+                -------------------
+* code becomes bulky and repetative
                 what is a loop?                   
 Loops can execute a block of code a number of times.

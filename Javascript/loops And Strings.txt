@@ -1,0 +1,8 @@
+                --------------NOTE--------
+          -----H.W-----
+Study about Laterals in Javascript?
+          -----X-----
+                ---------------------------
+First we have to think 
+                what is a loop?                   
+Loops can execute a block of code a number of times.

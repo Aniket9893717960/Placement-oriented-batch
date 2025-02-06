@@ -10,6 +10,7 @@ Just like            '+' used to perform Addition
 
                             TYpes of OPerators
                            --------------------
+------------------------------------------------------------------------------------
          i. Arithmetic Operator
          ----------------------
 In Arithmetic Operator we have the following kind of 
@@ -47,6 +48,7 @@ PostIncrement<-|
                               2**4 ->  2^4
                                     |-> Means in Mathomatics
 
+------------------------------------------------------------------------------------
       ii. Assignment Operator
           ----------  -------
 i was talk a simple thing that
@@ -65,6 +67,7 @@ It will have more arithmetic assignment operators like :
   /=  Is the Division Assignment Operator divides a variable
  ----
 
+------------------------------------------------------------------------------------
        iii. Comparison Operator
             ---------- --------
 Comparison operators are used in logical statements 
@@ -102,6 +105,7 @@ Is symmetric: A == B always has identical semantics to
 B == A for any values of A and B (except for the order 
 of applied conversions)
 
+------------------------------------------------------------------------------------
         iv.  Logical Operator
              ------- --------
 Logical operators are used to determine the logic between variables or values.
@@ -128,15 +132,36 @@ This concept is very useful in the upcoming concept called
                    Short - Circuiting
                    -------------------
 Example :In logical OR If any value will
--------   return 'true'(Finds 'First Truthy Value') 
+-------     ------- -- return 'true'(Finds 'First Truthy Value') 
 then at point the value is terminated.
 It Retuns the last value.
+  Tech Example : 'console.log(false || 7 || 11 || 18);'
+  ---- -------                         |-> because 'OR' finds it's first 
+                                        true here.
            SAME AS
            -------
 If logical AND finds First Falsey value 
-then at point the cammand will stoped 
+   ------- ----  then at point the cammand will stoped 
 Processing return answer.
 It returns the last value.
 
                 PRIORITY OF LOgical OPERATOR
                 -----------------------------
+
+------------------------------------------------------------------------------------
+        v. Bitwise Operator
+          -------- ---------
+We know that computer knows only Binary language(Ex 1010 = 10)
+So, '0' & '1' which we call it as 'Bits' and with the help of 
+operators we Done some operatons.
+      This operators are called Bitwise Operator.
+          Those operators are as follows:
+
+Operator	Name	      	Description
+&       	AND	       	Sets each bit to 1 if both bits are 1
+|	        OR	      	  Sets each bit to 1 if one of two bits is 1
+^	        XOR	      	  Sets each bit to 1 if only one of two bits is 1
+~	        NOT	      	  Inverts all the bits
+<<	      Zero	        fill left shift	Shifts left by pushing zeros in from the 	      	      	      	  right and let the leftmost bits fall off
+>>	Signed right shift		      Shifts right by pushing copies of the leftmost bit 	      	      	      	      in from the left, and let the rightmost bits fall off
+>>>	Zero fill right shift	      	Shifts right by pushing zeros in from the left, 	      	      	      	      	      and let the rightmost bits fall off

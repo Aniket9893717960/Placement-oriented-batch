@@ -1,0 +1,7 @@
+We are talking about two things.
+                      |--> If - Else Statement
+                      |--> Switch Statement
+First we are talking about If-Else With Example :
+ consition 1 : If my age is Greater than 18 So,
+               I have a right to vote.
+ C

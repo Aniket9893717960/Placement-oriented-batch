@@ -14,10 +14,10 @@ Syntax:
             Multiline Strings
            -------------------
 In order to create a multiline string an escape sequence
-\n was used to give a new line character. 
+'\n' was used to give a new line character. 
 
 However, Template Literals there is no need to add
-\n string ends only when it gets backtick (`) character.
+'\n' string ends only when it gets backtick (`) character.
 
 Example:This example shows the use of the multiline strings.
           // Without template literal

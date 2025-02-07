@@ -1,0 +1,92 @@
+                               JavaScript Template Literals
+                              ------------------------------
+Template Literal in ES6 provides new features to create a string
+that gives more control over dynamic strings. 
+
+Traditionally, String is created using single quotes (‘)
+or double quotes (“) quotes. 
+
+Template literal is created using the backtick (`) character.
+
+Syntax:
+       let s=`some string`;
+
+            Multiline Strings
+           -------------------
+In order to create a multiline string an escape sequence
+\n was used to give a new line character. 
+
+However, Template Literals there is no need to add
+\n string ends only when it gets backtick (`) character.
+
+Example:This example shows the use of the multiline strings.
+          // Without template literal
+                    console.log('Some text that I want \non two lines!');
+
+          // With template literal
+                    console.log(`Some text that I want
+                    on two lines!`);
+
+             Expressions
+             -----------
+To dynamically add values into new Template Literals expressions are used.
+The ${} syntax allows an expression in it that produces the value.
+This value can be a string stored in a variable or a computation operation.
+Syntex :
+       ${expression}
+
+Example: The code below shows the use of expressions in template literals.
+          let principal = 1000;
+          let noofyears = 1;
+          let rateofinterest = 7;
+
+          let SI = `Simple Interest is ${(principal *
+              noofyears * rateofinterest) / 100}`;
+             alert("Simple Interest is" + SI);
+
+             Tagged Templates
+            ------------------
+One of the features of Template Literals is its ability to
+create Tagged Template Literals. 
+
+Tagged Literal is written like a function definition, 
+but the difference is when this literal is called. 
+There is no parenthesis() to a literal call. 
+An array of Strings are passed as a parameter to a literal.
+
+Example 1:This example shows the use of the tagged templates.
+           function TaggedLiteralEg(strings) {
+              document.write(strings);
+            }
+            TaggedLiteralEg`GeeksforGeeks`; 
+
+                   Raw String
+                   -----------
+Raw method of template literal allows access of raw strings
+as they were entered, without processing escape sequences. 
+In addition, the String.raw() method exists to create raw strings 
+just like the default template function, 
+and string concatenation would create.
+
+Example: This example shows the use of the raw strings.
+    let s = String.raw`Welcome to GeeksforGeeks Value of expression is ${2 + 3}`;
+           console.log(s);
+
+                   Nested Templates
+                   ----------------
+Templates can be nested if it contains multiple expression evaluation
+or multiple condition checking. 
+Instead of using else if ladder this is readable and 
+gives ease to the developer. 
+The code below finds the maximum of three numbers using conditional 
+operator and nested template literal.
+
+Example: This example shows the use of the nested templates.
+            function maximum(x, y, z) {
+                let c = `value ${(y > x && y > z) ? 'y is greater' :
+                    `${x > z ? 'x is greater' : 'z is greater'}`}`;
+                return (c);
+             }
+            console.log(maximum(5, 11, 15));
+            console.log(maximum(15, 11, 3));
+            console.log(maximum(11, 33, 2));

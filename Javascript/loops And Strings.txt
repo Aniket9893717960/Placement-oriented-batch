@@ -67,6 +67,58 @@ Example:                                               Operation.
             console.log(i);                                  }
         }
     }
+             'For' loop have two Types 
+             --------------------------
+      The 'For In' Loop
+      ---------------
+The JavaScript for in statement loops through the properties of an Object:
+   Syntax
+   ------
+   for (key in object) {
+   // code block to be executed
+  }
+For In Over Arrays
+------------------
+The JavaScript for in statement can also loop over the properties of an Array:
+
+Syntax
+------
+for (variable in array) {
+  code
+}
+  Array.forEach()
+  ---------------
+  The forEach() method calls a function (a callback function) once for each array 
+  element.
+
+  Example
+  const numbers = [45, 4, 9, 16, 25];
+
+  let txt = "";
+  numbers.forEach(myFunction);
+
+  function myFunction(value, index, array) {
+    txt += value;
+  }
+
+      The For Of Loop
+      ---------------
+      The JavaScript for of statement loops through the values of an iterable             object.
+
+      It lets you loop over iterable data structures such as Arrays, Strings, Maps,       NodeLists, and more:
+
+      Syntax
+      -------
+      for (variable of iterable) {
+        // code block to be executed
+      }
+
+      variable - For every iteration the value of the next property is assigned to 
+      --------
+the variable. Variable can be declared with const, let, or var.
+
+      iterable - An object that has iterable properties.
+      --------
 
      The While Loop
      --------------

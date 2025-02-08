@@ -23,3 +23,27 @@ Example :
           for (let i = 0; i < cars.length; i++) {
             text += cars[i] + "<br>";
           }
+
+              Different Kinds of Loops
+              ------------------------
+JavaScript supports different kinds of loops:
+
+for - loops through a block of code a number of times
+for/in - loops through the properties of an object
+for/of - loops through the values of an iterable object
+while - loops through a block of code while a specified condition is true
+do/while - also loops through a block of code 
+           while a specified condition is true.
+
+     The For Loop
+     ------------
+First we talk about it's Syntax.
+            for(      ;          ;        )
+                  ^         ^         ^
+                  |         |         |
+      Initialization    Condition    Updation
+            {            //loop           }
+            Reverse Counting
+            ----------------
+     for(let i = 5; i>0; i--)
+          console.log(i);

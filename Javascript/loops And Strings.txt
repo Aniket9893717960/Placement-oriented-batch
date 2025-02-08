@@ -47,3 +47,20 @@ First we talk about it's Syntax.
             ----------------
      for(let i = 5; i>0; i--)
           console.log(i);
+
+
+      There Are Two Important Keywords in Loops Are :
+      -----------------------------------------------
+       i. Break                                       ii. Iteration
+       --------                                         -----------
+Reached Iteration ab ruk jao
+Or loop s bahar nikal jao.
+Example:
+    for(let i=1; i<=6; i++){
+        if(i==4){
+        break;
+        }
+        else {
+            console.log(i);
+        }
+    }

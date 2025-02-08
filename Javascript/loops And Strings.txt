@@ -67,6 +67,11 @@ Example:                                               Operation.
             console.log(i);                                  }
         }
     }
+             -------------------NOTE ---------------
+    * If you use 'Continue' in while and do-while loop than 
+      make sure at next and previous line should contain and 
+      Increment of 'Increment variable'.
+             ----------------------------------------
              'For' loop have two Types 
              --------------------------
       The 'For In' Loop
@@ -142,3 +147,22 @@ the variable. Variable can be declared with const, let, or var.
   }
      The While Loop
      --------------
+     The while loop loops through a block of code as 
+     long as a specified condition is true.
+
+          Syntax
+          while (condition) {
+            // code block to be executed
+          }
+               The Do While Loop
+               ------------------
+               The do while loop is a variant of the while loop. This loop will 
+               execute the code block once, before checking if the condition is 
+               true, then it will repeat the loop as long as the condition is true.
+
+               Syntax
+               ------
+     do {
+      // code block to be executed
+     }
+while (condition);

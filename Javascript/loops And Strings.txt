@@ -2,6 +2,9 @@
           -----H.W-----
 Study about Laterals in Javascript?
           -----X-----
+* We can't Execute loop correctly if your Program
+Doesn't have this three Things given Below.
+        Initialization          Condition           Updation
                 ---------------------------
 First we have to think 
                 ProBlem Before Loop
@@ -51,16 +54,19 @@ First we talk about it's Syntax.
 
       There Are Two Important Keywords in Loops Are :
       -----------------------------------------------
-       i. Break                                       ii. Iteration
+       i. Break                                       ii. Continue
        --------                                         -----------
-Reached Iteration ab ruk jao
-Or loop s bahar nikal jao.
-Example:
-    for(let i=1; i<=6; i++){
-        if(i==4){
-        break;
-        }
-        else {
-            console.log(i);
+Reached Iteration ab ruk jao                          Let's say u have an Exam
+Or loop s bahar nikal jao.                          If you want to 'skip' the 
+Example:                                               Operation.
+    for(let i=1; i<=6; i++){                          for(let i=1; i<=4; i++){
+        if(i==4){                                          if(i==3)
+        break;                                                   continue;
+        }                                                    else
+        else {                                                 console.log(i);
+            console.log(i);                                  }
         }
     }
+
+     The While Loop
+     --------------

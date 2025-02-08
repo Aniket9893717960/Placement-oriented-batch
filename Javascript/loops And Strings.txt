@@ -120,5 +120,25 @@ the variable. Variable can be declared with const, let, or var.
       iterable - An object that has iterable properties.
       --------
 
+ Looping over an Array
+ ---------------------
+ Example :
+ ---------
+ const cars = ["BMW", "Volvo", "Mini"];
+
+ let text = "";
+ for (let x of cars) {
+   text += x;
+ }
+
+    Looping over a String
+    ---------------------
+    Example
+  let language = "JavaScript";
+
+   let text = "";
+  for (let x of language) {
+  text += x;
+  }
      The While Loop
      --------------

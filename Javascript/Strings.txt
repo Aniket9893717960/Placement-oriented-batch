@@ -1,0 +1,32 @@
+      Sequence Of Characters
+      ----------------------
+There are Different type of method to create a String.
+i. Example :
+   ---------
+            let name = 'Love
+            Babbar This is my
+            Name hello';
+            console.log(name);
+ii. Example :
+    --------- 
+         let firstName = new String("Love babbar");
+          console.log(firstname);
+
+   We can Perform So many Operations on String which are written as Follows
+   ------------------------------------------------------------------------
+i. ConCatination : Merging Two string into a Single String.
+   --------------
+ii. Substring : How to fatch out the small Part of String.
+    ---------
+iii. length : How to calculate 'length' of the String.
+     -------
+iv. UpperCase : How to convert letters to Capital Letters.
+    ---------
+v. LowerCase : How to convert letters to Small Letters.
+   ---------
+vi. charAt : How to take specific character in a String.
+    ------
+vii. indexOf : How to find Location of a Specific Character in a String.
+     -------
+
+         We will Descuss all the Utility in this lec.

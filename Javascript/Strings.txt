@@ -54,3 +54,18 @@ Example :
                                               on console Screen 
 /* let ans = 'op1 + op2'; *///It will as it is value which we don't try to done
          console.log(ans);
+
+       ii. Substring
+          -----------
+In Javascript. the substring() method is used to extract a portion
+of a string, starting from a specified index position to another
+specified index position, or to the end of the String.
+
+Syntax :
+             'string.substring(startIndex, endIndex);'
+* startIndex : The index position at which to begin extract
+               Ing character from the string.
+   This Parameter is required.
+* endIndex : The index position before which to end of Extraction.
+             If we don't maintoin the 'endIndex' then,
+The substring() extracts characters to the end of the String.

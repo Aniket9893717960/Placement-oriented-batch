@@ -30,3 +30,27 @@ vii. indexOf : How to find Location of a Specific Character in a String.
      -------
 
          We will Descuss all the Utility in this lec.
+      -------------------------------------------------
+        i. Concatination
+        -----------------
+There are different type of methods for Concatination
+a. Use of '+' operator for Concatination
+  ----------------------------------------
+Example :
+         let op1 = 'English ';
+         let op2 = 'Hindi ';
+         let ans = op1 + op2;
+         console.log(ans);
+b. Using String interpolation with template literal(' '):
+   ------------------------------------------------------
+Backtracking allow for String interpolation, where we can embed 
+expressions with '${}' inside the string, which are then evaluated
+and Concatenated into the string.
+Example :
+         let op1 = 'English ';
+         let op2 = 'Hindi ';
+      let finalAns = '${op1}${op2}';
+       /*  let finalAns = '${op1} + ${op2}'; */ //But if we doesn't want '+'
+                                              on console Screen 
+/* let ans = 'op1 + op2'; *///It will as it is value which we don't try to done
+         console.log(ans);

@@ -79,3 +79,16 @@ Example :
           console.log(str.substring(2));
        // It will print all the character after the 2nd Position
           of 'String' Gives Output : 'bbar'
+
+      iii. Split method on Strings
+           ------------------------
+In javascript, the split() method is used to split 
+ a String into an array of Substrings based on a specified 
+separator.
+
+Syntax :
+-------
+         String.split(separator);
+          Where 'separator' : is a String or regular expression
+       Used to specify where to split the original string.
+The output is the array of substrings.

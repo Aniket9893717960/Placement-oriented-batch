@@ -69,3 +69,13 @@ Syntax :
 * endIndex : The index position before which to end of Extraction.
              If we don't maintoin the 'endIndex' then,
 The substring() extracts characters to the end of the String.
+
+Example :
+          let str = 'Babbar';
+          console.log(str.substring(2,4));
+       // It will print characters Between start from 2nd position
+          and End with 5th position 
+                Output is : 'bb'
+          console.log(str.substring(2));
+       // It will print all the character after the 2nd Position
+          of 'String' Gives Output : 'bbar'

@@ -92,3 +92,53 @@ Syntax :
           Where 'separator' : is a String or regular expression
        Used to specify where to split the original string.
 The output is the array of substrings.
+
+Example :
+-------
+       let sentence = "Hello jee kaise ho saare";
+       let words =  sentence.split(' ');  
+       console.log(words);
+Output here is 
+         ['Hello','Jee','Kaise','Ho','saara']
+          ------------------------NOTE---------------
+In            'sentence.split(' ');  '            
+You doesn't use '\' sign here. If you ignore the warrning and 
+run the program U got error name 'Unterminated String Lateral'
+Because To Understand the reason First you have to Know
+                What is the Use of '\' Symbol?
+Example : To to print double coat("") at the console Screen
+              let sentence = "HelloJee "Kaise" Ho Saara";
+                                       -------> If you want to print  "Kaise" then
+                                                 Use '\' at corners of   ^ .
+              let sentence = "HelloJee \"Kaise\" ho saara";
+              console.log(sentence)
+ ---NOTE--
+If you want that 'String' will forgot the meaning of '\' For
+a certain case You will use this Example.
+ ----X----
+           If you want to Use any how Doesn't matter How you Do of '\' Symbol?
+U can use this command
+                let words = sentence.split('\\');
+'\' to treat this as Normal Back slesh Not Special Back slesh.
+           -------------------------------------------------
+
+
+           iv. Join Method on strings
+           ---------------------------
+In javascript, the join() method is used to concatenate all the elements of an 
+array into a single string.
+                     This method joins array elements using a specified 
+separator and returns the resulting string.
+Syntax :
+--------
+         array.join( separator )
+                         |- Here in join method Using the separator 
+string is optional. The string used to separate each element of the 
+array when they are concatenated into the resulting string.
+Example :
+---------
+          let sentence = "Hello \\jee \\kaise \\ho \\saare";
+       let words =  sentence.split('\\');  // Got output like this
+console.log(words.join(','))        |-> ['Hello','Jee','Kaise','Ho','saare']
+                     |-> Here we got output: Hello ,Jee ,Kaise , Ho, saare         
+       console.log(words);

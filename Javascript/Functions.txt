@@ -52,3 +52,26 @@ function myFunction(a, b) {
 // Function returns the product of a and b
   return a * b;
 }
+         Return :   The return statement stops the execution of a function and 
+         -------                     returns a value.
+           ------------------NOTE-----------
+If you write code after 'return' statement Then it gives error name 
+'Unreachable code' just like this Example :-
+       function getMyName(firstName, lastName){
+         let fullName = firstName + lastName;
+         return fullName;
+         }
+         //unreachable statements
+         let a = 10;
+         let b = 20;
+         let sum = a+b;
+         console.log(sum);
+         }
+    let fullName = getMyName("Love","Babbar");
+    console.log("Full Name: ", fullName);
+
+* If 'getMyName("Love","Babbar");' we use Different parameter type like
+number,boolean and etc Then what happend?
+The Program will perfectly Exceuted Without any Problem because u doesn't 
+Spacify the type of Data.In this case, the Function treat all the data as 
+'String'.

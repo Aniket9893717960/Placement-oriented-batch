@@ -87,7 +87,9 @@ Spacify the type of Data.In this case, the Function treat all the data as
               myFunction(); // Outputs: Hello, World!
 
 2. Using Arrow Functions : Arrow Function provide a more concise syntax.
-  -----------------------                  PROGRAM
+  -----------------------  This was Introduced in ES6, Provide concise syntax
+for writing function, especially for short, anonymous functions.
+                                 PROGRAM
                  const myFunction = () => {
                      console.log("Hello, World!");
                  };
@@ -100,4 +102,10 @@ Spacify the type of Data.In this case, the Function treat all the data as
                          console.log("Hello, World!");
                      }
                        const anotherFunction = myFunction;
-                     anotherFunction(); // Outputs: Hello, World!
+                         anotherFunction(); // Outputs: Hello, World!
+
+                     CONCLUSION
+                    ------------
+Functions are the cornerstone of Javascript, offering versatility and flexibility
+in code structuring. By mastering functions and understanding their various types of applications, developers can write cleaner, more efficient code.
+whether it's creating simple utility functions or handling complex asynchronous operations , a solid understanding of functions is essential for every Javascript developer.

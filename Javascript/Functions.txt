@@ -75,3 +75,29 @@ number,boolean and etc Then what happend?
 The Program will perfectly Exceuted Without any Problem because u doesn't 
 Spacify the type of Data.In this case, the Function treat all the data as 
 'String'.
+                    Equating a Function to a Variable in Javascript
+                    Is straightforward.
+                       Here are the 3 Different Ways to do it:
+                    -----------------------------------------------
+1. Using Function Expressions : You can assign to a variable using a 
+   --------------------------        function expression. PROGRAM
+       const myFunction = function() {
+           console.log("Hello, World!");
+       };
+              myFunction(); // Outputs: Hello, World!
+
+2. Using Arrow Functions : Arrow Function provide a more concise syntax.
+  -----------------------                  PROGRAM
+                 const myFunction = () => {
+                     console.log("Hello, World!");
+                 };
+                          myFunction(); // Outputs: Hello, World!
+
+3. Using Function Declarations:       Although function declarations are not 
+ ------------------------------       assigned to variables directly, they can be 
+                                      referenced by variable names.
+                     function myFunction() {
+                         console.log("Hello, World!");
+                     }
+                       const anotherFunction = myFunction;
+                     anotherFunction(); // Outputs: Hello, World!

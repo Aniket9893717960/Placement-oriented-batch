@@ -1,0 +1,140 @@
+In this video we are talking about 'Reference Data Types' like Objects,Arrays and
+what type of Buildin methods have available here. If we are talking about 'referece Type'
+How it is different from 'Premitive Datatype'.
+What is Stack Memory and Heap Memory? Why do we need to study about this concepts?
+We previously Skiped some loops like for-in for of we have to cover it?
+How to apply Functions with Arrays?
+                        For Providing all of this answers we Start this Lec.
+                        ----------------------------------------------------
+      AT the Start of the Programming in Javascript we studies about 2 Datatypes.
+      At which First is Premitive Datatype and Second Is Reference Data Type
+
+i. Premitive Datatype :
+   --------- --------
+In Premitive Datatype are those whose size is fixed at compile time.
+Memory allocation is typically done on the stack.
+we have the certain Data Types like Integer, Boolean, String, 
+undefined and Null.
+          Memory Allocation In primitive Datatype
+          ---------------------------------------
+As we are aware, primitive datatypes are typically stored in the
+stack. let's illustrate this with an example:
+
+The following code declare three variables and initialize their
+values to a literal string, a number and a boolean.
+               let name = "Aniket";
+              let age = "21";
+               let IsRunning = true;
+Now because this 3 variables are Primitive values, the javascript 
+engine stores these variables on the 'stack'.
+        --------------------NOTE---------------
+An important thing to note here is that, in most of the programming
+languages for examples Java, 'string' is considerd as reference type
+, but in javascript we treat string as Primitive datatype.
+        -----------------X-------------------
+           Value Copying (Primitive Datatype)
+           ---------------------------------
+The most inmportant Difference between Primitive and Reference Datatype
+lies in the way copies of variables are created and how variables are 
+Updated.
+
+When we assign the primitive value from one variable to another, the 
+Javascript engine creates a copy of that value and assign it to the new 
+variable. Example :
+                    let num1 = 13;
+                    let newNum = num1;
+In the above Example.
+  i. we declare a new variable num1 with initialize  its value 13.
+  ii. Then, we declare another variable newNum and assign 'num1'
+       to the 'newNum' variables.
+                        |             |
+                        |             |
+                        |newNum = 13  |
+                        | num1 = 13   |
+                        |-------------|
+                             STACK
+On the 'stack' the num1 and newNum as two different variables and hence if
+we change the value of the variable it won't affect the other variable.
+
+           Referece Data Type
+          --------------------
+This are more complex data structure that store collections of data
+and functionalities. Javascript stores references datatype in the heap.
+Since the heap memory is flexible, Javascript engine doesn't allocate 
+a fixed amount of memory for the objects.
+
+Heap memory can grow dynamically during program exceution,
+allowing the javascript engine allocates more space to the 
+objects as needed.
+
+But in Referece Datatype we have 'Objects' , 'Array' , 'functions'.
+
+What does it mean that name Or Why does we call it reference type.
+We can Explain it with the following Reasons:
+
+         i. In Javascript, When we declare variables, the Javascript
+assign the memory for them on two memory locations :
+'Stack' and 'Heap Memory', Depending on their Datatype.
+            So, whenever the 'Reference Data Type' is Created then
+Always Allocate memory in 'Heap Memory'.
+
+          Memory Allocation (Reference Datatypes)
+          ---------------------------------------
+                  let person = {
+                       name : "Mayank",
+                       age : "23",
+                       isRunning : true
+                     }
+The above example defines the num, newNum, and person variables.
+Internally, the Javascript engine allocates the memory as shown below
+                        |             |        |  person = {           |
+                        |     person  |        |   name : "Mayank",    |
+                        |newNum = 13  |        |   age : "21",         |
+                        | num = 13    |        |  isRunning : true     |
+                        |-------------|        |  }                    |
+                             STACK             |-----------------------|
+                                                          HEAP
+In the above picture, Javascript allocates memory on the stack for
+the three variables num, numNew and person.
+
+The Javascript engine creates a new objects on the heap memory and it links
+the person variables on the stack memory to the objects on the heap
+memory.
+
+Because of this, we say that the person variable is a reference the
+refers to an objects located in heap.
+               Value Copying (Reference)
+               -------------------------
+we just saw how we create a copy of primitives, but while dealing with 
+reference datatypes the things get different.
+                  let person1 = {
+                      name : "Mayank",
+                      age : "21",
+                      isRunning : true
+                }
+                let person2 = person1;
+                person2.name = "Aditya"
+              console.log(person1.name);      // Aditiya
+              console.log(person2.name);        // Aditiya
+In the above Example :
+ * we defined a person1 object with three properties i.e., name age isRunning.
+ * After that, we assigned the person1 variable to a new variable person2.
+   Since, object is a reference datatype in the memory both the variable
+   reference  the same address.
+
+
+
+
+             STACK V/S HEAP MEMORY ALLOCATION
+            ----------------------------------
+STACK : IT is used for storing local variables with primitive datatypes 
+        such as int, string, bool, etc.
+The size of stack memory is typically fixed and limited, determined at 
+compile time.
+
+Heap : Heap memory is a more flexible and dynamically memory space used 
+       for dynamic memory allocation, Heap memory is used for storing 
+       references datatypes such as objects, arrays. 
+Heap memory can grow dynamically during program exceution, and 
+its size is usually much larger than the stack.
+

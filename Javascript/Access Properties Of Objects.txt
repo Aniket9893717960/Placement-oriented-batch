@@ -2,3 +2,19 @@ Now that we have learned how to create an 'object' in Javascript,
 we should also learn how to access data from an object.
 To access the value of a particular key in an object, we typically
 use two notations :
+                       i.  Dot Notations
+                      -------------------
+In Javascript is a way to access properties or methods of an object using
+a dot(.) followed by the property or method name.
+Example : Find create an object person with name and age as it's properties
+          and a message as it's method.
+                   const person = {
+                   name = 'Mayank',
+                   age = 21,
+                   message : function() {
+                   console.log('Helloooooooooo!');
+                   }
+                  };
+         let myName = person.name;           // Mayank
+         let myAge = person.age;           // 21
+         let message = person.message();        // Hellooooo!

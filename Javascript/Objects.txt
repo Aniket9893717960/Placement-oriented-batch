@@ -1,0 +1,86 @@
+                         What are Objects in Javascript?
+                         -------------------------------
+Before we start talking up the features of Javascript Objects, let's 
+first understand the proper definition:
+
+Objects : Javascript Objects are fundamentals data structure that
+          enables the organisation and storage of data in the form
+          of key - value pairs.
+             -----------------
+Objects are the collection of key and value pairs. These 
+key and values  pairs known as properties.
+
+                          OBJECT CREATION IN JAVASCRIPT
+                          -----------------------------
+there can be typically four ways to create an Object in Javascript.
+1)         Using 'Object' literal.
+2)         Using 'new' keyword.
+3)         Using  'Object.create()' method.
+4)         Using 'Factory' functions.
+5)         Using 'Constructor' functions.
+
+     i. Using 'Object' literal
+     -------------------------
+This is the most common, easiest and straightforward way to create an 
+object. We can define the object and it's properties using the object
+literals.
+
+Object literals is a list of key - value pairs enclosed in curly braces '{}'.
+Example :                         let person = {};
+                          console.log(typeof(person));       // Output : object
+         -------------------NOTE--------------
+Every Object has properties, which are represented in Javascript as
+key - value pairs.
+
+Key : In javascript key must either be strings or valid identifier or variables
+       names. Expressions cannot be keys, also special characters are not allowed 
+in key names that are not strings.
+
+value : Value can be anything such as numbers, strings, booleans, arrays, 
+        functions and even objects.
+Example : let's add some properties such as firstName, lastName, age, hobbies
+          and a message function to be person objects.
+
+                 let person = {
+                 firstName : "Mayank",
+                 lastName  : "Panday",
+                 age : 21,
+                 hobbies : ["reading", "writing", "painting"],
+                 message : function() {
+                    console.log("Hi my name is"+ this.firstName);
+                   }
+                  };
+        ----NOTE---
+When a function is a property of an object, it is also referred to
+as a method. In the above example message property is a 'function'
+Which is also called as 'method'.
+        -----X-------
+              ---------------------X------------------
+   ii. Using 'new' keyword
+   ------------------------
+we can use the 'new' keyword along with the 'Object' constructor to 
+create an empty object and then add properties and methods to it.
+Example :
+i.      Let's create an empty person object using new keyword.
+                    let person = new Object();
+                     console.log(person);         // Output : {}
+ii. Let's add some properties such as firstName, lastName, age to the 
+    empty object created using new keyword.
+                    let person = new Object();
+                    person.firstName = "Mayank";
+                    person.lastName = "Panday";
+                    person. hobbies = ["reading","sleeping","writing"];
+                       console.log(person);
+
+                    /* Output :
+                    {
+                      firstName: 'Mayank',
+                      lastName: 'Pandey',
+                      hobbies: [ 'reading', 'sleeping', 'writing' ]
+                    }
+                    */
+   iii. Using  'Object.create()' method
+   ------------------------------------
+'Object.create{}' is another ,method to create objects. However, it involves an
+additional step compared to some other object creation methods. First, a
+prototype object is created before. Then, new objects are created using

@@ -1,0 +1,2 @@
+Now that we have learned how to create an 'object' in Javascript,
+we should also learn how to access data from an object.

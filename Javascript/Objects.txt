@@ -84,3 +84,15 @@ ii. Let's add some properties such as firstName, lastName, age to the
 'Object.create{}' is another ,method to create objects. However, it involves an
 additional step compared to some other object creation methods. First, a
 prototype object is created before. Then, new objects are created using
+that prototype. 
+Afterward, properties can be added or modified on the newly created object.
+Example :                 let personPrototype = {
+                             name : "Mayank"
+                            };
+                    let person = Object.create(personPrototype);
+                         console.log(person);                       // output : {}
+                -------------NOTE--------------------------
+An important thing to note is while, we are using 'Object.create()',
+this method creates a new empty object. In the above example
+person is a new empty object.
+                -------------X-----------------------

@@ -96,3 +96,67 @@ An important thing to note is while, we are using 'Object.create()',
 this method creates a new empty object. In the above example
 person is a new empty object.
                 -------------X-----------------------
+Example : let's add firstName, lastName, age and hobbies dynamically to the 
+          newly created person object.
+                    let personPrototype = {
+                      name : "Mayank"
+                    };
+                    let person = Object.create(personPrototype);
+                       console.log(person);                          // {}
+
+                      person.firstName = "Mayank";
+                      person.lastName = "Panday";
+                      person.age = 21;
+                      person.hobbies = ["reading","writing","sleeping"];
+                         console.log(person);
+
+                     /* Output :
+                     {
+                       firstName: 'Mayank',
+                       lastName: 'Pandey',
+                       age: 21,
+                       hobbies: [ 'reading', 'writing', 'sleeping' ]
+                     }
+                     */
+
+     iv. Using Factory functions
+     ----------------------------
+A 'factory function' can be defined as a function that creates an object and 
+returns it.
+
+Factory functions can contain inner values, methods & many more.
+They are just like normal functions but with a specific target i.e. 
+to create objects.
+Example : let's create a function 'createPerson' which returns an object with 
+          Properties as firstName, lastName, age and hobbies. 
+                    function createPerson() {
+                        return {
+                               firstName : "Mayank",
+                               lastName : "Pandey",
+                               age : 21,
+                               hobbies : ["sleeping","writing","playing"]
+                          }
+                    }
+
+       v. Using Constructor functions
+         ------------------------------
+In 'constructor functions' we don't use return keyword to return as object.
+Constructor function does nothing but initializes and defines the 
+properties in the function.
+Example:            function CreatePerson(){
+                               this.firstName = "Mayank",
+                               this.lastName = "Panday",
+                               this.age = 21,
+                               this.hobbies = ["sleeping","writing","playing"]
+                          }
+            -----------------NOTE-------------------
+* The name of constructor function should be written in 'Pascal Notation'.
+
+* In JavaScript, a constructor gets called when an object is created using the new 
+keyword. The purpose of a constructor is to create a new object and set values for 
+any existing object properties. Example :
+                        let person = new CreatePerson();
+
+*We can also pass parameters to our constructor function.
+                    let person = new CreatePerson("Love", "Babbar", 24);
+              --------------------X------------------

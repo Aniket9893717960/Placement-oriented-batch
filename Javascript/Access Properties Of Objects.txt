@@ -61,3 +61,39 @@ Example :                  const person = {
                   */
 
 If we use 'Dot Notation' for the above example we get...
+                 const person = {
+                   "name" : "Mayank",
+                   "lage" : 21,
+                  }
+                 let myName = person.name;
+                 let myAge = person.lage;
+
+                    /* Output :
+                                  ERROR
+                    */
+              --------------------NOTE----------------
+Mostly, we will be using the Dot Notation only in our programs but 'Bracket Notation' is one of the most important tools which we shouldn't forget as it has specific uses and can be life saviour in interviews.
+                 ---------------X------------
+                   Modifying objects and its properties
+                   ------------------------------------
+when it's comes to objects in javascript, we gain access to numerous features.
+One of the most powerful capabilities is that we can easitly add, delete 
+or modify properties within our objects at any time and in anu place within our 
+code.
+
+                           Adding Property
+                          -----------------
+Let's suppose we have a person object and we have only two existing properties
+firstName and age. Now, we want to add lastName and isRunning as the properties of
+the person object we can do this by assigning values to these new properties as :
+                         const person = {
+                            firstName : "Mayank",
+                            age : 21
+                           };
+                      person.lastName = "Pandey";
+                      person.isRunning = false;
+
+                           console.log(person);
+                      /* Output :
+            {firstName: 'Mayank', age: 21, lastName: 'Pandey', isRunning: false}
+                        */

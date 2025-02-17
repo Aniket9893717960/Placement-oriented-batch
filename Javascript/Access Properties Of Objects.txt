@@ -18,3 +18,46 @@ Example : Find create an object person with name and age as it's properties
          let myName = person.name;           // Mayank
          let myAge = person.age;           // 21
          let message = person.message();        // Hellooooo!
+
+                      ii. Bracket Notation
+                      --------------------
+In Javascript is another way to access properties or methods of an object
+square breackets ([]) with the property or method name enclosed within 
+them.
+                    const person = {
+                      name : 'Mayank',
+                      age : 21,
+                      message : function() {
+                      console.log('Helloooooo!');
+                      }
+                    };
+                    let myName = person["name"];
+                    let myAge = person["age"];
+                    let message = person["message"]();
+
+                    /* Output :
+                    Mayank
+                    21
+                    Hellooooooo!
+                    */
+
+                    Dot Notation V/S Bracket Notation
+                    ----------------------------------
+You most be thinking that why two different ways to access the properties
+what is the different, and which one is more convenient?.
+The answer is "we cannot use 'Dot Notation' when the property name or 
+method of an object contains special characters, space or starts with a
+number".
+Example :                  const person = {
+                                    "name" : 'Mayank',
+                                    "lage" : 21,
+                                };
+                  let myName = person["name"];
+                  let myAge = person["lage"];
+
+                  /* Output :
+                  Mayank
+                  21
+                  */
+
+If we use 'Dot Notation' for the above example we get...

@@ -97,3 +97,47 @@ the person object we can do this by assigning values to these new properties as 
                       /* Output :
             {firstName: 'Mayank', age: 21, lastName: 'Pandey', isRunning: false}
                         */
+
+                          Deleting the properties
+                          -----------------------
+Deleting the existing property in javascript is an easy as adding, we just need 
+to use the 'delete' keyword. Here is an example:
+                         const person = {
+                            firstName : "Mayank",
+                            age : 21
+                            lastName : "Pandey",
+                            isRunning : false
+                           };
+                           console.log(person);
+                      /* Output :
+            {firstName: 'Mayank', age: 21, lastName: 'Pandey', isRunning: false}
+                        */
+                        delete person.isRunning;
+                        console.log(person);
+                      /* Output :
+            {firstName: 'Mayank', age: 21, lastName: 'Pandey'}
+                        */
+
+                          Changing values of properties
+                          -----------------------------
+we can modify a property in javascript object by simply assinging a new values to
+it. Here's an example:
+                         const person = {
+                            firstName : "Mayank",
+                            age : 21
+                            lastName : "Pandey",
+                         };
+                         person.firstName = "Love";
+                         person.lastName = "Babbar";
+                         person.age = 24;
+
+                        console.log(person);
+
+                       Object Cloning
+                       --------------
+In javascript is a task primarily used when we want to duplicate an object's
+structure and values without diresctly referencing the original object.
+
+This is usedful when we need to modigy or manipulate the duplicated object independenlt from the original.
+
+we have three ways to clone objects in Javascript:

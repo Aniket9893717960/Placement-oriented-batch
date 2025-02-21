@@ -1,0 +1,134 @@
+                          i. Insertion In Array
+                          ----------------------
+We can insert elements into an array using various methods.
+In array we can insert an item/elements at various places of an
+array:
+        *Insertion at End
+        -----------------
+Using 'push' method we achive it.
+The push method adds one or more elements to the end of an
+array and returns the new length of the array.
+Example :             const fruits = ['apple', 'banana', 'orange'];
+
+                          fruits.push('kiwi');
+                          fruits.push('grapes');
+
+                          console.log(fruits); 
+             // Output: [ 'apple', 'banana', 'orange', 'kiwi', 'grapes' ]
+
+             *Insertion at Start
+             -------------------
+Using 'unshift' method we achive it.
+The unshift method Adds one or more elements to the beginning of an 
+array and returns the new length of the array.
+Example:             const fruits = ['apple', 'banana', 'orange'];
+                      fruits.unshift('kiwi');
+                      fruits.unshift('grapes');
+
+                      console.log(fruits); 
+// Output: [ 'grapes', 'kiwi', 'apple', 'banana', 'orange' ]
+
+           *Insertion at Random Index
+           ---------------------------
+Using 'splice' method we achive it.
+The splice method adds or removes elements from an array at a
+specififed index.
+         Syntax : array.splice(startIndex, deleteCount, item1, item2, ...);
+        ----------
+In the above syntax only thing we need to keep in mind is that
+          * if we only want to add new items than keep the 'deleteCount = 0', 
+        * 'startIndex' : The index at which to start changing the array
+      * If 'startIndex' is -ve, it will begin that many elements from the end
+      of the array.
+  If 'startIndex' is greater than the length of the array, it will start at the
+  length of the array.
+* If we don't wan't to add any item we can just ignore the item parameters.
+
+Let's Consider an Example:
+                    const fruits = ['apple', 'orange'];
+
+                    // Inserting 'banana' at index 1
+                    fruits.splice(1, 0, 'banana');
+                    console.log(fruits); // Output: ['apple', 'banana', 'orange']
+
+                     ii. Filter Method on Arrays
+                    -----------------------------
+the 'filer()' method is used to create a new array with all elements
+that satisfy the specific condition in the provided collback function.
+It doesn't change the original array.
+
+'filter()' method returns a new array with elements that satisfy the
+condition specified in the callback function.
+    Syntax:           const newArray = array.filter(_callback function_);
+
+'Callback function': Function to test each element of the array.It should
+                     return true to keep the element, or false otherwise.
+    Example 1 : Filter Method on Array of Numbers
+    ---------------------------------------------
+        const numbers = [-1, 0, -20, 45, 3, 74, -5, 6];
+       // Filtering +ve numbers
+      const positive = numbers.filter(function(number) {
+       return number >0;
+    });
+       console.log(positive);  // Output: [45, 3, 74, 6]
+
+    Example 2 : Filter Method on Array of Objects
+    ---------------------------------------------
+        const products = [
+    {
+        id: 1,
+        name: "Product A",
+        price: 10 
+    },
+    {
+        id: 2,
+        name: "Product B",
+        price: 20 
+    },
+    {
+        id: 3,
+        name: "Product C",
+        price: 30
+    },
+];
+
+        const expensiveProducts = products.filter((product) => product.price > 15);
+        console.log(expensiveProducts);
+
+        /* Output : 
+        [
+          { id: 2, name: 'Product B', price: 20 },
+          { id: 3, name: 'Product C', price: 30 }
+        ]
+        */
+
+         Example 3
+         ----------    const words = ["apple","banana","orange","grapefruit"];
+                  const longWords = words.filter((word) => word.length > 6);
+               console.log(longWords);      //Output ["banana","grapefruit"]
+
+
+                iii. Reduce Method on Arrays
+                ----------------------------
+the 'reduce()' method is used to reduce an array to a single value.
+It execute a provided callback function once for each element of the 
+array, resulting in a single output value.
+      Syntax 2 : array.reduce(callback(accumulator, currentValue), initialValue)
+     ----------
+  *callback : A function that executes on each element of the array,
+              taking following arguments:
+              a. accumulator : The accumulator value resulting from the reduction.
+            b. currentValue : the current element being processed in the array.\
+  
+*initialValue (optional): An initial value for the accumulator. If not provided,
+         the first element of the array will be used as the initial value,
+      and iteration start from the second element.
+
+    Example: Summing Array Elements
+    -------------------------------
+               const numbers = [1,2,3,4,5];
+         const sum = numbers.reduce((accumulator, currentValue) => {
+                  return accumulator + currentValue;
+         }, 0);
+         console.log(sum);
+                  //Output : 15

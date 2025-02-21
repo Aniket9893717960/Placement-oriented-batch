@@ -141,3 +141,68 @@ structure and values without diresctly referencing the original object.
 This is usedful when we need to modigy or manipulate the duplicated object independenlt from the original.
 
 we have three ways to clone objects in Javascript:
+        i. Iteration
+        ------------
+The most simple way to clone an object is using an iteration method. 
+Cloning an object through iteration involves creating a new object 
+and copying each property of the original object into new one using a 
+loop or iteration mechanism such as 'for in' loop.
+Example:                const person = {
+                              firstName : "Mayank",
+                              age : 21,
+                              lastName : "Pandey",
+                            }
+                    let newPerson = {};
+                    console.log(newPerson);      //{}
+
+                        for(let key in person){
+                              newPerson[key] = person[key];
+                            }
+                    console.log(newPerson);
+                    // Output : { firstName: 'Mayank',
+                                        age: 21,
+                                        lastName: 'Pandey' }
+
+        ii. Assign method
+        -----------------
+In Javascript, the 'Object.assign()' method is used to copy the values of
+all enumerables own properties from one or more sources objects to a 
+target object.
+It returns the target object after copying the properties.\
+
+        'Objects.assign(target, source1, source2,   ....sources);'
+
+target : The target object to which the properties will be copied.
+         This object will be modified and returned.
+
+sources : One or more source objects from which the properties will be
+          copied to the target object.
+
+Example :
+             const person = {
+                   name : 'Mayank',
+                    age : 21
+                  };
+          const clonedPerson = Object.assign({}, person);
+                    console.log(clonedPerson);
+          // Output : {name : 'Mayank',age: 21}
+
+       iii. Spread Operator
+       --------------------
+The quickest way to create a clone of an object is to use 
+spread operator.
+The spread operator can be used for shallow object cloning.
+Here's how we can clone an object using the spread operator:
+                    const person = {
+                              name : 'Mayank',
+                              age: 21
+                            };
+                    const clonedPerson = {... person};
+                    console.log(clonedPerson);
+          //Output : { name: 'Mayank', age: 21}
+                     ----------------NOTE----------------
+It's important to note that spread operator method performs a swallow copy,
+meaning it only copies the properties at the top level of the object.
+If the object contains nested objects,they will be referenced rather than
+cloned. For deep cloning, we need to use other techniques.
+                    --------------X-----------

@@ -1,0 +1,119 @@
+                          Question 1:
+    Can you explain the MVC (Model-View-Controller) architecture in Java?
+                    Answer :
+the MVC (Model-View-Controller) architecture is a design pattern that separates an
+application into three interconnected components:
+
+Model:
+
+Represents the data and business logic of the application.
+It directly manages the data, rules, and operations.
+Example: Java classes that interact with a database (like DAO classes).
+
+View:
+
+Handles the presentation layer — what the user sees.
+Displays data from the model and sends user actions to the controller.
+Example: JSP, HTML, or frontend frameworks.
+
+Controller:
+
+Acts as an intermediary between Model and View.
+Processes user input, updates the model, and determines the view to display.
+Example: Servlets in Java web applications.
+
+Flow:
+User interacts with the View → View sends input to Controller → Controller processes 
+it and updates the Model → Model updates View with new data.
+
+                    Question 2:
+       What is the role of Session in Java web applications?
+                Answer :
+In Java web applications, a Session is used to maintain state (data) across multiple requests from the same client. Since HTTP is a stateless protocol, each request is independent — but sessions help keep track of user-specific information across those requests.
+
+Key roles of Session:
+
+Storing User Data: Keeps user-specific data like login info, user preferences, or cart items.
+Maintaining State: Tracks user activity across multiple pages of a web app.
+Session Management: Provides methods like setAttribute(), getAttribute(), and removeAttribute() to manage data.
+Session Lifecycle: Created with request.getSession(), lasts until timeout or invalidate() is called.
+Example:
+
+HttpSession session = request.getSession();
+session.setAttribute("username", "Aniket");
+String user = (String) session.getAttribute("username");
+
+                      Question 3:
+        How do you secure a Java web application?
+                    Answer :
+Securing a Java web application involves implementing various best practices and
+security measures to protect against common vulnerabilities.
+Key strategies include:
+
+Input Validation and Sanitization: Validate and sanitize user inputs to prevent
+SQL injection, XSS (Cross-Site Scripting), and other injection attacks. 
+Use prepared statements and parameterized queries for database access.
+
+Authentication and Authorization: Implement strong authentication mechanisms,
+such as using secure password storage (e.g., hashing with BCrypt) and multi-factor
+authentication (MFA). 
+Ensure proper authorization checks are in place to restrict access to sensitive
+resources based on user roles.
+
+Secure Communication: Use HTTPS to encrypt data transmitted between the client 
+and server, protecting it from eavesdropping and man-in-the-middle attacks. 
+Obtain a valid SSL/TLS certificate for your domain.
+
+Session Management: Manage sessions securely by using secure session cookies 
+(with the HttpOnly and Secure flags) and implementing session timeouts. 
+Avoid exposing session identifiers in URLs.
+
+Cross-Site Request Forgery (CSRF) Protection: Use anti-CSRF tokens to protect 
+against CSRF attacks, ensuring that state-changing requests are intentional and 
+originate from authenticated users.
+
+Error Handling and Logging: Implement proper error handling to avoid exposing 
+sensitive information in error messages. Use logging to monitor application
+behavior and detect suspicious activity, but ensure that logs do not contain 
+sensitive data.
+
+Regular Security Audits and Updates: Conduct regular security audits and keep 
+your software dependencies up to date to mitigate vulnerabilities. 
+Use tools like OWASP Dependency-Check to identify known vulnerabilities in libraries.
+
+Content Security Policy (CSP): Implement CSP headers to reduce the risk of XSS
+attacks by specifying which resources are allowed to be loaded and executed.
+
+By following these practices, you can significantly enhance the security posture 
+of a Java web application, protecting it from various threats and vulnerabilities.
+
+                      Question 5:
+      Can you describe a project you worked on during your internship? 
+            What challenges did you face and how did you overcome them?
+               Answer :
+During my internship, I worked on a project that involved developing a 
+web application for an online voting system. 
+The objective was to create a secure platform where users could register, 
+cast their votes, and view results in real-time. 
+I was responsible for implementing the backend using Java Servlets and managing
+data with a MySQL database.
+
+One of the significant challenges I faced was ensuring the security and integrity
+of the voting process. I needed to implement authentication and authorization 
+mechanisms to prevent unauthorized access and ensure that each user could vote 
+only once. To address this, I utilized session management and encrypted user 
+credentials, which helped mitigate security risks.
+
+Another challenge was extracting data from user-uploaded Aadhaar cards. 
+I initially struggled with the Optical Character Recognition (OCR) implementation
+using Tess4J, as I had difficulty locating the required native libraries. 
+I overcame this by thoroughly researching and downloading the appropriate versions
+of Tess4J and configuring my environment correctly.
+
+Additionally, I had to ensure a smooth user experience. This required me to gather
+feedback from potential users and iterate on the interface based on their input. 
+By applying agile methodologies, I was able to make rapid improvements and deliver
+a user-friendly application.
+
+Overall, this project enhanced my technical skills in Java web development and 
+taught me the importance of security and user experience in application design.

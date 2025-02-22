@@ -1,0 +1,151 @@
+                             Question 1 :-                 
+What is object-oriented programming (OOP)? Explain the four pillars of OOP in Java.
+              Answer :-
+Object-Oriented Programming (OOP) is a programming paradigm that organizes code into
+"objects," which are instances of classes, and allows for modular, reusable, and
+maintainable code. In Java, OOP helps developers design software by modeling real
+-world entities and relationships, making it easier to manage complex systems.
+
+The four pillars of OOP in Java are:
+
+Encapsulation: This is the practice of wrapping data (variables) and code (methods) 
+within a single unit, or class, and controlling access through access modifiers 
+(e.g., private, public). Encapsulation protects an object's state from unintended 
+interference and misuse, making it secure and modular.
+
+Abstraction: Abstraction focuses on exposing only essential features and hiding the 
+unnecessary details from the user. Java uses abstract classes and interfaces to 
+implement abstraction, allowing you to define "what" an object does rather than 
+"how" it does it.
+
+Inheritance: Inheritance allows one class to inherit properties and methods from 
+another, promoting code reuse. It creates a parent-child relationship where 
+subclasses inherit and extend the functionality of a superclass, enabling 
+polymorphism and simplifying code maintenance.
+
+Polymorphism: Polymorphism lets objects be treated as instances of their parent 
+class, allowing for flexible code. It comes in two forms: compile-time (method 
+overloading) and runtime (method overriding), making the same operation behave 
+differently on different classes.
+
+                            Question - 2
+How does exception handling work in Java? Can you explain try-catch-finally blocks?
+                   Answer :
+Exception handling in Java is a mechanism that allows us to manage unexpected events 
+or errors that may occur during program execution, ensuring the program can handle 
+issues gracefully without crashing. It helps in identifying, catching, and managing 
+errors to maintain smooth and secure program flow.
+
+The try-catch-finally blocks work as follows:
+
+try block: This is where you place the code that might throw an exception. If an 
+exception occurs in this block, it stops execution here and immediately moves to the 
+catch block.
+
+catch block: This handles the exception thrown from the try block. You can specify 
+different catch blocks for different exception types, allowing for precise handling. 
+For instance, catch (IOException e) catches only IOException.
+
+finally block: This block is optional and always executes, regardless of whether an 
+exception occurred or was caught. It’s typically used for cleanup tasks, like 
+closing resources (files, database connections), ensuring they are handled properly.
+
+              try {
+                  int result = 10 / 0;  // This line throws an ArithmeticException
+              } catch (ArithmeticException e) {
+                  System.out.println("Cannot divide by zero!");
+              } finally {
+                  System.out.println("Execution completed.");
+              }
+
+In this example, if an exception occurs, the catch block handles it, and the finally 
+block runs afterward. This structure ensures the program can continue smoothly even 
+after an error.
+
+                           Question 3
+         What is the difference between == and .equals() in Java?
+  Answer :
+In Java, == and .equals() serve different purposes when comparing objects:
+
+==: This operator checks for reference equality, meaning it checks whether two 
+variables point to the same memory location. For example, a == b is true only if a 
+and b refer to the exact same object.
+
+.equals(): This method is used to check for content equality or whether two objects 
+have the same values. By default, Object class’s .equals() checks reference 
+equality, but classes like String override it to compare the actual content. For 
+example, "Hello".equals("Hello") is true because the content matches, even though 
+they may be different objects in memory.
+
+In summary, use == for checking if two references point to the same object, and 
+.equals() for comparing the actual content or state of the objects.
+
+                          Question 4
+      Explain the concept of multithreading in Java. How do you implement it?
+              Answer :
+Multithreading in Java is a process that allows multiple threads (small units of a 
+process) to execute concurrently within a program. It enables better utilization of 
+CPU resources by running multiple tasks at the same time, which is especially useful 
+in applications that involve complex calculations, GUI updates, or I/O operations, 
+as it enhances performance and responsiveness.
+
+In Java, you can implement multithreading in two main ways:
+
+Extending the Thread class: By creating a class that extends Thread and overriding 
+its run() method. Then, you can start the thread using the start() method.
+
+           class MyThread extends Thread {
+               public void run() {
+                   System.out.println("Thread is running.");
+               }
+           }
+
+Implementing the Runnable interface: By creating a class that implements Runnable 
+and defining the run() method. This approach is often preferred as it allows the 
+class to extend another class if needed. The Runnable object is then passed to a 
+Thread instance to start the thread.
+
+          class MyRunnable implements Runnable {
+              public void run() {
+                  System.out.println("Runnable thread is running.");
+              }
+          }
+
+In both cases, the run() method contains the code to be executed by the thread, and 
+the start() method begins execution, allowing the program to run multiple threads 
+simultaneously.
+
+                     Question 5
+    What is the difference between interfaces and abstract classes?
+              Answer :
+In Java, interfaces and abstract classes are used to achieve abstraction, but they have important differences:
+
+Interfaces: An interface is a blueprint for a class that defines a contract of 
+methods without providing their implementation. All methods in an interface are 
+implicitly public and abstract (except for default and static methods in Java 8+), 
+and fields are public, static, and final by default. A class can implement multiple 
+interfaces, which promotes flexibility and supports multiple inheritance of 
+behavior.
+
+   interface Vehicle {
+       void start();
+   }
+
+Abstract Classes: An abstract class is a class that cannot be instantiated on its 
+own and may contain both abstract methods (without implementation) and concrete 
+methods (with implementation). Abstract classes are used when classes share a 
+common base but also need individual implementations. A class can extend only one 
+abstract class, but it can provide shared state and behavior via instance variables 
+and implemented methods.
+
+      abstract class Car {
+          abstract void drive();
+             void stop() {
+                 System.out.println("Car stopped.");
+             }
+      }
+
+Key Differences: Interfaces emphasize "what" a class should do without 
+implementation details, while abstract classes provide a partial implementation 
+with shared functionality. Use interfaces for a contract across unrelated classes 
+and abstract classes for a common base with shared state among related classes.

@@ -1,0 +1,162 @@
+              Question 1
+    What is Java Reflection API, and where is it used?
+      Answer :
+The Java Reflection API is a feature in Java that allows runtime inspection and 
+manipulation of classes, methods, fields, and constructors. 
+It enables Java code to examine or modify itself, making it possible to create flexible
+and adaptable programs. 
+Reflection is especially useful in scenarios where we don’t know certain details
+about classes or methods at compile time.
+
+Where it's used:
+
+Frameworks and Libraries: Reflection is commonly used in Java frameworks 
+like Spring and Hibernate to dynamically access and manipulate objects and methods,
+helping in dependency injection and configuration.
+
+Testing and Debugging Tools: Reflection enables unit testing frameworks
+like JUnit to invoke private methods for testing purposes, and it’s also
+used to inspect objects during debugging.
+
+Dynamic Proxies: Java Reflection allows for creating dynamic proxies,
+enabling the implementation of interfaces at runtime, which is useful
+in remote method invocation (RMI) and Aspect-Oriented Programming (AOP).
+
+Example:
+         Class<?> cls = Class.forName("com.example.MyClass");
+         Method method = cls.getDeclaredMethod("myMethod");
+               method.invoke(cls.newInstance());
+
+In this example, Reflection is used to access and invoke a method dynamically. 
+Although powerful, Reflection should be used judiciously as 
+it can impact performance and security.
+
+                  Question 2
+    Explain Java Streams and how they can be used to handle collections.
+             Answer :
+Java Streams is an API introduced in Java 8 that provides a functional 
+approach to processing collections of data. 
+It allows developers to perform operations like filtering, mapping, and
+reducing data in a concise and efficient way, making code more readable
+and expressive.
+
+How they can be used to handle collections: Streams transform collections 
+into a sequence of elements, allowing operations to be performed on them
+in a pipeline without modifying the original collection. Streams support 
+operations like filter, map, sorted, and collect, enabling complex transformations
+with minimal code.
+
+Example:
+       List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+List<String> filteredNames = names.stream()
+                                  .filter(name -> name.startsWith("A"))
+                                  .map(String::toUpperCase)
+                                  .collect(Collectors.toList());
+
+In this example, the stream filters names starting with "A,"
+converts them to uppercase, and collects them into a new list.
+
+Using streams not only improves readability but also allows parallel 
+processing with .parallelStream(), making it powerful for handling large datasets
+efficiently.
+
+
+                    Question 3
+    What are Java Servlets? How do they work in web development?
+           Answer :
+Java Servlets are server-side Java components that handle client requests
+and generate dynamic responses for web applications.
+Servlets run on a web server and play a key role in Java-based web development 
+by acting as a middle layer between client requests (like those from a browser)
+and the server’s backend resources (like databases or APIs).
+
+How they work in web development:
+
+Request Handling: When a client sends a request (usually HTTP),
+                  the servlet container (like Apache Tomcat) creates an instance of 
+the servlet, if not already created, and calls its service() method. 
+This method then routes the request to either doGet() or doPost() based on the HTTP
+method.
+
+Processing and Response Generation: Inside these methods, the servlet processes 
+                                   the request, often involving business logic and 
+database operations. Once processed, the servlet generates a response 
+(e.g., HTML, JSON) which is sent back to the client.
+
+Example:
+              @WebServlet("/welcome")
+              public class WelcomeServlet extends HttpServlet {
+                  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+                      response.setContentType("text/html");
+                      response.getWriter().println("<h1>Welcome to My Website</h1>");
+                  }
+              }
+
+In this example, the WelcomeServlet responds with HTML content when accessed 
+via a GET request.
+
+Servlets are essential for creating dynamic, interactive web applications in Java,
+handling tasks like session management, form data processing, and interacting with
+databases.
+
+
+                  Question 4
+   What is a Java Bean? When should it be used?
+          Answer :
+A Java Bean is a reusable software component in Java that follows specific
+conventions, making it easy to encapsulate data and share between applications.
+A Java Bean class must be public, have a no-argument constructor, provide get
+and set methods for accessing private properties, and be serializable.
+
+When it should be used: Java Beans are ideal for managing data in enterprise
+applications, as they help in separating business logic from presentation. 
+They’re commonly used in frameworks like JSP and Spring for managing data 
+and dependency injection. Java Beans make code cleaner and easier to maintain
+by providing a standardized way to encapsulate data.
+
+Example :
+        public class User implements java.io.Serializable {
+            private String name;
+            private int age;
+    
+            public User() {}  // No-argument constructor
+    
+            public String getName() { return name; }
+            public void setName(String name) { this.name = name; }
+    
+            public int getAge() { return age; }
+            public void setAge(int age) { this.age = age; }
+        }
+
+In this example, the User bean holds user data with get and set methods, 
+allowing other components to interact with it in a consistent way.
+
+
+               Question 5:
+      How do you manage memory in Java (Garbage Collection)?
+             Answer :
+In Java, memory management is largely handled by the Garbage Collection (GC) 
+mechanism, which automatically deallocates memory for objects that are no longer
+in use. This process helps prevent memory leaks and optimizes memory
+usage without requiring manual intervention from developers, as in languages
+like C++.
+
+How Garbage Collection works: The GC process runs in the background, identifying 
+objects that are no longer referenced by the application. Once identified,
+these unreferenced objects are marked for collection and their memory is
+reclaimed. The two main techniques Java uses for GC are:
+
+Mark-and-Sweep: This technique scans the heap to mark 
+live objects and sweep out the unreferenced ones.
+Generational Collection: Java divides the heap into generations—Young Generation,
+Old Generation, and Permanent Generation (or Metaspace in newer versions). 
+Objects are initially allocated in the Young Generation, and long-lived objects
+are eventually moved to the Old Generation, which optimizes collection frequency 
+and efficiency.                                     Example of triggering GC:
+            
+       System.gc();  // Suggests garbage collection, though not guaranteed
+
+While GC in Java is automatic, developers can optimize memory usage by nullifying
+references when objects are no longer needed or using design patterns that 
+reduce object creation, like object pooling. 
+This ensures smoother and more efficient memory management in applications.

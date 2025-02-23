@@ -5,3 +5,12 @@
        and strong grasp of Java and web development concepts. 
       My dedication, problem-solving skills, 
              and consistent performance also played a big role.
+
+                          Question 2:
+   What were some key learning experiences from your internship?
+          Answer :
+  During my internship, I gained hands-on experience in Java (Core + Advanced), web 
+development, and servlets. I improved my problem-solving skills, learned about 
+building full-stack applications, and strengthened my understanding of DBMS and data 
+structures. It also taught me time management and collaboration in a development 
+environment.

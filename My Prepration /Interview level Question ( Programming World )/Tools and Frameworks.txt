@@ -1,0 +1,17 @@
+                           Question 1:
+          Which IDE did you use for development during your internship 
+          (e.g., NetBeans, Eclipse)?
+                       Answer:
+              I used NetBeans 8.2 for development during my internship.
+
+                          Question 2:
+          Did you work with any build tools or frameworks (like Maven or Spring)? 
+           answer briefly because u know about me?
+                      Answer:
+          No, I didn’t use Maven — and I haven’t worked with Spring yet.
+
+                       Question 3:
+          How did you manage your codebase? Did you use version control (e.g., Git)?
+                Answer:
+          During my internship, I didn’t use version control like Git — 
+          I managed my codebase directly in NetBeans.

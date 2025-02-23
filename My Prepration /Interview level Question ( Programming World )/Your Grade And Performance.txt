@@ -1,0 +1,7 @@
+                           Question 1:
+            What do you think contributed to earning the grade A?
+                  Answer :
+      I earned the grade A due to my hard work, quick learning ability, 
+       and strong grasp of Java and web development concepts. 
+      My dedication, problem-solving skills, 
+             and consistent performance also played a big role.

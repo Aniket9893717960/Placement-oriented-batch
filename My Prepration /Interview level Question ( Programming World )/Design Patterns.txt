@@ -1,0 +1,131 @@
+                          Question 1:
+         Can you explain some common design patterns in Java?
+               Answer:
+  Singleton Pattern: Ensures only one instance of a class exists.
+Factory Pattern: Creates objects without specifying the exact class.
+Builder Pattern: Simplifies complex object creation with step-by-step construction.
+Observer Pattern: Notifies multiple objects when a state changes.
+Decorator Pattern: Adds behavior to objects dynamically without altering their structure.
+
+                         Question 2:
+           What is the Singleton pattern, and how do you implement it in Java?
+                Answer:
+     The Singleton pattern is a creational design pattern in Java that 
+    ensures a class has only one instance and provides a global point of
+    access to that instance. It’s often used for things like database connections,
+    logging, configuration settings, or caches, where having multiple instances 
+    could lead to inconsistencies or resource overuse.
+
+Key Characteristics of Singleton Pattern:
+
+Single Instance: Only one instance of the class is created.
+Global Access: The single instance is accessible from anywhere in the application.
+Private Constructor: Prevents instantiation from outside the class.
+Static Instance: Holds the single instance of the class.
+Implementation of Singleton Pattern in Java:
+     1. Eager Initialization: (Simple and thread-safe)
+
+      class Singleton {
+         // Eagerly creating the single instance
+         private static final Singleton instance = new Singleton();
+
+         // Private constructor to prevent instantiation
+         private Singleton() {}
+
+         // Global access point
+         public static Singleton getInstance() {
+             return instance;
+         }
+
+         public void showMessage() {
+             System.out.println("Hello from Singleton!");
+         }
+     }
+     public class Main {
+         public static void main(String[] args) {
+             Singleton singleton = Singleton.getInstance();
+             singleton.showMessage();
+         }
+     }
+
+   Output :
+          Hello from Singleton!
+
+      2. Lazy Initialization: (Creates instance only when needed)
+
+     class Singleton {
+         private static Singleton instance;
+
+         private Singleton() {}
+
+         public static Singleton getInstance() {
+             if (instance == null) { // Instance created only when requested
+                 instance = new Singleton();
+             }
+             return instance;
+         }
+     }
+
+      3. Thread-Safe Singleton: 
+             (Ensures single instance even in multi-threaded environments)
+
+    class Singleton {
+        private static Singleton instance;
+
+        private Singleton() {}
+
+        public static synchronized Singleton getInstance() {
+            if (instance == null) {
+                instance = new Singleton();
+            }
+            return instance;
+        }
+    }
+
+      4. Double-Checked Locking: 
+                (Optimized thread-safe approach)
+
+    class Singleton {
+        private static volatile Singleton instance;
+
+        private Singleton() {}
+
+        public static Singleton getInstance() {
+            if (instance == null) {
+                synchronized (Singleton.class) {
+                    if (instance == null) {
+                        instance = new Singleton();
+                    }
+                }
+            }
+            return instance;
+        }
+    }
+
+When to Use Singleton Pattern:
+             Database connections (like in your Online Voting System project)
+             Logging frameworks
+            Configuration managers
+            Caching and thread pools
+
+
+                     Question 3:
+        How does the Factory Method pattern work, and when would you use it?
+              Answer :
+      The Factory Method pattern is a creational design pattern in Java that provides an interface for creating objects but lets subclasses decide which class to instantiate. It promotes loose coupling by delegating object creation to a method in a separate class, instead of using new directly.
+
+How the Factory Method Pattern Works:
+
+Defines an interface or abstract class for creating an object.
+Subclasses implement the factory method to specify the type of object they will create.
+Client code calls the factory method, but doesn’t need to know the specific class being instantiated — just the interface.
+Why Use the Factory Method Pattern:
+
+When the exact type of object isn’t known until runtime.
+To centralize object creation logic, especially when it’s complex.
+To promote loose coupling and adhere to the Open/Closed Principle — open for extension, closed for modification.
+When you switch between different implementations of a class without changing client code.
+Factory Method Pattern Example:
+Let’s say you’re building an Online Voting System, and you need different types of users like Admin and Voter. Instead of using new directly, let’s use the Factory Method pattern.
+
+Step 1: Create an Interface

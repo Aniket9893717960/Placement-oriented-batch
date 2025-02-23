@@ -1,0 +1,105 @@
+                           Question 1
+           How do you optimize a Java application for performance?
+                    Answer 
+Efficient Data Structures: Use the right collections (like ArrayList vs LinkedList, 
+                           HashMap vs TreeMap) based on access and modification needs.
+
+Optimize Loops: Minimize expensive operations inside loops and use enhanced
+                for-loops when possible.
+
+Avoid Unnecessary Object Creation: Reuse objects and use StringBuilder 
+                                  for string manipulation instead of +.
+
+Use Caching: Cache frequently used data to reduce repetitive computations 
+             or I/O operations.
+
+Optimize Database Access: Use batch processing, proper indexing, 
+                          and connection pooling for efficiency.
+
+Profiling and Monitoring: Use tools like VisualVM or JProfiler to 
+                          identify performance bottlenecks.
+
+Garbage Collection Tuning: Optimize JVM settings and garbage collection 
+                           strategy for your application’s needs.
+
+Multi-Threading: Leverage concurrency for I/O-bound or CPU-bound tasks 
+                 to improve throughput.
+
+                  Question 2:
+         Can you write a Java program to reverse a linked list?
+           Answer :
+  class Node {
+      int data;
+      Node next;
+
+      Node(int data) {
+          this.data = data;
+          this.next = null;
+      }
+  }
+
+  public class ReverseLinkedList {
+      public static Node reverse(Node head) {
+          Node prev = null;
+          Node current = head;
+  
+          while (current != null) {
+              Node next = current.next; // Store next
+              current.next = prev;      // Reverse the link
+              prev = current;           // Move prev forward
+              current = next;           // Move current forward
+          }
+          return prev; // New head
+      }
+
+      public static void printList(Node head) {
+          Node temp = head;
+          while (temp != null) {
+              System.out.print(temp.data + " -> ");
+              temp = temp.next;
+          }
+          System.out.println("null");
+      }
+
+      public static void main(String[] args) {
+          Node head = new Node(1);
+          head.next = new Node(2);
+          head.next.next = new Node(3);
+          head.next.next.next = new Node(4);
+
+          System.out.println("Original List:");
+          printList(head);
+
+          head = reverse(head);
+
+          System.out.println("Reversed List:");
+          printList(head);
+      }
+  }
+
+  OUTPUT :
+      Original List:  
+      1 -> 2 -> 3 -> 4 -> null  
+      Reversed List:  
+      4 -> 3 -> 2 -> 1 -> null  
+
+
+                      Question 3:
+    How would you handle large file processing in Java?
+          Answer:
+Buffered Streams: Use BufferedReader or BufferedInputStream for efficient
+                  reading to avoid loading the entire file into memory.
+
+FileChannel and ByteBuffer: For faster I/O, use FileChannel with memory-mapped 
+                            files or ByteBuffer.
+
+Line-by-Line Processing: Read and process files line-by-line using BufferedReader.
+                         readLine().
+
+Multi-Threading: Split large files and process them in parallel using threads
+                  or an ExecutorService.
+
+Streaming API: Java 8’s Files.lines() for lazily reading lines without loading
+               the whole file.
+
+Apache Commons or OpenCSV: For CSV or structured files, use optimized libraries.

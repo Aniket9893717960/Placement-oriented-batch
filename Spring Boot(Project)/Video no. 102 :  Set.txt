@@ -17,6 +17,18 @@ Now i want to specify not an 'array list' Because Yes 'Set' Extends
 'Collection' i agree But class which implement 'SET' is different
 So, the class name we use for 'SET' is 'HashSet' Apart from this the Syntax
 will remain same also have 'add' method here
+     Certain Things to Remember
+     -------------------------- If you see the documentation then it says:
+Set basically is a collection of unique values. More formally, sets contain 
+no pair of elements e1 and e2 such taht 'e1.equals(e2)' , and at most
+one null element.
+As implied by its name, this interface models the mathematical set 
+abstraction.
+
+The 'Set' Interface places additional structure, beyond those inherited 
+from the 'Collection' interface, on the contracts of all constructors and
+on the contracts of the add, equals and hashCode methods.
+Declaration methods are also included here for convenience.
 Example:
             import java.util.HashSet;
             import java.util.Set;
@@ -35,3 +47,11 @@ Example:
                 }
             }
               The Certain Points we Get form this are:
+i. Set Doesn't allow Repetative value.
+ii. It will not print the value at same order.
+                  ----------------NOTE---------------------
+* Set Doesn't allow index oriented methords like 'get','indexOf'
+* Set was introduced in version '1.2'
+* This interface is also called as Java collection Framwork.
+                  -----------------------------------------
+                  

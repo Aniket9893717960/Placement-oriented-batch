@@ -1,7 +1,7 @@
 Now let's talk about 'collection'. The funny thing is 
 in this topic we have three Different Type of collection.
 
-The first we have 'collection APT'
+The first we have 'collection API'
                   ----------------
 The second one is collection
                   -----------
@@ -74,6 +74,9 @@ the array which we have worked with it's fixed size.
 let's example if we create an array of size '5' it will be '5'.
 U can't extend it.
 
+              int num =5;
+            int num[] = new int[5];
+
 If there is a scenario where u want to expand an array and u 
 want an array of '7' size now.
 So, of course in the existing array u can't do that and that's
@@ -86,3 +89,5 @@ size 7 here And copy all the elements in 'nums' array.
 If u will create an array which is dynamic so, it's exciting 
 to work with data and u can use different algorithms to work 
 with it.
+
+How we have to use collection API we will see it in the next video.

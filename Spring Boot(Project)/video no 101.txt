@@ -121,3 +121,19 @@ Example :
           int num = (Integer)n;          // Material That's why we got 
            System.out.println(num*2);     // 'String cannot be converted to Integer'
         }
+            --------------------X-------------------------
+As we talk about 'ArrayList' so, 'ArrayList' is a class which contain
+the class 'List' and if we talk about this list then list does have a method
+name 'Get'.
+
+*GET : Method will be use to show the data of the particular index.
+       We have to Enter index to show the data at particular index.
+       Example :      List<Integer>  nums = new ArrayList<Integer>();
+                      nums.add(5);
+                      System.out.println(nums.get(0));     // Output : 5
+
+*indexof : method will be search the index of Particular data.
+           We have to Enter data to show the index of those data.
+       Example :      List<Integer>  nums = new ArrayList<Integer>();
+                      nums.add(5);
+                      System.out.println(nums.indexOf(5));     // Output : 0

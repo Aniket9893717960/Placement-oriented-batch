@@ -1,0 +1,37 @@
+At this point we were talk about 'list' right so,
+we can create list and work with index's then
+Only thing is if we talk about 'list' So, 
+it's great does support multiple values it's a 
+feature allright we doesn't talk about drowbacks here.
+
+But some times you want to done a correction where you have the 
+unique values whenever we talk about the 'collection interface'.
+
+                        SET Interface
+                        -------------
+It was also Extended by 'SET' interface. Now 'SET' support unique
+values what we do now is Instide of 'List' i will say 'SET' Values
+Where 'SET' belongs to 'java.util' Package.
+
+Now i want to specify not an 'array list' Because Yes 'Set' Extends
+'Collection' i agree But class which implement 'SET' is different
+So, the class name we use for 'SET' is 'HashSet' Apart from this the Syntax
+will remain same also have 'add' method here
+Example:
+            import java.util.HashSet;
+            import java.util.Set;
+
+            public class Ts{
+                   public static void main(String args[]){
+                       Set<Integer> nums = new HashSet<Integer>();
+                         nums.add(6);
+                         nums.add(5);
+                         nums.add(8);
+                         nums.add(2);
+                         nums.add(6);
+
+                        for(int n : nums)                            OUTPUT
+                       System.out.print(n+"\t");           2       5       6       8
+                }
+            }
+              The Certain Points we Get form this are:

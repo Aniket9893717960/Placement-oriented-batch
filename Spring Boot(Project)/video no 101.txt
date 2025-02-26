@@ -1,2 +1,43 @@
 In previous video we read the theory of collection Now let's start the 
-implemenentation
+implemenentation and of course this will make much more sense once we do
+it.
+If you talk about the collection we were talking about the 'collection'
+interface Remember in last lecture we were talk about 'Collection API'
+Which is the concept.
+
+Now at this concept we have multiple classes and interfaces to work with
+So, the first Interface we are Exploring here is 'Collection Interface'.
+
+                # Collection Interface
+                  --------------------
+'Collection Interface' belongs to 'Java.util' package As we have noticed
+most of the classes which we used in Previous lectures are belongs to
+'Java.lang' package So, that's why we doesn't imported them But if we talk about collection interface it will belongs to 'java.util' Package.
+
+when we talk about all the classes of 'Collection Interface' those will
+belongs to this package.
+But the Problem is we doesn't use 'new' keyword for calling 'Collection'
+because it's an interface.
+              There are some solution for this problem
+i. Prepare your own method with your self.
+ii. If you don't want create your own class let's we use some inner classes.
+    and that's right we use so many inner classes to work with.
+    Let's Extend it :
+                        Collection Interface
+                            |        - Some more Interface under this.
+              -------------------------------------
+              |                |                  |
+            List             Queue               Set          -All This interfaces 
+                                             will Extend the collection interface or 
+        individually all this interfaces it's own implementation Example:
+
+            List             Queue               Set 
+             |                 |                  |
+             |-> Array      This also             |-> HashSet
+                 List       have different        |-> Linked HashSet
+             |-> Linked     Classes Example:
+                 List       Dequeue
+
+Apart from this if we were talking about 'Collection API' we have one more thing
+ to work with which is something called 'Map'
+Map have multiple implementation which we learn when we start with map. 

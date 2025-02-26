@@ -1,0 +1,2 @@
+In previous video we read the theory of collection Now let's start the 
+implemenentation

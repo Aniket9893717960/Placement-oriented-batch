@@ -1,3 +1,9 @@
+                        -----------NOTE ------------
+*Collection will extend/child of 'Iterable' or in 'Iterable' we 
+have the option called Iterator.
+*'Iterator' will return an Iterator.
+*This will have the method called 'hasNext' which will told who is next.
+                         --------X------------
 At this point we were talk about 'list' right so,
 we can create list and work with index's then
 Only thing is if we talk about 'list' So, 
@@ -54,4 +60,18 @@ ii. It will not print the value at same order.
 * Set was introduced in version '1.2'
 * This interface is also called as Java collection Framwork.
                   -----------------------------------------
-                  
+
+                  What If you want Sorted Value in Set
+                  -------------------------------------\
+Nathing Just use the  class name 'TreeSet'.
+            Set<Integer> nums = new TreeSet<Integer>();
+TreeSet Extends the 'AbstractSet' and implement a 'NavigableSet<E>' and
+If i go to 'NavigableSet<E>' so this 'NavigableSet' will extends the
+'SortedSet' That's why all the elements in the tree Set will be sorted.
+
+TreeSet is one of the most important implementations of the SortedSet interface in 
+Java that uses a Tree(red – black tree) for storage. The ordering of the elements is 
+maintained by a set using their natural ordering whether or not an explicit 
+comparator is provided. This must be consistent with equals if it is to correctly 
+implement the Set interface. 
+

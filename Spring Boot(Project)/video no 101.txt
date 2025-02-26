@@ -12,6 +12,7 @@ So, the first Interface we are Exploring here is 'Collection Interface'.
                   --------------------
 'Collection Interface' belongs to 'Java.util' package As we have noticed
 most of the classes which we used in Previous lectures are belongs to
+
 'Java.lang' package So, that's why we doesn't imported them But if we talk about collection interface it will belongs to 'java.util' Package.
 
 when we talk about all the classes of 'Collection Interface' those will
@@ -80,8 +81,9 @@ So, Now we can add values For this we use add values:
                                    nums.add(8);
                                    nums.add(2);
                                  System.out.print(nums);
-                          }
-                      }
+                          }                           //OUTPUT :
+                      }                               // [6,5,8,2]
+                                
                 ------------------NOTE-----------------
 If we run this Program we got a 'WARNING' name
 'Note: Ts.java uses unchecked or unsafe operations.
@@ -89,4 +91,33 @@ Note: Recompile with -Xlint:unchecked for details.'
 because you’re using a raw type for Collection — meaning you didn’t specify what 
 type of objects it will hold. Java warns you because this can lead to type-safety 
 issues.
+
+* We doesn't have indexing methord for collection API.
                         ---------------X------------
+ For Printing Each Value of collection we use a 'for-each' loop
+like this :
+                    for(int n : nums)
+                     System.out.println(n);
+But at 'for(int n : nums)' line we are getting an error name
+'Type mismatch: cannot convert from element type object to int'
+
+But the only problem here at 'Collection nums = new ArrayList();'
+because in array we ensure that data have specific datatype but here 
+we doesn't specify so compiker will treat 'collection' as 'object'
+For Remove this error we have to maintoined what data 'collection'
+will return with the help of This Command.
+              Collection<Integer> nums = new ArrayList<Integer>();
+                           |->why because collection only work with objects
+                              not a Primitive Datatype.
+
+          --------------------NOTE------------------------
+     Collection<Integer>
+                   |-> why this line is so, important because
+This will help to remove the bugs of your code.
+Example :
+        Collection nums = new ArrayList();
+        nums.add("5");                  // ---> We got Exception because 
+        for(Object n : nums){             //Compiler will not Detected  the inner 
+          int num = (Integer)n;          // Material That's why we got 
+           System.out.println(num*2);     // 'String cannot be converted to Integer'
+        }

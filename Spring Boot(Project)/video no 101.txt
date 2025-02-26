@@ -41,3 +41,52 @@ ii. If you don't want create your own class let's we use some inner classes.
 Apart from this if we were talking about 'Collection API' we have one more thing
  to work with which is something called 'Map'
 Map have multiple implementation which we learn when we start with map. 
+
+             At this Point we can Start with either List and set but Let's
+                start with Set:
+             --------------------------------------------------------------
+So, Instead of 'collection' we initialize 'collection Interface' with 
+'ArrayList' like this:
+                    Collection nams = new ArrayList();
+Now we got collection 'nams' with 'new ArrayList' 
+
+                      Now We Exploring Methords of 'ArrayList'
+                      ----------------------------------------
+We have some methods like 
+                        add(Object e) // Boolean
+                        addAll(Collection c) //boolean
+                        contains(Object o)  //boolean
+                        conatainsAll(Collection c) // boolean
+                        equals(Object o)  // boolean
+                        notify() //void
+                        notifyAll()  //void
+                        remove(Object o) //boolean                            
+            toArray() // convert 'collection' to 'array' return type 'object'
+
+So, Now we can add values For this we use add values:
+                Collection nums - new ArrayList();
+                             nums.add(6);  // Since it's a no to Ensure that
+                                                ArrayList have only numbers.
+  Build the Full flaget Program
+  -----------------------------
+                      import java.util.Collection;
+                      import java.util.ArrayList;
+
+                      public class Ts{
+                             public static void main(String args[]){
+                                 Collection nums = new ArrayList();
+                                   nums.add(6);
+                                   nums.add(5);
+                                   nums.add(8);
+                                   nums.add(2);
+                                 System.out.print(nums);
+                          }
+                      }
+                ------------------NOTE-----------------
+If we run this Program we got a 'WARNING' name
+'Note: Ts.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.'
+because you’re using a raw type for Collection — meaning you didn’t specify what 
+type of objects it will hold. Java warns you because this can lead to type-safety 
+issues.
+                        ---------------X------------

@@ -1,0 +1,61 @@
+The First Question is Why do we need Map?
+So, the thing is when you work with list let's say we have list of values
+The values are 56  23  67  92
+We have this values and let's say we have the 'ArrayList' here
+So, basically you have to work with index's zero123 But Some times
+It's better to have a name For the different kind of index instead of heaving
+'0123' let's we talk about phone book which will have the 'Name' and 'Number'
+
+Example:
+        we have to pro ject Name as index and it's Marks in inner digit 
+This will not Possible in 'List' But it's possible in 
+             Key And Value Pair
+Example :
+         Key     Value
+        Navin    56
+        Harsh    23
+        Shushi   67
+        Kiran    92
+And we can Achieve this two things in one DataType or DataStructure
+Which Is 'Map'.
+                      MAP Interface
+                      --- ---------
+So, The 'Map' Is the collection of Key and Value Pairs So, how do we
+achive that.
+Map itself is an Interface which Contains two Parameter 'Key' and
+'Value'.
+Now if we talk about 'Arraylist' So, this have Either because It's
+Represent Elements.
+In 'public interface Map<K, V>' in which 'K' represent 'key' and
+'V' represent Values. So, this 'k' ant 'V' will be replaced with
+Datatype like 'integer', 'Float', 'String' or what ever you work 
+with.
+So, you have to look class which implement this
+          'Map<String,Integer> students = new HashMap<>();'
+                 |-> In this you should have Disclose the type of it
+                      Is Necessary.
+In MAP : To add a method u have to use method name 'put'
+          At which you have to pass two Parameter.
+like :       'students.put("Navin",56);'
+                       ------------NOTE----------
+*In 'List' to access any value we are using 'index' But in
+  'Map' we have the logical Link to it.
+                    ----------X---------
+At last we just use 'System.out.print' to print the 'MAP' itself.
+The Implementation of whole Program looks like :
+
+import java.util.Map;
+class Demo {
+      public static void main(String args[]){
+           Map<String,Integer> students = new HashMap<>();
+
+           students.put("Navin",56);
+           students.put("Harsh",23);
+           students.put("Sushil",67);
+           students.put("Kiran",56);
+                                                      //OUTPUT
+           System.out.println(students);   //{Navin=56, Sushil=67, Kiran=92, Harsh=23}
+        }
+     }
+                   ----------NOTE------
+You Noticed That Even Set Doesn't following the Sequence

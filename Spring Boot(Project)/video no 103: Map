@@ -58,4 +58,63 @@ class Demo {
         }
      }
                    ----------NOTE------
-You Noticed That Even Set Doesn't following the Sequence
+You Noticed That Even 'Set' Doesn't following the Sequence like 'Map'
+                    --------X-------
+To access the Data of 'Map' we have 'get' method
+                                    -----   Example:
+            System.out.println(students.get("Harsh"));
+
+    We also Update the Data in 'Map' How we Done this Explain with Program
+   -------------------------------------------------------------------------
+import java.util.Map;
+class Demo {
+      public static void main(String args[]){
+           Map<String,Integer> students = new HashMap<>();
+
+           students.put("Navin",56);
+           students.put("Harsh",23);
+           students.put("Sushil",67);
+           students.put("Kiran",56);
+           students.put("Harsh",45);
+                                                      //OUTPUT
+           System.out.println(students);   //{Navin=56, Sushil=67, Kiran=92, Harsh=45}
+        }
+     }
+                        -----NOTE-----
+In this Program you also notice that 'Harsh' will not repeat twice but it 
+replace the Previous data/value of 'Harsh' because here 'Harsh' will work as
+a 'key'.
+          It's Right to say that 'Keys' are actually a 'Set' Yes
+           Because in this Values Doesn't Repeat twice.
+Also "{Navin=56, Sushil=67, Kiran=92, Harsh=45}" Output have doesn't
+any Sequence it's also similarity of 'Map' with 'Set'.
+                         ------X------
+Now i want to print all the values But One By One I don't want 
+my Words complicated i want to use 'For' loop here.
+But the Problem is we doesn't have the Single value.
+
+           So, i want a method which will give me all the keys
+        Is there any method we have Yes, we have the method name 
+          Called 'Key Set'Which return 'String' in this case.
+           Example:
+                   'System.out.println(students.keySet());'
+                                  // OUTPUT : [Navin, Sushil, Kiran, Harsh] 
+
+This 'keyset' method will give me all the Keys of Data.
+Example :
+          for(String key : students.keySet())
+                System.out.println(key + " : " + student.get(key));
+
+Then After Running this code we got.
+            Navin : 56
+            Sushil : 67
+            Kiran : 92
+            Harsh : 45
+So, that's how we got all the values from 'Map'.
+Yes, we are using 'put' method here because when we say add
+any 'New' Element to add the element if you already have the 'key'
+not add it just replace it That's 'Put' method.
+
+                 Apart from this we have some more method To Explore
+                 ---------------------------------------------------
+i. remove : to remove Particular 

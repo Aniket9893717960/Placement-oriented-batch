@@ -1,0 +1,157 @@
+In this video let's  try to work with sorting.
+Let's say you have the collection and you want to sort it.
+So, how you wanna do it 
+i. I will create a list of values
+        List<Integer> nums = new ArrayList<>();
+ii. we have to add some data with the help of 'add' method.
+                         nums.add(4);
+                         nums.add(3);
+                         nums.add(7);
+                         nums.add(9);
+If i want to print this value Then 'ArrayList' will print it's data
+as it is.
+                 System.out.println(nums);         Output : [4, 3, 7, 9]
+                        ---------NOTE----------
+before version 1.7 in java it's necessary to define the Wrapper class like
+Integer on both the side but after 1.7 It's necassary to assign the wrapper class
+only one side.
+                        ---------X-------------
+
+iii.  To sort the value. we have the class called 'Collection' and 
+      this Collection class have allot of methods in which one of the
+method is 'sort'.
+In 'sort' u have pass the array and 'ArrayList' which you want to sort
+Then 'Collection' class will belongs to 'util' package which is the 
+part of 'java' package.
+
+And done Now we have Perform this steps in full flegit program.
+  import java.util.List;
+  import java.util.Collections;
+  import java.util.ArrayList;
+
+  public class Demo {
+    public static void main(String args[]){
+       List<Integer> nums = new List<Integer>();
+                         nums.add(4);
+                         nums.add(3);
+                         nums.add(7);
+                         nums.add(9);
+       Collections.sort(nums);
+       System.out.println(nums);          //OUTPUT: [3, 4, 7, 9]
+     }
+  }
+
+        What If you want to sort the 'ArrayList' based on your Logic
+        ------------------------------------------------------------
+Let's say the values are '43', '31', '72', '29' So, we got all this values.
+Then i want to sort this values based on it's last Digit Not the Entire No.
+I want '31, 72, 43, 29' So, how change 'sort' logic here because 
+by default 'sort' have it's own logic. 
+In case if you want to have your own logic in that case what you
+can do is we use Something called "Comparator".
+In Suggestion we also see
+            "sort(List<T> list, Comparator<? super T> c) : void"
+                      ---------------------
+                            Comparator :
+                            ---------- -
+It's basically an 'Interface' We know to implement an interface 
+we have so many methods.
+ i. we can create a class which implement an interface or we
+      can someting called an Anonymous Interface. 
+    Example :            
+      Comparator<Integer> com = new Comparator<Integer>() { };
+
+In the 'Comparator' interface we have the method called 
+'Compare'. The syntax or compare is 
+                 int compare(T o1, T o2);
+compare have two parameter with return type 'int' 'T' is Wrapper class in
+Parameter.
+SO, i will declare compare method in the Program as:
+               'public int compare(Integer i, Integer j)'
+Now i build a logic at which If compare return '1' it means 
+we swap those no. otherwise  As it Is no.
+Here is the Program.
+               public int compare(Integer i, Integer j){
+                  if(i%10 > j%10)
+                    return 1;
+                  else
+                    return -1;
+               }
+                      ------------------
+Here is the Program :
+
+  import java.util.List;
+  import java.util.Collections;
+  import java.util.Comparator;
+  import java.util.ArrayList;
+
+  public class Demo {
+    public static void main(String args[]){
+       Comparator<Integer> nums = new Comparator<Integer>(){
+              public int compare(Integer i,Integer j){
+                  if(i%10 > j%10)
+                    return 1;
+                  else
+                    return -1;
+              }
+       }
+      List<Integer> nums = new List<Integer>();
+                         nums.add(43);
+                         nums.add(31);
+                         nums.add(72);
+                         nums.add(29);
+       Collections.sort(nums, com);
+       System.out.println(nums);          //OUTPUT: [31, 72, 43, 29]
+     }
+  }
+------------------------------------------------------------------------------------
+Now i will so Something Different here SO, instead of 
+'List of Integer' we will work with 'List of students'
+So, what i will do is we create a class here called 'Student'.
+
+Let's say we have Variable 'age' of 'Integer' type and 
+Variable 'name' of 'String'  type.
+  Now i have created 'toString' method which
+ '@Override' 'String' class have return type 'String'
+  which return 'Student' 'age' and 'name'.
+
+      @Override
+     public String toString(){
+         return "Strudent [age="+ age + ", name="+ name +"]";
+     }
+
+Now i build a 'Copy Constructor' of class 'Student' contains
+parameters 'age' and 'name'. This will visible like this:
+        public Strudent(int age, String name){
+           this.age = age;
+            this.name = name;
+        }
+
+Now Instead of Creating 'List of Integers' we create a 
+'List of Students' Or Instead of Adding 'Integers' we add
+a 'Student'.
+
+        List<Student> stu = new ArrayList<>();
+        stu.add(new Student(21,"Navin"));
+        stu.add(new Student(12,"John"));
+        stu.add(new Student(18,"Parul"));
+        stu.add(new Student(20,"Kiran"));
+
+So, we got 'Students' here with Different 'age' and Different
+'names' Now what can i do is we want to sort them
+Before Starting Excution of this First we Print 'stu'
+
+    System.out.println(nums);          /* OUTPUT :
+                                  [Student [age=21, name=Navin],
+                                   Student [age=12, name=John],
+                                   Student [age=18, name=Parul],
+                                   Student [age=20, name=Kiran]]
+I want this output to print one by one So, we can use Enhnaced for loop here :
+             for(Student s : stu)            /* I want this to print one
+                   System.out.println(s)           Student at a time */
+Here we got Output:                Student [age=21, name=Navin]
+                                   Student [age=12, name=John]
+                                   Student [age=18, name=Parul]
+                                   Student [age=20, name=Kiran]
+
+Now i want to Sort this Values based on 'age' of 'Student'.

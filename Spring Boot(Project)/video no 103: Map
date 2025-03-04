@@ -117,4 +117,29 @@ not add it just replace it That's 'Put' method.
 
                  Apart from this we have some more method To Explore
                  ---------------------------------------------------
-i. remove : to remove Particular 
+i. remove : to remove Particular element or Particular
+            Entry take object(key) as parameter
+ii. get: To get all the value use object as parameter.
+iii. values : values method gives all the values just like keys give all the
+              keys.
+
+                Also Apart From 'HashMap' we use 'HashTable' And
+                 Both works all most same. So, what's the difference
+               Between 'Hashtable' and 'HashMap'
+              --------------------------------------------------------
+Unlike the new collection implementation, {@code Hashtable} is 
+synchronized
+                   ----------NOTE------------
+It depends upon which you want to use if you  a
+synchronized verion than you u used 'Hashtable'
+if you want normal than you use 'HashMap'.
+
+Remember we work with threads if the 'Multiple
+Threads' working than you used 'Hashtable' to make
+it synchronized.
+
+But if we go to HashMaP then what we see
+'If you want to work with multiple threads and
+you still want to use 'hash map' then you use 
+synchronized externally.'
+                -------------X---------------

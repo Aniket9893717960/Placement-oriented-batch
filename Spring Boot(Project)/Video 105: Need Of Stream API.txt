@@ -10,4 +10,15 @@ Syntax :
       List<Integer> nums = Arrays.asList(4,5,7,2);
               -------------X------------
 If we print 'nums' values then at output we got the values of
-'nums'
+'nums'.
+But if i don't want all the values just i want some specific values 
+like let's say i want only Even value and Double Each value and also
+take the submition of all.
+For this we use 'for' loop like this
+              int sum =0;
+              for(int n : nums){
+                  if(n%2 == 0){
+                      n = n*2;
+                        sum = sum +n;
+                     }
+                 }                       //It's Output is 24

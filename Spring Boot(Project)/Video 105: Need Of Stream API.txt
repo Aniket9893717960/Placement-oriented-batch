@@ -1,0 +1,13 @@
+Before Start with 'Stream API' First of all it's a New concept come in
+java 1.8 and it provides some Amazing features The first point is 
+why do we need those features we need to understand that first.
+              ---------NOTE--------------
+For avoid manually add Specific Data in the List one by one
+we add all the data in the List with the help of 
+'asList' method :It will gives you a list and it belong to a class
+--------         called 'Arrays'
+Syntax : 
+      List<Integer> nums = Arrays.asList(4,5,7,2);
+              -------------X------------
+If we print 'nums' values then at output we got the values of
+'nums'

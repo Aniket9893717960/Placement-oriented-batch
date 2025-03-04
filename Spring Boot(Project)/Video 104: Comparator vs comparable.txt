@@ -155,3 +155,87 @@ Here we got Output:                Student [age=21, name=Navin]
                                    Student [age=20, name=Kiran]
 
 Now i want to Sort this Values based on 'age' of 'Student'.
+If we use 'Natural' Sort than it'a not working So, we have to work with
+Comparator But the Problem Is in 'Comparator' We doesn't work with 
+'Integer' we work with 'Student' So, we have to compare to 
+'Student' At a time.
+
+In If statement we comapare 'age' between two Students.
+Here Is the whole Program.
+
+  import java.util.List;
+  import java.util.Collections;
+  import java.util.Comparator;
+  import java.util.ArrayList;
+
+  class Student {
+     int age;
+     String name;
+
+     public Student(int age, String name){
+        this.age = age;
+        this.name = name;
+     }
+
+     public String toString() {
+         return "Strudent [age="+ age + ", name="+ name +"]";
+     }
+  }
+
+  public class Demo {
+    public static void main(String args[]){
+       Comparator<Student> nums = new Comparator<Student>(){
+              public int compare(Student i,Student j){
+                  if(i.age > j.age)
+                    return 1;
+                  else
+                    return -1;
+              }
+       }
+      List<Student> nums = new List<Student>();
+        stu.add(new Student(21,"Navin"));
+        stu.add(new Student(12,"John"));
+        stu.add(new Student(18,"Parul"));
+        stu.add(new Student(20,"Kiran"));
+       Collections.sort(nums, com);
+       System.out.println(nums);          
+     }
+  }
+Here Output We got:                Student [age=12, name=John]
+                                   Student [age=18, name=Parul]
+                                   Student [age=20, name=Kiran]
+                                   Student [age=21, name=Navin]
+                  -----------------NOTE---------------
+Why i have to pass 'com' in "Collections.sort(nums, com);" without
+'com' why compiler give error?
+Because We doesn't specify the logic of the 'Student' right.
+If we See an 'Integer' because with 'Integer' sort will work by
+default. 'Integer' class will implements 'Comparable'.
+Here, 'Student' doesn't implement 'Comparable'.
+                  -------------------X-----------------
+If we implement 'Comparable' method in 'Student' class And
+This comparable will work with <Student> Parameter Maintoined This
+Alsoso, here we got problem because 'Comparable' have by default a method 'compareTo' .So, we have to override those compare with our 'compareTo'.
+
+        class Student Implements Comparable<Student>
+        {
+          public int compareTo(Student that){
+            if(this.age > that.age)
+              return 1;
+            else
+               return -1;
+          }
+        }
+        public class Demo { main(String args[]){
+              Collections.sort(stu);
+          } }
+                         ---------------NOTE------------
+'Comparator' Is the Function Interface So, we use Lambda Function as
+well. Like this :
+               public class Demo {
+                          main(String a[]){
+    Comparator<Student> com = (i, j) -> i.age > j.age?1:-1;
+          List<Student> stu = new ArrayList<>();
+                   ---
+                   ---  } }
+                         ---------------X---------------

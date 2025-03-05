@@ -22,3 +22,19 @@ For this we use 'for' loop like this
                         sum = sum +n;
                      }
                  }                       //It's Output is 24
+But It's Not necessay that all the time u perform the simple operations it's also 
+the operations in which u have to change the overall values.
+For Performing this we have Provided 'Stream API'.
+
+                          Stream API
+                          ----------
+It's the part of 'java.util.stream' package. If we click on 'Stream' tham
+u can see that 'Stream' is an Interface. IT Provide multiple method like
+'filter' to filter out the data.
+If you want to chnage the value Example we have double ended the value 
+This will done with the help of 'map' method.
+And We individually see this method later.
+'Stream' will provide a lot of method to work with this.
+
+             --------------------------------------
+     At last is For, Enhanced For, For Each loop

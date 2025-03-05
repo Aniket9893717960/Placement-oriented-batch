@@ -1,0 +1,8 @@
+In previous lec we witness 'foreach' loop what it i
+  done the same work with 'Stream API'
+If we Talk about 
+                'Stream API' 
+  Then 'Stream' is an interface the think is if i go back to 'nums' and after 
+    that we place a '.' then automatically compiler will suggest some methods
+    in which we got the new method like 'stream()' before Java 1.8 this method 
+    is not there

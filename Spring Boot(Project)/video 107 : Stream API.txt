@@ -5,4 +5,66 @@ If we Talk about
   Then 'Stream' is an interface the think is if i go back to 'nums' and after 
     that we place a '.' then automatically compiler will suggest some methods
     in which we got the new method like 'stream()' before Java 1.8 this method 
-    is not there
+    is not there we got this version later.
+
+Stream() method : will return the object called 'Stream' If i want to accept
+                 the values of 'List' in 'Stream' it dones like create the 
+object 's1'.
+         List<Integer> nums = Arrays.asList(4,5,7,3,2,6);
+            Stream<Integer> s1 = nums.stream();
+
+Now with this 'Stream' you will preform any operation and the beauty is
+It will not affect the 'nums' whatever make u change the 'stream'
+Example If you change the values Or If you done it double digit
+and many more This not going to affect 'nums'.
+
+              ---------------------------------
+     Why you want to secure 'nums'?
+Ans) If some times you have the data and if you want to perform some 
+operations It's not just that you want to perform those values
+remember we talk about threads. we write multiple threads then you want
+to perform some operations and mutations it's not good right.
+
+So, whatever changes u wanna do done with the 'stream' and just use it.
+you always have the original values with you.
+                ---------------------------------
+
+I think i will print the entire 'stream' with the help of 'forEach' loop.
+with the help of 
+          s1.forEach(n -> System.out.println(n));
+Now let the next important thing is one's u use 'Stream' u doesn't use
+the entire thing twice.
+And if you intentionally try to use it then u got an Exception name
+"java.lang.illegalStateException : stream has already been operated 
+upon or closed".
+
+Now the main thing Is what is the benefit of using 'Stream' here
+'Stream' provide allot of methods to work with like 
+
+'Filter' : remember the old example were we want to filter all the even
+           no. in the list and odd no. to filter out. 
+          We can do that in 'Stream' easily so, how it look like
+                 s1.filter(n -> n%2==0)         //I want only an even no. here
+
+If you see under 'Filter' it returns the 'Stream' So, if we say 's1.filter'
+then it basically give you a new 'Stream' to work with.
+              Stream<Integer> s2 = s1.filter(n -> n%2==0);
+              s2.forEach(n -> System.out.println(n));        /* if you run this                                                    Program u only see an Even no. */
+
+Now After Filtering the Stream now i want Doubleing the Stream.
+The value And we possible it with the help of 'Map' U can just perform 
+some operations in that Now currently we Doubling it.
+
+             Stream<Integer> s3 = s2.map(n -> n*2);
+
+At last we use 'reduce' to fetch multiple data and try to build the 
+single result.
+         int result = s3.reduce(0, (c,e) -> c+e);
+                              System.out.println(result);
+
+If we wrap up all steps.
+          int result = nums.stream()
+                           .filter(n -> n%2==0)
+                           .map(n -> n*2)
+                           .reduce(0, (c,e) -> c+e);
+           System.out.println(result);

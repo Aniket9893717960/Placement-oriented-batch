@@ -1,0 +1,52 @@
+In This Lec we thinking about 'foreach' loop.
+So, 'foreach' loop is basically introduced in java 1.8 version.
+And what is basically does it take the object of consumer.
+
+            nums.foreach( [Consumer] )
+
+In 'foreach' method takes an object of 'consumer'.
+we will Explore what the 'consumer' is:
+ i. 'consumer' belongs to 'java.util.function.Consumer'
+ ii. 'consumer' is an interface which is the 
+     'Function Interface' that means lambda function will be applicable
+     And the only method we have to work with this 'accept'
+
+So, i will create the Object of 'Consumer' which have the type
+'Integer' because if you see the 'consumer' interface it will specify
+the type as well.
+That's why it's an inteface we have to define the anonymous class.
+Now we were OverRiding the 'accept' method in 'Consumer' Interface.
+
+        Consumer<Integer> con = new Consumer<Integer>(){
+                 public void accept(Integer n){
+
+                 }
+        };
+              nums.foreach(con);
+
+And we were passing the 'Consumer' object in the 'foreach' loop.
+and what 'foreach' doing is it will gives u one value at a time.
+Now what ever value u are writing here or giving u it will goes
+into the 'Consumer' Object.
+
+Now u can decide what u wanna do with this 'n' in method
+'public void accept(Integer n)' I just wanna print value
+'n'.
+                 public void accept(Integer n){
+                        System.out.println(n);
+                 }
+
+U know that 'Consumer' inteface is the functional Interface.
+It means u use 'lambda Expression' here.
+There is only one statement 'n'.
+U don't need to maintoin 'Integer' here
+
+      Consumer<Integer> con = n -> System.out.println(a);
+
+what we are doing is we assign 'n -> System.out.println(a)' 
+expression in 'con'.
+So, if we directly write this line then
+
+       nums.forEach(n -> System.out.println(n));
+
+Now you Understand 'foreach' let's go for actual 'Stream API' 

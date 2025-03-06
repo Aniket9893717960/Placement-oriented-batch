@@ -80,3 +80,43 @@ Now we can do is this compress the data.
 U know in 'fun' we just initialize the data So, you don't even need this :
                          .map(n -> n*2)
 ---------------------------------X-------------------------------------------------
+We will come from 'Reduce' So, 'Reduce' will take two parameters
+     i. Type
+      ii. Operation called 'BinaryOperator<T>  accumlator'
+
+So, what is 'BinaryOperator<T>' will extends 'BiFunction' and 
+'ByFunction' is the method called 'apply'
+
+If we talk about 'reduce' so, how we will 'reduce' a value
+Example : Let's say if i ask you to add 3 no. let's say 
+          1,2,3 so, how to add them So, in your mid you are 
+Doing this let's say 1 , 2, 3, 4 how will you add them.
+
+Of course u can not add all the method at the same time u only
+add two values at the same time.
+So, First of all add
+       C     E  where C is Carry and 'E' has Element.
+       1 and 2 they will give you 3 after that we will write 
+       3 and 3 You will got 6 then we add
+       6 and 4 which will give you 10.
+So, that you will add 2 values at the time and if you want to
+simplify this you can start from zero.
+That's why we assign '0' in variable 'sum'
+
+Of course you will not done this with implementation but u got my
+point.
+'Stream' is Cool We apply multiple functions here In fact let me 
+show you one more thing what if i don't want 'int result' in
+between i want a 'Stream' itself. 
+But i want the 'Stream' to be sorted I want a 'Stream' itself But i want the 
+'Stream' to be sorted so, i will say Integer' then sorted value.
+and i don't want to 'map' and 'reduce' we just use only one method 
+after the data is 'sorted'.
+
+       Stream<Integer> sortedValues = nums.stream()
+                                          .filter(n -> n%2==0)
+                                          .sorted();
+           System.out.println(sortedValues); //u got Ops$OfRef@58644d46
+        But we try to print sorted values so, it will printed help of 'for-each'
+
+           sortedValues.forEach(n -> System.out.println());

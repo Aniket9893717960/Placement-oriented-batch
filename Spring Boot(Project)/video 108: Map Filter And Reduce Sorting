@@ -1,0 +1,53 @@
+First we talk about filter  method
+                    -------
+U can see 'Filter' needs an 'Object' of 'Predicate'
+                 Main Question is What is Predicate ?
+                 ------------------------------------
+
+So, to work with predicate first we have to import 
+  'java.util.function.Predicate' And i will click 'Predicate' 
+  here SO, 'Predicate' is an Interface which belongs to a method
+  'test' or this 'test' method will retruns you a boolean value.
+And based on this 'boolean' value it can be either true or false.
+
+If for the 'stream' we apply a particular value. if it's 'true'
+  then we go ahead otherwise we stop.
+So, let's implement a 'predicate' here.
+
+  Predicate<Integer> p = new Predicate<Integer>(){
+    //'Predicate' is an interface that's why we use Anonymous method here.
+  };
+Now we were adding the implementation method. to 
+support 'Predicate' interface.
+  
+  public boolean test(Integer n){
+    return false;
+  }
+
+  Now in this method we gonna check that if n is an even no
+    then it return 'true' else return 'false'.
+
+Now instead of 'n-> n%2==0' we previously putted in filter method
+i can put 'p' at the command like this:
+
+      List<Integer> nums = Arrays.asList(4,5,7,3,2,6);
+
+    Predicate<Integer> p = new Predicate<Integer>(){
+        public boolean test(Integer n){
+            return n%2==0;
+        }
+    };
+
+  int result = nums.stream()
+                    .filter(p)
+                    .map(n -> n*2)
+                     .reduce(0, (c,e) -> c+e);
+
+          System.out.println(result);
+
+In 'Predicate' will be override the 'Functional Interface'
+that's why we use lembda Expression here.
+
+        Predicate<Integer> p = (n) -> n%2==0;
+
+  And you have '(n) -> n%2==0' expression here.

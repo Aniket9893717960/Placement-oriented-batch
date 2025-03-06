@@ -51,3 +51,32 @@ that's why we use lembda Expression here.
         Predicate<Integer> p = (n) -> n%2==0;
 
   And you have '(n) -> n%2==0' expression here.
+
+This is how the 'Filter' works.
+----------------------------------X------------------------------------------------
+Now Next Topic Is 'Map' So, let's see How 'Map' work?
+         If i go to 'Map' So, 'Map' Needs Object of the 'function'.
+'Function' is this Function Interface which have two types. 
+And we have given the method called 'apply'.
+So, Now can we do it we have calling the method 'function'.
+Now the function takes two types
+      i. what it's accept 
+      ii. what is return
+
+           Function<Integer, Integer> fun = new Function<Integer, Integer>();
+
+we have given the object 'Function' name is 'fun' which have the anonymous 
+method. This will have only one method called 'apply'.
+                   public Integer apply(Integer n){
+                       return null;
+                   }  
+Whatever we wanna 'return' at 'Integer' parameter 'n' u just apply the value 
+And we all know that it's the functional Interface.
+     Now we will take 'fun' from 'Function<Integer, Integer>' put it in
+     'map'.
+
+Now we can do is this compress the data.
+                  Function<Integer, Integer> fun = n -> n*2;
+U know in 'fun' we just initialize the data So, you don't even need this :
+                         .map(n -> n*2)
+---------------------------------X-------------------------------------------------

@@ -1,0 +1,37 @@
+In the previous video we talk about 'ParallelStream' Right So, in this video 
+let's try to Explore the Example
+Or Let's say the power of It. As i maintoined before if you want to work with
+Parallel Stream And if you want to say the effective concrite u need huge amount
+of data.
+
+At this point we don't have the huge amount of data. So, let's create huge amount
+of data. Let's assume that we create a list of no. let's say list of integers
+here. Let's say list we input this with 'new' Array list.
+
+           List<Integer> nums = new ArrayList<>();
+
+And we find this list is Empty So, let's fell this list with how may values 
+Let's say '10 thousand' values can we do that
+If we create a 'List' so, it has some capactiy So at '()' of 'List'
+we write how many space we want we write there '10000' initially 
+all the values will contains '0'.
+
+          List<Integer> nums = new ArrayList<>(10000);
+
+Now how we add the '10000' values in the  list that's tricky part
+       i. we use 'nums.add' to add all the values Or we can simply use the
+          random class with the help of 'For' loop. You were add all the random no.
+          But the Question arrise how will you add random no.
+
+So, basically  u have the class called 'random' and we create it's object
+'ran'. Like this :
+                Random ran = new Random();
+And 'Random' have allot of methods like 'nextInt' So, basically you can 
+specify what no. you want let we give you that no. and also u maintoined 
+the bound that what type of value u want
+If you check under the 'nextInt' So, i want bound to be '100' but i don't 
+want 1 value right.
+So, i will use a 'for' loop start from i is equal to 1 and i will go for
+the last value which is '10000' Or the better could be u create a variable
+let's say 'size' which initialized as '10000'
+And if you want to Differentiate no. of Zero's

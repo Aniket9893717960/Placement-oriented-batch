@@ -35,3 +35,48 @@ So, i will use a 'for' loop start from i is equal to 1 and i will go for
 the last value which is '10000' Or the better could be u create a variable
 let's say 'size' which initialized as '10000'
 And if you want to Differentiate no. of Zero's
+
+               for(int i =1;i<=size;i++){
+
+               }
+
+So, in this particular loop basically i want to add the element in the 
+'nums.add' so, what no. i want to 'add' it's something the random class
+will give us.
+So, we can say 'ran.nextInt' by doing this u got '10000' values in the list.
+
+               for(int i =1;i<=size;i++){
+                    nums.add(ran.nextInt(100));
+               }
+
+If you want to see that u actually print and see what type of values u
+got there Let's see the actual Program.
+ import java.util.ArrayList;
+ import java.util.List;
+ import java.util.Random;
+
+  class StreamEx {
+       public static void main(String args[]){
+           int size = 10_00;
+           List<Integer> nums = new ArrayList<>(size);
+
+           Random ran = new Random();
+
+           for(int i=1;i<=size;i++){
+               nums.add(ran.nextInt(100));
+           }
+
+           System.out.println(nums);
+       }
+  }
+
+So, what you wanna do with this values So, i want to multiply every
+value here by '2' and that's the simple thing we can do of course 
+we can do a lot of different stuff but here just we try to do 
+multiplication by '2'.
+And we also add the values and we have done this before right
+So, get the value 'multiply by 2' and find the sum out of it.
+
+In this video we also intoduce to a new method called 'mapToInt'
+which will give you a way to add all the value and we have used 
+reduce before

@@ -79,4 +79,76 @@ So, get the value 'multiply by 2' and find the sum out of it.
 
 In this video we also intoduce to a new method called 'mapToInt'
 which will give you a way to add all the value and we have used 
-reduce before
+'reduce' before But the syntax right So, let's make easy Now
+Actual we doesn't not want this output and we don't need to work with 
+this program any more.
+
+But what i will do is i want to add all the values and how do we know it
+that we want to add all the value.
+Is we doesn't use a 'Parallel Stream' as we use just a normal 'Stream'
+and we put that here so, just i wanna do is
+
+Previous Methods we learned :
+    int sum1 = nums.stream().map(i -> i*2)
+                   .reduce(0, (c,e) -> (c+e));
+ But instead of '.reduce' if we try to use '.sum' then it will not work because 
+'.sum' will only work on when you return only the 'int' not the normal Stream.
+But i will say that 'hey won't some operations on integer here' Then convert the
+Entire 'stream' with the help of '.mapToInt'
+
+         If you can see at '.mapToInt' then it's return You the object of
+'IntStream' If you click on 'IntStream' but we have to find the 'sum'
+method And this is basically add all the values.
+
+      int sum = nums.stream()
+                    .map(i -> i*2)
+                    .mapToInt(i -> i)
+                    .sum();
+
+If you print 'sum' and 'sum1' then both return's the same value.
+Now i have initialize the value 'sum2' which will work but there 
+is one change in method 'nums.stream()' will replace 
+'nums.parallelStream' let's see we got the same value of not.
+
+      int sum = nums.parallelStream()
+                    .map(i -> i*2)
+                    .mapToInt(i -> i)
+                    .sum();
+
+How will you see the speed let's work with only 'sum1' and 'sum2' and
+ignore 'sum' at this point i don't want to print 'sum' any more Now
+how will you see tha difference we can set the timer right to
+see after this after this to see the difference.
+
+So, we will create a variable here i will go with the variable long
+I can say 'startSeq' and how will you get time so, it will help of 
+'System.currentTimeMills' so, what will it return is 
+    --------------------NOTE--------
+'The Current Milli Seconds from the time 1970's' So, that
+s where the 'unix Epoch' come into existence So, basically it will
+             ----------
+give you the current time in milli seconds 
+
+          long startSeq = System.currentTimeMillis();
+          /* After this sum code '.mapToInt' implementation start */
+
+So, once you done this past it Between '.mapToInt' and 'parallelStream'
+implementation.
+          long endSeq = System.currentTimeMillis();
+          long startPara = System.currentTimeMillis();
+        /* After this sum2 code 'ParallelStream' implementation start */
+At last
+          System.out.println("Seq :"+ (endDeq + startSeq));
+          System.out.println("Para :" + (endPara - startPara));
+
+i want you to guess which one is faster is it 'Parallel' 
+               ---------NOTE--------
+Of course Logically it should be 'Parallel' But i am not sure 
+which one will get more time So, the thing is whenever you have the
+simple operations like this 'parallelStream' will take more time than
+'Stream' is it because 'ParallelStream' is responsible to create the threads.
+And creating Threads takes time.
+Sequential Stream will not working with multiple threads it working with
+single thread and say 'Let's get the job done' For your Normal computer
+computation of normal numbers should be Easy
+So, i were gessing parallel Should be faster than Sequential

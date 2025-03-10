@@ -1,0 +1,36 @@
+This was introduced in java 1.8 and the question is why?
+we create a new class? 
+SO, let's take an example here that will make sanse
+    we have a main method in which we create a list of
+values.
+
+       List<String> names = Arrays.asList("Navin","Laxmi","John","Kishor")
+
+we create a Array list with the help of 'asList' method in Arrays
+i will go for the Name's like given above.
+So, we got this 4 name and Now what Operation we want to perform is
+build a list name 'Nids' in which they have "x" in there name.
+
+so, the way we can do that is we use 'Stream API' here what should 
+he will return is String value.
+
+      String name = names.stream()
+                    .filter(str -> str.contains("x"))         //'.contains' is used to 
+                                                        throw String which contain 'x'
+                    .findFirst();   // It may happend that if you might the multiple
+                                                                  Value Not just one
+            --------------------NOTE--------------------
+*The Problem is find first is not giving u a string he will giving u an optional
+String But the question is why optional String So,
+If i go back here 'findFirst' we return an 'Optional' type But if you see the
+'Optional' class.
+          Now this error come into Existence to avoid the World famous error
+which we love or heat that you chose but the error is :
+                       Null Pointer Exception
+Is It because when you try to perform the operation on a Null value. It will
+give you the Null pointer Exception.
+In the given String there is no name which start with 'x' so, after the 
+solution 'String name' will carry 'null' and we don't want it. Because
+if we give him 'null' so, compiler give 'Null Pointer Exception'.
+            ----------------------X------------------
+So, that's where they intoduce something called optional.

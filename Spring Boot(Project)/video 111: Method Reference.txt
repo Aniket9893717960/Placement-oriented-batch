@@ -1,0 +1,52 @@
+firstly what wanna do is first we create a List of names here of course
+we will go for the same thing which we have done before we enter 
+names with the help of  'asList' method in 'Arrays' package.
+
+  List<String> names = Arrays.asList("Navin","Harsh","John");
+
+Now basically we wanna print it but in the Upper case.
+So, we have the String/word in which we have 1st latter capital
+and other is small i want everything to be capital.
+
+So, what we do that we run this in a Stream like this
+  List<String> uNames = names.stream()
+                             .map()
+  Now how you convert such something to capital letter
+  SO, basically in the String class we have the method called
+To Upper case.
+  For doing this for every "name" which we were getting from
+'map' we want to make it upper case So, i write
+
+   List<String> uNames = names.stream()
+  .map( name -> name.toUpperCase() )   
+
+So, once you done that u will return the 'Stream' in list format.
+  To achieve that we have the method called '.toList'.
+  which will convert it into a list.
+
+     List<String> uNames = names.stream()
+  .map( name -> name.toUpperCase() ) 
+  .toList();
+
+Now let's try to understand what is method reference and how do we use it
+  If we are seeing in the map what we are doing is 
+  "We taking a name and we calling a method" but why do we initialize 
+  a new Object 'name' for the calling of single method.
+
+  For every variable what you wanna do just we have to maintoin
+  'to upper case' and that's it.
+
+    List<String> uNames = names.stream()
+    .map(String::toUpperCase)  // Basically you passing a function name that which 
+    .toList();             Function u wanna call.But you also say that 
+                          Where this function belongs to in this case we write
+                                  'String' class.
+ '::' this will be called method Reference.
+whole '.map(String::toUpperCase)' command we are saying for every Element
+comming from the 'map' just convert that into 'UpperCase' we can specify 
+with the help of given name and we have to specify which class it belongs
+to  it belongs to String class.
+
+  uNames.forEach(i -> System.out.println());
+This will print the values one by one but here we can also use the:
+  uNames.forEach(System.out::println);

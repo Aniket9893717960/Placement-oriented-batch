@@ -34,3 +34,16 @@ solution 'String name' will carry 'null' and we don't want it. Because
 if we give him 'null' so, compiler give 'Null Pointer Exception'.
             ----------------------X------------------
 So, that's where they intoduce something called optional.
+we make it 'optional' to make it work and we have to import it's 
+package as well.
+
+      Optional<String> name = names.stream()
+                                   .filter(str -> str.contains("x"))
+                                   .findFirst();
+         System.out.print(name.get());
+
+If compiler doesn't find value then it will say 'NoSuchElement' Because
+atleast we don't want 'NullPointerExcaption' But if you avoid any kind of Exception
+then you write this
+          System.out.println(name.orElse("Not Found"));
+So, in this case you don't get any error.

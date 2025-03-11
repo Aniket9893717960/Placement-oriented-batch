@@ -1,0 +1,89 @@
+So, basically when we work with project Of course till this point we work with 
+different code Different Project Different Syntax but when you build the 
+project you need More than the syntax More than the concept.
+
+So, basically there is a tool called 'Maven' which is the Project 
+Management tool Now the question arrise why do we need this tool.
+
+When you build the project there are certain steps which we have to follow
+Example : 
+      When you were building a project 
+       i. You need to 'compile' your file.
+      ii. ||   ||  ||  'run'     ||    ||
+     iii. ||   ||  ||  'Test'    ||    ||
+      iv. ||   ||  ||  'Packaging'     ||    ||
+       v. ||   ||  ||  'Deploying'  ||  ||
+
+The normal we can do is with the help of 'IDE's ' so, that's one
+thing so, basically we need all those steps.
+On the other hand. Ofcourse you write a lot of code To build something
+To make it work But at some time you need to use some External
+Libraries.
+
+So, when it comed to       Connectivity
+         JDBC         ------------------->        Mysql
+                      Need only one JAR file
+But, 
+        hibernate     ----------------------->    
+                      Need Multiple JAR files
+
+Because the main Dependency which you have is a JAR file of 'Hibernate'
+But 'Hibernate' itself is Dependent on other JAR file
+We call this as "Transitive Dependencies" So, basically you need to gain all
+the Dependency all the JAR files to a machine 
+          And you say Ok we do that because you do that only one's at the start
+of the project But In near Future if you want to update your Dependency And 
+there is not any other chose you have.
+         If you think "I can re-download the Dependencies" so, this is very hactic 
+                        Process.
+
+If you are working with other Liberaries as well let's say you working with
+'Spring Framwork' So, Those FrameWork have there Own Depencency Own JAR file
+Now Spring And Hibernate will work together that also means that the JAR files
+Which you have Also you have there own Version So,
+
+        SPRING                Will Work with              HIBERNATE
+       FRAMEWORK
+
+So, what even the version of 'Spring' should mach with version of 'Hibernate'
+Let's say 'Spring 5' will work with 'Hibernate 4' So, there is a chance that
+any of one framwork will Not work.
+That means any time you want to update something and change something you need to
+Download JAR files Again Downloaded.
+
+And What If you give Your Project For 'Testing' or 'Code Review'
+And Something they want add in the Project to Friends and colages.
+So, you have to make sure Even they also have the same Dependency
+Which you have added.
+               This Process Is Frustrating bro
+Because u have to make sure even they also work with right version.
+plus we want those features as well like 'compile','run','Test','Packaging'
+and 'Deploying'.
+
+And we have Solution of this things in the form of Tool And That's where
+'Maven' comes into the Picture.
+Of course 'Maven' is not the only tool available in the market There are 
+multiple tools available like 
+            Maven , Gradle , Ant with Ivy 
+But we are going to choose 'Maven' which i fill is 'Begineer' Friendly
+'Gradle' is Great but i fill that If you are New in Project Development
+In java.
+'Maven' will be Easier to work with Of course when we go Ahead with the 
+Project we gone use 'Maven' there.
+
+SO, in this session we Understand 'Maven' Properly at least with the start 
+of the Spring Framwork and any other framwork if you are working with.
+
+So, Basically we work with Mavan to Get the Dependency Now what happends
+in 'Maven' is if you want to get Dependency So, simply say 
+ 'hay Maven we Need a Hibernate so let's say it's version is '6.0.1' and
+        Maven say take it.'
+
+So, that's how it works if we start working with it let me show you that
+How things moving and how we get Dependency But that's what the maven is
++ for all the phases which we talk about for compile ing testing  running
+Maven also Provides some Plug-in to do that.
+
+So, idea of this section is not more to 'Plugin' the idea is to work with
+Dependency's Maven is a huge concept.
+Let's focus on the Dependency Part.

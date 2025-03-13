@@ -19,4 +19,119 @@ do in Maven all the life cycle stuff. So, u handle the Dependency.
 
 Now in the term or In the world of Maven. when i was talking about
 Dependency we were talking about the 'Jar' files.
-If you have to connect to mysql Database
+If you have to connect to mysql Database U Need a 
+'Mysql Connector' the ideal way of doing that
+Simple done a google search then
+ 1)      'https://dev.mysql.com/downloads/connector/j/'
+                       OR
+          search 'Mysql Connector Java' the GO to it's official Website
+click on given like select 'Platform Independent' 
+         That's One way
+
+But as i maintoind u have to maintain the versions as well u can see
+for any connector or every jar file U have to first maintoined the 
+name of the library and version is also IMP.The facing the version 
+issue is the Big headache
+
+2) Method for is Of to very famous site 'mvnrepository.com' of
+course there are multiple options but i prefer to go with this
+Now u can search fir 'Mysql Connector' Now u see we got the 1st option
+here.
+If we click on it and check the tables we have the row of 'Files' in which
+we have option to download the 'jar' file but we doesn't want it so ignore it.
+
+
+If You go down they have given multiple option there like we have 'Grade' and
+'Ivy' but we select the Option called 'Maven' and It say some Dependency here
+and i don't know how to use it.
+So, let's see where we use 
+"   <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <version>9.2.0</version>
+</dependency>  "
+                        XML Tags
+U can see in Over Project "MavenDemo" Folder there are multiple Files and
+there is one file here which is 'pom.xml'
+               ---------NOTE------
+Now pow here will known as 'Project Object Model' this is where u done 
+every thing to handle your Maven.
+               ---------X--------
+If you look in the code so there are some lines like
+               <groupId>org.example</groupId>
+               <artifactId>MevenDemo</artifactId>
+               <version>1.0-SNAPSHOT</version>
+Now imagine U package your Own Project 
+U have the Project and U have to Done Packging as well Let me try
+this so, we click on "MAVEN" then we go on "LifeCycle" than "PACKAGE"
+
+Just Observe what is Happening here First  we 'clean' is and then 
+Click on 'Package' again So, look at the Jar file which he created
+So, we got a Project name and then we got the version ok so,
+This is the same thing that we want to do at above 3 lines.
+
+          -----------NOTE------
+Every Library goes with 3 things which is
+ <Group ID>        <Artifact ID>        <Version ID>
+          --------X-------------
+                  GROUP ID EXPLAINATION
+If let's say i write Group Id so, this have it's own package
+If i create my own library If i gone to this library 
+I have to make sure that this Library is Different.
+Throw Out the World.
+How will you do that what name u will use for your package
+and library to make it unique If i write some wired name
+so, there is a chance that In the entire world some one else
+have used the same name So, what you can do is for Every Project
+and Library.
+             U have the 'Group Id' as well.
+          So, what is this 'Group Id'.
+"Group Id Is something like a package But u have to make sure It's
+ Unique"
+How can i make this unique then i write name in group id is:
+     If i write 'com.telsko' so, it's unique because the telsko.com
+i own it. It's My 'Doman' and in entire world Your 
+'Domain Names Are Unique' Just reverse the Domain name and u got
+'Group Id'.
+
+It also specify that this  particular library will belongs to this 
+company or this community so, i write it's name 'com.telusko'
+If i also maintoined the team then i write 'java' team at the end like
+                        'com.telusko.java'
+
+                     ARTIFACT ID EXPLANATION
+They make multiple Project so, we got 'artifact Id' and then the
+varsion so, this function is applicable to whatever library u download.
+
+
+         HERE we Talk about the Copyed code of "mvnrepository"\
+              Here his those Code 
+    <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+         <dependency>
+             <groupId>com.mysql</groupId>
+             <artifactId>mysql-connector-j</artifactId>
+             <version>9.2.0</version>
+         </dependency>
+
+we have those 3 things let's varify from 'MYSQL' then it's say Dependency
+we have also the '<groupId>' which has name 'com.mysql' it make's it unique
+it have also called '<artifactId>' which has the name 'mysql-connector-j'
+it also have the version
+              This value we gonna use it
+So, basically when u expand your Maven u can see there we have different tags
+here If you can follow the xml file U got all the thing for our Project.
+There are 1 paragraph 5 line property we have
+add some dependency and one more tag If you can see that U now have one single
+dependency u have multiple dependency
+So, we can put every thing in '<dependencies>' tag what we have copy
+        And That's it u got your 'jar' file I know u don't tructing me
+Because we don't done manually which is 'genune' that how u get 'jar'
+file.
+So, technically if you save it might part u have given the jar file
+If u expand to an External libraries u don't have MySql connector So, what you
+will do is u get something like this at top right hand "Reload/Sync Maven Changes"
+and 'load Your Maven Changes'.
+
+If you don't see this button than Clock on 'MAVEN' then u see at top-left
+of particular manu so, just load and just read.

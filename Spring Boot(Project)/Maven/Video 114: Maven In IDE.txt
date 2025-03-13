@@ -1,0 +1,23 @@
+So, the first step is how did u get 'Maven' in your Machine
+So, basically u can use Maven as Your local tool.
+
+U can just Install the Maven u set the Path and U can access
+Maven with the help of Command line.
+But we are more Focusing on IDEs Now Right.
+Of course can we use 'Maven' with IDEs Yes, u can and 
+most of the IDEs use 'Maven' support.
+
+But If you want to Install in your Machine so, u just go throw
+there.
+Now "http://maven.apache.org/" is the Official Web site of Maven
+So, basically it's an 'Apache' Project.
+U can Explore u just go to your website displayed allot of things
+
+If you want to 'DOWNLOAD' there is a Download Option here and
+u get the 'maven' from here and u can set the path and u can
+use maven on the command line.
+
+Of course it's not our main intention here. So, how we gona use 
+Maven?
+We can use any IDE like we can use 'Eclipse' , 'Netbeans', 
+U can use 'Intelij'

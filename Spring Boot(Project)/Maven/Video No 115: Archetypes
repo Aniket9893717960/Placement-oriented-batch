@@ -1,0 +1,22 @@
+SO, Archetypes is a temprary tool So, what he does is
+what if you have to build the web Project Now of course
+U have to set up by yourself SO, u can set the Configuation
+                  AND
+U can use the Existing Template that is called the 'Archtype'
+In Maven.
+So, there are allot of 'Archtype' available u can chose them
+                    OR
+U can create your own.
+So, let's say for your project or mey be in your company u were 
+create multiple Projects with the same type.
+What u can do is u create templete For the simple Project
+U get all the configuration All the Dependency Maintoined
+
+So, that who even wants to build your projects to chose 
+your template.
+          So, in Maven Let's also talk about what u want to 
+do in Maven all the life cycle stuff. So, u handle the Dependency.
+
+Now in the term or In the world of Maven. when i was talking about
+Dependency we were talking about the 'Jar' files.
+If you have to connect to mysql Database

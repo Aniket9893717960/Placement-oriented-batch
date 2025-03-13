@@ -135,3 +135,18 @@ and 'load Your Maven Changes'.
 
 If you don't see this button than Clock on 'MAVEN' then u see at top-left
 of particular manu so, just load and just read.
+This mysql connector is geting downloaded form the internet and u see the 
+'Mysql Connector' in our project's 'External Libraries/Dependencies'.
+
+                   ---------NOTE------------
+So, MySql Connector is Dependent on 'Mysql Connector' particular Jar file. 
+so, let meshow you that our jar file is dependent to our 'com.google.Protobuf'
+                                                          -------------------
+Now this is called the 'Transitive Dependency' we don't want but 'Mysql' says
+"I want" I said "It's Your wish" because i want only 'MySQL' but 'mysql' want
+Some thing else that's his wish Because i just concern about mysql and
+it's there.
+                    --------X----------------
+So, this is what u basically work with Jar file or 'dependencies' But what if you
+want something else It's basically the same method which we have done in whole 
+lecture.

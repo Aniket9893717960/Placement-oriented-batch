@@ -20,4 +20,64 @@ use maven on the command line.
 Of course it's not our main intention here. So, how we gona use 
 Maven?
 We can use any IDE like we can use 'Eclipse' , 'Netbeans', 
-U can use 'Intelij'
+U can use 'Intelij'.
+
+Now we just Open 'InteliJ Idea' it also work with 'commite' and
+'ultimate' version i have both then i just use the 
+'commite Version' here.
+
+     If you 'Create' a new Project it will give You a lot of Option Here
+    ----------------------------------------------------------------------
+i. we maintoined the name:'MavenDemo'.
+ii. we set the 'Location' Here.
+iii. then it will ask u the language because 'intellij' support multiple
+     languages But we have 'Commite' version then 
+     we doesn't show this option.
+iv. U have to check the Build System is 'Maven' because if u want to  
+    Setup the same project at any Operating System.
+v. click on which JDK u want to perform then click on those 'JDK'.
+vi. click on create here.
+                       ------X------
+           Now u see this is your basic Structure 'ok'
+                      That's how u get 'Maven'.' 
+                -------------------------------------
+By default we have 'MAVEN support' In the Previous lec we talk
+about Different stages of Project like 'compile', 'run', 'test'
+and a lot of Different Steps.
+
+So, we have to achive it with the help of 'MAVEN' plugin's Now in any IDE
+Depend upon which IDE we are using.
+    We see the option of 'Maven' in 'intellij' u see it at right Top.
+In 'Eclipse' u might see this in Different Position.
+
+If you see on 'Maven' project here So, Click on 'Maven' project.
+If you see that option of 'lifecycle'.
+           Now At present u your eye's just see is what i was 
+talking about let's say i got very simple core if i see the 
+'main' code here of course u create a simple file so, once
+u created it what if you want to compile all those file.
+
+'Complie' button: so, maven will take care of it.U doesn't 
+                  done it manually.
+'test' button : if you want to test the data then this will 
+                be in use. Of course u done all this things 
+                 with the help of command-line.
+                but we also use the IDE feature. 
+
+'Package' button : If you want to create a jar file for your project
+                   then click on 'package' button. 
+"Building jar: C:\Users\ratho\Documents\MevenDemo\target\MevenDemo-1.0-SNAPSHOT.jar"
+ U can see this JAR file is already created we have also Given the path to access it.
+
+'install' button : If u install 'Maven' then this command will be in use.
+
+'deploy' button : If you want to Deploy the data.
+                   Of course For Different Deployment u have to Configure.
+
+              So, This is all about LifeCycle Now we go on 'Plugins'.
+
+To achieve all the Benefite of 'Maven' so, 'Maven' Provide some plugins
+So, u can use this plugins basically to make it work.
+
+      Maven have Something called an 'Archtype' so, we can see what are those 
+               Things we can see in the next video.

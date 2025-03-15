@@ -1,1 +1,10 @@
+At last video till this point we talk about
+we have to discuss different stuff of course to configure your maven
+u have to make changes in this file.
 
+Now if you want to create a package u have to maintoin certain things right
+For your own project if you want to make a 'jar' file u baiscally need.
+       'groupId'   'artifactId'      'version'
+
+That's how u can create a jar file or u can create your own libraries if you want
+and then in your project if you want 

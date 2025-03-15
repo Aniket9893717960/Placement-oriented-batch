@@ -28,4 +28,32 @@ file but i know at this point u are ok but it look like an effective pam.
 It will have other configuration as well as the configuration which u have done 
 But how will u see that Different IDE's have different way of showing it.
 
-In fact i should be working on maven using 'Netbeans IDE'
+In fact i should be working on maven using 'Netbeans IDE' and it was having
+a extra tab for 'effective POM' here we using 'intellij' also i were using a
+demo of 'eclipse' which help to find how to set an 'effective POM' 
+
+If you are working with 'intellij' and right click on the 'pom.xml' the see 
+this have the option of 'maven' if you click there at right of those option
+they have given allot of options in which we have to click one option name
+'show effective pom'.
+If you click on it look like a 'pom' file but name is different if you see
+there are more things then a 'normal pom' file if you go down then it will call something 'pluginRepositories'.
+
+i. 'pluginRepositories' its where u getting all the plugins by default Even if
+you are not added them Or there are resources as well like
+   there is a 'plugin' called 'auto-run'
+    ||    || || ||      for 'clean'
+    ||    || || ||      for 'resources'
+    ||    || || ||      for  'Jar'
+Everything u wanna do
+    There is a 'plugin' called 'compiler'
+
+So, everything is there by Default and If you don't maintoined in a 'pom' file
+it's there.
+               -------NOTE-------
+'Effective POM' which is getting created for every 'Maven' project
+whatever changes u make don't make changes in the 'effective pom'.
+U as a developer U make changes in 'pom.xml'.
+It will by default create it's 'effective pom' here
+So, it's same 'pom' with different name but same thing.
+               ----------X---------

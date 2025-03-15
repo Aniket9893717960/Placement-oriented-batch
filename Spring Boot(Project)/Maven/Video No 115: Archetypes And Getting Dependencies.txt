@@ -150,3 +150,5 @@ it's there.
 So, this is what u basically work with Jar file or 'dependencies' But what if you
 want something else It's basically the same method which we have done in whole 
 lecture.
+
+If u have to send all the dependency to different team mate have different computer.

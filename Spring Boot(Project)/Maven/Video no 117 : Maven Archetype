@@ -1,0 +1,37 @@
+So, we talk about here is 'Archetype' As i maintoined before
+basically u can create your own templates and use some
+existing templates.
+
+Let's say if you want to build a Spring project or any framework 
+project where u have to done allot of configuration by your 
+self but what if you think 
+
+'hey u know in this world there are so many developers they might have 
+work on some framework so, what if i get those configuration by
+default of course u will not get every thing in the world but there
+are some templates which available in maven'
+
+we use them or we create our own so, this type of templates are basically
+called 'arctypes' Now how we gonna use it.
+
+So, basically u were create your own archtype let's say i were create my new
+project 
+let's say if you click here on left hand side 'Manu' then we click on
+'New Project' u say there is an option of 'Maven Archetype' so, 
+basically u can use some 'Archtype' u give him
+  i. Name let's say 'DemoSpringProj' then Nothing change at some 
+         options.
+  ii. then we see 'Archtype' to select what kind of project u were building
+          There are multiple projects like
+          'maven-archetype-j2ee-simple' to create 'j2ee' project
+          'maven-archtype-quickstart' if you want to just simple configuration
+                                      Nothing much
+          'maven-archtype-webapp' If you want to build the web application 
+                                  where u need whole those structure 
+
+
+But this are not the only options we have the thing is if you see the 
+    iii.'catlog' option here by default it's 'Internal' it's something
+                 which is in the plugin itself or the 'maven' installation
+                 itself.
+What if u want the archtype form the internet.

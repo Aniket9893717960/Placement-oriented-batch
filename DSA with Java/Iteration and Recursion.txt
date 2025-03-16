@@ -1,0 +1,286 @@
+                           Question 1/20
+In recursion, the condition for which the function will stop calling itself is ____________
+i.       Best case
+                 ii.    Worst Case
+iii.  Base Case Condition
+                      iv. There is no such condition
+
+                            Question 2/20
+Consider the following code snippet:
+void my_recursive_function()
+{
+my_recursive_function();
+}
+
+int main()
+{
+my_recursive_function();
+return 0;
+}
+What will happen when the above snippet is executed?
+
+
+i. Code will run for some time and compile error when stack overflows
+                           ii. Code will execute successfully and no output generated
+iii.  Code will execute successfully and random output generated
+                         iv. Code will show a compile-time error
+
+                                Question 3/20
+What is the base case for the following code?
+void my_recursive_function(int n)
+{
+       if(n == 0)
+            return;
+      cout<<n;
+     my_recursive_function(n-1);
+}
+
+int main()
+{
+        my_recursive_function(10);
+        return 0;
+}
+                  i.Return
+ii.  cout<<n;
+                 iii.  if(n==0)
+iv.   my_recursive_function_(n-1)
+
+                                  Question 4/20
+How many times is the recursive function called,
+                                             when the following code is executed?
+void my_recursive_function(int n)
+{
+    if(n == 0)
+       return;
+    cout<<n;
+    my_recursive_function(n-1);
+}
+
+int main()
+{
+   my_recursive_function(10);
+   return 0;
+}
+i. 9
+              ii. 10
+iii.  11
+             iv.  12
+
+                               Question 5/20
+Which of the following statements is true?
+i. Recursion is always better than Interation
+                       ii. Recursion uses more memory compared to iteration
+iii.  Recursion uses less memory compared to iteration
+               iv. Iteration is always better and simpler than recursion
+
+                              Question 6/20
+What will be the output of the following code snippet?
+int cnt=0;
+void my_recursive_function(int n)
+{
+   if(n == 0)
+     return;
+   cnt++;
+   my_recursive_function(n/10);
+}
+
+int main()
+{
+   my_recursive_function(123456789);
+   cout<<cnt;
+   return 0;
+}
+i. 123456789
+                  ii. 10
+iii.   9
+                    iv.  11
+                 Answer 9
+
+                                Question 7/20
+What will be the output of the following code ?
+void my_recursive_function(int n)
+{
+      if(n == 0)
+       {
+              cout<<"False";
+              return;
+       }
+
+      if(n == 1)
+       {
+             cout<<"True";
+             return;
+      }
+
+     if(n%2==0)
+          my_recursive_function(n/2);
+     else
+        {
+              cout<<"False";
+              return;
+}
+}
+
+int main()
+{
+     my_recursive_function(100);
+     return 0;
+}
+i.  True
+              ii. False
+iii.  Compile Time error
+                   iv.  Run time error
+
+
+                            Question 8/20
+What is the output of the following code?
+int cnt = 0;
+void my_recursive_function(char *s, int i)
+{
+        if(s[i] == '\0')
+             return;
+         if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
+             cnt++;
+         my_recursive_function(s,i+1);
+}
+int main()
+{
+             my_recursive_function("thisisrecursion",0);
+             cout<<cnt;
+             return 0;
+}
+
+i.  6
+                    ii.  4
+iii.  9
+                      iv. 10
+
+                                 Question 9/20
+What is the output of the following code?
+
+void my_recursive_function(int *arr, int val, int idx, int len)
+{
+      if(idx == len)
+       {
+              cout<<-1;
+              return ;
+       }
+     if(arr[idx] == val)
+      {
+           cout<<idx;
+           return;
+      }
+    my_recursive_function(arr,val,idx+1,len);
+}
+
+int main()
+{
+        int array[10] = {7, 6, 4, 3, 2, 1, 9, 5, 0, 8};
+        int value = 2;
+        int len = 10;
+        my_recursive_function(array, value, 0, len);
+        return 0;
+}
+                         i. 3
+ii.  4
+                 iii. 5
+iv. 6
+
+
+                            Question 10/20
+What is the output of the following code ?
+int main()
+{
+      int a=5,b=7
+      switch(a)
+       {
+               case 5 :cout<<“I am 5”;
+                             break
+               case 7: cout<<“I am not 5”
+                             break;
+                default:cout<<“I am different”;
+}
+}
+i. I am 5
+                          ii.  I am not 5
+iii. I am different
+                          iv. Error
+
+
+                          Question 11/20
+Predict the output of following code: ?
+int main()
+{
+int x,a=10;
+x=a==10 ?
+cout<<"hait" : cout<<"hellon";
+cout<<x;
+}
+
+i. Error
+                ii. hait 4
+iii.  hello 3
+               iv. hait hello
+
+
+                             Question 12/20
+Predict the output of the questions –
+Function main()
+{
+double d = 123.4
+static float f =123.4
+if (d==f)
+print ”Both of them are equal”
+else if( f > d )
+print ”Float is greater”
+else
+print ”Double is greater”
+}
+
+i.  Float is greater
+                        ii.  Double is greater
+iii.  Both of them are equal
+                    iv. Code will generate error
+
+
+                                 Question 13/20
+As a project, Parag wants to write a code which should 
+          increment its value until a condition is satisfied. 
+                         Which type of structure should he be using?
+i.  For
+                    ii.  While
+iii.  Do-while
+                     iv. Perforate
+
+
+                                 Question 14/20
+Choose the recursive formula for the Fibonacci series.(n>=1)
+i. F(n)= F(n+1)+ F(n+2)
+ii. F(n)= F(n+1)+ F(n+1)
+iii.  F(n)= F(n-1)+ F(n-2)
+iv.  F(n)= F(n-1)- F(n-2)
+
+                                  Question 15/20
+What is the length of the step in jump search?
+i. n
+                   ii.  n/2
+
+iii.  sqrt(n)
+                   iv. 1
+
+
+                                  Question 16/20
+Which of the following is the recurrence relation
+        for the matrix chain multiplication problem where 
+               mat[i-1] * mat[i] gives the dimension of the ith matrix?
+i. dp[i,j] = 1 if i=j
+        dp[i,j] = min{dp[i,k] + dp[k+1,j]}
+
+                           ii.  dp[i,j] = 0 if i=j
+                   dp[i,j] = min{dp[i,k] + dp[k+1,j]}
+
+iii.   dp[i,j] = 1 if i=j
+     dp[i,j] = min{dp[i,k] + dp[k+1,j]} + mat[i-1]*mat[k]*mat[j].
+
+                                  iv.  dp[i,j] = 0 if i=j
+            dp[i,j] = min{dp[i,k] + dp[k+1,j]} + mat[i-1]*mat[k]*mat[j].

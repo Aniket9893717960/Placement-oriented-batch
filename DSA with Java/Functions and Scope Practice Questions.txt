@@ -1,0 +1,191 @@
+                              Question 1/20
+Afzal writes a piece of code, where a set of three lines
+        occur around 10 times in different parts of the program. 
+  What programming concept can he use to shorten his program code length?
+i. function
+              ii. Null pointer
+iii. Wild pointer
+                      iv. None of these
+
+                               Question 2/20
+Talika wants to implement a heterogeneous linked list for her project. 
+                                 Which of the following will help her do the same.  
+i. This is not a bad programming practice and should not be done.
+                                ii. Void pointer
+iii. Decision Making
+                                iv.  Overloading
+
+                              Question 3/20
+Which of the functions below is used to convert double value 8.93 to 9?  
+i. ceil()
+                  ii.  tops()
+iii. floor()
+                         iii. fabs()
+
+                              Question 4/20
+Consider the following function
+function calculate( n )
+{
+if(n equals 5)
+return 5
+else
+return (n + calculate(n-5))
+end
+}
+
+Shishir calls the function by the 
+              statement, calculate(20). What value will the function return?
+i. 20
+               iv.  30
+iii. 40
+             iv. 50
+
+                            Question 5/20
+Choose the correct answer ?
+function g(int n)
+{
+if (n > 0)
+return 1;
+else
+return -1;
+}
+
+function f(int a, int b)
+{
+if (a > b)
+return g(b-a);
+if (a < b)
+return g(a-b);
+return 0;
+}
+
+If f(a,b) is called, what is returned?
+i.  Always -1
+                      ii.  0 if a =b , -1 otherwise
+iii.   1 if a>b, -1 if a<b, 0 otherwise
+                     iv.   -1 if a>b, 1 if a<b, 0 otherwise
+
+
+                                 Question 6/20
+In C++, if you pass an array as an argument to a function, 
+                 what actually gets passed?
+i. Value of elements in an array
+                      ii. First element of the array
+iii.  Base address of the array
+                      iv.  Address of the last element of the array
+
+                                 Question 7/20
+What does the following declaration mean? int (*ptr)[10];
+i. ptr is an array of pointers to 10 integers
+                            ii. ptr is a pointer to an array of 10 integers
+iii. ptr is an array of 10 integers
+                            iv.  ptr is a pointer to an array
+
+                                 Question 8/20
+What will happen if in a C++ program you assign a value to an array element 
+                        whose subscript exceeds the size of array?
+i. The element will be set to 0
+                         ii. The compiler would report an error
+iii. The program may crash if some important data gets overwritten
+                           iv.  The array size would appropriately grow
+
+
+                                  Question 9/20
+
+Which of the following statements should be used to obtain a remainder
+                        after dividing 3.14 by 2.1?
+i. rem = 3.14%2.1;
+                   ii.  rem=modf(3.14,2.1);
+iii.  rem=fmod(3.14,2.1);
+                 iv. Remainder cannot be obtained in floating division
+
+
+                                  Question 10/20
+What will be the output of the program?
+#include<iostream.h>
+int main()
+{
+int a[5] = {5, 1, 15, 20, 25};
+int i, j, m;
+i = ++a[1];
+j = a[1]++;
+m = a[i++];
+cout<<i<<j<<m;
+return 0;
+}
+
+i. 2,1,15
+                  ii.  1,2,5
+iii.  3,2,15
+                    iv. 2,3,20
+
+
+                                   Question 11/20
+What will be the value of fseek() function if error occurs?
+i. Any non zero value
+                         ii.  0
+iii. Null
+                          iv.  1
+
+
+Question 12/20
+
+When we execute the given code what will be the value of x and y?
+
+#include <iostream.h>
+using namespace std;
+void swap (int &x, int &y)
+{
+int temp;
+temp = x;
+x=y;
+x= temp;
+}
+
+int main()
+{
+int x= 10, y = 20;
+swap(x,y);
+cout<<x<<y;
+return 0;
+}
+
+i. 1020
+                   i. 10
+                      20
+iii.  2010
+                   iv. 10 20
+
+
+                           Question 13/20
+The process of calling function in that function itself is called ____________.
+i. Recursive function
+                             ii. Nested function
+iii. Repetitive function
+                                iv.  Function definition
+
+                            Question 14/20
+Select the precise options for the below scenarios-
+Expression 1: cout << end;
+Expression 1: cout << “\n “ << flush;
+
+i. Both expression will give different results
+                  ii.  Both expression will give same results
+iii. Second expression will not insert new line
+                  iv. First expression will not insert new line
+
+                            Question 15/20
+float(*p)[5]; Here , p is______________.
+
+i. Pointer to array of float
+                              ii. An array of floating numbers
+iii.  p is a pointer of floating type
+                              iv. None of these
+
+
+                            Question 16/20
+Which of the following is not a technique of dynamic memory allocations?
+i. realloc()
+               ii.  calloc()
+iii.  malloc()
+                iv.  dmalloc()

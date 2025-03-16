@@ -1,0 +1,188 @@
+                               Question 1 
+What is the time complexity of the following code ?
+     int  i, j, k=0;
+    for(i=n/2; i<=n; i++){
+      for(j=2; j<=n; j=j*2)
+       {
+         k= k+ (n/2);
+       }
+    }
+
+i.   O(n)
+                  ii.  O(n logn)
+iii.  O(n^2logn)
+                  iv. O(n * log(n))
+
+                               Question 2
+Time complexity of binary search?
+i. O(1)
+             ii. O(n)
+iii.  O(log n)
+               iv.  O(n log n)
+
+                               Question 3
+Worst case time complexity of quicksort?
+i. O(logn)
+             ii. O(n)
+iii. O(n^2)
+               iv. O(n^3)
+
+                               Question 4
+What is the time complexity of the following code:
+int a=0;
+for(int i=1; i<n; i++)
+a += i
+int b=0;
+for(int i=1; i<m; i++)
+b += i;
+i. O(n*m)
+            ii.  O(n+m)
+iii. O(n)
+              iv. O(m)
+
+                               Question 5
+What is the time complexity of the following code:
+Int a=0, i=N;
+while(i>0){
+a += i;
+i /= 2;
+}
+         i.O(n)
+ii. O(logn)
+             iii. O(sqrt(n))
+iv. O(n/2)
+
+                               Question 6
+What will be the time complexity of the following code :
+   int  value=0;
+  for(int i=0; i<n; i++)
+    {
+     for(int j=0; j<i; j++)
+     value += 1;
+   }
+i. O(n) 
+            ii.  O(n+1)
+iii. O(n(n+1)/2)
+                  iv. O(n(n-1)/2)
+
+                               Question 7
+Which is the following is the  best criteria for 
+                    comparing the efficiency of the algorithms?
+i. Time
+           ii. Memory
+iii.  Both Time and Memory
+               iv. None of the above
+
+                               Question 8
+What does it mean when we say that an algorithm X 
+                                 is asymptotically more efficient than Y?
+i. X will always be a better choice for small inputs
+                       ii. X will always be a better choice for large inputs
+iii. Y will always be a better choice for small inputs
+                     iv.  X will always be a better choice for all inputs
+          Answer B.
+
+
+                                 Question 9
+How is time complexity measured?
+                    i. By counting the number of algorithms in an algorithm.
+ii. By counting the number of primitive operations 
+                         performed by the algorithms on the input size
+iii.  By counting the size of data input
+                              iv.  None of the above
+
+                                 Question 10
+What is the time complexity of the code:
+   for(int i=0; i<n; i++)
+      i= i*k;
+
+i.  O(n)
+             ii.  O(k)
+iii.   O(logkn)
+             iv.  O( logn(k))
+
+                                  Question 11
+Algorithms A and B have worst case time complexity 
+              of O(n) and O(logn) respectively. Therefore B always runs faster.
+i.  True
+              ii.  False
+
+                                  Question 12
+What is the time complexity of the given code:
+int a = 0;
+for (i = 0; i < N; i++) {
+    for (j = N; j > i; j--) {
+        a = a + i + j;
+    }
+}
+
+i. O(N)
+             ii. O(N*log(N))
+iii. O(N * Sqrt(N))
+                  iv.  O(N*N)
+
+                                  Question 13
+What is the time, space complexity of the following code:
+int a = 0, b = 0;
+for (i = 0; i < Y; i++) {
+    a = a + rand();
+}
+for (j = 0; j < Z; j++) {
+    b = b + rand();
+}
+i. O(Y* Z) time, O(1) space
+                   ii.  O(Y + Z) time, O(Y+ Z) space
+iii.O(Y + Z) time, O(1) space
+                   iv.  O(Y * Z) time, O(Y + Z) space
+
+                                 Question 14
+What is the worst-case time complexity of finding the node in a linked-list ?
+i. O(1)
+              ii.  O(log n)
+iii.  O(n)
+               iv.  O(n^2)
+
+                                  Question 15
+What is the time complexity of linear search algorithm ?
+i. O(n)
+            ii.O(n/2)
+iii.  O(1)
+                iv.   O(logn)
+
+                                   Question 16
+               Find the complexity of below recurrence:
+ { 3T(n-1), if n>0,
+T(n) =   { 1, otherwise
+i.  O(n)
+           ii.  O(3n)
+iii.  O(n/3)
+               iv.  O(6n)
+
+                                   Question 17
+What is the best case time complexity of bubble sort ?
+i.  O(n^2)
+            ii.  O(n^3)
+iii. O(n)
+                 iv.  O(nlogn)
+
+                                   Question 18
+What is the average time complexity of selection sort?
+i.  O(n^3)
+                  ii.  O(n^2)
+iii.  O(n)
+                        iv.  O(1)
+
+                                    Question 19
+What is the average time complexity for adding 
+                            a node at first position in a linked-list?
+i. O(1)
+           ii.  O(n/2)
+iii.   O(n)
+              iv. O(logn)
+
+                                     Question 20
+What is the worst case time complexity for searching a value in ordered hash map?
+i. O(1)
+              ii.  O(logn)
+iii. O(n)
+                  iv.  O(nlogn)

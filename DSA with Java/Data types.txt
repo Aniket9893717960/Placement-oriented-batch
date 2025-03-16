@@ -1,0 +1,164 @@
+                       Question 1
+Which of the following is not valid variable name declaration?  
+i.  int_v1;
+               ii. int_1v
+iii.  int_V1;
+                 iv.  None of these
+
+                       Question 2
+Variable names beginning with an underscore are not encouraged. Why?  
+i. It is not a standard form
+                  ii. To avoid conflicts since assemblers and loaders use such names
+iii.  To avoid conflicts since library routines use such names
+                     iv.  To avoid conflicts with environment variables of an OS
+
+                       Question 3
+Which is not a valid C variable name?  
+i.  int number;
+                  ii.  float rate;
+iii.  int variable_count;
+                            iv.  int $main
+
+                       Question 4
+Which of the following is true for variable names in C?
+i. They can contain alphanumeric characters as well as special characters.
+                            ii. It is not an error to declare a variable to be
+                                 one of the keywords(like goto, static)
+iii. Variables name cannot start with a digit
+                         iv. Variables can be of any length
+
+                       Question 5
+What will be the output ?
+#include <stdio.h>
+int main()
+{
+int main = 5;
+printf(“%d”, main);
+return 0;
+}
+i.  Compile time error
+                     ii. Run time error
+
+iii.  Prints 5
+                      iv.  Infinite loop
+
+                        Question 6
+There are two integer numbers X and Y, and the value 
+        of X and Y is in between 0 to 25. User stores the value under
+                  a 5 bit number. How many minimum bit is required to store
+                            the result of the below expression?
+1
+              2
+8
+                7
+
+                          Question 7
+The format identifier ‘%i’ is also used for _____ data type?  
+i.  char
+            ii. double
+iii. float
+                  iv. int
+
+                          Question 8
+What will be the output?
+
+#include<iostream>
+class Main {
+private:
+int SUM;
+public:
+Main() {
+int a = 10;
+int b = 10;
+SUM = a + b;
+std::cout << SUM << std::endl;
+}
+};
+
+int main() {
+Main main;
+return 0;
+}
+               i.20
+ii.  0
+                iii.  Compilation Error
+iv. No output
+
+                               Question 9
+Consider the following variables declarations:
+i. float num1;
+              ii.  short num2;
+iii.  long num3;
+              What is the data type of num1 - num3 / num2?
+a. float
+              b. short
+c. double
+               d.  None of these
+
+                                Question 10
+What is the output of this C code?
+#include <stdio.h>
+int main()
+{
+signed char chr;
+chr = 128;
+printf(“%d\n”, chr);
+return 0;
+}
+i.  128
+                   ii.  -128
+iii.  Depends on the compiler
+               iv. None of these
+
+                                Question 11
+What is short int in C programming?  
+i.  Basic datatype of C
+                     ii.  Qualifier
+iii.  short is the qualifier and int is the basic data type
+                      iv.   All of these
+
+                                Question 12
+When the given code is executed, what will be the output that is printed?
+#include <stdio.h>
+#define SQUARE(s)s*s
+int main(
+{
+int a=3;
+printf("%d",SQUARE(a+2));
+return 0;
+}
+i. 25
+
+              ii.  11
+iii.  9
+             iv.  None of these
+
+                              Question 13
+What is the size of an int data type?
+i. 64 bytes
+                   ii. 8 bytes
+iii.  Depends on the system/compiler
+               iv.Cannot be determined
+
+                              Question 14
+Which of the datatypes have size that is variable ?  
+i.  int
+       ii.  float
+iii. double
+            iv. struct
+
+                              Question 15
+What is the output of this C code?
+
+#include <stdio.h>
+
+int main()
+{
+float x = 'a';
+printf("%f", x);
+return 0;
+}
+               i. 97.000000
+ii. Runtime error
+                      iii.  a.0000000
+iv.  a

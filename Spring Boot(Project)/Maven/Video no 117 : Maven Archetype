@@ -35,3 +35,43 @@ But this are not the only options we have the thing is if you see the
                  which is in the plugin itself or the 'maven' installation
                  itself.
 What if u want the archtype form the internet.
+     iv. So, that's where u were go for the 'MAVEN Centeral' Now maven 
+central  has multiple archtype So, it were loading all the archtype's
+now it takes some time. 
+
+     v. Archtype : In this we have so many options i am sure that there 
+                   are some external catlog's as well which will give
+                   U more options No one explore it.
+
+I have make the project  in which most of the project are spring project
+we get the default configuration of spring boot let's say u want to use 
+any other archtype.
+If i want to build something spring boot mvc so, we have
+'spring-boot-jersey-blank-archetype' if you want to build the 'Rest application then
+select this then this will give you a default struture ok if i click on create
+let's see what u get here.
+
+1st downloading the dependency if we check what kind of 'Dependencies' we have in
+'DemoSpringProj's POM file'.
+   i. first he got 'springboot starter' in which he got 'web MVC'.
+   ii. he got a 'jersey' to run it.
+   iii. And we got JDBC as well
+
+And u don't required to add those Depencency by yourself here we also got 
+'h2'  by 'hibernate' or since it will downolad the entire repository from 
+internet u see it will taking some time and u see the project structure
+ing at some time.
+
+In 'src' point we got 'main' and since we already have some code availble here
+in 'App','AppConfig' and 'HelloEndPoint' this all are the '.java' file.
+      'AppConfig' will got some configuration.
+      'HelloEndPoint' will help to connect with Database
+
+In 'resorces' we got 3 files 
+         1st is 'application.yml' if you cant to provide some configuration 
+        2nd is 'log4jdbc' this have some configuration SO, u can use this
+             template and build the project.
+So, that's the beauty about using the 'archtype' also in the 'Eclipse' tool we
+have same optionsof course in 'Eclipse' u can create a 'Maven' project
+U can basically choose the 'archtype'on the first project itself and here we
+go for different stuff.

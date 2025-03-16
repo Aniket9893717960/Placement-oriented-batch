@@ -1,0 +1,33 @@
+Till this section we were talk about JDBC the thing is if you talk about software 
+industry this will all about 'data'. what ever we done for 'data' So, even if you
+are building application so, that you interact with data.
+  Updating data         Fetching data          Storing data
+
+Till this point we work with data but in the form of variables
+what if you store a no. this can be store in integer.
+  If you want to store a point value then it will stored in 'double'.
+
+But what if you closed your application
+  the momont u close your application u lost all your data.
+                  So, what we want is to store data paramanently somewhere?
+  Of course there is one option that you store your data in normal file
+  just like u create the '.txt' file to store it.
+
+  But the problem in '.txt' is difficulty to search certain things
+  It's difficult to maintain the relation ship between two different things.
+
+  Example:
+          If you are storing 'Name' and 'age' of the person and each person have
+  there own name and there own age how will you search the particular age of 
+  particular person It's very difficult in a '.txt' file.
+  SO, we have the way to solve this and Solution name Is:
+                   'Relational Database Management System'
+
+  So, basically u can store your data in tabular format and that will be your 
+  permanent storage of course there are some in memory database available but 
+  let's say most of the DBMS are parmanent storage.
+
+  But u can do is u can store the data in the database but the only problem is
+  if you want to use this database u need to use SQL language which is
+    'Structured Query Language'
+  

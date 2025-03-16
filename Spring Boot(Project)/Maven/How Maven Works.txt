@@ -1,0 +1,59 @@
+U have to know Maven's working because what if you stuck some where 
+due to 'Archtype' Issue and 'Version' Issues at that point u have to
+know how ton resolve it.
+
+It will be easier to resolve if you know what is running behind the 
+seen so, let's understand this and the focus is not for the Dependency
+not for the plugin's so, here we talk about how Maven works to resolve the
+Dependencies.
+
+What happens is in every project when u go to 'pam.xml' and u add the 
+dependency what happens is you asking maven
+'hey u know MAVEN i want this dependencies from the internet' So,
+it's says hay maven i need this dependencies.
+
+But the question arise how maven will know from where u get the 
+dependencies it's mean that when u install 'MAVEN' on your
+machines u have an authority to access the dependencies from
+all along the world of course it's not right.
+      It will make your machine very bulky and if you have '10TB'
+Hard Drive  so, it will not been enough because allot of Dependencies 
+in the world.
+
+So, what happend's is when you say 'Hey maven i want this dependencies'?
+MAVEN says 'Ok u give me some time i will give u this file/dependency.
+Firstly i check those dependency in your local System.'
+So, basically Every machine u have 'MAVEN' installed.
+U have something called an 'm2' folder so, in your local Drive
+Or In your machine If u are using 'mac' or 'windows'.
+
+If you are using 'windows' search for an 'm2' folder 
+There are very high chance that it's should be in 'documents
+Just search for it. in 'mac' it
+should be in your 'home' folder it's just that it's hidden folder
+U can use command 'ctrl+shift+.' to see all the hidden folder
+
+In the 'm2' folder u see 2 folder we click on 'repository'
+in my machine i have all this folder but if you are using 
+'MAVEN' for the first time u don't have any folder here.
+
+So, what happend is every time u use maven to get some dependencies
+'Maven' have the copy of it inside the local machine 
+If i delete all this 'Dependencies' then
+I say every time 'Hey MAVEN u have some dependencies'
+MAVEN is like 'Ok let me search that thing in the local machine
+                First in 'm2' folder If it's there that's great
+                else i go to 'Maven Central' From there i download 
+              the Dependencies.'
+
+It's the One Leetle problem here if you say: 'we have the library
+on the Maven repository or any Central repository'
+Do, u think all the libraries are same because if thay are not safe
+basically your project is not safe
+So, u have to make sure that your used library will be safe in fact in
+intellij it gives the warning like
+       'Dependency <name with version> is vulnerable'
+
+basically most of the libraries which are used is 'vulnerable' and
+that's why u get updates for it so, make sure this particular libraries are
+updated 

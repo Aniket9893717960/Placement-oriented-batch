@@ -1,0 +1,90 @@
+             -----------------NOTE-------------
+Before JDBC version 4 it was compulsory to Register and Load the Driver
+But After JDBC 4,0 because it was introduce in java 6 which have not 
+necessary to load and register by yourself it will automatically
+done when u add the jar file in your project.
+So, yes all those steps are optional u focus on
+i. Create Connection
+ii. Create Statement
+iii. Execute Statement
+iv. Close Connection
+            ----------------X------------------
+So, once we have the postgres ready so in last video we talk about
+"How do you set up the PostGres SQL?
+How do you create a Database?"
+Now i hope do u remember the configuration
+It's time to connect your java Application with PostgreSql
+But thee problem Not a problem but we have to work some steps right
+So, the concept we are implementing between           And         Is
+                                           Application    Database  JDBC
+To achive that first thing we need is '.jar' file as i maintoined before
+your DBMS basically provides you a library which is the implementation
+of JDBC connectors
+So, we have to get the library 'jar' file in java then we have to write 
+the java code in that as well
+We have to follow certain 'Steps' so, we have to done the 'jar' file later
+first we have to done the certain steps
+           Steps matter because we have different name for it
+1) Once u got here a '.jar' file u have to basically import the 
+   Packages
+SUMMARY : we know in java there are different packages we have to get that
+          Package which is 'Java.sql' we have to import this package it
+          's first step.
+
+2) Is basically to 'Load the Driver'.
+SUMMARY : U know 'Driver' will coming from the 'jar' file and that's why u
+          Need the Jar file. For every implementation we have to load the 
+          Driver.
+
+3) we have to 'Register the Driver'.
+SUMMARY : 
+
+4) Create Connection.
+SUMMARY : Create the Connection Object In JDBC.
+
+5) Create Statement.
+SUMMARY : U have to Execute the Statement when u say u have to create and 
+          Execute the statement let u have to think what u want to say.
+Then u have to say the execute the statement.
+
+6) Execute Statement.
+7) Process the Result.
+SUMMARY : So, what ever the response u were get from your friend u have to
+          Process it that's why it's one more step.
+8) Close Connection.
+SUMMARY : Which is very important otherwise u will be lacking the memory and
+          the connections.
+So, this are the 7 steps u have to follow
+               ------------NOTE----------------
+To Understand this Steps properly let's take some example and then connect
+with this two.
+SO, let's say u are working from home and few of your colices from office
+and now you want some information let's say if you want to know what's 
+happening in the office what u will do is u will call your friend/collic
+basically. Before calling u were using your phone.
+yes we have other option but let's say your phone is with you
+if you want to call first of all u need a Phone(That's your Jar file)
+
+Next u have to register that (U have a seem card) which is working.
+Also u have the network in your area or the place u are(That's your
+Loading and registering the Driver.
+
+Now once u got the network next thing will do is you make a connection
+Of course u have to make sure that u have network u able to call prople
+(That's make sure your connection).
+Now once u have the connection with your phone everything is working
+of course u will ring u have to Dial the no. and there will be ring.
+
+Now at this point u have to think what u want to say Once you friend pick
+up the call u have some gredding messages(like Goodmorning, GoodAfterNoon
+what ever local thing u talk to your friends) then u will shout your 
+actual question.
+
+Then from front side your friend will give you some response and u have to 
+process the response.
+Once u have done with the processing u simply close the connection U have to
+cut the call otherwise u have to pay the huge bell.
+
+So, basically u have to follow the steps if the same way u have to done with 
+JDBC let's go with the steps.
+                -------------------X---------------

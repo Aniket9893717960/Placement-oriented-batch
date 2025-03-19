@@ -29,5 +29,39 @@ But what if you closed your application
 
   But u can do is u can store the data in the database but the only problem is
   if you want to use this database u need to use SQL language which is
-    'Structured Query Language'
-  
+  'Structured Query Language' so, as a normal user.
+If i have to work with data u don't need to learn SQL of course u don't 
+expect to client to learn SQL and that's where what u need to do is 
+u have the         But between the      Or Db u have the application
+          Database                 User
+Now this application will build in any language(like java)
+SO, the user will interact with the application Now this is the console
+based thing so, what ever we done till now is all console based right
+And the way user can interact with the console based application
+Is with the help of 'CMD' may be if you want to pass the value
+, may be if you want  to get the value.
+So, that every thing will be happend in the black screen
+
+But what about the correction between             And
+                                      Application      Database.
+That's where we have to use connectivity and the connectivity will be given
+by 'JDBC'.
+
+            JDBC is an API so, JDBC is the part of JAVA Development kit So, 
+it gives you an API to connect with Database.
+But the problem is in this world we doesn't have limited DBMS we have allot of
+Databases Example we have 'ORACLE', 'PostgreSQL', 'MYSQL', 'H2' , 'DB2' but we
+are going to use in this course is 'PostGres' Now 'Postgres' is very famous
+Of course u can use any DBMS which u like but personally i like postgres by
+choice otherwise if client says they already have some kind of DBMS installed
+But we are going to use 'Postgres'.
+
+But the problem is u don't think as the technology changes u don't think that
+the connectivity code also changes like
+i. if we connect java with PostgreSQL what if in future u want to connect this 
+with mysql Now the problem is how many lines of code u wanna chnage
+That's tricky right.
+
+Here java says ok we have the JDBC API Now we will just give u interfaces
+and few classes to work with But the actual implementation will be given
+by the DBMS itself

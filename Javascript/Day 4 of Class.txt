@@ -1,0 +1,9 @@
+            QuerySelector(): FIrst matching
+            QuerySelectorAll()
+            getElementById()
+            getElementsByClassName()
+        This 4 selectors we have two remember
+
+An Imp Question for Interview
+       What is Array like Objects and An Array?
+       What is Event Bubbling, Deligation and Capsuling?

@@ -10,3 +10,6 @@ An Imp Question for Interview
 
 Event Deligation : Is the Process of In this process we attach the single handler  function into a parent container which
                     handle it's child.
+
+Event Bubbling : Is the Process when the process of Execution propogate to bottom to up when we click on the child class.
+Event Capturing :

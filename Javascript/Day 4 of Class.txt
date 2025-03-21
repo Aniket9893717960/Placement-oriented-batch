@@ -6,4 +6,7 @@
 
 An Imp Question for Interview
        What is Array like Objects and An Array?
-       What is Event Bubbling, Deligation and Capsuling?
+       What is Event Bubbling, Event Deligation and Capturing?
+
+Event Deligation : Is the Process of In this process we attach the single handler  function into a parent container which
+                    handle it's child.

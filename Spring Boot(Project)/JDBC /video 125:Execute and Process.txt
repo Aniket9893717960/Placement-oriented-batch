@@ -75,6 +75,34 @@ data or not
     But if you don't want to print the true or false you have to print the 
             real data and for this we done steps are as follows
         ------------------------------------------------------
+SO instead of printing 'rs.next' we have different mathod of
+'ResultSet' are:
+            -----------NOTE----------
+getString() : which takes the column's index.
+getString() : which get column's name.
+getInt() : if you are working with integer type.
+             -----------X------------
+If we focus on 'getString()' then 'getString()' gives u a string data
+for the particular column Let's understand what do you mean by that
+                 rs.getString("sname")
+                                 |->It will give u a data of column 'sname'
+because if you go back here and if i say '1' and print output will be
+'Navin' here but u look at the column name So, that is what we want
+So, why we need to maintoined the column name is because some time if you
+find the query u might be having multiple column. so, what ever the data 
+we get stored in String name and print it.
+
+                     String name = rs.getString("sname");
+              System.out.println("Name of a Student is "+name);
+
+After running this code we got an error name 'ResultSet: Not Positioned Properly'
+the thing is if you are fatching data it is possible that in this table
+u might having multiple rows So, the Temprary solution of this problem is put
+'rs.next()' before the actual command.
+
+              rs.next();   --> this will ensure that only single data is here
+                     String name = rs.getString("sname");
+              System.out.println("Name of a Student is "+name);
 
 vii. This is last step to close the connection. To done this simply write
                            'con.close();'

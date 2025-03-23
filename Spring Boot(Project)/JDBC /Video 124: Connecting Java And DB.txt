@@ -1,2 +1,79 @@
 Now we are connecting JDBC to DB And for this
- we done the following steps:
+in the project "JDBCCourse"
+so, first we gone to 'src' folder and i will say 'new' and i 
+will create a '.java' file  and we can name anything to this
+is 'DemoJdbc.java' and also we need a main method.
+Now we will write 
+        those following steps:
+        /*
+         import package
+         load and register : Of course this is optional
+         create connection
+         create statement
+         execute statement  : Here we execute the statement
+         process the results  
+         class
+         */
+i. We have to import the packages.
+ii. we have to register the driver I told you there are different kind
+     of driver for different tool 
+   a. Postgresql :
+                org.postgresql.Driver
+   b. Mysql :
+               com.mysql.jdbc.Driver
+This were come at the optional step but if u wanna do then u can use this 
+command.
+         Class.forName("com.mysql.jdbc.Driver");
+               ---------------NOTE---------------
+if we write the wrong path "Class.forName("com.mysql.jdbc.Driver");" then it gives
+ClassNotFoundException
+               -----------------X---------------
+SO, this is how u basically load the driver Now this might throw an exception
+So, u can simply say 'throws ClassNotFoundException' but this will make the code 
+look complex i will suggest u instead of 'throws' u use 'try-catch'.
+
+iii. Connection means u have to connect your application to the database
+      and the way u do that is by creating a connection object;
+                 Connection con = null; also import java.sql.Connection;
+
+     Can i say 'new Connection' the problem is 'Connection' is an 'Interface'
+     it's not a class so, u have to look for the implementation for this 
+U have something called 'DriverManager' in which u have the method called
+'getConnection' so, basically it gives u the implementation right
+               'getConnection' have the return type of 'Connection'
+So, this get connection will basically asked for 3 parameters 
+      'url'     'uname'       'pass'
+Now intellij will tell u the thing as well this is the first, second and 3rd one
+it might throw  an exception so, we can simply say throws.
+
+      SO, what's URl? Now of course right here java application with database then
+your java have to know which DBMS u were working with but also u have to provide the 
+database name
+U know 'Mysql','PostgreSQl' are the network Databases that this are available throw
+network. First we create a 
+               String url = "";
+               String uname =  "";
+               String pass = "";
+So, we got this 3 things the url say
+    a. java would be connecting with what?(jdbc)
+    b. 'jdbc' will connect with database name 'mysql'.
+    c. u have to maintoined the database name 'demo' only thing is database will
+be available on the networkso, u have to maitoind the IP address and Port no.
+So, this will be on the same machine which is IP address is "localhost" then
+we are using mysql so, it's port no. is '3306'('5432' for 'Postgres')
+
+               String url = "jdbc:mysql://localhost:3306/demo";
+                AND Final Connection will be vidible link this
+              con = DriverManager.getConnection(url,uname,pass);
+                   ------------NOTE--------------
+if we done some mistake in "con = DriverManager.getConnection(url,uname,pass);" code
+it will give 'java.sql.Exception'. But for specific mistackes there are different 
+suggestion for 'java.sql.Exception'.
+i. If we done mistake in 'url' then Exception is
+ "java.sql.SQLException: No suitable dirver found for <GIVEN URL>"
+ii. If we done mistake in 'uname' and 'pass' then Exception is
+ "com.mysql.jdbc.util.PSQLException : FATAL: password authentication failed 
+      for user 'root' "
+                  ----------------X----------
+
+NOW the LAST 3 STEPS will be seen in the next video 125

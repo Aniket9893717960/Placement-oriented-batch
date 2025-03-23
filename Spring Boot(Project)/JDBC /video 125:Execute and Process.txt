@@ -1,0 +1,81 @@
+SO, we are able to Establised the connection right 
+       in the last video on "Connecting java with DB" we done 3 steps :
+          i. import Package
+          ii. load and register
+          iii. create connection
+
+          iv. CREATE STATEMENT
+              ----------------
+Now let's deeply understand what we are doing here so, we have the java code
+we want to connect with database but why to fetch some data right.
+So, if you seen that to fetch or save data but in general we want to do some
+thing with database.
+So, here we have the database right in which your database name is 'demo'
+in which we have the table called 'student' in which u basically have 3 columns
+  and we only have 1 row.
+SO, i will trying to fetch the data of specific student with the help of id in
+  sql how do we do that 
+    If you want to get data directly from sql then click on Query tool
+For taking that one record so,
+          select sname from 'student' where sid = 1
+    So, basically we are writing a query at which u are saying
+'hey we want a name of the student where the sid is 1' at output 
+we got name of 'student'.
+    So, how do we do that from java of course we write the statement to do that
+by creating a reference object of statement So, i will say 
+      'Statement' here 'st' now the thing is 'Statement' is an 'interface'
+SO, how to get instance for this is very simple
+  'con' have the method called 'createStatement()' it will basically create the
+  object of statement for you So, u don't have to worry about what is happen in 
+    behind the seen We were concern is 
+    'hey did we got the statement object' i say yes and we are happy
+
+                    Statement st = con.createStatement();
+    
+So, once  u got statement u don't think we have also think about what u want to
+say if u want to ask the question to sum one u have the question in your mind or the 
+statment in your mind what u want to see in about to talk with database so, basically 
+we have to write the query
+
+         String query = "select sname from student where size = 1";
+This is our sql query Now the Question arrise 'how to execute this query'
+
+v. Now if we want to fire then we say 'Execute Statement' How deficult it can be
+  so, let's try                        -----------------
+       'st' reference object for statement if you say . here we got multiple 
+         execute methods but then with sql as well we have the different type
+of query's just like select query which will give you data And then there
+are some other query's which will change something in database So, 
+If we talk about 'select' query it will not modify the database it will simply
+fatch the data.
+Now to do that if u want to simply fatch data we use 'executeQuery' but
+  if we want to modify data then we write 'execute' method but this 
+'executeQuery' needs the Query itself 
+
+                'st.executeQuery(query)'
+    Now we also done with the 'executeStatement'
+
+vi. We will execute query as 'executeQuery' statement but it will return something
+    right but where we storing is no where If we see 'executeQuery' so it's
+return type is 'ResultSet' So, what ever we are getting data from the database 
+    is getting stored in the 'ResultSet'.
+So, that's what we are doing here we storing data 'ResultSet' but the problem
+is how do i print it's data the first thing we have to know is there any response of
+  our query.
+
+  we write 'rs.' we have any method that show we got any response or not got
+  the method called 'next' if you observe the method 'next' it gives u a 'boolean'
+value now why some one will give u a 'boolean' value.
+    we write
+                     System.out.println(rs.next());
+Is things are working out we done the 'Process Result' as well.
+In this case u were processing the data we were doing is simply printing we got the
+data or not
+        ------------------------------------------------------
+    But if you don't want to print the true or false you have to print the 
+            real data and for this we done steps are as follows
+        ------------------------------------------------------
+
+vii. This is last step to close the connection. To done this simply write
+                           'con.close();'
+  

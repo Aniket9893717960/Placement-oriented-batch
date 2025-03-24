@@ -16,4 +16,40 @@ because after that things will start changing so, u need the
 current statement as well.
                   'Statement st = con.createStatement()'
 Things will change from here so, what ever we do is we change the part from here
-because that something we want to change
+because that something we want to change so, first we drive the SQL Query here
+
+    String sql = "insert into student values (5, 'John', 48)";
+
+So, how do you execute so, ofcourse we got the 'Statament'
+now we have to chose method the thing is at first we have 'executeQuery'
+
+But 'executeQuery' make sense when we want to get data.
+because it returns 'resultset' this time we use to execute the query
+which will return something else so, we have something called 
+'execute' here then, we just pass the query which is 'sql'
+what it will do is it will execute the query.
+
+Now what it returns if we click on 'execute' will returns the 
+'boolean' value u will execute the data or not that's what we
+get here
+
+            boolean status = st.execute(sql);
+
+So, what we can do is we get the variable called 'boolean' name
+'status' so, in this we will say 'true' or 'false' so,
+first of all print the 'status' then once u exeute that we should be
+there in database right.
+
+'execute' will return different type of data. It can return the resultSet
+if it will be the Sql query or 'select' query it will return the count
+if you insert the update query.
+If let me say if you want to update some data so, of course we have to 
+maintoined how many rows we are updated So, it returns 'false' when
+u are executing insert update query.
+
+Insert is working let we done the update
+                  For Update we use the Query is
+    'String sql = "update student set sname= 'Max' where sid=5"'
+
+Same as the 'Delete' Query :
+          String sql = "delete from student where sid=5";

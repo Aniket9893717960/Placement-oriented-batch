@@ -1,0 +1,19 @@
+So, we were able to get the data right 
+1st we fetch the single data we are not
+sure how many data's we have  and we have 3 columns
+which u going to fetch now of course u automate
+
+But what about Inserting the data is it realy possible of course
+right when u are connecting your application with database and the
+user may want to add so many recourds.
+
+So, there is something called CRUD operation which is 
+    Create    Read      Update      Delete
+so, we were able to read so, the our part is done but what about 
+the Create Read and Delete.
+What will remain common is the Establishment in connection
+because after that things will start changing so, u need the
+current statement as well.
+                  'Statement st = con.createStatement()'
+Things will change from here so, what ever we do is we change the part from here
+because that something we want to change

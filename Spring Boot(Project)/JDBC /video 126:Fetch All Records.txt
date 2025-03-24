@@ -1,1 +1,39 @@
+So, we insert the data in database then we can fetch the
+data with different IDs with the help of Queries.
+
+'insert into student values (2,'kiran',50)'
+     Now we want is to fetch the data and show it into the java code
+Just i want to print all not just 1 because at this point we are just 
+printing only names of all 4 rows and 3 columns.
+
+How do we done that first of all let's change the query
+we don't know how many rows are there in this case we know there are
+4 rows but in generall we don't know but if we done it in automated way
+what you can use it u choose a loop here and this loop will run till u
+have the data.
+
+but how u know what kind of data do you have how much rows u have
+u can use someting 
+'rs.next()' this 'rs.next()' have multiple things 
+
+1st it will check
+do we have the next row if it yes we shift this in the next row
+that's why 'rs.next' will basically runs for all the rows because
+'rs.next' will basically runs for the next row.
+
+2nd 'rs.next' also make sure that it's shifting to the 'new' row
+So, that done we are basically jumping from row to row.
+
+But the question is what is the data you are going to return because
+we are filling a query which will return all three columns.
+So, in this case we return all three columns or u can print it 
+something like this instead of printing in a new line.
+
+U can print the first data 'rs.getInt' because that's the integer type
+right Now u have the choice u can maintoined the column no.
+But the only thing is u have to remember the sequence. 
+
+        while(rs.next()){
+            System.out.print(rs.getInt(1));
+        }
 

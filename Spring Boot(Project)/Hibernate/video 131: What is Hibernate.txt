@@ -1,0 +1,65 @@
+ORM stands for "OBJECT RELATIONAL MAPPING" next Question is why do we need it.
+We allot talk about the 'Java' that its "Object Oriented Language" Every
+thing in that is Object 'Right' and when u build the application with java
+the first thing come to your mind is object.
+
+This should be an Object u want to build an application let's say if you want
+to build an application every entity there when if u want to a preson
+or a thing or any operation.
+
+we first thing about object and then we think about 'OK' with this object
+what operations i will perform so, every data will have data and methods.
+
+Now if you want to store this data how will u store that we want to build a 
+parmanent storage Not in a memory.
+  when we talk about paramenent storage whenever u set the data in a file
+when i say file so, whether it's a 'CSV' file or any other type of file.
+
+If u want to store the data then u also proecss it so, we want some good type 
+  of databases Now ofcourse this can be a relational one or this can be a 
+non - relational one which is called the 'No - Sql' Databases like 'MongoDB'.
+
+But let's focus on relational one here If you want to store the data in
+relational database we seen it in JDBC that we use Tools like
+(oracle, PostgreSQL, Mysql) there are bunch of DBMS available there
+If you want to store those data.Then we have to use SQL.
+
+And we also seen that if you want to store data of the object in the database 
+we have to write queries ok if i say queries what do we mean by that 
+let's say if you want to insert the data of student and then u will pass
+the values So, since we pass the value in the variable of the object.
+
+         Student student = new Student(01,"Navin",21);
+  try {
+    String sql = "INSERT INTO student(rollNo, name, age) VALUES (?,?,?)";
+    PreparedStatement pstmt = connection.prepareStatement(sql);
+    pstmt.setInt(1, student.getRollNo());
+    pstmt.setString(2, student.getName());
+    pstmt.setInt(3, student.getAge());
+    pstmt.executeUpdate();
+  } catch(SQLException e){
+    e.printStackTree();
+  }
+  
+we have to manually fatch them put that in those query and then execute
+Qureies task right.But there are certain problem with this are:
+ 1. As the java Developer we think about object. Then as the java Developer
+  We have to understand the 'SQL' as well. 
+And ofcourse u should know SQL. But Do u have to master it do we have to 
+remember all the queries And what about the optimization and what about
+the cashing If you want to do that as a developer in SQL or i mean with
+JDBC we have to done allot of steps And this is where HIBERNATE comes
+into picture.
+
+Or An 'ORM' framework comes into picture by saying 
+  "don't u have to worry i am there" So, 
+  
+                          what ORM Does?
+  ORM(Object Relational Mapping) says 
+       'OK u got the object if i will give u an option of here's the object
+         And put that into Database' say something like this
+Hey ORM Saves Below Object.
+                 "STUDENT OBJECT
+                     rollNo: 01
+                     name : Navin
+                     marks : 77"

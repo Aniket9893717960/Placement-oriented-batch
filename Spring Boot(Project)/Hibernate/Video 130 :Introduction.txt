@@ -1,0 +1,28 @@
+So, Now we focus on "Hibernate".
+If u want to build an application or let's say console based application
+we are quite happy with java and JDBC and if u want to build a backend
+application or a web - application we can use servlets.
+
+Now that's an old technology but even if you work with spring MVC
+Which we will seen in future is based on servlets
+
+Ok so, let's keep it aside If u want to build an application so the
+Java JDBC is enough so, why we are going with spring in the upcoming
+sessions There are Two reasons.
+        i. To imporve the Software.
+        ii. To improve the Productivity with Software.
+
+If u want to increase we use 'HIBERNATE' instead of using the plane JDBC
+I only saying this if you worked with JDBC and we have seen that before
+we have to done the lot of steps to store the data in database and 
+java is an object oriented language So, everything there is an object.
+
+Or in the database side we have relation so, to mark those connectivity
+so, we have to manually write those SQL Queries Now we will done this with
+the help of 'HIBERNATE'. 
+
+In fact if we talk about spring there is a module in spring which is 
+'SPRING DATA JPA' it will talk about the similar things u have doesn't
+write the query but if u chose to don't work with data JPA.
+
+And also u want to know what ORM works we seen in the next Video.

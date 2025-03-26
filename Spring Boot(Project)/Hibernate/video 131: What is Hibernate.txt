@@ -63,3 +63,44 @@ Hey ORM Saves Below Object.
                      rollNo: 01
                      name : Navin
                      marks : 77"
+        AND ORM says Done:
+U think that will be amazing and that's what ORM framwork does specifically 
+'HIBERNATE'.
+             BUT THE QUESTION ARRISE HOW THAT WORKS
+             ---------------------------------------
+So, what your 'hibernate' does is it take your object and understands it.
+How u basically understand the object with it's blue Print.
+And Blue Print of the object is a class.
+Let's say i give u                class.
+                  class  Student {
+                     int rollNo;
+                     String name;
+                     int age;
+                  }
+Very simple one which has 3 variables let's say 'Roll No', "Name", "Age" and with this variable when u create the new object of Student.
+Let's say we got few students here and we got his data. When i ask u as the viewer
+i want this table to show this data.
+So, at first i want that what's the table name it would be
+          Ok this is my first Question next. let's say if u decide to go with the
+table u have given some name?
+Second Question is how many Columns u need?
+3rd Question is Let's say if u decide the no. of columns So, 
+     "What should the name of the columns".
+4th Even if u decide tha name of the columns then what should be the type of it?
+5th Let's say if you create a table how should we insert and represent the data
+in a row?
+                 And that's why we have to done this Mapping
+
+Now look at this class the class name is 'Student' So, u don't think that your
+TABLE name is 'Student'. For columns we have 3 fields in the class.
+Can we create three columns here But what about the 'Names' same name Is just 
+simple that in Java we use camel caseing.
+Here we will using yes same type what is the type in java we have to try to mach
+it with the table let's say 
+         int             Int
+         String          Text
+That's how we can match it and what about the data then Every object have different 
+data then each object will becomes one 'ROW and that's how your ORM works
+And to implement this we use a tool And "HIBERNATE" is that tool.
+
+Ok Everything looks magical here how we can implement that let's see in the next video

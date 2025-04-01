@@ -17,4 +17,33 @@ Let we run this so yes we got an exception name
 We have to build different names but u have to put that here if we don't want
 to do that then go with different thing.
 This resources will create the new file int 'resources' package with name as
-'hibernate.cfg.xml' because that's what the console says here
+'hibernate.cfg.xml' because that's what the console says here.
+
+The first thing u need is 'hibernate configuration' tag and this is coming from this
+doc type here and in this u were getting the 'session-factory' tag in this u were 
+get by default now in this 'session-factory' tag.
+U have to maintoined certain properties so, let's maintoined the first property is:
+
+i. name = "hibernate.connection.driver_class" under the 'property' tag opening
+and closing we write "com.mysql.jdbc.Driver".
+ii. u have to maintoin the url right with name is:
+    name = "hibernate.connection.url" under the 'property' tag opening
+and closing we write "jdbc:mysql://localhost:3306".
+iii. name = "hibernate.connection.username" under the 'property' tag opening
+and closing we write "<Given UserName>".
+iv. name = "hibernate.connection.password" under the 'property' tag opening
+and closing we write "Given Password".
+
+Now if i run the Program then  we got the different error.
+          'unable to locate persistent: com.telusko.student' it means that compiler 
+will able to load the 'configuration' but i am not able to find the class or persist the class. But u say "hey there is a class here why u are not able to persist because it's a normal class"
+Hibernate say of if u want to to map those classes we have to add the 'configuration'
+so, u can do that here with the code or u will do that in the 'xml'.
+
+So, we return to 'Main.java' file and write at the next line of 'Configuration' is
+'cfg.' after u check that u see multiple methods at which u have to chose one method
+So, we chose 'addAnnotatedClass' in which we have to define the url of 'Student' class like this:
+
+        Configuration cfg = new Configuration();
+     cfg.addAnnotatedClass(com.telusko.Student.class);
+                  cfg.configure();

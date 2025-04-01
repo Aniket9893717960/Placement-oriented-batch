@@ -96,3 +96,25 @@ an 'Interface' in 'Session' we have the method called
 'beginTransaction' and it returns the object of 'Transaction'. And it will say the
 object of 'transaction'.
                All the changes will be done at 'Main.java' file.
+
+           Session session = sf.openSession();
+        Transaction transaction = session.beginTransaction();
+             session.save(s1);
+
+But first time it will give error because 'relation student does not exist'
+means table name 'Student' Does not Exist.
+
+      If i want 'Hibernate' will create a table for me
+      ------------------------------------------------
+can we do that So, let's go at 'hibernate.cfg.xml' and we can set the 
+property tag with name 'hibernate.hbm2ddl.auto' and in this tag opening
+and closing we write a simple 'create' which will create a new table for
+u but first time it will create a table if table already exist then 
+It will give error.
+
+So, Better is write 'update' a table in place of 'create' a table.
+Becuase 'Update' says "I will use the table if the table exist And it
+also say that if the change in Schema i will do that May be i can add
+a new column But it will not remove the old column"
+
+Now after done all the changes it will not give an error.

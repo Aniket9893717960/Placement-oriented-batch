@@ -65,3 +65,34 @@ That's why we got the standards name 'JPA' and the ORM tools will implement it.
 That every one on the same page.
           ----------------------X--------------------
 Atleast similar not same And that's why we go with the JPA 'Annotations'.
+          After we run this program now we got different error Not same:
+
+We say Entity 'com.telusko.Student' has no identifier.
+              TO resolve this 'Exception' on the top of 'rollNo' in class
+'Student' i write '@id' By this we are saying is 
+'hey in this we have multiple variables this 'rollNo' is the primary Key.
+For the table.'
+
+Now it should be happy let's re run this So, Yes finally there is no Error
+OOSUMM But let me check that the changes we are trying to done is save in database
+or not But I sorry to say 'It's Empty'.
+Things are not working the way we want it. Some thing is messing but main Question is
+What?.
+                    U know that what we are trying to do here is 
+                       We want to save data.
+                    --------------------------------------------
+Go back the database principal that we got the asset property. So, every time u 
+save data is the transaction.
+Let's say 'U were saving the data That means u were doing transaction. Or
+After transaction u have to commit the transaction.' Otherwise it will not
+save that means we have to commit it.
+
+How do we commit it it's very simple Sorry Difficult to cummit but u are saying 
+'commit'. So, 'Commit' will belongs to transaction so, before u commit it.
+U will create the object of 'transaction' From 'Hibernate' package let me say
+it's name is 'transaction'.
+But how will u got the object of transaction because the 'Transaction' itself is
+an 'Interface' in 'Session' we have the method called
+'beginTransaction' and it returns the object of 'Transaction'. And it will say the
+object of 'transaction'.
+               All the changes will be done at 'Main.java' file.

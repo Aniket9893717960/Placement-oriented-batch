@@ -36,3 +36,45 @@ Now with this details if we try to print it we got the data.
               " Student(rollNo=101, sName="Navin", sAge=101) "
 But i not aimed to print this data. The aim is to store the data in database
 So, which database i was talking about.
+    
+   viii.  I wanted to say is if i write 'save' method to save 's1' and done.
+But if u run this code compiler will say where u got the method 'save'.
+
+I will say ok here we got the library there should be some classes,
+methods and interfaces in java which will provide u the method 'save' and what
+are the steps for that what we have to do is we use the particular thing called
+'Session'.
+
+Now if u search for 'Session' here we will search this 'Interface' from the 
+'Hibernate' which is not even loaded So, we firstly 
+
+            Import org.hibernate.Session;
+                 main() { 
+                   Session session = null;
+                  }
+
+So, u cant simply create the object by saying keyword 'new' keyword.
+So, we have to find the way. So, till this point we say 'null' and we say
+                     'session.save( Object: s1)'
+U can see that 'session' have multiple method But if u try to run this program
+compiler will give u a fampus errer which is
+               'java.lang.NullPointerException' because the 'session' is null
+So, now how we will create the object how do we solve this because this is 'null'
+gise to create the session we follow some steps.
+
+Now who creates the session Normally if we talk about an object like if u want the
+session then u need to create the 'SessionFactory' name 'sf' Now even 'SessionFactory' if u go there it's an 'Interface' So, we can't get the object by
+default So, we find the way So, at this point we say null.
+
+Now we can get the object of 'Session' from 'SessionFactory' there is a method called 'openSession' Now what is happening here 
+
+                 what is 'SessionFactory' And What is 'Session'?
+So, whenever u want to work with 'hibernate' which deals with database.
+'Hibernate' says 'Ok u want to connect with Database And this is actually a constally afair when u talk about the application, Connecting with database,
+Doing some transaction this is coastally and to do that we have to first open
+the session'.
+And to open the session we need the 'SessionFactory' the question arrise how many times we open the session is 'n' no. of times.
+So, basically for any unit of work u will be using the new Session.
+
+But what about the 'Session Factory'. So, 'Session Factory' is a heavy weight object 
+Use this only once in a Database application. If that make sense 

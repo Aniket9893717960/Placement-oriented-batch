@@ -1,0 +1,80 @@
+So, Now create those classes. What i want to achieve here is
+  i. first we DELETE the 'org' package because we don't need it.
+  ii. ok so, in this 'com.telusko' package we create sub packages to keep it simple
+    i were going to the default one.
+  iii. create a class with the file name 'Student.java' in 'com.telusko' package.
+    U know that we work with different entity but string make sense or simple to 
+    understand.
+  iv. So, in the 'Student' class what we need is So, we need 
+                                                          Private int rollNo;
+    To go with the first column as rollNo or the variable as 'rollNo'
+    Then we go with                                     Private String sName;
+    At last we got with                               Private int sAge;
+
+ iv. right click then click on 'Generate' then click on 'Getter's and Setters's'
+      And we select all 3 variables then click 'OK'.
+  v. And Now we want 'toString()' method to print it. 
+     So, right click. click on 'generate' then 'toString' and we select all 3 
+     variables then click 'OK'.
+
+So, simple stuff nothing fancy we got pojo which is 'Student' here And this is what we
+are going to work with 'ok' So, Now in Step 6.
+
+  vi. In the 'main' class we will try to create the object of class name 'Student'
+      's1' with the keyword 'new'.
+                     Student s1 = new Student();
+Now we will add some data because if i try to print this object currently it will
+print something
+              " Student(rollNo, sName='null', sAge=0) "
+
+  vii. Now we will add some data then we print it with the help of 
+                 s1.setsName("Navin");
+                 s1.setRollNo(101);
+                 s1.setsAge(30);
+
+Now with this details if we try to print it we got the data.
+              " Student(rollNo=101, sName="Navin", sAge=101) "
+But i not aimed to print this data. The aim is to store the data in database
+So, which database i was talking about.
+    
+   viii.  I wanted to say is if i write 'save' method to save 's1' and done.
+But if u run this code compiler will say where u got the method 'save'.
+
+I will say ok here we got the library there should be some classes,
+methods and interfaces in java which will provide u the method 'save' and what
+are the steps for that what we have to do is we use the particular thing called
+'Session'.
+
+Now if u search for 'Session' here we will search this 'Interface' from the 
+'Hibernate' which is not even loaded So, we firstly 
+
+            Import org.hibernate.Session;
+                 main() { 
+                   Session session = null;
+                  }
+
+So, u cant simply create the object by saying keyword 'new' keyword.
+So, we have to find the way. So, till this point we say 'null' and we say
+                     'session.save( Object: s1)'
+U can see that 'session' have multiple method But if u try to run this program
+compiler will give u a fampus errer which is
+               'java.lang.NullPointerException' because the 'session' is null
+So, now how we will create the object how do we solve this because this is 'null'
+gise to create the session we follow some steps.
+
+Now who creates the session Normally if we talk about an object like if u want the
+session then u need to create the 'SessionFactory' name 'sf' Now even 'SessionFactory' if u go there it's an 'Interface' So, we can't get the object by
+default So, we find the way So, at this point we say null.
+
+Now we can get the object of 'Session' from 'SessionFactory' there is a method called 'openSession' Now what is happening here 
+
+                 what is 'SessionFactory' And What is 'Session'?
+So, whenever u want to work with 'hibernate' which deals with database.
+'Hibernate' says 'Ok u want to connect with Database And this is actually a constally afair when u talk about the application, Connecting with database,
+Doing some transaction this is coastally and to do that we have to first open
+the session'.
+And to open the session we need the 'SessionFactory' the question arrise how many times we open the session is 'n' no. of times.
+So, basically for any unit of work u will be using the new Session.
+
+But what about the 'Session Factory'. So, 'Session Factory' is a heavy weight object 
+Use this only once in a Database application. If that make sense 

@@ -94,3 +94,30 @@ from different packages but u have to select 'hibernate.cfg'.
 And 'Configuration' is a class then u can simply say 'new Configuration' and we got
 the 'configuration' object and we are back to 'SessionFactory' and write 
 'cfg.buildSessionFactory' method this will give u the object of 'SessionFactory'.
+
+This is the whole Program.
+      import org.hibernate.Session;
+      import org.hibernate.SessionFactory;
+      import org.hibernate.cfg.Configuration;
+
+      public class Main {
+            public static void main(String[] args){
+                  Student s1 = new Student();
+                  s1.setsName("Navin");
+                  s1.setRollNo(101);
+                  s1.setsAge(30);
+
+                  Configuration cfg = new Configuration();
+
+                  SessionFactory sf = cfg.buildSessionFactory();
+                  Session session = sf.openSession();
+
+                  session.save(s1);
+
+                  System.out.println(s1);
+            }
+      }
+
+But if we run this program then compiler will give the Exception that 
+'java.lang.UnsupportedOperationException : The application must supply 
+JDBC connection'

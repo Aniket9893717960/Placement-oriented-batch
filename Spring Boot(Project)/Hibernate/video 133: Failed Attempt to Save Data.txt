@@ -2,4 +2,37 @@ Now first we create those classes So, what i want to achieve here is:
  i. First we have to delete the 'org' package.
  ii. second we have to create the class name 'Student.java' file in 'com.telusko'
    Package.
- iii. 
+ iii. So, in this 'Student' package what are the things we need
+                                                        Private int rollNo;
+Go for the first column as 'rollNo' or variable as 'rollNo'.
+Now i will go with the Name.
+                            Private String sName;
+At last i will go with the age.
+                            Private String age;
+So, we got 3 fields Now with this fileds we will create the getter's and Setter's
+
+  iv. right click then click on 'Generate' then click on 'Getter's and Setters's'
+      And we select all 3 variables then click 'OK'.
+  v. And Now we want 'toString()' method to print it. 
+     So, right click. click on 'generate' then 'toString' and we select all 3 
+     variables then click 'OK'.
+
+So, simple stuff nothing fancy we got pojo which is 'Student' here And this is what we
+are going to work with 'ok' So, Now in Step 6.
+
+  vi. In the 'main' class we will try to create the object of class name 'Student'
+      's1' with the keyword 'new'.
+                     Student s1 = new Student();
+Now we will add some data because if i try to print this object currently it will
+print something
+              " Student(rollNo, sName='null', sAge=0) "
+
+  vii. Now we will add some data then we print it with the help of 
+                 s1.setsName("Navin");
+                 s1.setRollNo(101);
+                 s1.setsAge(30);
+
+Now with this details if we try to print it we got the data.
+              " Student(rollNo=101, sName="Navin", sAge=101) "
+But i not aimed to print this data. The aim is to store the data in database
+So, which database i was talking about.

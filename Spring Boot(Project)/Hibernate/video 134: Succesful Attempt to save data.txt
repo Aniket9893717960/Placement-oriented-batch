@@ -1,0 +1,20 @@
+Now let's create the 'configuration' now how we can do it.
+Do we have a way of 'xml' and 'annotation' Now we will start with 'xml'
+and we do certain things with that letter on we see what if we don't want
+to use 'xml' how we can do that with annotation.
+
+But Now let's work with 'xml' we know that we have the folder here name
+'resources' where u put all the xml files and 'resources'. So, we have
+to put something there the movement u write 
+        'Configuration cfg = new Configuration();' line.
+This know that u have to find the 'Configuration' somewhere and u do that  
+with the help of 'cfg.configure()' when u call this method then
+this actually loads the 'xml'.
+But unfortunatly u don't have the xml let's we see that we got an Error
+Let we run this so yes we got an exception name 
+       "Could not locate cfg.xml resources (hibernate.cfg.xml)"
+                                               |- This is the by Default name.
+We have to build different names but u have to put that here if we don't want
+to do that then go with different thing.
+This resources will create the new file int 'resources' package with name as
+'hibernate.cfg.xml' because that's what the console says here

@@ -47,3 +47,21 @@ So, we chose 'addAnnotatedClass' in which we have to define the url of 'Student'
         Configuration cfg = new Configuration();
      cfg.addAnnotatedClass(com.telusko.Student.class);
                   cfg.configure();
+
+If we want that "Hibernate" will manage the 'Student.java' then we have to use 'Annotations' this is the first time that we use 'Annotation' First we use :
+
+i. @Entity : It specify that this class need to be Represented in the database
+             And Hibernate will take care of it.
+
+But if u observe that input is not from the 'Hibernate' this will be from 
+'jakarta.persistence'. Now the Question is :
+
+          -----------------------X-----------------
+               What is 'jakarta.persistence'?
+So, this is JPA Initially this will called 'Java Persistence API'. And now this will called 'Jakarta Persistence API'. It's just that there are allot of ORM tools in the 
+market 'Hibernate' is not the only one And every ORM tool have there own way of doing things. 
+And this is how the problem started that 'hey u know we just have some standards that all the ORM should follow'.
+That's why we got the standards name 'JPA' and the ORM tools will implement it.
+That every one on the same page.
+          ----------------------X--------------------
+Atleast similar not same And that's why we go with the JPA 'Annotations'.

@@ -20,7 +20,8 @@ So, Now create those classes. What i want to achieve here is
 So, simple stuff nothing fancy we got pojo which is 'Student' here And this is what we
 are going to work with 'ok' So, Now in Step 6.
 
-  vi. In the 'main' class we will try to create the object of class name 'Student'
+  vi. In the 'main' class of 'Main.java' we will try to create the object of class 
+      name 'Student'.
       's1' with the keyword 'new'.
                      Student s1 = new Student();
 Now we will add some data because if i try to print this object currently it will
@@ -68,6 +69,7 @@ default So, we find the way So, at this point we say null.
 
 Now we can get the object of 'Session' from 'SessionFactory' there is a method called 'openSession' Now what is happening here 
 
+             ----------------------------X------------------------
                  what is 'SessionFactory' And What is 'Session'?
 So, whenever u want to work with 'hibernate' which deals with database.
 'Hibernate' says 'Ok u want to connect with Database And this is actually a constally afair when u talk about the application, Connecting with database,
@@ -77,4 +79,18 @@ And to open the session we need the 'SessionFactory' the question arrise how man
 So, basically for any unit of work u will be using the new Session.
 
 But what about the 'Session Factory'. So, 'Session Factory' is a heavy weight object 
-Use this only once in a Database application. If that make sense 
+Use this only once in a Database application. If that make sense.
+Don't just that u got 'SessionFactory' that u can creating it consume allot of resources and u are not optimized.
+            ----------------------------X------------------------
+
+                          SessionFactory sf = null;
+
+We are going to use 'SessionFactory' that have 'null' here that's where u first
+need to create an object of 'Configuration' from u can see 'Configuration' comes
+from different packages but u have to select 'hibernate.cfg'.
+
+                    Configuration cfg = new Configuration();
+
+And 'Configuration' is a class then u can simply say 'new Configuration' and we got
+the 'configuration' object and we are back to 'SessionFactory' and write 
+'cfg.buildSessionFactory' method this will give u the object of 'SessionFactory'.

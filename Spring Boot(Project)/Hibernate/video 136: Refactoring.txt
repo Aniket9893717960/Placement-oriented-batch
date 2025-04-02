@@ -19,4 +19,13 @@ the code of 'save' method "@Deprecated" is already used.
 
 But we also have the Problem with 'SessionFactory' line in same program.
 with the method "buildSessionFactory" because if we click on this method 
-it will give 'Warning' name ""
+it will give 'Warning' 
+              name "Session Factory used without 'try' -with- resources statement".
+So, the thing is 'SessionFactory' is a very heavy wait object basically it consume 
+some resources And since we are not closing any where.
+It says why not use try with resource. Because try u want to create the resource
+in the block or when u exit the block 'resource' will automatically close So,
+we have that option so, u basically come back Here
+                        And close the session and close the 'SessionFactory'.
+i. U either use try with resources or u can close the session and 'SessionFactory'.
+   Manually after complete the work.

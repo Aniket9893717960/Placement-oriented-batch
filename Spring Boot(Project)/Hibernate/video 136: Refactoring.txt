@@ -29,3 +29,27 @@ we have that option so, u basically come back Here
                         And close the session and close the 'SessionFactory'.
 i. U either use try with resources or u can close the session and 'SessionFactory'.
    Manually after complete the work.
+
+
+So, what about u create of 
+               Configuration cfg = new Configuration();
+               cfg.addAnnotatedClass(Student.class);
+                      cfg.configure();
+                                 3 lines why u need this 3 lines look at this
+we are using that line only once For this only purpose u are using 3 lines Not
+recormended So, what u will do is we are using 'cfg' object at 
+'SessionFactory' line.
+
+If i will merge every thing in one line So, we will commit 
+"cfg.buildSessionFactory()" and replace it with.
+"new Configuration().addAnnotatedClass(com.telusko.Student.class).configure()
+ .buildSessionFactory()"
+So, what we are doing is we are writing every thing in one line now
+and if u want to look it better Below format even this look Good.
+
+SessionFactory sf = new Configuration()
+                   .addAnnotatedClass(com.telusko.Student.class)
+                   .configure()
+                   .buildSessionFactory();
+
+We know that this is also a 3 line but no. of statement will become one.

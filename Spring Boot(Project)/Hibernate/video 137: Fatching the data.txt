@@ -38,3 +38,12 @@ So, i just go down and see the method which will give u the object itself
 So, yes we now got this 'get' method which will take String and Object as a
 parameter and return the object.
 This make sense right SO, in this method we pass to this are as follows:
+
+But first we try only one So, what can i do is i want to fetch the data
+but the question arrise How will u fatch the data Of course u have to
+specify the primary key.
+Let's check how will u fatch on with some other values Not just the 
+primary key which is your primary column but we have to fetch some other
+column.
+
+Just like u want to fetch by name Or with the help of 'sAge'

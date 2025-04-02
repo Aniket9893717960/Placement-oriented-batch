@@ -118,3 +118,145 @@ also say that if the change in Schema i will do that May be i can add
 a new column But it will not remove the old column"
 
 Now after done all the changes it will not give an error.
+
+                   At last we have the whole Program is:
+i. First Program in org.aniketdb1 -> Main.java
+   -------------------------------------------
+
+      package org.aniketdb1;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+
+public class Main {
+    public static void main(String[] args) {
+        /*Student s1 = new Student();
+        s1.setsName("Navin");     //we got output is
+        s1.setRollNo(101);      //Student{rollNo=101, sName='Navin', sage=30}
+        s1.setSage(30);      // But our aim is not to print data our aim is to store data in database.
+        System.out.print(s1);*/
+
+        // To connect with database we use the same code with "Session"
+
+        Student s1 = new Student();
+        s1.setsName("Navin");     //we got output is
+        s1.setRollNo(101);      //Student{rollNo=101, sName='Navin', sage=30}
+        s1.setSage(30);
+
+        Configuration cfg = new Configuration();
+        cfg.addAnnotatedClass(Student.class);
+        cfg.configure();
+
+        SessionFactory sf = cfg.buildSessionFactory();
+        Session session = (Session) sf.openSession();
+        Transaction tx = session.beginTransaction();  // Commit will belongs to Transaction
+
+        session.persist(s1);    // Without SessionFactory it gives "NullPointerException" because
+                                // Session is null
+        tx.commit();
+
+        System.out.println(s1);
+
+    }
+}
+
+ii. Second Program in org.aniketdb1  -->  Student.java
+    ---------------------------------------------------
+
+         package org.aniketdb1;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Student {
+
+    @Id
+    private int rollNo;
+    private String sName;
+    private int sage;
+
+    public int getRollNo() {
+        return rollNo;
+    }
+
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
+    }
+
+    public String getsName() {
+        return sName;
+    }
+
+    public void setsName(String sName) {
+        this.sName = sName;
+    }
+
+    public int getSage() {
+        return sage;
+    }
+
+    public void setSage(int sage) {
+        this.sage = sage;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNo=" + rollNo +
+                ", sName='" + sName + '\'' +
+                ", sage=" + sage +
+                '}';
+    }
+}
+
+iii. Third Program in package 'resources' it belongs to 'java' package as 
+     'hibernate.cfg.xml'.
+     ---------------------------------------------------------------------
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+
+       <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/aniketdb1</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+
+<!--        For creating a new table with maintoined table is not there in database-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+    </session-factory>
+</hibernate-configuration>
+
+iv. 4th program is 'POM.xml'.
+    -------------------------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>HibProj</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>7.0.0.Beta5</version>
+        </dependency>
+    </dependencies>
+</project>

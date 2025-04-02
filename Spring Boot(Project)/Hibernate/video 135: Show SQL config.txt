@@ -43,7 +43,7 @@ It's not compulsory but if u have any issue u can just specify that there is a p
 
 Just go to 'hibernate.cfg.xml'.
 when we use property tag name 'hibernate.dilect' then in opening and closing 
-scope we just write 'org.hibernate.dialect.MySQLDialec'.
+scope we just write 'org.hibernate.dialect.MySQLDialect'.
 
 Again not necessary but some times u were facing the error and if your console says 
 'Hey u know i am not able to find the dilect' maintoined this property and this should work.

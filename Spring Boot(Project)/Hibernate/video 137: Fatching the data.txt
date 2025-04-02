@@ -54,3 +54,23 @@ pass Another Parameter.
        i. Is the Primary Key: we are doing that.
      ii. But also the type of that u are going to retrive/return
      Of course we write get.
+Of course right when u 'get' return something we will specify the type of 
+it and the type is 'Student.class' So, this are the two things we have to 
+maintoin.
+1 is the type and second 1 is the primary key
+And this two return u the data of student. So, we write 's2' equalTo this
+Command given below:
+
+           s2 = session.get(Student.class, 102);
+
+So, now we got the data as s2 and we print it here and i hope this will work 
+and this will satisfying the Query let we See what is the Query:
+
+      Select
+           s1_0.rollNo,
+           s1_0.sAge,
+           s1_0.sName
+      From
+          Student s1_0
+      Where
+          s1_0.rollNo=?

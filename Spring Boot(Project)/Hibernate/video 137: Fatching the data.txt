@@ -76,4 +76,16 @@ and this will satisfying the Query let we See what is the Query:
           s1_0.rollNo=?
 
        ------------------NOTE-----------------------
-If u have to check that Data is in the Object or Not
+If u have to check that Data is in the Object or Not u can use the method
+called                         s2.getName();
+       -----------------X---------------------------
+But let we see that i write 'session.' in suggestion we got so many 
+mathod in which we have to chose i method is 'load' what if the 
+'load' does the same thing as 'get' will done We will try out
+we will talk about 'Detail' it later but at this point if i say
+load.
+
+          s2 = session.load(Student.class, 102);
+
+Let's see if this works And we got an Error.
+It say 'Could Not initialize the proxy'

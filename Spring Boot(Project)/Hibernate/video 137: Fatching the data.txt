@@ -74,3 +74,6 @@ and this will satisfying the Query let we See what is the Query:
           Student s1_0
       Where
           s1_0.rollNo=?
+
+       ------------------NOTE-----------------------
+If u have to check that Data is in the Object or Not

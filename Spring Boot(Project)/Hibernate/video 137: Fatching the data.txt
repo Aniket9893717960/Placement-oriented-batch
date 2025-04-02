@@ -1,0 +1,19 @@
+So, Now we have the data in database. The next thing we gonna do is
+'fatch the data'. Now if you go back to your code.
+U can see what we are doing in 'Main.java' file is we were adding 
+the data in the student and we are trying to save it.
+
+We don't want to save it we want to fatch it and to do that 
+what we do is first of all i want to create an object of 'Student'.
+
+           Student s2 = new Student();
+But we want to keep it                  "Student s2 = null"
+at this point And instead of printing 's1' we print 's2'.
+And we just commit the 'session.persist()' part.
+                        -----------------  If u see it printing 'null'.
+
+Because we are just assinging the 'null' in 's2' and we are printing 'null' 
+In between this two Operations we want to fatch the value.
+
+So, before we moving on first we have to know that is there any requirment 
+of 'Transaction'.

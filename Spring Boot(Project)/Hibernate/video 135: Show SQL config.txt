@@ -1,3 +1,23 @@
 Till  this point we were able to store the data in database And we are quite
 happy with it. And if u look also this once agin so, this time what happends
 if i try to run this one again.
+But the row we were trying to insert is already have in the table.
+If we re run the program than we got an error name
+"duplicate key value violates unique constraint "student_pkey" "
+
+the thing is if we go to student 'id' we decalared this as 'Primary Key'.
+So, we are trying to save the same data.
+And that's what the issue is So, this time i change the name, roll No and 
+age is ("kiran", "102", "25") So, this are the values we have and if u run 
+this of course it should work.
+
+See behind the seen we know that 'Hibernate' is using the 'JDBC' And when u use 'JDBC'
+Basically it will use Queries. So, u wanted to see what the query is so, u can do that
+Just go to 'hibernate.cfg.xml'.
+when we use property tag name 'hibernate.show_sql' then in opening and closing 
+scope we just write 'true'.
+
+But agin we have to change the value at 'Main.java' this time. with 
+('Harsh','103' and '21') So, at output we got
+"Hibernate: insert into Student (sAge,sName,rollNo) values (?,?,?)"
+So, basically it will sending data.

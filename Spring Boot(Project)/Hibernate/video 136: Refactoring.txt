@@ -1,0 +1,22 @@
+So, let's optimize this code and remove some of unusall lines here
+So, let's start the first one in 'Main.java' file is 'save' method.
+And u see this will giving u some lines.
+
+If something want wrong we have to change it. There is no compiler
+time issue but let's understand what is happening So,
+
+it's say that the 'save' method is deprecated since version 6.0.
+If u are using 6.0 and above 'save' is deprecated And they have 
+done it because to match it with JPA.
+
+So, basically as i maintoined before all the tools try to match the
+Protocols/Standard with JPA And JPA will use different names and 
+conventions.
+             So, 'Persist' is the word instead of using save because at 
+the code of 'save' method "@Deprecated" is already used.
+
+              session.persist(s1);
+
+But we also have the Problem with 'SessionFactory' line in same program.
+with the method "buildSessionFactory" because if we click on this method 
+it will give 'Warning' name ""

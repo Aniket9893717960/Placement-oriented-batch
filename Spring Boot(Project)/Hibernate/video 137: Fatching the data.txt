@@ -46,4 +46,11 @@ Let's check how will u fatch on with some other values Not just the
 primary key which is your primary column but we have to fetch some other
 column.
 
-Just like u want to fetch by name Or with the help of 'sAge'
+Just like u want to fetch by name Or with the help of 'sAge' So, in 'get'
+method we want to pass the 'Primary Key' so, i write '102' which is the 
+'rollNo' of 'Kiran'. 
+It says 'Cannot resolve the methos 'get(int)' ' because we have to also 
+pass Another Parameter.
+       i. Is the Primary Key: we are doing that.
+     ii. But also the type of that u are going to retrive/return
+     Of course we write get.

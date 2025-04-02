@@ -21,3 +21,29 @@ But agin we have to change the value at 'Main.java' this time. with
 ('Harsh','103' and '21') So, at output we got
 "Hibernate: insert into Student (sAge,sName,rollNo) values (?,?,?)"
 So, basically it will sending data.
+
+And also if u look at the sequence of course dusent metter what sequence u 
+have because we specify the column name So, it goes in the ascending order
+So, sAge then sName and Primary key at the end.
+
+But if u want to see 'Hibernate: insert into Student (sAge,sName,rollNo) values 
+(?,?,?)'.
+Just go to 'hibernate.cfg.xml'.
+when we use property tag name 'hibernate.format_sql' then in opening and closing 
+scope we just write 'true'.
+
+If u specify which Property u were working with u have also specify the 'dilect'
+So, basically in different DBMS we have different 'dilect'.
+Sql is not same for all DBMS As your DBMS changes SQL chnages slightly.
+
+Example in some of the Databases we have 'Varchar' in some of the databases we have
+text and many more So, basically which 'dilect' u were using with u can maintoined 
+it's Property .
+It's not compulsory but if u have any issue u can just specify that there is a property. I will do that here.
+
+Just go to 'hibernate.cfg.xml'.
+when we use property tag name 'hibernate.dilect' then in opening and closing 
+scope we just write 'org.hibernate.dialect.MySQLDialec'.
+
+Again not necessary but some times u were facing the error and if your console says 
+'Hey u know i am not able to find the dilect' maintoined this property and this should work.

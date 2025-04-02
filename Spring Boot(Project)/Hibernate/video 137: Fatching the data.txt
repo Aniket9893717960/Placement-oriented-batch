@@ -17,3 +17,24 @@ In between this two Operations we want to fatch the value.
 
 So, before we moving on first we have to know that is there any requirment 
 of 'Transaction'.
+here talking about                                                 operation
+                Transaction transaction = session.beginTransaction();
+
+Now in this scenario since there is no other dependency we can remove the 
+transaction because when u were fatching data u don't need 'Transaction'
+object To begin the transaction.
+It's only when u were doing some manipulation in database So, i got the 
+'SessionFactory' object we got the 'Session' object and we are closing it here
+
+In between we can fatch the value Now how do u fatch it SO, let's try to see at
+the 'session' and let's see what methods we have
+So, 
+    Save and Presist: for saving.
+And u can see the one particular mathod which is 'byId' this will have the
+return type 'IdentifierLoadAccess' I simply want an object 
+So, i just go down and see the method which will give u the object itself
+
+
+So, yes we now got this 'get' method which will take String and Object as a
+parameter and return the object.
+This make sense right SO, in this method we pass to this are as follows:

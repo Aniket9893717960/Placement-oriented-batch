@@ -14,3 +14,9 @@ whenever u want to go with different name of the columns
 and tables.
 How will you do that Instead of going 'Student' we were going for 
 the new class and we give the name of class as 'Alien'.
+
+in which we want to create some private variables(aid, aname, tech)
+and we create some Getter's and Setter's and toString method which
+carry all 3 variables.
+Now we declare 'Alien.java' class as "@Entity" and Declare 'aid' as
+Primary key with the help of '@id'

@@ -14,4 +14,26 @@ So, the main Question is How do we update
 
 Here we have given that 'age' of 'Harsh' is '21' now i want to
     know it 'Harsh' age is '23' so, we update '21' to '23' for
-'Harsh'
+'Harsh' with the help of the code.
+
+And Now using the 'session' use the method 'update' even now
+this is deprecated So, now we will go for JPA and the 
+method of 'session' we use is 'merge' and we have to pass the
+ 'object' as parameter.
+
+             session.merge(s1);
+
+Now what it will do is change the data from the database.
+but if we check the the query 'merge' is farring with expectation 
+that we got 'update' query is no it fire the 'Select' query.
+
+we find 'select' query because 'merge' will select it then 
+fatch it then update it So, 'updating' is not working because 
+we doesn't have 'transaction' we are changing data from database.
+
+    Transaction transaction = session.beginTransaction();
+at last we close the transaction like this.
+                 transaction.commit();
+
+And if we verify from the output and database so, yes 
+'Harsh' age is change from '23' to '21'.

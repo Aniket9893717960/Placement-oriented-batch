@@ -1,0 +1,16 @@
+In this video let's try to focus on some annotations which we can use
+to customize your table Details.
+Ok if u go back here the things which we have in 'Student.java'
+will have all those variable like we got 'rollNo','sName'
+and 'sAge' we have the name for it and the class name is 
+'Student'
+And if you look at the database we have the same thing here 
+we got the Table name as 'Student' with small 's' but 
+what if we want to change it because No buddy in java
+will use 'camel cassing'.
+
+So, here in java will go for 'snake cassing'.
+whenever u want to go with different name of the columns
+and tables.
+How will you do that Instead of going 'Student' we were going for 
+the new class and we give the name of class as 'Alien'.

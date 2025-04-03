@@ -1,0 +1,17 @@
+If we talk about Database operation we normally talk about 
+Create        Read        Update        Delete
+
+So, we talked about how do u create Resources with the help of 
+  'save' and 'persist' method.
+Then we have seen how do we read it with the help of
+  'get' and now with update.
+
+So, the main Question is How do we update
+   So, let's go back here and let's focus on one particular
+  Object.
+  What can i do is i go to the database and if u observe we got
+  some entries let's say i want to update the age of 'Harsh' 
+
+Here we have given that 'age' of 'Harsh' is '21' now i want to
+    know it 'Harsh' age is '23' so, we update '21' to '23' for
+'Harsh'

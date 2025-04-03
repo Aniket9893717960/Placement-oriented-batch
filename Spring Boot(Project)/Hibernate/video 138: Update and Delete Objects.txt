@@ -47,3 +47,10 @@ Query from 'Update' to 'Insert' and insert the query.
 So, this time i want to delete a particular entry So, what should be the method for
 delete So, instead of 'merge' let's try 'delete'  but that is deplicated
 So, instead of 'delete' we work on method 'remove' which takes an 'object'
+here is 3 operations
+
+Transaction tx = session.beginTransaction();
+
+        session.remove(s2); // For delete u just need to add extra operation is this 3 extra lines.
+
+        tx.commit();

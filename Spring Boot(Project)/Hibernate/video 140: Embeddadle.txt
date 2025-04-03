@@ -121,3 +121,7 @@ public class Main {
 
     }
 }
+
+But the probblem is in fatching part it doen't find the select Query it find the In
+sert Query This will gonna we talk about why It's not sending the select Query?
+We will talk about this in upcoming videos why u are saying get.

@@ -1,0 +1,27 @@
+Till this point we were able to store the object because this object has 
+very simple values.
+Talking about Integer, String all this are basic java types And also
+on the database side.
+we are using JDBC here we have something called JDBC type with Checks
+we have 'Int' so what we need in Database to basically try to match it.
+For             Int  we got           Integer  there
+                char we got           Varchar there
+But what if u got the complex type.
+  Example :
+  let's say if we have a laptop of 
+    Brand: Asus
+    Model: ROG
+    RAM : 16 GB
+    CPU : i7
+    Graphics: RTX 3060
+
+U know this details will be visible like this:
+    12th Gen Intel(R) Core(TM) i5-12450HX   2.40 GHz
+    
+And we want to fatch specific value's in this String So, 
+    To store this in string is not a good idea.
+
+So, what we can do is we can generate the Seperate class here
+  Which is of type laptop in 'org.aniket12' package
+
+In those 'Laptop' class we store private variables 

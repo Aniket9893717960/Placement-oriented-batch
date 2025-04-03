@@ -24,4 +24,38 @@ And we want to fatch specific value's in this String So,
 So, what we can do is we can generate the Seperate class here
   Which is of type laptop in 'org.aniket12' package
 
-In those 'Laptop' class we store private variables 
+In those 'Laptop' class we store private variables are:
+              private String brand;
+              private String model;
+              private int ram;
+
+And for this particular variables we need an auto generate getter's
+setter's and we also generate the toString. 
+So, this is all i have there is no primary key if u observe
+i don't have the intention to create the laptop.
+
+Go back to 'alian' what can i do is Instead of having a 'String' here
+we want to specify this is a complex type.
+This is the reference variable here 'laptop' not a simple type int,
+String.
+
+In 'alien.java' we specify 
+               private Laptop laptop;
+And also builded Getter's and Setter's with toString of it.
+
+If i go back to 'Main.java' with 'alien' data i want to take
+the data of laptop as well.
+              'a1.setLaptop();' but before u create 'Alien' first
+we create a laptop object. So,
+                  Laptop l1 = new Laptop();
+And to set the data in l1 object we write 
+                  l1.setBrand('Asus');
+                  l1.setModel('Rog');
+                  l1.setRam(16); 
+
+And once i got the object we put 'l1' at
+                  a1.setLaptop(l1);
+
+Instead of going to Int and String we go for the complex type. If i
+run this code will it work That's the bigest Question.
+Let's try or Let's understand with the error in case. 

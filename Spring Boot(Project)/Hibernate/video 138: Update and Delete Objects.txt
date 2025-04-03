@@ -37,3 +37,13 @@ at last we close the transaction like this.
 
 And if we verify from the output and database so, yes 
 'Harsh' age is change from '23' to '21'.
+
+           ---------------NOTE------------
+If you try to 'Update' a data which is not in a table then it will change the 
+Query from 'Update' to 'Insert' and insert the query.
+           ---------------X---------------
+
+             What about 'Deleting' the data?
+So, this time i want to delete a particular entry So, what should be the method for
+delete So, instead of 'merge' let's try 'delete'  but that is deplicated
+So, instead of 'delete' we work on method 'remove' which takes an 'object'

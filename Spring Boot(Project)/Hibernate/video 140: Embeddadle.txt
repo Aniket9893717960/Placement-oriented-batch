@@ -59,3 +59,20 @@ And once i got the object we put 'l1' at
 Instead of going to Int and String we go for the complex type. If i
 run this code will it work That's the bigest Question.
 Let's try or Let's understand with the error in case. 
+
+"Could not determine recommended JdbcType for Java type 'org.aniketdb1.Laptop'"
+It means compiler will don't know what the hell is 'Laptop'.
+But We doen't just put package of 'laptop.java' in 'alian.java' because
+it create it's own table. And i don't want to have it's own table what i want
+is Table Structure.
+Example:
+               aid       aname        tech          But for laptop i coudn't want
+                                                    the single field we want 'laptop'
+                                                  field as 3 different fields in 
+                                                  same 'Alien' table.
+
+We want to 'laptop' embedded inside the 'alien' If u want to make it work the laptop
+should be embeddedable. And to Achieve that we simple says
+'@Embeddable' At the top of 'Laptop' class at 'laptop.java'.
+And once i do that i go back here and just done 1 change i give the permission that
+'laptop' will be embedded.

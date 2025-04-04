@@ -1,0 +1,5 @@
+It's time to give justice to 'laptop'.
+Because 'alien' has it's own table but what about 'laptop'.
+  'laptop' is 'Embeddable' basically 'alien' table itself got
+all the Details.
+Now it's have it's own issue because 'laptop' is an object

@@ -37,4 +37,28 @@ u know the concept of DBMS that much Now how u represent it
 so now we want to say that 'Alien' have the laptop called This laptop.
 
 To achieve that we should have some link.So, what u wanna do is u keep
-link of the 'laptop' in 'alien' or wise-versa 
+link of the 'laptop' in 'alien' or wise-versa.
+
+Assum that if u want to keep 'alien' table as well as 'laptop' table.
+And u want to link 'lid' of 'laptop' with 'laptop_id' of 'alien'.
+As a Foreign Key.
+Now u know as the 'alien' that which 'laptop' i have and also write the query to fetch Detail of 'alien' and Detail of 'laptop'.That's straight forward.
+
+Now when u have this type of relation it simple mean that one 'alien' has 
+one 'laptop' and this is called 'OneToOne' Relationship.
+And this is vary easy.
+
+Basically after building this relationship  that's how it look like
+                    Alien
+    Primary key               Foreign Key
+      aid       aname       tech      laptop_lid
+      101       Navin       Java          1
+      102       Gaurav      AI            2
+      103       Sushil      Python        3
+
+                                        laptop
+                        Primary key               
+                          lid       brand       model          ram
+                          101       Asus        rog            16
+                          102       Dell        xps            32
+                          103       Samsung     galaxy 360     36

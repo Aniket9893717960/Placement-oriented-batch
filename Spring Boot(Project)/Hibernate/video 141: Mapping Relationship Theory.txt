@@ -66,3 +66,32 @@ Basically after building this relationship  that's how it look like
 case 2: When we are going for one 'alien' has multiple 'laptop' Now this is tricky 
         because in this case we are going for 'OneToMany' Relationship.
 For an 'alien' prospective 
+OneToMany from 'alien' side And ManyToOne from 'laptop' side.
+
+Now the Question arrise if u want to represent the table how will you do that
+It's vary simple Instead of putting 'lid' data in the 'alien'.
+U can put 'aid' in the 'laptop' table because 'laptop' will belong to one 'alien'.
+
+We can't put that in the 'alien' table. Just like 'laptop' will have three 
+laptops(101, 102 and 103). So, we can't simply says 'alien' details
+(101, 102 and 103).
+Database will not accept it. But we can do that in the 'laptop' because we creating
+one 'alien' column 'aid' in 'laptop'.
+
+And we say ok this laptop belongs to this 'alien'. So, in the laptop
+tables you will be having 'aid's' which is the below 
+following thing in this case.
+
+                    Alien
+    Primary key               
+      aid       aname       tech     
+      101       Navin       Java          
+      102       Gaurav      AI            
+      103       Sushil      Python        
+
+                                        laptop
+                        Primary key                           Foreign Key
+                          lid       brand       model          ram      aid
+                          101       Asus        rog            16       101
+                          102       Dell        xps            32       101
+                          103       Samsung     galaxy 360     36       102

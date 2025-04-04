@@ -63,3 +63,6 @@ Basically after building this relationship  that's how it look like
                           102       Dell        xps            32
                           103       Samsung     galaxy 360     36
 
+case 2: When we are going for one 'alien' has multiple 'laptop' Now this is tricky 
+        because in this case we are going for 'OneToMany' Relationship.
+For an 'alien' prospective 

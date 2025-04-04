@@ -95,3 +95,28 @@ following thing in this case.
                           101       Asus        rog            16       101
                           102       Dell        xps            32       101
                           103       Samsung     galaxy 360     36       102
+
+Things are very simple but if u try to achieve this what/which annotations
+we are going to use Yes we can see that in the upcoming videos.
+But at left side u can use OneToMany
+            And at right hand side u can use ManyToOne
+
+But i want mapping to be done in the laptop But what if u choose not to do that
+in the laptop.
+Let's keep 'alian' table as it is and 'laptop' table as it is No linking 
+but how u can do this.
+
+In this case u can build a 3rd table 'alien_laptop' and this will have the
+entire Details.
+
+But let's change the relationship and talk about 'ManyToMany' Relationship.
+Example: 
+     U have the LAB setup in the collage Any student can use any laptop to
+work on. So, that means 'ManyToMany'.
+In this case u need to use the 3rd table because with 2 table it doesn't work.
+
+And that's where wa can use the annotation name 'ManyToMany' This will basically 
+create the 3rd table in which u have to columns.
+'aid' and 'lid' in given example and in this u store multiple values.
+But there is an issue here if u directly use 'ManyToMany' It will not work the 
+way u want.

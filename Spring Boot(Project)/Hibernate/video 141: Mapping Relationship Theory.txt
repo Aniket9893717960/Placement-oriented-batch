@@ -3,3 +3,22 @@ Because 'alien' has it's own table but what about 'laptop'.
   'laptop' is 'Embeddable' basically 'alien' table itself got
 all the Details.
 Now it's have it's own issue because 'laptop' is an object
+haing it's own Identity So, it gives a big table as an 'Entity'.
+
+Next Issue is what if one person have multiple laptops and one
+'alien' has multiple 'laptops' we don't simply add the columns.
+This will create inconsistency Because Different 'alien' have different 
+amount of laptops(May be one, zero, two, three, ten).
+
+Never now right it's simple to create a seperate Entity laptop that it
+will be given to some one else. If u are working in a company and he give u
+a 'laptop'.May be after some time they will take your 'laptop' give to some
+one else or even they will give u a brand new laptop.
+                             (Ok this are some Dreams we were leaving it)
+
+one to have the seperate tables. let's say we got the 'alien' table and 
+we got the 'laptop' table.
+'alien' table has it's own details 'alien' got 'aid','aname' and 'tech'
+Now the laptop on other side have primary key as well. 
+here 'laptop' got 'lid','brand','model' and 'ram'.
+Then we got 'brand' and 'model' with same 'lid'.

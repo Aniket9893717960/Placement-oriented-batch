@@ -22,3 +22,19 @@ we got the 'laptop' table.
 Now the laptop on other side have primary key as well. 
 here 'laptop' got 'lid','brand','model' and 'ram'.
 Then we got 'brand' and 'model' with same 'lid'.
+
+Now we got this two tables so, i want that 'alien' has the laptop
+specific one So, how u do that? Or How i Map it?
+
+And that's where the concept of mapping comes into picture. This
+is not the concept of 'Hibernate' it's the concept of Database.
+(when we connect two tables it's over responsibility to connect them)
+That's why we have the concept of primary key and foreign key which
+u connect with the table.
+
+That u make them as current table or child table. I just assuming that
+u know the concept of DBMS that much Now how u represent it 
+so now we want to say that 'Alien' have the laptop called This laptop.
+
+To achieve that we should have some link.So, what u wanna do is u keep
+link of the 'laptop' in 'alien' or wise-versa 

@@ -1,0 +1,19 @@
+Now just implement One to One Realtionship
+First replace '@Embeddable' in 'laptop.java'
+   With '@Entity' And when u say '@Entity' u need primary key as '@Id'
+We need getter setter for the 'lid'.
+And i want to generate as 'toString' Generate 'toString' with all the
+details.
+
+Let's go back to 'Alien.java' and here But nothing we have to change here
+So, we are going throw 'Main.java'.
+
+And there are some changes i go throw in 'Main.java' are
+i. Add the setter for 'lid' in 'Main.java' with this command.
+                      l1.setLid(1);
+
+Now one thing to observe when u say 'persist' we have to also 'persist' the
+'laptop'.And the sequence i have to follow is 'laptop' first then 
+'alien' because 'laptop' is the primary table now.
+                             session.persist(l1);      
+                             session.persist(a1);

@@ -165,3 +165,8 @@ public class Main {
 
     }
 }
+
+But the problem is with the help of 'OneToMany' we create the seperate table
+But the same data we also maintain in 'laptop' table because of 'ManyToOne'
+now we want to restrict the '@OneToMany' annotation that u don't map it.
+It's map by 'laptop' with the variable 'alien'.

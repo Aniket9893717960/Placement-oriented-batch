@@ -5,8 +5,15 @@ And we also input the package of 'list'.
 Now we will change this to 'laptops' not 'laptop'
 
                    import java.util.List;
-                    @OneToOne
+                    @OneToMany
                   private List<Laptop> laptops;
 
 Then we have to make changes in ' Getter's And Setter's '
 And 'toString'as well
+Now the problem is in 'main.java'. 
+               a1.setLaptop(l1);
+Gives error because we doesn't have a single 'laptop' we have the
+list of laptop i can't pass one. And since we only have one laptop
+here. 
+Either we can say list or 
+              a1.setLaptops(Array.asList(l1));

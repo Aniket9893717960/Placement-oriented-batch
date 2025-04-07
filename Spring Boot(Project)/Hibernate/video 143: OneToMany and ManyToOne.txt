@@ -22,3 +22,62 @@ and Create the object of 'Laptop' class name 'l2' and pass the data
 ('3','Lenovo','LOQ','12') and set this data into 'laptop'.
 Now at downer 'Session'. we add below command.
                       session.persist(l2);
+
+In the 'Main.java' program.
+
+package org.aniketdb1;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import java.util.Arrays;
+
+// we start work on this main From Video no 139
+
+public class Main {
+    public static void main(String args[]){
+
+        Laptop l1 = new Laptop();
+        l1.setLid(2);
+        l1.setBrand("Dell");
+        l1.setModel("XPS");
+        l1.setRam(16);
+
+        Laptop l2 = new Laptop();
+        l1.setLid(3);
+        l1.setBrand("Lenovo");
+        l1.setModel("LOQ");
+        l1.setRam(12);
+
+        Alien a1 = new Alien();
+        a1.setAid(101);
+        a1.setAname("Navin");
+        a1.setTech("Java");
+        a1.setLaptop(Arrays.asList(l1,l2));
+
+        SessionFactory sf = new Configuration()
+                .addAnnotatedClass(org.aniketdb1.Alien.class)
+                .addAnnotatedClass(org.aniketdb1.Laptop.class)
+                .configure()
+                .buildSessionFactory();
+
+        Session session = sf.openSession();
+
+
+        Transaction tx = session.beginTransaction();
+
+        session.persist(l1);
+        session.persist(l2);
+        session.persist(a1);
+
+        Alien a2 = session.get(Alien.class, 101);
+        System.out.print(a2);
+
+        tx.commit();
+        session.close();
+        sf.close();
+
+    }
+}

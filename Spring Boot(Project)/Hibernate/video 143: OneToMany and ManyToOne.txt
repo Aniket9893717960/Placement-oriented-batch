@@ -16,4 +16,9 @@ Gives error because we doesn't have a single 'laptop' we have the
 list of laptop i can't pass one. And since we only have one laptop
 here. 
 Either we can say list or 
-              a1.setLaptops(Array.asList(l1));
+              a1.setLaptops(Array.asList(l1,l2));
+
+and Create the object of 'Laptop' class name 'l2' and pass the data
+('3','Lenovo','LOQ','12') and set this data into 'laptop'.
+Now at downer 'Session'. we add below command.
+                      session.persist(l2);

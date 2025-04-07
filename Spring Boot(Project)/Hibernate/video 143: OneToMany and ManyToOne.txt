@@ -1,1 +1,12 @@
+Now let's work with 'OneToMany' So, what i want to do now is
+As an 'Alien' we have 'Laptop' we got one here.
+  When u say multiple we have to provide the 'list' of laptop.
+And we also input the package of 'list'.
+Now we will change this to 'laptops' not 'laptop'
 
+                   import java.util.List;
+                    @OneToOne
+                  private List<Laptop> laptops;
+
+Then we have to make changes in ' Getter's And Setter's '
+And 'toString'as well

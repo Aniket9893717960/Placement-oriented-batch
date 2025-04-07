@@ -91,3 +91,11 @@ Now we have done the only thing is to make is the
 'laptop' should use this command.
                          l1.setAlien(a1);
                          l2.setAlien(a1);
+
+Now if we run the command then we got an error name
+'could not determine recormmended  JdbcType for Java type  
+         'com.aniketdb1.Alien' '
+
+So, when u referel the 'Alien' inside 'laptop' u have to maintoin
+that which relationship is happening here.
+So, from the laptop prospecive it's 'ManyToOne'.

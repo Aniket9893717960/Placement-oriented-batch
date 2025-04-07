@@ -81,3 +81,13 @@ public class Main {
 
     }
 }
+
+
+In 'ManyToOne' what we can do is 
+                        In 'Laptop.java' we use 
+                        'private Alien alien' command. 
+For this 'Alien' reference i need the ' Getter's And Setter's ' 
+Now we have done the only thing is to make is the
+'laptop' should use this command.
+                         l1.setAlien(a1);
+                         l2.setAlien(a1);

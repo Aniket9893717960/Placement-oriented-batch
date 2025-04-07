@@ -17,3 +17,72 @@ Now one thing to observe when u say 'persist' we have to also 'persist' the
 'alien' because 'laptop' is the primary table now.
                              session.persist(l1);      
                              session.persist(a1);
+
+for one to one mappting we add the thing in a 
+'session factory' is:
+          .addAnnotatedClass(com.telusko.Laptop.class);
+
+So, we added the alien and a laptop this time we run the program and
+here we got error name.
+ "Could not determine recormmended JdbcType for Java type 'com.telusko.Laptop'"
+
+Now one thing more if we go back to 'Alien' we talk about the theory that there 
+should be a relationship of 'OneToOne' And we have to maintoin that here
+                @OneToOne
+                private Laptop laptop;
+
+And this is something we have to add Now run this i hope this time it should work
+Yes, If u look first it create a laptop table In fact it create an 'Alien' table.
+In 'Alien' we got the 'laptop_lid' because it's 'OneToOne' that's  why it's unique
+Then it creates a 'Laptop' table then it adds the 'Foreign key' because that's important for the reference.
+Then we inserting data as well. SO, OneToOne is working we can verify that as the database.
+
+Here is the 'Main.java' program.
+
+package org.aniketdb1;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+// we start work on this main From Video no 139
+
+public class Main {
+    public static void main(String args[]){
+
+        Laptop l1 = new Laptop();
+        l1.setLid(1);
+        l1.setBrand("Asus");
+        l1.setModel("Rog");
+        l1.setRam(16);
+
+        Alien a1 = new Alien();
+        a1.setAid(101);
+        a1.setAname("Navin");
+        a1.setTech("Java");
+        a1.setLaptop(l1);
+
+        SessionFactory sf = new Configuration()
+                .addAnnotatedClass(org.aniketdb1.Alien.class)
+                .addAnnotatedClass(org.aniketdb1.Laptop.class)
+                .configure()
+                .buildSessionFactory();
+
+        Session session = sf.openSession();
+
+
+        Transaction tx = session.beginTransaction();
+
+        session.persist(l1);
+        session.persist(a1);
+
+        Alien a2 = session.get(Alien.class, 101);
+        System.out.print(a2);
+
+        tx.commit();
+        session.close();
+        sf.close();
+
+    }
+}

@@ -57,3 +57,10 @@ With the help of below cammand.
           // with the help of this we got new session.
 
 And i were also 'close' the session.Before we close the 'factory'.
+we will write the below line between the 'session1' and 'close' it.
+
+        Alien a5 = session1.get(Alien.class, 101);
+        //System.out.print(a2);
+
+Now we run and expect that 'alien' should fetch the query.
+The Query should visible like this 

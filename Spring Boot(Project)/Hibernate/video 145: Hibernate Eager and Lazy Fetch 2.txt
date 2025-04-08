@@ -35,3 +35,5 @@ and also delete below lines
         a3.setAid(103);
         a3.setAname("Kiran");
         a3.setTech("AI");
+
+And also we don't need to 'persist' 'a3' now.

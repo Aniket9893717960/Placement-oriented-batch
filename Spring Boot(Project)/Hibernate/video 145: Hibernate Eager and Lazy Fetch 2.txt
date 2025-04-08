@@ -1,0 +1,7 @@
+Now in this video we talk about "Eager Fetching" and "Lazy Fetching".
+       Now basically the code which we have written for 'ManyToMany'
+before i show u what is 'Eager Fetching'. 
+I want to change this code a little bit
+So, 'Alien' and 'Laptop' having the multiple relationship.
+   I will go back to 'OneToMany' So, one alien have multiple laptop
+And 'laptop' doesn't have the mapping and at all so, we remove that

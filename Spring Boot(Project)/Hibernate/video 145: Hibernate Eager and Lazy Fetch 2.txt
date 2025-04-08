@@ -4,4 +4,34 @@ before i show u what is 'Eager Fetching'.
 I want to change this code a little bit
 So, 'Alien' and 'Laptop' having the multiple relationship.
    I will go back to 'OneToMany' So, one alien have multiple laptop
-And 'laptop' doesn't have the mapping and at all so, we remove that
+And 'laptop' doesn't have the mapping and at all so, we remove below lines
+                 @ManyToMany(mappedBy = "laptops")
+                  private List<Alien> aliens;
+
+Now we also remove 'getter's and setter's 'of 'aliens' in 'Laptop.java'
+in 'Alien.java' nothing to change code will remain same now we moved on 
+to 'Main.java'.
+
+In 'Main.java' things will change a bit. Is because now we don't have
+'laptop' setting the 'aliens' don't have set aliens in laptop so, we
+can get afraid of him. And Delete below lines.
+        l1.setAliens(Arrays.asList(a1,a3));
+        l2.setAliens(Arrays.asList(a1,a2));
+        l3.setAliens(Arrays.asList(a2));
+
+Now we have to also make sure that one Alien will have multiple 
+laptop and one laptop will belong to one alien But look at to over example which we have done before
+we can modify to set laptop's lines to below line.
+          Before
+        a1.setLaptop(Arrays.asList(l1,l2));
+        a2.setLaptop(Arrays.asList(l2,l3));
+        a3.setLaptop(Arrays.asList(l1));
+          After
+        a1.setLaptop(Arrays.asList(l1,l2));
+        a2.setLaptop(Arrays.asList(l3));
+
+and also delete below lines
+        Alien a3 = new Alien();
+        a3.setAid(103);
+        a3.setAname("Kiran");
+        a3.setTech("AI");

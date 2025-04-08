@@ -15,3 +15,13 @@ At upper we also say '@ManyToMany'.
 
 And also re-create the 'Getter's and Setter's' for List of Aliens
 And we not printing it in 'toString' so, doesn't change in 'toString'.
+
+Now we come to main and here we can do some changes because
+Now when u are setting an 'Alien' we are saying
+          'a1.setLaptops(Arrays.asList(l1, l2));'
+
+For 'Alien' we also doing the same thing but before i do that we create a 
+one more laptop So, let say we got 3 laptop here
+At 3rd we set the data name("3","Apple","Macbook",8).
+So, we got 3 laptop And we also adding the data in 'Alien'.
+("102","Harsh","Python"),("103","Kiran","AI").

@@ -3,3 +3,15 @@ is So, first of all 'One' alien will got multiple laptop Instead of having
 'OneToMany' here we say 'ManyToMany' And Remove this 
 "(mappedBy = 'alien')" as of now
                        This changes done on 'Alien' side
+
+On the 'laptop' side we have to done changes because here
+one laptop belongs to one 'Alien' So, in this case we build
+the List of Aliens because a laptop can belongs to multiple 
+'Alien' and import as well.
+At upper we also say '@ManyToMany'.
+            import java.util.List
+            @ManyToMany
+            private List<Alien> aliens;
+
+And also re-create the 'Getter's and Setter's' for List of Aliens
+And we not printing it in 'toString' so, doesn't change in 'toString'.

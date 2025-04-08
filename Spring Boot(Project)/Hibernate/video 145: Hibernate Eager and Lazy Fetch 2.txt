@@ -36,4 +36,24 @@ and also delete below lines
         a3.setAname("Kiran");
         a3.setTech("AI");
 
-And also we don't need to 'persist' 'a3' now.
+And also we don't need to 'persist' 'a3' now when u see the code u will
+not find the query So, what's wrong here. This is basically using the 
+concept called 'cashe'.
+So, in hibernate it will provide u the concept of 'cashe' which we don't 
+get by default in jdbc That's one of the advantage of Hibernate.
+
+So, we got 2 different lavel of cashe level 1 cashe and lavel 2 cashe.
+And in the same session.
+For example if u trying to see when i try to say 'get' and saying
+'persist' in a same session.
+
+It will not fire the query to the database basically it will check to
+the same session and that's what it's happening here.
+If u want to check that here it's fireing the query.
+what u can do is create a new session here.
+With the help of below cammand.
+
+       Session session1 = sf.openSession();
+          // with the help of this we got new session.
+
+And i were also 'close' the session.Before we close the 'factory'.

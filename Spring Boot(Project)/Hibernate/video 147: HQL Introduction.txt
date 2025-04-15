@@ -1,0 +1,25 @@
+Start SQL O Sorry we are continuing 'Hibernate' So, 
+HQL which stands for 'Hibernate Query Language' SO,
+when u work with database. Or if u want to work with DBMS like
+ORACLE, MySQL, POSTgreSQL or bunch of them.
+       Normally to interact with them we use the something called
+'SQl' which stands for 'Structured Query Language' Now using this 
+language u can done the 'CRUD' Operations.
+
+With the database or with the Data which u have
+'Create        Read      Update      Delete'
+                |- Select Query.
+
+If u say u want to read we normally fire the 'select' query
+with the 'select' query U can filter the elements with the 
+help of 'Where' clause.
+U can join two tables.
+U can apply filter on them with the help of 'GROUP BY'.
+
+There are allot of thing which u can do when u have this 
+'Relational Database Management System' this is the beauty about 
+it.
+it's very efficient and it's amazing  and for doing that u need to 
+learn 'SQL' and u have to master it when u want to be more efficient 
+in Database Communication.
+

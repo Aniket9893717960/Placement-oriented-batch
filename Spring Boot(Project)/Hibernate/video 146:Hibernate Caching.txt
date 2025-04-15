@@ -1,0 +1,63 @@
+At the last lecture we talk about Fetch Eager and lazy and in between 
+we talk about 'Caching' then i though ok we need to discuss this more
+
+So, basically what happends is let's say we got the 
+react client            Hibernate Server <-----------> Database
+     | Saving Data          Session         Query 1
+    User                       |         <-----------> Database
+                          ---------------   Query 2
+                          |  aid=101    |
+                          |  aname=Navin|
+                          |  tech=Java  |
+                          ---------------
+   Fetching Data
+    (aid = 101)
+    (aid = 102)
+Every time a user sends a request let's say for saving data or fatching 
+data basically it will go to the server.
+And server say's ok we have to do something with the database then it will
+open the session and fetch the data.
+For the particular Query we have to fetch data for 'alien' with '101' the 
+request will go to the server.
+Server says ok i don't have this data i have inserted this as '1'.
+Then request will go to the database. 
+Ok i got this data then session 1 got the data then it will return
+to the user And every one is happy
+  We will fetching the 'Alien'.
+  (aid = 101)
+  (aid = 102)
+Of course it will fire 2 Queries because there are 2 different data.
+but what if u fire '101' for 2 times on the same session.
+Now in this case u can fire the query to the  database for the first time  
+And say ok i got this data.
+  Now if u are sending the request for the second time with the same session.
+Don't u think we already have the data in the session and hibernate says it's
+smart now u can use it.
+it can not fire the database Query for the second time it will say ok
+same session same data ok this will fire to the user So, that's how cashing 
+works ok it's a good thing u are saving some request with the database.
+    
+react client            Hibernate Server <-----------> Database
+     | Saving Data          Session         Query 1
+    User                       |         <----XXXX---> Database
+                          ---------------   Query 2
+                          |  aid=101    |
+                          |  aname=Navin|
+                          |  tech=Java  |
+                          ---------------
+   Fetching Data
+    (aid = 101)
+    (aid = 101)
+
+  Is the bad thing Sorry but yes in some cases 
+  Example "What if u change the data in the between of you sending this."
+  If u got the first request u have fetched it for the second request in 
+    the same session meanwhile u are not fetching it what if u update it
+And because of some activity data got change. 
+That's something u kept in your mind when u use 'chase' when u not use 'cash'
+So, by default hibernate will provide some cashing technique.
+  This is called 'L1 cashe' what if u got session 1 let's say L1
+    And in this session u got alien data '101' and u have with there and
+Now u got the new session in which there he will asking for the same data.
+
+When s1 and s2 interact 

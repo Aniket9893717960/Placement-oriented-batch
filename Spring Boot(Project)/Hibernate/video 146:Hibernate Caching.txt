@@ -60,4 +60,11 @@ So, by default hibernate will provide some cashing technique.
     And in this session u got alien data '101' and u have with there and
 Now u got the new session in which there he will asking for the same data.
 
-When s1 and s2 interact 
+When s1 and s2 interact and the answer is No. By default 'Hibernate' will not
+allow it. In case if u want to achieve that u have to use some external 
+application who provide the 'L2 cache'
+Hibernate will uses 'JCache' to achieve this it will have to stand there if u 
+want to got multiple implementation of it.
+Like 'EHCACHE' and 'CAFFeine' there are the bunch of libraries availabe in this
+But again caching is good but not always.
+So, that's what we talk about cashing more from the previous video.

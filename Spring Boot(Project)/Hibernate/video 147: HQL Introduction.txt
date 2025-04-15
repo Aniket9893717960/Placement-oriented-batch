@@ -26,3 +26,39 @@ in Database Communication.
 it's a good thing to learn when u talk about 'java' we have prefer 
 objects and we talk about it in the first video it self we prefer 
 objects our the sql queries and we want away to store our data directly
+
+But when u say 'hibernate' to save data or read data or update them or
+delete them Normally we used certain and all this mixed methods are 
+very simple to work with. 
+If u wan to read u just passed the 'Primary key' value and u are done
+                  session.find(Student.class, 01);
+
+On the other hand if u want to pass the primary key or the object to 
+delete it.
+                  session.remove(student);
+and same for creation and update u pass the object's and it will work 
+       Create
+              session.persist(student);
+       Update
+              session.merge(student);
+But what if u want to do something complex when we say if u want to read 
+something. If you want to fire a query to get data.
+Of course behind the seen it will fire the query. But u simply say 
+'hey i want to set this data for the perticular person or the  object with
+the help of 'primary key''. 
+
+but what if u don't want to use primary key if u want to do something else
+may be if you are talking about 'Student'.
+                  public class  Student {
+                   @Id
+                   private int sid;
+                   private String sname;
+                   private int marks;
+                   private String country;
+                  }
+         u want to search about student name may be student will have the 
+country field. 
+If u want to filter the elements based on your country how will u do that and 
+that's where we want to use query.
+
+Now u are thinking about Sql

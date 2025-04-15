@@ -62,3 +62,23 @@ If u want to filter the elements based on your country how will u do that and
 that's where we want to use query.
 
 Now u are thinking about Sql
+U can u write SQL Query here which is called a 'Native' Query But what if u 
+don't want to use SQL. 
+
+So, here we use something called 'HQL' which is 
+'Hibernate Query Language'.
+
+O we have to learn a new language So, Not Exactly if u know about basices of
+SQL we are good because 'HQL' is derived from 'HQl' So, what's difference
+
+In SQL u will work with Databases, Tables and column. U are fire Exactly the
+same Query but instead of using the name of the table. we use the name of 
+the Entity.
+Instead of the name of column we use the name of the property and 
+that's what 
+
+HQL is 'If u want to fatch everything from the table normally we
+select * form student;' let's say the table student but in case 
+of HQL u don't need to write 'SELECT *'  why u have to maintoined 
+'SeLect *' when u say '*' there 'From Student'
+Here Student is an Entity And that's what we do it 

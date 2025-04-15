@@ -1,0 +1,11 @@
+let's implement SQL But before we do that first 
+we have to make certain changes which we are working on
+  So, first of all i need the simple class. Yes we got 'alien'
+  we got 'laptop' but let's say we work with new the term laptop
+  even laptop is new for us.
+  because laptop is a very simple class we got an 'lid','brand',
+  'model' and 'ram'.
+
+And if you look at the data for this So, let's open our 'admin'
+  'pg.admin' and if u see the data for the 'laptop' basically we
+  got this 3 Details

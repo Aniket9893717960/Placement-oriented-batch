@@ -23,3 +23,6 @@ it's very efficient and it's amazing  and for doing that u need to
 learn 'SQL' and u have to master it when u want to be more efficient 
 in Database Communication.
 
+it's a good thing to learn when u talk about 'java' we have prefer 
+objects and we talk about it in the first video it self we prefer 
+objects our the sql queries and we want away to store our data directly

@@ -9,3 +9,36 @@ we have to make certain changes which we are working on
 And if you look at the data for this So, let's open our 'admin'
   'pg.admin' and if u see the data for the 'laptop' basically we
   got this 3 Details
+So, what can i do is i will go back to my code and in this i want
+to check one more thing. I don't want to be 'create' now in
+'hibernate.clg.xml' this time i write 'update' otherwise i loose 
+my data.
+
+Program write on 'Main.java' Is:
+
+public class Main {
+    public static void main(String args[]){
+
+        Laptop l1 = new Laptop();
+        l1.setLid(5);
+        l1.setBrand("Asus");
+        l1.setModel("Strix");
+        l1.setRam(32);
+
+        SessionFactory sf = new Configuration()
+                .addAnnotatedClass(org.aniketdb1.Laptop.class)
+                .configure()
+                .buildSessionFactory();
+
+        Session session = sf.openSession();
+
+
+        Transaction tx = session.beginTransaction();
+
+        session.persist(l1);
+
+        tx.commit();
+        session.close();
+        sf.close();
+    }
+}

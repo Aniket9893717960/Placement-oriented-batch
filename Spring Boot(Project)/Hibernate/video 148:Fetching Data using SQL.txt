@@ -42,3 +42,30 @@ public class Main {
         sf.close();
     }
 }
+Now what we done changes in code And this time i want to fetch the data
+Now we remove all the unusual things in the 'Main.java'.
+
+public class Main {
+    public static void main(String args[]){
+
+        SessionFactory sf = new Configuration()
+                .addAnnotatedClass(org.aniketdb1.Laptop.class)
+                .configure()
+                .buildSessionFactory();
+
+        Session session = sf.openSession();
+
+        session.close();
+        sf.close();
+    }
+}
+           We use all this statement to fetch program.
+So, here how do u fetch it it's very simple. If u want to fetch the laptop
+details. I want a 'laptop L1' which got initialized with 
+'session.get( )'
+             |-> In this u have to pass what kind of data u wanna fetch.
+Just like i want to fetch 'Laptop.class' and let's specify some data.
+based on the primary key. And that's the only thing u can do in the 'get'
+session.
+Let's say i want to fetch 'lid' for get '3' and at the end u have to print
+'l1' object.

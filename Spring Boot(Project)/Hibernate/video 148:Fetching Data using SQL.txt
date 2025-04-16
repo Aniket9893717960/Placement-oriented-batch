@@ -69,3 +69,33 @@ based on the primary key. And that's the only thing u can do in the 'get'
 session.
 Let's say i want to fetch 'lid' for get '3' and at the end u have to print
 'l1' object.
+        Session session = sf.openSession();
+           Laptop l1 = session.get(Laptop.class, 3);
+        session.close();
+
+but i don't want to fetch only single value i want to fetch multiple values
+based on the 'ram' how can i do that Now for something this we use 
+Something called 'HQL'.
+Or of course it's a query after a time if u work on the normal sql this
+is the thing i wanna write
+IN SQL    'select * from laptop where ram=32;'
+IN HQL    'from Laptop where ram=32;'
+
+to have to use we have to write something called Query.
+Now where u get this So, u get this from the hibernate. If u look at the
+'query'.SO, it's an iterface we doesn't can't simply create the object of
+it.
+
+'session' say don't worry u just simply say create 'CreateQuery' and we have to
+pass the Query in it's brackets.
+I write 'from laptop' because i doesn't want to apply filter right now.
+This query means execute everything from the laptop to access.
+
+to access it we use the method 'getResultList()' because it will give 
+u a list of values.
+And that's right if u click on 'getResultList()' we see 'List<R>' in
+return type.
+
+And that's the beauty if u remember JDBC U fire the query it will give u
+result set and u have to manually take each value from the result set
+and put that in the list of object.

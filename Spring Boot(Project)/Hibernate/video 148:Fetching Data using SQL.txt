@@ -99,3 +99,29 @@ return type.
 And that's the beauty if u remember JDBC U fire the query it will give u
 result set and u have to manually take each value from the result set
 and put that in the list of object.
+for this what will it return the list of laptops whether u can diretly print 
+everything or u can run for each loop U can print each value here And u can see
+u got the values
+This is the below command.
+                      Query query = session.getQuery("from Laptop");
+                      List<Laptop> laptops = query.getResultList();
+If u don't want all and u want the filer data of ram '32'. then use
+this command.
+                      Query query = session.getQuery("from Laptop where raw=32");
+
+Now in this case it will not give u every thing that's what i am expecting.
+That's why we run this got 2 laptops.
+laptop 2 and laptop 4 because this 2 have ram 32 gb.
+just to confirm laptop 2 and 4 they both are 32 gb.
+
+That's how basically u can get the data here.
+Actually it's vary easy to work with hQL Just u have to create the query object
+with the help of 'createQuery' whatever query u want to pass. Pass it in brackets
+It will give u the data.
+
+At this point we are saying 'from laptop' this will give u all the column data or 
+properties and u can apply filter on rows not on the columns.
+columns u are getting everything And that's why make sense to store that in the laptop object or the list of Laptops 
+
+but what if u want to fetch only one or 2 laptops what will i do that let's see in
+the next video.

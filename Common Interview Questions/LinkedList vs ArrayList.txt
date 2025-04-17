@@ -71,3 +71,13 @@ If u are adding elements letter so, of course it will take time
 consuming.
 that's the problem of 'ArrayList'. that's why it's time complexity
 is 'BigO Notation'(0()) 
+---------------------------------------------------------------------------------
+What about 'linllist' it will work on the concept of
+                      'Double Linked List'
+                      ---------------------
+
+----------------------------------------------------------------------------------
+In V/S Linked List is must faster than 'Array List' because u add elements in
+between linked list is much faster than array list.
+'Fast' when u set the data in between.        Linked List
+'slow' when u set the data in between.        Array List

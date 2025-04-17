@@ -1,0 +1,9 @@
+To remove duplicate in the list in java, there are multiple ways depending on the 
+requirement. Here are the most common ones:
+
+1. Using 'Set'(Simple and Fast)
+List<String> list = new ArrayList<>(Array.asList("Apple","bunana","apple","orange"));
+Set<String> set = new HashSet<>(list);
+list = new ArrayList<>(Set);
+
+System.out.println(list);

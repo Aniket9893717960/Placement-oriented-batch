@@ -39,4 +39,35 @@ beyond 10 element it will increase the size with 10 to 15 percent.
 
 Initially it will be 10 but latter on it become 15 and later on it 
 gone beyond that also
-how will u store the dynamic array.
+
+                          Example:
+how will u store the dynamic array. it's initial capacity would be 10.
+So, Even if u have 5 Elements u have the capacity to make 10 
+elements.
+
+If u go beyond 10 elements it will increase the size by 50% which 
+will increase the capacity of till 15 and u go beyond that also.
+            data             Index
+             5                 0
+             7                 1
+             8                 2
+             12                3
+             21                4
+             2                 5
+             3                 6
+So, what happends when u add element in between
+let's say i want to add element between 12 and 21
+let's say i want to add '16'.
+                 Data  5  7  8  12  21  2  3
+                Index  0  1  2  3   4   5  6
+                                    |-------Add '16' here
+                 Data  5  7  8  12  16
+                 Data  5  7  8  12  16  21
+                 Data  5  7  8  12  16  21  2
+                 Data  5  7  8  12  16  21  2  3
+So, if u have any value in between So, it will update the next 
+element. We have not to change the index no. of every element.
+If u are adding elements letter so, of course it will take time
+consuming.
+that's the problem of 'ArrayList'. that's why it's time complexity
+is 'BigO Notation'(0()) 

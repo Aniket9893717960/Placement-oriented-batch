@@ -1,0 +1,42 @@
+we are talking about the difference between Linklist and Arraylist.
+
+       So first some similarities both are the part of List Interface. 
+If u talk about collection API So, we have 
+     List Interface ------> Set Interface
+     Set Interface    |---> List Interface
+
+Both are belongs to same family right but still there have some difference.
+If u want to add data in the linked List and ArrayList the main use of this
+' Want to add values as per Requirements.'
+
+But for this use u also have a choice name 'Array' but what happen in array
+is we have fixed size we don't go beyond the existing size which we already 
+declare.
+
+To Solve this Problem we Use Dynamic Array and to create a Dynamic Array we 
+use 'ArrayList'.
+    -----------
+    Because u can add data in 'ArrayList' as per the requirments if u want to 
+shrink the size u can also done that in 'ArrayList'. U can do all those stuff 
+with arraylist right.
+
+
+But the same thing is possible in 'LInkList' u can add elements and u can remove 
+elements But the difference is in there implementation.
+--------------------------------------------------------------------------------
+                    Implementation
+                    --------------
+'ArrayList' will be build with the concept of Dynamic Array. While 
+'Linked List' will be implementated with the concept of 'Double Linked List'.
+--------------------------------------------------------------------------------
+
+                Dynamic Array
+                -------------
+How u store values in dynamic array:
+      U have an Array in which Initial capacity will be 10.
+If u add 5 element then u have capacity of 10 elements if u go 
+beyond 10 element it will increase the size with 10 to 15 percent.
+
+Initially it will be 10 but latter on it become 15 and later on it 
+gone beyond that also
+how will u store the dynamic array.

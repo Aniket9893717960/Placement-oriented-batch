@@ -1,9 +1,38 @@
 To remove duplicate in the list in java, there are multiple ways depending on the 
 requirement. Here are the most common ones:
 
-1. Using 'Set'(Simple and Fast)
+1. Using 'Set'(Simple and Fast): PROGRAM
+
 List<String> list = new ArrayList<>(Array.asList("Apple","bunana","apple","orange"));
 Set<String> set = new HashSet<>(list);
 list = new ArrayList<>(Set);
 
 System.out.println(list);
+                   --------------X--------------
+                                 NOTE
+This does not preserve insertion order. If you want to keep the original order,
+use LinkedHashSet.
+                  --------------X--------------
+1. Using 'Set'(Simple and Fast): Explaination
+   CODE
+      List<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "apple", "orange"));
+           What’s happening here?
+'Arrays.asList(...)' creates a fixed-size list from the array: ["apple", "banana", "apple", "orange"]
+'new ArrayList<>(...)' then creates a modifiable ArrayList from that list.
+So now you have a List<String> with duplicate "apple" values.
+
+   CODE
+     Set<String> set = new HashSet<>(list); // Removes duplicates
+               What’s happening here?
+A HashSet is a collection that doesn't allow duplicates.
+When you pass the list to a HashSet, it automatically removes the duplicates.
+Order is not guaranteed in a HashSet, so the elements may get shuffled.
+
+   CODE
+     list = new ArrayList<>(set); // Convert back to List
+               What’s happening here?
+We convert the Set back to a List because:
+Maybe you want list functionality (like accessing by index)
+Or you're working with methods that expect a List
+                    ----------------X---------------
+

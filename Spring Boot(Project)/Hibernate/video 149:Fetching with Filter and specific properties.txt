@@ -19,4 +19,27 @@ But the only difference is u have to also maintoined the no.
 u want to insert and if you have multiple question mark some time
 
 It's confusing to u as well that which question mark u are targeting and which
-can lead 
+can lead bugs and errors So, SQL says it's very clear if u are saying Question 
+mark And if you have multiple Question marks.
+Give them a no. so, that when u replace them latter which no. you targeting.
+
+Example in this case if you want to if u want to replace that '1'.
+in this code
+       Query query = session.createQuery("from Laptop where brand Like ?1");
+I can say 
+       query.setParameter(1,brand);
+In which u have to specify the no. which u are replacing '1' with the
+'brand'.
+       Query query = session.createQuery("from Laptop where brand Like ?1 and ram=?2");
+And u have to replace '2' as well.
+Now here we don't have much data to filter
+                       ------------NOTE-----------
+If u are fetching only one data then 'String' will be more appropriate.
+Code is given below.
+         String brand = "Asus";
+   Query query = session.createQuery("from Laptop where brand Like ?1");
+   query.setParameter(1, brand);
+   List<String> laptops = query.getResultList();
+
+But if u want to take more than one data then u can only replace:
+    List<String[]> laptops = query.getResultList();

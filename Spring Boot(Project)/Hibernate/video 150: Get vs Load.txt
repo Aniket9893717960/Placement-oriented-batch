@@ -15,3 +15,6 @@ Here is the code.
    Query query = session.createQuery("from Laptop where brand Like ?1");
    query.setParameter(1, brand);
   List<Objects[]> laptops = query.getResultList();
+      for(Object[] data : laptops){
+              System.out.println((String)data[0] + " "+ (String)data[1]);
+      }

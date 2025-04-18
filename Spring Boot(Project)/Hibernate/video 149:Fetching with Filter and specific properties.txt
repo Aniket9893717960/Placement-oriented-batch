@@ -43,3 +43,9 @@ Code is given below.
 
 But if u want to take more than one data then u can only replace:
     List<String[]> laptops = query.getResultList();
+                       --------------X-----------
+After this line if you want to see the output.
+    for(Object[] data : laptops){
+              System.out.println((String)data[0] + " "+ (String)data[1]);
+    }
+TO see the fetched output.

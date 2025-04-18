@@ -10,7 +10,7 @@ it does and we also talk what is the alternate use when we don't want to
 use load what else we can use.
   If we back to the code of 'HidProj' we done for 'HQL'
 we don't need the 'fetch' methods here.
-Here is the code.    
+Here is the code which we remove in Previous code.    
    String brand = "Asus";
    Query query = session.createQuery("from Laptop where brand Like ?1");
    query.setParameter(1, brand);
@@ -18,3 +18,21 @@ Here is the code.
       for(Object[] data : laptops){
               System.out.println((String)data[0] + " "+ (String)data[1]);
       }
+   System.out.println(laptops);
+
+Noe the code is become very simple 
+
+public class Main {
+    public static void main(String args[]){
+        SessionFactory sf = new Configuration()
+//                .addAnnotatedClass(org.aniketdb1.Alien.class)
+                .addAnnotatedClass(org.aniketdb1.Laptop.class)
+                .configure()
+                .buildSessionFactory();
+
+        Session session = sf.openSession();
+          session.close();
+        sf.close();
+
+    }
+}

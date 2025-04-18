@@ -42,7 +42,7 @@ Code is given below.
    List<String> laptops = query.getResultList();
 
 But if u want to take more than one data then u can only replace:
-    List<String[]> laptops = query.getResultList();
+    List<Object[]> laptops = query.getResultList();
                        --------------X-----------
 After this line if you want to see the output.
     for(Object[] data : laptops){

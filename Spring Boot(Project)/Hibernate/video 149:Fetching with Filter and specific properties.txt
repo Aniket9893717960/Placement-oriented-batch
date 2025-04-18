@@ -7,3 +7,16 @@ name as 'Asus' ok and we fetch this.
   This is the done code.
   Query query = session.createQuery("from Laptop where brand Like 'Asus'");
   List<laptop> = query.getResultList();
+
+But what if u have this data in the string variable and u have storing that
+data here 'Asus'. Now u have to pass this external data in this query.
+
+Now if u are comming from the JDBC we will call the prepare statement.
+In which u will pass the question mark u can done the same thing here 
+u can put the question mark.
+But the only difference is u have to also maintoined the no.
+'q1','q2' so when u have the bigger query with multiple fields 
+u want to insert and if you have multiple question mark some time
+
+It's confusing to u as well that which question mark u are targeting and which
+can lead 

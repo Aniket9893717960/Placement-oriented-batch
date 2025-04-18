@@ -33,6 +33,8 @@ public class Main {
         Session session = sf.openSession();
           session.close();
         sf.close();
-
     }
 }
+
+Basically i want to fetch the data about the laptop And if you go back to database
+Below is the data we have let's say we want to pass the id of '3' or '2'.

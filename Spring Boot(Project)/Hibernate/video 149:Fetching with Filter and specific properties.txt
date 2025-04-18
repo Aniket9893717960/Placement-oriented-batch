@@ -1,0 +1,9 @@
+we have to fetch the data but not with the help of 'ram' with the help of
+something else 'brand' and from the 'brand' value of course we have to use 
+single couts now because that's the string and of course u can use 'Like' 
+as well.
+For String or text it make sense to use 'Like' here i have to specify the brand
+name as 'Asus' ok and we fetch this.
+  This is the done code.
+  Query query = session.createQuery("from Laptop where brand Like 'Asus'");
+  List<laptop> = query.getResultList();

@@ -1,0 +1,17 @@
+Or We can see 'Eager' fetching vs 'leazy' fetching. Yes in the previous 
+videos we also see there is a concept of 'Eager' and 'Lazy' when u are
+talking about 'Mapping' relationship.
+
+we had the fetching concept we can do it with 'Eager' and by default
+  we talk about collection we go with 'lazy' SO, we will full focus 
+  on get and load.
+'get' we have used and 'load' is already 'deprecated' but we show u what 
+it does and we also talk what is the alternate use when we don't want to
+use load what else we can use.
+  If we back to the code of 'HidProj' we done for 'HQL'
+we don't need the 'fetch' methods here.
+Here is the code.    
+   String brand = "Asus";
+   Query query = session.createQuery("from Laptop where brand Like ?1");
+   query.setParameter(1, brand);
+  List<Objects[]> laptops = query.getResultList();

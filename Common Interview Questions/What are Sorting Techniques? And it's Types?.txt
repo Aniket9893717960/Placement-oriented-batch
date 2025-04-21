@@ -7,5 +7,15 @@ operations, reporting and organizing data efficiently.
 Sorting can be broadly categorized into:
 1. Internal Sorting
         Performed when the data fits entirely into memory.
+        Fast and efficient for small to medium-sized datasets.
 2. External Sorting
         Used when data is too large to fit into memory.
+        Involves assessing disk based data.
+
+  Common Internal Sorting Algorithms
+  ----------------------------------
+1. Bubble Sort
+   -----------
+   Repeatedly swaps adjacent elements if they are in the wrong order.
+Time Complexity:
+                O(n^2)

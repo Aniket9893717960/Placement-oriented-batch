@@ -1,0 +1,22 @@
+   Real - Life Analogy
+   ----   ---- -------
+Imagine you're organizing a cricket tournament:
+  By default, you're sorting players by their jersey number - this is like
+  'Comparable'(default sorting logic).
+  But now, someone asks you to sort by highest runs scored or alphabetically
+  by name - this is like  'Comparator'(custom sorting logic).
+
+ Comparable Interface (java.lang.Comparable)
+ -------------------------------------------
+Is used when you want to define the natural/default sorting order of your 
+objects.You need to implement this interface in the class of the objects 
+you're sorting.
+Syntax
+  public class Student implements Comparable<Student>{
+      int id;
+      String name;
+
+      public int compareTo(Student other){
+            return this.id - other.id; //ascending order by id
+      }
+  }

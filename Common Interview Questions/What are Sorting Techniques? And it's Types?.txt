@@ -19,3 +19,63 @@ Sorting can be broadly categorized into:
    Repeatedly swaps adjacent elements if they are in the wrong order.
 Time Complexity:
                 O(n^2)
+Best Case:
+           O(n) (if already sorted)
+
+   CODE
+        for(int i=1; i< n;i++)
+            for(int j=0;j<n-i;j++)
+                if(arr[j] > arr[j+1])
+                    swap(arr[j], arr[j+1]);
+
+2. Selection Sort
+   --------------
+   Selects the minimum (or maximum) element and places it at the
+   correct position.
+Time Complexity:
+                O(n^2)
+
+3. Insertion Sort
+   --------------
+   Builds the final sorted array one element at a time.
+Time Complexity:
+                O(n^2)
+Best Case:
+          O(n) (when array is nearly sorted)
+
+4. Merge Sort (Divide & Conquer)
+   ----------------------------
+   Recursively splits the array into halves and merge them back into
+   Sorted Order.
+Time Complexity:
+                O(n log n)
+
+5. Quick Sort
+   ----------
+   Selects a pivot and partitions the array such that 
+             left < pivot < right.
+Average Time Complexity:
+                        O(n log n)
+Worst Case:
+           O(n^2)(rare if pivot is chosen well)
+
+6. Heap Sort
+   ---------
+   Builds a heap from the data and repeatedly extracts the maximum
+   element.
+Time Complexity:
+               O(n log n)
+
+7. Counting/ Redix/ Bucket Sort
+   ----------------------------
+   Special-purpose sorting for integers or specific use cases.
+   Not Comparison - based.
+
+        Why  Sorting Techniques Matter?
+Searching becomes faster(especially for binary search).
+Data presentation improves(reposts,charts,etc).
+Efficiency improves in many algorithms and operations.
+
+
+Once you understand these basic techniques, you can then use interfaces like
+'Comparable' and 'Comparator' in java to define custom sorting for user defined classes.

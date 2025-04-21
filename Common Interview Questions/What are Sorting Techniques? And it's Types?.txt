@@ -1,0 +1,11 @@
+Sorting refers to arranging data in a particular format - either ascending
+or descending order. In java, sorting helps in optimizing search
+operations, reporting and organizing data efficiently.
+
+  Types of Sorting Techniques
+  ---------------------------
+Sorting can be broadly categorized into:
+1. Internal Sorting
+        Performed when the data fits entirely into memory.
+2. External Sorting
+        Used when data is too large to fit into memory.

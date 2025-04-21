@@ -36,3 +36,72 @@ Maybe you want list functionality (like accessing by index)
 Or you're working with methods that expect a List
                     ----------------X---------------
 
+2. Using 'LinkedHashSet'(Preserves Insertion Order)
+   -----------------------------------------------
+CODE
+    List<String> list = new ArrayList<>(Arrays.asList("apple", "banana", "apple", 
+        "orange"));
+Set<String> set = new LinkedHashSet<>(list); // Removes duplicates and preserves 
+                                                 order
+list = new ArrayList<>(set);
+System.out.println(list);
+          CODE
+      Set<String> set = new LinkedHashSet<>(list); // Removes duplicates and preserves order
+           What happens here is:
+You're creating a LinkedHashSet from that list.
+why 'LinkedHashSet'? Because:
+      it removes duplicates(like a normal Set)
+      But also preserves the insertion order(unline HashSet)
+
+3. Using Java 8+ Streams
+   ---------------------
+CODE
+    List<String> list = new ArrayList<>(Arrays.asList("apple","banana","apple","orange"));
+list = list.stream()
+           .distinct()
+           .collect(Collectors.toList());
+System.out.println(list);
+
+         what happends
+'list.stream()' This convert the list into a Stream.
+ -------------  A 'Stream<String>' is a pipeline of elements that supports 
+                Various operations (like filtering, mapping, reducing, etc).
+So, you're starting a stream pipeline.
+
+'.distinct()' : This remove duplicate from the stream.
+ -----------   It keeps only the first occurrence of each element
+               (Just like 'LinkedHashSet' would do).
+Behind the scenes, it uses a 'Set' to track which elements have been seen 
+already.
+
+'.collect(Collectors.toList())' : This collects the elements of the stream
+ -----------------------------    back into a 'List'.
+You're using 'Collectors.toList()' as a collector to accumulate the stream
+elements into a new ArrayList.
+
+4. Manual Way (Without Using Set or Stream)
+   ----------------------------------------
+CODE
+    List<String> list =new ArrayList<>(Arrays.asList("apple","banana","apple","orange"));
+List<String> result = new ArrayList<>();
+
+for(String item : list){
+   if(!result.contains(item)){
+      result.add(item);
+   }
+}
+
+System.out.println(result);
+                      What Happens in CODE?
+'for(String item : list)' This is an enhanced for loop(also called a "for-each 
+ -----------------------   loop").
+It goes through each element in the list, one by one.
+The variable 'item' will hold the current element form the list during each loop
+iteration.
+
+'if (!result.contains(item))' This checks whether the result list already has the 
+ ---------------------------  the current item.
+'!result.contains(item)' meana : "If result does not contain the item yet..."
+
+'result.add(item);' If the item is not already present in result, it adds the item.
+ -----------------  This way, it only adds unique items.

@@ -1,2 +1,19 @@
 Now we know that spring is actually very famous in industry but why do we 
-have other options yes we have if you look at different framworks
+have other options yes we have if you look at different framworks.
+What's makes them famous is the first one features.
+Yes framworks need to have features which will help you
+next the framwork need a community.
+If the technology want to make famous will have to make a good
+community.
+Also the framowork need to make a good documentation.
+Now with 'spring' he has featurs.
+it have a good community also it have a good 
+
+SO, apart from that if u like reading then u can go to there 
+official documentation which is amazing.
+U can go to google and search 'Spring Docs'.
+If i want to know how 'AOP' works with spring u can go throw
+documentation.
+
+So, every thing is explain properly if u are a person who like
+to read as well this is a good thing.

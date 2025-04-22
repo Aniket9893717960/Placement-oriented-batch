@@ -28,3 +28,57 @@ And that's what the problem start when u try to manage all
 the things.
 U are focusing all the things but u are not focusing the main
 thing Which is "Business Logic".
+
+Every application is different and what make it different is 
+business logic. So, your focus is on the business logic
+Not on the object creation.
+So, u want that some one else will control the object creation.
+That means u are inverting the control.
+
+Earlier u have the control but now u are giving the control
+to some one else that is inversion of control it does not for 
+the object but for the flow.
+
+Now to achieve this in 'Spring' we have something called
+"IOC Container".
+ -------------
+So, 'Spring' works with container where u put all the objects
+Now when i say u not create the object i mean as a programmer.
+Will some one else can do that that's your spring framwork.
+
+'spring' will create object for u. when u can keep it 
+so, in side the 'IOC' container u will be having your 
+objects and who will create it is your spring framwork.
+
+And that's your 'spring ioc' and the container name is IOC 
+container.
+
+    |--------------------------------|
+    |   |------------------------|   |
+    |   |      (IoC)Container    |   |
+    |   |  --      --      --    |   |
+    |   |  ob1     ob2     ob3   |   |
+    |   |------------------------|   |
+    |--------------------------------|
+
+So, 'IOC' is the principle u have to follow to achieve it
+But how exacly u make it work and that's where we have to 
+use Design pattern called 'Dependency Injection'.
+
+That u have the object's there but some one have to inject them
+to your application right.
+Let's say u want to create a laptop class and this laptop is 
+basically dependent on the CPU.
+
+Of course u can not run a laptop or cannot use a laptop without
+CPU. Imagine if you have two different classes.
+    1 is laptop           2nd is CPU
+Now inside the laptop class u need the CPU object.
+So, basically both this object are available inside the container.
+But how will u link them. How will u inject the CPU object inside 
+the laptop.
+
+And that's where we use the object called 'Dependency injection'.
+How we can done this in spring we can think it on latter.
+But using spring it's just not creating the object but also 
+injecting that into your application.

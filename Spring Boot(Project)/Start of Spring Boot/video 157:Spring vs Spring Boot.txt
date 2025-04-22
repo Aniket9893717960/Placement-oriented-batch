@@ -1,0 +1,50 @@
+Now the question arrise we are going to implement the 
+'Dependency Injection' using 'spring' the thing is before starting
+with the actual code we have to analize one thing.
+we have two things here.
+i. spring
+ii. spring boot 
+
+They are not different the thing is that on the top of 
+'Spring framework' we got 'Spring Boot' but why the thing is
+when 'spring' come into existence way back it was good for the
+industry and also for the programmer.
+
+we have to done allot of configuration even to print 
+'hello world' so, it u want to build the spring project
+And if you just want to print 'hello world'.
+U doesn't just simply write 'ok hello world' u have to 
+  done allot of configuration are:
+i. Creating the Project
+  ii. Cofiguraing XML file.
+  iii. Creating the Beans.
+All the things will make much more sense if we go forward
+But the thing is it get allot of efforts and time to create your
+first spring project.
+
+To done easy of that project we got 'spring boot'.
+  It's an 'Opinionated Frameowrk' it will give u the project 
+which can be run on first go.
+So, basically when u create a spring project it will create a 
+structure for u and u have to run directly you don't need to
+done much configuration.
+
+Of course if you want to make some changes then u can done it in
+  spring boot but it will give u a project if the spring is the
+framework and at the top of that we got spring boot.
+
+Now of course if you want to project now a days people prefer to 
+work in spring boot but what works behind the seen to understand
+  that u have to understand the spring framework.
+
+Now the version we are working with 'Spring' is 'Spring6' and
+  version of 'Spring Boot 3'.
+           ----------------X-------------
+  To re iterate 'Spring' is a framework SO, what ever u are doing with 
+the help of spring boot u are working with spring framework.
+Just u are working with spring boot it doesn't mean u are not 
+using spring framwork.
+So, spring is there and at the top of that to achieve spring boot
+  To achieve this dependency injection the first code would you write
+  in 'Spring boot' and what happends behind the seen we can see with 
+the help of Spring frame work.

@@ -1,0 +1,30 @@
+Before starting with spring boot we have to learn one concept which
+is 'loc' and 'Di'.
+I know this is short forms but full form of this is 
+'Inversion of Control' and 'Dependency Injection'.
+
+Of course there are two different concept.
+Let's talk about 'loc' which is 'Inversion of Control' it simply 
+means that u are inverting the control but where what control u
+are inverting So, as a programmer u have multiple roles.
+
+when u write a code make sure u create the "Object" or
+flow of the application. 
+Now u say what's wrong with that 
+And i will say "I Ok with the flow of the application but 
+i not ok with the object creation".
+
+Now u say in the start and end of the entire java we talk about
+object creation and we do that with the help of new keyword.
+the thing is object creation is easy 
+  'of course u can write a new keyword and u get the password.'
+
+But if u can create the object it's your responsibility to 
+  'Create the object'
+  'Maintain the object'
+  'Destroy the object'
+basically as a programmer u are controlling everything.
+And that's what the problem start when u try to manage all
+the things.
+U are focusing all the things but u are not focusing the main
+thing Which is "Business Logic".

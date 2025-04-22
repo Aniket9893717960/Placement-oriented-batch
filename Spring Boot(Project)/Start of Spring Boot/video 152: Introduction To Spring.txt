@@ -62,4 +62,16 @@ and 'batch' at last.
 
 So, it provide allot of different things and we can use simple 
 annotations, simple mapping and we have done but it's not actually
-Syntax of spring it's syntax 
+Syntax of spring it's syntax of 'Spring boot' which make 'spring' 
+very easy.
+
+        @SpringBootApplication
+        @RestController
+        public class DemoApplication {
+               @GetMapping("/helloworld")
+               public String hello(){
+                    return "hello world!";
+               }
+        }
+
+Now we can see something called projects

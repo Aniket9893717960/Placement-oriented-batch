@@ -1,0 +1,65 @@
+Start our journey with Spring framwork.
+Whenever we are talking about Spring framwork It comes with spring boot as well
+So, what is spring and what is spring boot?
+That's what we focus on the entire course first we will start with spring 
+framwork and slowly we move towards spring boot.
+
+But if u thing that both are different things so they are but spring boot
+  works on 'spring' framework. But till this point we have not idea 
+  what is spring framwork so we don't talk about spring boot framwork yet.
+
+Now what is Spring framwork?
+    -----------------------
+  If you want to print Enterprise level application Or if you want to 
+print any big application in java. 
+we will be using some framwork but it not just for java. Doesn't matter 
+  which language we use  framworks as well.
+
+when it comes to java one of the best framworks available for 
+  developing applications is spring.
+If fact before spring we have different framworks.
+  In fact there was a time we have to work with 'EJB'
+and we still do that.
+
+  Jakarta Enterprise Beans
+  (EJB; formerly Enterprise JavaBeans)
+
+If we want to build 'web Applications' we use 'STRUTS'
+And if you want to work with databases with the help of 'ORM'
+We use to work with 'HIBERNATE'.
+
+But what if u get everything in one framwork and that's where 
+Spring comes into picture.
+
+Intensionally 'Spring' is a light weight framwork. Of course
+  what is light weight we understand it latter But just give 
+  u a hint 'Spring' work with 'POJOs'(Plain Old Java Object)
+Which is the normal object and a normal object will do allot 
+of things for u.
+
+Now as i maintoined that "spring will use to build the 
+enterprise level application." And for better understanding
+we come to Offical website of spring.
+    'spring.io'.
+If u go there u can see what it says:
+  'Spring makes Java Productive'
+  'Spring makes Java Reactive'
+  'Spring makes Java Mordern'
+Now spring is not just a one thing u know when the 'spring'
+launched way back it's more about one module it was for 
+'Dependency Injection' of course we talk about that latter.
+But latter on 'Spring' got allot of different projects.  
+
+So, it's not just one thing it's a combination of multiple 
+things So, u can say 'spring' is an 'Ecosystem' it has allot
+of things to talk about So, what things we have there.
+
+basically we talk about what kind of modules available.
+'Spring' can do
+  'microservices','Reactive application','Application for
+    cloud','web applications','Serverless','Event Driven'
+and 'batch' at last.
+
+So, it provide allot of different things and we can use simple 
+annotations, simple mapping and we have done but it's not actually
+Syntax of spring it's syntax 

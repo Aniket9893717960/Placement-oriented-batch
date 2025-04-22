@@ -1,0 +1,37 @@
+u have to learn something before start of spring framwork.
+1) u have to make sure that your core java knowledge is good.
+   syntax of java
+   opps concept
+   Exception handling
+   Threads
+   Collection API.
+
+2) JDBC: when u have to build application than 
+        the most important thing is data.
+ when u have to work with databases.
+ u should know about how to connect Application with databases.
+
+For that when u have normal java and database then u have JDBC in
+between which is 'Java Database Connectivity'.
+
+3) U want to build the spring project then u need to have a 
+'Build tool' it can be maven or Gradle.
+In this course we are going to use 'maven'.
+
+4) Then u have to work with the 'Spring ORM' like 'Hibernate'
+   atleast ORM will be required.
+
+5) One last thing which is 'Servlets'. when u want to build 
+web application using spring then u should know servlets.
+Yes u have hourd some where that 'Servlets' are outdated
+Yes they are if you want to build web application then
+u are not using servlets u are using 'Spring MVC'.
+
+But when u want to work with 'Spring MVC' then it run on 
+some server like 'Apache Tomcat'.
+what is 'Tomcat' it's a 'Servlet Container' so, having
+  the knowledge of servlets will be useful otherwise
+if i talk about spring mvc then i can give u brief idea.
+
+On how servlet works and that's it
+  

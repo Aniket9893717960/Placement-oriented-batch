@@ -20,3 +20,40 @@ Syntax
             return this.id - other.id; //ascending order by id
       }
   }
+ key Points:
+It's in the java.lang package.
+Has only 1 method:
+               int compareTo(T o);
+You modify the class itself to define the sort logic.
+Only one sorting logic can be applied (natural order).
+
+ Example:
+   List<Student> list = new ArrayList<>();
+   list.add(new Student(101,"Aniket"));
+   list.add(new Student(99, "Ravi"));
+   Collection.sort(list);
+
+
+ Comparator Interface (java,util.Comparator)
+ --------------------
+Comparator is used when you want to define custom sorting outside the
+class or want multiple ways to sort the same objects.
+
+Syntax :
+   class SortByName implements Comparator<Student>{
+       public int compare(Student a, Student b){
+         return a.name.compareTo(b.name);
+       }
+   }
+
+ Key Points:
+it's in the 'java.util' package.
+Has 2 main methods (Java 8+ has more):
+          int compare(T o1,T o2);
+         boolean equals(Object obj);   //optional
+Allows multiple sorting logics(by name, by marks etc).
+Doesn't need to change the actual class.
+
+ Example:
+   List<Student> list = new ArrayList<>();
+   list.add(new Student(101, "Aniket"));

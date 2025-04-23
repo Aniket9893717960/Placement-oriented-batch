@@ -57,3 +57,14 @@ Doesn't need to change the actual class.
  Example:
    List<Student> list = new ArrayList<>();
    list.add(new Student(101, "Aniket"));
+   list.add(new Student(99, "Ravi"));
+   Collections.sort(list, new SortMyName());  // sort by name
+
+ Key Differences: Comparator vs Comparable
+ -----------------------------------------
+  feature             Comparable           Comparator 
+1. Interface          java.lang             java.util
+  Package
+2.  Method        compareTo(Object o)   compare(Object o1, Object o2)
+3.  Sorting          Inside                  Outside
+ logic location     the class               the class.

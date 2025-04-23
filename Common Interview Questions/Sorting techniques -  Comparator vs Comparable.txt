@@ -68,3 +68,44 @@ Doesn't need to change the actual class.
 2.  Method        compareTo(Object o)   compare(Object o1, Object o2)
 3.  Sorting          Inside                  Outside
  logic location     the class               the class.
+4. Flexibility   Only one way to sort    Multiple ways to sort
+5. Modifying           Yes                   No
+class needed  
+6. Used With    Collections.sort(list)   Collections.sort(list, comparator).
+
+ Java 8+ Comparator Magic (Lambda Style)
+ ---------------------------------------
+Way cleaner with lambda expressions.
+         list.sort((s1, s2) -> s1.name.compareTo(s2.name));
+Or even:
+         list.sort(Comparator.comparing(Student::getName));
+
+ When to Use What?
+ Scenario                                                   Use
+You want a default sort order                           Comparable
+             (like roll no or ID)
+You want multiple or custom sorting                     Comparator
+         logics (by name, marks, etc)
+You don't want to modify the class                      Comparator
+
+ Final Example (Both in One)
+CODE
+class Student implements Comparable<Student>{
+    int id;
+   String name;
+
+  public int compareTo(Student other){
+     return this.id - other.id;
+  }
+}
+
+class SortByName implements Comparator<Student>{
+   public int compare(Student a, Student b){
+     return a.name.compareTo(b.name);
+   }
+}
+
+// Usage:
+Collections.sort(list); // uses Comparable (by ID)
+Collections.sort(list, new SortByName());
+                       // uses Comparator (By Name)

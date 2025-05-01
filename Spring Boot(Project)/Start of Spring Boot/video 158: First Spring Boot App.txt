@@ -1,0 +1,14 @@
+First We see the simple example of "Dependency Injection"
+Now the question arrise which IDE we are going to use 
+We already Seen Different IDE's like VS code, Intellij Idea,
+Eclipse And NetBeans.
+
+We just start with Eclipse and then moving to intellij
+Let's Start with 'Eclipse'
+                 ---------
+first click on 'Create a project' then it will ask u
+what kind of project u building then click on 'Maven'
+Project. It will gives u an option of adding dependency.
+
+But Instead of "Maven" we have "spring Boot" So, we get the option of 
+Spring boot

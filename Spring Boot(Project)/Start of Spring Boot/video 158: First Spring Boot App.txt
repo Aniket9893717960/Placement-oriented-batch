@@ -68,3 +68,24 @@ ultimate version SO, in that case if u want the project a best way is
 U go to Web site called "start.spring.io" And u can see the spring 
 initializer what u can do is
 We create the Project Here
+                    -------------X----------
+So, in "Spring Initializr" First we choose Project Build
+"MAVEN" Then we choose language 'JAVA'
+Third we choose 'Spring Boot' Version '3.2.0'
+Now we write 'Group' name 'com.telusko'
+WE write 'Artifact' name as 'SpringBootDemo' 
+Description u will change if u want 'Demo Project For Spring Boot'.
+Go To 'Package name' as 'com.telusko.app'
+Then i will maintoined the packaging as 'Jar'
+Maintoined 'Java' version '17'
+And if u want to add 'Dependencies' so, click on
+'ADD DEPENDENCIES' but this time i don't need here
+At Last click on 'GENERATE'.
+
+IN src -> main -> Java -> com.telusko.app -> SpringBootDemoApplication
+
+Which is your Spring Boot Application Now i coudn't tail about what
+is happening here. That's not the main idea The main idea is u got
+the spring boot project.
+Now i will print some thing to test if my app is running or not
+I just simply say "Hello world"

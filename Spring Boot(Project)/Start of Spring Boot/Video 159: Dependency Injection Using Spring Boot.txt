@@ -67,4 +67,49 @@ public class SpringBootDemoApplication {
 
 Because we know 'Code' is a non static method that's why 'Alien'
 Object.
-But my idea is If i don't want to create the object of 
+But my idea is If i don't want to create the object I want 
+Spring To Create the object.
+
+And that's tricky Right If u don't say 'new' Alien And 
+Now u are saying u want the object from Spring.
+How spring will know that u want to create the object For that
+U will do is "Where exactly it will create the object?"
+
+The Answer of this Question is inside the container remember i 
+maintoied about the 'Containers'. So, imagine u have the JVM And 
+JVM inside the 'Container' u have special area inside the box Which
+is your 'Container'.
+
+If Every time Your spring Framwork which will create an object for u
+it will be available in the container That means u have to find the way
+to get the container The way u can do that with the help of 
+"Application Context".
+The Thing is If u check below perticular method.
+CODE
+   SpringApplication.run(SpringBootApplication.class, args);
+
+And If u go to 'run' method. 'run' returns the 
+'ConfigurationApplicationContext' extends 'ApplicationContext'
+that means if u can simply use 'run' method. Returns the 'run'
+value u got the 'Configuartion context Object'.
+
+Now we can initialize 'ApplicationContext' with above code.
+CODE
+   ApplicationContext context = SpringApplication.run(SpringBootApplication.class, args);
+
+Now u have a way to communicate with IOC container now how do we
+communicate Now we simply say 
+"Hey Context give me the container" And Remember Object is not
+the object in 'spring' it's 'Bean' in 'Spring' framwork.
+
+And here we say 'getBean' And here u also maintoined Which class 
+Object u want.of course u have to maintoined because in your project
+u maight have multiple classes.
+Then how will your Spring Framwork Know how u want Say
+'Hey Alien We want the object which u have created inside the container.'
+   CODE
+   Alien obj = context.getBean(Alien.class);
+
+          --------------X-------------------
+In This we are Expecting  "Alien will have the object which he created"
+Your Spring framowrk will say ok

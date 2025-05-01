@@ -11,4 +11,60 @@ what kind of project u building then click on 'Maven'
 Project. It will gives u an option of adding dependency.
 
 But Instead of "Maven" we have "spring Boot" So, we get the option of 
-Spring boot
+Spring boot In Sub option u got option of "Spring Starter Project"
+And say next Now u see the POP Up Console. 
+At which the first field we have 'Service URL' Remember this URL
+Which says "https://start.spring.io".
+
+Then it ask u for name So, i write "SpringBootFirst"
+Use 'By Default location'  And Now i can specify the type of
+Build In which u have two options 'Gradle' and 'Maven'
+Language is "Java" of Course But u also done with "Kotlin".
+
+Then it ask u for group Id have field by default name is "com.telusko" 
+'Artifact' Name is same as 'Project Name'.
+The Package name is 'com.telusko.app' that's it nothing much Now click
+on next.
+
+Now next pop up come to console is 
+'New Spring Starter Project Dependencies' This is where u have the
+option to add extra features.
+Spring is a module or framwork  which will not give u every thing in 
+the first project Or At movement when u create a project.
+
+It will ask u what u want to add as u add the modules as needed.
+One day u can chose what kind ok options u want AT first field
+u can get the option of 'Spring Boot Version' '3.2.0' and u also
+go for the older one.
+
+And niw here u can add Dependency. If u want to make a web project 
+U simply Say simply "web" then u can select 'web' here
+What if u want to select a web cercuit.
+If u want to select JPA But at this point u will go for a simple example
+let's not add the dependency.
+
+At that movement if u want to add something u can add here.
+If u not want to add anything u simply say "next" then click 
+on "finish".
+And u can get here project. Actually this project will be coming
+from Internet So, there is a web site called "start.spring.io"
+I want to show that web site in some time.
+
+But that from where u are getting the project. If u see when i open 
+this is your spring project.
+If i open the 'pom' file. Code we have 
+There is one dependency u need when u are working with spring boot.
+"<dependency>
+    <groupId>org.springframwork.boot</groupId>
+    <artifactId>spring-boot-starter</artifactId>
+</dependency>"
+                  ------------X---------------
+But if i don't want to use 'Eclipse' any more What if i want to use
+'Intellij'. Now the problem is in 'eclipse' u have that option
+of 'Plugin' install. But if u open 'intellij' and if i create a 
+new project There is no way i have to specify the Spring Project.
+IS there in Ultimate version Not in commity version and we not have
+ultimate version SO, in that case if u want the project a best way is
+U go to Web site called "start.spring.io" And u can see the spring 
+initializer what u can do is
+We create the Project Here

@@ -1,0 +1,45 @@
+The thing is we are started with spring boot But the actual sense and
+what happends behind the seen make much more sense once we do this in 
+spring framework.
+Why we are doing in spring boot is just to understand what spring boot
+can do In term of "Dependency Injection" of course 'Spring Boot' can
+do allot of different things .
+
+But we are starting with the first step ok so first i say what we gonna 
+do here Before that we have one more update we are using 'java 21' instead
+of 'Java 17'.
+
+package com.telusko.app;
+
+import ...
+
+@SpringBootApplication
+public class SpringBootDemoApplication {
+   public static void main(String[] args){
+    SpringApplication.run(SpringBootDemoApplication.class, args);
+    System.out.println("Hello world");
+   }
+}
+
+So, what we arer doing in 'SpringBootDemoApplication.java' we using
+'SpringApplication.run' basically it activates your spring framework
+It also has something called 'container' where u can contain your
+  spring Beans.
+As i maintoined before 'Spring' is responsible to create the objects
+And this object is basically called 'Beans'.
+So, any objects is created and manage by spring are called 'Beans'
+Nothing feancy it's just normal object different name.
+
+So, this is how u run the container but we are not using container 
+in this code we just simply running "Hello World". So, Nothing about
+Container's tail now.
+
+                      Now i Use Container
+                      -------------------
+Now we will create a simple class in 'com.telusko.app' let's say
+i want to write 'Alien' If u are not sure why u create or work with 
+'Alien' besically i believe that programmers are 'Aliens' because
+we don't leave in this world "Mentally" or "Virtually" we leave in
+"Virtual" World right So, we are 'Aliens'.
+
+'First' of all i wonna deactivate my "mitup" Copilate.

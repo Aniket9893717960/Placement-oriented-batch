@@ -43,3 +43,28 @@ we don't leave in this world "Mentally" or "Virtually" we leave in
 "Virtual" World right So, we are 'Aliens'.
 
 'First' of all i wonna deactivate my "mitup" Copilate.
+I wanna declare a simple method here name 'Alien'.
+with the method
+  CODE
+    public void code(){
+           System.out.println("Coding");
+    }
+Now In main class "SpingBootDemoApplication" i will create an object of
+'Alien' And we simply called 'Code'.
+CODE
+  package com.telusko.app;
+
+import ...
+
+@SpringBootApplication
+public class SpringBootDemoApplication {
+   public static void main(String[] args){
+    SpringApplication.run(SpringBootDemoApplication.class, args);
+    Alien obj = new Alien()
+    obj.code();
+   }
+}
+
+Because we know 'Code' is a non static method that's why 'Alien'
+Object.
+But my idea is If i don't want to create the object of 

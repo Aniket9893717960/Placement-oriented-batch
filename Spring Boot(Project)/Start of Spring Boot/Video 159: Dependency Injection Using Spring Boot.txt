@@ -113,3 +113,10 @@ Then how will your Spring Framwork Know how u want Say
           --------------X-------------------
 In This we are Expecting  "Alien will have the object which he created"
 Your Spring framowrk will say ok
+U basically need this "Alien.class" object Or u need the object of this
+class But the IOC container will able to give u an object only if the object is there in the container.
+we are assuming it will be there but is it let's try 
+let's re run this and see what this it says
+          "No such bean Defination:
+   No qualifying bean of type 'com.telusko.app.Alien' available"
+So, basically It's not able find In this 'Bean'

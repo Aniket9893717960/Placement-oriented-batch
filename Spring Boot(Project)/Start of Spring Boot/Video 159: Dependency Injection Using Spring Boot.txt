@@ -120,3 +120,52 @@ let's re run this and see what this it says
           "No such bean Defination:
    No qualifying bean of type 'com.telusko.app.Alien' available"
 So, basically It's not able find In this 'Bean'
+         -------------X-----------------
+But u say why we are using the Spring framework when it not create an 
+object for us. Actually it can but the only thing is
+Imaging the case where u have 100's of object in your project and Is u want Spring will create all the object's for u.
+Of course not right SO, there is way u need to tail which object u want
+And which u not want. So, Spring by default says i will create all the 
+object for u only when u maintoined that u want the object then i will 
+create.
+
+So, how did u say 'springboot' thet i want the object FOr this we use 
+'Annotations'.
+Here in 'Alien.java' class we use 'Component' annotation top of the 
+class.
+
+By using 'Component' annotation u make sure that spring has to manage 
+The demanding class.
+So, 'Create the object' 'Assemble the object' and 'Manage it' will be 
+done by 'Compnonent Annotation'.
+
+This is the Final Program i. Main.java
+  package com.telusko.app;
+
+import ...
+
+@SpringBootApplication
+public class SpringBootDemoApplication {
+   public static void main(String[] args){
+    SpringApplication.run(SpringBootDemoApplication.class, args);
+    Alien obj = new Alien()
+    obj.code();
+     Alien obj1 = new Alien()
+    obj1.code();
+   }
+}
+
+2nd is Alien.java
+  package com.telusko.app;
+  import org.springframwork.sterotype.Component;
+@Component
+public class Alien {
+  public void code(){
+    System.out.println("Coding");
+  }
+}
+                ------------NOTE----------
+If we create one more object of 'Alien' it will work without Any Error 
+But the Question is It's we getting the same object or we getting 
+different object.
+               --------------X------------

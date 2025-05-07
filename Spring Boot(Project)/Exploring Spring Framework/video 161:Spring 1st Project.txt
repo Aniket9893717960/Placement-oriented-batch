@@ -33,3 +33,67 @@ And we got the project structure.
 We have to select basic 'Archtype' in 'Maven Archtype' as 'quickstart'
 Because it create a basic structure and u can import anything u want.
                ------------X--------------
+Now we will go to src -> main -> java -> com.telusko
+Where we already have 'App' file 
+Even when u start to work in first check the basic model is working 
+or not.
+Because there might be some issues Exist in real world So, first we run 
+the main file.
+After that if this will not working then u have to blame your self.
+
+But we don't want to print "Hello World" we want to create an object
+of 'Alien' here.
+we use the command.
+                "Alien obj = new Alien();"
+But here is 2 problem 
+i. We don't have a class name 'Alien'.
+ii. we don't want to get this object by our self.
+
+We solve the two problems.
+1st we create the 'Alien' class.
+2nd insert the method name 'code' And print "Coding".
+
+Now we will call the 'Alien' object 
+                               'obj.code'
+It's always better to check that all the things are working at every 
+stage Specially at the logic stage.
+
+The Full code at this stage is:
+             i. App.java File
+     package com.telusko;
+     public class App {
+      public static void main(String[] args){
+       Alien obj = new Alien();
+       obj.code();
+      }
+     }
+
+               ii. Alien.java File
+     package com.telusko;
+     public class Alien {
+          public void code(){
+             System.out.println("Coding..");
+          }
+     }
+
+Now i want to basically get the object with the help of 'Spring' 
+framework. Now how will u do that
+
+Now we will create a container And u can remember 'spring' will have
+it's own container called 'IoC-COntainer'.
+Now every time u will ask 'spring' to create the object for u It will
+create the object and keep that in the container.
+
+But no where we are talk about we used the object called 'spring'.Here In
+This code no where we want to create a container. 
+Now we want to create a container we have to use something called 
+"Application Context".
+
+               ----------NOTE----------
+"Application Context" will be responsible to work with that container
+but it's not the only option actually we have two options.
+1's 'Bean' factory Which is the old one And 'ApplicationContext' is the
+new one.
+Both does the same thing. Basically it will create the container.
+And help u to create the objects from the container.
+Why we will not Using 'Bean' factory because it's an old one.                 

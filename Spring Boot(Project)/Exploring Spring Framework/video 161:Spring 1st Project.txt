@@ -112,3 +112,52 @@ a part of 'Spring' framwork.
 
 To get this class we need to get some Internal packages and some
 External Packages. That means we have to add the spring dependency.
+           -------------NOTE---------------
+If we deep drive in 'Application Context' basically it's an Interface.
+It can extends allot of different classes here We choose one of the to 
+click is "ListableBeanFactory" it extends 'Bean' factory So, by detault
+we can say that this 'Application context' is a supper set of 'Bean' 
+factory so, what ever u wanted to done a 'Bean' factory U can done in 
+'Application Context'.
+            --------------X----------------
+But the question arrise how can u create a object what are the classes 
+which can implement this So, depend upon the class there are allot of 
+classes which implement this let's say we have Allot of options there 
+but we wanna use 'ClassPathXMLApplicationContext()'.
+
+           -----------NOTE--------------
+the thing is There are different ways to configure the spring object 
+and one of them is 'Xml' So, in this perticular context we talk about 
+'XML' Then we move towards Java Based And Then At last we end up with 
+Annotations.
+
+So, we go step by Step Using this context I can simply say once u got 
+the configuration object what we will do is we will create the 
+container for u.
+
+ ApplicationContext context = new ClassPathXMLApplicationContext();
+
+Basically Above command basically create the container for u And then
+with that container we simply say 'context.getBean();'And on this I can
+Ask for the object What kind of object i want I basically say 'Alien'
+Again what this 'Alien' says 
+Now 'getBean' will give u the object from the container But Basically 
+it will give u a type of object.
+ANd now we simply do 'TypeCasting' And that's it your job is done.
+
+But if we run the program we got the error 
+"BeanFactory not initialized or already closed - call 'refresh' before
+accessing beans via the ApplicationContext".
+
+The Full code at this stage is: "Main" '.java'
+ package com.telusko;
+ import org.springframework.context.ApplicationContext;
+ import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+ public static void main(String[] args){
+  ApplicationContext context = new ClassPathXMLApplicationContext();
+  Alien obj = (Alien) context.getBean("alien");
+  obj.code();
+ }
+}

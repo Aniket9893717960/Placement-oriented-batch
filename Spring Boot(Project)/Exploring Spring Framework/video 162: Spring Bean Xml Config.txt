@@ -1,0 +1,19 @@
+Now we will solve the problem.
+Is Basically we got the container And from the container i say 'getBean'
+It should give me an object But if we see an error name 
+"BeanFactory not initialized or already closed" But if u see which line 
+getting the Error. 
+  
+Is it line no. '9' or '10' So, it's '10' So, it'snot actaully wrong with
+line no. 9 which means we are able to get the container that's not the 
+problem.
+
+The problem is This 'Container' not able to find this 'Alien'.
+So, how do we do that Is we talk to our spring framework by saying
+it's your responsibility to manage this 'Alien' class.
+
+Or to create an object of it And to talk with spring there are multiple 
+ways which i talk before
+  i. XML
+  ii. Java Based Config
+  iii. Annotations.

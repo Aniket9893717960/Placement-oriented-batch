@@ -96,4 +96,19 @@ but it's not the only option actually we have two options.
 new one.
 Both does the same thing. Basically it will create the container.
 And help u to create the objects from the container.
-Why we will not Using 'Bean' factory because it's an old one.                 
+Why we will not Using 'Bean' factory because it's an old one.
+'ApplicationContext' provide all the features of 'bean' factory '+' some
+additional feature.
+              ---------------X-----------
+So, we are going to use 'Application Context'.
+And 'Bean' factory the classes which implements 'bean' factory they are
+also out dated and depricated or most of them has been removed.
+
+From Spring 6 So, it's good to use 'Application context'.
+ok if u can see 'Application COntext' if u try to say 'CTRL + Space'
+so, there is no suggestions.
+Because we have to import this Because it's not the part of Java It's 
+a part of 'Spring' framwork.
+
+To get this class we need to get some Internal packages and some
+External Packages. That means we have to add the spring dependency.

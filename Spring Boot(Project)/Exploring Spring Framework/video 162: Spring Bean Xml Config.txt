@@ -17,3 +17,20 @@ ways which i talk before
   i. XML
   ii. Java Based Config
   iii. Annotations.
+
+Here we use XML. Not a big fan of XML but let's say how we gonna use XML
+First thing u wanna do is u create an xml file But where
+'ClassPathXmlApplicationContext()' it will look for the xml file in the 
+class path.
+
+In the class path 'main' we have to create a folder SO, we call this
+folder as 'resources' basically look for the xml folder So, in this 
+folder we will create an XML file name 'spring.xml'.
+
+Name doesn't matter here because any way in your class path U can
+maintoined the file. So, this is where u have to maintoined.
+'spring.xml' file. Point remember u have to put file in 'resources'
+folder.
+
+Application context = new ClassPathXmlApplicationContext("spring.xml");
+

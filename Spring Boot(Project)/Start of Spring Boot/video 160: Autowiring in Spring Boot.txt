@@ -1,0 +1,38 @@
+Now let's add one more layer SO, basically remove it. This is the main method
+Inside the main method. U want the object of 'Alien' Since we have 'Application
+Context' here we can get this Object.
+
+But what if 'Alien' is dependent on some other object. For example when u 
+write a code u need a machine may be a laptop or may be a desktop u need 
+a machine who write a code.
+
+So, of course in code when u write coding when u say 'Hey Alien' or 
+  'Hey Programmer' code. 
+U basically saying give me a laptop So, i can get the laptop object.
+let's say the object is 'laptop' it self.
+or i can say
+                 'laptop.compile()'
+May be u can write the code on paper. If u want to compile something u
+need a laptop or any machine.
+
+But in 'Alien' we also want the object of Laptop.
+             ------------NOTE----------------
+We can also create an object by simply saying 'new' but we want spring
+boot can manage the object.
+We have 2 sub classes now 1st 'Alien' and 2nd 'Laptop'.
+If u have to connect Non-main classes 'Alien' and 'Laptop'. U can use 
+Something called 'Wireing'.
+To make 'Wireing' in work we use symbol name '@Autowired'.
+              ----------------X----------------
+Why we use?
+  Because 'Alien' is dependent on Laptop object. But when u are using 
+  'Alien' in the main u can use the 'Context' Directly.
+Is because we have the access but apart from the main whenever u want
+to use this object creation and object Accessing U have to Use 
+'@AutoWired'.
+
+OF course u can create the one more layer where laptop  is 
+dependent on CPU. 
+i. Create a CPU class.
+ii. Create some methods in 'CPU' class.
+iii. Create an object of 'CPU' in 'Laptop' class.

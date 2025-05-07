@@ -36,3 +36,40 @@ dependent on CPU.
 i. Create a CPU class.
 ii. Create some methods in 'CPU' class.
 iii. Create an object of 'CPU' in 'Laptop' class.
+
+This is the Final Program i. Main.java
+  package com.telusko.app;
+
+import ...
+
+@SpringBootApplication
+public class SpringBootDemoApplication {
+   public static void main(String[] args){
+    SpringApplication.run(SpringBootDemoApplication.class, args);
+    Alien obj = new Alien()
+    obj.code();
+   }
+}
+
+2nd is Alien.java
+  package com.telusko.app;
+  import org.springframwork.sterotype.Component;
+@Component
+public class Alien {
+  @Autowired
+  Laptop laptop;
+
+  public void code(){
+    System.out.println("Coding");
+  }
+}
+
+3rd is Laptop.java
+  package com.telusko.app;
+  import org.springframwork.sterotype.Component;
+@Component
+public class Laptop {
+ public void compile(){
+  System.out.println("Compiling..");
+ }
+}

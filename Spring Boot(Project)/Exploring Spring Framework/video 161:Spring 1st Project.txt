@@ -1,3 +1,10 @@
+              -----------NOTE------------
+The moment i will create the project the first file we see the 'pom.xml'
+And we have talk about in maven this is the file which helps maven to 
+understand what u need So, by default we got only one dependency
+Which is "junit 3.8.1" So, that's why when u open the external
+libraries u find 'junit' there.
+              ------------X--------------
 It's time to start with the spring framework.
 Before this we have written the code with 'Spring Boot'.
 And Now we know how is it to work with spring boot.
@@ -21,3 +28,8 @@ Now here u can click on file 'New' And let me create a new project
 And mind u we can create a maven project Not spring boot.
 Because when we go to spring project. We start with "start.spring.io" 
 And we got the project structure.
+
+              ------------NOTE----------
+We have to select basic 'Archtype' in 'Maven Archtype' as 'quickstart'
+Because it create a basic structure and u can import anything u want.
+               ------------X--------------

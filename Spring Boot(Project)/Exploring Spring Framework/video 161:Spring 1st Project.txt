@@ -1,0 +1,23 @@
+It's time to start with the spring framework.
+Before this we have written the code with 'Spring Boot'.
+And Now we know how is it to work with spring boot.
+
+The problem is Of course we use all the annotations.
+We can ask to manage certain things to manage 'Beans' or
+certain object's for us.
+
+But for that we have to use some annotations. we have 'component'
+And if u want to connect them we have 'Autowire' we know those 
+things.
+But if u want to understand what is happening behind the seen
+And how things are moving behind the seen First we have to understand 
+How spring works.
+
+That we have to write the code in 'spring framework' without spring boot.
+And to done that let's create a new project.
+So, let's get back to IDE we are using 'Intellij' here.
+
+Now here u can click on file 'New' And let me create a new project
+And mind u we can create a maven project Not spring boot.
+Because when we go to spring project. We start with "start.spring.io" 
+And we got the project structure.

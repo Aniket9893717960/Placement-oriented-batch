@@ -51,3 +51,7 @@ no argument constructor to basically print 'Laptop Object Created'.
   public Laptop(){
     System.out.println("Laptop Object Created");
   } 
+And if u run the main program. Console will not print 'Laptop Object 
+Created' because 'spring.xml' will not have any kind of information of
+'Laptop'.
+      <bean id="Lap" class= "com.telusko.Laptop"></bean>

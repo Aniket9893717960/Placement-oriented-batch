@@ -1,0 +1,28 @@
+Now in the last video we will created 2 objects
+i. 'Alien'
+ii. 'Laptop'
+
+I thinking that 2 different objects I am not sure u are thinking this
+logically if u think we got 'Alien' object's 2 times right.
+  Now the question is we will create 2 object or 1 object while revising 
+the concept in the last video.
+Even u call 'getBean' 2 times in total we got only one object.
+let me prove that with one more thing.
+    1st in 'Alien' we will create the variable as well
+  Normally we will create the variable with the private access
+But let's say we are going with the variable 'age'.
+
+We don't need 'getters' and 'setters' because we will not making the 
+variable private but logically u should do that I will go back here and
+print about the object 'age'.
+If we change the 'obj1.age' value we run the program.
+
+we see both 'obj1.age' and 'obj2.age' containes the same value.
+The reason being we will created the 'bean' object only one.
+ <bean id = "alien1" class = "com.telusko.Alien"></bean>
+
+So, no matter how many times u say 'getBean' it will create the same 
+object. 
+Now why it's happening Because if we talk about 'bean' it have different
+scope because scope is very important
+  

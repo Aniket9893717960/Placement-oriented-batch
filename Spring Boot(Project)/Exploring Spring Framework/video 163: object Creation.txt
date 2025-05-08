@@ -33,3 +33,21 @@ i commented below 2 lines and see what happends
                 Alien obj = (Alien) context.getBean("alien");
                 obj.code();
 
+If u run the program then u got that 'Alien' contructor is running
+perfectly.
+           -----------NOTE----------------
+    ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+This will create the object with the help of 'Spring.xml'.
+
+    Alien obj = (Alien) context.getBean("alien");
+        obj.code();
+U are not creating an object u just calling an object and refering and
+object. when u say 'getBean' we refree the object to 'obj'.
+And when u say 'obj.code()' we basically working with that object to call
+the container.
+          ----------------X---------------
+If i can create one more class name 'Laptop' in which assign the 
+no argument constructor to basically print 'Laptop Object Created'.
+  public Laptop(){
+    System.out.println("Laptop Object Created");
+  } 

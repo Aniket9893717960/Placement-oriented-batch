@@ -72,3 +72,54 @@ is loading or loaded And u can use it 'n' no. of times.
 But when we talk about 'Prototype' the object will be created when u say 
 get bean.
             ------------X---------------
+
+The Final Program of 'Main.java'.
+
+package org.aniket;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+public class App 
+{
+    public static void main( String[] args )
+    {
+                ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+                Alien obj = (Alien) context.getBean("alien");
+                obj.code();
+        }
+    }
+
+'Alien.java' of program:
+
+package org.aniket;
+
+public class Alien {
+
+    public Alien(){
+        System.out.println("Object Create");
+    }
+
+    public void code() {
+        System.out.println( "Hello World!" );
+    }
+}
+
+'Laptop' of Program:
+
+package org.aniket;
+
+public class Laptop {
+    public Laptop(){
+        System.out.println("Laptop Object Created");
+    }
+}
+
+'spring.xml' of Program:
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="alien" class="org.aniket.Alien"></bean>
+    <bean id="lap" class="org.aniket.Laptop"></bean>
+</beans>

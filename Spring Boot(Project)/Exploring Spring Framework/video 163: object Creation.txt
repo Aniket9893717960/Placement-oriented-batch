@@ -1,0 +1,25 @@
+When we will create the object of 'Alien'. Here we is "Spring" And "I".
+Here we try to solve the question is 
+"when exactly spring creating the object in spring container." So,
+i am gessing there are two places.
+i. it's happening at line no. 9
+ii. it's happening at line no. 10
+
+So, i want u to think about this And whenever u want to answering it
+may be in the comments. where u comment something on this place.
+On which line u were creating the object.
+
+I hope u made answering up your answer let's understand this let's
+find it. Just ask spring and 'Main.java' code
+"when exactly u were creating the object."
+
+To do that what i will do is i will go back to my 'Alien' class.
+bacause that's where the magic is happening This is the class of which
+u creating an object.
+
+what i will do here is we creating an constructor because every time
+u creating an object we call a constructor.
+In 'Alien' we create an no - argument constructor.
+  public Alien(){
+    System.out.println("Object Create");
+  }

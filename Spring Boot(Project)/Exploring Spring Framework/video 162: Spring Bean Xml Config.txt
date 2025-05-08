@@ -34,3 +34,79 @@ folder.
 
 Application context = new ClassPathXmlApplicationContext("spring.xml");
 
+'resources' should be the part of the main folder Now let's go back to
+'spring.xml' and this is where u maintoined the 'bean' tag.
+Now in xml u have your own tags but this connection will also make sense
+for the spring framework.
+                  ----------NOTE------------
+WHat is bean?
+       So, when i say spring framework to manage the beans. 'Beans' are 
+basically object which are managed by spring framework.
+That's the simple thing
+  'Beans are object which are managed by spring framework.'
+                -----------X------------------
+
+So, I have to maintoned 2 things. 
+1st the name/id of the bean
+2nd the class.
+
+So, we have maintoined 'Id' which is 'Alien' in this case.
+Now what is this 'Alien' remember in 'App' .java when i say 
+'getBean' i say 'alien' here.
+
+So, this is the name we searched for in spring we are saying or
+in configure 
+"When some one asked the object of 'Alien' u have to provide the object
+of what".
+Remember u have to say class and u have to maintoined class name but the
+fully qualified class name which is we have to import the packages as 
+well. 
+
+So, just 'Alien' coudn't work we have to say 'com.telusko.Alien' a 
+complete name U can see in files as well.
+'com.telusko.Alien' And that's it spring will give u the object and 
+that's what we are assuming But let's see what happends
+
+After following above steps Below is the program.
+i. spring.xml
+             <bean id = "alien" class ="com.telusko.Alien">
+             </bean>
+ii. Main.java
+             Package com.telusko;
+             import org.springframwork.context.ApplicationContext;
+             import org.springframwork.context.support.ClassPathXmlApplicationContext;
+public class App {
+ public static void main(String[] args){
+ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+Alien obj = (Alien) context.getBean("alien");
+obj.code();
+ }
+}
+
+But after run this we got a bigger error The earlier one was short 
+'Line 3 in XML document from class path resources [spring.xml] is 
+Invalid'
+'Cannot find declaration of element 'bean'.' We are getting the xml file it's not an html file where we
+can say stick to syntax.
+But the thing is even in 'xml' we have to use those tags which brings
+understand for that u have to define the definations of this bean Now
+the defination is of four lines for spring code.
+As u will go for spring mvc u have to add more lines and again u not have
+to by heard this defination.
+
+U will get this from the internet or documentation what we can do is 
+we go to browser and search for "Spring 6 bean configuration xml"
+We will click on "XML Schema based Configuration" from 'docs.spring.io'
+And if u scroll down Below is the defination u have to copy.
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+Because this is where u defined "What this mean Is?"
+   <bean id="alien" class="com.telusko.Alien">
+   </bean>
+
+We have to also close the 'beans' And Now we will provide the 
+declaration now Now the project knows what the 'bean' means.

@@ -55,3 +55,8 @@ And if u run the main program. Console will not print 'Laptop Object
 Created' because 'spring.xml' will not have any kind of information of
 'Laptop'.
       <bean id="Lap" class= "com.telusko.Laptop"></bean>
+                --------------NOTE------------
+      <bean id="Lap" class= "com.telusko.Laptop"></bean>
+We will create the 'xml'(Above code) object multiple times for the same 
+class.
+                ----------------X-------------

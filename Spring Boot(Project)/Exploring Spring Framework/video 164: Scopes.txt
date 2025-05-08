@@ -24,5 +24,51 @@ The reason being we will created the 'bean' object only one.
 So, no matter how many times u say 'getBean' it will create the same 
 object. 
 Now why it's happening Because if we talk about 'bean' it have different
-scope because scope is very important
-  
+scope because scope is very important are as follow:
+  i. Singleton
+  ii. Prototype
+  iii. Request
+We got Multiple meals like
+  iv. Session
+But in spring core we use only two which is 'Singleton' and 'Prototype'
+Other's like 'Request' or 'Session' will works for web or web sockets but
+here we have only two.
+                Singleton And Prototype
+So, by detault it follow singleton which means in your application for 
+this 'Alien' there is only one object created.
+So, it doesn't matter how many times u call them So, even if u set 
+'getBean' thousand of times It will refer to the same object.
+
+Because we will created only one object here which is 'Alien1' and 
+we are calling it in the 'main' class.
+Of course if u create two different objects it will work but by default
+u can get only one object.
+
+But what if u want two objects Every time if u say get bean it will refer two object For that u have to done a change something And that 
+change will be done in the scope.
+Now in bean there is one more attribute we can add which is called 
+'Scope'.Now there are different scope available by default it will be
+'singleTon'.
+
+SO, if u maintoined 'singleTon' it will behave the same way which it was behaving before. If u say single ton so by default it says 'singleTon'.
+But if u want to create different object when u say 'getBean' u can say 
+some thing called 'Prototype'.
+Just like in below code.
+
+   <bean id = "alien1" class="com.telusko.Alien" scope="prototype">
+   </bean>
+
+            ------------NOTE------------
+If we comment all the things Except 
+Object creation in 1 st line then it will load Only 'Laptop' Constructor
+Not Alien constructor Because when we load the xml file it will check
+'bean' we have 'Alien' with 'scope Prototype'.
+
+When the object is 'SingleTon' it will create the object by default
+So, at the moment u load the application or load the container u will
+get the object Because 'SingleTon' object is created when the container 
+is loading or loaded And u can use it 'n' no. of times.
+
+But when we talk about 'Prototype' the object will be created when u say 
+get bean.
+            ------------X---------------

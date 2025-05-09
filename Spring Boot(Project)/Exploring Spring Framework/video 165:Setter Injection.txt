@@ -1,1 +1,22 @@
 Now we will talk about Setter Injection
+So, basically we focusing on different Injection techniques. But 
+what is injection the things is we talk about the created class
+'Alien' class.
+we have one variable here 'age' what can i do is we make it 'private'.
+we done transfer of data with the help of 'Getters' and 'Setters'
+we can done that after the constructor not before the constructor.
+
+Now to get the getter method we use 'obj.setAge()' we can set the 'age'
+as '21' And to print/get the value we use 
+         System.out.println(obj1.getAge());
+of course u will get the value which is '21'.
+
+But what if i don't want to assign the value in 'obj1.setAge(21)' let's
+say we commit this line And we got this value '0'.
+
+      <bean id="alien" class="org.aniket.Alien">
+          <property name="age" value="21"></property>
+      </bean>
+What i think is when we assign directly to an 'age' let's go to setter 
+and say to print "Setter called"
+

@@ -12,4 +12,4 @@ name 'compile' in class 'Laptop' then u want to print 'Compiling'.
 
 Now in 'Alien' we got the 'code' of course after coding we got the compile
 method And if u want to call the method 'compile' u have to basically create
-the object of laptop.
+the object of laptop.Because u can't call 'compile' directly

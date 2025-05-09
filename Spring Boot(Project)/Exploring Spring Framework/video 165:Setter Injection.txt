@@ -65,3 +65,24 @@ public class Alien {
         System.out.println( "Coding" );
     }
 }
+
+  iii. 'spring.xml'
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean id="alien" class="org.aniket.Alien" scope="prototype"></bean>-->
+    <bean id="alien" class="org.aniket.Alien">
+        <property name="age" value="21"></property>
+    </bean>
+    <bean id="lap" class="org.aniket.Laptop"></bean>
+</beans>
+
+  iv. 'Laptop.java'
+package org.aniket;
+
+public class Laptop {
+    public Laptop(){
+        System.out.println("Laptop Object Created");
+    }
+}

@@ -1,0 +1,15 @@
+Now we know how to inject the property.
+  The property which u are working with is a normal variable or
+'Primitive' Variable. But what if  the property will not want to primitive
+variable It's a 'Reference' let's example say go back to 'laptop'.
+
+U normally do is u write code. U want this to work u want to get the 
+output. u got the problem when u solve the problem. when u got to in your
+brain also if u want to get the output or computing when the laptop there.
+
+And then in your laptop u need a compiler. Let's say we have the method
+name 'compile' in class 'Laptop' then u want to print 'Compiling'.
+
+Now in 'Alien' we got the 'code' of course after coding we got the compile
+method And if u want to call the method 'compile' u have to basically create
+the object of laptop.

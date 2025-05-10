@@ -12,4 +12,47 @@ name 'compile' in class 'Laptop' then u want to print 'Compiling'.
 
 Now in 'Alien' we got the 'code' of course after coding we got the compile
 method And if u want to call the method 'compile' u have to basically create
-the object of laptop.Because u can't call 'compile' directly
+the object of laptop.Because u can't call 'compile' directly so, with 
+'age' i also create a variable for 'laptop' name 'lap' and using this 
+'lap' i want to call 'lap.compile'.
+
+Write this program to 'Alien.java'
+
+package org.aniket;
+
+public class Alien {
+    private int age;
+    private Laptop lap;
+    public Alien(){
+        System.out.println("Object Created");
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        System.out.println("Setter called");
+        this.age = age;
+    }
+
+    public void code() {
+        System.out.println( "Coding" );
+        lap.compile();
+    }
+}
+
+But in output we Got a "NullPointerException" Because when we create an 
+object for 'lap' we don't have the object yet It still refering to 
+'null'. So, we have to create an object.
+           private Laptop lap = new Laptop();
+
+This will work but wait  a minute our primary motive is to manage the 
+object by spring boot not our self.We want to inject this object.
+Let's not do that so the question arrise how this work.
+
+So, if u want this to work Is u go back to 'spring.xml' we got 2 
+properties.
+1. age        2. lap 
+So, of course 'lap'is a private variable so,we have to make sure
+so, we want getters setters for 'lap' as well. 

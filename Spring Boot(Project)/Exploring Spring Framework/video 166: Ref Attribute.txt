@@ -65,4 +65,87 @@ we have ref in 'Properties' tag of 'spring.xml'.
                -------------X-------------
 
 But Again u have to make sure that u have the reference created already 
-here
+here That's how u baiscally use 'ref' here to connect of course u have
+multiple objects here.
+let's say we have 'lap2' SO, we got 2 object's here 'lap1' and 'lap2'
+2 different ids but and what ever id u maintoined in 'Properties' it
+will be refered.
+So, if u have multiple objects for laptop this id will differentiate
+And that's how this things are basically working.
+
+Here is the final programs 
+i. App.java(Main)
+ package org.aniket;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+public class App 
+{
+    public static void main( String[] args )
+    {
+                ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+                Alien obj = (Alien) context.getBean("alien");
+                obj.setAge(21);
+                System.out.print(obj.getAge());
+                obj.code();
+        }
+    }
+
+ii. spring.xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean id="alien" class="org.aniket.Alien" scope="prototype"></bean>-->
+    <bean id="alien" class="org.aniket.Alien">
+        <property name="age" value="21"></property>
+        <property name="lap" ref="lap"></property>
+    </bean>
+    <bean id="lap" class="org.aniket.Laptop"></bean>
+</beans>
+
+iii. Alien.java
+package org.aniket;
+
+public class Alien {
+    private int age;
+    private Laptop lap;
+    public Alien(){
+        System.out.println("Object Created");
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        System.out.println("Setter called");
+        this.age = age;
+    }
+
+    public Laptop getLap() {
+        return lap;
+    }
+
+    public void setLap(Laptop lap) {
+        this.lap = lap;
+    }
+
+    public void code() {
+        System.out.println( "Coding" );
+        lap.compile();
+    }
+}
+
+iv. Laptop.java
+package org.aniket;
+
+public class Laptop {
+    public Laptop(){
+        System.out.println("Laptop Object Created");
+    }
+
+    public void compile() {
+        System.out.println("Compiler");
+    }
+}

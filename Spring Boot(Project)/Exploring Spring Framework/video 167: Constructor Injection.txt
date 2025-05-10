@@ -28,4 +28,33 @@ And here u can assign the value directly we can say 'value' is '21'
   Now the differece between the previous one and this one is before
 we using property and here we use 'constructor-arg'.
 
-If u want to even prove that 
+<bean id="alien" class="org.aniket.Alien">
+        <constructor-arg value="21" />
+<!--        <property name="age" value="21"></property>-->
+        <property name="lap" ref="lap"></property>
+    </bean>
+
+If u want to even prove that the constructor is getting call 
+i will say "Para Constructor Called".
+Just to show u that this is how constructor is getting called
+We don't want to call the default constructor now I want to call
+the parameterized one.
+
+It just not saying the para constructor is created That means this
+particular constructor is getting invoked because in the property file
+or in the xml file we want to maintoin that we want to use the 
+constructor argument with value "21".
+
+      <constructor-arg value="21">
+
+It's working properly result we are properly inject the value.
+But we have certain concerns here what if we have the constructor
+which have 2 parameters.
+i. we are passing only one now what if we have 2. 
+            public Alien(int age, Laptop lap) {
+               this.age = age;
+               this.lap = lap;
+            }
+but we have only one in 'spring.xml' bean property And we got an error
+which is expected name 
+"Unsatisfied dependency expressed through constructor parameter"

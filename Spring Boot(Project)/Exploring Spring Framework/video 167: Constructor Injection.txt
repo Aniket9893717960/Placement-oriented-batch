@@ -58,3 +58,22 @@ i. we are passing only one now what if we have 2.
 but we have only one in 'spring.xml' bean property And we got an error
 which is expected name 
 "Unsatisfied dependency expressed through constructor parameter"
+ So, we write certain changes in 'spring.xml' given below.
+
+<bean id="alien" class="org.aniket.Alien">
+        <constructor-arg value="21" />
+        <constructor-arg ref="lap"/>
+</bean>
+
+It run perfecly.
+              -------------NOTE----------
+What u think weare passing 2 values which are perfecly make sense but
+how exactly it knows that "value=21" in 'constructor-arg' will go to
+'age' and 'lap'(spring.xml) will go to 'lap'(Alien.java).
+We don't maintoined even the name there how exactly he knows that the 
+'21' willgo to 1st variable and 'lap' will go to 2nd object.
+
+So, that's where it checking for the type 1st for the 'value'it should be
+primitive and 'ref' which will go for the laptop. And things are working out that way.
+But is it just verify there by excanging the value And now we got an error.
+          

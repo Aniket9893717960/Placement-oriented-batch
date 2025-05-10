@@ -56,3 +56,13 @@ properties.
 1. age        2. lap 
 So, of course 'lap'is a private variable so,we have to make sure
 so, we want getters setters for 'lap' as well. 
+               -----------Summary---------
+what we have done is we injected a value or the reference with the help
+of reference attribute So, what ever values we have just like 'Alien' we
+have 2 properties.
+To assign the value in premitive we have 'values' And for Reference
+we have ref in 'Properties' tag of 'spring.xml'.
+               -------------X-------------
+
+But Again u have to make sure that u have the reference created already 
+here

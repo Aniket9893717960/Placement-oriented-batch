@@ -1,0 +1,31 @@
+Now u just talk about "Constructor Injection".
+In java if u want to create the object or if u want to initialize the values
+we can do that in constructor as well.
+And most of the time we do that if u want to create the object or if u want 
+to want to initialize the value.
+
+we can do that in constructor as well And most of the time we do that
+most of the time when we assign the value and the object is created
+we prefer to use constructor.
+
+setter's are good but when u want to assign the values latter setter make 
+sense But if u want to assign the value as u can create the object u can
+use constructor.
+
+Ok so, how do i do that for example let's say we do have the constructor here
+which is the default constructor. But let's say if i have the parameterized
+constructor.
+  public Alien(int age){
+     this.age = age;
+  }
+
+  SO, this is i want to assign the value. I don't want to use the property
+Tag now so, when i use property tag so, basically it uses the setter but
+i don't want to do that i want to use the constructor.
+Now how u want to assign the value with the help of constructor.
+  The way u cando it is with the help of "<constructor-arg />"
+And here u can assign the value directly we can say 'value' is '21'
+  Now the differece between the previous one and this one is before
+we using property and here we use 'constructor-arg'.
+
+If u want to even prove that 

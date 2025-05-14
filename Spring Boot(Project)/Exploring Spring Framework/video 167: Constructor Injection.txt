@@ -98,6 +98,38 @@ and second one is of type int.
              <constructor-arg type="int" value="21" />
          </bean>
 
-2. There is one solution when u maintoin the type when u know that there
-  are two type of variables 1 is of type int 2. is of type laptop now
-it will look for the types or the sequence 
+There is one solution when u maintoin the type when u know that there
+are two type of variables 1 is of type int 2. is of type laptop now
+it will look for the types or the sequence but when u maintoin the type 
+it will go for the type.
+But u know we have one more issue here We Explain with example:
+
+i. what if we have one more variable in 'Alien' is 
+            private int salary;
+Now what if u have 2 constructor which have same integer now in that 
+case there will be again a word of confusion.
+Confuction is in 'spring.xml' we have two 'int' type and if we 
+write '21' so, confusion is  '21' is 'age' or 'salary'. 
+CODE
+             <bean id="alien" class="org.aniket.Alien">
+               <constructor-arg type="com.telusko.Laptop" ref="lap"/>
+               <constructor-arg type="int" value="21" />
+             </bean>
+So, this work when u have both the variables of different type
+or this should not be related to even inheritance concept U
+say 
+'Hey we got a laptop and the super class is computer then u differ
+know that those are same.'
+
+Because laptop extend the proper class so, that make sure it should
+not created. This know when they are of different type of data.
+So, how do we solve this problem then
+we commit 
+      "<bean id="alien" class="org.aniket.Alien">
+               <constructor-arg type="com.telusko.Laptop" ref="lap"/>
+               <constructor-arg type="int" value="21" />
+        </bean>"
+section then.
+
+2. The solution is instead of using type u can actually specify the
+index no. is specify the sequence again

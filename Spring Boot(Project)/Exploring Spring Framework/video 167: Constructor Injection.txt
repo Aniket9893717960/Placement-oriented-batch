@@ -76,4 +76,28 @@ We don't maintoined even the name there how exactly he knows that the
 So, that's where it checking for the type 1st for the 'value'it should be
 primitive and 'ref' which will go for the laptop. And things are working out that way.
 But is it just verify there by excanging the value And now we got an error.
-          
+            -----------X---------------
+But when we run program it gives error name 
+'Could not convert value of type laptop to int' So, what was happening
+here is He is not checking the type he is checking the sequence.
+The firt variable shoukd go to the first location.
+Which is the 'age' and second one is 'lap' this 2 are not matching.
+
+<bean id="alien" class="org.aniket.Alien">
+          <constructor-arg ref="lap"/>
+          <constructor-arg value="21" />
+</bean>
+
+How do we solve this two ways to solve is
+1. u will literally maintoined the type here
+       'com.telusko.Laptop'
+and second one is of type int.
+         'int'
+         <bean id="alien" class="org.aniket.Alien">
+             <constructor-arg type="com.telusko.Laptop" ref="lap"/>
+             <constructor-arg type="int" value="21" />
+         </bean>
+
+2. There is one solution when u maintoin the type when u know that there
+  are two type of variables 1 is of type int 2. is of type laptop now
+it will look for the types or the sequence 

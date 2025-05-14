@@ -142,3 +142,96 @@ Now even if u have two int variables there will not be initial now
 u have to specify the index no. So, let's say if u have 'salary'
 we say 'int sal' in parameterized constructor of 'Alien'.
 SO, this solve one problem.
+CODE
+        <constructor-arg name="age" ref="lap"/>
+        <constructor-arg name="lap" value="21" />
+
+DO, we have other solution yes i just have one just u can done directly
+use 'name' Which is your variable name in 'Alien.java' Now if u run this
+we got an error So, basically we follow the sequence again.
+Now if u follow the sequence no. u follow the name and index.
+
+But instead of all this when u are assign the value u can also
+use something called "@ConstructorProperties" and u can pass the arrays 
+of the names u have that it we solve the problem.
+
+    @ConstructorProperties({"age","lap"})
+    public Alien(int age, Laptop lap) {
+        this.age = age;
+        this.lap = lap;
+    }
+
+Final Code Here we have Is:
+                 Program of 'App.java'(Main)
+ package org.aniket;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+                ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+                Alien obj = (Alien) context.getBean("alien");
+                System.out.print(obj.getAge());
+                obj.code();
+        }
+    }
+
+            Program of "Laptop.java"
+package org.aniket;
+
+public class Laptop {
+    public Laptop(){
+        System.out.println("Laptop Object Created");
+    }
+
+    public void compile() {
+        System.out.println("Compiler");
+    }
+}
+            Program of "Alien.java"
+package org.aniket;
+
+import java.beans.ConstructorProperties;
+
+public class Alien {
+    private int age;
+    private Laptop lap;
+    public Alien(){
+        System.out.println("Object Created");
+    }
+
+    @ConstructorProperties({"age","lap"})
+    public Alien(int age, Laptop lap) {
+        this.age = age;
+        this.lap = lap;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        System.out.println("Setter called");
+        this.age = age;
+    }
+
+    public Laptop getLap() {
+        return lap;
+    }
+
+    public void setLap(Laptop lap) {
+        this.lap = lap;
+    }
+
+    public void code() {
+        System.out.println( "Coding" );
+        lap.compile();
+    }
+}

@@ -134,3 +134,11 @@ section then.
 2. The solution is instead of using type u can actually specify the
 index no. is specify the sequence again ok just say this is for 
 the index one.
+CODE
+        <constructor-arg index="1" ref="lap"/>
+        <constructor-arg index="0" value="21" />
+
+Now even if u have two int variables there will not be initial now
+u have to specify the index no. So, let's say if u have 'salary'
+we say 'int sal' in parameterized constructor of 'Alien'.
+SO, this solve one problem.

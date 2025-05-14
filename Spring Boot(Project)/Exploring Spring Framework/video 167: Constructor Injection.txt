@@ -132,4 +132,5 @@ we commit
 section then.
 
 2. The solution is instead of using type u can actually specify the
-index no. is specify the sequence again
+index no. is specify the sequence again ok just say this is for 
+the index one.

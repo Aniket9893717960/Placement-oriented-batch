@@ -41,3 +41,6 @@ which converts a unique database ID into a compact, alphanumeric string.
    Reverse the resulting string to get the short code.
  iii. Advanteges:
    Predictable: No randomness, ensuring deterministic output.
+        Collision Handling:
+While Base62 encoding itself is collision-free
+(since each ID maps to a unique string), I implemented additional safeguards:

@@ -1,0 +1,17 @@
+         Give me an overview about Your Project?
+Url shortener a full stack web application to convert long URLs 
+into short, shareable links while providing analytics on click -
+through rates.
+I have used some technologies in backend like:
+Framework: Spring Boot (Java)
+Database: MySQL (Stores users, URL mappings, and click events)
+Authentication: JWT (Stateless, role-based access control)
+APIs: RESTful endpoints for URL shortening,
+       redirection and analytics.
+   i. URL Shortening:
+  Use Base62 encoding for compact, collision-resistant short codes.
+  ii. Redirection:
+  Handles high-volume redirects (HTTP 302) with minimal latency.
+  iii. User Authentication:
+  Secure registration/login using JWT tokens.
+  Role-based access (e.g., ROLE_USER for basic features).

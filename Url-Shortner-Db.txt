@@ -15,3 +15,24 @@ APIs: RESTful endpoints for URL shortening,
   iii. User Authentication:
   Secure registration/login using JWT tokens.
   Role-based access (e.g., ROLE_USER for basic features).
+  iv. Analytics Dashboard:
+  Visualizes click -through rates, geographic data(if implemented)
+  and peak traffic times.
+  support date-range filtering and pagination.
+  v. Scalability:
+  Stateless backend architecture for horizontal scaling.
+  Caching (Redis) for frequently 
+         Architecture:
+             3-Tier Design:
+                  Presentation Layer: React frontend (if applicable).
+                  Application Layer: 
+                  Spring Boot (controllers, services, repositories).
+                  Data Layer: MySQL + Hibernate/JPA.
+
+ EXPLAIN THE ALGORITHM YOU USED TO GENERATE SHORT URLs. Did You 
+       CONSIDER COLLISIONS?
+To generate short URLs, I implemented a Base62 encoding approach,
+which converts a unique database ID into a compact, alphanumeric string.
+  i. Input: A unique long ID (auto-incremented primary key
+                              from the "UrlMapping" table).
+  ii. 

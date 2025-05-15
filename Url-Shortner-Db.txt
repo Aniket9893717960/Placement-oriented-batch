@@ -35,4 +35,9 @@ To generate short URLs, I implemented a Base62 encoding approach,
 which converts a unique database ID into a compact, alphanumeric string.
   i. Input: A unique long ID (auto-incremented primary key
                               from the "UrlMapping" table).
-  ii. 
+  ii. Conversion Logic:
+   Divide the ID by 62 and map the remainder to a character in the set
+   Repeat until the ID becomes 0.
+   Reverse the resulting string to get the short code.
+ iii. Advanteges:
+   Predictable: No randomness, ensuring deterministic output.

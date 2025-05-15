@@ -44,3 +44,15 @@ which converts a unique database ID into a compact, alphanumeric string.
         Collision Handling:
 While Base62 encoding itself is collision-free
 (since each ID maps to a unique string), I implemented additional safeguards:
+
+How did JWT AND SPRING SECURITY INTEGRATE INTO THIS PROJECT? What
+ENDPOINTS WERE SECURED? 
+   1. JWT (JSON WEB TOKEN) Implementation.
+To enable stateless authentication and secure API endpoints by validating user identity and permissions.
+Components:
+  JwtUtils:Handles token generation, validation and extraction of claims
+           (e.g., username, roles).
+  JwtAuthenticagtionFilter: Intercepts requests, validates tokens and 
+                            sets the SecurityContext.
+  JwtAuthenticationResponse: DTO to return the token to the client after
+                             login.

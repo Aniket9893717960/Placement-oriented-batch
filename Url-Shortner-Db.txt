@@ -119,5 +119,10 @@ Optional<UrlMapping> findByShortUrl(String shortUrl); // Auto-implemented
     url.MappingRepository.save(entity) // Handles both insert/update
 
          ---------------NOTE--------------
-save() checks if the entity is new (e.g., ID is null). If new, it performs an INSERT; otherwise, it merges changes with an UPDATE. However, this can be inefficient for updates because it may trigger a redundant SELECT. In my URL shortener, I used save() for new links but optimized updates with @Modifying queries when possible
+save() checks if the entity is new (e.g., ID is null). If new, it 
+performs an INSERT; otherwise, it merges changes with an UPDATE. 
+However, this can 
+be inefficient for updates because it may trigger a 
+redundant SELECT. In my URL shortener, I used save() for new links but 
+optimized updates with @Modifying queries when possible
         ----------------X-----------------

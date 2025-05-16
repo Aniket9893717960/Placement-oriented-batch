@@ -72,3 +72,52 @@ ii. Input Validation:
        inputs.
 iii. CSRF Protection: Disabled for stateless APIs
                      (since JWT is immune to CSRF).
+iv. Rate Limiting: Add Spring Security rate limiting for "/login" and
+                   "/register".
+
+  3. Challenges & Solutions:
+ i. Challenges: Token revocation(e.g., logout)
+Solution: Short - Lived Tokens (Simpler)
+ a. Configure Token Expiration
+   In "application.properties":
+              jwt.expiration=86400000  # 24 hours in milliseconds
+   In "JwtUtils.java":
+              public String generateToken(UserDetailsImpl userDetails){
+              //Set expiration from properties
+              return Jwts.builder()
+              .subject(userDetails.getUsername())
+              .issuedAt(new Date())
+              .expiration(new Date(System.currentTimeMillis()
+               + jwtExpirationMs))
+              .signWith(getSigningkey())
+              .compact();
+              }
+  b. Force Re-login After Expiry
+      Clients must refresh tokens by re-authenticating after 24 hours.
+      No server side storage needed.
+
+   WHY USE SPRING DATA JPA OVER PLAIN JDBC? WHAT WERE THE ADVANTAGES?
+1. Reduced Boilerplate Code
+     Problem with JDBC:
+       Required manual:
+          Connection Management
+          SQL query strings
+          ResultSet to object mapping
+          Transaction handling
+     Spring Data JPA Solution
+CODE:
+public interface UrlMappingRepository extends JpaRepository<UrlMapping, Long> {
+Optional<UrlMapping> findByShortUrl(String shortUrl); // Auto-implemented
+}
+   No SQL: Methods like "findByShortUrl()" generate optimized queries
+           automatically
+   No manual Mapping: Entities map directly to tables.
+
+2. Built - in CRUD Operations:
+     JDBC: Write Insert, Update, Delete queries manually.
+     JPA: Inherits ready to use methods:
+    url.MappingRepository.save(entity) // Handles both insert/update
+
+         ---------------NOTE--------------
+save() checks if the entity is new (e.g., ID is null). If new, it performs an INSERT; otherwise, it merges changes with an UPDATE. However, this can be inefficient for updates because it may trigger a redundant SELECT. In my URL shortener, I used save() for new links but optimized updates with @Modifying queries when possible
+        ----------------X-----------------

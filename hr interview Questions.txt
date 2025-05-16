@@ -80,3 +80,72 @@ I would like to leverage my experience to mentor and lead teams to
 success while contibuting to company's long term goals.
 
    TELL ME ABOUT A TIME YOU FAILED AND WHAT YOU LEARNED FROM IT?
+One significant challenge I faced was during the development of our 
+major project, a "Rent Management System." As part of the authentication 
+process, I was tasked with integrating OCR (Optical Character 
+Recognition) to extract the mobile number from an Aadhaar card to ensure 
+that OTP verification was sent to the actual user.
+
+Despite my enthusiasm and technical knowledge, the OCR implementation 
+proved more complex than expected. It struggled with inconsistencies in 
+Aadhaar formats, low image quality, and precise text extraction — 
+especially when identifying mobile numbers accurately. I initially 
+underestimated the technical limitations and didn’t account for enough 
+testing or fallback mechanisms.
+
+Although the issue affected the progress of the project, I took full 
+responsibility. I communicated transparently with my teammates, kept 
+them updated, and worked overtime to explore alternative OCR libraries 
+and validation approaches. Eventually, I switched to a more reliable 
+method of verification, but the experience taught me lesson
+         1. importance of through risk assessment and proactive problem 
+            solving.
+         2. The need for early testing and contingency planning in real-
+            world projects.
+
+          HOW DO YOU HANDLE STRESS OR PRESSURE?
+I handle stress and pressure by first staying organized and breaking
+down tasks into manageable steps. I also prioritize effectively and
+maintain open communication with my team to ensure everyone is aligned
+and informed.Additionally I make it a point to take short breaks to 
+recharges and maintain a healthy work life balance.
+
+              WHAT's YOUR LEADERSHIP STYLE?
+I would describe my leadership style as collaborative and results
+- oriented. I believe in empowering team memmbers to make decisions
+within their areas of expensive while providing clear guidance and 
+support. I also emphasize setting measurable goals and regularly 
+checking progress to ensure we stay on track.
+
+  HOW DO YOU STAY UPDATED WITH INDUSTRY TRENDS AND DEVELOPMENTS?
+I stay updated with industry trends by subscribing to industry - 
+specific publications, participating in webinars and conferences
+and actively engaging with professional networks and forums.
+Additionally, I make it a priority to seek out online courses and
+certifications to continually enhance my skills and knowledge.
+
+           WHAT DO YOU KNOW ABOUT OUR COMPANY?
+I throughly researched your company and am impressed by your innovative
+products and commitment to sustainability. Your recent expansion into
+international markets caughts my attention. 
+As a passionate and driven individual with a strong foundation in 
+software development and a continuous desire to learn and grow, I 
+believe my technical skills, problem-solving ability, and adaptability 
+align well with your company’s ambitious growth trajectory.
+Your mission to improve people's lives through technology resonates with
+personal and professional values.
+
+               WHY DO YOU WANT TO WORK HERE?
+I want to work here because I m drawn to your company's culture of 
+innovation and your commitment to making a positive impact on the world.
+Your reputation for fostering employee growth and developement also
+aligns perfectly with my career aspirations.
+I'm excited about the opportunity to contribute my skills and be part 
+of a dynamic team.
+
+             WHAT MOTIVATES YOU IN YOUR CAREER?
+What motivates me is the opportunity to continually learn and grow 
+professionally. I thrive when i can tackle new challenges and 
+expand my skill set.
+Additionally, I find great motivation in knowing that my work 
+contributes to the success of the team and the company as a whole.

@@ -56,3 +56,19 @@ Components:
                             sets the SecurityContext.
   JwtAuthenticationResponse: DTO to return the token to the client after
                              login.
+
+   2. Security Best Practices Applied
+ i. JWT Security:
+    Signed with HMAC-SHA256 ------|
+                                  |
+HMACSHA256 Is a type of keyed hash algorithm that combines the
+SHA-256 hash function with a secret key to produce a 
+Hash - based Message Authentication Code(HMAC).
+This algorithm is widely used to ensure integrity and authenticity of a
+message especially when transmitted over insecure channels.
+
+ii. Input Validation:
+       Used @Valid on DTOs (e.g., LoginRequest) to reject malformed
+       inputs.
+iii. CSRF Protection: Disabled for stateless APIs
+                     (since JWT is immune to CSRF).

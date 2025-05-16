@@ -1,32 +1,82 @@
                               TELL ME ABOUT YOURSELF
-Hello, my name is Aniket Rathore, and I am from Indore, the cleanest city in India for the past seven years.
+Hello, my name is Aniket Rathore, and I am from Indore, the cleanest
+city in India for the past seven years.
 
-I am currently pursuing B.Tech in Computer Science and Engineering with a specialization in Big Data Analytics in collaboration
+I am currently pursuing B.Tech in Computer Science and Engineering with 
+a specialization in Big Data Analytics in collaboration
 with IBM from Shri Vaishnav Institute of Information Technology.
 
 I completed my Higher Secondary Education from Shri RK Daga Maheshwari Academy with 61.8% and my Senior Secondary 
 
-Education from Shri Vaishnav Academy with 60%. In JEE Mains, I secured 55.56 percentile.
+Education from Shri Vaishnav Academy with 60%. In JEE Mains, I secured 
+55.56 percentile.
 
-I have a strong technical background in C, C++, Java, Full Stack Java Development, and DBMS. I also worked on 
-an innovative project called 'Online Voting System,' a web-based Java application designed to modernize traditional voting methods. 
-I led this project from start to finish, handling both technical development and project management.
+I have a strong technical background in C, C++, Java, Full Stack Java 
+Development, and DBMS. I also worked on 
+an innovative project called 'Online Voting System,' a web-based Java 
+application designed to modernize traditional voting methods. 
+I led this project from start to finish, handling both technical 
+development and project management.
 
-I am a dedicated learner and problem solver who enjoys taking on challenges. 
-My hobbies include playing chess and reading books, which help me improve my strategic thinking and analytical skills.
+I am a dedicated learner and problem solver who enjoys taking on 
+challenges. 
+My hobbies include playing chess and reading books, which help me 
+improve my strategic thinking and analytical skills.
 
-With my technical skills, project experience, and problem-solving approach, I am eager to contribute to your organization and grow as a professional.
+With my technical skills, project experience, and problem-solving 
+approach, I am eager to contribute to your organization and grow as a 
+professional.
 
 Thank you!
 
                         WHY SHOULD WE HIRE YOU
 You should consider hiring me because I bring a well-rounded combination 
-of technical proficiency which I think most of the students done firstly. But I have actively 
-participated in events like The model United Nations(MUN) at SVVV and IIT Indore
-which have helped me develop confidence, public speaking skills and ability to present 
+of technical proficiency which I think most of the students done 
+firstly. But I have actively 
+participated in events like The model United Nations(MUN) at SVVV and 
+IIT Indore
+which have helped me develop confidence, public speaking skills and 
+ability to present 
 ideas clearly and persuasively.
-Additionally, my internship experience and participation in coding challenges have
-made me comfortable working under deadlines, both independently and as part of a team.
+Additionally, my internship experience and participation in coding 
+challenges have
+made me comfortable working under deadlines, both independently and as 
+part of a team.
 I believe my balanced skill set, along with a strong work ethic and 
 eagerness to contribute meaningfully, makes me a valuable fit for
 your organization.
+
+                   WHAT's YOUR GREATEST STRENGTHS?
+One of my greatest strengths is my adaptability. I thrive in dynamic work
+environments and have consistently demonstrated the ability to learn new
+technologies quickly.
+For example, at my previous internship, I was asked to work on web 
+scrapping module that I had never worked with before.I immersed myself 
+in  learning it and successfully delivered the project on time.
+
+                    What's Your greatest weakness?
+I used to struggle with delegating tasks, often taking on too much 
+myself. However, I recorgnized this as a weakness and actively worked 
+on improving my delegation skills. I now understand the importance of
+empowering team members and have seen how it enhances both productivity
+and team morale.
+
+   CAN YOU DESCRIBE A CHALLENGING SITUATIONS YOU FACED AT WORK AND
+                         HOW YOU HANDLED IT?
+As u know we build different projects(like Minor And Major) in which
+some cases we faced a tight deadline issue to complete a project with
+high degree and complexity.The team was under immense pressure and 
+conflicts started to arise. 
+At that time we took and initiative to organize a team meeting. when
+we onely discussed our concerns and brainstormed solutions. 
+By fostering open communication and reassigning tasks based on team
+members strengths, we not only met the deadline but also improved team
+dynamics.
+
+              WHERE DO YOU SEE YOURSLF IN 5 YEARS?
+In my 5 years i see my self in a leadership role within the company,
+possibly in a IT Lead, Senior Developer position.
+I would like to leverage my experience to mentor and lead teams to 
+success while contibuting to company's long term goals.
+
+   TELL ME ABOUT A TIME YOU FAILED AND WHAT YOU LEARNED FROM IT?

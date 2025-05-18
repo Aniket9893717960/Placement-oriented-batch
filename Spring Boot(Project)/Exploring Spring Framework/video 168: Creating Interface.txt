@@ -17,3 +17,8 @@ laptop, mobile phone and everything.
 
 So, what i will do is for this 'Laptop' class.We can create an 
 interface 
+By making the changes what we are doing is 
+"We have this 'Alien' class Now 'Alien' is not dependent on laptop
+It's dependent on computer. Now this computer can be anything it 
+will be a 'Laptop' or desktop"
+And mind u this particular 'Computer' is an interface not a class.

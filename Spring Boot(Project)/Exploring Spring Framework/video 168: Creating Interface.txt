@@ -1,0 +1,19 @@
+Now what we will do is when we see the 'Laptop' class because 'Alien'
+is dependent on 'Laptop'.
+As i maintoin before when u want to build a product or code u need a 
+'Laptop'.But technically when u think doesn't need only a 'Laptop'.
+U can also work with 'Desktop' as well.
+
+If u want to build the code then 'Laptop' is not required even desktop
+works Most of the company will give u 'Desktop' as well.
+"But in the code we just saying that 'Alien' is only dependent on
+'laptop' which is wrong".
+
+To make the code correct "We have to make a layeron the top of 'Alien'
+Something like a computer" Everyone has the computer but we don't write
+computer as object.
+Computer is just a concept the implementation of that is Desktop,
+laptop, mobile phone and everything.
+
+So, what i will do is for this 'Laptop' class.We can create an 
+interface 

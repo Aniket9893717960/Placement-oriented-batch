@@ -1,1 +1,16 @@
+So, we have done with the interface creation right.
+We got one interface and we got one implementation but 
+will this code work.
+because we doesn't run the code in last video 
+Now if we run the program we got error. This error will look 
+interesting let's see what the error is 
+"It cannot resolve the matching constructor"
+Ok we are still dependent on constructor. what we will do is we go 
+to the property one So, let me comment in 'spring.xml' file 
+below section.
+          <constructor-arg name="lap" ref="lap1" />
+          <constructor-arg name="age" ref="21" />
 
+And let's work with 'property' here.
+          <property name="age" ref="21" />
+          <property name="lap" ref="lap1" />

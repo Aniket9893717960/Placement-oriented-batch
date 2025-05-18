@@ -17,8 +17,173 @@ laptop, mobile phone and everything.
 
 So, what i will do is for this 'Laptop' class.We can create an 
 interface 
+CODE 
+    Program of an 'Alien.java'
+package org.aniket;
+
+import java.beans.ConstructorProperties;
+
+public class Alien {
+    private int age;
+    private Computer com;
+    public Alien(){
+        System.out.println("Object Created");
+    }
+
+//    @ConstructorProperties({"age","lap"})
+//    public Alien(int age, Computer com) {
+//        this.age = age;
+//        this.com = com;
+//    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        System.out.println("Setter called");
+        this.age = age;
+    }
+
+    public Computer getCom() {
+        return com;
+    }
+
+    public void setCom(Computer com) {
+        this.com = com;
+    }
+
+    public void code() {
+        System.out.println( "Coding" );
+        com.compile();
+    }
+}
+         Program of an 'Computer.java'
+package org.aniket;
+
+public interface Computer {
+    void compile();
+}
+          Program of 'Laptop.java'
+package org.aniket;
+
+public class Laptop implements Computer {
+    public Laptop(){
+        System.out.println("Laptop Object Created");
+    }
+
+    public void compile() {
+        System.out.println("Compiler");
+    }
+}
+
 By making the changes what we are doing is 
 "We have this 'Alien' class Now 'Alien' is not dependent on laptop
 It's dependent on computer. Now this computer can be anything it 
 will be a 'Laptop' or desktop"
 And mind u this particular 'Computer' is an interface not a class.
+Even if you have new implementation in the near future Which is 
+not 'laptop' and 'Desktop' we can call it something else.
+
+May be a classes which have the 'computer' inside it.
+That's the new variante so we don't need to change the class.
+That's the beauty of calling the interfaces and since we have 
+'laptop'.
+
+We create a one more class here let's say 'Desktop'.
+It's a class which implements the interface called 'Computer'.
+In this we have to implement this method.
+COPY
+    @Override
+    public void compile(){
+      System.out.println("Compiling using Desktop");
+    }
+Now the overall changes we have done is to make common parameter between
+'Desktop' and 'Laptop'.
+CODE AT LAST PROGRAM
+                 Program at 'Desktop.java'
+package org.aniket;
+public class Desktop implements Computer {
+    @Override
+    public void compile(){
+        System.out.println("Compiling using Desktop");
+    }
+}
+                 Program at 'Alien.java'
+package org.aniket;
+
+import java.beans.ConstructorProperties;
+
+public class Alien {
+    private int age;
+    private Computer com;
+    public Alien(){
+        System.out.println("Object Created");
+    }
+
+//    @ConstructorProperties({"age","lap"})
+//    public Alien(int age, Computer com) {
+//        this.age = age;
+//        this.com = com;
+//    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        System.out.println("Setter called");
+        this.age = age;
+    }
+
+    public Computer getCom() {
+        return com;
+    }
+
+    public void setCom(Computer com) {
+        this.com = com;
+    }
+
+    public void code() {
+        System.out.println( "Coding" );
+        com.compile();
+    }
+}
+                 Program at 'Laptop.java'
+package org.aniket;
+
+public class Laptop implements Computer {
+   /* public Laptop(){
+        System.out.println("Laptop Object Created");
+    }*/
+    @Override
+    public void compile() {
+        System.out.println("Compiling using Laptop");
+    }
+}
+                Program at 'Computer.java'
+package org.aniket;
+
+public interface Computer {
+    void compile();
+}
+                  Program at 'App.java'
+package org.aniket;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+                ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+                Alien obj = (Alien) context.getBean("alien");
+                System.out.print(obj.getAge());
+                obj.code();
+        }
+    }

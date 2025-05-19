@@ -28,3 +28,9 @@ SO, we don't have lap any more but what we have which is 'Computer'
 
 Ok we can done few more changes what will do is we go back to 'Alien'
 and comment certain things. I don't want to print this 
+"<property name="com" ref="lap1" />" Here instead of 'lap1'
+i maintoined 'com'.
+          <property name="com" ref="com" />
+Now don't you think if we have the same name 'spring' should be
+smart enough to automatically connect them If we have to specify this
+we are creating a wire

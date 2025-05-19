@@ -33,4 +33,55 @@ i maintoined 'com'.
           <property name="com" ref="com" />
 Now don't you think if we have the same name 'spring' should be
 smart enough to automatically connect them If we have to specify this
-we are creating a wire
+we are creating a wire.
+You have to wire between Your 'Alien' And 'Laptop'.
+i wanted this wiring to be done it automatically be 'autowire'.
+
+    <bean id="alien1" clean="org.aniket.Alien" autowire="byName">
+
+What it will do is You are saying to 
+"Spring will go to autowire and link them with the help of there names"
+what you want in the alien is 'com' and what i have in the 'bean'
+defination Is also 'com'.
+
+       <bean id="com" class="org.aniket.Laptop"></bean>
+                  -------------NOTE--------------
+The movement u say 'autowire' it will search with the name and if u run 
+this code problem solve
+               <property name="com" ref="com1" />
+And if maintoin autowire with 'byName'
+    <bean id="alien1" clean="org.aniket.Alien" autowire="byName">
+What did you think it will go for 'Laptop' and 'Desktop'.
+        <bean id="com1" class="org.aniket.Laptop"></bean>
+        <bean id="com" class="org.aniket.Desktop"></bean>
+If u predict it's 'Desktop' then u are wrong It's 'Laptop' because
+We are explicitly maintoined 'com1' It will prefer your property 
+instead of going to 'autowire'.
+
+So, 'autowire' works when u don't have this property maintoined.
+If you don't maintoined this we are going for 'autowire'.
+But what if we don't even have the 'laptop'.
+
+              ----------NOTE-----------
+U can also use 'Autowire' as "byType".
+when u have to not use 'Property Name'.
+
+    <bean id="alien1" clean="org.aniket.Alien" autowire="byType">
+
+What is the type of 'com' here? in 'Alien' type of 'com' is 
+'Computer'.
+In the implementation we have the 'Laptop' which is actually a type
+of 'Computer' because it's implement the 'Computer' Interface.
+And Now it will not even search for the name. It will search for
+the type.
+        <bean id="com1" class="org.aniket.Laptop"></bean>
+And the same thing in 'Desktop' will same as well.
+So, it's not searching by name it's searching by 'type' but what if 
+just uncomment 'Laptop' What if you have both 'Laptop' and 'Desktop'
+at the same time.
+    What's the error?
+    "Expected Single matching bean but found 2" it's because
+Both the bean's are of same type. They have 'Laptop' and 'Desktop'
+both are the type of 'Computer'. That's the confusion being the reason
+of Error. We can solve this
+i. TO specify 'Archtype' 'byName'.

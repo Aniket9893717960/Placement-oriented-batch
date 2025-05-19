@@ -14,3 +14,17 @@ below section.
 And let's work with 'property' here.
           <property name="age" ref="21" />
           <property name="lap" ref="lap1" />
+And then we got the 'Laptop' now the 'Alien' is basically even it will
+not work because "we are looking for 'Computer' And what u got is 
+'Laptop'"
+In technical words:
+ Invalid Property 'lap' of bean class [com.telusko.Alien]:
+   Bean property 'lap' is not writable or has an invalid setter.
+
+SO, we don't have lap any more but what we have which is 'Computer'
+'com' SO, now what we are doing is 'com' which will refer the 'lap1'
+          <property name="age" ref="21" />
+          <property name="com" ref="lap1" />
+
+Ok we can done few more changes what will do is we go back to 'Alien'
+and comment certain things. I don't want to print this 

@@ -85,3 +85,105 @@ Both the bean's are of same type. They have 'Laptop' and 'Desktop'
 both are the type of 'Computer'. That's the confusion being the reason
 of Error. We can solve this
 i. TO specify 'Archtype' 'byName'.
+                     ----------X-----------
+The Final CODE IS:
+          Program of 'Alien'
+package com.telusko;
+
+import java.beans.ConstructorProperties;
+
+public class Alien {
+	
+	private int age;
+	private Computer com;
+	
+	public Alien() {
+		//System.out.println("Object Created");
+	}
+	
+//	@ConstructorProperties({"age","lap"})
+//	public Alien(int age,Computer lap) {
+//		System.out.println("Para Constructor Called");
+//		this.age = age;
+//		this.lap = lap;
+//	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {    // Setter Injection
+		//System.out.println("Setter called");
+		this.age = age;
+	}
+	
+	public Computer getCom() {
+		return com;
+	}
+	
+	public void setCom(Computer com) {
+		this.com = com;
+	}
+	
+	public void code() {
+		System.out.println("Coding");
+		com.compile();
+	}
+	
+}
+        PROGRAM OF 'App'
+package com.telusko;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        
+    	ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");  // create a container
+    	Alien obj1 = (Alien) context.getBean("alien1");
+//    	obj1.setAge(21);
+    	System.out.println(obj1.getAge());
+    	
+    	obj1.code();
+//    	
+//    	Alien obj2 = (Alien) context.getBean("alien1");
+//    	System.out.println(obj2.age);
+//    	//obj2.code();
+    	
+    }
+}
+             PROGRAM of 'Computer.java'
+package com.telusko;
+
+public interface Computer {
+
+	void compile();
+}
+            PROGRAM OF 'Desktop.java'
+package com.telusko;
+
+public class Desktop implements Computer {
+
+	@Override
+	public void compile() {
+		System.out.println("Compiling using Desktop");
+	}
+}
+               PROGRAM of 'Laptop.java'
+package com.telusko;
+
+public class Laptop implements Computer{
+//	public Laptop() {
+//		System.out.println("Laptop object created");
+//	}
+	
+	@Override
+	public void compile()
+	{
+		System.out.println("Compiling using Laptop");
+	}
+	
+} 

@@ -1,0 +1,59 @@
+In this video we talk about how do u specify the class type
+or why do we need that?
+If u look that the 'Alien' object below.
+  Alien obj1 = (Alien) context.getBean("alien1");
+And when u want this object from the container we are saying 
+'context.getBean' right or in the 'getBean' we specify the name
+of the idea or the name of the 'bean'.
+Which is 'alien1' here Now as the container it says 
+"ok i will give u the bean but the object type i will give u is 
+Object type." 
+
+And it's specifically maintoined that 
+'Hey i want to do 'typeCasting' as well' because when 'getBeans' will
+return u the object. 
+Example if u go to 'getBean'. 'getBean' returns u the type object.
+This is not something we want Because we want the type something
+called the object.
+
+What we want is should be of type of class we want the object of 
+Example In this case we want the object of 'Alien' can we directly 
+get the 'Alien' object. 
+So, we don't have to done type casting here. So, when we go to 
+defination again There is one more method 'getBean'.
+       -----------------------------------
+                    GETBEAN
+This will take the id which u want called 'getBean'. WHich get the 
+name of the id which u want but also u can specify the class of 
+which u want the object.
+Basically type of class it will get u the type.
+That's what we want to do is we make the common here. let's say 
+'Alien.class'. 
+
+  ALien obj1 = context.getBean("alien1",Alien.class);
+  
+For this we don't have to done typeCasting here.
+Because the object itself it's of type 'Alien'. 
+It will not give u error which u are getting earlier. So, u will
+get the object of 'Alien'.
+       -----------------------------------
+Same thing we can done for Desktop.
+  Desktop obj = context.getBean("com2", Desktop.class);
+Let's say one more thing if u don't want to specify the name of the 
+'bean'. Example:
+Something we specify 'getBean' if u want to specify the object for 
+'Desktop'. You will not specifying the name now.
+           Desktop obj = context.getBean(Desktop.class);
+So, in this case it will search by type
+  <bean id="alien1" class="org.aniket.Alien" autowire="byType">
+        <property name= "age" value="21"/>
+        <property name= "com" ref="com1" />
+  </bean>
+  <bean id="com1" class="org.aniket.Laptop" primary="true">
+  <bean class="org.aniket.Desktop" lazy-init="true">
+
+But the only problem is what if u want the object of the 'Computer'.
+         Computer con = context.getBean(Desktop.class);
+It will works because at 'Spring.xml' we specify this as the 'primary'.
+But if we remove the 'primary' It will create the issue because 
+Now there are two 'com' object's of bean.

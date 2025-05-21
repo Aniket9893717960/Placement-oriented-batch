@@ -1,0 +1,29 @@
+Till this point we were able to create a Spring Project with the 
+help of 'XML Config' So, whatever spring we are able to manage we were 
+doing that in XMl file name "Spring.xml". 
+Of course this name can change the only thing we have to change is this
+below thing u know.
+    ClassPathXmlApplicationContext("spring.xml");
+That working with 'spring.xml' we are working with some other name as 
+well. 
+Fine we can go with any name But Now let's say we don't want to use 
+'xml' loot of people are not a big fan of xml.
+So, they prefer to go for 'Java Based Config'. So, yes for the spring
+u can done this configuration using java core.
+
+So, if u are happy with xml u can continue with that If u are not happy 
+u can try out the "java Based Config".
+Some times u don't have a choise when u join a project and they are using 
+'xml' of course they have to use 'xml' If they are using
+'Java Based Configuration' we have one more way called 
+'Annotation based Configuration' which will do latter.
+
+But let's see how do you work with 'java Based Configuration" 
+What we can do is?
+we don't want to use the 'xml' approach while we want to use 
+'Java Based approach'.
+Of course for that we have to use java file. So, what we can do
+with this package name "org.aniket"-> New -> Java Class.
+But Before this first we create a "New Package" name "config".
+
+Inside this "config" package we say "New Java Class".

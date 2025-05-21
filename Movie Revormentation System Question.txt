@@ -1,0 +1,20 @@
+                 What was the project about?
+I developed a "Movie Recommendation System With Web Scrapping"
+during my internship at Allsoft Solutions. It leveraged web Scraping
+to gather real-time movie data(like genres, rating and reviews) from
+sources like IMDB or Rotten Tomatoes.
+The system used "content-based filtering"(and optionally collaborative
+filtering) to suggest personalized movies to users based on their 
+preferences.
+The backend was built in Python with libraries like Pandas, Scikit
+-learn, and Flask for deployment.
+
+                How did you collect data?
+I scraped data using Python libraries like BeautifulScoup/Scrapy
+from movie databases(e.g., IMDB). Key Features extracted included:
+ Title, Genre, Director, Cast (for content based Filtering)
+ User Rating/Reviews (for collaborative filtering if implemented)
+ Poster Urls(for UI display)
+ I cleaned and stored this data in a structured format (CSV/SQLite)
+ for processing.
+

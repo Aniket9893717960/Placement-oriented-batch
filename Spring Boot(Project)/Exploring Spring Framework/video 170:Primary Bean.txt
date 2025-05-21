@@ -1,4 +1,29 @@
 Ok so now we solve this problem Because know if we run this
 If we run the code before It was giving u an error
-"It  found that expected was only one"
-To solve this we can something called Primary.
+"It found Two(com1, com2) expected was only one"
+To solve this we can something for Primary.
+Example:
+       let's say u have an application where u have the
+database connection for some time in a backup u have different 
+connection. which was running 
+ i. one is primary one.
+ ii. one is the backup
+
+By default "Of course we have 2 options" but we make one as primary
+one for example i say when u go by type and u have 2 options here 
+We can say below is primary.
+  <bean id="com1" class="com.telusko.Laptop" primary="true"></bean>
+         it says in case of 'laptop' and 'Desktop' where spring is 
+not able to deside which one we select "PRIMARY" will say 
+ 'select 'laptop' first'.
+So, 'Primary' will prefer when he build the sort of confusion
+What if you are explicitly maintoin we are going to access 
+'com2'.
+        <property name="com" ref="com2"/>
+Even if you have the byte type which says 'PRIMARY' is 'laptop'
+if you have maintoined explicitly it will goes for 'Desktop'.
+So, 'PRIMARY' works only when u have the confusion If you define 
+explicitly in 'Property' it will go for that Even if u say 
+'AUTOTYPE byName' it will search by 'name'.
+'AUTOTYPE byType' it will maintoined explicitly below one
+   If he have sort of confusion it will go for 'PRIMARY' type.

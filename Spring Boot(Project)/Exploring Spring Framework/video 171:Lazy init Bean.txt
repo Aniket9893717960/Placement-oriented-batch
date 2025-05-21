@@ -1,0 +1,78 @@
+In this particular application we are talking with 3 bean.
+i. ALien
+ii. Desktop
+iii. Laptop
+when we talk about bean we have Different scope of this 
+we have talk about Scopeas well.
+ we have Singleton
+ we have Prototype
+whenever we don't maintoined this scope. By default the scope is
+singleton.
+That means in totle we got only one object when the container lodes
+at that point It will load all the singleton objects.
+
+In 'spring.xml'we talk about 'Alien' object. below
+    <bean id="alien1" class="org.aniket.Alien" autowire="byType">
+Which is 'Singleton' again, 'laptop' singleton, 'Desktop' singleton
+because that's default.
+The moment u run the application Below line.
+      Appication context = new ClassPathXmlApplicationContext("spring.xml");
+This willload all the beans of "spring.xml" class. Even if u are not
+using it. It will have the object ready for u late me show u an example
+here
+If u go to "spring.xml" u can see in 'property' we refer 'com1' That
+means if we run the application. That means we run now an application it 
+will refer to a 'laptop'.
+Because 'com1' is the id of the 'laptop'. For 'Desktop' which is the 
+'id' 'com2'.
+
+Now for sure when u run an application. This 'Desktop' is not getting 
+used but still if u go back to 'Desktop'. If i try to create a 
+constructor for 'Desktop'.
+  public Desktop(){
+    System.out.println("Desktop objected Created..");
+  }
+If i try to print something here let's say 'Desktop' object created.
+So, when i done this and run the application.
+U see it will say 'Desktop' object created Now of course in the other
+Constructor of 'Alien' and 'Laptop' we are not printing it.
+
+Of course we also say 'laptop' object created, 'Alien' object Created
+or 'Desktop' object created. Also let me do that here as well.
+
+              ----------NOTE-----------
+  When i by default want that 'Desktop' object doesn't create
+  This object will created only when the object will created for
+  the first time?
+Ok so, this something i have to required and to achieve that we have to-
+done coding. Or we have to write 2 words that's it.------
+When u go to bean 'Defination' so, there is one of the property called
+"lazy-init" u just say 'true' and your job is done.
+  <bean id="com2" class="org.aniket.Desktop" lazy-init="true"></bean>
+if u run this It not says "Desktop" object. 
+Reason being we done 'lazy-initialization' which means object cannot
+be created by default. When only u want to use it will be created.
+             ----------X------------
+What do we mean by that is if we go back to 'app' and let's say 
+if we go back to app and let's say if i go hold on the Desktop object.
+we write in 'App.java' is given below:
+         Desktop obj = context.getBean("com2");
+
+because that's what the 'Desktop' is refering to but also this will 
+return u the object of "Desktop".
+  Desktop obj =  (Desktop) context.getBean("com2");
+
+When we say 'Desktop' object is "LAZY" but |
+
+  what happends when our 'non - Lazy' object is dependent on 'Lazy'?
+  Let's say "Alien" is dependent on 'com2' now 'com2' is lazy that's
+why we come here This can be could only when required.
+Let's say in 'properties' we write:
+       <property name = "com" ref="com2" />
+
+If we run the program now 'ALien' will called 'Desktop' and 'Desktop'
+runs.
+       --------NOTE---------
+So, if u have a non-lazy bean Dependent on Lazy bean still it 
+will create the object of 'Lazy' bean because someone wants it
+       ---------X------------

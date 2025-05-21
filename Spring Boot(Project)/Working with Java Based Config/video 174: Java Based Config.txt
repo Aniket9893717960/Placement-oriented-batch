@@ -26,4 +26,16 @@ Of course for that we have to use java file. So, what we can do
 with this package name "org.aniket"-> New -> Java Class.
 But Before this first we create a "New Package" name "config".
 
-Inside this "config" package we say "New Java Class".
+Inside this "config" package we say "New Java Class" name
+"AppConfig". Name doesn't matter u can give any name.
+So, Our this file is going to replace your 'xml'
+configuration.
+
+Now we go to 'App.java' because now things will change here.
+Now we just comment All:
+     ApplicationContext context = new ClassPathXmlApplicationContext
+     ("spring.xml");
+     Alien obj1 = context.getBean("alien1",Alien.class);
+     obj1.setAge(21);
+     System.out.println(obj1.getAge());
+     obj1.code();

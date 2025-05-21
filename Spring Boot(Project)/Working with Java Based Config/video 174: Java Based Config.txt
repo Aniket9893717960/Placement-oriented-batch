@@ -39,3 +39,61 @@ Now we just comment All:
      obj1.setAge(21);
      System.out.println(obj1.getAge());
      obj1.code();
+
+Now let's done our coding At the top here 
+i. we create the object of "ApplicationContext".
+     ApplicationContext context = 
+   new AnnotationConfigApplicationContext(AppConfig.class);
+Now instad of using 'xml' approach. we are going for java based approach
+For which we have to use "AnnotationConfigApplicationContext"
+And in this particular constructor u have to pass name of Your 
+config file.
+Which is 'AppConfig.class'?
+The only thing is u have to import package for this.
+               __-----------NOTE-----------
+In both the cases where u are using even if u are using 'xml' approach
+and even if using java based approach u are basically using same 
+container But the way u can talk to container changes.
+So,  the real Question is when we create the object or when we use the 
+object for class.
+Now let's not use 'Alien' because 'Alien' is depend upon computer so, 
+u have to done multiple things so, let's work with Desktop.
+When u look laptop it's an independent class like 'laptop' as well
+                -----------X-------------
+Now if we have work with 'Desktop' because it's an independent class
+Like 'laptop' as well. So, let me create an instance for 'Desktop'.
+With the help of below command.
+         Desktop.dt = context.getBean(Desktop.class)
+And i would also call the method which is 'compile'.
+                dt.compile();
+
+We can see what we got when we run the program.
+but we got an error name
+"No qualifying bean of type "com.telusko.Desktop" available"
+Of course right. Now we are not using 'xml' configuration.
+We are using Java based Configuration.
+And in this 'AppConfig.java' file we did nothing.
+
+If u want 'AppConfig' will work 
+i. We have to use '@Configuration' annotation with import
+   "org.springframwork.context.annotation.Configuration".
+ii.  One More annotation we have to use Just like in 'xml'
+we used 'bean' tag. But here we have to use 'Bean'
+Annotation.
+   package org.aniket.config;
+   Import org.aniket.Desktop;
+   Import org.springframwork.context.annotation.Configuration;
+   @Configuration
+   public class AppConfig {
+    @Bean
+    public Desktop desktop(){
+     return new Desktop();
+    }
+   }
+Now Your Question is why we are using 'new' keyword to connect the 
+object.But we are not injecting the object and spring is all about 
+injection. Then, who will call this particular method Who will manage
+the object Who's name is 'Spring'.
+We want we just say 'new' keyword and all the things created, Injected
+And Managed by Spring framework. That's something u have to remember.
+One thing is messing that we use '@Bean'.

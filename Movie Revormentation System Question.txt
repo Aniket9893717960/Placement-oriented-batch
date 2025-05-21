@@ -12,9 +12,70 @@ The backend was built in Python with libraries like Pandas, Scikit
                 How did you collect data?
 I scraped data using Python libraries like BeautifulScoup/Scrapy
 from movie databases(e.g., IMDB). Key Features extracted included:
- Title, Genre, Director, Cast (for content based Filtering)
- User Rating/Reviews (for collaborative filtering if implemented)
- Poster Urls(for UI display)
- I cleaned and stored this data in a structured format (CSV/SQLite)
- for processing.
+Title, Genre, Director, Cast (for content based Filtering)
+User Rating/Reviews (for collaborative filtering if implemented)
+Poster Urls(for UI display)
+I cleaned and stored this data in a structured format (CSV/SQLite)
+for processing.
 
+               What algorithms did you use?
+The core algorithm was "Content - Based Filtering" using "Cosine 
+Similarity" on movie metadata (genres, synopsis).
+For example:
+  Converted text data (genres/plot) into vectors.
+  Calculated similarity scores between movies.
+  Optionally, if you used Collaborative Filering.
+
+              How did you evalute the system?
+For content based filtering, I used precision. If collaborative 
+filtering was included, I measured RMSE for rating predictions.
+User Feedback from testers was also collected to refine the model.
+
+              What challenges did you face?
+Key challenges were:
+ "Dynamic web scrapping": Websites blocked scrapers, so i used rotating
+  user agents and delays.
+ "Cold Start Problem": For new Users/movies, I implemented a hybrid 
+  approach (e.g., trending movies as fallback).
+"Scalability": Optimized the similarity matrix for faster recommendation.
+
+              Was it deployed? What tech stack?
+Yes I deployed a prototype using Flask for the backend and HTML/CSS/JS
+For frontend. The system allowed to:
+ Search movies.
+ Get recommendations based on selected films.
+ View scraped rating/reviews.
+      Tech Stack: Python, Pandas, Scikit-learn, BeautifulSoup, flask,
+                  SQLite.
+
+WHAT WEBSITES DID YOU SCRAPE FOR MOVIE DATA AND WHY DID YOU CHOOSE THEM?
+    IMDb:
+Why? It’s the most comprehensive source for movie metadata (e.g., 
+genres, cast, directors, plot summaries, and user ratings).
+    Rotten Tomatoes:
+Why? Provides critic reviews, audience scores, and detailed ratings, 
+adding a layer of qualitative analysis.
+    TMDB (The Movie Database):
+Why? Offers a free API (alternative to scraping) and rich metadata like 
+keywords, similar movies, and posters.
+
+HOW DID YOU HANDLE DYNAMIC CONTENT LOADING(AJAX/JAVASCRIPT)WHEN SCRAPING?
+Since many movie websites (like IMDb/Rotten Tomatoes) load data 
+dynamically via JavaScript, traditional scraping tools like 
+BeautifulSoup couldn't extract all content. Here's how I tackled it:
+
+Switched to Selenium
+Used Selenium WebDriver with Chrome/Firefox to fully render pages before 
+scraping.
+
+Explicit Waits
+Implemented WebDriverWait to pause scraping until dynamic elements 
+(e.g., 'Load More Reviews' buttons) appeared.
+
+API Reverse-Engineering
+Inspected XHR requests in Chrome DevTools to directly fetch JSON data 
+from backend APIs (e.g., Rotten Tomatoes’ hidden APIs).
+
+Fallback with Pyppeteer
+For sites aggressively blocking Selenium, I used Pyppeteer (headless 
+Chrome) to mimic human-like interactions.

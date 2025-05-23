@@ -1,0 +1,10 @@
+So, by default every 'bean' will be 'SingleTon'. That means when u 
+load your application It will create the container And in that container
+object will be available.
+                         which object?
+At this point we are working with one particular 'bean' which is 'Desktop'
+we not working particular 'Alien'. we not working with 'Laptop'.
+So, those object's are not going created.
+
+That's why in the output no one says 'laptop' object created.
+Or object created for 'Alien'

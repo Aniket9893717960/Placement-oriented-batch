@@ -7,4 +7,33 @@ we not working particular 'Alien'. we not working with 'Laptop'.
 So, those object's are not going created.
 
 That's why in the output no one says 'laptop' object created.
-Or object created for 'Alien'
+Or object created for 'Alien' So, what i mean by that is 
+let's say i write this line 2 times. 
+Let's we not declare the name. let's say we not done 'Desktop.class'.
+
+        Desktop dt = context.getBean(Desktop.class)
+        dt.compile();
+        Desktop dt1 = context.getBean(Desktop.class);
+        dt.compile(); 
+
+So, let's say i want to say 'getBean' 2 times and we know for the 'xml'
+configuration in total we only get '1' object.
+       If we run the program.
+The object will be created only '1' time. but what if u want only one 
+object in that case u can go to your 'AppConfig' And here we can do 
+something for the prototype.
+In down wards we also have to use some Annotations called 'scope' 
+And by default 'scope' is 'singleTon'.
+
+If we say 'CTRL+SPACE' in between 2 brackets of 'Scope' annotation.
+we see an option of 'value' and let's make it 'prototype'.
+
+         @Configuration
+            public class AppConfig {
+             @Bean
+             @Scope("prototype")
+             public Desktop desktop(){
+              return new Desktop();
+             }
+            }
+If we run the program now the object of 'Desktop' will build 2 times.

@@ -1,0 +1,54 @@
+So, let's answer the question that what's the 'Bean' name here
+Because what we have done is we are asking for the "Desktop class"
+object.
+we are specifying the type what if we want to specify name here.
+Ok so let's say i want to specify 'com1' ok if in the previous 
+in fact in the previous example we worked with 'com2'.
+
+So, let's say 'Desktop' is 'com2' if we want to specify with this name 
+will it's work.
+  what we write is 'App.java'
+  public class App{
+    public static void main(String[] args){
+      ApplicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+      Desktop dt = context.getBean("com2",Desktop.class);
+        dt.compile();
+    }
+  }
+If we run the program we got an error "No bean named 'com2' available".
+Of course right no where we have maintoined the 'bean' because if we remember
+of course right if we go to 'spring.xml' we were specifying the 'bean' name.
+So, how can i maintoined it at 'AppConfig.java'.
+Even if i don't want to change it should give u some default name So, how
+do we change it descuss in some time.
+
+               But What is your 'bean' Default name?
+  Default name of bean is 'Desktop'(What ever is your method name)
+If we make below change in 'App.java'.
+        Desktop dt = context.getBean("desktop",Desktop.class);
+It works so, by default the name of your bean is 'your Method name'
+
+                   If we change the name of 'Bean'?
+u can just add some attribute here called '@Bean(name)'
+Here i maintined name is 'com2'. Same name i can use it here 
+       @Configuration
+       public class AppConfig {
+         @Bean(name = "com2")
+        public Desktop desktop(){
+         return new Desktop();
+        }
+       }
+Also make below change in 'App.java'.
+    Desktop dt = context.getBean("desktop",Desktop.class);
+With this run it. 
+                  If we give multiple name of 'Bean'?
+Yes, we actually use an array of names.
+       @Configuration
+       public class AppConfig {
+         @Bean(name = {"com2","desktop","Beast"})
+        public Desktop desktop(){
+         return new Desktop();
+        }
+       }
+If we call it and run this program Then it easily work.
+But we work with by default 'bean' name.

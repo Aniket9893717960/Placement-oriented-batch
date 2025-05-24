@@ -145,3 +145,4 @@ Long>{
 No SQL: Methods like 'findByShortUrl()' generate optimized queries 
 automatically.
 No Manual mapping:
+  Entities (e.g., UrlMapping) map directly to tables.

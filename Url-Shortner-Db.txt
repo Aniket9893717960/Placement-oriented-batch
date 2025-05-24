@@ -146,3 +146,29 @@ No SQL: Methods like 'findByShortUrl()' generate optimized queries
 automatically.
 No Manual mapping:
   Entities (e.g., UrlMapping) map directly to tables.
+
+2. Built - in CRUD Operations
+  JDBC: Write INSERT, UPDATE, DELETE queries manually.
+  JPA: inherits ready-to-use methods:
+CODE:
+urlMappingRepository.save(entity); // andles both insert/update
+             urlMappinRepository.deleteById(id);
+
+3. Transaction Management
+   JDBC: Manual commit()/rollback().
+   JPA: Declaration transaction with '@Transactional'
+CODE
+    @Transactional
+    public void trackClick(String shortUrl){
+UrlMapping url = 
+urlMappingRepository.findByShortUrl(ShortUrl).orElsrThrow();
+url.setClickCount(url.getClickCount()+1); //Auto-saved on method exit
+    }
+4. Performance Optimizations
+   Lazy Loading:
+CODE
+    @OneToMany(mappedBy = "urlMapping", fetch = FetchType.LAZY)
+    private List<ClickEvent> clickEvents; //Loaded only when
+
+   Caching: First - level cache (Persistence Context) reduces
+            database hits.

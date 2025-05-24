@@ -126,3 +126,12 @@ be inefficient for updates because it may trigger a
 redundant SELECT. In my URL shortener, I used save() for new links but 
 optimized updates with @Modifying queries when possible
         ----------------X-----------------
+
+ WHY USE SPRING DATA JPA OVER PLAIN JDBC? WHAT WERE THE ADVANTAGES?
+1. Reduced Builerplate Code:
+    Problem with JDBC:
+      Requires manual:
+        Connection management
+        SQL query strings
+        ResultSet to object mapping
+        Transaction handling

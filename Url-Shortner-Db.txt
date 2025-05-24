@@ -135,3 +135,13 @@ optimized updates with @Modifying queries when possible
         SQL query strings
         ResultSet to object mapping
         Transaction handling
+    Spring Data JPA Solution:
+CODE:
+public interface UrlMappingRepository extends JpaRepository<UrlMapping, 
+Long>{
+  Optional<UrlMapping> findBySortUrl(String sortUrl);
+}
+
+No SQL: Methods like 'findByShortUrl()' generate optimized queries 
+automatically.
+No Manual mapping:

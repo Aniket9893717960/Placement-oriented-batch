@@ -36,4 +36,15 @@ Look at this 'Desktop' they have no idea that they are the part of
 'Spring' Project. But what we can tail them.
 hey u know u are the part of spring project. The way u can do that by 
 Just GO to top of Any class let's say 'Alien'.
-We write 'Component'.
+We write '@Component'.
+
+                      COMPONENT
+It's a sterotype annotation in spring which helps to your spring 
+framework to understand that 'Alien' is a class where spring has
+to manage the object for it.
+Basically we have to make the manage bean to a spring. when u can 
+do that with the help of Add component And all of your class 
+whenever you want the object.
+
+Example in 'Desktop' also i want the object. So, i can say add 
+'Component' and the ''

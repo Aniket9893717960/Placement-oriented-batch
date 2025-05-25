@@ -12,4 +12,28 @@ that spring boot will make your work very easy.
 In spring as well without using spring boot. we get that easy part
 But looking at the configuration we are not that happy.
 
-Even if it's your 'XML COnfiguration' or your java based Configuration 
+Even if it's your 'XML COnfiguration' or your "java based Configuration".
+We need to create the object below by self and inject them.
+  Alien obj = new Alien();
+  obj.setAge(25);
+  obj.setCom(com);
+  return obj;
+We make to build this more easy. Now we have some more annotation which
+we have used they are your "sterotype" annotation. when u talk to your
+spring framework with the class metadata itself. 
+So, u can maintoined in your class.
+"Hey u know spring u are responsible to manage this bean".
+What we mean by that is if u look at this 'Alien','Desktop' 
+And 'laptop'.
+
+U have No idea that we are using a spring framework.
+And we ask to your 'Alien' class. u have to know that u have used by
+spring 'Alien' itself.
+Hey we doesn't have any idea because 
+"No one in this file will actually want to use spring".
+
+Look at this 'Desktop' they have no idea that they are the part of 
+'Spring' Project. But what we can tail them.
+hey u know u are the part of spring project. The way u can do that by 
+Just GO to top of Any class let's say 'Alien'.
+We write 'Component'.

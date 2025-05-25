@@ -22,3 +22,61 @@ CODE:
     dt.compile();
     Desktop dt1 = context.getBean(Desktop.class);
     dt.compile();  
+
+Now in 'AppConfig.java' we don't want to work 'Desktop' method as 
+'prototype'.
+         @Configuration
+            public class AppConfig {
+             @Bean
+             //@Scope("prototype")
+             public Desktop desktop(){
+              return new Desktop();
+             }
+            }
+
+Now if we run the program we got an error. This is the error for 'Alien'.
+"No qualifying Bean of type alien" why? because in the 'AppConfig'.
+we doesn't maintoined anything about 'Alien'.
+Now we add below code in 'AppConfig'.
+
+       @Bean
+       public Alien alien(){
+         return new Alien();
+       }
+Now if u notice in 'AppConfig' total we have two '@Bean' annotation.
+If we run the program we got the error after 
+i. Gotting the object of 'Alien' And 'Desktop'
+What is the reason behind this error?
+in 'App.java' we write 'obj.code' command. because 'code' is dependent 
+on the object of 'Computer' at 'Alien.java'.
+
+we have to make sure because in the 'xml configuration' we make sure 
+that 'spring.xml' property name 'com' has the reference to bean.
+like below command.
+      <property name="com">
+       <bean id="com1" class="com.telusko.Laptop" primary="true"></bean>
+      </property>
+but in 'AppConfig' there is not linking between 'Alien' and 'Desktop'.
+And i also want the initial value of the 'Age' which is '21'.
+I want to write 'getAge' and i should want '21' in return.
+
+So, i done certain changes in 'AppConfig.java' given below.
+CODE:
+     @Bean
+     public Alien alien(){
+      Alien obj = new Alien();
+      obj.setAge(21);
+      return obj;
+     }
+But mind you 'Computer' in 'Alien.java' is still 'null' because 
+'Alien.java' has 2 variable 'age' and 'com'. So, age is '21' but
+'com' is still run so let we run the program and got error.
+So, now i done change in 'AppConfig.java' below.
+CODE:
+     @Bean
+     public Alien alien(){
+      Alien obj = new Alien();
+      obj.setAge(21);
+      obj.setCom(desktop());
+      return obj;
+     }

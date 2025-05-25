@@ -178,6 +178,26 @@ CODE
    JPA : Uses Hibernate's dialect system to auto - generate 
          vendor - specific SQL.
 6. Type Safety
-   JDBC: Risk of SQL injection or typos in query strings:
+  JDBC: Risk of SQL injection or typos in query strings:
 CODE:
- String sql = "SELECT * FROM url_mapping" WHERE short_url = ''
+    String sql = "SELECT * FROM url_mapping" WHERE short_url = ''
+  JPA: Compile - time checks:
+CODE:
+    findByShortUrl(String shortUrl);
+     // Compiler validates method name/parameters
+7. Auditing & Hooks
+    Automatic timestamps:
+CODE
+    @EntityListeners(AuditingEntityListener.class)
+    public class UrlMapping {
+      @CreatedDate
+      private LocalDateTime createdDate;
+    }
+8. Integration with Spring Ecosystem
+     Pagination:
+CODE:
+      Page<UrlMapping> findAll(Pageable pageable);
+       // Auto-handle Limit/offset
+
+     QueryDSL Support: 
+      Type - safe dynamic queries.

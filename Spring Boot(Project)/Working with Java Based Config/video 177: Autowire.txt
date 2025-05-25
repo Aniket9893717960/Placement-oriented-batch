@@ -80,3 +80,36 @@ CODE:
       obj.setCom(desktop());
       return obj;
      }
+
+It will solve current problem but occur one more problem is 
+"obj.setCom(desktop());" command. we make 'desktop' tightly coupled.
+but what if u have 'Laptop'. So, we don't want "desktop()" in
+"setCom".
+What we can do to solve this problem is
+1. In 'Alien' constructor we maintoined 'Computer' object.
+2. inner 'Alien' constructor we replace "obj.setCom(desktop());"
+   code with "obj.setCom(com);".
+CODE:
+     @Bean
+     public Alien alien(Computer com){
+      Alien obj = new Alien();
+      obj.setAge(21);
+      obj.setCom(com);
+      return obj;
+     }
+And our compiler say ok the given constructor is dependent on 
+'Computer' object. Then it will see the container and say
+"Hey i want the 'Computer' object" and computer say 
+"Hey i have the Desktop object." which is a 'Computer'.
+               ----------NOTE------------
+In the New Version we don't have to maintoined the '@Autowired' but
+in previous verions we have to use '@AutoWired' like below.
+CODE:
+     @Bean
+     public Alien alien(@Autowired Computer com){
+      Alien obj = new Alien();
+      obj.setAge(21);
+      obj.setCom(com);
+      return obj;
+     }
+               ------------X--------------

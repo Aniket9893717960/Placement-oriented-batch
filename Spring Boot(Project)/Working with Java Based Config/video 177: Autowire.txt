@@ -1,0 +1,24 @@
+Let we work with 'Alien' object as well. we worked with 'Desktop'
+now we create 'bean' for the laptop. So, what we wanna do is 
+the same thing what i can done before
+In 'App.java' when we configure the 'spring.xml'.
+We write the below things:
+  Alien obj1 = context.getBean("alien1",Alien.class);
+    obj1.setAge(21);
+    System.out.println(obj1.getAge());
+    obj1.code();
+
+but we change this thing.
+      For working with "Java Based Config".
+1. At "Alien obj1 = context.getBean("alien1",Alien.class);"
+  we just not maintoined the name we just work with 'Alien.class'.
+Same we are just setting the age. then we are saying 'getAge'.
+Then we call code.
+
+2.We doesn't want to work with 'Desktop' any more so, we just 
+remove below lines in 'App.java'.
+CODE:
+    Desktop dt = context.getBean(Desktop.class);
+    dt.compile();
+    Desktop dt1 = context.getBean(Desktop.class);
+    dt.compile();  

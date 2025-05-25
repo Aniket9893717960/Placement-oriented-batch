@@ -222,3 +222,30 @@ CODE
         private String originalUrl;
         private int clickCount;
     }
+      Lookup Logic:
+CODE
+    public UrlMapping getOriginalUrl(String shortUrl){
+        return urlMappingRepository.findByShortUrl(shortUrl)
+            .orElseThrow(() -> new NotFoundException("URL not found"));
+    }
+  B. Redirect Flow
+        Client Request:
+            GET /abc123
+        Backend:
+            Fetch originalUrl from the database.
+            Increment clickCount.
+            Log ClickEvent (timestamp, IP, etc.) for analytics.
+        HTTP Response:  CODE:
+            HTTP/1.1 302 Found
+            Location: https://original-domain.com/long-path
+  C. Spring Boot Controller
+        @RestController
+        public class RedirectController {
+            private final UrlMappingService urlMappingService;
+
+            @GetMapping("/{shortUrl}")
+   public ResponseEntity<Void> redirect(@PathVariable String shortUrl){
+    UrlMapping mapping = urlMappingService.getOriinalUrl(shortUrl);
+    
+          }
+        }

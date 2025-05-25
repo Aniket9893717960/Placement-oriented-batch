@@ -172,3 +172,12 @@ CODE
 
    Caching: First - level cache (Persistence Context) reduces
             database hits.
+5. Database Portability
+   JDBC: SQL queries may need rewriting for different databases.
+         (e.g., MySQL -> PostgreSQL)
+   JPA : Uses Hibernate's dialect system to auto - generate 
+         vendor - specific SQL.
+6. Type Safety
+   JDBC: Risk of SQL injection or typos in query strings:
+CODE:
+ String sql = "SELECT * FROM url_mapping" WHERE short_url = ''

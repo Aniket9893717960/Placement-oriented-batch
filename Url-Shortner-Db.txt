@@ -201,3 +201,24 @@ CODE:
 
      QueryDSL Support: 
       Type - safe dynamic queries.
+
+  HOW DID YOU HANDLE REDIRECTS FROM SHORT URLS TO ORIGINAL URLS?
+1. High - Level Approach
+  The redirection mechanism follows REST principles and leverages
+  HTTP 302 (Temporary Redirect) to ensure:
+    Minimal latency (critical for user experience).
+    Accurate click tracking (for analytics).
+    Scalability (stateless, cache-friendly).
+
+2. Implementation Details
+   A. Database Lookup
+      Schema:
+CODE
+    @Entity
+    public class UrlMapping {
+        @Id
+        private String shortUrl;
+            // Key: Base62 - encoded ID (e.g., "abc123")
+        private String originalUrl;
+        private int clickCount;
+    }

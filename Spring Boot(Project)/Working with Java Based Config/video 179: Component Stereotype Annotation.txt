@@ -1,0 +1,15 @@
+Till this point we talk about the 'xml Configuration' and we have used 
+'java based Configuration' as well. In which we have talk about 
+multiple annotation like
+ @Configuration  @Bean   @Primary
+And with this things are working out. So, we are quite happy
+So, the main question is are We?
+So, the thing is when we say that spring will make your work easy 
+Then we expect that 'Spring' will done things automatically.
+
+Specially when we started with 'spring boot'. And we got to know 
+that spring boot will make your work very easy. 
+In spring as well without using spring boot. we get that easy part
+But looking at the configuration we are not that happy.
+
+Even if it's your 'XML COnfiguration' or your java based Configuration 

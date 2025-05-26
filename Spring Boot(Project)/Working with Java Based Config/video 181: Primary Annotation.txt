@@ -1,0 +1,17 @@
+Now let's solve this problem. In the previous video we solve this with 
+'Qualifier' and if we run the program we got error and we talk also
+we used primary as well.
+Where exactly we are going to use 'primary' So, where exactly we are going 
+to use primary let's say we use 'primary' at the top of 'Desktop'.
+Just by maintoining primary we will prefer desktop whenever u have the 
+confusion.
+But what happens when i used 'primary' and 'Qualifier' together.
+Then if we run the program we get to know that 
+'Qualifier' has more priority then 'primary' doesn't matter what primary
+which primary u say if u maintoined 'Qualifier' it will follow that at 
+particular one.
+
+That's about 'primary' and 'Qualifier' which will get preference is 
+'Qualifier' But if u want to resolve the confusion then u can use 
+'primary' there.
+

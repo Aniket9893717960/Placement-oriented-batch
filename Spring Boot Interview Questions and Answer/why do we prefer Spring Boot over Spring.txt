@@ -13,4 +13,14 @@ Below is detailed comparison:
 
   Traditional Spring:
   i. Requires manual configuration for most components.
-  ii. Developers must explicitly
+  ii. Developers must explicitly define beans, data sources,
+      transaction managers, etc.
+  iii. More prone to configuration errors.
+
+2. Starter Dependencies:
+  Spring Boot:
+  i. Provides opinionated 'starter' dependencies
+(e.g., spring-boot-starter-web,spring-boot-starter-data-jpa).
+  ii. Each starter includes all necessary transitive dependencies with 
+      compatible versions.
+  iii. Simplifies dependency management and reduces version conflits.

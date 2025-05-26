@@ -5,4 +5,40 @@ Now in this video we talk about 2 different annotation.
 Remember we have talk about different 'scope' 1st is 'SingleTon'
 And 'Prototype' If u want to use 'SingleTon' prototype then u 
 can maintoined that with the help of '@Scope' Annotation
-when we are getting a bean.
+when we are getting a bean in 'Java Based CONFIGURATION'.
+
+Now we guess when actually we do that of course in the class.
+So, just maintoined the 'scope' annotation And in bracket u maintoined
+Which scope u want may be u can maintoined 'prototype' At top of 'Desktop'.
+CODE
+    @Component
+    @Primary
+    @Scope("Prototype")
+    public class Desktop implements Computer {}
+
+If u want to change the annotation then u will use '@Scope' annotation
+Let's solve the next problem. If u run this program then look at 
+the value which is '0'.
+We don't want '0' we want the value remember we have 'AppConfig' when
+we assign some value to the 'age' we not doing it now that's why default 
+value is '0'.
+
+But what if we want to change it we can assign the value of 'age' at
+'Alien' but some times we want to inject this value from some other 
+property files.
+How we can inject it not with the object but with value. In that case
+we have to use another annotation which is 'value' in which u can 
+maintoined '21'.
+
+Now u can say what's the difference between assigning the value like 
+'@value' why we not assign the value 'Directly' like 
+"Private int age=21;".
+Because we were hard codeing in it basically u can inject this value 
+from outside the code. May be u have the property file in which u have
+all the values.
+
+Again how we can do that  it's a different thing but there is a option
+when u can inject the value. if we run the program now we got value
+'21'. So, that's how we use the 'scope' annotation and 'value' 
+annotation.
+

@@ -1,0 +1,18 @@
+Spring Boot is a framework that creates stand alone,
+production grade Spring based Applications. So, this frameowrk has so many
+advantages.
+Easy to use: The majority of the boilerplate code required to create a 
+             Spring application is reduced by Spring boot.
+
+Rapid Developement: Spring Boot's opinionated approach and auto
+                    configuration enables developers to quickly
+develop apps without the need for time - consuming setup,
+cutting down on developement time.
+
+Scalable: Spring Boot apps are intended to be scalable. This implies
+          they may be simply scaled up or down to match your 
+          application's needs.
+
+Production-ready: Metrics, health checks and externalized configuration
+                  are just a few of the features that Spring Boot includes
+and are designed for use in production environments.

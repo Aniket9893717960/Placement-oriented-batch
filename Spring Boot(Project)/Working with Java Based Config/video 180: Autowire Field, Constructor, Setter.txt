@@ -1,0 +1,50 @@
+ok so let's solve this problem. Basically what is happening is:
+We are not able to find the values of age and com.
+we are just creating this object.
+The spring framework is basically creating the 'Alien' object 
+with the default value of 'age' and 'com'. The default value 
+of 'age' is '0'. And u can see in the output u got '0' as well.
+
+but what about the 'com' by default is 'null'. we have to say
+'com' object is created inside the container just search for it.
+what we can do that just something called 'Autowired' annotation.
+
+U can say 'Hey spring go to the container and u will find the 'com'
+object there'. Now at the moment u done that and run the program.
+Now we got different error name given below.
+"No qualifying bean available in 'Computer': executed single matching
+bean but found 2".
+
+And we know how to solve this and we done this before problem is:
+we have 2 classes 'Desktop' and 'Laptop' both are doing the same thing.
+just for time we just comment '@Component' in 'Laptop'.
+Because we don't want to work with 'Laptop' we just wanted to work with 
+'Desktop' Now run the program.
+
+So, basically 'Alien' is able to find computer instance in the form of 
+'Desktop' we do have 'laptop' right what if we have 2 components which
+are same basically they are implementing the same interface.
+
+Now if we run the program we got the same error which i got before
+to resolve this error what can i done in 'Alien.java'.
+CODE:
+     @Autowired
+  @Qualifier("desktop")
+  private Alien(){
+    System.out.println("Alien Object Created");
+  }
+
+  But when we change the name of default component '@Component("com2")'
+Now we will search for 'com2' Now it will search for 'com2'.
+Now if we run the program we got an error because Now Component name
+changed so, we also change the Qualifier name from "desktop" to
+"com2".
+
+Now what if i don't want to use 'Qualifier' do we have other options
+because 'Qualifier' will search for the name just to solve the problem.
+But if u don't want to use 'Qualifier' we have one more chose which is
+'Primary'.
+
+And we have one more concept of scope which we discuss in the next video.
+If we talk to one more thing which is 'Autowired' which is basically
+injected in the object.

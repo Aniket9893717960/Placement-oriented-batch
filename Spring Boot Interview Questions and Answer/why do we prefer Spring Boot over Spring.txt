@@ -1,1 +1,16 @@
 Spring boot has become the preferred choice over traditional Spring
+for most new applications due to its simplified approach to development.
+Below is detailed comparison:
+
+1.  Auto - Configuration:
+  Spring Boot:
+  i. Automatically configures you application based on the dependencies
+     you've added.
+  ii. Reduce boilerplate configuration code significantly.
+  iii. Intelligent defaults that can be overridden when needed.
+  iv. No need for extensive XML configuration or annotation - based 
+      configuration.
+
+  Traditional Spring:
+  i. Requires manual configuration for most components.
+  ii. Developers must explicitly

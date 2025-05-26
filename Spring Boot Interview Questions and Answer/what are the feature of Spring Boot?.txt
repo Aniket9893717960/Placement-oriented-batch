@@ -1,0 +1,9 @@
+There are many useful features of Spring Boot. Some of them are 
+mentioned below:
+               AUTO - CONFIGURATION
+Spring Boot automatically configures dependencies by using 
+"@EnableAutoConfiguration" annotation and reduces boiler plate code.
+
+              Spring Boot Starter POM
+These Starter POMs are pre - configured dependencies for functions like
+database, security, maven configuration etc.

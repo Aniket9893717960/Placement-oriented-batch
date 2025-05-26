@@ -1,0 +1,8 @@
+Now in this video we talk about 2 different annotation.
+1. is 'Scope'.
+2. Is 'Value'.
+                      SCOPE
+Remember we have talk about different 'scope' 1st is 'SingleTon'
+And 'Prototype' If u want to use 'SingleTon' prototype then u 
+can maintoined that with the help of '@Scope' Annotation
+when we are getting a bean.

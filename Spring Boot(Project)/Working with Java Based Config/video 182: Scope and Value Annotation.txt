@@ -19,6 +19,7 @@ CODE
 If u want to change the annotation then u will use '@Scope' annotation
 Let's solve the next problem. If u run this program then look at 
 the value which is '0'.
+
 We don't want '0' we want the value remember we have 'AppConfig' when
 we assign some value to the 'age' we not doing it now that's why default 
 value is '0'.
@@ -42,3 +43,89 @@ when u can inject the value. if we run the program now we got value
 '21'. So, that's how we use the 'scope' annotation and 'value' 
 annotation.
 
+FINAL CODE IS :
+               1. 'AppConfig.java' program
+@Configuration
+@ComponentScan("com.telusko")
+public class AppConfig {}
+               2. 'Alien.java' program
+@Component
+public class Alien {
+	@Value("21")
+	private int age;
+	
+	private Computer com;
+	
+	public Alien() {
+		System.out.println("Alien Object Created");
+	}
+
+  public int getAge() {
+	return age;
+	}
+	
+	public void setAge(int age) {    // Setter Injection
+		//System.out.println("Setter called");
+		this.age = age;
+	}
+	
+	public Computer getCom() {
+		return com;
+	}	
+	
+	@Autowired
+@Qualifier("laptop")
+	public void setCom(Computer com) {
+		this.com = com;
+	}
+	
+	public void code() {
+		System.out.println("Coding");
+		com.compile();
+	}
+}
+         3. 'App.java' program
+public class App {
+	public static void main(String[] args) {
+
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+		Alien obj1 = context.getBean(Alien.class);
+	   System.out.println(obj1.getAge());
+		obj1.code();
+}
+          4. 'Computer.java' program
+package com.telusko;
+
+public interface Computer {
+
+	void compile();
+}
+         5. 'Desktop.java' program
+@Component
+@Primary
+@Scope("prototype")
+public class Desktop implements Computer {
+
+	public  Desktop() {
+		System.out.println("Desktop  Object Created");
+	}
+	@Override
+	public void compile() {
+		System.out.println("Compiling using Desktop");
+	}
+}
+          6. 'Laptop.java' program
+@Component
+public class Laptop implements Computer{
+	public Laptop() {
+	System.out.println("Laptop object created");
+}
+	
+	@Override
+	public void compile()
+	{
+		System.out.println("Compiling using Laptop");
+	}
+	
+}

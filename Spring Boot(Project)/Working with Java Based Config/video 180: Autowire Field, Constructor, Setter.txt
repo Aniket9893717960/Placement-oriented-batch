@@ -48,3 +48,10 @@ But if u don't want to use 'Qualifier' we have one more chose which is
 And we have one more concept of scope which we discuss in the next video.
 If we talk to one more thing which is 'Autowired' which is basically
 injected in the object.
+i. Field Injection
+2. Constructor Injection
+3. Setter Injection
+
+When we basically use 'Autowired' at 'com' it's basically a failed 
+injection.
+That's the 'Autowired' let's see the remaining in the next video.

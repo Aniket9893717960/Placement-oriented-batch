@@ -15,3 +15,67 @@ That's about 'primary' and 'Qualifier' which will get preference is
 'Qualifier' But if u want to resolve the confusion then u can use 
 'primary' there.
 
+Final Code 
+         1. 'Desktop.java' program
+@Component
+@Primary
+public class Desktop implements Computer {
+
+	public  Desktop() {
+		System.out.println("Desktop  Object Created");
+	}
+	@Override
+	public void compile() {
+		System.out.println("Compiling using Desktop");
+	}
+}
+        2. 'Alien.java' program
+@Component
+public class Alien {
+	
+	private int age;
+	
+	private Computer com;
+	
+	public Alien() {
+		System.out.println("Alien Object Created");
+	}
+  
+  public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {    // Setter Injection
+		//System.out.println("Setter called");
+		this.age = age;
+	}
+	
+	public Computer getCom() {
+		return com;
+	}
+	
+	
+	@Autowired
+@Qualifier("laptop")
+	public void setCom(Computer com) {
+		this.com = com;
+	}
+	
+	public void code() {
+		System.out.println("Coding");
+		com.compile();
+	}
+}
+           'Laptop.java'
+@Component
+public class Laptop implements Computer{
+	public Laptop() {
+	System.out.println("Laptop object created");
+}
+	
+	@Override
+	public void compile()
+	{
+		System.out.println("Compiling using Laptop");
+	}	
+}

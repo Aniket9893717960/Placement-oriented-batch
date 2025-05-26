@@ -1,0 +1,6 @@
+Spring Boot is built on top of the Spring framework to create stand - alone
+RESTful web applications with very minimal configuration and there is no
+need of external servers to run the application because it has embedded 
+servers like Tomcat and Jetty etc.
+   Spring Boot framework is independent
+   It creates executable spring applications that are production - grade.

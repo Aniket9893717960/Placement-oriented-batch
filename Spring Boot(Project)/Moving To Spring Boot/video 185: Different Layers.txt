@@ -41,4 +41,30 @@ Now we come to first layer ( Controller ).
 'Request' u will send for the 'client'. If u want some one to handle
 that with the help of 'Controller'.
 Now 'Controller' job here is to accept the 'request' and send data 
-'back'.
+'back'.My job is not to done any processing but what if u want 
+processing.
+In that case we have to use '2nd' layer of 'Server'. 
+                          SERVICE
+It's a layer who is responsible to done any processing. let's say
+if u want to add 2 no., find factorial , find logic all this kind 
+of things can be done in 'Service' layer.
+what if u want some data from database for this we have to use 3rd
+layer.
+                          REPOSITORY
+Example: hey if i want to find bast products in the range from 1 dollar
+         to 100 dollar. Now at this point u don't have your data in your 
+application.
+U have that in your database where we can do the processing we done 
+processing inside 'SERVICE'. 
+But unfortunately 'service' don't have data. Now service have to connect
+with database Now in that case u have the layer in between which will be
+your 'DAO'(DATA ACCESS OBJECT) layer.
+
+"This is the layer who is responsible to connect with database.
+get the data, give it to your service and service will done some 
+processing on that and then give data back to controller."
+So, how is the flow.
+From the client data send to the Controller -> Service -> Repository 
+-> Database -> Repository -> Service -> Controller -> Client.
+
+"Repository just have the job to connect the database and get the data."

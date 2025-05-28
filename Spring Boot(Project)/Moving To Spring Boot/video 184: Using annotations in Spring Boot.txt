@@ -41,5 +41,36 @@ in the field 'age' and 'com'. with the help of '@Value' annotation.
 
                  NOW Let's heat back to the laptop
 In laptop we are not doing much we just say 'compile' and it just print
-data. But apart from laptop we want more such data. Just like 'Desktop'
+data. But apart from laptop we want more such data. Just like 'Computer'
 I just done the changes here.
+Program of Laptop: CODE
+            package com.telusko.app;
+            import or.springframework.sterotype.Component;
+            @Component
+            public class Laptop implements Computer {
+              public void compile(){
+                System.out.println("Compiling in laptop");
+              }
+            }
+Just like 'Laptop' i want to write at 'Desktop' as well.
+Program of Desktop: CODE
+            package com.telusko.app;
+            import or.springframework.sterotype.Component;
+            @Component
+            @Primary
+            public class Desktop implements Computer {
+              public void compile(){
+                System.out.println("Compiling in laptop");
+              }
+            }
+Now if u see 'Computer' has two implementation 'Laptop' and 'Desktop'.
+But we got an error after running the program name
+"Parameter 0 of method 'setCom' in 'com.telusko.app.Alien' required a 
+single bean, but 2 were found." 
+But we know the solution Just we add 'Primary' in 'Desktop' And if i 
+writting 'Desktop' as 'primary' then in 'Alien.java' we have to use
+'Qualifier' annotation like below.
+CODE
+               @Autowired
+               @Qualifier("laptop")
+               public void setCom(Computer com){ this.com = com; }

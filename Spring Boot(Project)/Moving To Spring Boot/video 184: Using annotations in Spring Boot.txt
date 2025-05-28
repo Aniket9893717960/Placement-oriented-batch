@@ -1,4 +1,4 @@
-Ok so let's quickly make those changes First we talk about 'Alien' class
+f Ok so let's quickly make those changes First we talk about 'Alien' class
 what we wanted is a variable name 'age'.
 I also not want to work with 'laptop' Now i have to work with 'Computer'.
 which i want to specify below.
@@ -74,3 +74,12 @@ CODE
                @Autowired
                @Qualifier("laptop")
                public void setCom(Computer com){ this.com = com; }
+
+If we run the program then it says 'Compiling the Laptop' So, 
+if i have to print 'age' of 'Laptop' to assign the get 'age'.
+we write in 'SpringBootDemoApplication.java'.
+CODE:
+   Alien obj = context.getBean(Alien.class);
+   System.out.println(obj.getAge());
+    obj.code();
+

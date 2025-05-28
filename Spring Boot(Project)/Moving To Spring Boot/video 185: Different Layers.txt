@@ -1,0 +1,44 @@
+Till this point we have talk about sterotype annotation which is your
+'Component' So, if you want to manage your class or the object so,
+we have to write '@Component' at the top of the class.
+
+This is not the only sterotype annotation available see if we talk about
+any annotation u will be having multiple layers there This is not our
+web application this is our console based application.
+
+But let's say if u having full flagid application then u having multiple
+layers. Normally u having a 'client' it will interact to a 'server' and 
+of course if u build an application u also have the 'database' there.
+     CLIENT  <--->  SERVER  <--->  DATABASE
+of course when we talk about web application. we talk about spring web
+latter.But just to give u a scenario we have a 'CLIENT' we have a 
+'server' in between at last we have 'database'.
+
+Now in this 'server' as well we have multiple layers Now if u want to 
+work with data yes that's why we have the database there And in every
+application u have some kind of database.
+        SERVER -----> Layer 1
+                 |--> Layer 2
+                 |-->   |
+                 |--> Layer n
+Now if u want to fetch this(If client want's it) data. Request go to the
+server.And server sents the request to database. And database says that's
+our data Go back. Then 'Request' will become 'Response' from database to
+'server' then sends data to the 'client'.
+
+Ultimately Server have the responsibility to Accept and Return data.
+    --------      ---------       ------------
+    |CLIENT| ---> | SERVER | ---> | DATABASE |
+    -------- <--- ---------  <--- ------------
+
+Even this server have multiple layers Show in below Figure:
+        SERVER -----> Layer 1( Controller )
+                 |--> Layer 2( Service )
+                 |--> Layer 3( Repository )
+
+Now we come to first layer ( Controller ).
+       Now Controller Job is to work with only 'Request' whatever 
+'Request' u will send for the 'client'. If u want some one to handle
+that with the help of 'Controller'.
+Now 'Controller' job here is to accept the 'request' and send data 
+'back'.

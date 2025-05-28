@@ -7,12 +7,13 @@ which i want to specify below.
              import or.springframework.sterotype.Component;
              @Component
              public class Alien {
+               @Value('25')
                private int age;
-               @Autowired
                private Computer com;
                public int getAge(){return age;}
                public void setAge(int age){ this.age = age; }
                public Computer getCom(){ return com; }
+               @Autowired
                public void setCom(Computer com){ this.com = com; }
                public void code(){
                com.compile();
@@ -37,3 +38,8 @@ Next thing i want to do is i didn't wanted to use '@Autowired' on the
 field i want to use '@Autowired' for the setter's of 'com'.
 This are not the only changes in the 'Alien' i want to assign the value
 in the field 'age' and 'com'. with the help of '@Value' annotation.
+
+                 NOW Let's heat back to the laptop
+In laptop we are not doing much we just say 'compile' and it just print
+data. But apart from laptop we want more such data. Just like 'Desktop'
+I just done the changes here.

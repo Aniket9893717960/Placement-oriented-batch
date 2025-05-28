@@ -1,0 +1,6 @@
+Till tis point we worked wit multiple annotations. So, we build the spring
+core project without Spring boot here.
+If you want to make it work we have multiple options to done that:
+i. Xml Configuration
+ii. Java Based Configuration
+iii. Then we have used some annotations. 

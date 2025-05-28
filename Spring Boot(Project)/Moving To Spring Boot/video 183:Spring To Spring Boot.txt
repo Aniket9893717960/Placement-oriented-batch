@@ -4,3 +4,42 @@ If you want to make it work we have multiple options to done that:
 i. Xml Configuration
 ii. Java Based Configuration
 iii. Then we have used some annotations. 
+
+Example: 'Component' which is a Sterio type annotation which we can use on
+         Top of every class and we maintoined that 
+'hey this is the component and i want spring to manage it.'
+
+But if you remember we were started our journey with spring boot.
+If you don't let's me regenerate those example:
+  1. Program of 'SpringBootDemoApplication.java'.
+package com.telusko.app;
+import ...
+@SpringBootApplication
+public class SpringBootDemoApplication {
+  public static void main(String[] args){
+   ApplicationContect context = SpringApplication.run(SprinBootDemoApplication.class, args);
+   Alien obj = context.etBean(Alien.class);
+   obj.code();
+  }
+}
+  2. Program of 'Alien.java'.
+package com.telusko.app;
+import org.springframework.beans.factor;
+import or.springframework.sterotype.Component;
+
+@Component
+public class Alien {
+  @Autowired
+  Laptop laptop;
+  public void code(){
+  laptop.compile();
+  }
+}
+   3. Program of 'Laptop.java'
+package com.telusko.app;
+import or.springframework.sterotype.Component;
+
+@Component
+public class Laptop {
+ public void compile(){ System.out.println("this is the laptop"); }
+}

@@ -1,0 +1,34 @@
+U know if we manually want to connect client with database help of
+'Spring JDBC' then we have to follow so, many steps:
+1. Load Driver
+2. Define COnnection URL
+3, Establish Connection
+4. Create Statement Object
+5. Execute Query Using Statement
+6. Process Result
+7. Close Connection
+
+This so many steps we do and to solve this problem we got something called
+'Spring JDBC' now this also has so many things to it.
+we also have so many components to work with one of the most important 
+component which we have to work is 'JdbcTemplate'.
+
+Now this 'Template' which help u to done certain things are as follows:
+1. Connect with Database
+2. To fire the queries
+3. Process Data
+4. Get Output
+
+Also when u want to connect with Database see normally what happens is 
+when u are sending the request U have to create the connection.
+But if u send the second request again u have to send the connection.
+U doesn't thing why we use multiple connections.
+
+Why we doesn't use the same connection. What if your system already have
+3-4 connection in the database and u send the request. why we doesn't use
+the same connection available Now that's something u can get help from the
+'Data Source'.
+
+So, we use 'Data Source' with the help of some libraries. 
+And again u don't have to download the library manually. Spring will
+give it to u.

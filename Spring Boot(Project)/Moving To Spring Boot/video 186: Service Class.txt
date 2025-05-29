@@ -79,4 +79,23 @@ If we see on 'Service' while clicking it will directly connected on
 '@Component'. it's just that u if u writing some documentation or 
 domain some language.
 It also help to understand what kind of classes u are working.
-But Again if u write add component u don't get error.
+But Again if u write add component u don't get error it also work.
+But using 'Service' make much more sense.
+But the kind of application which we are building every thing is same
+there is not much difference 'Component' and 'Service'.
+For Different purpose u can use difference components and Service but
+at this point 2 are same and behave with the same way.
+ ------------------------------------------------------------
+
+But what if u want to store the data in database. If u want 
+'Lap' of laptop store in database So, this case  where u will
+write your database steps.
+What is database steps so, remember when we talk about 'JDBC'
+when u want to connect your java Application with database.
+we need 'JDBC' in between where u write your JDBC steps.
+
+Yes we done database connectivity in 'Service' but there is no
+error but complcity impact matters. So, by the structure or 
+format we write our code in 'Repository' class.
+Where u have all the database connections the only job of it to
+work with database.

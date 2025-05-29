@@ -1,0 +1,69 @@
+So, let's create those layers which we have talk about 'Controller','Service' 
+and 'Repository'. So, what we will create those layers.
+
+1st we have to make sure we have to use different packages for different
+things. what we have not disscuss in this layer is we have one more object
+which we passed between different layers.
+  
+And that object is your 'model' at this point. For example 'Laptop', 'Desktop'
+and 'Alien' at this point are actually Represent some model.
+The actual entity which are going to store in database.
+So, it's batter to say that 'Alien','Computer','Laptop' and 'Desktop'
+will save all in 'model' package.
+
+All this thing will be the part of 'model' package.
+let's say we don't have 'laptop' object in 'SpringBootDemoApplication.java'
+So, let's create one.
+CODE
+    Laptop lap = context.getBean(Laptop.class);
+AND then i want to save this laptop. So, of course we don't have the data 
+yet and in laptop we don't even have data.
+In this case what we can do is we use the service class.
+  
+The main job of 'Service' here is to done some processing with the 
+'laptop'. of course u can find Is this laptop is good for progamming
+Or is this 'laptop' good for gaming So, we can have those type of 
+Methods in the 'service' class.
+  
+At this point we don't  have that class so, we can 
+So, At this point we don't have those class name "LaptopService"
+At class "SpringBootDemoApplication".
+CODE:
+  LaptopService service = context.getBean(LaptopService.class);
+
+But unfortunately we don't have this class so, let's create one
+'LaptopService' is part of 'Service' package.
+But let's say we have some data i want to store that
+   @SpringbootApplication
+  public class SpringBootDemoApplication {
+    public static void main(String args[]){
+      ApplicationContext context = SpringApplication.run(SpringBootDemoApplication.)
+      LaptopService service = context.getBean(LaptopService.class);
+      Laptop lap = context.getBean(Laptop.class);
+      service.addLaptop(lap);
+    }
+  }
+Next we have create a layer for 'service' to manage the service layer 
+classes and easier to find as well. As i mainoined before we return the 
+'Boolean' name "isGoodForProgramming".In which we pass the 'laptop'
+object and in return whatever the configuration is And based on this 
+configuration we can return this will be good or bad. But at this point 
+we write 'return true'.
+  
+So, the code of 'LaptopService.java' given below.
+CODE:
+  package com.telusko.app.service;
+  import com.telusko.app.model.Laptop;
+    public class LaptopService {
+      public void addLaptop(Laptop lap){
+        
+      }
+      public boolean isGoodForProgramming(Laptop lap){
+        return true;
+      }
+    }
+But u got the idea right that service have the method where u can done 
+some processing part right but we don't want to worry about this method.
+we have to worry about 'addLaptop'.
+So, with the help of 'addLaptop' we are trying to add the data of 'laptop'
+in database. But this is your service class.

@@ -1,0 +1,54 @@
+Now let's work with the repository layer.Now if u want to work with
+database so, another class here 'LaptopRepository' and this class
+is responsible to connect with database. 
+We can write some method in 'laptopRepository' name 'save' and u take
+a 'laptop' object and in this we can write a JDBC steps. of course 
+we don't try in this video but latter on we done that.
+
+So, we can write a JDBC steps here. Don't write JDBC steps in the 
+'Service' class. Because it's the class have priority to connect this 
+database.
+CODE:
+     package com.telusko.app;
+     import com.telusko.app.model.Laptop;
+     public class LaptopRepository {
+      public void save(Laptop lap){
+       System.out.println("Saved this Database...");
+      }
+     }
+And we have all the 'CRUD' operations here we have 
+Create  Read  Update  Delete and what ever extra u have So, this
+is a class that u can done every thing.
+
+In the 'service' class  we need to call the method 'save' of repository.
+But the main question is How we call the 'save' method form 
+'Database' first we have to create the 'LaptopRepository'.
+CODE:
+     private LaptopRepository repo;
+Now i want to inject it of course we can use 'Setter' Injection but 
+here we use 'Field' Injection so, we inject 'repo' with the help of 
+'Autowired' now i just use 
+CODE:
+import com.telusko.app.LaptopRepository;
+import com.telusko.app.Laptop;
+import org.springframework.sterotype.Service;
+
+@Service
+public class LaptopService {
+ @Autowired
+ private LaptopRepository repo;
+ public void addLaptop(Laptop lap){
+ .repo.save(lap);
+ }
+ public boolean isGoodForProg(Laptop lap){
+ return true;
+ }
+}
+                     REPOSITORY ANNOTATION
+But if we run the error then it says 
+"'LaptopRepository' could not be found." on the top of this we have to
+write the annotation. As i maintoined before u can write '@Component'
+it will work.
+But As you know that we try to presnet 'LaptopRepository' class
+as 'Repositroy' so, instead of 'Component' or 'Service' we are going to
+use the '@Repository' annotation.

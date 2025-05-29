@@ -65,5 +65,18 @@ CODE:
 But u got the idea right that service have the method where u can done 
 some processing part right but we don't want to worry about this method.
 we have to worry about 'addLaptop'.
-So, with the help of 'addLaptop' we are trying to add the data of 'laptop'
-in database. But this is your service class.
+So, with the help of 'addLaptop' we are trying to add the data of 'laptop' in database. But this is your service class.
+
+But if u want to get it's object which annotations we were going to use here Because what we are doing in this we are saying that 
+'context.getBean(Laptop.service)' and this will not work if u don't have add 'Compoent' on the top of 'your service class'.
+   -------------------------------------------------------
+                      SERVICE ANNOTATION
+But as i maintoined before 'Add Component' is not the only option we have
+if we wanted to work with service class we also use '@Service' sterotype.
+Now 'Service' and 'Component' both does the same thing. They both say 
+it becomes the manage bean.
+If we see on 'Service' while clicking it will directly connected on
+'@Component'. it's just that u if u writing some documentation or 
+domain some language.
+It also help to understand what kind of classes u are working.
+But Again if u write add component u don't get error.

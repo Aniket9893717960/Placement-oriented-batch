@@ -149,3 +149,6 @@ it will belongs to 'Model'.
 
 So, u can see i moved service class to 'model' So, that means 
 we have to import the package at 'SpringJdbcExApplication'
+With the help of "Student s = new Student();" code but we don't
+want to manage object manually So, 
+We use 'Context' with the help of 'ApplicationContext'

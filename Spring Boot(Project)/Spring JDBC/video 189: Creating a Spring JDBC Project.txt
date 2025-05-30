@@ -147,4 +147,5 @@ everything in a proper package.
 So, let's say this belongs to a 'package'. which is already there
 it will belongs to 'Model'.
 
-So, u can see i moved service class to 'model'
+So, u can see i moved service class to 'model' So, that means 
+we have to import the package at 'SpringJdbcExApplication'

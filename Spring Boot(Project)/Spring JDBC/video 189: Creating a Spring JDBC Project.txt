@@ -146,3 +146,5 @@ You know one more thing. Let's follow the pattern where you store
 everything in a proper package.
 So, let's say this belongs to a 'package'. which is already there
 it will belongs to 'Model'.
+
+So, u can see i moved service class to 'model'

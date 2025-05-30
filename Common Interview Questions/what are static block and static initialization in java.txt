@@ -1,0 +1,45 @@
+In java, static blocks and static initialization are mechanisms used to
+initialize static data members of a class.
+      -----------------------------------------------------------
+                        Static Block?
+A static block is a block of code inside a class that is enclosed in static
+. It is executed only once, when the class is first loaded into memory
+before any object are created or any static methods/variables are accessed.
+   Syntax:
+public class MyClass {
+    static {
+        // static initialization code
+        System.out.println("Static block executed");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main method executed");
+    }
+}
+   Output:
+Static block executed  
+Main method executed
+
+
+                        Static Initialization?
+Static initialization refers to assigning values to static variables, either:
+1. Directly during declaration, or
+2. Using a static block if more complex logic is required.
+     Example:
+public class Example {
+    static int a = 10; // direct static initialization
+    static int b;
+
+    static {
+        // complex static initialization
+        b = a * 2;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
+     Output:
+     a = 10  
+     b = 20

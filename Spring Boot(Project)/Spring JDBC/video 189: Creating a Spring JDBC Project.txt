@@ -1,0 +1,41 @@
+So, let's start our journey of creating a project with "Spring MVC + H2"
+First we go to "SPRING INITIALIZER".
+i. write the project build tool is 'Maven'. 
+ii. Language "Java".
+iii. Spring Boot version '3.2.0'
+iv. let's say group id is "com.telusko". let's set the 'ArtifactId' as
+'SpringJDBCEx'.
+v. 'Description' of this project is 
+   "Demo project for Spring Boot and JDBC".
+vi. 'Packaging' i stick to 'jar'.
+vii. 'Version' i choose is '17'. Also suggest that u have to choose the
+     lartest LTS version.
+viii. Add Dependencies which we have required 
+      a. We need Spring JDBC when we search for 'JDBC' we got 'JDBC Api'
+         name.
+      b. we have to add for Database So, we search for 'H2'.
+ix. Then click on generate -> Unzip folder -> Open in intellij idea.
+
+After all this things when we actually open the 'pom.xml' file
+Now below is the dependencies which we added in 'SpringJDBCEx'.
+CODE:
+    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+Now we need some things like
+ i. we need a class which we are going to work with even before that 
+    i will make sure that 'SpringjdbcExApplication' will run properly or
+    not.

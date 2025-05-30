@@ -134,3 +134,15 @@ have any configuration for 'H2' because when we add 'H2' then it have
 some default stuff.
 i. It will give you connection pooling with the help of Hikari.
 ii. It will give u data source as well.
+iii. It will give you default database which you can work with.
+     And of course it will not give you table.
+
+             Let's see how Do we create tables there
+             And how do we create those layer?
+So, basically to make it work what i am going to do is let's say i
+want to store the student object.
+               Student s = new Student();
+You know one more thing. Let's follow the pattern where you store 
+everything in a proper package.
+So, let's say this belongs to a 'package'. which is already there
+it will belongs to 'Model'.

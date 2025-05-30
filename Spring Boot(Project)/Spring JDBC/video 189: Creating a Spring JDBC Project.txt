@@ -151,4 +151,39 @@ So, u can see i moved service class to 'model' So, that means
 we have to import the package at 'SpringJdbcExApplication'
 With the help of "Student s = new Student();" code but we don't
 want to manage object manually So, 
-We use 'Context' with the help of 'ApplicationContext'
+We use 'Context' with the help of 'ApplicationContext' equal
+to "SpringApplication.run" And here i can say "Context.getBean"
+In which i want the object of 'Student'.
+CODE:
+package com.aniket.SpringJDBCEx;
+
+import com.aniket.SpringJDBCEx.model.Student;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+@SpringBootApplication
+public class SpringJdbcExApplication {
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(SpringJdbcExApplication.class, args);
+		Student s = context.getBean(Student.class);
+	}
+}
+
+And since we have to work with multiple 'Students' it make sense 
+to make the scope as '@Scope("Prototype")' By default it's singleTon
+we have to make it 'prototype'.
+And now if you go back to "SpringJdbcExApplication" we add some data 
+here first i have say 'setRollNo' which is '101'. then 
+'setName' i will go for 'Navin'. For 'SetMarks' let's say '78'.
+
+It's a random no so, let's go with this no. I basically want to add 
+This Student details. So, whatever sort of object, I'm creating i want
+to add it, but the questions arries where this method we and?
+
+So, the problem is we are not creating a web application.So, 'Main'
+becomes your client So, how exactly this will going to interact with
+or which class we were going to interact?
+Of course we not directly interact with the repository layer. we have
+the layer in between which is 'service'.
+

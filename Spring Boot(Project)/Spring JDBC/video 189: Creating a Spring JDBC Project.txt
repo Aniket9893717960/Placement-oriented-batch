@@ -53,3 +53,22 @@ code u want but conecpts are important so i focusing on them.
 Ok so, first thing i want to done that i want to create the student class
 . 'Student' will have certain things right Just like i wanted to say 
 'Java Class' name 'Student'.
+Now this 'Student' have the data in the database as well. so, normally
+what happens u know when we create a table let's say if u want to store 
+the data about 'Student'.
+
+'Student' will have the table a rollNo, or a Martks if whatever u want to
+go with but let's say 'roll.No','Name' and 'marks' we have this 3 fields
+Now in those tables we have columns which have the 'column' name.
+And also u will be having multiple role can u connect table with the 
+class.
+
+Basically u can say that your class have basically similar to tables
+because class will have the class name and class will have certain 
+variables.
+If your class will have 3 columns. Your class will have 3 properties.
+Right 1st is 'roll No','Name' and 'Marks'.
+
+And every object of the class will be one row in your table. So, 
+if u create 10 objects for students imagine u have 10 rows.
+So, basically u can relate the class with the tables.

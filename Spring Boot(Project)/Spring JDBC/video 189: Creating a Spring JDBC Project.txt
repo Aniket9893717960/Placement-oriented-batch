@@ -72,4 +72,11 @@ Right 1st is 'roll No','Name' and 'Marks'.
 And every object of the class will be one row in your table. So, 
 if u create 10 objects for students imagine u have 10 rows.
 So, basically u can relate the class with the tables.
-So, i want the class in my table is above one
+So, i want the class in my table is above one.
+CODE:
+package com.aniket.SpringJDBCEx;
+public class Student {
+    private int rollNo;
+    private String Name;
+    private int marks;
+}

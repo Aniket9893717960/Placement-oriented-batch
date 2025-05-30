@@ -80,3 +80,57 @@ public class Student {
     private String Name;
     private int marks;
 }
+
+With this variables we also need 'getters' and 'Setters' for it.
+So, i say generate 'Getters' and 'Setters' for all 3 variables.
+then click on 'OK'.
+CODE:
+public int getRollNo() {
+        return rollNo;
+    }
+
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int marks) {
+        this.marks = marks;
+    }
+
+What if i also want to have a 2 string variables. I want to print the
+object. So, click on 'Generate' then i want the two string method
+for all this variables here.
+CODE:
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNo=" + rollNo +
+                ", Name='" + Name + '\'' +
+                ", marks=" + marks +
+                '}';
+    }
+
+Now i want 'Student' will be managed by Spring framework and since we 
+have talk about all those things. i will done quicker here and 
+initialize '@Component' as well.
+So, basically i make this object from the student class. For this
+bean class. So, i can create the object i add the value and 
+at last save the values in database.
+
+But the problem is how exactly we can create those layers. There we 
+have any configuration for 'H2' because when we add 'H2' then it have
+some default stuff.
+i. It will give you connection pooling with the help of Hikari.
+ii. It will give u data source as well.

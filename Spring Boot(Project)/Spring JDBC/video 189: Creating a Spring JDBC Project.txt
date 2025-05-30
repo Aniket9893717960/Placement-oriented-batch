@@ -72,3 +72,4 @@ Right 1st is 'roll No','Name' and 'Marks'.
 And every object of the class will be one row in your table. So, 
 if u create 10 objects for students imagine u have 10 rows.
 So, basically u can relate the class with the tables.
+So, i want the class in my table is above one

@@ -39,3 +39,17 @@ Now we need some things like
  i. we need a class which we are going to work with even before that 
     i will make sure that 'SpringjdbcExApplication' will run properly or
     not.
+
+Now the Question is which kind of 'Entity' we are going to wrok with 
+what we are trying to achieve here. So, the logic is not important we are
+here to learn about spring, JDBC  and Spring Boot.
+So, the logic is not important we are here to build the application for 
+'Student' management.
+
+let's say "adding student", "retrieving student","Delete Student" if u want SO, that's what we are doing here.
+If u want the complex example then your welcome here just write whatever
+code u want but conecpts are important so i focusing on them.
+
+Ok so, first thing i want to done that i want to create the student class
+. 'Student' will have certain things right Just like i wanted to say 
+'Java Class' name 'Student'.

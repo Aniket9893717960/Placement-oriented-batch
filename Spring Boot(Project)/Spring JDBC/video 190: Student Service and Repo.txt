@@ -8,4 +8,21 @@ called 'StudentService'. Basically in this i want a method which says
 They should belongs to that particular class And for that, what i will do is
 i will create the object for 'StudentService' in "SpringJdbcExApplication".
 Now instead of creating the object by overselves we should be asking the 
-context to give you the Bean
+context to give you the Bean for 'StudentService.class'.
+
+But this will not work because on 'StudentService', we are not using a
+annotation. So, which one we should use? so, of course we should use
+"@Component" but here i want to use '@Service' because this is a 
+'Service' class.
+
+Now if u go back to "@SpringJdbcExApplication" we simply say 
+"service.addStudent" but unfortunately we don't have this method in the 
+'service' class.
+See in the service class we have multiple methods Not just for storing 
+data in database because the actual code for data in database will be
+done in 'repository'.
+
+Apart from those methods for 'declutter' we have some more methods as 
+well.If u want to say :
+"Find a student who got a marks more than this or that or any processing
+you want to do on students."

@@ -1,0 +1,11 @@
+Now here we create 'StudentService' then u have to make sure that this class
+will belongs to different package let's say 'Service' package then we have to 
+also create that package.
+So, u can see we got the service package and now in that, we have a file
+called 'StudentService'. Basically in this i want a method which says
+'addStudent'.So, when we talk about this program method.
+
+They should belongs to that particular class And for that, what i will do is
+i will create the object for 'StudentService' in "SpringJdbcExApplication".
+Now instead of creating the object by overselves we should be asking the 
+context to give you the Bean

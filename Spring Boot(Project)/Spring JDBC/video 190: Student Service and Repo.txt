@@ -122,3 +122,147 @@ U can see 'Service' package doesn't have idea about what is happening in
 I don't know what is happening behind the scene. which database we 
 are working with, I have no idea. I have no idea what 'repo' has to 
 done".
+
+Now i want that 'StudentService' will give me a list all the student 
+data and for this we write some commands in 'SpringJdbcExApplication'.
+CODE:
+     List<Student> students = service.getStudents();
+     System.out.println(students);
+
+So, after adding the value i want to fetch all the data from database
+and print it here but again in the service we don't have this method
+So, let's create the method in 'Service' class.
+In which i ask to 'repo' to return 'repo.' in this we also use 'save'
+but 'save' return only one method at a time to resolve this problem 
+we use 'findAll' to get all the data. 
+Again i were trying to use all the methods of JPA So, that when u go 
+towards JPA You will find the same metod name. So, it will make much more sense, right?
+But we doesn't have 'findAll' method in 'repo' class then we will create
+it.
+
+Final Program of This class:
+                i. 'SpringJdbcExApplication.java' program
+package com.aniket.SpringJDBCEx;
+
+import com.aniket.SpringJDBCEx.model.Student;
+import com.aniket.SpringJDBCEx.service.StudentService;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import java.util.List;
+
+@SpringBootApplication
+public class SpringJdbcExApplication {
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(SpringJdbcExApplication.class, args);
+		Student s = context.getBean(Student.class);
+	    s.setRollNo(101);
+		s.setName("Navin");
+		s.setMarks(78);
+		StudentService service = context.getBean(StudentService.class);
+		service.addStudent(s);
+
+		List<Student> students = service.getStudents();
+		System.out.println(students);
+	}
+}
+           ii. 'Student.java' program
+package com.aniket.SpringJDBCEx.model;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("prototype")
+public class Student {
+    private int rollNo;
+    private String Name;
+    private int marks;
+
+    public int getRollNo() {
+        return rollNo;
+    }
+
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int marks) {
+        this.marks = marks;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNo=" + rollNo +
+                ", Name='" + Name + '\'' +
+                ", marks=" + marks +
+                '}';
+    }
+}
+            iii. 'StudentService.java' program
+package com.aniket.SpringJDBCEx.service;
+
+import com.aniket.SpringJDBCEx.model.Student;
+import com.aniket.SpringJDBCEx.repo.StudentRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class StudentService {
+    private StudentRepo repo;
+
+    public StudentRepo getRepo() {
+        return repo;
+    }
+    @Autowired
+    public void setRepo(StudentRepo repo) {
+        this.repo = repo;
+    }
+
+    public void addStudent(Student s){
+//      System.out.println("Added");
+      repo.save(s);
+  }
+
+    public List<Student> getStudents() {
+     return repo.findAll();
+    }
+}
+                iv. 'StudentRepo.java' Program
+package com.aniket.SpringJDBCEx.repo;
+
+import com.aniket.SpringJDBCEx.model.Student;
+import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Repository
+public class StudentRepo {
+
+    public void save(Student s) {
+     System.out.println("Added");
+    }
+
+    public List<Student> findAll() {
+        List<Student> students = new ArrayList<>();
+        return students;
+    }
+
+}

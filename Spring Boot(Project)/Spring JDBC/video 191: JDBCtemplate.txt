@@ -11,7 +11,18 @@ will get the values. So, what i will do here is, first of all, let me take
 "Console" to right top. I want my output to be here.
 
 So, what i will do is first of all 'Add the Student'? Now for this, we need
-JDBC template. So, what i will do is, I will just go back to "SpringRapo" 
+JDBC template. So, what i will do is, I will just go back to"SpringRapo" 
 and say 'private' and let's create a reference for "JDBCtemplate" and
 we'll say this name as jdbc itself.
 CODE:
+     private JdbcTemplate jdbc;
+
+U have different name as well Doesn't matter,but let's use jdbc here. And now for this particular variable we need to have getters and setters.
+CODE:
+    public JdbcTemplate getJdbc() {
+        return jdbc;
+    }
+
+    public void setJdbc(JdbcTemplate jdbc) {
+        this.jdbc = jdbc;
+    }

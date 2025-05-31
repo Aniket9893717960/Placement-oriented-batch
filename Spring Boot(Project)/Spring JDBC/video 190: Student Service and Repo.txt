@@ -61,3 +61,9 @@ think "addStudent" should be done on the next layer which is repository.
 So, what i will do is i create another class here And i will call as 
 "StudentRepo" of course u can say repository but i love to things
 short. And i want to keep this inside the 'repo' folder.
+                    -------------NOTE------------
+U can also say 'repo' as 'DAO' package.
+                    ---------------X-------------
+Now what i want to do is i want to have that methodb which is addStudent.
+So basically, first of all, if i want to use the repository, I want to 
+create repository here  i will sayed 'private repo' for this i need getter's and setter's

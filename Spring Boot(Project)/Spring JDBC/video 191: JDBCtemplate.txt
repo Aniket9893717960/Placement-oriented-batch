@@ -1,0 +1,17 @@
+Let's add JDBC template just because we want to store this data in database.
+See the thing is when a moment u add your 'H2' in your dependency, basically
+you get the H2 database and also the driver for it.
+
+So, it's time to use it and by default, it will have some default values
+and you don't have to actually configure anything. By default u get the 
+configuration. You just have to use the template to save data.
+
+Of course u want to customize it that's a different thing. But by default you
+will get the values. So, what i will do here is, first of all, let me take
+"Console" to right top. I want my output to be here.
+
+So, what i will do is first of all 'Add the Student'? Now for this, we need
+JDBC template. So, what i will do is, I will just go back to "SpringRapo" 
+and say 'private' and let's create a reference for "JDBCtemplate" and
+we'll say this name as jdbc itself.
+CODE:

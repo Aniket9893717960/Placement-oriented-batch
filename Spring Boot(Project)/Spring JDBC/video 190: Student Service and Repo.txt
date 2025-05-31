@@ -103,3 +103,22 @@ Where u will be using some methods of JPA.
 So, 'save' is one of the method. but unfortunately we don't have a save
 method here. Because we doesn't pass any object And in 'repo' we doesn't
 have 'save' method.
+CODE
+      package com.aniket.SpringJDBCEx.repo;
+
+import com.aniket.SpringJDBCEx.model.Student;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class StudentRepo {
+    public void save(Student s) {
+     System.out.println("Added");
+    }
+}
+U can see 'Service' package doesn't have idea about what is happening in
+'save' method of 'StudentRepo' class. It's Just saying
+
+"My work is to send data or call the method of repo, I'm doing it.
+I don't know what is happening behind the scene. which database we 
+are working with, I have no idea. I have no idea what 'repo' has to 
+done".

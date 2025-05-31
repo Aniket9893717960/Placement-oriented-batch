@@ -9,6 +9,8 @@ They should belongs to that particular class And for that, what i will do is
 i will create the object for 'StudentService' in "SpringJdbcExApplication".
 Now instead of creating the object by overselves we should be asking the 
 context to give you the Bean for 'StudentService.class'.
+CODE:
+     StudentService service = context.getBean(StudentService.class);
 
 But this will not work because on 'StudentService', we are not using a
 annotation. So, which one we should use? so, of course we should use
@@ -26,3 +28,11 @@ Apart from those methods for 'declutter' we have some more methods as
 well.If u want to say :
 "Find a student who got a marks more than this or that or any processing
 you want to do on students."
+But to keep it simple i want just to add Student with the help of 
+"service.setStudent(s);" command.
+
+So, i will say create a method called 'addStudent' And at this point
+I will simply print Added. That's all Nothing fancy. Just say added
+student as of now. So, i will say create a method called 'addStudent'.
+
+And at this point we just simply print 'Added'.

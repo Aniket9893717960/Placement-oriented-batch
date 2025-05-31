@@ -26,3 +26,52 @@ CODE:
     public void setJdbc(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
     }
+Also i want 'setJdbc' to be "autowired" Now who is responsible to create 
+an instance for this "Spring" will do it u don't have to worry about it.
+So, behind the scene, it'll use DataSource to add data and it'll also
+instantiate the JDBC variable or the object. let's say "Autowired".
+CODE
+     @Autowired
+     public void setJdbc(JdbcTemplate jdbc) {
+        this.jdbc = jdbc;
+    }
+Nothing fancy we just created one particular reference here  for 'JDBC' 
+template. Now by using this template, i want to save the data, right?
+So, instead of saying 'added' in "save" method of "StudentRepo".
+
+What i will do is, let's use 'jdbc.'. Now, if you can see, we have lot
+of methods here. Now if you know JDBC, the actual concept of Java 
+Database Connectivity and if you want to execute a query, we have two 
+options or infact 3 but we talk about 2.
+
+So, we have execute update and we have execute query. Now, when you want
+to update data like inserting, updating, deleting, that's where we use 
+execute update.
+
+And when you want to file a select query, we use execute query.
+Now in this case, we'll make the method shorter.So, instead of 
+using "execute update" we are going to use only update.
+Which is actually execute update behind the scene.
+CODE:
+  public void save(Student s) {
+     //System.out.println("Added");
+     jdbc.update();
+    }   
+But we have to pass some parameters in "Jdbc.update()". if we click
+on "CTRL+Space" u can see there are multiple parameters.
+U can see we have multiple options here.
+So, we are going to use one thing where you pass a query. remember 
+when we talk about "prepare statement" we use question marks there.
+
+So, the same thing we can done here So, i would say write below code.
+Code:
+String sql = "insert into student (rollno, name, marks) values (?,?,?)"; 
+
+This are the 3 variables we have and let's add values. Now, since
+we don't have values at this point, i will put question marks there
+So, in total we need 3 question marks, right?
+So, in the prepared statement, we do the same thing. in the 
+'jdbc.update', you just have to pass this query.
+
+But u don't think we have some question marks which we have to replace?
+So, this question mark will replaced by the actual values.

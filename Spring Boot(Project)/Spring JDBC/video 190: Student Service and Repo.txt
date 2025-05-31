@@ -34,5 +34,22 @@ But to keep it simple i want just to add Student with the help of
 So, i will say create a method called 'addStudent' And at this point
 I will simply print Added. That's all Nothing fancy. Just say added
 student as of now. So, i will say create a method called 'addStudent'.
-
 And at this point we just simply print 'Added'.
+CODE
+package com.aniket.SpringJDBCEx.service;
+
+import com.aniket.SpringJDBCEx.model.Student;
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudentService {
+  public void addStudent(Student s){
+      System.out.println("Added");
+  }
+}
+
+Let's see till this point things are working out So, i always believe 
+that when you do something. If we run this program then we got an 
+Excaption name:
+   "There is no Scope registered from scope name 'Prototype'"
+It look like we done a mistake while writing "Prototype".

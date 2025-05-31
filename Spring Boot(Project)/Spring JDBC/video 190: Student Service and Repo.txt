@@ -66,4 +66,34 @@ U can also say 'repo' as 'DAO' package.
                     ---------------X-------------
 Now what i want to do is i want to have that methodb which is addStudent.
 So basically, first of all, if i want to use the repository, I want to 
-create repository here  i will sayed 'private repo' for this i need getter's and setter's
+create repository here  i will sayed 'private repo' for this i need getter's and setter's And since i want 'setRepo' as autowired 
+i will declared it.
+CODE:
+package com.aniket.SpringJDBCEx.service;
+
+import com.aniket.SpringJDBCEx.model.Student;
+import com.aniket.SpringJDBCEx.repo.StudentRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudentService {
+    private StudentRepo repo;
+
+    public StudentRepo getRepo() {
+        return repo;
+    }
+    @Autowired
+    public void setRepo(StudentRepo repo) {
+        this.repo = repo;
+    }
+
+    public void addStudent(Student s){
+      System.out.println("Added");
+  }
+}
+But if u make it work then have to add '@Repository' annotation
+at the top of "ServiceRepo". And instead of write "Added" in
+"addStudent" i write 'repo' because it's respojnsible to store data
+in database. I will u se the method like save. of course u can use any 
+method name But slowly we are moving towards Spring Data JPA.

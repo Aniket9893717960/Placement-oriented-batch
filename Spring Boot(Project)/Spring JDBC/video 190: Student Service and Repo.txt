@@ -52,4 +52,12 @@ Let's see till this point things are working out So, i always believe
 that when you do something. If we run this program then we got an 
 Excaption name:
    "There is no Scope registered from scope name 'Prototype'"
-It look like we done a mistake while writing "Prototype".
+It look like we done a mistake while writing "Prototype". Then,
+again we run the program and we got output.
+
+So, at least we are able to call this 'addStudent' but then don't you 
+think "addStudent" should be done on the next layer which is repository.
+
+So, what i will do is i create another class here And i will call as 
+"StudentRepo" of course u can say repository but i love to things
+short.

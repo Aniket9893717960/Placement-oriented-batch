@@ -95,5 +95,11 @@ public class StudentService {
 But if u make it work then have to add '@Repository' annotation
 at the top of "ServiceRepo". And instead of write "Added" in
 "addStudent" i write 'repo' because it's respojnsible to store data
-in database. I will u se the method like save. of course u can use any 
+in database. 
+
+I will u se the method like save. of course u can use any 
 method name But slowly we are moving towards Spring Data JPA.
+Where u will be using some methods of JPA.
+So, 'save' is one of the method. but unfortunately we don't have a save
+method here. Because we doesn't pass any object And in 'repo' we doesn't
+have 'save' method.

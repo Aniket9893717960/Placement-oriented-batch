@@ -1,0 +1,7 @@
+Now it's time to create the schema? So, how did u create the schema?
+So, normally when you have a DBMS. let's say a "Postgres" or "MySql",
+basically u can open that software and you can write the query to 
+create this schema. And then it will work right.
+
+but since we are using 'H2' and we are not using a web application to
+get the H2 console what you can do is, if you want to get a schema,

@@ -96,3 +96,7 @@ Ok so we got an error after running the program. let's see what the
 Error is, it says the table "STUDENT" not found.oh it's weird.
 Actually u know We do have the DBMS, which is H2. we do have the database
 but we don't have a table.
+We have not asked our H2 to create a table for us. that's something we 
+are missing So, how do we create that table. 
+
+let's see in next video

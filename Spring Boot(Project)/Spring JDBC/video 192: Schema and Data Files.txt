@@ -27,6 +27,12 @@ South india names.
  iii. Now i will say marks int.And that's it. So, basically we need 
 this three variables here. So, schema is done, but as i mentioned,
 we also went some data.
+CODE in 'schema.sql':
+create table student {
+ rollno int primary key,
+ name varchar(50),
+ marks int
+}
 
 So, we can have that data in the 'data.sql' file.
 How do you d=get the data? So, you don't have to maintoined the json
@@ -34,3 +40,27 @@ file. You basically have to mention your inset statement.
 So, i would say insert into student for three values,
 
 For 3 values "rollno,name,marks and i will say values".
+And in values we have to specify the no. So, let's see what i'm sending
+data in this.
+CODE in 'data.sql':
+          insert into student (rollno, name, marks) values
+
+So, I'm sending "101 Navin and 78" as one object from 
+"SpringJdbcExApplication" i change rollNo from '101' to '104'
+because i want to have at least three data before this.
+Then i  write all the data.
+
+So, i will satrt with 101. So, this is 101 at 'data.sql'.
+Name is let's say "kiran". And then the value is let's say 79.
+So, we need 2 more times two command.
+CODE 
+insert into student (rollno, name, marks) values (101, "Kiran", 79);
+insert into student (rollno, name, marks) values (102, "Harsh", 68);
+insert into student (rollno, name, marks) values (103, "Sushil", 82);
+
+What i am expecting is H2 will load the schema and data. Let's run
+this. Okay I hope it'll work. Okay, we got some more errors.
+It says column given not found. Okay, maybe i made a mistake there.
+So, i will back to 'data.sql'.
+
+So, where exactly I'm getting this.

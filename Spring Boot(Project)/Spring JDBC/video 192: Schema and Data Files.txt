@@ -29,4 +29,6 @@ this three variables here. So, schema is done, but as i mentioned,
 we also went some data.
 
 So, we can have that data in the 'data.sql' file.
-How do you d=get the data? So, you don't have to 
+How do you d=get the data? So, you don't have to maintoined the json
+file. You basically have to mention your inset statement.
+So, i would say insert into student for three values,

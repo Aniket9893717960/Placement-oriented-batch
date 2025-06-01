@@ -20,4 +20,13 @@ And then in the round brackets you mention your fields, your columns
 So, what are the columns we needed:
  i. the first column i need is rollno and this is of type 'int'.
 And i want this to be primary key.
- ii. Next is name, which is varchar
+ ii. Next is name, which is varchar let's say the size i want to
+have is 50. And normally, we can have 10,20 maybe 30.
+But then there are certain names which are very big, especially
+South india names.
+ iii. Now i will say marks int.And that's it. So, basically we need 
+this three variables here. So, schema is done, but as i mentioned,
+we also went some data.
+
+So, we can have that data in the 'data.sql' file.
+How do you d=get the data? So, you don't have to 

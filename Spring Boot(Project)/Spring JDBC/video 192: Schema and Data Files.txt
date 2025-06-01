@@ -63,4 +63,5 @@ this. Okay I hope it'll work. Okay, we got some more errors.
 It says column given not found. Okay, maybe i made a mistake there.
 So, i will back to 'data.sql'.
 
-So, where exactly I'm getting this.
+So, where exactly I'm getting this. which the file 'data.sql'
+We check this is the problem with double codes.

@@ -5,3 +5,19 @@ create this schema. And then it will work right.
 
 but since we are using 'H2' and we are not using a web application to
 get the H2 console what you can do is, if you want to get a schema,
+In the resource folder you can actually create a schema. 
+
+How do we done that is very simple 'Right-click' and say New -> file and 
+name this as "schema.sql".                               ---    ----
+This where you have to write this schema. In fact, i will create two tables
+here or two files in "resources".
+one for data as well so, we create 'data.sql'. let's minimize this 
+So, we got two files 'schema.sql' and 'data.sql'.
+
+How do we get a schema in SQL? it's very simple. We have to create a 
+table when we use to table name Which is "Student" in this case.
+And then in the round brackets you mention your fields, your columns
+So, what are the columns we needed:
+ i. the first column i need is rollno and this is of type 'int'.
+And i want this to be primary key.
+ ii. Next is name, which is varchar

@@ -1,0 +1,7 @@
+Ok so Spring JDBC works. and the way we have done is we have used H2
+as a database, which is a in-memory database. But what if you want to 
+use same external database.
+let's say you want to use MySql or PostgreS, how we do it? So, what happens
+is when you talk about H2, because we also need the dataSource there.
+Now for H2 since it is a embedded database,It knows where H2 is,
+

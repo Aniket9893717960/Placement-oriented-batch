@@ -87,3 +87,40 @@ And saving it in 'student'.
 And you can see 'mapRow', written type is 'Student'. So, i can simply 
 return 's' here. So, what 'mapRow' will do is it will fetch data from the
 'ResultSet'.
+It will fetch data from 'resultSet' and say hey what u wanna do with this
+What we are doing is taking the data adding it to the student object and 
+returning it.
+
+So, this is the object basically we have to pass the query. So, as i 
+mentioned , you have to pass two things and that's what we are doing at 
+below code:
+CODE:
+      jdbc.query(sql, mapper);
+
+But this query returns you the list of values. So, if you click on query,
+you can say it returns the list of the type. So, the type is 'Student',
+So, it returns the list of students and that's what we are returning, 
+right?
+
+So, i can say return jdbc.query. So, this will returns the list of 
+students and that's what we are returning.
+At last the Final code given below to fetch data.
+CODE in 'StudentRepo':
+public List<Student> findAll(){
+        String sql = "select * from student";
+        RowMapper<Student> mapper = new RowMapper<Student>(){
+            @Override
+            public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
+                Student s = new Student();
+                s.setRollNo(rs.getInt("rollno"));
+                s.setName(rs.getString("name"));
+                s.setMarks(rs.getInt("marks"));
+                return s;
+            }
+        };
+        return jdbc.query(sql, mapper);
+    }
+
+Such a lengthy code but it's better than what we have done with the 
+normal JDBC, right? And I hope this will work. So, let's run this and i 
+hope it will work.

@@ -124,3 +124,18 @@ public List<Student> findAll(){
 Such a lengthy code but it's better than what we have done with the 
 normal JDBC, right? And I hope this will work. So, let's run this and i 
 hope it will work.
+But we can also use this as lambda interface below is more optimized 
+code:
+CODE IN 'StudentRepo':
+
+public List<Student> findAll(){
+    String sql = "select * from student";
+    RowMapper<Student> mapper = (rs,rowNum) -> {
+            Student s = new Student();
+            s.setRollNo(rs.getInt("rollno"));
+            s.setName(rs.getString("name"));
+            s.setMarks(rs.getInt("marks"));
+            return s;
+    };
+    return jdbc.query(sql, mapper);
+}

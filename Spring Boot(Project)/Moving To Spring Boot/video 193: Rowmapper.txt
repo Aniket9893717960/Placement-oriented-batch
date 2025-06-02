@@ -1,0 +1,32 @@
+So, now let's fetch the data which you are storing Now basically to do that
+we have to add the code in the findAll.So, basically this is not what we 
+want now SO, we replace 'findAll' old data with new.
+OLD CODE in 'StudentRepo':
+  public List<Student> findAll(){
+    List <Student> student = new ArrayList<>();
+    return student;
+  }
+New CODE Now we construct after remove it SO, basically when u use a query So,
+first of all, let's use a query.
+  Sting sql = "Select * from student";
+               Now how do you fetch all data from database or from the 
+table. You say "Select * from student". And now i went to execute this
+query. So, whenever you use a select query in JDBC. we have to execute
+a method called execute query.
+
+But here, if you say jdbc, we don't have execute query, but we have a 
+query. Now query takes two parameters. 
+  first the actual query, which is sql in this case,
+  second build the object of "Rowmapper".
+
+So, if u go to the query u have allot of options in which u have to choose
+the first one is string, the sql.Second one is 'Rowmapper', basically you 
+can fetch data from you result set.
+If u remember in JDBC, whenever you file a query, a select query,u get a 
+'ResultSet'.In this result set you have all your data. Now from this 
+resultSet, you get one by one data and 'RowMapper will help you to fetch 
+  that data' from the Result Set.
+
+So, let's use the 'RowMapper' so, what exactly is 'RowMapper'.IN this u
+have to specify the type of 'student' because that's what you're working 
+with and let's say this is mapper = new.

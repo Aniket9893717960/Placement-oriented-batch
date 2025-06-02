@@ -31,4 +31,21 @@ So, let's use the 'RowMapper' so, what exactly is 'RowMapper'.IN this u
 have to specify the type of 'student' because that's what you're working 
 with and let's say this is mapper = new.
 
-Okay. the thing is, is it a class or the interfaces
+Okay. the thing is, is it a class or the interfaces? Let's check that
+first. if you click here, oh, it's an interface and the thing is this is
+a functionInterface. That means we can use lambda expression as well.
+
+If i want to make this work I have to say new RowMapper.And basically we 
+have to implement this method, which is mapRow. If you can see,
+Now 'MapRow' will take two parameters.
+CODE:
+     public List<Student> findAll(){
+        String sql = "select * from student";
+        RowMapper<Student> mapper = new RowMapper<Student>(){
+          @Override
+   public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
+      return null;
+          }
+        };
+       jdbc.query(sql, )
+     }

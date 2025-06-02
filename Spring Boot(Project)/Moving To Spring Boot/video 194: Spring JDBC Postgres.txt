@@ -16,3 +16,35 @@ to change it. So, i would say update i should done that when  i was
 replacing '69' to '71'.
 
 I will setting the values but any way, i'll just file update query
+Now we don't have the use of 'schema.sql' and 'data.sql'. And 
+now we have to perform some changes in remaining files as well.
+
+I doesn't change anything from the 'repo' package. Even if you want to
+switch your DBMS, we don't have to change our 'repo', because now where 
+we are saying, hey, this is for SQL, MySql, Postgres, H2.
+
+Now where we have maintoined that. So, no to change here. Do we need to 
+change our class, our service class? Ans) No.
+Do, we change our 'Main.class' of course not because of same reasons.
+
+The only thing we have to change is your 'pom.xml'. in fact we have to 
+chnage two files, but we will started from 'pom.xml'. Now in 
+'pom.xml' we have to make sure that we are not using 'H2' anymore
+So, i will comment below commands.
+CODE in 'pom.xml':
+    <dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+So, i don't want H2Dependency. So, what i want is 'MySql'.Now we make 
+sure that we don't have 'H2' in your dempendency. you have 'MySql'.
+Let's see if that happens so, i see if it expands by external libraries.
+U can see i do have 'mysql' here.
+
+So, our job is done we have added 'Postgre' now But it will work
+let's see what error will u get if we right click and run this program.
+if we expand the error name "Application Failed to start". but why?
+
+It says the "Url" of DataSource is not specified.

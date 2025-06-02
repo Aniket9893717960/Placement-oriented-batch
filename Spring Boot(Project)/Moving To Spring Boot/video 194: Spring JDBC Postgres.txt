@@ -5,3 +5,14 @@ let's say you want to use MySql or PostgreS, how we do it? So, what happens
 is when you talk about H2, because we also need the dataSource there.
 Now for H2 since it is a embedded database,It knows where H2 is,
 
+But when u talk about external DBMS it will not work So, let's see
+So, in my machine i already have a MySql database. It doesn't matter
+which DBMS u have, you just have to change something,
+Some configuration to make it work.
+
+So, whatever u comfortable with, so, let me open MySQL And for that 
+I am using 'Workbench' because that's what we have data in H2, i went
+to change it. So, i would say update i should done that when  i was 
+replacing '69' to '71'.
+
+I will setting the values but any way, i'll just file update query

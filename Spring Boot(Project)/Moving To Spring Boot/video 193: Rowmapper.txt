@@ -30,3 +30,5 @@ resultSet, you get one by one data and 'RowMapper will help you to fetch
 So, let's use the 'RowMapper' so, what exactly is 'RowMapper'.IN this u
 have to specify the type of 'student' because that's what you're working 
 with and let's say this is mapper = new.
+
+Okay. the thing is, is it a class or the interfaces

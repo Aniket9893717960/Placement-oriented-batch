@@ -49,3 +49,41 @@ CODE:
         };
        jdbc.query(sql, )
      }
+i. Is the 'ResultSet' that's what we you get from executing the query
+and then the rowNum, So, what it simply says is,
+"Hey, you know i have a method called mapRow." the job of 'mapRow' is to
+take one row at a time from the result set and give it to u.
+Now what you want to do, so when i say you,
+
+DEFINATION OF MAPROW: it will give u one row at a time or one particular 
+data and object at a time from the resultset.
+
+Now this rowNum is something which you mapRow uses behind the scene. if u
+want to use it, you can but we'll not be using this. We'll only you be
+using the result set. And we will be getting one row at a time, right?
+So, how do we use it?
+
+So, i went to fetch data from the resultSet. If i say 'rs.' you can say
+we have some methods like getIn or getString. We have use the same thing 
+in JDBC. So, if u went to use it and store it somewhere,
+i. we create a student object. with a "Student = new Student();" And then
+i can set the value for 'Student'.
+
+We can set the value for 'Student' let's say 'setRollNo' but this 
+'setRollNo' will be coming from the result set. So, i can say 
+'rs.getInt' because it's of type 'Integer', And you can specify the
+column no. , column name.
+
+I will specify the column name here. I will say rollno. and you have
+to do the same thing for other methods as well. So, i say 'setName'
+'rs.' 'getString' And we have to specify the column nane which is name
+in this case.
+
+And then we have to say 's.setMarks' which is coming from resultSet again
+then i would sey 'getin' because the type of marks is 'int', Then i can
+specify marks. So, basically u are fetching data from the result set.
+And saving it in 'student'.
+
+And you can see 'mapRow', written type is 'Student'. So, i can simply 
+return 's' here. So, what 'mapRow' will do is it will fetch data from the
+'ResultSet'.

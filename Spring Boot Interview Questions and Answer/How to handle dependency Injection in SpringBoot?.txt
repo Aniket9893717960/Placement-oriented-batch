@@ -48,3 +48,13 @@ CODE:
    return new MyService();
   }
  }
+
+3. Dependency Resolution
+ Spring Boot scans components in the same package/subpackage as the main
+ class(@SpringBootApplication).
+
+ To scan external packages:
+CODE:
+ @SpringBootApplication(scanBasePackages = 
+                             {"com.example.app","com.example.lib"})
+

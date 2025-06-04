@@ -1,0 +1,10 @@
+Yes, i have hands on experience working with java, Spring framework, and 
+Spring Boot to develop robust and scalable application. Here's a brief 
+overview of my expertise:
+
+Java : Strong proficiency in Core Java (OOP, Collections, Multithreading,
+       Streams, Lambda Expressions) and Java 8+ features.
+
+Spring frameworks: Experience with Spring Core, Spring MVC, Spring Data JPA,
+                   Spring Security and Spring AOP for building enterprise -
+                   grade applications.

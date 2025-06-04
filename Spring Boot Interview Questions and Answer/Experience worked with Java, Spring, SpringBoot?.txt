@@ -8,3 +8,13 @@ Java : Strong proficiency in Core Java (OOP, Collections, Multithreading,
 Spring frameworks:Experience with Spring Core, Spring MVC, Spring Data JPA,
                    Spring Security and Spring AOP for building enterprise -
                    grade applications.
+
+Spring Boot: Developed  multiple Restful APIs and microservices using 
+             Spring Boot, leveraging features like auto-configuration
+             embedded servers(Tomcat), and Actuator for monitoring.
+
+Database Integration: Worked with Hibernate/JPA for ORM and connected
+                      application to MySQL, PostgreSQL and MongoDB.
+
+Additional Tools: Used Maven/Gradle, Docker, Swagger/OpenAPI and 
+                  Postman for development testing and deployment

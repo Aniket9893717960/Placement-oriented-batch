@@ -1,0 +1,50 @@
+Spring Boot leverages the Spring framework's inversion of Control(loC)
+container to manage dependencies automatically. Here's how it works:
+
+1. Core Mechanisms:
+  i) @Autowired Annotation:
+    Spring Boot Automatically injects dependencies where needed.
+CODE:
+    @Service
+    public class UserService {
+      @Autowired
+      private UserRepository userRepo;
+    }
+
+  ii) Constructor Injection (Recommended):
+  Preferred for immutability and testability. Spring Boot implicitly
+  injects dependencies of a class has a single constructor.
+CODE:
+    @Service
+    public class UserService {
+      private final UserRepository userRepo;
+      public UserService(UserRepository userRepo){
+       this.userRepo = userRepo;
+      }
+    }
+
+  iii) Setter Injection:
+ Used for optional Dependencies.
+CODE:
+    @Service
+    public class UserSercice {
+     private UserRepository userRepo;
+     @Autowired
+     public void setUserRepo(UserrRepository userRepo){
+       this.userRepo = userRepo;
+     }
+    }
+
+2. Key Annotations:
+   @Component: Generic stereotype for Spring - managed beans.
+   @Service, @Repository, @Controller : Specialized annotations for layers
+                                        (business, persistence, web).
+   @Configuration + @Bean: Programmatically define beans in config classes.
+CODE:
+ @Configuration
+ public class AppConfig {
+  @Bean
+  public MyService myService(){
+   return new MyService();
+  }
+ }

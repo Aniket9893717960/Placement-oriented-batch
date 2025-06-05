@@ -58,3 +58,21 @@ CODE:
  @SpringBootApplication(scanBasePackages = 
                              {"com.example.app","com.example.lib"})
 
+4. Best Practices
+* Use Constructor Injection (ensures mandatory dependencies, avoids
+ "NullPointerException").
+* Avoid "@Autowired" on fields (Makes testing harder).
+* Profile - specific beans with "@Profile("dev")" for environment-based
+  DI.
+* Use "@Qualifier" to resolve conflicts when multiple beans of the same
+  type exist.
+CODE:
+     @Autowired
+     @Qualifier("mysqlDataSource")
+     private DataSource dataSource;
+
+5. Advanced Custom DI
+ * @Primary: Prioritize a bean when multiple candidates exist.
+ * @Lazy: Delay bean initialization until first use.
+ * @Conditional: Conditioanlly register beans (e.g., based on 
+   properties).

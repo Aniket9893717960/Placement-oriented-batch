@@ -76,3 +76,29 @@ CODE:
  * @Lazy: Delay bean initialization until first use.
  * @Conditional: Conditioanlly register beans (e.g., based on 
    properties).
+
+                   EXAMPLE FLOW:
+ 1. Define a Dependency:
+ CODE:
+  @Repository
+  public class UserRepository{ ... }
+
+ 2. Inject It:
+ CODE:
+  @Service
+  public class UserService {
+   private final UserRepository userRepo;
+   public UserService(UserRepository userRepo){
+    this.userRepo = userRepo; // Injected by Spring
+   }
+  }
+
+ 3. Spring Boot Autowires Them Automatically.
+
+                  WHY IT MATTERS:
+Loose Coupling: Classes depend on abstractions (interfaces), not 
+                concrete implementations.
+Testability: Easily mock dependencies in unit tests (e.g., using 
+             "Mockito").
+Modularity: Swap implementations (e.g., "MySQLRepository" -> 
+            "MongoRepository") without code changes.

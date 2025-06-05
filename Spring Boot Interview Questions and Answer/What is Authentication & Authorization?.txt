@@ -1,0 +1,45 @@
+1. Authentication (Who are you)?
+ Authentication verifies a user's identity
+ (e.g., username/password, tokens, or biometrics).
+
+ i. Spring Boot Tools for Authentication:
+  a. Spring Security: Default framework for securing Spring Boot apps.
+  b. OAuth2: for token-based auth (e.g., Google/Facebook login).
+  c. JWT (JSON Web Token): Stateless authentication for APIs.
+  d. Basic Auth: Simple username/password via HTTP headers.
+
+ Example Flow:
+  a. User Submits credentials (e.g., /login).
+    Login Request (HTTP POST)
+    Http CODE:
+     POST /login HTTP/1.1
+     Content-Type: application/json
+
+     {
+         "username": "admin",
+         "password": "password123"
+     }
+  b. Spring Security validates credentials against a UserDetailsService.
+Below Is the code "SPRING SECURITY" uses this to load user data from a 
+database.
+SPRING SECURITY CODE:
+@Service
+public class CustomUserDetailsService implements UserDetailsService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+
+        return new org.springframework.security.core.userdetails.User(
+                user.getUsername(),
+                user.getPassword(),  // Should be BCrypt-encoded
+                user.getAuthorities() // E.g., ROLE_ADMIN, ROLE_USER
+        );
+    }
+}
+  c. If valid, a session or token (JWT) is generated.
+

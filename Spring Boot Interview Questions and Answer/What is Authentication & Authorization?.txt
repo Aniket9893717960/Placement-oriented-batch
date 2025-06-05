@@ -22,7 +22,7 @@
   b. Spring Security validates credentials against a UserDetailsService.
 Below Is the code "SPRING SECURITY" uses this to load user data from a 
 database.
-SPRING SECURITY CODE:
+Step 1: SPRING SECURITY CODE:
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
@@ -41,5 +41,8 @@ public class CustomUserDetailsService implements UserDetailsService {
         );
     }
 }
+   step 2: Configure Security(SecurityConfig) CODE:
+
+    
   c. If valid, a session or token (JWT) is generated.
 

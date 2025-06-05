@@ -78,4 +78,9 @@ CODE FOR "application.properties":
                    spring.datasource.url
 
 When u wrok with postgres and any jdbc it start with 
-"jdbc:postgresql://localhost:5432"
+"jdbc:postgresql://localhost:5432" And depend upon your DBMS, 
+you can change that. And then u have to maintoined your Database
+name.
+Database name for us is "aniketdb1", so just use that. So, that's the 
+first property which you have assigned. Let's skip here, Next is a 
+username.

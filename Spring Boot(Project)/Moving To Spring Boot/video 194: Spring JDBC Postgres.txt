@@ -47,4 +47,35 @@ So, our job is done we have added 'Postgre' now But it will work
 let's see what error will u get if we right click and run this program.
 if we expand the error name "Application Failed to start". but why?
 
-It says the "Url" of DataSource is not specified.
+It says the "Url" of DataSource is not specified. because when we used
+like embedded database(like H2, Derby) we got all the configuration
+and it works by default.
+But since we are not using H2, we are using a external database, we 
+have to set this URL.
+
+Now, if you remember when we talked about JDBC, normal JDBC, at that 
+point, we have to configure certain things. we have to mention the URL,
+username, password and driver. 
+Remember the same thing you'll be doing here, but how? of course I don't
+want to change my 'repo' class because it will not make any sense.
+
+If u want an extra configuration then you can use XML configuration, a
+separate file. U can create a bin for DataSource, or you can use the
+configuration class to achieve that. 
+
+The simple way is go to your resources. there's one file called 
+"application.properties". So, if you wanted to specify some properties,
+mention that here. As soon as your application loads, it'll look at this
+file. By saying ,okay, I can see some sonfiguration there, I can see some
+properties set.let me use them:
+
+So, we can change the properties. So, what are the properties we have to 
+change?
+1. we have to change URl, So by default, the URL when we had H2. was for
+the H2 database, but now we have to change it. But what is this URL?
+So, URL belongs to "spring.datasource.url".
+CODE FOR "application.properties":
+                   spring.datasource.url
+
+When u wrok with postgres and any jdbc it start with 
+"jdbc:postgresql://localhost:5432"

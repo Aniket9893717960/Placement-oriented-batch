@@ -47,4 +47,24 @@ request, process the request and give back to the client.
 
 Now when you say give back something to the client in nowadays we are 
 talking about "DATA", only the data.
-May be it is possible that the front end which 
+May be it is possible that the front end which you are building for a
+web, it is done with the help of react, angular or a vanilla JS.
+
+Important is the back end will send the JSON data to the client. And what
+if clint wants to send data? Of course client can send data in the JSON
+format.
+
+same goes for mobile application. So if a mobile want to interact with 
+the server, let's say if you want to check the current score. So, 
+whatever sports you love and if you're watching a particular game and if
+you don't have a time to watch a game.
+
+But if you want to get this code, you can take your mobile phone out,
+open the application now. This app will have the layout. what you 
+get from the server is the data.
+
+That means we have to generate that data from the server. Maybe this data
+is coming from the database or this data is coming from some other 
+server. Right it is possible.
+
+Basically all this data passing is happening with the help of JSON data.

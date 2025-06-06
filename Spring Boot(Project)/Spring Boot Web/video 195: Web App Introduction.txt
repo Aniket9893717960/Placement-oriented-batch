@@ -1,0 +1,13 @@
+In this module, we'll talk about web application.
+when we talk about spring as a framework, it has multiple project inside it.
+So, it's a umbrella for multiple projects.
+And one of the project, in fact, there are multiple projects and deals with
+web application. So, if u wanted to build a web application, u can use 
+something called Spring web.
+
+And otherwise, if u don't want to use Spring boot, we also have spring MVC 
+there. Now why exactly we need to build web apps? Again, that's a weird
+question, right? Because we all know the answer.
+
+the world is working on web applications. of course, you do have mobile 
+applications, 

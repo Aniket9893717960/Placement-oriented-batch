@@ -25,4 +25,26 @@ same server.
                    SERVER
 And we are here to focus on how do you build that server? because see,
 if you talk about a client, it can be a mobile or a desktop, maybe on 
-the browser
+the browser you will be having a page up. On that page you want to show 
+some data, right?
+
+See, having that page is not difficult, but getting that data is 
+difficult because every user will have the different data.
+Now I'm talking about "Dynamic Content" here, but let's say if you
+want to build a "Static Content" for all the users over the world,
+you can do that with the help of HTML, CSS and you will get that 
+beautiful page there.
+
+But if you want to make it dynamic, that's where you need a beck end
+programming. And one of it is 'Java' So, here we want to make sure that
+every time you get a request from you client and goes to the server,
+basically there should be something on the server which will accept the
+request, process the request and give back to the client.
+
+     ---------                -----------
+       SERVER   <-----------     CLIENT
+     ---------  ------------> -----------
+
+Now when you say give back something to the client in nowadays we are 
+talking about "DATA", only the data.
+May be it is possible that the front end which 

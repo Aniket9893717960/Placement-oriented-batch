@@ -68,3 +68,15 @@ is coming from the database or this data is coming from some other
 server. Right it is possible.
 
 Basically all this data passing is happening with the help of JSON data.
+Now the question arise How do you build this server in Java. And that's 
+where we got something called "SERVLETS".
+
+"As the name suggests we have 'serv' and 'let'. So, basically these are 
+the components the server components which will process. An in fact it 
+will accept the request. It will process the request, it will send data
+back to the client."
+
+Now basically to run this servlets, you can't simply run your servlets
+on JVM the way we are doing till now to run this servlets. Now since 
+it has some extra features that getting the request from the internet 
+and then responding.

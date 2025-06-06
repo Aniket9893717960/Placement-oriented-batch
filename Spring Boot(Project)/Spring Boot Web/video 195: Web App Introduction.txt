@@ -80,3 +80,12 @@ Now basically to run this servlets, you can't simply run your servlets
 on JVM the way we are doing till now to run this servlets. Now since 
 it has some extra features that getting the request from the internet 
 and then responding.
+
+back, we have to use a special container where you can run this. And the
+special container here is called a "SERVLET CONTAINER" or you can say a
+"WEB CONTAINER".
+
+Now what are the options we have. So, one of the best option or the
+lightweight option we got is "TOMCAT".
+
+"Now Tomcat is a server in which you can run your servlets."

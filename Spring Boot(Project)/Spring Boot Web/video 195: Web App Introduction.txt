@@ -10,4 +10,19 @@ there. Now why exactly we need to build web apps? Again, that's a weird
 question, right? Because we all know the answer.
 
 the world is working on web applications. of course, you do have mobile 
-applications, 
+applications, but then for every mobile app, okay, not every, but 99.99%
+of mobile application also have a web application.
+
+So, the back end remains same fot the front end of your desktop and 
+front end of your mobile application. So, can i say that the client,
+the browser client, and the mobile application most of the time having
+same server.
+
+         Mobile              Browser 
+       Application            Client
+           |--------------------|
+                     |
+                   SERVER
+And we are here to focus on how do you build that server? because see,
+if you talk about a client, it can be a mobile or a desktop, maybe on 
+the browser

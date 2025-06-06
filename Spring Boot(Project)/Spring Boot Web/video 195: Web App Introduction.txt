@@ -88,4 +88,23 @@ special container here is called a "SERVLET CONTAINER" or you can say a
 Now what are the options we have. So, one of the best option or the
 lightweight option we got is "TOMCAT".
 
-"Now Tomcat is a server in which you can run your servlets."
+"Now Tomcat is a server in which you can run your servlets. Now question
+arise. Hey we are into spring here, right?" why we talk about servlets?
+So, the thing is ultimately, if you want to build the back end where 
+you're accepting requests from the client, that's where you need a 
+servlet.
+
+But then if you wan to use spring there, spring will makes sure that you
+are doing it in an easy format. Ultimately, spring will also work with 
+servlet behind the scene.
+
+Now we have two options for the web application.
+1. Is servlet, or you can also use "REACTIVE". But then our focus here
+   will be to work with servlets.
+         Now the Question arise How we build Servlets?
+So, as i mentioned, even if you're using "SPRING MVC" or "SPRING WEB"
+it is using servlet behind the scene. So, we'll not directly start with
+"SPRING BOOT MVC".
+
+We are going to first start with the servlet and then we'll move towards
+spring.

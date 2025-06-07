@@ -41,4 +41,29 @@ want to do extra configuration all the thing what i want is, in my
 project, I want to have Tomcat in build. 
 
 Can we do that? Yes, there's a concept called embedded Tomcat. So, what 
-you can do is, in your project,
+you can do is, in your project, now since you already have embedded 
+tomcat in your Project.
+
+you can simply run it and it will run your project in that tomcat. So,
+the advantage is you don't have to do all this configuration. But yes
+if u really wanted to build an application using servlets, I would 
+suggest you to go for external Tomcat.
+
+Because it will provide u more features. but since we are here to learn
+Spring, not servlet, we are running servlet just to understand. what
+happens behind the scene. 
+
+So, embedded Tomcat will work. Now to create this project what i will do 
+is i will open my IDE, okay in this IDE, I will click on the new project.
+So, you can see, it's a new project tab.
+
+And here what i will do is I will name this, I will say 'ServletEx',
+Okay, so I'm putting that it into Projects. And now i will select the 
+version, I will stik to "Java 17" here. And now let me create a Maven
+project.
+
+So, i will just say 'Internal', and i will create a 
+"maven-archetype-quickstart" project. Now in "Advanced Setting" we make 
+few changes like I want 'GroupId' to be 'com.telusko'.
+And that's it. Create this project. So, it will take some time to create
+the project. And 'DONE'.

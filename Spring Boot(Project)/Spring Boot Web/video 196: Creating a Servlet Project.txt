@@ -67,3 +67,17 @@ So, i will just say 'Internal', and i will create a
 few changes like I want 'GroupId' to be 'com.telusko'.
 And that's it. Create this project. So, it will take some time to create
 the project. And 'DONE'.
+
+Now our project is created and we already have 'junit' as dependency.
+But if u want to run servlet, now this is a normal Maven project. If 
+u want to run a servlet here, we have to add two packages.
+
+i. Is for servlet because by default, servlet is not a part of JDK.
+   You have to add extra dependency. Normally you get these servlet 
+   packages from Tomcat, But since we're using embedded Tomcat here,
+let's also add servlet support.
+
+ii. We have to also add the embedded Tomcat. Now where you will get this?
+    It's easy. Just go to your browser and search for servlet.
+    And you can see we got "JAVA SERVLET API". Click on this. And there's
+    no further updates from "JAVA 21".

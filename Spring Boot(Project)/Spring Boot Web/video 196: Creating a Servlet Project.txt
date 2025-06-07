@@ -30,4 +30,15 @@ Now 'WebApp' is a folder in 'Apache Tomcat' where you put you project.
 So, if you create a project, if you create a package of it. put that 
 into 'WebApp'.
 
-And if you want to start your Tomcat.
+And if you want to start your Tomcat. You can see in the 'bin' folder,
+we got a file called "startup.sh" and "shutdown.sh".
+1. To start, we have to say 'startup.sh'.
+2. To shut it down, you have to say 'shutdown.sh'.
+
+And here, if you want to start this, u can pass above command and it just
+start on "cmd Apache Tomcat bin" location. But the thing is, we don't 
+want to do extra configuration all the thing what i want is, in my 
+project, I want to have Tomcat in build. 
+
+Can we do that? Yes, there's a concept called embedded Tomcat. So, what 
+you can do is, in your project,

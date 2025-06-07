@@ -1,0 +1,12 @@
+So, our project is ready, i mean the structure is ready. Now let's create 
+a servlet. Now if you think about creating something in java, So, lelt's
+say if you want to create a feature, we create a class right?
+
+So, here also if you want to create a servlet, u have to create a class.
+So, what i will do is i will just go back to my project. I'll right click
+here and say new.
+
+let me create a simple class here and we'll name this class as, let's say
+"HelloServlet". Of course you can name anything you want, but having a 
+servlet at the send defines or it tells the developers that, 
+"hey, this is a servlet, right?"

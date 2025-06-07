@@ -29,4 +29,24 @@ CODE:
     public class HelloServlet extends HttpServlet {
     }
 
-If you talk about servlet, it has multiple features, right?
+If you talk about servlet, it has multiple features, right? Accepting 
+the request from the user and responding to the user. So, basically for 
+request and response, we need special objects.
+
+                 ____________NOTE______________
+And the way you can get that if you extend a class by 'HttpServlet'.So, 
+basically we need 2 things the request and the response, and also we 
+need a method which will execute whenever you get the request.
+                 -------------X-----------------
+
+which method i talk about? So basically i have to create a method here.
+We use 'public' acess modifier with return type 'void' method name
+Is "service".
+CODE:
+    package org.aniket;
+    public class HelloServlet extends HttpServlet {
+     public void service(){}
+    }
+
+What is 'service'?Now 'Service' is one of the important method in 
+servlet,  which gets executed whenever you send a request. Okay?

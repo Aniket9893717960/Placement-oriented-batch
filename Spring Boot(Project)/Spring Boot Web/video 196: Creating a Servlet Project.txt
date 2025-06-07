@@ -80,4 +80,12 @@ let's also add servlet support.
 ii. We have to also add the embedded Tomcat. Now where you will get this?
     It's easy. Just go to your browser and search for servlet.
     And you can see we got "JAVA SERVLET API". Click on this. And there's
-    no further updates from "JAVA 21".
+    no further updates from "JAVA 21". Because now It becomes 
+"JAKARTA SERVLET" now.
+
+So, we using version '4' because we are not here to learn servlet as i 
+mentioned, we are just learning servlet so, that we can work on Spring
+MVC. So, any older version i also do So, i'm selecting '4.0.4'.
+
+So, we have to basically get this "Tomcat Embedded Core". And any verion
+will do.

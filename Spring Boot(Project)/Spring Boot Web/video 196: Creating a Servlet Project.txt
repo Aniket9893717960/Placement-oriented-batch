@@ -25,3 +25,9 @@ So, what i've done is i want to the google and searched for apache
 Tomcat, and i have downloaded the "Tomcat version 10.1.16".. Version is 
 not important at this point. But you can get the download, and you can 
 see, once you unzip it, you will see all these folders.
+
+Now 'WebApp' is a folder in 'Apache Tomcat' where you put you project.
+So, if you create a project, if you create a package of it. put that 
+into 'WebApp'.
+
+And if you want to start your Tomcat.

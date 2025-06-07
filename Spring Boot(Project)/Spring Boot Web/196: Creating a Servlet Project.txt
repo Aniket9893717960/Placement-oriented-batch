@@ -1,6 +1,0 @@
-So, let's start with servlet the thing is, as i mentioned before, if you 
-want to run your servlet, you need a container, which is your Tomcat server.
-Now there are two options here:
-what we can do is you can build your application. So, let's say you're
-building your web application in Java. Now if you want to run this on a
-server, 

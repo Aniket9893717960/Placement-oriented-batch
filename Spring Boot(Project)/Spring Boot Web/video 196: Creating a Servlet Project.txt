@@ -1,0 +1,27 @@
+So, let's start with servlet the thing is, as i mentioned before, if you 
+want to run your servlet, you need a container, which is your Tomcat server.
+Now there are two options here:
+what we can do is you can build your application. So, let's say you're
+building your web application in Java. Now if you want to run this on a
+server, what you do is you create a package of it.
+
+And normally if you create a package with the extension '.war', which is 
+the '.web' archive. If you're building a console application, you can use
+'.jar', but if you want to make a web application, you use '.war'.
+
+because it runs on 'Tomcat'. Now of course nowadays we can also create JAR
+which u can directly run. 
+
+Again, we'll talk about that in the upcoming videos.But the main thing is:
+
+U create a package of your project and put that on a Tomcat server so that
+you can run it. That means you need a Tomcat server in your machine.
+
+Now again, you don't have to do all this stuff which I'm doing in this
+video. But yes if u want to practise and want to learn something extra,
+you can do that.
+
+So, what i've done is i want to the google and searched for apache 
+Tomcat, and i have downloaded the "Tomcat version 10.1.16".. Version is 
+not important at this point. But you can get the download, and you can 
+see, once you unzip it, you will see all these folders.

@@ -9,4 +9,24 @@ here and say new.
 let me create a simple class here and we'll name this class as, let's say
 "HelloServlet". Of course you can name anything you want, but having a 
 servlet at the send defines or it tells the developers that, 
-"hey, this is a servlet, right?"
+"hey, this is a servlet, right?".
+CODE:
+    package org.aniket;
+    public class HelloServlet {
+    }
+
+So, use a proper name. So, we got "HelloServlet". The only purpose ofthis
+"HelloServlet" is to greet the user. So, whatever you want to do, maybe you want to say "hello world" or something.
+
+I just want to show something on the screen. Okay, so this is ourservlet,
+But is it? Just by writing this as a servlet, will it make a servlet?
+Of course Not. We have to do some extra thing as well.
+
+See, one of the way to give the feature of a servlet to this class is by 
+extending a class called "HttpServlet".
+CODE:
+    package org.aniket;
+    public class HelloServlet extends HttpServlet {
+    }
+
+If you talk about servlet, it has multiple features, right?

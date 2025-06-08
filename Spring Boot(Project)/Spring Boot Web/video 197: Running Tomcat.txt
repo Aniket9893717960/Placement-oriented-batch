@@ -84,3 +84,26 @@ CODE At this point in 'HelloServlet'.java
        System.out.println("In Service");
       }
     }
+
+Just we have to print 'In Service' as the first step So, will this work
+That's a real question, Now question arise, how do we run this? If you
+go back to 'App.java' And run the main file, okay? But if we run 'main' 
+program It only say "Hello World!" but nowhere 'In Service' Reason?
+If you want to execute a 'service' or if u want to execute a 'servlet'?
+
+You have to send a request from your browser, right? we are building a 
+web application. So, what i will do is open browser and here you have to
+send a request.
+
+Now where do you send a request? So basically you have to send a request
+to the "local host" and u have to maintoied a port no. and by default, 
+if you talk about 'Tomcat', it goes with the "8080" port no.
+
+So, we stik it and when i say enter, i want something to display here,
+and you can see it says cannot reach. That means something is not 
+working. You Know what is not working, "NOTHING IS WORKING".
+
+I mean, the only thing which is working is "Hello World". This servlet 
+is not getting called. we need to call this. How do we do that? So, 
+besically we do have Tomcat, right? So, we need to run this tomcat
+by default it's not running.

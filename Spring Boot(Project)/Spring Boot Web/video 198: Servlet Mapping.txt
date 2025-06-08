@@ -83,3 +83,10 @@ CODE in 'App.java'
     Tomcat.addServlet(context, "HelloServlet", nre HelloServlet());
 
 So, which servlet we are working with? We work with 'HttpServlet' we 
+have to get the object for that. So, 3 parameters, the context, the name
+of a servlet and then the object.
+
+Now once we added the servlet, now let's do the actual mapping. So the 
+way you where you can do the 'mapping' at the name of 
+'Context.addServletMapping'.
+So, the earlier method mapping is duplicated now

@@ -107,3 +107,62 @@ I mean, the only thing which is working is "Hello World". This servlet
 is not getting called. we need to call this. How do we do that? So, 
 besically we do have Tomcat, right? So, we need to run this tomcat
 by default it's not running.
+
+If it is running, you will see the message in the console.At this point,
+It's not running. so, what i will do is we run the tomcat So, after 
+printing 'Hello World', let's say i want to run the 'Tomcat'.
+
+How do i do that
+i. Create an object of Tomcat.
+CODE Now in 'App.java':
+        Tomcat tomcat = new Tomcat();
+Now we got this object.
+
+ii. How do you start the server? To start the server, It's vary simple.
+    You can simply say "Tomcat.start", your job is done. This will start
+the Tomcat. You can see there are some errors It says it might throw an
+exception.
+CODE NOW in 'App.java':
+                      tomcat.start();
+So, i will add it to the signature.It might throw a lifecycle exception.
+So, let's do that. And that's it. This thing will run the 'Tomcat'.
+But we got allot of error messsages given below:
+ # "Starting service": which is the 'Tomcat Service' and 'Protocol 
+    Handler'. 
+But at least it says starting the Tomcat. Let me go back to the browser 
+and refresh. But it says nothing is working. I mean, 'it's still not 
+working'.
+Now  we will go back to 'App.java'. we are starting a Tomcat, and after
+starting, it's also ending the Tomcat. If you can see process finished,
+we wait Tomcat to wait.
+
+iii. You know, Tomcat is a server, it's job is to keep running, and we 
+not keeping it running. So how do you keep it running? so, it's very 
+simple. 
+CODE in 'App.java'.
+                   tomcat.getServer();
+So, basically get the hold on the server, and say 'await', which means
+we are asking 'Tomcat' to wait, keep running.
+CODE in 'App.java'.
+                   tomcat.getServer().await();
+I will send the request later. Okay? So, at least this time the server
+will not stop. And you can see we don't have process exit, that means
+'Tomcat is running now'.
+
+Okay, now this time we got a different message,okay?we not got 404. 
+That means the Tomcat is running the only problem is it not able to 
+handle the request.
+
+But the main question is why? because 'Tomcat' is doing a great job
+    package org.aniket;
+    public class App 
+    {
+        public static void main( String[] args )
+        {
+            System.out.println( "Hello World!" );
+            Tomcat tomcat = new Tomcat();
+            tomcat.start();
+            tomcat.getServer().await();
+        }
+    }
+

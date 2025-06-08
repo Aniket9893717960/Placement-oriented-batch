@@ -62,3 +62,24 @@ And then you have to mention your directory.
 Now we don't want to create a new directory structure. So, i will say nul
 here , okay? So, we are keep it empty for the default, And if we don't
 want to create a new directory structure.
+CODE in 'App.java'.
+         Context context = tomcat.addContext("","null");
+
+So, we'll keep it null, what next? Now once we got the hold on the 
+context object, now i can use a method called 'addServlet', Which is a
+static method belongs to Tomcat class.
+
+So, I can use this method called 'addServlet'. And in this Servlet, you 
+can do the mappring now. Now in this method you specify the name for the
+servlet.
+
+So, the first parameter is a name for the servlet. we say 'Hello Servlet'
+And then you mention which class, in fact you have to pass the object here. So the class is 'HelloServlet'. So, maybe it's kind of creating a 
+new object.
+
+But you have to also pass one more parameter here, which is your context.
+Next is a servlet name, and the next one is the object for the servlet.
+CODE in 'App.java'
+    Tomcat.addServlet(context, "HelloServlet", nre HelloServlet());
+
+So, which servlet we are working with? We work with 'HttpServlet' we 

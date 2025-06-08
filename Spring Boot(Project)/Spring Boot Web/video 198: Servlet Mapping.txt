@@ -80,7 +80,7 @@ new object.
 But you have to also pass one more parameter here, which is your context.
 Next is a servlet name, and the next one is the object for the servlet.
 CODE in 'App.java'
-    Tomcat.addServlet(context, "HelloServlet", nre HelloServlet());
+    Tomcat.addServlet(context, "HelloServlet", new HelloServlet());
 
 So, which servlet we are working with? We work with 'HttpServlet' we 
 have to get the object for that. So, 3 parameters, the context, the name
@@ -89,4 +89,58 @@ of a servlet and then the object.
 Now once we added the servlet, now let's do the actual mapping. So the 
 way you where you can do the 'mapping' at the name of 
 'Context.addServletMapping'.
-So, the earlier method mapping is duplicated now
+So, the earlier method mapping is duplicated now in which we have to use
+decoded in which we have two parameter.
+1. Url: 'hello'
+2. Is the name of servlet.
+
+CODE In 'App.java'
+        context.addServletMappingDecoded("/hello","HelloServlet");
+Don't get confused with the name of the servlet with the actual servlet.
+The actual Servlet is 'HelloServlet'.
+The name is soemthing which you can set anything you want.
+
+Example: I can say h1 At above code like below.
+        context.addServletMappingDecoded("/hello","h1");
+
+So, whatever your servlet name you have mentioned here. the same name u
+have to mentioned at 'addServlet' as well.
+        Tomcat.addServlet(context, "h1", nre HelloServlet());
+
+But let's go with default name and there's no issue, you can change it 
+if you want. And that's it, we have run the mapping now.
+
+But the thing is we have to start the server after all this mapping.
+Now if we run the program we got blank on the browser. but "In service"
+on console.
+
+So that's how we do basically we do the mapping. we are able to call the
+service method and it is printing in Service. but i want to send data
+back to the client. Because if we see the "localhost" browser it's 
+empty. And we want to print something.
+
+FINAL CODE OF 'APP.java'
+package org.aniket;
+
+import org.apache.catalina.Context;
+import org.apache.catalina.startup.Tomcat;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ) throws LifecycleException
+    {
+        System.out.println( "Hello World!" );
+        Tomcat tomcat = new Tomcat();
+
+        Context context = tomcat.addContext("","null");
+        Tomcat.addServlet(context, "HelloServlet", new HelloServlet());
+        context.addServletMappingDecoded("/hello","HelloServlet");
+
+        tomcat.start();
+        tomcat.getServer().await();
+    }
+}

@@ -34,3 +34,31 @@ But it works when you are using external Tomcat, when you're using
 embedded Tomcat, we have to do the confession by ourself here.
 
 Now if u're thinking,
+"Hey, we are doing so much of work just to map here, and then" of course,
+there will be multiple lines of code here just for the mapping. But if
+to understand this, we are moving towards Spring Boot.
+
+All these things will be much easier in Spring Boot, okay? So, all these
+things which we are doing here will be done by Spring Boot.
+
+Okay, I knoe you're waiting for it. But let's get the hard part done so 
+that we can focus on the easy part.
+And when i talk about Easy part, you will know what is happening behind 
+the scene, right?
+
+okay? so let's do the mapping now to do the mapping, we need to get the 
+hold on the context object. And to do that, i will simply create object
+of context here.
+
+So, I will say context, which  belongs to this package, make sure that
+you are using the same package. 
+CODE in 'App.java'.
+         Context context = tomcat.addContext("","");
+
+.addContext("",""): In which this method have two parameters.
+ i. Application name: Now since we are working with same application,
+                      I want to go for default, which is by double codes.
+And then you have to mention your directory.
+Now we don't want to create a new directory structure. So, i will say nul
+here , okay? So, we are keep it empty for the default, And if we don't
+want to create a new directory structure.

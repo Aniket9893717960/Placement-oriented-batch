@@ -50,3 +50,37 @@ CODE:
 
 What is 'service'?Now 'Service' is one of the important method in 
 servlet,  which gets executed whenever you send a request. Okay?
+now question arrise How will you accept the data from the client?
+See, in this example, I don't want to send any data from client to
+server.
+
+Which u want to send the request,but i want to send the data back to the
+client. but let's say if you are working on real life and you want to
+send some data from the client to the server, you need an object from 
+where you can do that And that's where in the 'service' we have to pass
+two parameters, one for the request.
+one for the response.
+
+And the request respone will get in the form of "HttpServlet request".
+This is a special interface which has multiple methods to work with,
+but we don't have to define those methods.
+
+The internal implementation will do it for you, okay? So, we just have to
+create the object for this or the reference for this, which will be 
+called request And 'HttpServletResponse'.
+
+So, this tool we need. Now whatever data coming from the client will be
+stored in request object, and whatever data you want to send back to the 
+client.
+
+That will be present in the response object. Or u can add that into 
+response object. Okay, So, instead of requesting object or responding at 
+this point, what i want to do Is i just to check if this method is 
+getting called.
+CODE At this point in 'HelloServlet'.java
+    package org.aniket;
+    public class HelloServlet extends HttpServlet {
+    public void service(HttpServletRequest req, HttpServletResponse res){
+       System.out.println("In Service");
+      }
+    }

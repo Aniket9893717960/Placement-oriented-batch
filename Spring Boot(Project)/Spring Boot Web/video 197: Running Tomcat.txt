@@ -153,7 +153,20 @@ Okay, now this time we got a different message,okay?we not got 404.
 That means the Tomcat is running the only problem is it not able to 
 handle the request.
 
-But the main question is why? because 'Tomcat' is doing a great job
+But the main question is why? because 'Tomcat' is doing a great job he
+running It says "Hey, it will run your servlets. And we do have the 
+servlet name 'HelloServlet'". But then how a Tomcat will know when to 
+call this servlet?
+
+Let's say if  we talk about any website you have multiple page there, 
+right? So, when you access a particular page, you give a URL.
+You mentioned the website name slash sormthing, right? So, here also,
+
+I want to make sure that when i run "localhost:8080/hello" this time
+I want to print, I want to call that servlet. That means we have to do
+the mapping for this hello with our servlet. If we can done that our 
+job is done Now the question is how we map it lt's see in the next video.
+Final 'App.java' Code:
     package org.aniket;
     public class App 
     {

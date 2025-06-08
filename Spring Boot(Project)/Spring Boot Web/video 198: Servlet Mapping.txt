@@ -1,0 +1,36 @@
+Now let's see how do you set the mapping? The thing is, if you talk about
+servlet and if you are using a external Tomcat, see, in this application
+we are using a embedded Tomcat.
+
+If you are using external tomcat, you can do more confifuration. Example,
+in the earlier days, If you wanna do the configuration, we used to use XML.
+So, the file name is web.xml , in this you do the mapping.
+
+You specify the URL and you specify the servlet. So, u say, "Hey,Tomcat
+whenever someone requests for this URL, execute the servlet." Any you can 
+mention multiple servers there, that was one approach.
+
+But then we wanted to more to the annotation way. In the annotation way,
+what you do is you on the top of your servlet, we use '@WebServlet'.
+
+"This is the annotation which we use. And in the bracket you mention
+for which request you want to work with. So, you want to work with
+hello request."
+CODE IN 'HelloServlet'.
+       package org.aniket;
+       import jakarta.servlet.http.HttpServlet;
+       import jakarta.servlet.http.HttpServletRequest;
+       import jakarta.servlet.http.HttpServletResponse;
+         @WebServlet("/hello")
+       public class HelloServlet extends HttpServlet {
+           public void service(HttpServletRequest req, HttpServletResponse res){
+               System.out.println("In Service");
+           }
+       }
+
+So, what it means is whenever someone request for hello, you have to call
+'HelloServlet' this is how basically we should do in the annotation way.
+But it works when you are using external Tomcat, when you're using 
+embedded Tomcat, we have to do the confession by ourself here.
+
+Now if u're thinking,

@@ -48,3 +48,44 @@ i. "response.getWriter": And this 'getWriter' returns you the object of
                          'PrintWriter', right? So, i can simply say
 'PrintWriter' and i will say this is maybe "out = res.getWriter". And 
 every time you want to print, now u simply say "out.println" in below.
+
+        ---------------NOTE---------------
+We already familiar with 'System.out.println();' and 'out.println' both looks very similar to each other. But the difference is 
+i. "System.out.println" prints on the console. while 'out.println'
+   depends upon from where you got this 'out' object. We are getting it 
+because from the response. This will write in the response object.
+
+And not just this, you can also mention the tags. Because we are using an
+"HTML" page, right? So, we can also mention this is a "<h2>", maybe if 
+you want to make it italic, a bold if you want.
+         ----------------X--------------------
+Now since we are adding "HTML", we can do this stuff.
+CODE IN 'HelloServlet' AFTER MORE STUFF:
+package org.aniket;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class HelloServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+
+        System.out.println("In Service");
+       // res.getWriter().println("Hello World");
+
+        PrintWriter out = res.getWriter();
+        out.println("Hello World");
+    }
+}
+
+On refershing, you can see we are getting HTML tags. Now since we are 
+adding HTML, we can do this stuff. let's read in this. before we can do
+sending it, we can set the type of data the response will have.
+
+So, you can set 'response.setContentType' and you can mention the content
+type is text/html. Now what it'll di is it'll understand, hey you are also
+sending HTML not just a plain text. So, it'll try to convert your HTML.

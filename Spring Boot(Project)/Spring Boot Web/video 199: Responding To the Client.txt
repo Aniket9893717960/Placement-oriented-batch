@@ -38,3 +38,13 @@ public class HelloServlet extends HttpServlet {
         res.getWriter().println("Hello World");
     }
 }
+
+After running this program we got "Hello World" at "Localhost" browser
+Okay, now if you're not comfortable with this, sometime you want to 
+know this "getWriter" gives you.
+
+So, there's another way you can do this.
+i. "response.getWriter": And this 'getWriter' returns you the object of
+                         'PrintWriter', right? So, i can simply say
+'PrintWriter' and i will say this is maybe "out = res.getWriter". And 
+every time you want to print, now u simply say "out.println" in below.

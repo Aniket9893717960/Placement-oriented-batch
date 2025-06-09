@@ -25,4 +25,54 @@ Now if u just want to return data it's very simple.But then we know that if
 you want your client to see some data on a browser, u cannot simply send
 a data right.
 
-That's boring.
+That's boring. u want to make it interesting and that's why u will use a 
+beautiful front end, right? Now the question arise If u want to return a 
+front end from your servlet, basically u have to write 
+ HTML tags inside java. just like we have done in below code:
+CODE OF 'HtmlServlet'.
+
+package org.aniket;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+public class HelloServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) 
+        throws IOException {
+        
+        System.out.println("✅ Servlet called!");
+        res.setContentType("text/html");
+        res.getWriter().println("<h1>Hello World</h1>");
+    }
+}
+
+And that's where the problem starts, right? If u start adding HTML content
+inside the JAVA code, what if it becomea bulky. That's where u have to find 
+the solution.
+            AND THAT SOLUTION IS "JSP"(Jakarta Server Pages)
+                    Formally, JavaServer Pages
+Now again that in java we have multiple view technologies. That's why we 
+call them as "view technologies" because we create them to show to the client.
+So, in servlet basically u write HTML inside Java.
+ 
+But can we do something like "App.java" that we have done 
+"Can we write a HTML page, the entire page and put the Java code in between?"
+Yes, that's possible. And that's where we have something called a JSP which 
+stands for "Java Server Pages". And this is not the only view technology.
+
+There are multiple i write this at center of the list
+                           Thymeleaf
+                           FreeMarker
+                           Groovy Markup
+                           Script Views
+                           JSP and JSTL
+
+Exactly not the list But then we have multiple there. So, we can use JSP to 
+create the view technology. Now coming talking about these two things we got
+servlet and we got JSP.
+
+Now servlet is responsible to accept the request from the client. And JSP
+is responsible to create that beautiful page which u want.

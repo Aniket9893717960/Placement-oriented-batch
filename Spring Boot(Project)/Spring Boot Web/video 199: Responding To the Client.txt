@@ -1,3 +1,40 @@
 Now let's send the response. So, what you can do is if you want to send a 
 response from a servlet. This is where you have to make the changes.
 Now, how do you send a response?
+
+If you can see we do have a response object here, right? So we can 
+simply use this object and we can send a response. See anyway, when you
+run the servlet, the client will receive the data from response.
+
+But by default is empty. we have to send some data, right? And to do that
+we have to get the hold on the writer. It's more like a taking a pen. So,
+"Response Object" is a paper, get the pen first.
+
+CODE IN 'HelloServlet':
+                   res.getWriter().println("Hello World");
+'getWriter' And with this it is a method called 'println' and whatever you
+want to print, you can print it here. So, I will just print "Hello World".
+Okay, our job is done it's just that it might throw an exception.
+So, i will simply add the exception signature here, or the exception,
+which is throws 'IOException'.
+
+And that's it. we are sending data back to the client. I'm sending 
+"Hello World". So, what we did is response object was anywhere, was going 
+to client. We just writing some content on it.
+
+So, it's like, anywhere the servlet is going to return a page which is 
+empty. I just took a pen and have written "Hello World". Okay, let's
+see if this works.
+
+CODE AFTER DOING ALL STUFF "HelloServlet"
+package org.aniket;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+public class HelloServlet extends HttpServlet {
+    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        System.out.println("In Service");
+        res.getWriter().println("Hello World");
+    }
+}

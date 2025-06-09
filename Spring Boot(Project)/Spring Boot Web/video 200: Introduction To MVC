@@ -1,0 +1,28 @@
+So, we talked about how can we create a web application using Java.
+So, basically we can use servlets to build our web application.
+So, when i say web app what i'm talking about is this should be a
+back end which can accept the request and reply something to the client.
+
+And then process the request and reply something to the client. And of course
+in java we don't build the front end, right. The  front end is built using 
+HTML, CSS, Javascript. Or you can use something called react to build your 
+front end.
+
+Or u can also use a mobile application. or may be some other server using 
+your server to get some data. Ultimately, your server is basically giving 
+some data back to the client
+
+Ultimately, your server is basically giving some data back to the client.
+Now the thing is, if we talk about building a web application, of course 
+we have done that with the help of servlet.
+
+now think about it what if u want to return a data. It's very simple You can
+say "hey servlet I need to get some data from the database."
+So, servlet will talk to database and get your data back and say okay this
+is your data. Take it back.
+
+Now if u just want to return data it's very simple.But then we know that if
+you want your client to see some data on a browser, u cannot simply send
+a data right.
+
+That's boring.

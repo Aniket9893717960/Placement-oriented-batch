@@ -101,3 +101,29 @@ i. we accpeting request
 ii. processing the data
 iii. returning the data: when u returning u just not return data, u return
                          HTML page.
+
+That's why we use something called MVC. We discuss about that in sometime,
+but we have a concept of MVC where use a seperate this stuff. But yeah,
+at least we are able to spend data.
+
+but there's one more question. when we use send a request, this is by
+default a get request. There's something called methods in HTTP are:
+i. GET   ii. POST  iii. DELETE  iv. MULTIPLE
+But then this for a famous.But let's say 
+i. if u want to get data from a server, we use 'GET' request.
+ii. when u want to send data to the server, we use POST request.
+                       iii. 
+When u want to delete something from the server, u send 'DELETE' request.
+iv. If u want to update something, we use 'PUT' request.
+
+     HOW DO YOU ACCEPT DIFFERENT TYPE OF REQUEST?
+See using browser u can only get the GET request. but what if u want to 
+send a request, u are creating a form in which u are submitting some data.
+In that case u will be using a POST request. we are not mentioning any 
+type of request.
+Let's say we are saying service. So the ideal way is to use specific 
+methods like 'doGet'.
+
+Now 'doGet' is a method which is a part of servlet, which works with a GET
+request. If u want to submit data, we use 'doPost' Now since we are not
+submitting data, I'll stick to doGet,

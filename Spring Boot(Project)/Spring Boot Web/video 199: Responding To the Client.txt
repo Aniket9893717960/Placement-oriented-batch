@@ -89,3 +89,15 @@ sending it, we can set the type of data the response will have.
 So, you can set 'response.setContentType' and you can mention the content
 type is text/html. Now what it'll di is it'll understand, hey you are also
 sending HTML not just a plain text. So, it'll try to convert your HTML.
+CODE IN 'HelloServlet':
+                     res.setContentType("Text/html");
+
+So, what we are doing is we are returning the content now from the response
+object with the HTML tags as well. this is 1 way of doing it.
+
+But we also have the concept of MVC where you keep your logic and view 
+separate. what we are doing is in the same servlet we have 3 things.
+i. we accpeting request
+ii. processing the data
+iii. returning the data: when u returning u just not return data, u return
+                         HTML page.

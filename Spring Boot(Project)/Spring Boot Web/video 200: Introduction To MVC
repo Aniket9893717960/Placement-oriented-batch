@@ -81,3 +81,5 @@ can do your processing in servlet.
 I mean, not just processing. U can accept the request from the servlet, u
 can do the processing there and then once u get your data, just send that
 data to JSP page And JSP will send to the client with the HTML.
+
+So, we have to use both at the same time Yes we can.

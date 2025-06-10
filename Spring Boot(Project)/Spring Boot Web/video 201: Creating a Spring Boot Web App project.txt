@@ -40,3 +40,19 @@ about web application, this works on some server, right?
 
 We have to use Tomcat or something. And when u want to deploy your 
 project on Tomcat, We normally create a 'War' file.
+Now 'War' file stands for web archive. SO, you take a file, u put that on
+Tomcat and u can make it run, but we can also use a 'jar'.
+
+But the question arise, how will u run this on Tomcat? we'll see that in
+some time. Okay?
+
+v.  And then we'll say Java version, I'm using Java 21, so i will use 
+that. Now, what kind of dependency I want to add? just one.
+click on "add Dependency" and search for "Spring Web". but apart from
+this we have an option of "Spring reactive web".
+
+So, if u want to do reactive programing in java, u can do that. So, for
+that we have a framework called "WebFlux". And for 'Restful APIs' u can
+use Spring Web.
+
+Again, we'll discuss restful API later.

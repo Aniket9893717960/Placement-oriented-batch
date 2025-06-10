@@ -31,5 +31,12 @@ will select that, the language is Java. Then in the Spring Boot I have
 to mention a version. So, i will go for '3.2'.
 
 iii. Here i will mention group Id is 'com.tekusko' and we are making our 
-first Spring Board projects. I would say Spring Board Web one for the 
+first Spring Board projects. I would say 'Springboard' Web one for the 
 first 
+
+iv. And then the packaging for this is jar. Now this is interesting,
+    why do we have our packaging there? See the thing is when we talk
+about web application, this works on some server, right?
+
+We have to use Tomcat or something. And when u want to deploy your 
+project on Tomcat, We normally create a 'War' file.

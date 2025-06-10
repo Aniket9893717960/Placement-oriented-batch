@@ -55,4 +55,9 @@ So, if u want to do reactive programing in java, u can do that. So, for
 that we have a framework called "WebFlux". And for 'Restful APIs' u can
 use Spring Web.
 
-Again, we'll discuss restful API later.
+Again, we'll discuss restful API later. But if u want to do that, u can
+use a web here. Now the engine I was talking about,the thymeleaf is one
+of the engine, which is one of the wheel technology.
+
+So, if u don't want to use JSP, u can also use theme leaf there. So, 
+we'll select "Spring Web" here

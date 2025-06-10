@@ -62,3 +62,32 @@ of the engine, which is one of the wheel technology.
 So, if u don't want to use JSP, u can also use theme leaf there. So, 
 we'll select "Spring Web" here
 And once we done that we click on generate.
+              ---------INSTALLATION COMPLETE--------
+So, basically we got this object which is "Spring Boot Web" And if u 
+see in the 'POM.xml', so male sure that you have the same configuration.
+We got "Spring Boot Startet Web".
+
+This is the dependency which we needed. And the version is 3.2 as i 
+mentioned before. anything else Nothing much click close on this 'pom'
+file.
+
+If u expand your external libraries, u will see certain files here,
+which is Apache Tomcat, which is embedded and multiple things, which
+we don't need at this point.
+
+But we go into our project. Now will this project works? So, what i will
+do is i will open my browser. Okay? So, in this browser i will search for
+           ------------------FIRST TIME RUN----------
+When first time we run the project we got 
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Wed Jun 11 00:59:00 IST 2025
+There was an unexpected error (type=Not Found, status=404)."
+We got error because we are sending an error at the "HomePage" but there
+is no home page.
+
+So, this is the simple project which we got from the "Spring 
+Initializer". And we have done nothing till now. So, we don't have a 
+"homepage". How do we get the homepage?
+

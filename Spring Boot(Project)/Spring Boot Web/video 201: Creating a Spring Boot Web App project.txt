@@ -61,3 +61,4 @@ of the engine, which is one of the wheel technology.
 
 So, if u don't want to use JSP, u can also use theme leaf there. So, 
 we'll select "Spring Web" here
+And once we done that we click on generate.

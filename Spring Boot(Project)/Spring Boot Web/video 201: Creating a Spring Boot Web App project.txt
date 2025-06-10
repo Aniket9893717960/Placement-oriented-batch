@@ -17,3 +17,15 @@ that how much configuration we can save with the help of Spring Boot.
 
 Now question arise, if u want to create a Spring boot project, how will 
 u do it?
+It's simple
+i. Go to 'start.spring.io' which is your initializer, or if you're using
+   Eclipse with the Spring tools or if u are using intellij Ultimate 
+   version in that case u will get the option directly in your IDE. 
+But since we are using the community version of intellij, which is
+free one, we don't have that option directly in IDE. And that's why we
+use 'initializer'.
+So, let's go to initializer and here i will create a project.
+
+ii. Now what kind of project i want, i want a 'Maven' project. So, i
+will select that, the language is Java. Then in the Spring Boot I have 
+to mention a version. So, i will go for '3.2'.

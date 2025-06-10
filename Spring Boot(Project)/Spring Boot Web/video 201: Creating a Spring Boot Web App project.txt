@@ -29,3 +29,7 @@ So, let's go to initializer and here i will create a project.
 ii. Now what kind of project i want, i want a 'Maven' project. So, i
 will select that, the language is Java. Then in the Spring Boot I have 
 to mention a version. So, i will go for '3.2'.
+
+iii. Here i will mention group Id is 'com.tekusko' and we are making our 
+first Spring Board projects. I would say Spring Board Web one for the 
+first 

@@ -1,0 +1,19 @@
+Now let's see how do we create a web application with the help of Spring?
+So, of course we have talk about MVC project with the help of Spring
+framework.
+  
+And the beauty is there are two ways of doing it. One is using normal
+Spring framework. And second with the help of Spring Boot. And we know till
+this point that if u want to do something with Spring boot, it is much
+easier.
+
+And if u wanna do something with Spring framework, u have to done some 
+configuration. So, we'll start with Spring boot. Let's understand the 
+concept. How do u build a web application using Spring Boot?
+
+And once u understand enough, then we'll see how do we create a same 
+project with the help of normal Spring MVC? And u can see the difference
+that how much configuration we can save with the help of Spring Boot.
+
+Now question arise, if u want to create a Spring boot project, how will 
+u do it?

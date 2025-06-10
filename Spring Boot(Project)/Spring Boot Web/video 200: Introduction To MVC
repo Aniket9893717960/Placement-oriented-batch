@@ -82,4 +82,29 @@ I mean, not just processing. U can accept the request from the servlet, u
 can do the processing there and then once u get your data, just send that
 data to JSP page And JSP will send to the client with the HTML.
 
-So, we have to use both at the same time Yes we can.
+So, we have to use both at the same time Yes we can. So, basically in the
+same application we can use servlet and JSP as well. Again once we start
+with Spring boot I will show you how JSP looks like.
+
+But imagine JSP page as a page which has HTML tags. But somewhere in 
+between u can actually write the java code. Okay, now is it complete?
+see, the thing is, when u talk about java, java is object oriented, right?
+
+So, whatever data u want to represent, u should be representing that with
+the help of object format. That means let's say if u client says, hey, u
+know, I want a student data now in the table in the database, u do have a 
+'student' data.
+
+Now when u get that data in your application, don't just keep that data in 
+simple variable. u have to save that in an object. That means basically we 
+have to use  these three technologies now servllets to accept  the request
+from the client JSP to show it to the client.
+
+And this data which is your object. Okay, Now this is where we get a term
+called MVC. Now this is not specific to java in whenever u talk about web 
+applications we use this pattern which
+                ---------------------
+     |--------> | SERVER            |
+   CLIENT       |   |      OBJECT   |------->  DATABASE
+     |--------> |  JSP              |
+                ---------------------

@@ -43,3 +43,14 @@ equal to Java and that's it.
 CODE in "index.jsp"
                    <%@page language="java" %>
                    Hello World!!!
+
+So, by doing this what we are saying is 
+"Hey, inside this, there might be some Java code as well."
+please run them. We are saying "Hello World".
+
+but we also want to use some HTML tags here. So, i will say "<Html>"
+then "<body>" So, nothing fancy we are doing very simple stuff there.
+Or if u want to do, u can give '<h2>'tags at Corner's of "Hello World"
+Just to make it big like Header type.
+
+So, this is what i want to show on my page.

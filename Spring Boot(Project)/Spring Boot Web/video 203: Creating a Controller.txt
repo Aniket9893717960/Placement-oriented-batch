@@ -29,3 +29,74 @@ If u want to make this Controller we use Something called
 '@Component' Which is a stereotype Annotation, and that's it.
            You are making a 'Controller' here.
               --------------X---------------
+See what happens behind the scene is it'll get converted into servlet
+and that's what in the Tomcat. Important things as a developer,
+U will not need to create Servlet you just have to create a Controller
+and that's it.
+
+This is your controller It's so, wasy now but will below program work?
+CODE IN "HomeController.java"
+        package com.aniket.SpringBootWeb1;
+        import org.springframework.stereotype.Controller;
+        @Controller
+        public class HomeController {
+        }
+No, Something is missing. If we talk about 'Servlet' we have something
+Called Service Method: doGet. doPost.
+We need methods here as well, because the actual work will be done by 
+Method.
+
+So, who is responsible to call that "index.jsp"? It's your Controller.
+So, let's do that. So, what i will do that I will create a method called
+"public void home", And this is responsible to call the "index.jsp".
+CODE IN "HomeController.java"
+        package com.aniket.SpringBootWeb1;
+        import org.springframework.stereotype.Controller;
+        @Controller
+        public class HomeController {
+          public String home(){}
+        }
+
+now how things are working out here is when your Spring framework calls
+the Controller. Now since we are saying this is a Controller, whatever 
+u return here should be name of your new technology,okay?
+
+It expect u to return a new technology. I will say return "index.jsp", 
+that's what i want to return and since u're return a string, u will say
+String.
+CODE IN "HomeController.java"
+        package com.aniket.SpringBootWeb1;
+        import org.springframework.stereotype.Controller;
+        @Controller
+        public class HomeController {
+          public String home(){
+            return "index.jsp";
+          }
+        }
+So, what will happen here is this is a Controller.So, when u run this
+project, when u send a request for the 'homepage','HomeController'
+should be getting called and it should specify,
+"Hey, u know, when u call a homepage, I want u to call 'index.jsp'."
+
+So, search for 'index.jsp' in the project and call this. That's your
+job. That's what we are saying here. But will this work? Let's try and
+I love to get errors. because that's how u learn.
+                 --------------X----------
+So, let's run this. Okay, there's no error at console Screen. It says
+"Tomcat started", But what if I go back to my page and say.
+"Rerun this still not working", we got "Tomcat started" 
+at console Screen. Okay nothing much it's not working we got
+below error when we run the program, that means
+when u call the 'homepage', It's not able to find "index.jsp".
+
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Wed Jun 11 13:53:32 IST 2025
+There was an unexpected error (type=Not Found, status=404)."
+
+But is it, is it not able to find "index.jsp"?
+         OR
+        Is it not able to even call this method 'home'?
+Let's print something on the console. I will print 
+"Home Method Called" at 'home' method.

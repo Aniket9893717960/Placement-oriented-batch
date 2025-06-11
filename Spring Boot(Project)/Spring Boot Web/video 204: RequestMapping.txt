@@ -13,3 +13,12 @@ request mapping, it will come to know that this is a mapping we have to do.
 which is for the 'slash'. Yeah, if you're doing for the students, u can
 also say 'student'. but at this point i want to map it for the '/'
 'homepage'. And that's the only change u have to make.
+
+let's refresh this taking some time, go back to your browser. And say,
+refresh and done. Something happend:
+"Okay, it's not the same thing which we were expecting.We are executing a
+page. But u can see it says, Do you want to allow downloads on local
+host?"
+
+If u say allow something got downloaded. If i see here it says unknown 
+file. I mean that's weird.

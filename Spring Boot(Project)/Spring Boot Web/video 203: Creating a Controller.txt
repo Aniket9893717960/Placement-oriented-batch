@@ -100,3 +100,34 @@ But is it, is it not able to find "index.jsp"?
         Is it not able to even call this method 'home'?
 Let's print something on the console. I will print 
 "Home Method Called" at 'home' method.
+
+If we are able to print "Home Method Called" then that means we are 
+able call at least 'home' method. And then we can think about is it 
+really calling 'index.jsp'?
+
+Let's try, re run this go back to your browser, refresh. Okay It 
+cannot start yet, refersh once again. Again the same error which 
+we got before
+
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Wed Jun 11 13:53:32 IST 2025
+There was an unexpected error (type=Not Found, status=404)."
+
+But if we see the console nowwhere, it says "Home Method Called",
+that means even "home" method is not working. So, we are not able to 
+call the home method.
+
+          HOW DO WE CALL THE HOME METHOD?
+Let me tall u what is missing. The missing is when y run this project.
+when we send the request to controller, how exactly we will know This
+home method should be called for request?
+Because if u know on your browser, when we send the request maybe u want
+to pass some data or u want to specify some specific URL.
+MayBe I want to say my website name '/' I want to get the data of 
+students.
+SO, url is something very important. SO, every URL need to match with a 
+method.
+            Mapping is important what should we done mapping
+              In spring boot let's see in the next video

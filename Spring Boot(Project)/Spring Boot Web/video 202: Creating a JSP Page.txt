@@ -54,3 +54,24 @@ Or if u want to do, u can give '<h2>'tags at Corner's of "Hello World"
 Just to make it big like Header type.
 
 So, this is what i want to show on my page.
+CODE After Manipulation:
+<%@page language="java" %>
+<html>
+ <body>
+ Hello World!!!
+ </body>
+</html>
+
+After running the program at "localhost" it's still not running.
+It's not able to find the index page. You know why? If u remember in
+MVC "index.jsp" is a view technology.
+
+The request goes to the controller. where is the controller in this 
+application? Now where JSP will be called by the controller, not by the
+client. Now since, how do we create a controller?
+
+Now inside Spring Boot when u want to create a constoller, of course 
+what runs behind the scene in "Servlet". But how do we create a 
+controller Do we have to really extend the stupid servlet.
+
+And Do all those things?

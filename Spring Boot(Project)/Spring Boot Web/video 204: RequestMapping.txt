@@ -7,4 +7,9 @@ we have to use annotation call Request Mapping. And in this mapping u have
 to pass the path.
 
 The path here is 'homepage'. So, whenever someone calls the 'homepage',
-this is something I want to execute.
+this is something I want to execute. It is as simple as that. Just a 
+request mapping, it will come to know that this is a mapping we have to do.
+
+which is for the 'slash'. Yeah, if you're doing for the students, u can
+also say 'student'. but at this point i want to map it for the '/'
+'homepage'. And that's the only change u have to make.

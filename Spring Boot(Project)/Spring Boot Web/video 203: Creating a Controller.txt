@@ -1,0 +1,31 @@
+It's time to create a controller. How do we do that? see what happens
+behind the scenes. We just look forward to see in the normal Spring.
+Here we are just seeing how do we create one. then we'll understand how
+things are getting called later,
+
+but at this point be with me. So, what do is in my package, let me create a
+simple class, not a servlet, a simple class, And let me name this class as
+"HomeController".
+
+That means we can create multiple controls in the project. And that make
+sense, right? for different instance u should create a different Controller.
+Here I'm saying HomeController. Let me create one.
+
+Now this below is your "Controller", okay? But will it really work?
+CODE in 'HomeController.java'
+     package com.aniket.SpringBootWeb1;
+     public class HomeController {
+     }
+See, the thing is if you are using a SpringBoot app. Or if u are using a
+Spring framework for the web, we have to specify that 'HomeController'
+has something special.
+
+And the way u can do that or interact with your Spring framework By 
+specifying a special meaning Is with the help of 'Annotation'.
+               -------------X--------------
+Example: If u want something to be a Spring-managed object, that's why
+         u use '@Component'. If u want to make this Controller,
+If u want to make this Controller we use Something called
+'@Component' Which is a stereotype Annotation, and that's it.
+           You are making a 'Controller' here.
+              --------------X---------------

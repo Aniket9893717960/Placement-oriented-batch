@@ -1,0 +1,10 @@
+Okay, so let's solve this problem of mapping. 
+The thing is if u want to map this, you don't have to do any qualification
+for the XML, luckily. we have to use annotation.
+
+Now, which annotation we have to use? So for this, for mapping the request.
+we have to use annotation call Request Mapping. And in this mapping u have
+to pass the path.
+
+The path here is 'homepage'. So, whenever someone calls the 'homepage',
+this is something I want to execute.

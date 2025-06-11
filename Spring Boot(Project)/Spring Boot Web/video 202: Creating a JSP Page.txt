@@ -23,5 +23,5 @@ that with the help of JSP. So, i will go back to my IDE, and here let me
 create a homepage, but where u will do it?
 
 So, u can just go to your main folder and inside this u can create your 
-"index.jsp".
-  
+"index.jsp". But not in the main folder basically. U have to create a 
+new folder in this called "webapp".

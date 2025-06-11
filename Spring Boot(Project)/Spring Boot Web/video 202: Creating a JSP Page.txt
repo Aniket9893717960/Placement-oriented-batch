@@ -23,5 +23,23 @@ that with the help of JSP. So, i will go back to my IDE, and here let me
 create a homepage, but where u will do it?
 
 So, u can just go to your main folder and inside this u can create your 
-"index.jsp". But not in the main folder basically. U have to create a 
+"index.jsp". But not in the 'main' folder basically. U have to create a 
 new folder in this called "webapp".
+
+Because Spring will look for this particular folder for your 'homepage'.
+Now let's create a webapp inside 'webapp' u will create a page called
+'index.jsp'.
+Now let's write our HTML page is i want to print "Hello World". That's 
+it nothing much and that's how u start anything, right?
+
+U want to print "Hello World". Now if u want 'index.jsp' to work, what
+else u need? So, basically this is a JSP page right? And when u use a 
+JSP page, we have to use certain things.
+
+So, we have to say this is a JSP page. The way u do that is by using a
+page attribute. and then u mention the language level. So, language is
+equal to Java and that's it.
+
+CODE in "index.jsp"
+                   <%@page language="java" %>
+                   Hello World!!!

@@ -1,0 +1,27 @@
+Now let's get our "HomePage" ready. Because when u go for the "HomePage".
+It's says the below error.
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Wed Jun 11 13:53:32 IST 2025
+There was an unexpected error (type=Not Found, status=404)."
+
+So, what we are requesting for if u see the address bar we are requesting for
+"localhost:8080", which is your website and then when u request for the homepage,
+It says '404'.
+
+That means our home page is not there yet. And we know if u want to create a 
+"view Technology". U can create a JSP page. Again this change dependes upon
+  what u are using in the front end.
+
+If u are using a 'React' application. Or if u are using, let's say a mobile
+application, what u want is only a data. but then we'll see that later,
+how do we just return data?
+
+At this point a want to return a full fledge HTML page and we can design 
+that with the help of JSP. So, i will go back to my IDE, and here let me 
+create a homepage, but where u will do it?
+
+So, u can just go to your main folder and inside this u can create your 
+"index.jsp".
+  

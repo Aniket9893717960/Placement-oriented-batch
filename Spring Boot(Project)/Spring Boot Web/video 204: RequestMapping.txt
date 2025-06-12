@@ -39,4 +39,21 @@ remember we talked about conversion, we have to convert your JSP
 into Servlet?
 
 Who will do that? And that's where u need a help here. So, we have
-to add one more dependency to achieve that, 
+to add one more dependency to achieve that, which is called a 
+"Tomcat Jasper".
+
+So, i will go to my browser and go to your "MVN repository".
+And search for "Tomcat Jasper".
+CODE OF "MVNRepository"
+    <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>tomcat-jasper</artifactId>
+        <version>10.1.39</version>
+    </dependency>
+
+Okay, let's import this particular package. Reload your Maven and 
+that's done. We got this dependency and i hope this time it'll work.
+Now if u go back to your browser now, go back to 'homepage' which is not
+working,
+
+let's do "localhost:8080" then enter and boom

@@ -26,3 +26,17 @@ Atleast we are able to call this home. This is woeking right? So, we have
 reached to this point. where we are able to call a particular method,
 depend upon the mapping.
 
+And request mapping is not the onlly method we have. So, apart from
+'RequestMapping'. we also have 'GetMapping', 'PostMapping'.
+
+We'll see that later. So, if i say, i'll show u just a method name,
+like we got 'GetMapping', 'PostMapping', so we'll see that when to use
+what. But At this point we're using 'RequestMapping'.
+
+The reason it is not working is because by default,'springboard'
+does not support JSP page. So, we have to basically convert. So, 
+remember we talked about conversion, we have to convert your JSP
+into Servlet?
+
+Who will do that? And that's where u need a help here. So, we have
+to add one more dependency to achieve that, 

@@ -56,4 +56,10 @@ that's done. We got this dependency and i hope this time it'll work.
 Now if u go back to your browser now, go back to 'homepage' which is not
 working,
 
-let's do "localhost:8080" then enter and boom
+let's do "localhost:8080" then enter and boom. It's working perfectly
+we got the out as "Hello World" at localhost This time it will not saying
+Download because now we are able to convert the JSP into servlet.
+And that's what we are running now.
+
+But mostly we return the Data Not a whole page form "HomeController".
+How we can return the page let's see in the next video.

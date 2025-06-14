@@ -71,3 +71,30 @@ So let me create a file or maybe I will just copy-paste this 'index.jsp'
 here with differnet name 'result.jsp'.
 we need a form here and what we need is to 'print' something. So, i'll
 print "Result is." Noething fancy, I'm just saying "Result is.".
+CODE IN 'result.jsp'
+<%@page language="java" %>
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <body>
+ <h2>Result Is:</h2>
+ <!-- <form action="add">
+    <label for="num1">Enter 1st number :</label>
+    <input type="text" id="num1" name="num1" /><br>
+    <label for="num2">Enter 2nd number</label>
+    <input type="text" id="num2" name="num2" /><br>
+    <input type="submit" id="submit"  /> -->
+ </form>
+ </body>
+</html>
+
+U can see it says "Result Is." So, it is able to find the page now but
+we are not printing it So, what is happeing is, when u send the first
+request, The request goes to the homepage.
+It is bringing 'index.jsp'. From "index.jsp", u can basically sending an 
+add request, and add request says "Okay, we have to call 'result.jsp'"
+
+But the question arise, who is doing this mapping? If u go back to servlets, remeber for every single thing we have to do the mapping in
+the XML file. we are not doing mapping here. so, who is calling it?
+So the thing is, there's something called "DispatcherServlet".

@@ -73,4 +73,48 @@ CODE OF CSS ATTACHMENT COMMAND IN HTML:
       <link rel="stylesheet" type="text/css" href="style.css">
 
 This make page bit beautiful, not vary necautiful So, we are trying to 
-use some Java Theme Some Coffee theme here
+use some Java Theme Some Coffee theme here Not great looking but
+manageable, right?
+
+So, we'got a page and i can provide some numbers here. So, let's say
+I want to add six and seven, let's say i want the output here is '13'.
+Now u would say we will done this with simple 'javaScript', right?
+
+we can write a client site code, add this to number, see we can do 
+whatever we want. we can simply take a mobile phone, get a open the 
+calculator.
+
+And add this two numbers Not the main things. the main thing is what if 
+"i want to build a Spring Application where the client sends data to the
+ Server and u want to perform some operation."
+
+So, when i click on submit here. I want this to work. Because when click
+on submit we got error:
+"Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Sat Jun 14 15:23:35 IST 2025
+There was an unexpected error (type=Not Found, status=404)."
+
+So, besically u server is not happy by saying, hey, u know,u're sending 
+some request and i don't have any idea what u want me to do. I would
+Say, okay, it's not very complex.
+
+If someone sends request for the add. Now u can see when u say submit 
+it, Now u can see when u say submit it, u're sending a request for the
+add URL.
+
+And if u observe the URL here, which is not visible by default in 
+Safari, but u can see we got a URL here, it says "localhost:8080/add".
+Then we are passing two values.
+
+So, in the URL itself, we are passing the values. Number one value is
+six, and num two value is seven. Number one value is six, and num two
+value is seven.
+
+Okay? initially we were sending the request for the homepage, but now 
+we are sending the request is 'add' Okay. That means we need a 
+'Controller' who can accept this request.
+
+Now the question arise how we look, create the controller. And we see 
+that in the next video.

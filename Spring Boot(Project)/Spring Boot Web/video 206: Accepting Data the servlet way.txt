@@ -7,4 +7,40 @@ So, may i Spring allows u to have multiple requests mapped in one
 particular controller. and logically, if u have different types of 
 controllers, let's say u have different types of requests.
 
-So, if u are making an e-commerce website.
+So, if u are making an e-commerce website and u want to request for user,
+so user addition, or maybe adding a user, deleting a user, or updating
+a user, so every thing that deals with the user, u can put that in one
+controller.
+
+Maybe u can have the controller for products where u can add a product,
+remove a product, remove a product, update a product. u can have a 
+controllers for the orders, place the order, delete the order, change 
+the status of the order.
+
+So, u can have that in the OrderController. But here, since we only have 
+two controls now, let's work with the same 'HomeController'. what i will
+do is? if u want to have something that will accept the request,
+u have to create another method.
+
+So, at this point, i will say 'public' String because maybe I want to 
+return a page, of course, right? when u add two numbers, u also want a
+page, and that's what u're expecting in the browser.
+
+So, if u see in the output, when u send this request, this should be
+another page. Okay, so that means I have to return something, and 
+then we can have a method name.
+
+Mathod name can be anything.I will say 'add' here and open bracket close.
+close brackets below is the code.
+CODE IN 'HomeController'
+                      public String add(){}
+
+Okay now here I want to return the name of a page. So, what's should be
+the name of the page? I will simply say return. when can return any page
+name. I will say return 'result.jsp'.
+CODE IN 'HomeController'
+                      public String add(){
+                            return "result.jsp";
+                      }
+
+But then will it be getting called?

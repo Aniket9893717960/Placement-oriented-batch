@@ -1,0 +1,10 @@
+Now let's create a Controller which can accept this request.
+Because if u see the 'HomeController'. Of course we can create a new 
+controller here, a new class, but then Spring allows u to have multiple
+controllers in one controller.
+
+So, may i Spring allows u to have multiple requests mapped in one 
+particular controller. and logically, if u have different types of 
+controllers, let's say u have different types of requests.
+
+So, if u are making an e-commerce website.

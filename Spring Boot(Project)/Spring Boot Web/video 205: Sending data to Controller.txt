@@ -25,3 +25,10 @@ Maybe i want to add two numbers and to achieve that, first of all, u
 need a page where u can add two numbers. So, what i will do is I need a 
 form here. So, they can submit data.
 
+So, they can submit data. So, when i say form, it means i need two text 
+field. I need a button where i can click the button and this two text 
+field data should go to the server.
+
+And for that we have to create a form. Now instead of wasting our time 
+writing the code, I do have the code with me. So, that's our form.
+U can see i'm using a label for enter the first no.

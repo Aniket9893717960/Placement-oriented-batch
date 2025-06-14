@@ -65,3 +65,12 @@ here.
 
 So, what i will do is we will create a CSS file here. Just to style this
 stuff. let me create a CSS file here. So, I'll say 'style.css'.
+In which we done styling stuff and i am not here to teach u 'CSS'.
+
+And we have to also make sure that we use the CSS here. So, bacically
+by attaching Below CSS link at HTML page what we are doing is:
+CODE OF CSS ATTACHMENT COMMAND IN HTML:
+      <link rel="stylesheet" type="text/css" href="style.css">
+
+This make page bit beautiful, not vary necautiful So, we are trying to 
+use some Java Theme Some Coffee theme here

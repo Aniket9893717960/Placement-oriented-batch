@@ -32,3 +32,36 @@ field data should go to the server.
 And for that we have to create a form. Now instead of wasting our time 
 writing the code, I do have the code with me. So, that's our form.
 U can see i'm using a label for enter the first no.
+CODE INSIDE WEBAPP 'index.jsp'
+          <%@page language="java" %>
+          <html>
+           <body>
+           <h2>Hello World!!!</h2>
+           <form action="add">
+              <label for="num1"></label>
+              <input type="text" id="num1" name="num1" /><br>
+              <label for="num2"></label>
+              <input type="text" id="num2" name="num2" /><br>
+              <input type="submit" id="submit"  />
+           </form>
+           </body>
+          </html>
+And then we have a text typed or text box u can say, which is a typed 
+text and it takes a number. And the ID for that is 'num1' because it's
+'Id' is important and then the ID for the second one is 'num2'.
+And we have the button there which is called 'submit'.
+
+And may be I just want to change this form hello world. To "Telusko
+Calculator". That's it Nothing fancy, just a simple page here.
+And let me restart this just to see if i can get this page.
+
+It's looking good on the screen So,  go back to local host and say 
+'refresh'.Yes we know this not looking goob but we are not here to make
+some beautiful things, right?
+
+I mean we want to make beautiful things, but not in the front End,
+in back end. But still doesn't look good, right? let's have something 
+here.
+
+So, what i will do is we will create a CSS file here. Just to style this
+stuff. let me create a CSS file here. So, I'll say 'style.css'.

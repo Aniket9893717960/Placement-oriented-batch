@@ -1,0 +1,27 @@
+So we got the home page which is "Hello World". but then we don't want a 
+simple page here, right? Maybe i want to perform some operation.
+
+So, the entire idea of having a backend is where a user will request for some
+thing. Maybe u want to add two no., simplest stuff. or u want to find the
+data about something or may be u want to see the listing of a product by
+a price.
+
+So, basically what u're doing is a client sends a request for the server,
+server does some processing and give something back to the client.
+Now at this point I don't want to get into complex logic. because we are 
+here to learn Spring framework, not to make complex logic.
+
+And that's why we go for the simple example.
+                     HOW DO WE ADD TWO NUMBERS?
+Now why we are doing this for a simple reason, we want to send some data to
+the server. We want to ask server, Hey. u know u have to do something for me
+Server say "Okay, we'll do it."
+
+Give back the data to the client. That's the process we want to achieve.
+So, how do we do that? So, first of all, in this 'HomePage', I don't
+want to simply print a hello world.
+
+Maybe i want to add two numbers and to achieve that, first of all, u 
+need a page where u can add two numbers. So, what i will do is I need a 
+form here. So, they can submit data.
+

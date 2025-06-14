@@ -69,3 +69,5 @@ But know, it's not about to just calling this, right?
      DO WE HAVE 'result.jsp' IN THE FILE, OR WE DON'T YET?
 So let me create a file or maybe I will just copy-paste this 'index.jsp'
 here with differnet name 'result.jsp'.
+we need a form here and what we need is to 'print' something. So, i'll
+print "Result is." Noething fancy, I'm just saying "Result is.".

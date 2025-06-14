@@ -43,4 +43,29 @@ CODE IN 'HomeController'
                             return "result.jsp";
                       }
 
-But then will it be getting called?
+But then will it be getting called? Of course not. So basically, we
+have to map it. Now how do u map it? of course for mapping, we can use
+@RequestMapping. And then in bracket, we can mention the URL. The URL
+Of this is 'add', because if u see on the 'homepage'. we are saying,
+"This is my website name",and this is the URL,"the URL path basically",
+That's what we have to mention. This is for the 'add' request,
+CODE IN "HomeController"
+                      @RequestMapping("add")
+                      public String add(){
+                            return "result.jsp";
+                      }
+Is it really work? to check this let's re run the program. But we got
+an error after clicking to 'submit' button. It may not be able to find 
+it, 
+                IS the mapping Happening?
+maybe it's happening it is searching for 'result.jsp'. Not able to find 
+it the 'result.jsp'. To prove that or to check that, we can say "in add"
+in 'println' just to see if this is working.
+We know we always go step by step Otherwise, we are not sure at what 
+point we got the error. So, i just saying "in add" now.
+We got Yse, we are able to call 'add' method in "HomeController".
+But know, it's not about to just calling this, right?
+
+     DO WE HAVE 'result.jsp' IN THE FILE, OR WE DON'T YET?
+So let me create a file or maybe I will just copy-paste this 'index.jsp'
+here with differnet name 'result.jsp'.

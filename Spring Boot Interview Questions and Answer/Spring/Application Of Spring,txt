@@ -11,4 +11,9 @@ u need and ignore the rest.
 3. Integration with Existing framework: Spring does not reinvent the wheel
                                         rather, it makes extensive 
 technologies such as numerous ORM frameworks, logging frameworks, JEE,
-Quartz
+Quartz and JDK timers and other technologies.
+
+4. Testability: Because environment dependent code is put into this
+                framework, testing a Spring written application is
+trivial. Furthermore, using JavaBeanstyle POJOs makes it easier 
+to employ dependency injection for injecting test data.

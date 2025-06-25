@@ -1,0 +1,14 @@
+1. POJO Based: Spring allows developers to use POJOs to create enterprise 
+               class apps. The advantage of using simply POJOs is that
+you don't require an EJB container product like an application server
+instead, u may use a powerful servlet container like Tomcat or a commercial
+product.
+
+2. Modular: Spring is set up in a modular approach. Even if there are a lot
+            of packages and classes, u only need to worry about the ones
+u need and ignore the rest.
+
+3. Integration with Existing framework: Spring does not reinvent the wheel
+                                        rather, it makes extensive 
+technologies such as numerous ORM frameworks, logging frameworks, JEE,
+Quartz

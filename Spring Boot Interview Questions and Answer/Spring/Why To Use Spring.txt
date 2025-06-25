@@ -1,0 +1,9 @@
+                        WHY TO USE SPRING?
+Spring framework is a Java platform that is open source. ROD JOHNSON created it,
+and it was first released under the Apache 2.0 license in June 2003. 
+When it comes to size and transparency, Spring is featherweight.
+
+Spring framework's basic version is about 2MB in size. The Spring framework's 
+core capabilities can be used to create any Java Program, however there are 
+modifications for constructing web applications on top of the 
+java EE platform.

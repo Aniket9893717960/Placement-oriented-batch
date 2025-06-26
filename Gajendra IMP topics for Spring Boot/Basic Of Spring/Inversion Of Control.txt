@@ -9,3 +9,74 @@ and dependency wiring.
 
     #Why is loC Used?
  To achieve loose coupling between classes.
+ To improve modularity and testability.
+ To let the framework manage object lifecycle and configuration.
+
+    #Real-Life Analogy:
+ imagine ordering food from a restaurant:
+Without IoC: U go to the kitchen, find ingredients, cook yourself(tight 
+-----------  coupling).
+With Ioc: u just sit and order and the chief handes everything
+--------  (Control Is inverted).
+
+    #Example Without IoC (Tightly Coupled Code)
+1. 'Student.java' Code:
+      class Student {
+         private  Address address;
+         public Student(){ address = new Address(); }
+         // Student is creating Address -> Tightly Coupled
+         public void show(){ address.display(); }
+      }
+
+    #Example with IoC using Spring (Loosely Coupled Code)
+1. Address.java
+      public class Addesss {
+         public void display(){
+            System.out.println("Indore, Madhya Pradesh");
+         }
+      }
+
+2. Student.java
+      public class Student {
+         private Address address;
+         // Setter Injection
+       public void setAddress(Address address){ this.address = address; }
+         public void show(){ address.display(); }
+      }
+
+3. beans.xml (Spring Configuration)
+      <beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xmi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema
+             /beans/spring-beans.xsd">
+            <bean id="address" class="com.example.Address" />
+            <bean id="student" class="com.example.Student">
+               <property name="address" ref="address" />
+            </bean>
+      </beans>
+
+4. Main.java
+      import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+   public class Main {
+      public static void main(String args[]){
+ApplicationContext context = new 
+                              ClassPathXmlApplicationContext("beans.xml");
+Student student = (Student) context.getBean("student");
+student.show();
+      }
+   }
+
+   # What's Happening Here?
+ Spring Container (loC container) creates and manages the "Address"
+ and "Student" objects.
+ It injects the "Address" dependency into the "Student" object via
+ setter method.
+ The control of object creation is inverted from the programmer to
+ the container.
+
+   #Benefits of loC in Spring:
+ Loose coupling between classes.
+ Easier unit testing (can inject mock dependencies).
+ Centralized configuration.
+ Reusability and maintainability.

@@ -1,0 +1,11 @@
+       EXPLAIN IN DETAIL ABOUT INVERSION OF CONTROL WITH EXAMPLE?
+Inversion of Control (loC) is a design principle in Software Engineering
+where the control of object creation and their dependencies is inverted
+from the program itself to an external container or framework (like Spring).
+
+Instead of the application code controlling the flow and creating objects,
+the framework(Spring) takes over this control and manages object creation
+and dependency wiring.
+
+    #Why is loC Used?
+ To achieve loose coupling between classes.

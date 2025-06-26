@@ -55,4 +55,33 @@ Spring Core        Provides the fundamental features like loC and
 Spring AOP         Provides "Aspect Oriented Programming" support.
 Spring ORM         Integrates ORM tools like Hibernate, JPA.
 Spring JDBC        Simplifies JDBC operations.
-Spring MVC         Builds web applications following the MVC design patterns.
+Spring MVC         Builds web applications following the MVC design     
+                   pattern.
+Spring Context     Supports internationalization, event propogation,
+                   resource loading.
+Spring Security    provides authentication and authorization support.
+Spring Web Flow    For  building complex web application workflows.
+
+    #Advantages Of Using Spring Framework:
+a. Promotes loose Counpling And Easier Unit Testing.
+b. Reduce boilerplate code through powerful abstration.
+c. Makes enterprise level Java developement faster and more efficient.
+d. large community and strong support.
+e. Works well for both 'monolithic' and 'microservices' architecture
+   (especially with Spring Boot).
+
+    #Example: Basic Spring Bean
+1. beans.xml
+            <bean id="student" class="com.example.Student">
+                <property name="name" value="Aniket Rathore" />
+            </bean>
+2. Student.java
+            public class Student {
+                private String name;
+                public void setName(String name){this.name = name;}
+                public void display(){System.out.println("Name: "+name);}
+            }
+3. Main.java
+            ApplicationCOntext context = new ClassPathXmlApplicationContext("beans.xml");
+            Student s = (Student) context.getBean("student");
+            s.diaplay();

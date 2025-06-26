@@ -1,0 +1,58 @@
+               WHAT IS SPRING FRAMEWORK? IN DETAILS?
+The Spring Framework Is a powerful, feature-rich and widely used open 
+source Java Framework that provides a comprehensive infrastructure for 
+developing Java enterprise applications. 
+It was created to simplify the development of enterprise grade 
+applications by promoting loose coupling, dependency injection and modular
+design.
+   # Key Features of Spring Framework:
+1. Inversion Of Control(loC):
+    Spring uses the loC Container to manage the life cycle and configuration
+    of application objects(beans).
+    Objects are given their dependencies at runtime, which is called 
+    "Dependency Injection(DI)".
+
+2. Aspect - Oriented Programming(AOP):
+    Separates cross-cutting concerns (like logging, security, transactions)
+    from business logic.
+    Helps in cleaner and modular code.
+
+3. Transaction Management:
+    Provides a consistent Programming model for transaction management,
+    abstracting from JTA, JDBC, HIBERNATE, JPA and etc.
+
+4. Spring MVC (Model-View-Controller):
+    A web framework within Spring to build scalable and maintainable
+    applications.
+    Separates business logic, presentation logic and navigation.
+
+5. Integration with other frameworks:
+    Seamlessly integrates with popular technologies like Hibernate, JPA,
+    myBatis, Struts, JDBC, etc.
+
+6. Security:
+    Through Spring Security, it offers authentication, authorization
+    and protection against common like CSRF and XSS.
+
+7. Modular Architecture:
+    Spring is divided into multiple modules like Core, AOP, ORM, WEB, and 
+    etc and developers can use only what they need.
+
+8. Lightweight and Non-invasive:
+    u don't need to implement Spring specific interfaces or extend Spring
+    specific classes to use it.
+
+9. Spring Boot(extension of Spring):
+    Helps to create stand alone Spring applications with minimal 
+    configuration and setup.
+    Offers auto-configuration, embedded servers (like Tomcat) and
+    production ready features.
+
+    #Core Modules of Spring Framework:
+  Module                    Description
+Spring Core        Provides the fundamental features like loC and 
+                        Dependency injection.
+Spring AOP         Provides "Aspect Oriented Programming" support.
+Spring ORM         Integrates ORM tools like Hibernate, JPA.
+Spring JDBC        Simplifies JDBC operations.
+Spring MVC         Builds web applications following the MVC design patterns.

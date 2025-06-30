@@ -76,3 +76,34 @@ public class Main {
 
          DI in Spring Framework:
 Spring automatically manages dependencies using annotations:
+  PROGRAM:
+ @Component
+ class Engine {
+  public void start(){
+   System.out.println("Engine started.");
+  }
+ }
+
+@Component
+class Car {
+ private Engine engine;
+ @Autowired
+ public Car(Engine engine){
+  this.engine = engine;
+ }
+ public void drive(){
+  engine.start();
+  System.out.println("Car is moving.");
+ }
+}
+
+        Summary:
+feature                                           Benefit
+Removes "new" keyword         Promotes loose coupling
+ inside classes     
+Centralized dependency        Makes testing easier
+ control
+Different types:              Use based on need
+COnstructor, Setter, Field    (Constructor is preferred)
+Common in Spring              Uses annotations like 
+Framework                     @Autowired, @Component, etc.

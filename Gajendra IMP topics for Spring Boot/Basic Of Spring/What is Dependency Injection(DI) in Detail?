@@ -1,7 +1,19 @@
 Dependency Injection Is a design pattern used in Software Development -
-especially in object oriented programming to reduce tight coupling between 
-coupling between components.
+especially in object oriented programming to reduce tight coupling 
+components.
 It is a form of Inversion of Control(loC), where the control of creating 
 and injecting dependencies is transferred from the class itself to an 
 external framework or container (like Spring framework).
 
+ #Let's Understand with an Analogy:
+imagine u are assembling a computer.
+ * A tightly coupled system is like a motherboard that builds its own
+   CPU, RAM, and SSD internally.
+ * A loosely coupled system using Dependency Injection is like a 
+   motherboard that accepts components (CPU,RAM,SSD) from outside
+   - allowing flexibility to change any part easily.
+
+ Key Terms:
+Term                  Explanation
+Dependency        An object that another object depends on.
+Injection

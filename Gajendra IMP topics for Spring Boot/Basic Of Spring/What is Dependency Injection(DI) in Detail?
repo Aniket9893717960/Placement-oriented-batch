@@ -25,3 +25,54 @@ Loosely coupled code.
 Better code reusability
 easy Unit testing (via mocking).
 improved code flexibility and maintainability.
+
+         EXAMPLE WITHOUT DI (TIGHTLY COUPLED):
+class Engine {
+ public void start() {
+  System.out.println("Engine started.");
+ }
+}
+class Car {
+ private Engine engine;
+ public Car() {
+  engine = new Engine(); //Creating dependency intenally
+ }
+ public void drive(){
+  engine.start();
+  System.out.println("Car is moving.");
+ }
+}
+Problem: "Car" class is tightly coupled to Engine. Changing "Engine"
+         type means modifying "Car" code.
+
+         EXAMPLE WITH DI:
+class Engine {
+ public void start(){
+  System.out.println("engine started.");
+ }
+}
+class Car {
+ private Engine engine;
+
+ // Constructor Injection
+ public Car(Engine engine){
+   this.engine = engine; // Injecting dependency
+ }
+
+ public void drive(){
+  engine.start();
+  System.out.println("Car is moving.");
+ }
+}
+
+
+public class Main {
+ public static void main(String[] args){
+  Engine engine = new Engine();      // Dependency created externally
+  Car car = new Car(engine);      //Injecting dependency
+  car.drive();
+ }
+}
+
+         DI in Spring Framework:
+Spring automatically manages dependencies using annotations:

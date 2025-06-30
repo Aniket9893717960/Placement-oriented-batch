@@ -1,1 +1,16 @@
+Dependency injection mainly comes in 3 types:
+ 1. Constructor Injection
+ 2. Setter Injection
+ 3. Field Injection
 
+                  CONSTRUCTOR INJECTION
+Dependencies are injected at the time of object creation.
+Uses Constructor parameters to inject all mandatory dependencies.
+
+   #Advantages:
+i. Promotes immutability - dependency is final.
+ii. Encourages writing testable and robust code.
+iii. Fails fast - If any required dependency is missing, object won't 
+                  be created.
+iv. works perfectly with "@Autowired", Lombok "@RequiredArgsConstructor"
+    , etc.

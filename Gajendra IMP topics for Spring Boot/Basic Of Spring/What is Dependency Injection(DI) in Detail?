@@ -16,4 +16,12 @@ imagine u are assembling a computer.
  Key Terms:
 Term                  Explanation
 Dependency        An object that another object depends on.
-Injection
+Injection         Passing the dependency to a dependent object instead
+                  of letting it create the dependency itself.
+loC Container      A framework that injects dependencies automatically. 
+
+#Why Use Dependency Injection?
+Loosely coupled code.
+Better code reusability
+easy Unit testing (via mocking).
+improved code flexibility and maintainability.

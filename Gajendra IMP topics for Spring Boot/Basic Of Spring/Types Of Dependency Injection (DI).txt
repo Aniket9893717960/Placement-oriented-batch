@@ -14,3 +14,8 @@ iii. Fails fast - If any required dependency is missing, object won't
                   be created.
 iv. works perfectly with "@Autowired", Lombok "@RequiredArgsConstructor"
     , etc.
+
+  #Disadvantages:
+i. if too many dependencies (bad design), the consturctor becomes bloated
+   (called Constructor Bloat).
+ii. Not suitable for optiona dependencies.

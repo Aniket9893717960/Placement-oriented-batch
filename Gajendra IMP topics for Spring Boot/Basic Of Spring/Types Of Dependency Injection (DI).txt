@@ -19,3 +19,47 @@ iv. works perfectly with "@Autowired", Lombok "@RequiredArgsConstructor"
 i. if too many dependencies (bad design), the consturctor becomes bloated
    (called Constructor Bloat).
 ii. Not suitable for optiona dependencies.
+
+  #JAVA EXAMPLE:
+class Engine {
+ public void start(){
+  System.out.println("Engine started.");
+ }
+}
+
+class Car {
+ private final Engine engine;
+ // Constructor Injection
+ public Car(Engine engine){
+  this.engine = engine;
+ }
+ public void drive(){
+  engine.start();
+  System.out.println("Car is moving.");
+ }
+}
+
+ #SPRING EXAMPLE:
+ @Component
+ class Engine {
+  public void start() {
+   System.out.println("Spring Engine started.");
+  }
+ }
+
+@Component
+class Car {
+ private final Engine engine;
+ //Spring auto-wires here automatically
+ @Autowired
+ public Car(Engine engine){
+  this.engine = engine;
+ }
+ public void drive(){
+  engine.start();
+ }
+}
+                  -------NOTE------
+Even if u omit "@autowired", Spring automatically detects this 
+constructor and injects it if there's only one constructor.
+                  --------X---------

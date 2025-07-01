@@ -134,3 +134,23 @@ includes the following modules:
  Spring MVC provides a range of features, including support for 
  handling HTTP request and response form handling, data binding, 
  validation, and more.
+ It also provides support for different view technologies, such
+ as JSP (JavaServer Pages), Thymeleaf and Velocity, allowing developers
+ to choose the view technology that best suits their needs.
+
+ *Spring WebFlux: This module provides a reactive programming model
+                  for building web applications that require high
+  Concurrency and scalability. Spring Webflux provides support for
+  building reactive web applications using a range of technologies,
+  such as Netty, Undertow, and Servlet 3.1+ containers.
+ It also provides a range of features, including support for reactive
+ data access, reactive stream processing, and reactive HTTP clients.
+
+ *Spring Web Services: This module provides support for building 
+                       SOAP-beasd and RESTful web services.
+ Spring Web Services provides support for generating WSDL
+ (Web Services Description Language) form Java classes and for 
+ generating Java classes form WSDL.
+ This allows Decelopers to define the contract of their web service
+ using WSDL, and to gererate the Java classes that impelement the web
+ service from the WSDL.

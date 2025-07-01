@@ -40,4 +40,24 @@ destruction and scopes (e.g., singleton, prototype, request, session).
 
  # Aspect Oriented Programming (AOP)
 It allows developers to modularize cross cutting concerns such as logging,
-security and transaction management.
+security and transaction management. These concerns can be applied across 
+multiple components without modifying the core business logic.
+Spring AOP uses advice, pointcuts, and aspects to implement cross -
+cutting concerns. For example, u can use AOP to log method execution
+times or enforce security checks.
+
+Overall, the Spring framework architecture is based on the principles of
+modularity, separation of concerns and flexibility, providing developers
+with a powerful set of tools to build robust, scalable and maintainable
+enterprise applications.
+The framework's modular architecture allows developers to select only the
+necessary modules for their specific needs, reducing unnecessary overhead
+and complexity in the application.
+
+The Spring framework is modular and consists of several modules that 
+provide different functionalities to help build enterprise applications.
+The modules can be broadly categorized into four main areas:
+Core Container, Data Access/Integration, Web and Miscellaneous.
+Let's take a closer look at each area and its corresponding modules:
+
+                     CORE CONTAINER:

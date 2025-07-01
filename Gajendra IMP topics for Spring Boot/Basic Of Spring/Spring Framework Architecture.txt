@@ -1,0 +1,43 @@
+The Spring Framework is a widely used open source Java framework that
+provides a comprehensive programming and configuration model for 
+building enterprise applications.
+Its architecture is designed around two core principles:
+ i. Dependency Injection (DI).
+ ii. Aspect - Oriented Programming (AOP).
+
+The Spring framework consists of several modules, which can be categorized 
+into four main areas:
+
+1. The core container Provides the fundamental functionality of the Spring
+framework, including the LoC Container and ApplicationContext. 
+
+2. The Data Access/Integration area provides support for integrating with 
+   database and other data sources.
+
+3. The Web area provides support for building web applications, including 
+   the Spring MVC and Spring WebFlux modules. 
+
+4. The Miscellaneous area includes other modules that provide additional 
+   functionality, such as the Spring Security module for authentication
+   and authorization feature.
+
+                    CORE PRINCIPLE OF SPRING FRAMEWORK
+  #DEPENDENCY INJECTION (DI)
+DI is a design pattern that promotes loose coupling between components
+by allowing objects to be injected into a class rather than the class
+creating them itself.
+The Spring framework provides an Inversion Of Control (LOC) container
+which is responsible for managing these dependencies.
+
+The "BeanFactory" and "ApplicationContext" are the core interfaces of the
+loC Container.
+   *BeanFactory provides basic dependency injection.
+   *ApplicationContext adds advanced features like 
+    internationalization, event propogation and resource loading.
+
+Spring manages the lifecycle of beans, including initialization,
+destruction and scopes (e.g., singleton, prototype, request, session).
+
+ # Aspect Oriented Programming (AOP)
+It allows developers to modularize cross cutting concerns such as logging,
+security and transaction management.

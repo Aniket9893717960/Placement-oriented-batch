@@ -61,3 +61,23 @@ Core Container, Data Access/Integration, Web and Miscellaneous.
 Let's take a closer look at each area and its corresponding modules:
 
                      CORE CONTAINER:
+The Core Container provides the fundamental functionality of the
+Spring framework, including the inversion of Control(loC) container 
+and the AppliicationContext. It includes the following modules:
+
+ Spring Core: This module provides the fundamental functionality of the
+              Spring framework, including loC and DI. The LoC Container
+ Is the Heart of the Spring framework, responsible for creating and
+ managing instances of JavaBeans. It uses dependency injection to wire the
+ beans together.
+
+ Spring Beans: This module provides the BeanFactory, which is the basic  
+               building block of the loC container, and the BeanWrapper,
+ which is responsible for managing the lifecycle of a bean. The Bean 
+ Factory is the core interface for accessing the loC container. It 
+ provides methods for retrieving beans.
+
+ Spring Context: This module provides the ApplicationContext, which is an 
+ advanced version of the BeanFactory and provides additional features,
+ such as internationalization and resource loading and the ability to 
+ publish and consume events.

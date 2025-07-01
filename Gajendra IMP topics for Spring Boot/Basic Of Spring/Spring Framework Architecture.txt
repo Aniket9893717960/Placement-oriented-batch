@@ -81,3 +81,9 @@ and the AppliicationContext. It includes the following modules:
  advanced version of the BeanFactory and provides additional features,
  such as internationalization and resource loading and the ability to 
  publish and consume events.
+
+ Spring Expression Language (SpEL): This module provides a powerful
+ expression language for querying and manipulating objects during 
+ runtime. SpEL supports a wide range of features, including property
+ access, method invocation, conditionals, loops and type conversion.
+ It also provide support for accessing variables and functions

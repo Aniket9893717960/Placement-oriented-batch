@@ -116,3 +116,21 @@ sources. It includes the following modules:
  management and more.
  Additionally, Spring Data provides support for common data access 
  patterns, such as repositiories and data access objects(DAOs).
+
+Spring Transaction: This module provides support for declarative 
+                    transaction management in Spring applications.
+Spring transaction provides support for various transaction propagation 
+and isolation levels, allowing developers to manage transactions at 
+different levels of granularity. 
+Additionally, Spring transaction provides support for different 
+transaction management strategies, such as using a JTA transaction
+manager or a simple JDBC transaction manager.
+
+                          WEB:
+The web area provides support for building web applications. It 
+includes the following modules:
+ *Spring MVC: This module provides a Model-View-Controller(MVC)
+              framework for building web applications.
+ Spring MVC provides a range of features, including support for 
+ handling HTTP request and response form handling, data binding, 
+ validation, and more.

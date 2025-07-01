@@ -102,4 +102,17 @@ sources. It includes the following modules:
 
  Spring ORM: This module provides integration with Object relational
              Mapping frameworks, such as Hibernate and JPA. Spring ORM
-provides a higher level abstraction
+ provides a higher level abstraction layer on top of ORM frameworks,
+ allowing developers to write less boilerplate code and more easily  
+ integrate ORM technologies with other Spring features, such as 
+ transaction management and caching.
+
+ Spring Data: This module provides a consistent and easy to use 
+             programming model for working with data access technologies,
+             including databases, NoSQL, and cloud based data services.
+ Spring Data provides a wide range of features, including automatic CRUD
+ (Create, Read, Update, Delete) operations, query generation from method
+ name and pagination and sorting, integration with Spring's transaction
+ management and more.
+ Additionally, Spring Data provides support for common data access 
+ patterns, such as repositiories and data access objects(DAOs).

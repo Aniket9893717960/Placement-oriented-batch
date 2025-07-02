@@ -63,4 +63,19 @@ databases and data related operations.
             6.  CAN BE INTEGRATED WITH OTHER FRAMEWORKS
 Having a good network of people is considered one of the key points of
 success in today's world. Our spring is successful as it has a good 
-network and can be used with other frameworks
+network and can be used with other frameworks such as Struts, and 
+Hibernate. This makes it more in demand as one can ease out CRUD 
+operations for databases when Hiberate is integrated with Spring.
+
+                      7. Dependency Injection
+Dependency is neither good for human beings nor the classes in projects.
+Dependency Injection helps in decreasing coupling and dependency
+between classes in Spring projects so that the program becomes 
+maintainable and reusable. Modules of one project can be used effectively
+in another project like a login page, and registration page which not 
+only saves them time but also promotes code reusability which is one of
+the important aspects of software development.
+
+                8. Follows Aspect Oriented Programming
+ AOP allows us to think different about the structure of the program by
+ enabling the modularization of concerns

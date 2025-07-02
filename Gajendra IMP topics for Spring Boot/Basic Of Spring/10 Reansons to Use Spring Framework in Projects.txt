@@ -44,4 +44,23 @@ Spring ensures easy and effective communication with databases as it has
 DAO(Data Access Object)  functionality which is meant to read and write 
 data to a database.
 With the support of DAO in Spring , data access related technologies such
-as HIBERNATE
+as HIBERNATE,JDBC and JPA make it easier to communicate with database.
+For example, Hibernate with Spring makes it easier to preform CRUD 
+operations by eliminating the lines of code and using just simple 
+functions to create, read, update or delete data form database.
+
+                      5. MODULAR DESIGN
+One of the striking feature of Spring is its modularity. It is not a
+whole big framework containing everything as a tightly coupled 
+package but is a framework having different JAR files which can be used
+independently of each other.
+It is divided into components such as core container, data access/ 
+integration. Implementation can be divided in spring according to 
+the MVC pattern where the view interacts with the user and is responsible
+for receiving request to the correct method and model working with
+databases and data related operations.
+
+            6.  CAN BE INTEGRATED WITH OTHER FRAMEWORKS
+Having a good network of people is considered one of the key points of
+success in today's world. Our spring is successful as it has a good 
+network and can be used with other frameworks

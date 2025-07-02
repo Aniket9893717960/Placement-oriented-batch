@@ -1,0 +1,47 @@
+There are many reasons for which Spring is one of the best choices for
+developing our project as it is open source, stable, and many more.
+It is one of the most trusted frameworks for building projects or 
+developing enterprise applications when working with the Java tech stack 
+and projects written in java are more secure and robust.
+
+                      1. EASY SIMPLE AND LIGHTWEIGHT
+ Spring is easy to learn and implement which is composed of modules where
+ we can write spring applications normally with interfaces and abstract 
+ classes just like java applications.
+ Spring helps in coupling and wiring the components which make working with
+ Spring easier and simpler as we can focus more on application rather than
+ Its implementation.
+ It is lightweight as we can inject dependencies as per our need without 
+ having to include each of them thus saving the project from unnecessary 
+ memory utilization.
+
+                      2. BUILDS SECURE WEB APPLICATIONS
+From buying a lock to renting a house, we often look into if they can 
+provide security or not or are secure or not.
+Why not look for security when building an application?
+Spring provides security if Spring Security is on the classpath and we can 
+customize the security setting further for basic authentication and prevent 
+vulnerability in our project.
+
+                      3. MVC PATTERN
+MVC is a pattern and methodology in software design that stands for that
+stands for MODEL VIEW CONTROLLER which helps in separating implementation
+and business logic so that developers can focus on their code for better
+performance of the application.
+In Simple words, the view is where requests are received first which are
+taken by the controller to the corresponding model for results which are 
+then taken to view to show at the front side of the application.
+This systematic receiving and resolving of requests make MVC based 
+frameworks a good deal to work with.
+Spring supports the MVC pattern for developing projects which promotes
+separation of concerns and loose coupling which is one of the key
+features of potential software.
+
+                      4. EASY COMMUNICATION WITH DATABASES
+Databases are an important part of an application as without smooth and
+easy communication with the database, our application can become plain.
+Spring ensures easy and effective communication with databases as it has
+DAO(Data Access Object)  functionality which is meant to read and write 
+data to a database.
+With the support of DAO in Spring , data access related technologies such
+as HIBERNATE

@@ -25,3 +25,18 @@ hibernate, then the same Spring DataAccessExceptions will still be
 thrown.
 According to the underlying technologies, the spring will translate 
 according to their native exceptions.
+
+  #Limitations in Spring DAO related to Exceptions
+*Should not catch persistence exceptions.
+*The hierarchy of exceptions is usually richer and more meaningful than
+ the one provided by spring. But there is no mapping form one provider
+ to the other. The reason for adding '@Respository' in the DAO is the
+ beans are automatically added by the scan procedure. Spring has the 
+ tendency to add other useful features to the annoations.
+
+Sample code snippet related to Spring DAO. Service implementation layer
+has to get annotated with '@Respository' followed by its corresponding 
+service layer.
+  // Necessary imports
+ @Resporitory('<Specify the DAO that is getting accessed>')
+  //  Eg : 

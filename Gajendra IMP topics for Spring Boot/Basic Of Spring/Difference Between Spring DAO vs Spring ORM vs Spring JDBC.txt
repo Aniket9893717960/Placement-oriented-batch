@@ -9,8 +9,19 @@ access the data. One important change that needs to be written while using
 Spring DAO is, that it has to be annotated with @Repository.
 The reason for doing this is the exceptions that may arise in the 
 underlying technology like JDBC, Hibernate, JPA and etc are 
-consistently translated into their respective DataAccessException subclass.
-Let us see this with one example of a Student service scenario.
-
+consistently translated into their respective "DataAccessException" subclass. Let us see this with one example of a Student service 
+scenario.
 Initially, Hibernate is the persistence mechanism that got used.  Suppose
-let us assume that HibernateException 
+let us assume that "HibernateException" is caught at the service layer.
+There should be steps available to catch it. But at some point in time,
+instead of Hibernate, it has been changed to JPA, then no need to change
+the DAO interfaces.
+
+Instead, if it is annoted with @Respository, then the exceptions related 
+to the current underlying technologies will be directly translated to the
+spring "DataAccessException". Because of this feature, through the under
+lying technologies are changed from hibernate to JPA or from JPA to 
+hibernate, then the same Spring DataAccessExceptions will still be 
+thrown.
+According to the underlying technologies, the spring will translate 
+according to their native exceptions.

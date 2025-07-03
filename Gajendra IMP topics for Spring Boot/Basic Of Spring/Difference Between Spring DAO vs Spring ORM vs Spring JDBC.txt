@@ -71,4 +71,36 @@ both SQL  and NOSQL data sources. Model classes have to get annotated
 with '@Entity' and in that primary key has to get annotated with '@Id'.
 The sample code for 'Student' Model Class is given below.
       PROGRAM
-   
+   // Necessary impory statements
+   // This is much required and here model class
+   // should match with database table name
+   @Entity
+   public class Student {
+      @Id
+      private int studentId;
+      // other necessary attributes like name, address etc.,
+      // Corresponding getter and setter methods.
+   }
+
+Spring ORM DAO and service class has to get annotated with '@Component'
+   //Necessary import statements
+   @Component
+   public class StudentDAO {
+      @PersistenceContext
+      private EntityManager em;
+      // Rest set of code
+   }
+
+                        SPRING JDBC
+JdbcTemplate class is provided by Spring JDBC. It directly helps to check
+out SQL queries and parameters. No need to worry about the plumbing code 
+as it does not require that. Configuration with a DataSource is 
+manadatory. The sample code is given below.
+      PROGRAM
+   //necesary import statements
+   int totalStudents = jdbcTemplate.queryForObject("select count(1) 
+   from Student", Integer.class);
+   Student student = jdbcTemplate.queryForObject("select name, address
+   from Student where id=?",
+         rs -> new Student(rs.getString(1), rs.getString(2)),
+         12345);

@@ -47,3 +47,17 @@ service layer.
   return true;
  }
 }
+
+                         SPRING ORM
+It is a very efficient module that plays as an umbrella pattern. The 
+reason for calling this an umbrella is it covers many persistence 
+technologies, manely JPA, JDO, Hibernate and IBatis. For every
+individual technolgy, integration classes are provided by Spring.
+With that integration classes, each technology integrates easily with
+Spring transaction management. Mainly injection of DataSource is done via
+SessionFactory or EntityManagerFactory etc.
+In case of pure JDBC. apart from JdbcTemplate, there is no need for any integration class as JDBC (Directly relies on DataSource).
+
+For each technology, the configuration basically consists in injecting 
+a DataSource nto some kind. For pure  JDBC, there's no need for such 
+integration classes (apart from )

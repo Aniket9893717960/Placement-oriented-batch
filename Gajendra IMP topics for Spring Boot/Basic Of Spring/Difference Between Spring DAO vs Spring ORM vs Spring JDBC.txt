@@ -92,8 +92,10 @@ Spring ORM DAO and service class has to get annotated with '@Component'
    }
 
                         SPRING JDBC
-JdbcTemplate class is provided by Spring JDBC. It directly helps to check
-out SQL queries and parameters. No need to worry about the plumbing code 
+JdbcTemplate class is provided by Spring JDBC. It directly helps to 
+check
+out SQL queries and parameters. No need to worry about the plumbing 
+code 
 as it does not require that. Configuration with a DataSource is 
 manadatory. The sample code is given below.
       PROGRAM
@@ -104,3 +106,29 @@ manadatory. The sample code is given below.
    from Student where id=?",
          rs -> new Student(rs.getString(1), rs.getString(2)),
          12345);
+
+The advantage of using Spring JDBC is it provides a JDBCDaoSupport, It 
+is useful for extending DAO. It has 2 properties namely a DataSource 
+and JdbcTemplate. They are helpful for implementing DAO methods.
+Additionally, there is an exceptions translator available which 
+translates from SQL exceptions to spring DataAccessExceptions.
+
+                         DIFFERENCE TABLE
+SPRING DAO                  SPRING ORM                  SPRING JDBC
+Generalized     |Easy Integration with Spring      |
+concept and     | with the following               |
+@Repository     |a. Session Factory for            | For Plain JDBC
+annotation      |    Hibernate.                    |   calls.
+are mandatory   |b. EntityManagerFactory for       |
+                |    JPA.                          |
+                |c. SqlSessionFactory for          |
+                |         MyBtis                   |
+------------------------------------------------------------------------
+Data access     |                                  | if the application
+implementation  | Multi - technology               | is not complex and
+is totally      | implementation is possible       |diversified and lies
+separated and   | by integrating with the          | on a single
+hence it is     | required tools.                  | database, we can
+independent of  |                                  | use this and it is
+the database.   |                                  | efficient.
+------------------------------------------------------------------------

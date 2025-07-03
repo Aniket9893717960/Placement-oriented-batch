@@ -39,4 +39,11 @@ has to get annotated with '@Respository' followed by its corresponding
 service layer.
   // Necessary imports
  @Resporitory('<Specify the DAO that is getting accessed>')
-  //  Eg : 
+  //  Eg : StudentDAO
+ public class StudentDAOImplementation extends HibernateDao<Student, 
+ Long> implements StudentDAO {
+ @Override public boolean remove(Student studentObject){
+  // Write necessay steps
+  return true;
+ }
+}

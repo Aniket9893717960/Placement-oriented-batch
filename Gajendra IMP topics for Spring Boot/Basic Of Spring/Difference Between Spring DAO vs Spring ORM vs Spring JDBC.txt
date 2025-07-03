@@ -1,0 +1,16 @@
+The Spring framework is an application framework and inversion of control
+container for the Java Platform. The framework's core features can be used
+by any Java application, but there are extensions for building web 
+applications on top of the Java EE platform.
+
+                           SPRING DAO
+It is not a spring module. It does not provide interfaces or templates to
+access the data. One important change that needs to be written while using 
+Spring DAO is, that it has to be annotated with @Repository.
+The reason for doing this is the exceptions that may arise in the 
+underlying technology like JDBC, Hibernate, JPA and etc are 
+consistently translated into their respective DataAccessException subclass.
+Let us see this with one example of a Student service scenario.
+
+Initially, Hibernate is the persistence mechanism that got used.  Suppose
+let us assume that HibernateException 

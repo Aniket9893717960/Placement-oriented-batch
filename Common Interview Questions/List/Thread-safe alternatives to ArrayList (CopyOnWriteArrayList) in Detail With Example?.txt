@@ -46,3 +46,7 @@ It makes all operations thread - safe, but:
  *It is a thread safe version of "ArrayList" designed for concurrent 
   access, part of "java.util.concurrent".
  *Implements List Interface, so u can use it just like "ArrayList".
+
+  # How it Works Internally:
+ It uses the copy on write strategy:
+  *Whenever u add,

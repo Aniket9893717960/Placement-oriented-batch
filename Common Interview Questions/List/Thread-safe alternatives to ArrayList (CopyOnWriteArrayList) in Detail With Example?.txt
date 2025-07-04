@@ -1,0 +1,24 @@
+Thread Safe Alternatives to "ArrayList" in Java especially focusing on
+"CopyOnWriteArrayList" - in complete detail with easy to understand 
+concept, real use - cases, and technical insight.
+
+            THREAD SAFE ALTERNATIVES TO ARRAYLIST IN JAVA
+Java provides several ways to make list based data structures safe for
+multi threaded environments, where multiple threads read/write data
+simultaneously.
+Let's explore the 3 main thread safe alternatives to ArrayList:
+       1. Vector (Legacy Thread Safe List)
+   # What is It?
+ *Vector is a synchronized version of "ArrayList".
+ *All its methods are internally synchronized using synchronized keyword.
+   Example:
+    Vector<String> vector = new Vector<>();
+    vector.add("One");
+    vector.add("Two");
+
+  #Drawbacks:
+ *Synchronizes every operation, even reads -> causes performance issues.
+ *Considered outdated for modern apps.
+ *Replaced by more advanced options like "CopyOnWriteArrayList".
+
+       2. Collections.synchronizedList()

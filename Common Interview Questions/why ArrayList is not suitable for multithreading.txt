@@ -1,0 +1,67 @@
+        WHY ARRAYLIST IS NOT SUITABLE FOR MULTITHREADING?
+An ArrayList is part of the Java Collections Framework, but it is not
+synchronized. This means:
+  *It does not provide any built in mechanism to prevent simultaneous access
+   from multiple threads.
+  *No locking or coordination is done internally for reading or writing.
+
+                    WHAT CAN GO WRONG?
+when multiple threads access and modify an ArrayList at the same time,
+the following issues can occur:
+       1. ConcurrentModificationException
+*This is one of the most common runtime exceptions in concurrent scenarios.
+*It is thrown when one thread modifies the list (e.g., add/remove) while
+ another thread is iterating over it.
+ Example:
+  List<String> list = new ArrayList<>();
+  list.add("A");
+  list.add("B");
+  list.add("C");
+  for(String item : list){
+    list.remove(item); //Modifying while iterating
+  }
+ OUTPUT:
+  Exception in thread "main" java.util.ConcurrentModificationException
+
+       2. Data Inconsistency / Corruption
+In multithreaded apps, one thread might read a partially updated list,
+or two threads might interfere while resizing the internal array.
+  EXAMPLE:
+    *One thread is adding items to the list.
+    *Another thread is reading from the same list.
+    *Result: the reader may see incorrect data, null values, or even
+             IndexOutOfBoundException.
+  Internally:
+    *ArrayList uses an array "Object[] elementData" to store items.
+    *Methods like "add()" or "remove()" modify this array.
+    *When not synchronized, these operations can clash and cause incorrect
+     Behavior.
+
+          REAL WORLD EXAMPLE (Multi threaded Failure):
+    List<Integer> list = new ArrayList<>();
+    Runnable writer = () -> {
+      for(int i=0; i<1000; i++){
+        list.add(i);
+      }
+    };
+
+    Runnable reader = () -> {
+      for(int i=0; i< list.size(); i++){
+        System.out.println(list.get(i));
+      }
+    }
+    Thread t1 = new Thread(writer);
+    Thread t2 = new Thread(reader);
+    t1.start();
+    t2.start();
+
+💡 Bottom Line:
+Issue Type	Cause
+ConcurrentModification               Modifying list while iterating
+    Exception	                         (usually during for-each)
+Data inconsistency	          Simultaneous read/write without lock — one 
+                                   thread sees dirty/incomplete state
+Unpredictable behavior	      Internal resizing, shifting, and array 
+                                       copying during race conditions
+Thread interference	          One thread modifies while another is 
+                             reading — results in lost or mixed updates

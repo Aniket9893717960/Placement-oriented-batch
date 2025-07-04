@@ -22,3 +22,27 @@ Let's explore the 3 main thread safe alternatives to ArrayList:
  *Replaced by more advanced options like "CopyOnWriteArrayList".
 
        2. Collections.synchronizedList()
+   # What is it?
+ *It's a wrapper around any list (like "ArrayList") that makes it 
+   synchronized.
+ *Provided by "java,util.Collections".
+  Example:
+List<String> syncList = Collections.synchronizedList(new ArrayList<>());
+                   ----------NOTE----------
+It makes all operations thread - safe, but:
+  You must manually synchronize during iteration:
+    PROGRAM
+     synchronized(syncList){
+     for (String s : syncList){
+       System.out.println(s);
+      }
+     }
+                   ----------X------------
+   # Best For:
+*Situations where u want to make an existing list thread safe quickly.
+*Works better than "Vector" but require careful handling.
+
+       3. CopyOnWriteArrayList (Modern & Efficient)
+ *It is a thread safe version of "ArrayList" designed for concurrent 
+  access, part of "java.util.concurrent".
+ *Implements List Interface, so u can use it just like "ArrayList".

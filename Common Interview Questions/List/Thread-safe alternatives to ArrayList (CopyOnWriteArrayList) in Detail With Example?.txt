@@ -49,4 +49,40 @@ It makes all operations thread - safe, but:
 
   # How it Works Internally:
  It uses the copy on write strategy:
-  *Whenever u add,
+  *Whenever u add, remove or modify the list, it creates a new copy
+     of the entire underlying array.
+  *The old array stays unchanged for readers.
+This means readers never block or wait, and they get a stable snapshot of
+the data.
+Example:
+   import java,util.concurrent.CopyOnWriteArrayList;
+   public class Example {
+    public static void main(String[] args){
+     CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
+     //writer thread
+     new Thread(() -> {
+            list.add("Apple");
+            list.add("Banana");
+            list.add("Mango");
+        }).start(); 
+     //Reader Thread
+     new Thread(() -> {
+       for(String item : list){
+         System.out.println("Reading: "+item);
+       }
+     }).start(); 
+     }
+   }
+ This code will never throw ConcurrentModificationExceptio. Readers 
+ always read a safe copy.
+
+                     WHEN TO USE IT?
+Use "CopyOnWriteArrayList" in multi threaded environments where:
+ *Reads happen frequently
+ *Writes happen occasionally
+ *U want zero locking on road
+                     REAL WORLD USE CASES:
+ *Caching systems
+ *Subscription lists (event listeners)
+ *Configuration values
+ *Real - Time dashboards or logs

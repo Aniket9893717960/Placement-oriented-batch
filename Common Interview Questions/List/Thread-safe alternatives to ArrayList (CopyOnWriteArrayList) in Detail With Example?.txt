@@ -86,3 +86,33 @@ Use "CopyOnWriteArrayList" in multi threaded environments where:
  *Subscription lists (event listeners)
  *Configuration values
  *Real - Time dashboards or logs
+
+                     PROS AND CONS
+           Pros ✅	                        Cons ❌
+   *Thread-safe reads          	High memory usage on 
+   without locking                  write (copies array)
+*No external synchronization 	Slow writes (copies the entire array)
+   needed.
+*Never throws           	Not good for write-heavy applications
+ ConcurrentModificationException
+*Safe to use in read-dominant	Not suitable for 
+ scenarios                          real-time high-frequency edits
+
+                   INTERNALS SUMMARY
+*Backed by a volatile array.
+*On write:
+  Locks with ReentrantLock
+  Creates a new array
+  Performs the update
+  Replaces the reference
+*On read:
+  No lock needed, returns a safe snapshot
+
+             When Should You Use Which?
+ Situation	                         Use This List Type
+Single-threaded app	            ArrayList
+Legacy synchronized list	Vector (only if forced)
+Read-heavy + occasional writes	CopyOnWriteArrayList ✅
+You already have a list to secure	Collections.synchronizedList
+High write throughput required	ConcurrentLinkedQueue or other 
+                                    concurrent data structures

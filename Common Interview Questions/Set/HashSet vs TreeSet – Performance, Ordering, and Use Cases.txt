@@ -44,3 +44,16 @@ This ensures that duplicates are not stored.
   HashSet is not synchronized. if multiple threads access it, use
   'Collections.synchronizedSet()' or "ConcurrentSkipListSet" if u want
   thread safety.
+
+                         WHAT IS TREESET?
+TreeSet is also part of Java's Collection framework and implements the
+NavigableSet and SortedSet interfaces. Unlike "HashSet", it maintains
+elements in sorted order.
+It is implementes using a Red Black Tree, which is a type of self 
+balancing binary search tree(BST).
+
+  # Key Properties of TreeSet:
+i. Just like "HashSet", it stores only unique elements.
+ii. Elements are always sorted (natural or custom order).
+iii. If u insert "null" and TreeSet uses natural order, it throws NPE.
+iv. 

@@ -53,3 +53,57 @@ Even if the hash codes match and go to the same bucket, it calls
   "Aniket".equals("Aniket"); // returns true -> duplicate -> not added
        So, 'hashCode()' is used to locate and 'equals()' is used to
           verify.
+
+     #Collision handling in HashSet
+  What if two different elements have the same hashCode?
+  CODE:
+       String str1 = "FB"; //hashCode() = 2236
+       String str2 = "Ea" // hashCode() = 2236
+       HashSet<String> set = new HashSet<>();
+       set.add("FB");
+       set.add("Ea");  // Different Strings, but same hashCode!
+
+  Same bucket due to same hash -> Java now checks:
+  CODE:
+       "FB".equals("Ea"); //false -> So both are stored in same 
+                          bucket (as a Linked list or tree)
+
+     #HashSet Bucket Structure
+ Internally, "HashMap"(used by 'HashSet') has an array of buckets.
+ Each bucket stores a linked list or a tree of entries 
+ (In case of collision):
+     Index   Bucket (key, value)
+     0       "Aniket" -> "Sumit" -> "Nikita" (if same hash)
+     1       null
+     2       "Rahul"
+     3       null
+
+     #Tree after Java 8(Treeification)
+ If many elements land in the same bucket (>= 8 items by default),
+ Java converts that bucket from a linked list to a balanced tree for
+ better performance.
+    *Why? Linked list search is O(n), tree is O(log n).
+    *This is called Treeification.
+
+  # Real Custom Class Example (Very Important for Interviews)
+ Let's say we have a class "Student":
+ CODE:
+   class Student {
+   int id;
+   String name;
+    public Student(int id, String name){
+     this.id = id;
+     this.name = name;
+    }
+   @Override
+    public int hashCode(){
+     return id; //simplified for demo
+    }
+   @Override
+    public boolean equals(Object o){
+     if(this==0) return true;
+     if(!(o instanceof Student)) return false;
+     Student s = (Student) o;
+     return this.id == s.id && this.name.equals(s.name);
+    }
+   }

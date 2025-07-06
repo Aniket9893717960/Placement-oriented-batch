@@ -34,5 +34,13 @@ This ensures that duplicates are not stored.
     set.add("Banana");
     set.add("Mango");
     set.add("Banana"); // Duplicate - won't be added
+    System.out.println(set);
+    //Output might be: [Banana, Apple, Mango]
+    // Order is not guaranteed
     }
   }
+
+ #NOTE:
+  HashSet is not synchronized. if multiple threads access it, use
+  'Collections.synchronizedSet()' or "ConcurrentSkipListSet" if u want
+  thread safety.

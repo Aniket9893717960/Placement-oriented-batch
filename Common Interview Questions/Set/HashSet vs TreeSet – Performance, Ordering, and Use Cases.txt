@@ -1,2 +1,10 @@
                          WHAT IS HASHSET?
-HashSet is a class in Java that belongs to the Collection 
+HashSet is a class in Java that belongs to the Collection Framework and 
+implements the Set Interface. It is used to store unique elements only
+- meaning no duplicates are Allowed.
+Internally, HashSet is backed by a HashMap. Even through u use a Set, 
+it actually puts data inside a HashMap behind the scenes.
+   # Key Properties Of HashSet:
+i. If u try to add a duplicate value, it will not be inserted.
+ii. It does not maintain the order of insertion or sorting.
+iii. 

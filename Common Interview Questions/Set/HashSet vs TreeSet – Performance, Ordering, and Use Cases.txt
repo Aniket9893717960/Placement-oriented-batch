@@ -117,4 +117,10 @@ When to use "HashSet":
                 Store unique email IDs
                 Caching unique IP address
 When to use "TreeSet":
-                You need to store a set of 
+                You need to store a set of unique and sorted values.
+                You need to perform range based queries.
+                Example:
+                 Leaderboard ranking (sorted scores)
+                 Store names in alphabetical order
+                 Store transaction amounts in sorted order for
+                 Fast searching.

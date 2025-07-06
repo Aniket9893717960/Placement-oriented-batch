@@ -13,3 +13,43 @@
  value:
   CODE:
           map.put(element, PRESENT);
+
+    #Internal Working Of "add()" in HashSet
+  Steps that happen when u call 'add()':
+ Let's say
+ CODE:
+      set.add("Apple");
+ 
+ STEP 1: "HashCode()" is called
+ Java first calls:
+      int hash = "Aniket".hashCode(); // Suppose it returns 123456
+ This 'hashCode()' gives a unique integer for the object, based on its
+ content.
+  *For 'String', it's based on its characters.
+  *For custom objects (like 'Student','Employee'), u can override 
+   'hashCode()'.
+
+  STEP 2: Compute Bucket Index:
+  Java uses this hash to find the index (bucket) in an internal array
+  (hash table). For Example:
+  CODE:
+       index = hash % capacity;
+  *Default capacity = 16 initially
+  *Suppose "123456%16=0", so it goes to bucket 0.
+
+  STEP 3: Check for existing entries in the bucket
+  If bucket is empty, it stores the element directly.
+  If not empty (Collision), it checks existing elements one by one.
+
+Here's where 'equals()' comes into play.
+
+  STEP 4:'equals()' is used to check for duplicates.
+  For example:
+          set.add("Aniket");
+          set.add("Aniket"); // Trying to add same value
+Even if the hash codes match and go to the same bucket, it calls 
+'equals()' to compare:
+  CODE:
+  "Aniket".equals("Aniket"); // returns true -> duplicate -> not added
+       So, 'hashCode()' is used to locate and 'equals()' is used to
+          verify.

@@ -4,7 +4,20 @@ implements the Set Interface. It is used to store unique elements only
 - meaning no duplicates are Allowed.
 Internally, HashSet is backed by a HashMap. Even through u use a Set, 
 it actually puts data inside a HashMap behind the scenes.
+
    # Key Properties Of HashSet:
 i. If u try to add a duplicate value, it will not be inserted.
 ii. It does not maintain the order of insertion or sorting.
-iii. 
+iii. U can insert one null element into a HashSet.
+iv. On average, operations like add(), remove(), contains() are O(1).
+v. Internally uses a hash table through a HashMap instance.
+
+   #Internal Working Of HashSet: 
+Here's how "HashSet" works step by step:
+ 1. When u add an element to a "HashSet", like "set.add("Apple")", it is 
+    actually calling "map.put("Apple", PRESENT)" in the background.
+ 2. The value "Apple" is used as the key in the internal "HashMap", and
+    a constant dummy value is used as the value.
+ 3. The object's hashCode() method determines where to store the value in
+    the hash table (bucket).
+ 4. It two objects have the same hash code,

@@ -1,0 +1,15 @@
+                 WHAT IS A "HashSet"?
+*A HashSet is a Set implementation based on hashing.
+*It stores only unique elements.
+*It uses a "HashMap" internally to manage those elements.
+*You don't see the map, but everything u add to the "HashSet" goes into a 
+ "HashMap" behind the scenes.
+  CODE:
+          HashSet<E> set = new HashSet<>();
+          set.add("Apple");
+   // Internally: HashMap<E, Object> map = new HashMap<>();
+
+*A dummy object called "PRESENT"(usually new Object()) is stored as the 
+ value:
+  CODE:
+          map.put(element, PRESENT);

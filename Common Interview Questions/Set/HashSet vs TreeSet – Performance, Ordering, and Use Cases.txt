@@ -56,4 +56,4 @@ balancing binary search tree(BST).
 i. Just like "HashSet", it stores only unique elements.
 ii. Elements are always sorted (natural or custom order).
 iii. If u insert "null" and TreeSet uses natural order, it throws NPE.
-iv. 
+iv. Operations like add(), remove(), contains() take O(log n) time.

@@ -57,3 +57,64 @@ i. Just like "HashSet", it stores only unique elements.
 ii. Elements are always sorted (natural or custom order).
 iii. If u insert "null" and TreeSet uses natural order, it throws NPE.
 iv. Operations like add(), remove(), contains() take O(log n) time.
+v. A kind of self balancing binary search tree to keep data sorted.
+
+  # Internal Working of TreeSet:
+Here's how "TreeSet" stores elements:
+ 1. When u add an element, it uses 'compareTo()'(natural ordering) or
+    a 'Comparator'(custom order) to decide where the element goes.
+ 2. It places elements in a binary search tree structure, ensuring the 
+    tree remains balanced (via Red-Black Tree logic).
+ 3. If u try to insert a duplicate element, the tree detects it via 
+    comparison and ignores it.
+ 4. If u try to insert 'null', and 'compareTo()' is called
+    (which happens during sorting), it throws a "NullPointerException".
+
+  # Code Example of TreeSet:
+   import java.util.TreeSet;
+    public class TreeSetExample {
+     public static void main(String[] args){
+      TreeSet<String> set = new TreeSet<>();
+      set.add("Banana");
+      set.add("Apple");
+      set.add("Mango");
+      set.add("Apple"); // Duplicate - will not be added
+      System.out.println(set);
+      // Output: [Apple, Banana, Mango]
+      // Elements are Sorted alphabetically
+     }
+    }
+
+  # Note:
+  *"TreeSet" does not allow null elements if u are using natural 
+   ordering.
+  *But if u Use a custom comparator that can handle 'null', then it
+   might allow it (rare case).
+  *It's slower than 'HashSet', but more powerful if u need sorting or
+   range based operations like 'headSet()','tailSet()' or 'subSet()'.
+
+                       SUMMARY COMPARISON
+Feature                    HeahSet                          TreeSet
+Duplicate                Not Allowed                      Not Allowed
+   Values
+Ordering                 Not Ordering                Maintains natural
+                                                    or custom ordering
+Null Values              One null Allowed           Null not Allowed
+                                                    (in natural order)
+Performance               Fast (O(1))                Slower (O(log n))
+Backed By                   HashMap                   Red Black Tree
+Sorting                  Not Supported                Automatically
+                                                         Sorted
+Thread                        No                           No
+ Safe
+
+                    REAL LIFE EXAMPLE USE CASES
+When to use "HashSet":
+              You need to store a set of unique values and don't care
+                about order
+              You want Fast Access, insertion, and deletion
+              Example:
+                Store unique email IDs
+                Caching unique IP address
+When to use "TreeSet":
+                You need to store a set of 

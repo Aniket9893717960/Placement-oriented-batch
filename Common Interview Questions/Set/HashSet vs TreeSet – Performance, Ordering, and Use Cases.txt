@@ -20,4 +20,19 @@ Here's how "HashSet" works step by step:
     a constant dummy value is used as the value.
  3. The object's hashCode() method determines where to store the value in
     the hash table (bucket).
- 4. It two objects have the same hash code,
+ 4. It two objects have the same hash code,It uses the "equals" method to
+    check if they are actually the same.
+
+This ensures that duplicates are not stored.
+
+ CODE EXAMPLE OF HashSet:
+  import java.util.HashSet;
+  public class HashSetExample {
+    public static void main(String[] args){
+    HashSet<String> set = new HashSet<>();
+    set.add("Apple");
+    set.add("Banana");
+    set.add("Mango");
+    set.add("Banana"); // Duplicate - won't be added
+    }
+  }

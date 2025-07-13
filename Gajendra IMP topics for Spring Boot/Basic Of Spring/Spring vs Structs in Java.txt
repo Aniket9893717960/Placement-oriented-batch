@@ -29,7 +29,23 @@ The table below demonstrate the difference b/w Spring and Struts.
  business, data access, integration    viewing and Controller.
  and aspect-oriented programming(AOP).
 
-                             SPRING FRAMEWORK
+                          SPRING FRAMEWORK
  Modular, portable and testable Java applications can be formed using 
  the open source Spring framework. It is a standard for developing web
- apps
+ apps and can be used over J2EE aka Java to Enterprise Edition 
+ applications.
+ This handles the infrastructure and makes the codes reusable and 
+ testable thereby enhancing their performance. It works on an inversion
+ of control loC and dependency injection concept. It is also used to 
+ decrease the coupling between the modules of the program.
+
+     *Spring Framework Architecture
+                       DIAGRAM u have to add
+The Spring framework is modular and consists of several modules that
+provide different functionalities to help build enterprise applications.
+The modules can be broadly categorized into four main areas: 
+Core Container, Data Access/Intergration, Web and Miscellaneous.
+
+                        STRUTS FRAMEWORKS
+Struts is a framework based on MVC architecture that stands for model
+view and Controller architecture.

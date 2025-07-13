@@ -1,0 +1,34 @@
+Understanding the difference b/w Spring and struts framework is important
+for Java Developers, as both frameworks serve distinct purpose in building 
+web applications. The main difference lies in their design and functionality.
+
+ Spring: Spring is a comprehensive, modular framework offering dependency
+         Injection, Aspect Oriented Programming and extensive integration
+         capabilities for enterprise application.
+ Struts: Struts is an action based MVC framework primarily focused on 
+         web applications, with less flexibility and integration compared 
+         to spring.
+
+                  DIFFERENCE BETWEEN SPRING AND STRUTS
+The table below demonstrate the difference b/w Spring and Struts.
+           SPRING                             STRUTS
+ It is a lightweight                  It is a heavyWeight
+ framework.                           framework.
+ It has lossely coupled               It has tightly coupled 
+ modules.                             Programming modules.
+ It does not support a                It supports tag library
+ tag library.                         directives.
+ It is integrated with ORM            It supports manual 
+ technologies using which,            coding.
+ lesser coding is required 
+ after and before the main 
+ logic.
+ It has a layered Spring               It has a layered MVC 
+ framework architecture containing     architecture containing 
+ 5 layers for presentation,            3 layers for modeling,
+ business, data access, integration    viewing and Controller.
+ and aspect-oriented programming(AOP).
+
+                             SPRING FRAMEWORK
+ Modular, portable and testable Java applications can be formed using 
+ the open source

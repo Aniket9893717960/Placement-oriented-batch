@@ -31,4 +31,5 @@ The table below demonstrate the difference b/w Spring and Struts.
 
                              SPRING FRAMEWORK
  Modular, portable and testable Java applications can be formed using 
- the open source Spring framework. It is a standard for developing
+ the open source Spring framework. It is a standard for developing web
+ apps

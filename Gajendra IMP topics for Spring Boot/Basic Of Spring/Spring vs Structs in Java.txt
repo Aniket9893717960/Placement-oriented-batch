@@ -48,4 +48,11 @@ Core Container, Data Access/Intergration, Web and Miscellaneous.
 
                         STRUTS FRAMEWORKS
 Struts is a framework based on MVC architecture that stands for model
-view and Controller architecture.
+view and Controller architecture. It is an open source platform and is
+used to develop enterprise edition web application.
+It has a request handler and response handler because It is based on 
+request based framework which handles the request from the user.
+AJAX,REST and SOAP are supported by struts.
+
+     *Working Of Struts
+ The below diagram demonstrates the working of Struts.

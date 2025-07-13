@@ -56,3 +56,17 @@ AJAX,REST and SOAP are supported by struts.
 
      *Working Of Struts
  The below diagram demonstrates the working of Struts.
+*Client Request: The client sends an HTTP request, which is received by
+                 the File Dispatcher (typically the Struts front 
+                 Controller, such as struts.xml).
+*Action Invocation: The File Dispatcher processes the request and  
+                    invokes the appropriate Action class, passing 
+                    through interceptors for preprocessing 
+          (e.g., validation, logging, authentication).
+*Action Processing: The Action class executes the business logic and 
+                    interacts with the model layer to process data.
+*Result Generation: The Action returns a Result, which determines the 
+                    view (e.g., a JSP page) to be displayed to the 
+                    client.
+*Response to Client: The HTTP response is generated and sent back to the
+                     client, rendering the final view.

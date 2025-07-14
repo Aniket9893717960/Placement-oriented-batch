@@ -1,0 +1,20 @@
+Spring loC (Inversion Of Control) Container is the core of the Spring
+Framework. It creates objects(beans), configures them, injects dependencies
+and manages their life cycles. The container uses Dependency Injection(DI)
+to manage application components. 
+It retrieves object configuration from XML files, Java Based Configuration,
+annotations or POJOs. Since the Spring LoC container, not the developer,
+controls the object lifecycle and dependency management, this concept called
+Inversion Of Control (loC).
+
+   *Spring loC Container
+The Spring loC container is the core of the Spring framework. It is 
+responsible for managing the lifecycle of beans and their dependencies.
+There are two types of loC containers in Spring:
+
+ 1. BeanFactory
+      The BeanFactory is the most basic version of the loC container.
+      It provides basic support for dependency injection and bean
+      lifecycle management.
+      It is suitable for lightweight applications where advanced features
+      are not required.

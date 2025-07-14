@@ -5,4 +5,33 @@ Spring Tools 4 is the next generation of Spring tooling for your favorite
 coding environment.
 Largely built form scatch it provides world class support for developing 
 Spring based enterprise applications, whether u prefer Eclipse, Visual 
-Studio Code 
+Studio Code or Theia IDE.
+
+Prerequisite: Make sure u have installed Java Development Kit(JDK) version
+              17 or never. To check simply go to the terminal and enter
+              the below command to check if it is present or not.
+   CODE:
+                            javac -version
+Procedure: These are steps to be followed sequentially which are discussed            further with visual aids as listed:
+1. Download "SpringToolSuits" as per the operating System to the local 
+   machine.
+2. Move the downloaded JAR file to the corresponding folder.
+3. Unzip this JAR file and open the corresponding folder.
+4. Click on the SpringToolSuite4 Application file.
+5. Select the Direcory representing workspace and press the 'LAUNCH'
+   button.
+
+                      SPRING TOOL SUITE DOWNLOAD
+Step 1: Go to their website and in Spring Tools 4 for the Eclipse  
+        section in order to download choose your corresponding file
+        according to your OS.
+Step 2: After clicking on the button a Jar file will be downloaded to
+        Your local system. Now create a folder and move this jar file
+        to that folder. And double click on that jar file. A pop up
+        window will appear like below.
+Step 3: After successfully Unpacking a new folder will create as shown in
+        the below image: Now open the folder,
+Step 4: In this folder now click on the SpringToolSuite4 Application file
+        as shown in the below image:
+Step 5: Now Select your directory as workspace by clicking on the browser
+        button and then click on launch button. And u are done.

@@ -18,3 +18,20 @@ There are two types of loC containers in Spring:
       lifecycle management.
       It is suitable for lightweight applications where advanced features
       are not required.
+ 2. ApplicationContext:
+      The ApplicationContext is an advancement of the BeanFactory and 
+      provides additional freatures like event propagation, 
+      internationalization and more.
+      It is the preferrad choice for most Spring applications due to its
+      advanced capabilities.
+
+        #KEY FEATURES OF LOC CONTAINER
+Are Listed Below:
+ *Dependency Injection: Automatically injects dependencies into our
+                        classes.
+ *Lifecycle Management: Manages the lifecycle of beans, including 
+                        instantiation, initialization and deletion.
+ *Configuration Flexibility: Supports both XML - based and annotation 
+                             based configurations.
+ *Loose Coupling: Promotes loose coupling by decoupling the 
+                  implementation of objects from their usage.

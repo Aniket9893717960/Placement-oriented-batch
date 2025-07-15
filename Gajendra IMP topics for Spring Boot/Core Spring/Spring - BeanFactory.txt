@@ -1,0 +1,15 @@
+The first and foremost thing when we ralk about Spring is dependency
+injection which is possible because Spring is a container and behaves as a
+factory of Beans. Just like the BeanFactory interface is the simplest
+container providing an advanced configuration mechanism to instantiate,
+configure and manage the life cycle of beans.
+
+Beans are Java objects that are configured at run time by Spring loC
+Container. BeanFactory represents a basic loC container which is a parent 
+interface of ApplicationContext.
+BeanFactory uses Beans and their dependencies metadata to create and 
+configure them at run time.
+
+BeanFactory loads the bean definitions and dependency amongst the beans 
+based on a configuration file (XML) or the beans can be directly returned
+when required using Java Configuration.

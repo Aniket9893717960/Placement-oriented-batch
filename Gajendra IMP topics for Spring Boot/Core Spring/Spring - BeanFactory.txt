@@ -13,3 +13,21 @@ configure them at run time.
 BeanFactory loads the bean definitions and dependency amongst the beans 
 based on a configuration file (XML) or the beans can be directly returned
 when required using Java Configuration.
+
+There are other types of configuration files like LDAP, RDMS, properties
+files, etc. Bean Factory does not support Annotation based configuration 
+whereas ApplicationContext does.
+
+Let us first go through some of the methods of Bean Factory before
+landing up on implementation which are shown in tabular format:
+
+       METHOD                           DESCRIPTION
+containsBean(Spring name)         Does this bean factory contain a 
+                                  bean definition or externally
+                                  register singleton instance with
+                                  the given name
+getAliases(String name)           Return the aliases for the given bean
+                                  name, if any.
+getBean(Class<T> requiredType,    Return an instance, which may be 
+Object... args)                   shared or independent, of the 
+                                  specified

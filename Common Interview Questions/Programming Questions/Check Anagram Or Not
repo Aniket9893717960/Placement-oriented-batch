@@ -1,0 +1,49 @@
+//class Ts
+//{
+// static int l1[] = new int[52];
+// void Str(String str){
+//  for(int i=0; i<str.length();i++){
+//   char ch = str.charAt(i);
+//    int temp =(int)(ch-65);
+//    l1[temp] = l1[temp]+1;
+//  }
+// }
+// public static void main(String args[]){
+// String str1 = "aabbcc";
+// String str2 = "cab";
+// System.out.println(str1);
+// if(str1.length() != str2.length()){
+//  System.out.print("It's not");
+// }
+// else {
+//  Ts t1 = new Ts();
+//  t1.Str(str1);
+//  t1.Str(str2);
+//  int count=0;
+//  for(int i=0;i<l1.length;i++){
+//   if(l1[i]>1)
+//   count++;
+//  }
+//  if(count==str1.length()){
+//  System.out.print("It's an Anagram");
+//  }
+//  else {
+//  System.out.print("it's not");
+//   }
+//  }
+// }
+//}
+import java.util.Arrays;
+public class Ts{
+ public static void main(String[] args) {
+  String s1="silent";
+  String s2="listen";
+  char c1[]=Arrays.toCharArray(s1);
+  char c2[]=Arrays.toCharArray(s2);
+  Arrays.sort(c1);
+  Arrays.sort(c2);
+  System.out.println(c1.equals(c2));
+
+
+ }
+}

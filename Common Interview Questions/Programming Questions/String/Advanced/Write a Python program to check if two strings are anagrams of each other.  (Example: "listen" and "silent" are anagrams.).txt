@@ -1,0 +1,34 @@
+class Ts
+{
+ public static void main(String args[]){
+  String str = args[0];
+  String str1 = args[1];
+  int l1 = str.length();
+  int l2 = str1.length();
+  if(l1 != l2)
+  System.out.println("Not Anagram");
+  else if ((l1 == l2) && (l1==1))
+  System.out.println("Anagram");
+  else {
+   int i=0;
+   boolean a[] = new boolean[l1];
+   for(i=0;i<l1;i++){
+     int ch = str.charAt(i);
+    for(int j=0;j<l2;j++){
+      int ch1 = str1.charAt(j);
+      if(ch == ch1){
+       a[i] = true;
+       break;
+      }
+    }
+   }
+   for(i=0;i<l1;i++)
+   if(a[i]==false)
+    break;
+  if(i==l1)
+  System.out.println("It's Anagram");
+  else
+  System.out.println("It's not");
+  }
+ }
+}

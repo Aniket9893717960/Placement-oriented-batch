@@ -1,0 +1,7 @@
+class Ts
+{
+ public static void main(String args[]){
+  String str = args[0].toString();
+  System.out.println(str.length());
+ }
+}

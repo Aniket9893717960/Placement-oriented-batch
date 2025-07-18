@@ -1,0 +1,26 @@
+class Ts
+{
+ void add(int a,int b){
+ System.out.println("Addition :"+(a+b));
+ }
+ void sub(int a,int b){
+ int m = a-b;
+ if(m<0) m=m*(-1);
+ System.out.println("Subtration :"+m);
+ }
+ void multi(int a,int b){
+ System.out.println("Multiplication :"+(a*b));
+ }
+ void div(int a,int b){
+ System.out.println("Division :"+(a/b));
+ }
+ public static void main(String args[]){
+  int n1 = Integer.parseInt(args[0]);
+  int n2 = Integer.parseInt(args[1]);
+  Ts t1 = new Ts();
+  t1.add(n1,n2);
+  t1.sub(n1,n2);
+  t1.multi(n1,n2);
+  t1.div(n1,n2);
+ }
+}

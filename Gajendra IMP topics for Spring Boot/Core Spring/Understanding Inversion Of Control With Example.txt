@@ -202,3 +202,94 @@ public class Mobile {
      import org.springframework.context.annotation.Configuration;
      @Configuration
      @ComponentScan(basePackages = "")
+     public class AppConfig {}
+
+  2. Annotate Classes with '@Component': Annotate the 'Airtel' and 
+                                       'Jio' classes with '@Component'.
+   Example:
+    import org.springframework.stereotype.Component;
+    @Component
+    public class Airtel implements Sim {
+      @Override
+      public void calling(){
+       System.out.println("Airtel Calling");
+      }
+      @Override
+      public void data(){
+       System.out.println("Airtel Data");
+      }
+    }
+
+    @Component
+    public class Jio implements Sim {
+      @Override
+      public void calling(){
+       System.out.println("Jio Calling");
+      }
+      @Override
+      public void data(){
+       System.out.println("Jio Data");
+      }
+    }
+
+  3. Inject the Dependency Using @AutoWired: Update the mobile class to
+                                             use '@Autowired' for 
+  dependency injection.
+  Example:
+    import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
+     @Component
+     public class Mobile {
+      @Autowired
+      private Sim sim;
+      public void useSim(){
+       sim.calling();
+       sim.data();
+      }
+      public static void main(String[] args){
+      ApplicationContext context = new 
+      ApplicationConfigApplicationContext(AppConfig.class);
+      Mobile mobile = context.getBean(Mobile.class);
+      mobile.useSim();
+      }
+     }
+ OUTPUT:
+   Jio Calling
+   Jio Data
+                      -----------NOTE-----------
+When we run the above code, Spring will throw a 
+'NoUniqueBeanDefinitionException' because it finds two beans (Airtel 
+and Jio) of type Sim. To resolve this, we need to specify which bean to
+inject.               ------------X-------------
+           FIXING THE NoUniqueBeanDefinitionException
+   1. Use '@Primary' Annotation
+ Mark one of the beans as the primary bean using the '@Primary'
+ annotation.
+Example:
+  @Component
+  @Primary
+  public class Airtel implements Sim {
+  // Methods Implementation
+  }
+
+   2. Use '@Qualifier' Annotation
+ Use the '@Qualifier' annotation to specify which bean to inject.
+Example:
+  @Component
+  public class Mobile {
+      @Autowired
+      @Qualifier("jio") // Specify the bean name
+      private Sim sim;
+      public void useSim() {
+          sim.calling();
+          sim.data();
+      }
+      public static void main(String[] args) {
+          ApplicationContext context = new 
+  AnnotationConfigApplicationContext(AppConfig.class);
+          Mobile mobile = context.getBean(Mobile.class);
+          mobile.useSim();
+      }
+  }

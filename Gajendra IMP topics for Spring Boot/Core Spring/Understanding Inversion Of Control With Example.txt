@@ -135,3 +135,57 @@ public class Mobile {
         sim.data();
     }
 }
+     OUTPUT
+          Jio Calling
+          Jio Data
+
+Step 6: Using Java Based Configuration
+Modern Spring Application often use Java Based Configuration instead of
+XML. let's see how to configure the same example using java based 
+configuration.
+
+ 1. Create a configuration class: Define a configuration class using
+                                  the '@Configuration' annotation.
+ Use the '@Bean' annotation to define beans.
+ Example:
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+@Configuration
+public class AppConfig {
+    @Bean
+    public Sim sim() {
+        return new Jio(); // Change to new Airtel() to switch 
+        implementations
+     }
+ }
+
+ 2. Use the Configuration in the Mobile Class: Update the mobile class 
+                                               to use the java based
+ Configuration.
+ Example:
+  import org.springframework.context.ApplicationContext;
+import 
+org.springframework.context.annotation.AnnotationConfigApplicationContext;
+public class Mobile {
+    public static void main(String[] args) {
+        // Load the Spring IoC container 
+        // using Java-based configuration
+        ApplicationContext context 
+        = new AnnotationConfigApplicationContext(AppConfig.class);
+        // Retrieve the bean
+        Sim sim = context.getBean("sim", Sim.class);
+        // Call methods
+        sim.calling();
+        sim.data();
+    }
+}
+  OUTPUT:
+       Jio Calling
+       Jio Data
+            -------------------NOTE--------------
+  To switch to Airtel, Simply update the AppConfig class:
+           @Bean
+           public Sim sim() {
+               return new Airtel();
+           }
+           ------------------X-------------------

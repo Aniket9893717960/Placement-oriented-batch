@@ -293,3 +293,16 @@ Example:
           mobile.useSim();
       }
   }
+
+  3. Explicit Bean Names
+ Explicit name the beans and use those names in the '@Qualifier'
+ annotation.
+ Example:
+    @Component("airtelBean")
+    public class Airtel implements Sim {
+     // Methods Implementation
+    }
+    @Component("jioBean")
+    public class Jio implements Sim {
+     // Methods Implementation
+    }

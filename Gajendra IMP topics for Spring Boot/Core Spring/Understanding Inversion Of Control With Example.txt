@@ -306,3 +306,30 @@ Example:
     public class Jio implements Sim {
      // Methods Implementation
     }
+
+  THEN IN THE MOBILE CLASS,
+Example:
+    @Component
+   public class Mobile {
+      @Autowired
+      @Qualifier("jioBean") //Use the explicit bean name
+      private Sim sim;
+      public void useSim(){
+         sim.calling();
+         sim.data();
+      }
+
+   public static void main(String[] args){
+      ApplicationContext context = new 
+      AnnotationConfigApplicationContext(AppConfig.class);
+      Mobile mobile = context.getBean(Mobile.class);
+      mobile.useSim();
+      }
+   }
+
+  CONCLUSION
+In this article, we explored the concept of Inversion Of Control(loC) in
+Spring and demostrated its implementation using:
+ 1. XML Configuration
+ 2. Java Based Configuration
+ 3. Annotation Based Configuration

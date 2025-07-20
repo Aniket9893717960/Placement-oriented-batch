@@ -75,4 +75,18 @@ Example:
 
 Step 3: Calling Methods Without Spring loC
  Without Spring loC, we would manually create instance of the Sim 
- implementation
+ implementation in the main method. For example:
+  public class Mobile {
+   // Main driver Method
+   public static void main(String[] args){
+    // Manually creating an instance of Jio
+    Sim sim = new Jio();
+    // Calling methods
+    sim.calling();
+    sim.data();
+    }
+  }
+
+This approach tightly couples the 'Mobile' class to the Jio 
+implementation.
+if we want to switch to Airtel, we need to modify the source code.

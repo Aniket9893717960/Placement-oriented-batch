@@ -189,3 +189,16 @@ public class Mobile {
                return new Airtel();
            }
            ------------------X-------------------
+
+  STEP 6: Using Annotations for Dependency Injection: Spring also 
+                   supports annotation based configuration, which 
+  is widely used in modern applications. let's update the example to
+  use annotations.
+  1. Enable Components Scanning: Add the '@ComponentScan' annotation
+                                 to the configuration class to enable
+   component scanning.
+   Example:
+     import org.springframework.context.annotation.ComponentScan;
+     import org.springframework.context.annotation.Configuration;
+     @Configuration
+     @ComponentScan(basePackages = "")

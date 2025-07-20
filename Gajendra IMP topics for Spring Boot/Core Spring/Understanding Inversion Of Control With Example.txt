@@ -35,3 +35,44 @@ Are Listed Below:
                              based configurations.
  *Loose Coupling: Promotes loose coupling by decoupling the 
                   implementation of objects from their usage.
+
+        #UNDERSTANDING LOC IN SPRING WITH A PRACTICAL EXAMPLE
+Step 1: Create the Sim Interface
+    So, now let's understand what is loC in Spring with an example.
+Suppose we have one interface named Sim and it has some abstract methods
+calling() and data().
+EXAMPLE:
+    // Java Program to Illustrate Sim Interface
+     public interface Sim {
+        void calling();
+        void data();
+     }
+
+Step 2: Implement the Sim interface
+   Now we have created another two classes, Airtel and Jio which 
+implement the Sim interface and override it's methods..
+Example:
+   public class Airtel implements Sim {
+   @Override
+    public void calling() {
+      System.out.println("Airtel Calling");
+    }
+    @Override
+    public void data(){
+     System.out.println("Airtel Data");
+    }
+   }
+  public class Jio implements Sim {
+   @Override
+   public void calling(){
+     System.out.println("Jio Calling");
+   }
+    @Override
+    public void data(){
+     System.out.println("Jio Data");
+    }
+   }
+
+Step 3: Calling Methods Without Spring loC
+ Without Spring loC, we would manually create instance of the Sim 
+ implementation

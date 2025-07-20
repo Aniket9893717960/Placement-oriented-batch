@@ -88,5 +88,50 @@ Step 3: Calling Methods Without Spring loC
   }
 
 This approach tightly couples the 'Mobile' class to the Jio 
-implementation.
-if we want to switch to Airtel, we need to modify the source code.
+implementation. if we want to switch to Airtel, we need to modify the 
+source code.
+
+Step 4: Using Spring loC with XML Configuration
+      To avoid tight coupling. we can use the Spring loC container.
+First, we create an XML configuration file (beans.xml) to define the 
+beans.
+Example: 'beans.xml' file
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!-- Define the Jio bean -->
+  <bean id="sim" class="Jio"></bean>
+</beans>
+ Explanation: In the 'beans.xml' file, we have created beans. So, inside
+              the 'id', we have to pass the unique id and inside the 
+ class, we have to pass the Class name for which u want to create the 
+ bean. Later on, inside the main method, we can tweek it out that will 
+ be described in the upcoming program.
+                  -------------NOTE----------------
+Bean Definition: In Spring, the objects that form the backbone of your 
+application and that are managed by the Spring IoC container are called 
+beans. A bean is an object that is instantiated, assembled, and 
+otherwise managed by a Spring IoC container.
+                  ----------------X---------------
+Step 5: Run the Code
+   In the Mobile class, we use the 'ApplicationContext' to retrieve the 
+bean:
+Example:
+ import org.springframework.context.ApplicationContext;
+import 
+org.springframework.context.support.ClassPathXmlApplicationContext;
+public class Mobile {
+    public static void main(String[] args) {
+        // Using ApplicationContext tom implement Spring IoC
+        ApplicationContext applicationContext 
+        = new ClassPathXmlApplicationContext("beans.xml");
+        // Get the bean
+        Sim sim = applicationContext.getBean("sim", Sim.class);        
+        // Calling the methods
+        sim.calling();
+        sim.data();
+    }
+}

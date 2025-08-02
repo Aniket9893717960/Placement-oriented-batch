@@ -24,10 +24,97 @@ landing up on implementation which are shown in tabular format:
        METHOD                           DESCRIPTION
 containsBean(Spring name)         Does this bean factory contain a 
                                   bean definition or externally
-                                  register singleton instance with
-                                  the given name
+                                  registered singleton instance with
+                                  the given name?
 getAliases(String name)           Return the aliases for the given bean
                                   name, if any.
 getBean(Class<T> requiredType,    Return an instance, which may be 
 Object... args)                   shared or independent, of the 
                                   specified
+getBean(Class<T> requiredType)    Return the bean instance that uniquely
+                                  matches the given object type, if any.
+getBean(String name)              Return an instance, which may be shared
+                                  or independent of the specified bean.
+getBean(String name, Class<T>     Return an instance, which may be shared
+                requiredType)     or independent, of the specified bean.
+getBean(String name,              Return an instance, which may be shared
+         Object... args)          or independent of the specified bean.
+getBeanProvider(Class<T>          Return a provider for the specified
+       requiredType)              bean, allowing for lazy on  demand
+                                  retrieval of instances, including 
+                                  availability and uniqueness options.
+getType(String name)              Deternibe the type of the bean with the
+                                  given name.
+isPrototype(String name)          Is this bean a prototype? That is, will
+                                  getBean(java.lang.String) always return
+                                  independent instances?
+isSingleton(String name)          Is this bean a shared singleton?That is
+                                  will getBean(java.lang.String) always
+                                  return the same instance?
+isTypeMatch(String name,          Check whether the Bean with the given 
+ Class<?> typeToMatch)            name matches the specified type.
+
+#PROCEDURE:
+ *First, create a Spring project using 'start.spring.io'.
+ *Create a POJO class.
+ *Configure the Student bean in the bean-factory-demo.xml file.
+ *Then write it to application class.
+
+#Project Structure:
+ After creating all packages and classes, the project structure will look
+ like below:
+  Step by Step implementation to Configure Bean Factory in Spring:
+   Step 1: Create a Student POJO class.
+   Now we will define bean inside the Student class file.
+ 'Student.java' Code:
+    //Java Program where we are creating a POJO class
+   public class Student {
+      //Member variables
+    private String name;
+    private String age;
+
+      // Constructor 1
+    public Student(){}
+
+      //Constructor 2
+    public Student(String name, String age){
+      this.name = name;
+      this.age = age;
+    }
+
+      // Method inside POJO class
+    @Override
+    public String toString(){
+      return "Student{" + "name='"+name+'\''+", age='"+age+'\''+''}";
+    }
+  }
+
+Step 2: Configure the Student bean in the bean-factory-demo.xml file.
+XML Bean Configuration:
+ <bean id="student" class="com.gfg.demo.domain.Student">
+   <consturctor-arg name="name" value="Tina"/>
+   <constructor-arg name="age" value="21"/>
+ </bean>
+
+Step 3: Now let's write the main class file.
+ CODE: @SpringBootApplication
+   public class DemoApplication {
+    public static void main(String[] args){
+      BeanFactory = new ClassPathXmlApplicationContext("bean-factory-demo.xml");
+      Student student = (Student) factory.getBean("student");
+      System.out.println(student);
+    }
+   }
+                    OUTPUT
+          Student{name='Tina',age='21'}
+
+Let's Understand the above code with Explaination:
+ *First of all, the Bean factory reads the XML configuration file and
+  as per the specifications defined in it, it creates the bean of the 
+  student POJO.
+ *Then the student reference asks for the student object from the object
+  factory.
+ *Then finally, the spring object factory hands over the spring bean
+  (student) to its reference. Here, not that the bean returned by the 
+  object factory is of "Object" type, so we have to typecast it into our
+  desired bean.

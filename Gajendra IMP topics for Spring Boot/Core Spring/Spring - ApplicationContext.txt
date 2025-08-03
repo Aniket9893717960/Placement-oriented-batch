@@ -122,4 +122,6 @@ String path =
 FileSystemXmlApplicationContext is used to load Xml based Spring 
 Configuration files from the classpath. We can get the application
 context using Java code.
-It is useful for standalone environements and test
+It is useful for standalone environements and test harnesses. The 
+following code shows how to create a container and use the XML as
+metadata information to load the beans.

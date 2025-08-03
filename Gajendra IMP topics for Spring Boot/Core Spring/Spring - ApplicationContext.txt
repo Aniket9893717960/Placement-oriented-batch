@@ -23,3 +23,49 @@ ApplicationContext over BeanFactory.
                         recommended for use for lightweight applications
       like mobile and applets.
                   ----------X------------
+            APPLICATIONCONTEXT IMPLEMENTATION CLASSES
+There are different types of Application containers provided by Spring
+for different requirements as listed below which later onwards are 
+described alongside with declaration, at lastly providing an example to 
+get through the implementation part with the pictorial aids.
+Containers are as follows:
+  1. AnnotationConfigApplicationContext container
+  2. AnnotationConfigWebApplicationContext
+  3. XmlWebApplicationContext
+  4. FileSystemXmlApplicationContext
+  5. ClassPathXmlApplicationContext
+
+      CONTAINER 1: AnnotationConfigApplicationContext
+This Class was introduced in Spring 3.0. It accepts classes annotated 
+with @Configuration, @Components and JSR-330 compliant classes. The 
+Constructor of 'AnnotationConfigApplicationContext' accepts one or more 
+classes.
+For Example, in below declaration, two Configuration classes 'AppConfig'
+and 'AppConfig1' are passed as arguments to the constructor. The Beans
+defined in later classes will override the same type and name beans in 
+earlier classes when passed as arguments.
+For example, AppConfig and AppConfig1 have the same bean declaration.
+The bean defined in AppConfig1 overrides the beam in AppConfig.
+
+Syntax: Declaration  CODE:
+    ApplicationContext context = new 
+  AnnotationConfigApplicationContext(AppConfig.class ,AppConfig1.class);
+                -----------NOTE-------------
+Add the following to the properties file in the IDE to allow the spring
+to override beans.
+CODE:
+      spring.main.allow-bean-definition-overriding=true.
+                ------------X---------------
+
+      CONTAINER 2: AnnotationConfigWebApplicationContext
+This class was introduced in Spring 3.0. It is similar to 
+AnnotationCofigApplicationContext for a web environment. It accepts 
+classes annotated with '@Configuration','@Component' and JSR-330 
+compliant classes.
+These classes can be registered via 'register()' method or passing base 
+packages to 'scan()' method. This class may be used when we configure
+'ContextLoaderListener' servlet listener or a 'DispatcherServlet' in a
+'web.xml'.
+From Spring 3.1, this class can be instantiated and injected to 
+DispatcherServlet using java code by implementing 
+WebApplicationInitializer, an alternative to 'web.xml'.

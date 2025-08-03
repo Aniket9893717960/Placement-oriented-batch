@@ -5,5 +5,21 @@ entire life cycle of beans or objects.
 BeanFactory and ApplicationContext represent the Spring loC Containers.
 ApplicationContext is the sub-interface of BeanFactory. It is used when
 we are creating an enterprise - level application or web application.
+
 ApplicationContext is the superset of BeanFactory, whatever features
 provided by BeanFactory are also provided by ApplicationContext.
+
+                   APPLICATIONCONTEXT FEATURES
+Provide basic features in addition to enterprise - specific functionalities
+which are as follows:
+  Publishing events to registered listeners by resolving property files.
+  Methods for accessing application components.
+  Supports internationalization.
+  Loading file resources in a generic fashion.
+                    -------NOTE----------
+It is beacuse of these additional features, developers prefer to use
+ApplicationContext over BeanFactory.
+  Spring - BeanFactory: It provides basic functionalities and is 
+                        recommended for use for lightweight applications
+      like mobile and applets.
+                  ----------X------------

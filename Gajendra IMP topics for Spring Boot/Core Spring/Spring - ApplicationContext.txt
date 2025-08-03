@@ -125,3 +125,14 @@ context using Java code.
 It is useful for standalone environements and test harnesses. The 
 following code shows how to create a container and use the XML as
 metadata information to load the beans.
+    Illustration: CODE:
+ ApplicationContext context = new 
+ClassPathXmlApplicationContext("applicationcontext/student-bean-
+config.xml");
+StudentService studentService = context.getBean("studentService",
+  StudentService.class);
+
+Now, let us implement the same showcasing an example which is as 
+follows:
+   Implementation:
+    *

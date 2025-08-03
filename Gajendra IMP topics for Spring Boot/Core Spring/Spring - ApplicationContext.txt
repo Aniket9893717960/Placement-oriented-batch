@@ -69,3 +69,8 @@ packages to 'scan()' method. This class may be used when we configure
 From Spring 3.1, this class can be instantiated and injected to 
 DispatcherServlet using java code by implementing 
 WebApplicationInitializer, an alternative to 'web.xml'.
+Example: CODE:
+  //Class
+  //Implementatiog WebApplicationInitializer
+
+public class MyWebApplication

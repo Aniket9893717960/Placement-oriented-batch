@@ -73,4 +73,53 @@ Example: CODE:
   //Class
   //Implementatiog WebApplicationInitializer
 
-public class MyWebApplication
+  public class MyWebApplication implements WebApplicationInitializer {
+      // Servlet container
+public void onStartup(ServletContext container) throws ServletException {
+    AnnotationConfigWebApplicationContext context = new
+      AnnotationConfigWebApplicationContext();
+    context.register(AppConfig.class);
+    context.setServletContext(container);
+      // Servlet configuration
+    }
+  }
+
+              CONTAINER 3: XmlWebApplicationContext
+Spring MVC Web based Application can be configured completely using
+XML or Java code. Configuring this container is similar to the 
+AnnotationConfigWebApplicationContext container, which implies we can
+configure it in web.xml or using java code.
+CODE:
+    //Class
+    // Implementing WebApplicationInitializer
+    public class MyXmlWebApplicationInitializer implements 
+    WebApplicationInitializer {
+      // Servlet Container
+public void onStartup(ServletContext container) throws ServletException{
+    XmlWebApplicationContext context = new XmlWebApplicationContext();
+    context.setConfigLocation("/WEB-INF/spring/applicationContext.xml");
+    context.setServletContext(container);
+      //Servlet configuration
+      }
+    }
+
+            CONTAINER 4: FileSystemXmlApplicationContext
+FileSystemXmlApplicationContext is used to load Xml based Spring
+Configuration files from the file system or from URL. We can get the
+application context using Java code. 
+It is useful for standalone environments and test harnesses. The 
+following code shows how to create a container and use the XMl as 
+metadata information to load the beans.
+     Illustration: CODE:
+String path =
+"Documents/demoproject/src/main/resources/applicationcontext/
+ student-bean-config.xml";
+ ApplicationContext context = new FileSystemXmlApplicationContext(path);
+ AccountService accountService = context.getBean("studentService"
+  ,StudentService.class);
+
+            CONTAINER 5: ClassPathXmlApplicationContext
+FileSystemXmlApplicationContext is used to load Xml based Spring 
+Configuration files from the classpath. We can get the application
+context using Java code.
+It is useful for standalone environements and test

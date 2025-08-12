@@ -1,11 +1,20 @@
-                              TELL ME ABOUT YOURSELF
+BRO U KNOW THAT I HAVE BUILD THE FIRST PROJECT "ONLINE VOTING SYSTEM" WITH THE HELP OF SERVLETS OR JSP WHICH IS VERY OLD AND NOT ACTIVE IN CURRENT MARKET AND SECOND PROJECT "URL-SHORTENER-DB" WHICH I HAVE BUILD WITH MODERN JAVA FRAMEWORKS SPRING-BOOT AND HIBERNATE. SO, THE INTERVIEWER ASKED QUESTION TO ME THAT WHY U CHOOSE TO GO WITH "SERVLETS OR JSP" WHEN U ALREADY KNOW IT'S OUTDATED FOR THE FIRST MAJOR PROJECT. PLEASE HELP.
+
+Yes, I’m aware that Servlets and JSP are older technologies compared to modern frameworks like Spring Boot. For my first major project, Online Voting System, my main goal was to build a strong foundation in the core concepts of Java web development — HTTP request/response cycle, session management, cookies, server-side rendering, and MVC structure. Servlets and JSP allowed me to work very closely with these fundamentals without the abstraction layers that modern frameworks provide.
+
+This approach helped me deeply understand how web applications actually work under the hood, which I believe is essential for any developer. Once I had that foundation, I moved to more modern frameworks like Spring Boot and Hibernate for my second project, URL Shortener, where I could apply those fundamentals and take advantage of the speed, scalability, and advanced features of modern stacks.
+
+So in short, choosing Servlets/JSP wasn’t about ignoring trends — it was about mastering the basics first, so I could be more effective when using advanced frameworks later.
+
+                    TELL ME ABOUT YOURSELF
 Hello, my name is Aniket Rathore, and I am from Indore, the cleanest
 city in India for the past seven years.
 
 I am Fresh Graduate B.Tech in Computer Science and Engineering
 from Shri Vaishnav Institute of Information Technology.
 
-I completed my Higher Secondary Education from Shri RK Daga Maheshwari Academy with 61.8% and my Senior Secondary 
+I completed my Higher Secondary Education from Shri RK Daga Maheshwari 
+Academy with 61.8% and my Senior Secondary 
 
 Education from Shri Vaishnav Academy with 60%. In JEE Mains, I secured 
 55.56 percentile.

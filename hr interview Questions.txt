@@ -1,3 +1,13 @@
+YOU KNOW THAT I HAVEN’T LEARNED “MICROSERVICES,” WHICH IS A NEW INNOVATION IN THE CURRENT
+MARKET. I ONLY KNOW “MVC SYSTEM DESIGN PATTERNS.” BRO, HOW CAN I EXPRESS THIS PROFESSIONALLY
+IN FRONT OF AN INTERVIEWER?
+
+My current experience is focused on building applications using the MVC design pattern, which
+has given me a strong understanding of application architecture, separation of concerns, and 
+maintainable code structure. I haven’t yet worked directly with microservices in a production 
+setting, but I understand the core concepts, and I’m confident I can apply my MVC foundation 
+to quickly adapt to a microservices-based architecture.
+
 BRO U KNOW THAT I HAVE BUILD THE FIRST PROJECT "ONLINE VOTING SYSTEM" WITH THE HELP 
 OF SERVLETS OR JSP WHICH IS VERY OLD AND NOT ACTIVE IN CURRENT MARKET AND SECOND 
 PROJECT "URL-SHORTENER-DB" WHICH I HAVE BUILD WITH MODERN JAVA FRAMEWORKS SPRING-BOOT

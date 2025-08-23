@@ -1,0 +1,41 @@
+For Java beginners , if interviewer asks - Why Spring ? don’t just say “less boilerplate.”
+
+Cover these points abt Spring :
+
+1. Built on Strong Design Principles
+Spring uses Inversion of Control (IoC) and Dependency Injection (DI).
+This means objects are not created manually; Spring handles it.
+Result: loose coupling and better testability.
+
+2. Manages Core Application Concerns
+Spring provides built-in support for:
+
+REST APIs
+Database access (JDBC, JPA)
+Transaction management
+Security
+This lets developers focus on business logic.
+
+3. Highly Modular Architecture
+Spring is not one big monolith.
+Use only what you need:
+
+Spring Web for APIs
+Spring Data for DB operations
+Spring Security for auth
+
+4. Spring Boot Simplifies Everything
+
+Auto-configuration
+Embedded server (like Tomcat)
+Production-ready setup with minimal config
+It reduces setup time and makes projects easier to start and maintain.
+
+5. Production-Ready by Default
+
+Built-in logging
+Profiles for different environments
+Health checks and metrics
+It's mature and widely used in large-scale apps.
+
+hashtag#spring hashtag#springboot hashtag#java hashtag#interviews hashtag#learning

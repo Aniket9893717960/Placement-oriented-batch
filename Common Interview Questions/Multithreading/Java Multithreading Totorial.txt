@@ -106,4 +106,28 @@ knowledge of multithreading.
                      Waiting state.
  vii. notifyAll()    It gives out a notification to all the thread in
                       the waiting state.
- ix. setDaemon()     It set the 
+ ix. setDaemon()     It set the current thread as Daemon thread.
+ x. stop()          It is used to stop the execution of the thread.
+ xi. resume()       It is used to resume the suspended thread.
+
+ Pre-requisites: Basic syntax and methods to deal with threads 
+
+Now let us come up with how to set the name of the thread. By default,
+threads are named thread-0, thread-1, and so on. But there is also a 
+method that is often used as 'setName()' method. Also corresponding to 
+it there is a method 'getName()' which returns the name of the thread be
+it default or settled already by using 'setName' method.
+The syntax is as follows:
+
+a. Returning the name of the thread.
+                    'public String getName();'
+b. Changing the name of the thread.
+                    'publix void setName(String name);'
+
+Points to remember: Whenever u wanted to create threads, there are only
+                    two ways:
+1. Extending the class
+2. Implementing the interface which is runnable.
+Make sure to create an object of threads in which u have to pass the 
+object of runnable.
+

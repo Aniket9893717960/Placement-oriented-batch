@@ -1,0 +1,101 @@
+Threads are the backbone of multithreading. We are living in the real world 
+which in itself is caught on the web surrounded by lots of applications.
+With the advancements in technologies, we cannot achieve the speed required
+to run them simultaneously unless we introduce the concept of multi tasking
+efficient. it is achieved by the concept of thread.
+
+            REAL LIFE EXAMPLE OF MULTITHREADING 
+            -----------------------------------
+       -------------------NOTE-----------------------
+Suppose u are using two tasks at a time on the computer, be it using 
+Microsoft Word and listening to music. These two tasks are called processes.
+So you start typing in Word and at the same time start music app, this is 
+called multithreading.
+Now u committed a mistake in a Word and spell check shows Exception, this
+means Word is a process that is broken down into sub processes. Now if a 
+machine is dual-core then one process or task is been handled by one core 
+and music is been handled by another core.
+       ---------------------X---------------------------
+In the above example, we come across both multiprocessing and 
+multithreading. These are somehow indirectly used to achieve multitasking.
+In this way the mechanism of dividing the tasks is called
+multithreading in which every process or task is called by a thread where
+a thread is responsible for when to execute, when to stop and how long to 
+be in a waiting state.
+Hence, a thread is the smallest unit of processing whereas multitasking 
+is the process of executing multiple tasks at a time.
+
+            MULTITASKING IS BEING ACHIEVED IN TWO WAYS:
+1. Multi-processing: Process - based multitasking is a heavyweight
+   ---------------- process and occupies different address spaces in 
+  memory. Hence, while switching from one process to another, it will 
+  required some time be it very small, causing a lag because of switching.
+  This happens as registers will be loaded in memory maps and list will be
+  updated.
+2. Multithreading: Thread - based multitasking is a lightweight process
+   --------------- and occupies the same address space. Hence, while 
+   swithing cost of communication will be very less.
+
+      BELOW IS THE LIFECYCYLE OF A THREAD BEEN ILLUSTRATED
+      ----------------------------------------------------
+1. New : When a thread is just created.
+2. Runnable: When a start() method is called over thread processed by the
+             thread schedular.
+  *Case A: Can be a running thread.
+  *Case B: Can not be a running thread.
+3. Running: When it hits case 1 means the schedular has selected it to be
+            run the thread from runnable state to run state.
+4. Blocked: When it hits case 2 meaning the schedular has selected not to
+            allow a thread to change state from runnable to run.
+5. Terminated: When the 'run()' method exits or stop() method gets called.
+
+         Beginnning of Process Scheduling Algorithms
+         -------------------------------------------
+If we do incorporate threads in operating systems one can perceive that
+the process scheduling algorithms in operating systems are strongly 
+Deep - Down working on the same concept incorporating thread in Grantt
+charts. A few of the most popular are listed below which wraps up all of
+them and are used practically in Software developement.
+ *First In First Out
+ *Last in First Out
+ *Round Robin Scheduling
+              ----------X---------
+Now imagine the concept of Deadlock in operating systems with threads -
+How the switching is getting computed over internally if one only has an 
+overview of them.
+              ----------------X--------------
+
+               ADVANTAGES OF MULTITHREADING
+              ------------------------------
+So, far we have understood multithreading and thread conceptually, so we 
+can conclude "advantages of multithreading" 
+before moving to any other concept or getting to programs 
+in multithreading.
+
+*The user is not blocked as threads are independent even if there is an 
+ issue with one thread then only the corresponnding process will be stopped
+ rest all the operations will be computed successfully.
+*Saves time as too many operations are carried over at the same time
+ causing work to get finished as if threads are not used the only one 
+ process will be handled by the processor.
+*Threads are independent through sharing the same address space.
+
+          ----------------NOTE-----------------
+By default we only have one main thread which is responsible for main
+thread exception as u have encountered even without having any prior 
+knowledge of multithreading.
+          -----------------X-------------------
+
+            TWO WAYS TO IMPLEMENT MULTITHREADING
+            ------------------------------------
+ METHOD:1 Using Thread Class : Java Provides 'Thread Class' to achieve
+ --------------------------- programming invoking threads thereby some 
+ major methods of threads class are shown below in the tabular format with
+ which we deal frequently along the action perfromed by them.
+
+       Methods                           Action Perfromed
+ i.   isDaemon()            It checks whether the current thread is 
+                            daemon or not.
+ ii.  start()               It starts the execution of the thread.
+ iii. run()              It does the executable operations statements in
+                         the body of this method over a thread.

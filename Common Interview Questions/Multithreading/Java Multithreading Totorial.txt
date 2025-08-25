@@ -99,3 +99,11 @@ knowledge of multithreading.
  ii.  start()               It starts the execution of the thread.
  iii. run()              It does the executable operations statements in
                          the body of this method over a thread.
+ iv. sleep()        It is a static method that puts the thread to sleep
+                    for a certain time been passed as an argument to it.
+ v. wait()            It sets the thread back in waiting state.
+ vi. notify()       It gives out a notification to one thread that is in
+                     Waiting state.
+ vii. notifyAll()    It gives out a notification to all the thread in
+                      the waiting state.
+ ix. setDaemon()     It set the 

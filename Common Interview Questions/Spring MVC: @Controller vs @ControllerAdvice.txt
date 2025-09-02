@@ -1,0 +1,54 @@
+When working with Spring MVC, many beginners get confused between these two annotations. Let’s simplify 👇
+
+🔹 @Controller
+
+Used to handle web requests
+
+Maps URLs → Methods
+
+Typically returns views (.jsp, .html) or responses
+
+
+👉 Example:
+
+@Controller
+public class UserController {
+ @GetMapping("/users")
+ public String getUsers(Model model) {
+ model.addAttribute("users", List.of("Yugansh", "Rahul", "Amit"));
+ return "users"; // View name
+ }
+}
+
+
+🔹 @ControllerAdvice
+
+Used for cross-cutting concerns
+
+Centralized exception handling, model attributes, and data binding
+
+Applies to all controllers globally
+
+
+👉 Example:
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+ @ExceptionHandler(Exception.class)
+ public String handleException(Exception e, Model model) {
+ model.addAttribute("errorMessage", e.getMessage());
+ return "error"; // Error view
+ }
+}
+
+
+⚖️ Quick Difference
+
+@Controller → Entry point for requests
+
+@ControllerAdvice → Supervisor for all controllers (handling exceptions, binding, etc.)
+
+
+💡 Takeaway:
+Use @Controller to build your endpoints,
+and @ControllerAdvice to manage cross-cutting concerns cleanly and globally.

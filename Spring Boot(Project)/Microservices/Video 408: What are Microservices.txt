@@ -100,3 +100,25 @@ There are multiple drawbacks with this type of architecture.
   Maybe u will try to do vertical scaling by adding more servers or more
   RAM power, Or u can do the horizontal scaling. So, basically u will 
   have the same application and having multiple instance of them.
+
+  Now in terms of sale It's not like u will get new users or u will get 
+  a lot of new users. U will look at a lot of new sellers. what u will
+  get is more searchers. u will get more payments. So, instead of 
+  scaling the entire application, don't u think we should be scaling
+  only the small modules there?
+
+  So, that's what we want to use this particular service. So, instead of
+  scaling the entire monolithic application, we should be able to scale
+  that individual services. Next one Is what if u have a Big application
+  And if u think we will build this application using as a one 
+  monolithic application.
+
+  U have to stick to one technology. Maybe if u're using Java for the 
+  entire application, U have to stick to Java. Even If u have a New team
+  who say okay, I want to work on node.js, they can't because  u are 
+  building one big application, which will create one particular package.
+
+  Which will go to one perticular server. What u can do is if u have a
+  different services. U can create actually create different services
+  using different technologies, right? So, that's what the advantage we 
+  want

@@ -121,4 +121,6 @@ There are multiple drawbacks with this type of architecture.
   Which will go to one perticular server. What u can do is if u have a
   different services. U can create actually create different services
   using different technologies, right? So, that's what the advantage we 
-  want
+  want, and that can be done with the help of microservices.
+  So each service, which i'm talking about here, they are called 
+  microservices.

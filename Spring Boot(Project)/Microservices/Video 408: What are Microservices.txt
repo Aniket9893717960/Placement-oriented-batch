@@ -1,0 +1,72 @@
+Let's go back to 1970s that's right when the computers were new, so in 1970s,
+we were tryin to solve simple problems wit the help of computers, maybe 
+scientific problems, but then they were simple in today's term.
+
+Now after the successfult use of computers for the scientific and research
+purpose, we thought can we use it for commercial use as well? And that's
+where in early nineties or late nineties, lot of people, lot of 
+companies started Using Software and computers for te internal use.
+
+Also, we got social media websites in early 2000, but now if u try to 
+understand te entire ecosystem, Or if we try to understand the world of 
+software everywhere, in fact, everyting in the world is happening with
+the help of softwares.
+
+       If u want to book a cab, u will use software.
+       If u want to transfer the money, u will use software.
+       If u want to buy something online, u will use software.
+
+If everything will be done with the help of Software which u normally call
+them as application, what normally happens is we build a particular 
+website, and that's what we call them. we build a website.
+
+And in that particular website, u will be having all the services.
+Now, when u talk about services, what exactly it means?
+            Now, imagine a shopping website,
+            Example if u go to Amazon,
+u get allot of Features there on Amazon, u can basically search for a 
+product. U Buy a Product, add a product to a cart and then u can pay
+for that online. And also as a seller, i can sell my own devices or
+sell my own things on Amazon. Because it's also a market place.
+
+So, basically, Amazon itself is a huge software which has a lot of 
+different services right?
+
+        NOW IF U WANT TO BUILD WEBSITE BY YOURSELF
+ What u will do is u have a traditional mindset.Of course, one of the
+best thing about building a software nowadays is we think about 
+creating different modules.
+So, what u do is u break down the entire project into Small parts.
+And that's how we think so, if u want to build a website, I will just 
+break down the services into small modules.
+
+            We work on one particular module And 
+           also that's what we also suggest,right?
+U can divide your big team into small groups. So, let's say if u have
+50 people working on a one big project U can have 5 different team of 
+10? And 1 team will work on one particular feature, right?
+And that's how u can build this amazing website like Amazon or 
+amazon.com to buy something.
+
+Now, the thing is, the approach is actually coming from the software 
+development field. Now when u build a Normal software what are u 
+tendencies? So, we have a software which works on a desktop.
+
+In fact, when i started my career. I started in that zone. U just write
+Which works on a particular machine, right? So, what u do is you structure.
+Your entire application one device.
+
+Now, that's what we do in the web World as well. Even if u have multiple
+Teams, they are working on different services. They are still one 
+package, right? So, in maybe in Java or in other languages.
+
+You create a, let's say in Java, We create a WAR file or a Jar file.
+U will put all the services in this particular WAR file. and then u will 
+deploy this on a cloud on a server.
+
+                    MONOLITHIC ARCHITECTURE 
+The problem is u have a lot of services here on one system. So, let's talk
+about some advantages of doing this. The advantage of doing this type
+of architecture, which we normally call them as monolithic application.
+
+                

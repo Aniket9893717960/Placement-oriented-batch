@@ -69,4 +69,34 @@ The problem is u have a lot of services here on one system. So, let's talk
 about some advantages of doing this. The advantage of doing this type
 of architecture, which we normally call them as monolithic application.
 
-                
+Where u have everything in one place, all the services, right? Of 
+course, they're designed by other members. U can simpley group them. 
+U can form a particular package and u can deploy it.    
+
+So, the good thing is U know what happening with the application, what
+are drawbacks? There are multiple drawbacks with this type of 
+architecture.
+
+There are multiple drawbacks with this type of architecture.
+ i. Team Dependencies: Let's say all U 10 teams are working together
+    ------------------ to make all these features, they have to actually
+    dependent on each other. They should know when u are going to go for
+    the next release, right?
+ So of course with every release, u go for a version. So, u have to 
+ specify, Okay, I got a new feature, But let me know when i can push this
+ feature in the product So, that we can deploy the entire project.
+
+  ii. Scalability: If u talk about Amazon itself, in fact, we can take 
+      -----------  we can take this example, or we can take This concept
+  from multiple examples, multiple domains.
+  But when u stik to amazon here let's say there's a sale going on.
+  Now, if u know that tomorrow there will be a huge sale may be for some
+  festival, some other event, what do u think, which of the services will
+  be needed scalability here?
+  In Monolithic Application, what happens is if u know that there's a 
+  sale going on, or there will be sale happening next week, what u will
+  do is u will scale u application in multiple systems, right?
+  
+  Maybe u will try to do vertical scaling by adding more servers or more
+  RAM power, Or u can do the horizontal scaling. So, basically u will 
+  have the same application and having multiple instance of them.

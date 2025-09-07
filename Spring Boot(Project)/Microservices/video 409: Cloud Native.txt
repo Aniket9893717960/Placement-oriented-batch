@@ -123,3 +123,15 @@ There might be some issues, right? So, make sure that u have a separate
 file, like a manifest file example. In Java, we use Maven.
 U mention all the dependencies which u need with versions. And u keep it 
 something U Don't link it to your code base.
+
+Now when u share this code with someone else, u also share this dependen
+cies, the manifest file, not the actual dependencies, and they can 
+download it with the version and the actual name.
+And how u separate it. 
+
+   3. Configuration
+U have to basically in your code if u want to connect with a database,
+U use a URL, username and password. If u want to use a particular port no.
+U mention that in the code itself. So, don't mention any of this stuff,
+any of the configuration inside your code.
+That's what it says so, store configu

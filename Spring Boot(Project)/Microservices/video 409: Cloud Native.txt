@@ -114,4 +114,12 @@ u want to basically give this project to someone else, may be u have
 opp's team to deploy the application.
 
 Now u will give these all java files as well to them. That's not a good
-idea.
+idea. where u say,"Okay, this project needs this dependencies and
+there might be some version issues."
+
+Maybe u are using 2.5 for particular dependency and the ops team are 
+using 2.6 or 2.4.
+There might be some issues, right? So, make sure that u have a separate
+file, like a manifest file example. In Java, we use Maven.
+U mention all the dependencies which u need with versions. And u keep it 
+something U Don't link it to your code base.

@@ -94,3 +94,7 @@ rules which have been developed  At that Point called 12 Factor App.
  too in one repository. And then u have a multipke deployments in staging"
   The thing is "U have one codebase for one application".
 
+ Yeah, if u have one code base for multiple application, that's where 
+ you're making rules. So, make sure that u have one code base for one
+ application and not even multiple apps in one code base.
+             "One code base for one application"

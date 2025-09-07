@@ -58,3 +58,39 @@ Let's say u have to decide now. Do u want to build on premise or do
 u want to use it on the cloud? And the moment u say, okay, that's what 
 we are going for, we want to build an application which is for cloud,
 make sure it is cloud native.
+
+So, that u can use all the features. But how exactly u make a cloud native
+application? In fact, the name itself says right, native. So, it is meant
+for cloud. right? Now if u want to achieve this we can follow certain
+standards and rules.
+
+So, "HEROKU" has created some standard for u and u can follow them to 
+build a better application for cloud, basically a cloud native 
+application Of course right. How do u define a cloud native application?
+
+So, just follow the rules and u are done. the thing is this rules actually
+made a long back. And Now we have few changes, Now we talk about those
+rules which have been developed  At that Point called 12 Factor App.
+
+                      12 Factor App?
+ 1. CODEBASE:
+ Now basically what happens is we normally store all the coding files
+ in your folder, right? So basically when u make a project, U store that
+ in your project.
+
+ Maybe in IDE or any data which u use. Now, what code base says is if u 
+ want to build a cloud native application, u have to make sure that your
+ code base is using a version control.
+
+ For Example: 
+ One code base track in a revision control and many deploys.
+ So, basically we can use something like a Git here.
+
+ In Git u have to make sure that u store your project there in a local
+ or maybe u can use some remote repositories, let's say Git Github And We
+ have multiple options there.
+
+ "U Have one Code Base For Development, Testing, Production, Analysis 
+ too in one repository. And then u have a multipke deployments in staging"
+  The thing is "U have one codebase for one application".
+

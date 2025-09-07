@@ -100,3 +100,17 @@ rules which have been developed  At that Point called 12 Factor App.
              "One code base for one application"
 
      2. DEPENDENCIES
+there are multiple dependencies which u work with.
+Example: In Java we have to work with let's say i want to use database
+         Connection. So, if u have to use a dependency for database,
+         maybe u want to do it for logging, u need one dependency for 
+         logging as well.
+Now tendencies, when u build a project, in fact we should do that in the
+earlier days, when u build a project, there's a folder which says 
+libraries. And this is where u put all your packages and java files.
+
+Okay for this particular project, I got all these dependencies. when
+u want to basically give this project to someone else, may be u have
+opp's team to deploy the application.
+
+Now u will give these all java files as well to them

@@ -163,4 +163,24 @@ Now since we have multiple services, how these services will communicate?
 It's not like they can't, but then it's difficult to configure them okay?
  And u will be doing that only once.
  U have to use service discoveries, U have to use API gateway,
- Which will stand in front of all the services,
+ Which will stand in front of all the services, and u will be also having
+ some resilience system in between.
+
+ what if some service failed? Do we have a field support there?
+ and creating a microservices in not just writing a code, okay?
+ It's also about creating the architecture before u write a single
+ line of code. How do u design your system?
+
+ How do u create those services? that's also important. And if u
+ don't design your microservices properly, ultimately u are creating
+ a worse system of monolithic application.
+
+    ONE OF THE IMPORTANT QUESTION IS HOW THE SYSTEM COMMUNICATE?
+ So, they basically use this HTTP request or response to communicate b/w
+ each other. Of course, they'll be having endpoints to communicate.
+ Also we have to think about security. because now since we have 
+ different services, 
+ It a customer sends a request, which services u have to go to and 
+ does that particular user has access to do that. So, that's the 
+ challenges of microservices, but it's an awesome thing, big companies
+ they are using microservices on big level.

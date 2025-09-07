@@ -113,4 +113,5 @@ Okay for this particular project, I got all these dependencies. when
 u want to basically give this project to someone else, may be u have
 opp's team to deploy the application.
 
-Now u will give these all java files as well to them
+Now u will give these all java files as well to them. That's not a good
+idea.

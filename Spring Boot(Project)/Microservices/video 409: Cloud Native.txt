@@ -29,4 +29,18 @@ It's IMP to understand difference b/w this 2. What we expect from the
 
  Now. if u want to achieve that, of course, U have to make an application
  which will use all those services and which will fullfill the promises,
- right?
+ right? But what happens is the application which are deployed on the
+ cloud out of two types, one is cloud-ready,
+  2nd is cloud Native.
+
+                WHAT DO U MEAN BY CLOUD READY?
+let's say u already have an application in your premises, okay?
+Or in your own local server. Now u want to move that particular
+application on the cloud.
+
+U make same changes Not like U picked up the application and throw it
+on the cloud. No, that's not how it works.
+basically u have to make some changes to your existing application and
+u have to make it cloud ready, maybe work With the environment variable,
+maybe work with the configuration files, And make sure that u are able 
+to push your application on the cloud.

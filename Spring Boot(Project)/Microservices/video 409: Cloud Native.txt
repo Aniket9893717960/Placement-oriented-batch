@@ -40,7 +40,21 @@ application on the cloud.
 
 U make same changes Not like U picked up the application and throw it
 on the cloud. No, that's not how it works.
+
 basically u have to make some changes to your existing application and
 u have to make it cloud ready, maybe work With the environment variable,
 maybe work with the configuration files, And make sure that u are able 
-to push your application on the cloud.
+to push your application on the cloud and u should be able to use the 
+services.
+
+So, u are basically making your non cloud ready application to cloud-ready
+as simple as that. But on the other hand, if u really want to use all the 
+cloud services And if u want to make it more effective.
+
+                      CLOUD NATIVE?
+U have to build an application as cloud native. Now normally, these type
+of applications are new application.
+Let's say u have to decide now. Do u want to build on premise or do
+u want to use it on the cloud? And the moment u say, okay, that's what 
+we are going for, we want to build an application which is for cloud,
+make sure it is cloud native.

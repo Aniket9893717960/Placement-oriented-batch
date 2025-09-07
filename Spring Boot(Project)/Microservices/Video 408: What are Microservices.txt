@@ -124,3 +124,18 @@ There are multiple drawbacks with this type of architecture.
   want, and that can be done with the help of microservices.
   So each service, which i'm talking about here, they are called 
   microservices.
+
+                ADVANTAGES:
+  If u have 10 teams they can divide the entire project into small 
+ services. One thing u remember here, each service here should be self
+ contained. It should be able to deploy it separately, and also they
+ should be scaled separately.
+ They should not be dependent on some other services. So each service 
+ here will be called microservices. Now since they are microservices,
+ we can create them in any technology we want.
+ So one service can be done with Java.
+ 2nd with Node.Js
+
+ And now since there are multiple services, u can scale them the way
+ u want. Maybe if u have 10 services, I want to take this fifth And
+ six service and i want, let's say 10 instance of them.

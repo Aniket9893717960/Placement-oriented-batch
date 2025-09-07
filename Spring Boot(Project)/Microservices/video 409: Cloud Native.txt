@@ -134,4 +134,13 @@ U have to basically in your code if u want to connect with a database,
 U use a URL, username and password. If u want to use a particular port no.
 U mention that in the code itself. So, don't mention any of this stuff,
 any of the configuration inside your code.
-That's what it says so, store configu
+That's what it says so, store configuation in the environment So, 
+basically what u should do is create a different file, may be
+an ENV file and save all the values there.
+
+Even if u change your physical servers or anything related to the 
+environment u don't have to change your source code, Just change the
+environment variable and u are done.
+So, the idea is don't touch your code once it is built.
+
+ 4. BACKING SERVICE

@@ -139,3 +139,28 @@ There are multiple drawbacks with this type of architecture.
  And now since there are multiple services, u can scale them the way
  u want. Maybe if u have 10 services, I want to take this fifth And
  six service and i want, let's say 10 instance of them.
+
+ I want the second service to have five instance. So, I can scale based
+ on the service requirement, not for the entire application.
+ or since they are seperate services, Even if some service goes down,
+ it'll not affect the entire application.
+
+ Now in term of monolithic application. If u make one change, It is not
+ working, it'll crash the entire application. That's not the case with 
+ microservices. So, basically what is microservices?
+
+ They are individual services which are self contained. They can run as
+ a individual service and maybe let's say if i want to go for, go to 
+ Amazon, If i say i want to search for the products, that's one service.
+ I want to create a new account. that's one service.
+ I want to sell a particular product. That's one service.
+ So, these are u microservices.
+
+                   CONCLUSION
+ So, Everything looks proper on paper right. We are saying that microser
+ vices are great. Do, u have any challenge there? the thing is, yes.
+Now since we have multiple services, how these services will communicate?
+It's not like they can't, but then it's difficult to configure them okay?
+ And u will be doing that only once.
+ U have to use service discoveries, U have to use API gateway,
+ Which will stand in front of all the services,

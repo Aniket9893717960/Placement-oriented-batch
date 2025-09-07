@@ -98,3 +98,5 @@ rules which have been developed  At that Point called 12 Factor App.
  you're making rules. So, make sure that u have one code base for one
  application and not even multiple apps in one code base.
              "One code base for one application"
+
+     2. DEPENDENCIES

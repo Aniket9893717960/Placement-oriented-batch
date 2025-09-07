@@ -1,0 +1,32 @@
+         Building Towards topic:
+Now basically when u talk about applications,
+I'm talking about enterprise level application.
+Now, initally those application used to stay in on permise.
+Basically every company will have their own servers and they will 
+deploy the application on their own servers.
+
+but then we have talked about cloud, right? Now most of the companies
+are moving from on premise to cloud. So, basically all the services 
+which we are using nowadays is cloud based.
+
+Even the public application like Google Docs, Dropbox, Gmail, everything 
+is cloud. Now the application which are used internally in the company,
+they are also deployed on the cloud.
+
+ Of course Not every Company is moving into it.
+ but majorly, most of the applications are on cloud nowadays.
+ Now, the moment u talk about cloud applications, We have 
+ Two interesting terms here:
+   CLOUD READY                         CLOUD NATIVE
+
+It's IMP to understand difference b/w this 2. What we expect from the 
+ cloud application is the cloud services. The moment u talk about
+ cloud, it provides a lot of different benefits, right?
+
+ Benefits in term of cost. 
+ Benefits in term of scaling.
+ Benefits in term of less issues.
+
+ Now. if u want to achieve that, of course, U have to make an application
+ which will use all those services and which will fullfill the promises,
+ right?

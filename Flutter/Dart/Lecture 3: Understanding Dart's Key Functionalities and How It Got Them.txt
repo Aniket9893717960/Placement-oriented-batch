@@ -22,3 +22,37 @@ ii. Why Does Dart Use Both?
  build and fast to run.
 
 2. Null Safety: The Shield Against Crashes
+ i.More on Null Safety: 
+  ------- In programming,"null" is like an empty box, and if u try to 
+          open it without checking, your program crashes.
+Dart added sound null safety to ensure you explicitly say whether a 
+variable can be empty or not. if u say "no empties allowed," 
+Dart enforces that rule strictly.
+
+ ii. How Did Dart get this feature?
+ Before sound null safety, many languages had bugs and crashes due to
+ unexpected null values.
+
+ Reason: To make apps more reliable and reduce annoying bugs, Dart's
+         team designed null safety to catch null related errors during
+ development rather than when users see them.
+
+3. Sound type System: Precision in Code
+  i. What is a Sound type System?
+  ---- It means Dart checks the types of variables and objects vary 
+  strictly to catch errors early. if something is told to be an integer,
+  It cannot suddenly become a string unknowingly.
+
+ ii. Why is it important?
+ ----- Early type checking prevents many errors before running the code,
+ saving time and avoiding surprises.
+
+ iii. How Did Dart Achieve This?
+ ----------- Dart uses static typing with inference - meaning u can be 
+ explicit with types or let Dart guess safety.
+
+ Reason: It balances safety with convenience, so developers write fewer
+         but don't need to be overly strict all the time.
+
+ 4. Hot Reload: fast Feedback for Developers
+ i. What is Hot Reload?

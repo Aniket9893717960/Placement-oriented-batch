@@ -56,3 +56,39 @@ Dart enforces that rule strictly.
 
  4. Hot Reload: fast Feedback for Developers
  i. What is Hot Reload?
+Imagine u're painting a picture, and every brush stoke instantly appears 
+instead of drying later. Hot reload is that - when developers change code,
+the app updates immediately without restarting.
+
+ii. Why was this needed?
+In regular app development, waiting for the app to rebuild and restart after 
+every change slows down productivity.
+
+Reason: Dart's design supports hot reload, speeding up development, making
+programming fun and efficiently, especially for UI design where small changes 
+happen often.
+
+ 5. Asynchronous Programming With Async/Await: keeping Apps Responsive
+ i. More on Async/Await
+ Apps often wait for data from the internet or database. Dart lets apps do 
+ other work during this wait using async/await syntax, which looks simple
+ but handles complex multitasking.
+
+ ii. Why is this important?
+ If apps freeze while waiting, users gey frustrated. Async programming keeps
+ the app smooth, waiting behing the scenes but reponding right away.
+
+ Reason:
+ Dart's async/await feature simplifies writing concurrent code, making apps
+ fast and user friendly even under heavy tasks.
+
+ Summary of Lecture 3:
+ *Dart combines JIT and AOT compilation to balance rapid development and fast
+ apps.
+ *Null safety protects apps from crashes caused by missing values.
+ *Sound type systems enforces stict and safe typing.
+ *Hot reload lets developers see changes instantly, speeding up coding.
+ *Async/await helps apps multitask effectively without freezing.
+
+Each of these features was added to solve real problems programmers face,
+making Dart modern, powerful and enjoyable to use.

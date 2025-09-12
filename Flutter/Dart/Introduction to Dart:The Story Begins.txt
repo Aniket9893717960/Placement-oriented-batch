@@ -47,4 +47,10 @@ perfomant apps easier.
 
                   How Did Dart Come About?
 Google first launched Dart in 2011 to replace complex web programming
-challenges with a language optimized 
+challenges with a language optimized for UI(User interface) work. Later
+with the arrival of flutter, Dart become even more essential because it 
+perfectly fits flutter's goals of fast, beautiful and responsive mobile app
+development.
+
+              Summary(Like School Lesson TakeAway)
+ *Dart is a simple yet powerful language 

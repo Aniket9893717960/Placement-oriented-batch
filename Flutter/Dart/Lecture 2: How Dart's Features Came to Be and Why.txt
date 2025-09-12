@@ -1,0 +1,29 @@
+         1. Variables And Strong Typing:
+            Why are Variables Important?
+i. What are Variables?
+ Think of variables as labeled boxes where u store things like numbers,
+ words or true/false values. For Example: u store your age in a box called
+ "age".
+
+ii. Why Does Dart Use Strong Typing?
+ Dart is statically typed, which means when u put something in the box,
+ u must decide ahead of time what type of thing it can hold. This is like
+ telling the box "You can only hold apples" rather than any random fruit.
+
+iii. Reason:
+ This helps the computer catch mistakes early. For example, if u make a
+ math operation on something that isn't a number, Dart will return u before
+ running the program. This saves a lot of time fixing bugs later.
+
+         2. Functions: The Recips Cards of Programming
+1. What are Functions?
+ Imagine a handy recipe card that tells u how to make your favorite dish
+ step by step. Functions in Dart are like these recipe cards: they define
+ a set of instructions u can use whenever needed.
+
+2. Why Does Dart Use Functions?
+ Functions help keep your code clean and reusable. Instead of repeating
+ yourself, u write the recipe once and follow it many times.
+
+ Reason:  This makes programs easier to read, understand, and maintain.
+         It helps e

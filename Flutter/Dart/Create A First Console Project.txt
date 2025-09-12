@@ -1,0 +1,5 @@
+1. U have to choose at which folder u have to store the Project file.
+2. After Click OK, At top U have write the name of 1st project For my side it's "FIRSTPROJECT".
+3. After Creation Of Our First Project First thing u See Is 3 diff folders.
+   "bin","lib","test" 
+ If we open "bin" we got 'firstprogram.dart'

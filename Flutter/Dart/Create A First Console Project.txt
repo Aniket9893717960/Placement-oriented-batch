@@ -1,5 +1,40 @@
 1. U have to choose at which folder u have to store the Project file.
-2. After Click OK, At top U have write the name of 1st project For my side it's "FIRSTPROJECT".
+2. After Click OK, At top U have write the name of 1st project For my side it's "first_application".
+   After Click Ok I Got Below Code on Console Screen.
+        [console] dart create -t console first_application --force
+        Creating first_application using template console...
+
+          .gitignore
+          analysis_options.yaml
+          CHANGELOG.md
+          pubspec.yaml
+          README.md
+          bin\first_application.dart
+          lib\first_application.dart
+          test\first_application_test.dart
+
+        Running pub get...
+          Resolving dependencies...
+          Downloading packages...
+          Changed 49 dependencies!
+
+        Created project first_application in first_application! In order to get started, run the following commands:
+          cd first_application
+          dart run
+        exit code 0
+
 3. After Creation Of Our First Project First thing u See Is 3 diff folders.
    "bin","lib","test" 
- If we open "bin" we got 'firstprogram.dart'
+ If we open "bin" we got 'firstprogram.dart' Code Is Given Below:
+        import 'package:first_application/first_application.dart' as first_application;
+        void main(List<String> arguments) {
+            print('Hello world: ${first_application.calculate()}!');
+        }
+
+4. Now In 'lib' folder we created a our first program of 'dart' is given below:
+    "void main(){
+      print("Hello World");
+    }"
+
+5. Now to run this program we have to click on "RUN & DEBUG".
+   We Got "Hello World" On Debug Console.

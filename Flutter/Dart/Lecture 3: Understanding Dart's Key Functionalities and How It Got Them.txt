@@ -1,0 +1,13 @@
+In this lec, we will explore important unique features of Dart, why they 
+exist, and how Dart's design choices help solve common programming challenges.
+We'll keep everything simple and fun!
+
+1. Just In Time(JIT) And Ahead-Of-Time(AOT) Compilation: Why So much Speed?
+i. What are JIT and AOT?
+ *JIT(Just-In-Time) Compilation is like a magic cook who reads the recipe 
+  and prepares the dish while guests are arriving. It allows u to test and 
+  change code quickly.
+ *AOT(Ahead Of Time) Compilation is like preparing all dishes before the 
+  guests arrive, so food is ready immediately when served.
+
+ii.

@@ -68,3 +68,12 @@ ii. Why Null Safety?
          never be empty, the program knows this and warns u if u forget. 
          This stops many crashes before they happen.
 
+Summary Of Today's Lecture
+ *Variables and Strong Typing protech from early mistakes.
+ *Functions save time by reusing instructions.
+ *Classes And Objects help model real world things in code.
+ *Async/Await Allows apps to multitasking smoothly.
+ *Null Safety prevents errors caused by missing values.
+
+Dart's feacture were designed to solve real programming problems by 
+making code safe, efficient and easy to understand.

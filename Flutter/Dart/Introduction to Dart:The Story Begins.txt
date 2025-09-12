@@ -1,0 +1,22 @@
+                      What Is Dart?
+Dart is a Programming language made by Google in 2011. 
+It was created to provide a simple, fast and productive language mainly for
+building mobile, desktop, backend and web applications.
+Google wanted a Language that:
+ *Could run bot on web Browsers and Mobile devices efficiently.
+ *Is easy to learn and easy to write, yet powerful enough to create
+ complex apps.
+ *Solves problems that languages like JavaScript had in creating apps With
+  smooth performance.  
+                 
+             Why Do we Need Dart?
+Before Dart, developers primarily used JavaScript for web apps and other
+languages like Java or Kotlin for mobile apps.But:
+ *Javasript is flexible but can get messy and slow in big projects.
+ *Mobile apps needed a single language that works everywhere without
+  losing performance.
+ *Dart brings a balance: It's fast because it compiles directly to machine
+  ---------------------- Code (native code), and it's also productive 
+  because it has simple syntax and powerful features.
+
+           Why Dart For Flutter?

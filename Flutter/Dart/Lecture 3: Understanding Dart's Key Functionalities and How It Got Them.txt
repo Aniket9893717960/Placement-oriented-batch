@@ -10,4 +10,15 @@ i. What are JIT and AOT?
  *AOT(Ahead Of Time) Compilation is like preparing all dishes before the 
   guests arrive, so food is ready immediately when served.
 
-ii.
+ii. Why Does Dart Use Both?
+ *During development, Dart uses JIT so programmers can quiclky test
+  and see changes without waiting a long time. This is called "hot reload".
+ *For the final app users, Dart uses AOT to convert code into super fast 
+  native machine code that runs lightning fast on phones or computers.
+
+ Reason:
+ This hybrid approach balances developer productivity (fast testing) and
+ app performance (fast user experience), making Dart apps both easy to 
+ build and fast to run.
+
+2. Null Safety: The Shield Against Crashes

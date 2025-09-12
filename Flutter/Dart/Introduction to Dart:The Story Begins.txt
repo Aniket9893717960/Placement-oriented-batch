@@ -53,4 +53,13 @@ perfectly fits flutter's goals of fast, beautiful and responsive mobile app
 development.
 
               Summary(Like School Lesson TakeAway)
- *Dart is a simple yet powerful language 
+ *Dart is a simple yet powerful language made by Google for Building 
+  apps easily.
+ *It is especially built for performance and productivity.
+ *Flutter uses Dart because it compiles fast, supports instant code 
+  changes and works on many platforms.
+ *Understanding Dart will help u not build apps but understand how 
+  modern programming languages solve real world problems efficiently.
+This foundation will make learning Dart Syntax and writing your first 
+programs much easier and more meaningful. ready to move on to install 
+the tools and write your first simple Dart code?

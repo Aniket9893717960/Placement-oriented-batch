@@ -25,7 +25,7 @@ tests. Example: CODE:
       quickly pick up and read code, whether they are new or experienced.
 
          3. Looping: Doing things Repeatedly
- i. for Loops:
+ 3.i. for Loops:
   Used when u know how many times u want to repeat an action. CODE:
       for(int i=1;i<=5;i++){ print('Step $i'); }
  ii. Why? This is great for things like showing a list of items or 
@@ -34,3 +34,7 @@ tests. Example: CODE:
  The classic 'for' loop format matches other popular languages, making 
  Dart accessible and standard. It's precise and clear for counting based 
  tasks.
+
+ 3.ii. While And do while Loops:
+  Used while when the number of repetitions depends on charging 
+  conditions: CODE:

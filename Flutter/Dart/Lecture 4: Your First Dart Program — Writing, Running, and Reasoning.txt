@@ -1,0 +1,51 @@
+After grasping the story, features and the reasons behind Dart's design.
+It's time to get hands on! this lesson will guide u step by step through
+writing your very first Dart program, explaining every choice and the 
+reasoning behind it as we go.
+
+          1. The Classic First Program: "Hello, World!"
+i. what does "Hello, World!" Look like in Dart?
+ void main(){
+  print('Hello, World!');
+ }
+ii. Explaining Every Line Like a Teacher
+ *'void main(){...}': This is the special starting point for every Dart
+                      program. Dart searches for 'main()' to know where to
+ begin.
+ Why? This structure keeps programs organized, telling Dart, "Start roading
+ the instructions here!"
+
+ *print('Hello, World!');': This tells Dart to show text in the console - 
+                       like raising  u hand in class to say something! 
+ Why? Without this, there's no way to confirm your code is actually running.
+
+              2. Make it Your Own: Change and Play
+i. Why Experiment?
+ *Why: Programming is best learned hands-on. Changing the message, adding
+      Your name, or printing numbers helps u see immediate cause and effect,
+      building confidence.
+ii. Try These Changes:
+ *Replace with your name:
+        print('Hello, Dart Learner!');
+ *Print numbers:
+        print(12345);
+ *Print more than one line:
+   dart CODE:
+  print('This is Dart.');
+  print('Programming is fun!');
+
+             3. Reasoning Behind Dart's Simplicity
+*Clean Syntax: Notice how there are no weird symbols or extra steps - just
+               a function with instructions inside. Dart was designed this
+          way so beginners could start quickly without getting overwhelmed.
+*Print function: Adding output early gives feedback, making it encouraging
+                 to experiment This "cause and effect" is very important
+                 for learning.
+
+             4. Summary Of Lecture 4:
+*You learned about setting up Dart with DartPad or locally.
+*Wrote and ran the first Dart Program line-by-line, with reasons why 
+ every part exists.
+*Saw how Dart's design removes confusion for beginners.
+*Practiced making changes and understood the importance of hands on coding.
+

@@ -59,4 +59,32 @@
     dartCode:
       const daysInWeek =7;
  *Why these options?
-  Sometimes u need to save memory
+  Sometimes u need to save memory and prevent accidental mistakes 
+  (like changing pi value). Dart lets u "lock" variables with 'final'
+  and 'const' for safety and speed.
+
+           5. Pracical Example: Using variables and Types
+  dartCODE:
+    void main() {
+     int age = 21; //Integer
+     double score = 88.6; //decimal
+     String name = 'Neha'; //text
+     bool passed = true;    // true/false
+print('$name scored @score marks at age $age. Pass status: $passed');
+    }
+
+          6. Why Did Dart Choose This System?
+ *Safety first: statically typed code allows Dart to catch errors before 
+       your app runs, making Flutter and Dart apps more reliable.
+ *Performance: knowing variable types ahead of time lets Dart make code
+               more efficient during compilation.
+ *Clarity: When u or someone else looks at code months later, types 
+           explain what is expected, reducing confusion and bugs.
+
+            7. Summary Of Lecture 5
+*Variables are containers for storing data types tells Dart what's inside
+*Dart has "built-in" types (int,double,String,bool,list,Map) each with
+ a purpose.
+*Dart's strict typing is designed to protect u from common mistakes and 
+ make programs faster.
+*final and const let u "lock" data when it shouldn't change.

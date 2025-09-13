@@ -1,0 +1,62 @@
+           1. What are Variables?Why Do we need Them?
+ i. The Concept:
+ Think Of variables as labeled jars u use in science class. Want to 
+ store water? U grab a jar and write "Water" on it! In programming,
+ a variable is a container for storing information-numbers,words or 
+ anything else.
+
+ ii. Why Variables Exist in Dart:
+ *Dart needs a way to remember things: scores in a game, a user's name, etc.
+ *Using labeled variables makes code readable-so any programmer instantly
+ knows what is being stored.
+
+           2. Why Does Dart Have Date Types? The Story Behing 
+                             "Type Safety"
+ i. What are Data Types?
+ Every jar(variables) can only safety hold certain stuff. Dart has types like:
+ *int(whole numbers)
+ *double(decimal numbers)
+ *String (text)
+ *bool (true/false)
+ *List: a list of items ()
+ *Map: key/value pairs ({'name':'Amit','age':20})
+
+ ii. Why Strong Data Types in Dart?
+ *Helps U catch mistakes early. Try adding a number to text 
+  (like 10 +"Hello") - Dart will warn u instead of waiting until u app
+  crashes for users.
+ *Makes code easier to read and maintain - others can see what goes 
+  inside each variable.
+ *Allows Dart to run code faster because  it doesn't have to guess what 
+  u mean.
+              3. How to Declare Types in Dart?
+  There are two ways to declare variables:
+  *Explicitly:
+     dartCODE:
+      int age = 20;
+      String name = 'Amit';
+      Implicitly (with var):
+     dartCODE:
+      var age = 20;         // Dart sees this is int
+      var name = 'Amit';    // Dart sees this is String
+  
+  Why allow both?: This makes code faster to write but still safe.
+                   if u want Dart to figure it out for u, use var.
+  if u want stictness, specify the type.
+
+            4. Mutable vs Immutable
+ *var and dynamic: contents can change.
+    dartCode:
+     var score = 5;
+     score = 7;        //Okay!
+
+ *final: assign once, can't change later.
+    dartCode:
+      final pi = 3.1415;
+      pi = 3.14;     // error!
+
+ *const: assign at compile time, never changes.
+    dartCode:
+      const daysInWeek =7;
+ *Why these options?
+  Sometimes u need to save memory

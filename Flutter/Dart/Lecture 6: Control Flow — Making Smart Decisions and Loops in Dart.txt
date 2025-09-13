@@ -1,0 +1,36 @@
+              1. Why Do We Need Control Flow?
+ Imagine following instructions in real life:
+ *If it's raining, take an umbrella.
+ *"For every apple in the basket,eat one."
+  These are decisions and repeated actions. Programs need this too, so they
+  can act smartly-choosing what to do and repeating tasks when needed.
+Dart,like other modern language, has decision-making statements and loops.
+The Dart team included these basics so programmers feel at home and can 
+structure their logic simply and readably.
+
+         2. Decision Making with if,else if, and else
+These statements let a program choose different actions based on true/false
+tests. Example: CODE:
+  int temp=35;
+  if(temp>30){ print('It\'s hot!');}
+  else if(temp>20){ print('It\'s warm.'); }
+  else { print('It\'s cool.'); }
+
+ ii. why: This helps your app respond differently to user input, sensor
+          data or anything that can change.
+
+ iii. Why Did Dart Get This Feature? Decision making is the foundation
+                                     of interactive and useful programs.
+      Dart uses the familiar C-style 'if/else' syntax so programmers can
+      quickly pick up and read code, whether they are new or experienced.
+
+         3. Looping: Doing things Repeatedly
+ i. for Loops:
+  Used when u know how many times u want to repeat an action. CODE:
+      for(int i=1;i<=5;i++){ print('Step $i'); }
+ ii. Why? This is great for things like showing a list of items or 
+          doing calculation multiple times.
+ iii. Why Did Dart Get for Loops this Way?
+ The classic 'for' loop format matches other popular languages, making 
+ Dart accessible and standard. It's precise and clear for counting based 
+ tasks.

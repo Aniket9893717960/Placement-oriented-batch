@@ -38,3 +38,30 @@ tests. Example: CODE:
  3.ii. While And do while Loops:
   Used while when the number of repetitions depends on charging 
   conditions: CODE:
+      int bottles =3;
+      while(bottles >0){ print('$bottles bottles left'); 
+      bottles--; }
+ 
+   *do while ensures the code runs at least once.
+ ii. Why? These types of loops give flexibilty for things like waiting
+         for a taks to finish or processing user input of unknown length.
+ iii. Why Did Dart Keep These? They allow elegent handling of open ended
+        or unpredictable situations, just like in other major languages.
+
+ 3.iii. for-in Loops (for-each)
+ Want to look at every time in a List? Use 'for-in': CODE:
+   var fruits = ['apple','banana','orange'];
+      for(var fruit in fruits){ print(fruit); }
+ *Why: Much easier and cleaner than counting manually!
+
+ 3.iv. Why Did Dart include for-in?
+ Modern programs often work with collections. 'for-in' makes code safer,
+ more readable and less error prone.
+
+                       4. break and continue
+ *break stops a loop early if a condition happens.
+ *continue skips to the next round of the loop. CODE:
+      for(int i=1;i<=5;i++){
+      if(i==3) continue; print(i); //prints 1,2,4,5 (skips 3)
+      }
+      }

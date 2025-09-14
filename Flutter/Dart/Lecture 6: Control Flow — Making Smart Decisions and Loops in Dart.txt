@@ -64,4 +64,27 @@ tests. Example: CODE:
       for(int i=1;i<=5;i++){
       if(i==3) continue; print(i); //prints 1,2,4,5 (skips 3)
       }
-      }
+ ii. Why? Sometimes, u need to exit a loop or ignore some situations for
+          real life logic. Dart added these for practical, readable code
+ control, reducing mistakes.
+
+       5.Practice Example: Combining Decisions and Loops: CODE:
+     for(int num=1;num<=10;num++){
+        if(num%2==0){ print('$num is even'); }
+        else { print('$num is odd'); }}
+ i. Why So? Combining loops and conditions lets u make apps that can 
+            handle any data, any size, under any rules!
+
+          6. Why Dart chose classic, clear control flow
+*familiar structure: If u've coded in Java/C/C++, u instantly recognize
+                     Dart's style.
+ *Readability: Keeping logic easy to follow is critical, especially for
+               big teams or future u!
+ *Power: From small scripts to huge apps, good control flow is universal.
+
+                          SUMMARY
+*Control flow  lets your Dart programs make decisions and repeat actions.
+*Dart's structure for if, loops, break and continue are based on decades
+ of programming wisdom - easy to learn, powerful in use.
+*These features help u build interactive and smart apps, just like 
+ instruction in life!

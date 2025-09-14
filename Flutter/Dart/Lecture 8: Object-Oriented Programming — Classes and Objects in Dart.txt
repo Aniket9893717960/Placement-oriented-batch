@@ -1,0 +1,9 @@
+            1.What is Object Oriented Programming?
+Imagine designing a car. You don't build each car from scratch, instead,
+u create a blueprint (class), then produce an many identical cars
+(objects or instances) as u need. OOP lets u describe real world things
+(like users, product, shapes) as code blueprints.
+
+ i. Why Dart Supports OOP:
+ Makes code easier to organize, reuse and expand.
+ 

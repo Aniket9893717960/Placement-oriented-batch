@@ -6,4 +6,74 @@ u create a blueprint (class), then produce an many identical cars
 
  i. Why Dart Supports OOP:
  Makes code easier to organize, reuse and expand.
- 
+ Lets u solve big problems by breaking them into logical "objects".
+ Essesntial for building complex apps (like Flutter app that are made up
+ of many widgets, each being a class).
+
+            2. Defining a class - The Blueprint
+ A class describes the properties (nouns, like color or age) and 
+ behaviours (verbs, like move() or printinfo()) of its objects.
+ Example: CODE:
+ class Car { String brand; int year; void honk(){ print('Beep! Beep!'); }}
+
+ i. Why are classes designed like this?
+ Grouping data (properties) and behaviors (methods) together helps avoid
+ messy code. All cars have a brand and year, and all cars can honk, so it
+ makes sense to bundle these logically.
+
+       3. Creating Objects - Making Real things from Blueprints
+To use a class, create objects (instances): CODE"
+ var myCar = Car();
+ myCar.brand = "Toyota";
+ myCar.year = 2020;
+ myCar.honk(); // Beep! Beep!
+ Why? Objects let u have many real examples, each with different values
+ (your Car, my Car, etc.), using the same set of rules.
+
+         4. Constructors -Setting up Objects Easily
+Dart lets you define a constructor to quickly set properties when making
+a new object. CODE:
+ class Car {
+ String brand;
+ int year;
+ Car(this.brand, this year); // Constructor!  }
+ var car1 = Car('Honda', 2024);
+
+ i. Why Did Dart add Constructors?
+ They make creating and initializing objects simple and safe (you won't 
+ forget to fill important info).
+
+        5. Encapsulation - Protecting your Data
+Dart supports encapsulation, meaning u can hide details and only show
+what's needed. Use '_' before a property/method to make it private.
+CODE: class BankAccount { double _balance =0;
+        void deposite(double amount){ _balance += amount; }}
+        double get balance => _balance; } //Safe read only access
+ Why encapsulation? Prevents mistakes (e.g., accidentally setting 
+ a balance to -100), incrases, security and allows u to control exactly
+ how data is used.
+
+      6. Inheritance & Polymorphism - Building on Blueprints
+Inheritance: A class can "inherit" from another, getting its features 
+and adding more (e.g., ElectricCar extends Car).
+Polymorphism:Many classes can share a parent and be treated the same way.
+CODE: class Animal { void sound() => print('Some sound'); }
+class Dog extends Animal { @override void sound() => print('Bark!'); }
+
+             7. Why Did Dart Make OOP So Central?
+ Many large, modern apps (especially Us) organize code as networks of 
+ interacting objects.
+ Code reuse, team collaboration, testability and modualarity become
+ easier with OOP.
+ Dart's syntax is intentionally similar to Java/C++/C# so knowledge
+ transfer across languages.
+
+                   Summary of Lecture 8:
+*Dart's object oriented features are designed for real world logic and
+ big projects.
+*Classes bundle related data and actions, objects are couies you use in
+ your app.
+*Encapsulation(hiding details), inheritance (building on ideas), and
+ polymorphism(treating many as one) make code safe, reusable and clear.
+*OOP is everywhere in Dart and Flutter - master it and making big apps
+ becomes much easier!

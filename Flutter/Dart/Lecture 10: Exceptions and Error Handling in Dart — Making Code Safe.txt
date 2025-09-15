@@ -21,3 +21,31 @@ file doesn't exist), it throws an exception.
  showing a helpful message or trying something else.
 Example: CODE: 
       void main() { try { int result = 10 ~/ 0; } //Division by zero!
+      catch(e){ print('Error: $e'); //Handles the error, doesn't crash }}
+
+  *try: Code that might cause problems goes here.
+  *catch: What to do is a problem happens.
+*finally: (optional) Code that should run whether there's an error or 
+           not.
+     i. Why does Dart have try/catch/finally?
+ It keeps u code readable, organized and immediately signals which code
+ break and how to handle it.
+
+            4. Custom Exceptions - u can invert your own
+Sometimes, u want to create u own rules for what counts as a problem.
+Example: CODE: 
+    class AgeException implements Exception { 
+     String errMsg() => 'Age cannot be negetive!'; }
+    void checkAge(int age){ if(age < 0){ throw AgeException(); } }
+    try { checkAge(-5); } catch(e){ print(e); //AgeException! }
+ 
+ i. Why did Dart add custom exceptions?
+ Real apps have unique problems - like invalid login or low battery.
+ Custom exceptions keep your error messages clear and relevant, so 
+ u can fix and document issues as you design your app.
+
+             5. Error Types - knowing the Difference
+*Exceptions: Conditions your programs can maybe recover from
+             ( missing file, user mistake ).
+*Errors: Serious issues your code shouldn't try to fix (like running 
+         out of memory).

@@ -21,3 +21,27 @@ here, 'Future<Int>' means "This function will give an integer.. but not
  i. Why Futures? they fits how the real world works. Some results come
          instantly, others take time. Futures let Dart handle both in a 
      consistent, safe way.
+
+         3. async and await - Turning Waiting into simple Code
+*async marks a function as able to pause and wait for slow jobs.
+*await politely tells Dart,"Pause here, finish the slow job,then move 
+on". Example:
+          void main() async { print('Loading...');
+          var score = await fetchScore();
+          print('Your score: $score'); }
+*Dart prints "Loading...," waits for 'fetchScore()',then prints the 
+ result.
+      i. Why async/ await? :
+ Before async/await, handling slow tasks meant complicated, hard to read
+ code. Dart designers chose this system to keep code as readable as 
+ normal, while handling real world delays effortlessly.
+
+         4. Streams - Handling Many Outputs Over Time
+Sometimes, u want to read a bunch of values as they arrive (like 
+Listening to live chat messages or sensor data). Dart uses Streams for 
+this. Example:
+      Stream<int> numberStream() async* {
+        for(int i=1;i<=5;i++){
+        await Future.delayed(Duration(seconds: 1));
+        yield i; }
+      }

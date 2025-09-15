@@ -1,0 +1,23 @@
+         1. Why Asynchronous Code? Real life Comparisons?
+Imagine baking a cake. while it's in the oven for 30 minutes, u don't Just
+stare at it - u clean up, text your friend, or perpare toppings. Programs
+need this multitasking too!
+              Real - world need:
+Apps often wait for things: loading a file, fetching data from the internet,
+Waiting for a user to tap a button. if code waits and does nothing, the 
+whole app "freezes" for everyone. Not good!
+        i. Why did Dart get asynchronous features?
+Early web/modile apps often locked up while waiting for slow tasks.
+Dart's designers wanted a simple, readable way to handle multitasking
+So one slow job wouldn't block everything else.
+
+                       2. What are Futures?
+A Future in Dart is a promise: "I'll get u the result later - Keep Working
+ meanwhile!". Example:
+Future<int> fetchScore() async { return 88; // Imagine getting score from a
+ server}
+here, 'Future<Int>' means "This function will give an integer.. but not
+       right away."
+ i. Why Futures? they fits how the real world works. Some results come
+         instantly, others take time. Futures let Dart handle both in a 
+     consistent, safe way.

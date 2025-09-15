@@ -49,3 +49,27 @@ Example: CODE:
              ( missing file, user mistake ).
 *Errors: Serious issues your code shouldn't try to fix (like running 
          out of memory).
+  i. Why separate exceptions and errors?
+ Dart decided this helps programmers focus on what they can control
+ (exceptions), while system failures(errors) should still stop
+ the program.
+
+     6. Best Practices with Error Handling - why be Thoughtful?
+*handle only real problems: Don't use exceptions for normal program
+            flow - use them for truly exceptional circumstances.
+*always inform the user: Show clear messages or hints, never leave
+            them confused.
+*Use 'finally' carefully:  Always clean up resources (like closing files)
+             whether or not error happen.
+
+i. Why did Dart promote these practices? They make software professional
+      - easy to use, hard to break, and quick to fix when something's
+    wrong.
+
+                   SUMMARY OF LECTURE 10:
+*Exceptions let Dart programs catch and recover form unecpected issues
+ instead of crashing.
+* 'try','catch' and 'finally' organize problem solving clearly.
+*Custom exceptions let u define and react to app-specific problems.
+*Dart's throughtful error handling keeps programs stable, maintainable
+ and professional.

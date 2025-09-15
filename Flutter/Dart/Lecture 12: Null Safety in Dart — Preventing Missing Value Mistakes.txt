@@ -24,5 +24,13 @@ and end users from accidental crashes.
 *The '?' makes 'b' nullable. Without it, Dart will protect u from
  missing value mistakes.
 
-          i. Why This change?
+       i. Why This change?
 It's much safer: programmers have to think ahead, making bugs far less
+likely. Apps built with null safety crash less and run more smoothly.
+
+        3. Smart Operators and Checks - How Dart Makes Handling
+                              Nulls Easy
+Dart offers special tools to work with possible nulls safely:
+  *Null aware access(?.): Only calls a method if the value is present.
+  CODE: String? name;
+        print(name?.length); // Safely prints nothing if name is null.

@@ -34,3 +34,13 @@ Dart offers special tools to work with possible nulls safely:
   *Null aware access(?.): Only calls a method if the value is present.
   CODE: String? name;
         print(name?.length); // Safely prints nothing if name is null.
+
+  *Default values (??): Use a backup if a value is missing.
+ Code:  String? city;
+        print(city ?? 'Unknown'); //prints 'Unknown' if city is null
+
+  *Null assertion(!): Tells Dart "I promise this isn't null" - but
+                      with caution!
+String? friend = 'Rita'; print(friend!);//safe because friend isn't null
+ i. Why these? They make checking for nulls quick and clear, saving
+               u from complicated if else code and reducing mistakes.

@@ -1,0 +1,28 @@
+            1. Why are Nulls a Problem? Real Life Logic
+imagine asking,"what's your friend's middle name?" and getting the 
+answer,"I don't know!" - that's a "null" in real life: a missing value.
+If your recipe says to "add sugar from the jar," but the jar is empty,
+u'll get a failed cake!
+
+          i. In programming:
+If u try to use data that is missing (null), programs often crash, freeze
+or behave unpredictably. Many famous software failures happend due to
+"null pointer" mistakes that could have been prevented.
+
+        ii. Why Dart tackled this?
+Older programming languages were notorious for "null reference Exceptions."
+Dart's designers wanted to fix this for modern apps, protecting developers
+and end users from accidental crashes.
+
+        2. How Dart Prevents Null Mistakes - Null Safety System
+ Dart's null safety means:
+  *Variables are not allowed to be null unless u say so.
+ *If u forgot to handle possible missing values, Dart warns u before your
+  code runs. Example:
+               int a=3;   // a can never be null
+             int? b = null; // b *can* be null (not the ?)
+*The '?' makes 'b' nullable. Without it, Dart will protect u from
+ missing value mistakes.
+
+          i. Why This change?
+It's much safer: programmers have to think ahead, making bugs far less

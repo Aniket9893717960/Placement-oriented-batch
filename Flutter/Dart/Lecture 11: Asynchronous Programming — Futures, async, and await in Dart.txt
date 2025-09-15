@@ -45,3 +45,32 @@ this. Example:
         await Future.delayed(Duration(seconds: 1));
         yield i; }
       }
+        *Here, numbers 1-5 are sent out, one each second.
+ i. Why Streams? Modern apps aren't just about one result - they often 
+                 handle many events over time (music, notification, 
+   stock prices). Dart added streams so u can process ongoing data,
+   piece by piece, as it arrives.
+
+               5. Error Handling in Async code:
+ Just like with normal code, slow jobs can fail Dart lets u catch and
+ handle these errors inside async functions.
+ Example:      try { var score = await fetchScore(); }
+            catch(e){ print('Failed to fetch score: $e'); }
+ i.Why? Async jobs are often flaky (bad network, server down).
+      Dart ensures u can manage those issues smartly, without crashing
+     your app.
+
+           6. Why Dart's Asynchronous Model is Special
+*Simple syntax: async/await reads top to bottom, not left to right
+               with confusing collbacks.
+*Consistency: same rules for files, networks and times.
+*Safe and scalable: Built for today's apps - chat, social media, games
+                    where dozens of things happen at once.
+
+                  7. Summary Of Lecture 11
+*Asynchronous Programming lets Dart apps stay fast, smooth and 
+ modern - never frozen!
+*Futures, async and await make code readable and multitasking easy.
+*Streams handle many values/events reliably and multitasking easy.
+*Dart's async features were designed to handle real world app needs,
+ simply and safely.

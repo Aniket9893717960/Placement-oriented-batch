@@ -45,3 +45,9 @@ once. CODE:
 
                4. Maps The Name Tag Organizer
 A Map is like a set of labeled boxes: each box holds a value.
+Example: var studentScores = {'Amit':88 , 'Neha':90};
+         print(studentScores['Amit']); //prints 88
+ i. Why Maps in Dart?
+ Maps are perfect when u need to look up info by name,ID or another 
+ label (not just by position in a list).
+ ii.

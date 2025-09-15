@@ -1,0 +1,23 @@
+           1. Why Do Error Happen? Why handle Them?
+In life, mistakes and surprises are normal maybe u try to open a locked
+door or call a friend with the wrong number. Computers run into similar
+problems: dividing by zero, accessing missing files or getting bad user
+input.
+Without proper handling, programs creash or behave strangely. Professional
+- quality code doesn't mastakes - it plans for them was designed to help u
+handle these "exceptions" smartly, making your app reliable and safe.
+
+                2. What is an Exception?  
+An exception is Dart's way of saying, "Oops! Something went Wrong."
+Whenever Dart faces a problem it can't solve (like trying to read a 
+file doesn't exist), it throws an exception.
+  i. Why does Dart use Exceptions?
+ Exceptions instantly stop normal operations and allow u-the programmer-
+ to react thoughtfully, rather than letting users see errors or crashes.
+
+           3. How Dart throws and Catches Exceptions?
+*Throwing an exception is Dart's way to report a problem.
+*Catching an exception means preventing the crash and taking action, like
+ showing a helpful message or trying something else.
+Example: CODE: 
+      void main() { try { int result = 10 ~/ 0; } //Division by zero!

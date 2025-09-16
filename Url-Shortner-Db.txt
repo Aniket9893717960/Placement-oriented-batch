@@ -1,34 +1,21 @@
-         Give me an overview about Your Project?
-Url shortener a full stack web application to convert long URLs 
-into short, shareable links while providing analytics on click -
-through rates.
-I have used some technologies in backend like:
-Framework: Spring Boot (Java)
-Database: MySQL (Stores users, URL mappings, and click events)
-Authentication: JWT (Stateless, role-based access control)
-APIs: RESTful endpoints for URL shortening,
-       redirection and analytics.
-   i. URL Shortening:
-  Use Base62 encoding for compact, collision-resistant short codes.
-  ii. Redirection:
-  Handles high-volume redirects (HTTP 302) with minimal latency.
-  iii. User Authentication:
-  Secure registration/login using JWT tokens.
-  Role-based access (e.g., ROLE_USER for basic features).
-  iv. Analytics Dashboard:
-  Visualizes click -through rates, geographic data(if implemented)
-  and peak traffic times.
-  support date-range filtering and pagination.
-  v. Scalability:
-  Stateless backend architecture for horizontal scaling.
-  Caching (Redis) for frequently 
-         Architecture:
-             3-Tier Design:
-                  Presentation Layer: React frontend (if applicable).
-                  Application Layer: 
-                  Spring Boot (controllers, services, repositories).
-                  Data Layer: MySQL + Hibernate/JPA.
+CAN U GIVE ME A HIGH - LEVEL OVERVIEW OF THE PROJECT'S ARCHITECTURE?
+The project is a full stack URl Shortener Application with a 
+decoupled architecture. We designed it with a clear separation
+between the frontend and the backend to make it scalable and 
+easier to maintain.
 
+On the backend, we build a RESTful API using Spring Boot.
+We chose Spring Boot because it allowed us to set up a production
+- ready application quickly. It handles all the core business
+logic.
+ i.Generating short codes for long URLs.
+ ii. Handling the redirection logic.
+ iii. Managing user authentication and authorization using 
+      Spring security and JWTs(JSON Web Tokens).
+ iv. For the database, we used MySQL, and we interacted with 
+     it through Spring Data JPA, which simplified our database
+     Operations a lot. The backend exposes a set of REST endpoints
+     that the frontend can consume.
  EXPLAIN THE ALGORITHM YOU USED TO GENERATE SHORT URLs. Did You 
        CONSIDER COLLISIONS?
 To generate short URLs, I implemented a Base62 encoding approach,

@@ -18,7 +18,14 @@ logic.
      that the frontend can consume.
 
 WHAT WAS YOUR ROLE IN THIS PROJECT? WHAT PRATS DID U WORK ON PRIMARILY?
- In this project, I Worked as a
+ In this project, I Worked as a BackEnd Developer, through i build
+ a user authentication and security features, which meant i got to 
+ work extensively on backend.
+ In backend, my primary responsibility was to implement the entire 
+ authentication and authorization flow. This involved:
+        *Setting up Spring Security from the ground up.
+   *I build the AuthController, which exposes the REST endpoints
+   for user registration (/api/auth/public/register).
  EXPLAIN THE ALGORITHM YOU USED TO GENERATE SHORT URLs. Did You 
        CONSIDER COLLISIONS?
 To generate short URLs, I implemented a Base62 encoding approach,

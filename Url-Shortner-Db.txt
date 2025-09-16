@@ -16,6 +16,9 @@ logic.
      it through Spring Data JPA, which simplified our database
      Operations a lot. The backend exposes a set of REST endpoints
      that the frontend can consume.
+
+WHAT WAS YOUR ROLE IN THIS PROJECT? WHAT PRATS DID U WORK ON PRIMARILY?
+ In this project, I Worked as a
  EXPLAIN THE ALGORITHM YOU USED TO GENERATE SHORT URLs. Did You 
        CONSIDER COLLISIONS?
 To generate short URLs, I implemented a Base62 encoding approach,

@@ -41,6 +41,17 @@ SPECIFICALLY, I'D LIKE TO UNDERSTAND "WEBSECURITYCONFIG" SETUP,
 YOUR CUSTOM JWT FILTER, AND HOW U TRIED IT TOGETHER WITH THE 
 "USERDETAILS" SERVICE.
 
+ 1. Core Security Confiuration(WebSecurityConfig): This is where i laid
+    ------------------------------- the foundation. if u look at 
+    'WebSecurityConfig", u'll see I used the '@EnableWebSecurity'
+  annotation to enable Spring's web security support. The most critical
+ part is the SecurityFilterChain bean:
+
+  // Inside 'WebSecurityConfig.java'
+ @Bean public SecurityFilterChain securityFilterChain(HttpSecurity http)
+ throws Exception {
+ http.csrf(AbstractHttpConfigure::disable)
+ .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
  EXPLAIN THE ALGORITHM YOU USED TO GENERATE SHORT URLs. Did You 
        CONSIDER COLLISIONS?
 To generate short URLs, I implemented a Base62 encoding approach,

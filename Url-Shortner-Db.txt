@@ -51,7 +51,19 @@ YOUR CUSTOM JWT FILTER, AND HOW U TRIED IT TOGETHER WITH THE
  @Bean public SecurityFilterChain securityFilterChain(HttpSecurity http)
  throws Exception {
  http.csrf(AbstractHttpConfigure::disable)
- .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
+ .exceptionHandling(exception -> 
+exception.authenticationEntryPoint(unauthorizedHandler))
+ .sessionManagement(session -> 
+session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+.authorizeHttpRequests(auth ->
+  auth.requestMatchers("/api/auth/public/**").permitAll()
+  .requestMatchers("/{shortURL}").permitAll()
+  .anyRequest().authenticated());
+ http.authenticationProvider(authenticationProvider());
+ http.addFilterBefore(authenticationJwtTokenFilter(), 
+        UsernamePasswordAuthernticationFilter.class); 
+ return http.build(); }
+
  EXPLAIN THE ALGORITHM YOU USED TO GENERATE SHORT URLs. Did You 
        CONSIDER COLLISIONS?
 To generate short URLs, I implemented a Base62 encoding approach,

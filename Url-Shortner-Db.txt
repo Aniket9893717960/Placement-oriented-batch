@@ -25,7 +25,22 @@ WHAT WAS YOUR ROLE IN THIS PROJECT? WHAT PRATS DID U WORK ON PRIMARILY?
  authentication and authorization flow. This involved:
         *Setting up Spring Security from the ground up.
    *I build the AuthController, which exposes the REST endpoints
-   for user registration (/api/auth/public/register).
+   for user registration (/api/auth/public/register) and login
+   (/api/auth/public/login).
+  *I was responsible for implementing the JWT(Json Web Token) logic
+ for generating a token upon successful login and validating token
+ on subsequent requests. This included creating the JWT utility classes
+ and integrating them into Spring Security's filter chain.
+ *I also configured the security rules to protect the URL management 
+ endpoints, ensuring that only autheticated users could create short
+ links or view their dashboard.
+
+CAN U WALK ME THROUGH HOW U IMPLEMENTED AUTHENTICATION AND 
+AUTHORIZATION IN YOUR PROJECT USING SPRING SECURITY AND JWT? 
+SPECIFICALLY, I'D LIKE TO UNDERSTAND "WEBSECURITYCONFIG" SETUP,
+YOUR CUSTOM JWT FILTER, AND HOW U TRIED IT TOGETHER WITH THE 
+"USERDETAILS" SERVICE.
+
  EXPLAIN THE ALGORITHM YOU USED TO GENERATE SHORT URLs. Did You 
        CONSIDER COLLISIONS?
 To generate short URLs, I implemented a Base62 encoding approach,

@@ -1,0 +1,83 @@
+CAN U WALK ME THROUGH HOW U IMPLEMENTED AUTHENTICATION AND 
+AUTHORIZATION IN YOUR PROJECT USING SPRING SECURITY AND JWT? 
+SPECIFICALLY, I'D LIKE TO UNDERSTAND "WEBSECURITYCONFIG" SETUP,
+YOUR CUSTOM JWT FILTER, AND HOW U TRIED IT TOGETHER WITH THE 
+"USERDETAILS" SERVICE.
+
+ 1. Core Security Confiuration(WebSecurityConfig): This is where i laid
+    ------------------------------- the foundation. if u look at 
+    'WebSecurityConfig", u'll see I used the '@EnableWebSecurity'
+  annotation to enable Spring's web security support. The most critical
+ part is the SecurityFilterChain bean:
+
+  // Inside 'WebSecurityConfig.java'
+ @Bean public SecurityFilterChain securityFilterChain(HttpSecurity http)
+ throws Exception {
+ http.csrf(AbstractHttpConfigure::disable)
+ .exceptionHandling(exception -> 
+exception.authenticationEntryPoint(unauthorizedHandler))
+ .sessionManagement(session -> 
+session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+.authorizeHttpRequests(auth ->
+  auth.requestMatchers("/api/auth/public/**").permitAll()
+  .requestMatchers("/{shortURL}").permitAll()
+  .anyRequest().authenticated());
+ http.authenticationProvider(authenticationProvider());
+ http.addFilterBefore(authenticationJwtTokenFilter(), 
+        UsernamePasswordAuthernticationFilter.class); 
+ return http.build(); }
+
+ 2. The JWT Authentication Filter (JwtAuthFilter.java)
+This is the custom Filter i just mentioned. It's the real workhorse
+of the JWT validation process. It extends 
+'OncePerRequeestFilter' to ensure it runs exactly once for every 
+Request.
+Inside its doFilterInternal method, I implemented this logic: CODE:
+  //Inside JwtAuthFilter.java
+
+ @Override protected void doFilterInternal(HttpServletRequest request,
+   HttpServletResponse response, FilterChain filterChain) throws
+   ServletException, IOException {
+    try {
+       String jwt = parseJwt(request);
+     if(jwt!=null && jwtUtils.validateJwtToken(jwt)){
+       String username = jwtUtils.getUserNameFromJwtToken(jwt);
+       UserDetails userDetails = userDetailsService.loadUserByUsername
+      (username);
+      UsernamePasswordAuthenticationToken authentication = 
+  new UsernamePasswordAuthenticationToken(userDetails, null, 
+  userDetails.getAuthorities());
+    authentication.setDetails(new WebAuthenticationDetailsSource().
+      buildDetails(request));
+   SecurityContextHolder.getContext().setAuthentication(authentication);
+  } } catch(Exception e){ logger.error("CannotSetUserAuthentication: {
+}",e); }
+ filterChain.doFilter(request, response);
+     }
+    }
+   }
+
+3. JWT Generation and Utilities (JwtUtils.java And AuthController.java)
+The JwtUtils.java class is a helper I created to handle the JWT 
+mechanics using the 'io.jsonwebtoken.jjwt' library. it has two main
+methods: 'generateJwtToken' and 'ValidateJwtToken'.
+I used the 'generateJwtToken' method within the 'AuthController.java'
+after a user successfully logs in:
+         // Inside AuthController.java
+ @PostMapping("/public/login")
+ public ResponseEntity<?> loginUser(@ResponseBody LoginRequest 
+ loginRequest){
+  String jwt = jwtUtils.generateToken(authentication);
+ }
+
+So, putting it all together:
+ *A user logs in via the AuthController.
+ *If successful, JwtUtils generates a token.
+ *For all subsequent requests to protected endpoints, my JwtAuthFilter
+ kicks in, uses 'JwtUtils' to validate the token, and then uses 
+ 'UserDetailsServiceImpl' to load the user and set the security 
+ context. 
+ *And all of this is orchestrated by the rules I defined in 
+ 'WebSecurityConfig'.
+
+ WHAT FLOW DID U IMPLEMENT FOR AUTHENTICATE USERS TO MANAGE THERE URLs?

@@ -1,3 +1,28 @@
+CAN U WALK ME THROUGH YOUR PROJECT IN DETAIL? I'D LIKE TO UNDERSTAND
+THE OVERALL CONCEPT, THE KEY FEATURES U HAVE IMPLEMENTED, AND HOW
+THE SYSTEM WORKS FROM BOTH THE USER'S AND ADMIN PROSPECTIVE. PLEASE
+EXPLAIN THE END TO END FLOW SO THAT I GET A CLEAR PICTURE OF THE
+FUNCTIONALITY AND USABILITY OF YOUR APPLICATION?
+
+It's a full stack URL shortener application with a react frontend and
+a Spring Boot backend.
+ 1. Features: I will then enumerate the features I've identified from
+              the codebase:
+  Core URL shortening functionality.
+    *User authentication(registration and login).
+    *A dashBoard for authenticated Users to manage their URLs.
+    *Click tracking and analytics for shortened URLs.
+    *A redirection service for the shortened links.
+ 2.User Flow: I will describe the typical journey of a user through
+              to an application.
+    *An authenticated user logging in, being directed to their 
+    dashboard and then creating, viewing and analyzing their
+    shortened URLs.
+ 3.Admin Flow: There isn't a distinct admin role defined in the current 
+               codebase. I will point this out and describe what a
+               potential admin flow might entail, such as managing users
+               and all URLs in the system.
+
 CAN U GIVE ME A HIGH - LEVEL OVERVIEW OF THE PROJECT'S ARCHITECTURE?
 The project is a full stack URl Shortener Application with a 
 decoupled architecture. We designed it with a clear separation

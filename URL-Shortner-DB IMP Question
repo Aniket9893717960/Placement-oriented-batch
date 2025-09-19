@@ -99,4 +99,10 @@ a list of URLs belonging only to the currently logging in user.
  public ResponseEntity<Page<UrlMappingDTO>> getUserUrls(
        Principal principal,
 @PageableDefault(size=10, sort="clickDate",direction = Sort.Direction.DESC)
-Pageable pageable){ User user = user }
+Pageable pageable){ User user = 
+userService.findByUsername(principal.getName());
+try { Page<UrlMappingDTO> urls = urlMappingService.getUrlByUser(user,
+ pageable); return ResponseEntity.ok(urls);
+} catch (Exception e){ return 
+ResponseEntity.status(HttpStatus.) }
+}

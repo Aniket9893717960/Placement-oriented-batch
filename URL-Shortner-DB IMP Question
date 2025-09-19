@@ -81,3 +81,18 @@ So, putting it all together:
  'WebSecurityConfig'.
 
  WHAT FLOW DID U IMPLEMENT FOR AUTHENTICATE USERS TO MANAGE THERE URLs?
+       OR            DASHBOARD FOR AUTHENTICATED USERS?
+          The Goal: Securely Fetch URLs for a Specific User
+The core task is to create an API endpoint that, when called, returns
+a list of URLs belonging only to the currently logging in user.
+ Step 1: Security - Protecting the Endpoint: First, we must ensure only
+ ------------------------------------------ authenticated users can ask
+    for their URLs. This is done with Spring Security.
+   *How: The 'UrlMappingController' uses the 
+ '@PreAuthorize("hasRole('USER')")' Annotation. This acts as a guard. if
+ a request comes from someone who is not logged in or doesn't have the 
+ USER role, the system rejects it immediately with a "Forbidden" error.
+ *Code (UrlMappingController.java):
+  ---------------------------------
+     @GetMapping("/myurls")
+   @PreAuthorize("hasRole('USER')") // <-- This is Security Guard

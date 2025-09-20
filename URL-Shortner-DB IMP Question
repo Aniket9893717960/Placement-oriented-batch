@@ -206,5 +206,22 @@ List<ClickEvent> clickEvents =
 clickEventRepository.findAllByUrlMappingInAndClickDateBetween(
  urlMappings, start, end.plusDays(1));
 return clickEvents.stream().collect(Collectors.groupingBy(
-    click -> click.getClickDate().toLocalDate(),))
+    click -> click.getClickDate().toLocalDate(),Collectors.counting()
+    ));
    }
+
+Summary Of the Flow:
+ *To Record: A user clicks a short link -> RedirectController catches it
+ -> UrlMappingService increments the total count and creates a new
+  ClickEvent in the database.
+ *To Retrieve: The frontend dashboard calls an endpoint on UrlMapping
+         Controller -> The controller ask the UrlMappingService for 
+    data -> The service queries the ClickEventRepository to get all
+ relevant clicks and aggregates them into a clean format to send back 
+ to the frontend.
+
+This dual approach of keeping a simple total clickCount for quick display
+and a detailed ClickEvent log for rich analytics is a very powerful and 
+scalable design.
+I hope this gives u a clear and complete picture of the click tracking
+functionality.

@@ -166,3 +166,16 @@ Data JPA, we don't even have to write the SQL query.
  Part 1: How a Click is Recorded? The Primary goal is to log every 
                 Single click event and increment the total click 
          counter for the specific URL that was clicked.
+   
+  Step 1: The Entry Point - RedirectController:
+When a user visits a short URL (e.g., http://your-app.com/{shortUrl}),
+the request is handled by the 'RedirectController'. This controller's
+main job is to redirect the user to the original long URL, but it's also
+the perfect place to initiate the click tracking.
+ *How: it captures the 'shortUrl' from the path and calls the 
+       'UrlMappingService' to do the heavy lifting: find the original
+       URL and record the click.
+ *Code (RedirectController.java):
+  // In src/main/java/com/url/shortener/controller/RedirectController.java
+     @RestController
+    @RequestMapping("/") public class RedirectController {}

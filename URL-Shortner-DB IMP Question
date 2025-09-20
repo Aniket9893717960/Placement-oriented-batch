@@ -178,4 +178,33 @@ the perfect place to initiate the click tracking.
  *Code (RedirectController.java):
   // In src/main/java/com/url/shortener/controller/RedirectController.java
      @RestController
-    @RequestMapping("/") public class RedirectController {}
+    @RequestMapping("/") public class RedirectController {
+       private final UrlMappingService urlMappingService;
+       @GetMapping("/{shortUrl}")
+     public ResponseEntity<Void> redirect(@PathVariable String shortUrl){
+        urlMapping urlMapping = urlMappingService.getOriginalUrl(shortUrl);
+       return ResponseEntity.status(HttpStatus.FOUND)
+        .location(URL.create(urlMapping.getOriginalUrl()))
+        .build();
+      }
+    }
+
+Step 2: The Logic - UrlMappingService:
+The service contains the methods that fetch and process the analytics data
+from the database.
+ *How: It uses the 'ClickEventRepository' to find all ClickEvent records
+      that match the criteria(e.g., belong to a specific user and fall
+       within a date range). it then processes this data into a format
+      that's easy for the frontend to use like a Map for a graph.
+ 
+ *Code (UrlMappingService.java):
+      //In src/main/java/com/url/shortener/service/UrlMappingService.java
+   public Map<LocalDate, Long>  getTotalClicksByUserAndDate(User user,
+      LocalDateTime start, LocalDateTime end) {
+List<UrlMapping> urlMappings = urlMappingRepository.findAllByUser(user);
+List<ClickEvent> clickEvents = 
+clickEventRepository.findAllByUrlMappingInAndClickDateBetween(
+ urlMappings, start, end.plusDays(1));
+return clickEvents.stream().collect(Collectors.groupingBy(
+    click -> click.getClickDate().toLocalDate(),))
+   }

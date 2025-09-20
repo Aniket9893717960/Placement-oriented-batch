@@ -107,8 +107,19 @@ try { Page<UrlMappingDTO> urls = urlMappingService.getUrlByUser(user,
 ResponseEntity.status(HttpStatus.) }
 }
 
-
-
  Step 2: Controller - Handling the incoming Request:
 When the frontEnd dashboard loads,  it sends a GET request to
-'/api/urls/myurls'. The controller's job is to catch this request.
+'/api/urls/myurls'. The controller's job is to catch this request,
+identify the user, and delegate the work.
+
+ *How: The controller gets a Principal object from Spring Security,
+       which holds the logged in user's username. it then passes this
+       information to the 'UrlMappingService' to handle the actual logic.
+ *CODE (UrlMappingController.java):
+        @GetMapping("/myurls")
+        @PreAuthorize("hasRole('USER')")
+        public ResponseEntity<Pagr<UrlMappingDTO>> getUserUrls(
+      Principal principal, @PageableDefault(size = 10) Pageable pageable){
+   User user = userSercive.findByUsername(principal.getName());
+Page<UrlMappingDTO> urls = urlMappingService.getUrlsByUser(user, pageable);
+ return ResponseEntity.ok(urls); }

@@ -107,6 +107,8 @@ try { Page<UrlMappingDTO> urls = urlMappingService.getUrlByUser(user,
 ResponseEntity.status(HttpStatus.) }
 }
 
+
+
  Step 2: Controller - Handling the incoming Request:
 When the frontEnd dashboard loads,  it sends a GET request to
 '/api/urls/myurls'. The controller's job is to catch this request.

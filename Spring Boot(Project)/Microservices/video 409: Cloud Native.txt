@@ -226,16 +226,24 @@ involved, the data should be coming from the attached resources.
 
 It can be a databases or some other server, but make sure that u not 
 storing anything.
-But make sure that u not sharin_ anythin_ in your particular session.
+But make sure that u not sharing anything in your particular session.
 So we call them a stricky sessions. where u dont have any data.
-The advanta_e would be at any _iven point, u can remive the process and
+The advantage would be at any given point, u can remive the process and
 it should not be any matter.
 
 Because the moment u remove the process, data is no lost data is stored
-in a permanant stora_e database. or maybe if u want to scale up, maybe
-u want to _et multiple process and a client will not even know.
-which process it is _oin_ throu_h.
+in a permanant storage database. or maybe if u want to scale up, maybe
+u want to get multiple process and a client will not even know.
+which process it is going through.
 
-Maybe first time it went for process one, next time its _oin_ for 
-process two, which are the same application, but then we have multiple 
+Maybe first time it went for process one, next time its going for
+process two, which are the same application, but then we have multiple
 instuments of it.
+
+ 7. Port bindin_ :
+So, basically every service, well be havin_  a unique port no.
+For different type of services lets say it u usin_ hTTP, we use 80.
+If u use a different protocol, we use different port number there.
+
+In the same way, whatever service u are buildin_, attach a port number
+to it.May be because we are not sure on which physical server.

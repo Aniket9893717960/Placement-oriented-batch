@@ -194,3 +194,13 @@ Let say in 5.5 u got a new feature, u just use it, build a new one,
 5.6 and release it. So, version is very important there as well.
 So, create a separate thing, build a separate, release a separate,
 run is separate.
+
+  6. Processes: Now basically when we talk about web applications, 
+        ----   In the earlier days we used to _o for sessions or 
+   stateful services.
+   So, what is stateful basically means is as a client, if u connect
+ to a particular server for the first request and then share some data,
+next time when u _oin_ to the server, server knows u, server knows who 
+u are, they have the information about u.
+
+Its a _ood thin_ , of course, ri_ht? Next time when u _o there,

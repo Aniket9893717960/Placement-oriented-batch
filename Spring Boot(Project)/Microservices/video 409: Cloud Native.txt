@@ -226,3 +226,16 @@ involved, the data should be coming from the attached resources.
 
 It can be a databases or some other server, but make sure that u not 
 storing anything.
+But make sure that u not sharin_ anythin_ in your particular session.
+So we call them a stricky sessions. where u dont have any data.
+The advanta_e would be at any _iven point, u can remive the process and
+it should not be any matter.
+
+Because the moment u remove the process, data is no lost data is stored
+in a permanant stora_e database. or maybe if u want to scale up, maybe
+u want to _et multiple process and a client will not even know.
+which process it is _oin_ throu_h.
+
+Maybe first time it went for process one, next time its _oin_ for 
+process two, which are the same application, but then we have multiple 
+instuments of it.

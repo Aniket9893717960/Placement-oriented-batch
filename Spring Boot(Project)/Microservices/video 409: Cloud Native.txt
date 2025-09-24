@@ -144,3 +144,25 @@ environment variable and u are done.
 So, the idea is don't touch your code once it is built.
 
  4. BACKING SERVICE
+So it basically relates to the above parts as well. So, what it says
+is have a loose couplin between your application and the backin 
+services.
+Now this backin services can be a database, It can be some other third
+party services, while u are usin it Example, let say if u are buildin 
+an application and in this application u need some data from the third
+party.
+So, try to create a separate stuff, treat that service as a resource.
+May bein future it mi ht chan e. lets say currently, if u usin MySQL,
+in future, u want to use Post res, t at switc in s ould be easy, ri ht?
+
+So, in your code dont hard code the confi ureation, dont specify which
+particular resources u want to use. Just say, 
+                 Okay i want this resource.
+And then u can just confi ure it outside,
+{ Okay, for this particular request i have this resource and u can use  
+   them.}
+So, treat them as a resource, not a part of your application. Next we 
+have is build, release and run. One of the tendencies we have is write 
+the application, run it. Maybe u can do that on the production as well.
+Now u can do it with the development environment on the production as 
+well.

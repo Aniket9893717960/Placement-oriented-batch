@@ -145,10 +145,10 @@ So, the idea is don't touch your code once it is built.
 
  4. BACKING SERVICE
 So it basically relates to the above parts as well. So, what it says
-is have a loose couplin between your application and the backin 
+is have a loose coupling between your application and the backing
 services.
-Now this backin services can be a database, It can be some other third
-party services, while u are usin it Example, let say if u are buildin 
+Now this backing services can be a database, It can be some other third
+party services, while u are usin it Example, let say if u are building 
 an application and in this application u need some data from the third
 party.
 So, try to create a separate stuff, treat that service as a resource.
@@ -166,3 +166,31 @@ have is build, release and run. One of the tendencies we have is write
 the application, run it. Maybe u can do that on the production as well.
 Now u can do it with the development environment on the production as 
 well.
+    u will say, { Okay, I have a code here, let me run it. }
+Dont do that. 
+
+  5. Build release and run:
+what u do is u have to follow a three different process,
+build, release and run. So, what u do is if u have a project ready.
+Create a package, build it maybe in java,u can do it with the Maven.
+and once u got your package, maybe a Java file, u can give a release to 
+it, maybe a configuration environment, variables and all stuff.
+
+Now this release will go to the running environment, maybe whatever 
+environment u using there, whatever servers u have, whatever 
+environment, JVM u have there.
+
+And then the thing is, when u release it, u have a particular version to
+it, right? and thats working. the advantage would be even if u want to 
+make a small change, u will not do any changes in the release version.
+what u doing is u changing in the build.
+
+Again u change it, create a new package with a different version. every 
+time u release it, u have a different version to it. And if something
+goes wrong, u can go back to the previous version because let say,
+now u have release 5.5 and then something goes wrong with that u go
+back to 5.4.
+Let say in 5.5 u got a new feature, u just use it, build a new one,
+5.6 and release it. So, version is very important there as well.
+So, create a separate thing, build a separate, release a separate,
+run is separate.

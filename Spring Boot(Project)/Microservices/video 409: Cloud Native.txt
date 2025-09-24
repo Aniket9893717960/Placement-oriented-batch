@@ -195,12 +195,25 @@ Let say in 5.5 u got a new feature, u just use it, build a new one,
 So, create a separate thing, build a separate, release a separate,
 run is separate.
 
-  6. Processes: Now basically when we talk about web applications, 
-        ----   In the earlier days we used to _o for sessions or 
-   stateful services.
-   So, what is stateful basically means is as a client, if u connect
- to a particular server for the first request and then share some data,
-next time when u _oin_ to the server, server knows u, server knows who 
-u are, they have the information about u.
+    6. Processes:
+Now basically when we talk about web applications,
+---- In the earlier days we used to go for sessions or stateful services.
 
-Its a _ood thin_ , of course, ri_ht? Next time when u _o there,
+So, what is stateful basically means is as a client, if u connect to a particular server for the first request and then share some data,
+next time when u going to the server, server knows u, server knows who u are, they have the information about u.
+
+It’s a good thing, of course, right? Next time when u go there,
+u don’t have to tell everything. U can simply say, I was there. I came there yesterday and now I’m here with a new request.
+
+The thing is, by doing this, U are limiting your resources. Basically u are saying, okay. U got this stateful service, and what if something goes wrong.
+
+         What the stateful service? A client will say,
+     { Okay, I was there yesterday, the data is lost now. }
+
+So, the idea is instead going for stateful, go for stateless.
+Where every process is just a process. It’s not storing any data in the process.
+
+So, every time u get a new request, u say
+{ Okay, I got request, let me process it. } and if there any data involved, the data should be coming from the attached resources.
+
+It can be a databases or some other server, but make sure that u not storing anything.

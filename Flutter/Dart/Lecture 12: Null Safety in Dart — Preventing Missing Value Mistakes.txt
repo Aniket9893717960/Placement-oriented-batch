@@ -72,3 +72,12 @@ Because mobile apps must be stable and responsive - users don't forgive
 frequent crashes! Null safety made Flutter development world class.
 
                   Summary Of Lecture 12
+*null safety ensures u handle missing data before running code,
+  reducing crashes.
+*Dart uses "nullable"(?) and "non-nullable" types - clear, simple and
+ protective.
+*Smart tools (?. , ?? , !) help work with possible nulls gracefully.
+*Legacy migration means all Dart code can get safer, step by step.
+Next, u'll learn about Dart packages and libraries - how Dart allows u
+to reuse others solutions, build bigger apps and keep your code DRY and
+efficient. Ready to see How sharing code makes u even more productive?

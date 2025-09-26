@@ -44,3 +44,15 @@ Dart offers special tools to work with possible nulls safely:
 String? friend = 'Rita'; print(friend!);//safe because friend isn't null
  i. Why these? They make checking for nulls quick and clear, saving
                u from complicated if else code and reducing mistakes.
+
+            4. Nullable vs Non-Nullable - Desi_n for Reliability
+Older lan_ua_es allowed any vaiables to be null. Dart chan_ed this:
+ *Non-nullable by default: More robust, predicatable and trustworthy code
+                          out of the box.
+ Why did Dart switch? The _oal: no more surprise crashes or 
+ { undefined behavior. } Dart forces u to plan for what. mi_ht be missin_
+ makin_ u app bulletproof for users.
+
+         5. Mi_ratin_ old Code and Workin_ with Le_acy Libraries:
+Dart supports ways to work with code written before null safety was
+introduced, lettin_ teams modernize step by step.

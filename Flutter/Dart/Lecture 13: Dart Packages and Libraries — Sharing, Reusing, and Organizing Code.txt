@@ -31,3 +31,33 @@ networking, charts or connecting to databases.
  *Packages are shared through pub.dev, Dart's official Library store.
  Sample:  
         dependencies: http: ^1.0.0
+*This adds the http package, so your app can fetch data from the web.
+
+   i. Why Packages? They empower u to solve huge problems quickly, using
+ tested solutions from the Dart community, saving time and reducing 
+ errors.
+
+            4. Creating and using your Own Libararies
+For bigger projects, divide your own code into custom libraries. For
+example, group all "math helpers" or "user authentication logic"
+together and import only what u need in each file.
+  
+  i. How to do? CODE: dart:
+                 int triple(int x) => x*3;
+  CODE:dart: //main.dart
+  import 'math_helpers.dart';
+  void main(){ print(triple(5)); //Uses your own library! }
+
+  ii. Why? Promotes clarity: Each part of your code grows independently.
+        Easy for teamwork, maintenance and scalability.
+
+         5. Package Management: What Does pub do?
+The pub tool handles packages:
+ *installs and updates libraries from pub.dev.
+ *keep your project libraries list organized and up to date.
+ *Ensures everyone on your team uses the same versions, saving tons of
+  headache.
+        i. Why did Dart create pub?
+ Developers shouldn't waste time installing code by hand. A smart package
+ manager is now standard for all pro landuages, Dart's pub brings
+ fast, reliable automation.

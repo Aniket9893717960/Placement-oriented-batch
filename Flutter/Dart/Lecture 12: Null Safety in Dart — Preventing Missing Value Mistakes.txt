@@ -45,14 +45,30 @@ String? friend = 'Rita'; print(friend!);//safe because friend isn't null
  i. Why these? They make checking for nulls quick and clear, saving
                u from complicated if else code and reducing mistakes.
 
-            4. Nullable vs Non-Nullable - Desi_n for Reliability
-Older lan_ua_es allowed any vaiables to be null. Dart chan_ed this:
+            4. Nullable vs Non-Nullable - Design for Reliability
+Older languages allowed any vaiables to be null. Dart changed this:
  *Non-nullable by default: More robust, predicatable and trustworthy code
                           out of the box.
- Why did Dart switch? The _oal: no more surprise crashes or 
- { undefined behavior. } Dart forces u to plan for what. mi_ht be missin_
- makin_ u app bulletproof for users.
+ Why did Dart switch? The goal: no more surprise crashes or 
+ { undefined behavior. } Dart forces u to plan for what. might be missing
+ making u app bulletproof for users.
 
-         5. Mi_ratin_ old Code and Workin_ with Le_acy Libraries:
+         5. Migrating old Code and Working with Legacy Libraries:
 Dart supports ways to work with code written before null safety was
-introduced, lettin_ teams modernize step by step.
+introduced, letting teams modernize step by step.
+Why? Software evolves over years. Dart's migrating tools allow both new
+and old code to live side by side safely, so transitioning isn't painful 
+or risky.
+
+            6. Null safety in Flutter and Modern Dart Apps
+Especially in big mobile apps(Flutter), null safety saves time and 
+headaches:
+ *Fewer run time crashes.
+ *Better testing.
+ *Higher code quality (trusted by teams, easier to update)
+
+ #Why Did Dart make null safety a priority in Flutter?
+Because mobile apps must be stable and responsive - users don't forgive
+frequent crashes! Null safety made Flutter development world class.
+
+                  Summary Of Lecture 12

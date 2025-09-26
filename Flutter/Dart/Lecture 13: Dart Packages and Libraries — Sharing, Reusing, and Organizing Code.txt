@@ -1,0 +1,16 @@
+              1. Why Do We Need Packages And Libraries?
+Imagune building a robot. u could start from scatch each time, but isn't
+it smarter to use ready made wheels, sensors and chips someone else 
+perfected? In programming, packages and libraries let developers share 
+their best solutions- so u don't reinvent the wheel for for every project
+
+                     Why Did Dart include them?
+As apps grow, code gets complex. Dary's creators wanted a way to:
+ *Divide programs into modules(organized chunks).
+ *Reuse excellent Code Written by others.
+ *Make large apps easier to build, fix, and upgrade.
+
+             2. What is a Library? How Does Dart Use Them?
+A library is a collection of related tools, types and functions like
+a "toolbox". The Dart standard library includes helpers for math, text
+, files, internet etc.

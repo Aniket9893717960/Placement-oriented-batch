@@ -14,3 +14,20 @@ As apps grow, code gets complex. Dary's creators wanted a way to:
 A library is a collection of related tools, types and functions like
 a "toolbox". The Dart standard library includes helpers for math, text
 , files, internet etc.
+   i. How to use it? CODE:
+ import 'dart:math';
+ void main(){ print(sqrt(16)); // Uses math library! }
+
+ ii. Why need imports? imports keep your code tidy - only tools u need 
+ are loaded, boosting speed and clarity. Dart's libraries are carefully
+ separated (math, async, io) for best organization.
+
+          3. What is a Package? How Do Developers share Them?
+A package in Dart is a bundle of code u can easily add to your own
+project. There are open source packages for everything: animation,
+networking, charts or connecting to databases.
+ How to add? *Dart and Flutter projects use a 'pubspex.yaml' file to
+              declare needed packages.
+ *Packages are shared through pub.dev, Dart's official Library store.
+ Sample:  
+        dependencies: http: ^1.0.0

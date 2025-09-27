@@ -84,4 +84,7 @@ project.
 Next: Iterables & Streams-how Dart lets u process big data flows 
       efficiently, making your apps fast and flexible. Ready to process
       data the smart way? Let's continue your Dart journey!
- Now that packages and libraries are clear, the 
+ Now that packages and libraries are clear, the next topic is essential
+ for handling data and building reponsive, modern apps: Interables and 
+ Streams. These let u work efficiently with lists of data and with 
+ information that arrives over time, making professional apps possible!

@@ -1,0 +1,65 @@
+      1. Why iterables? Real World Logic
+imagine going through a book page by page or checking each item in
+your grocery bag. Iterables let u do just that in code- step through a 
+group of items one by one.
+    i. Why did Dart get iterables?
+ Most real world apps need to process lists, results or records. Dart's
+ designers made iterables so code could work with any "Collection-like"
+ object, even ones not built as a list.
+
+          2. What is an Itearble?
+An iterable is any object u can loop over (for, for-in, etc).
+Lists, Sets and even some Maps are iterables. Example:
+   List<int> scores = [84, 82,75];
+   for(var score in scores){ print(score); //Each score, one by one. }
+
+     3. Iterator - The Engine Behind The Scenes:
+ Every iterables uses an iterator to "move" from one item to the next.
+ U rarely use it directly, but knowing it exists explains why for-in
+ works everywhere!
+  i. Why Keep Iterators hidden?
+ You focus on your app's logic, not mechanical details. Dart's for in 
+ handles the rest.
+
+      4. Streams - Handling Data Over Time
+Streams are special kind of iterable. Instead of having all data at once,
+data arrives bit by bit - like water drops from faucet or live messages 
+in a chat.  Example:
+   Stream<int> timeStream() async* {
+     for(int i=0;i<5; i++){
+       await Future.delayed(Duration(seconds: 1));
+       yield i;
+     }
+   }
+        *This prints a number every second!
+   i. Why did Dart introduce Streams?
+Apps must deal with events or data that appear "as you wait" -network
+replies, user actions, sensor readings. Streams let u respond instantly,
+keep the app fast, and never freeze up.
+
+       5. Smart Stream Tools in Dart:
+ *listen: Reacts whenever new data arrives.
+ *onDone: knows when the stream ends.
+ *onError: Handles stream errors safely.
+      i. Why these?
+ Keeping code readable and making it easy to act in new data as it pops up
+ and to handle errors immediately.
+
+     6. One time vs Many time Data - Futures vs Streams
+ *Future: U expect a single result, like a recipe finshing.
+*Stream: u expect many results over time like reading chapter by chapter.
+     Why the difference?
+Knowing what to expect lets Dart optimize performance and code clarity -
+ no wasted steps, no confusion.
+
+   7. Powerful Data Processing - Mapping, Filtering, Reducing
+ Dart offers build in tools to transform data: CODE:
+  var doubleScores = scores.map((s) => s*2);
+  var passingScores = scores.where((s) => s >= 80);
+  var total = scores.reduce((a,b) => a+b);
+     i. Why?
+ This turns complex data logic into simple, readable code - making 
+ development faster, safer, and more fun.
+
+             Summary of Lecture 14:
+ * Iterables let 

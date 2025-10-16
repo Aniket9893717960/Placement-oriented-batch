@@ -31,6 +31,7 @@ in a chat.  Example:
        yield i;
      }
    }
+  timeStream().listen((num) => print(num));
         *This prints a number every second!
    i. Why did Dart introduce Streams?
 Apps must deal with events or data that appear "as you wait" -network
@@ -42,7 +43,7 @@ keep the app fast, and never freeze up.
  *onDone: knows when the stream ends.
  *onError: Handles stream errors safely.
       i. Why these?
- Keeping code readable and making it easy to act in new data as it pops up
+ Keeping code readable and making it easy to act on new data as it pops up
  and to handle errors immediately.
 
      6. One time vs Many time Data - Futures vs Streams
@@ -54,7 +55,7 @@ Knowing what to expect lets Dart optimize performance and code clarity -
 
    7. Powerful Data Processing - Mapping, Filtering, Reducing
  Dart offers build in tools to transform data: CODE:
-  var doubleScores = scores.map((s) => s*2);
+  var doubledScores = scores.map((s) => s*2);
   var passingScores = scores.where((s) => s >= 80);
   var total = scores.reduce((a,b) => a+b);
      i. Why?
@@ -62,4 +63,13 @@ Knowing what to expect lets Dart optimize performance and code clarity -
  development faster, safer, and more fun.
 
              Summary of Lecture 14:
- * Iterables let 
+ *Iterables let u process any set of items, one at a time.
+ *Streams let u handle data as it arrives over time - responsive and 
+  efficient.
+ *Dart's data tools u speed, flexibility and safety for modern apps.
+
+Next: Learn How to structure Dart projects, test code, and follow best
+practices so your skills are interview ready and your apps stay 
+professional and maintainable! Ready for your final dart foundation 
+lecture? Let's keep moving forward with Dart mastery! Now that u know how 
+to handle data with iterables and streams.

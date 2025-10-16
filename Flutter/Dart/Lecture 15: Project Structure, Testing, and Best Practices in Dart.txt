@@ -1,0 +1,62 @@
+        1. Why Structure Projects? Professional Logic. 
+Imagine building a house: each room has a purpose, everything is easy to
+find, fix and clean. Dart projects should be just as organized. 
+A messy structure causes bugs, slows teams down and makes upgrades hard.
+
+  i. Why did Dart's ecosystem promote structure?
+ App code grows fast! Dart's conventions helps everyone (even in huge 
+ teams) quickly understand, collaborate and maintain code over time.
+
+              2. Typical Dart Project Structure?
+*lib/: Main code, spilt into folders (models, services, screens).
+*bin/: Executable scripts (entry points).
+*test/: Testing code - proof your app works.
+*pubspec.yaml: List of packages, app name, and info.
+
+  i. Why this setup? 
+ Separation keeps code focused and easy to work with updating or debugging
+ a part of the app doesn't mean touching everything.
+
+        3. Writing and Running Tests - Proof your Code Works?
+Dart supports automated tests by default (Just like industry pros do):
+ Example:     void main(){ print(add(2,3)); //Should print 5 }
+
+ i. But for real testing, use the 'test' package:
+ Code: import 'package: test/test.dart';
+      void main(){ test('Check add()',(){
+       expext(add(2,3), equals(5));
+      }); }
+ ii. Why? Tests catch mistakes early, make debugging easier and boost
+         Your confidence for interviews and teamworks. Dart encourages
+     "test-driven development just like top tech companies.
+
+          4. Best Practices _ Level Up Your skills
+ *Write short, clear functions (avoid clutter and confusion).
+ *Name variables, classes and functions meaningfully.
+ *Split logic into multiple files or libraries for earier management.
+ *Use packages and dependencies wisely - prefer trusted popular and 
+  well documented code.
+
+  i. Why are these essential?
+ They're the habits employers want, making u work easy to read, update
+ and scale.
+
+                5. Documentation And Comments
+Use comments for code that's tricky or unusual Write docs for public APIs,
+classes and functions. Flutter and Dart's ecosystems make good 
+documentation a requirement for pro apps.
+
+    i. Why did Dart make docs central?
+ Clear communication saves time, cuts errors and helps everyone from 
+ teammates to future u.
+
+        6. Interviews and Real Projects - What to Expect
+By knowing project structure, testing and habits, u'll:
+ *Impress Interviewers with readable code and good reasoning.
+ *Be ready to build or join projects right away, no confusion.
+ *Avoid rookie mistakes and demonstrate reliability.
+
+                  Summary of Lecture 15
+*Structure, testing and best practices transform beginners into 
+ professionals.
+*Dart supports automated tests, modular Code and clear
